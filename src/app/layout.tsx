@@ -75,32 +75,43 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EXX45NBE5F"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-EXX45NBE5F');
+          `
+        }}></script>
+
         {/* Performance optimization - DNS prefetch and preconnect */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//www.ezojs.com" />
         <link rel="dns-prefetch" href="//cmp.gatekeeperconsent.com" />
         <link rel="dns-prefetch" href="//the.gatekeeperconsent.com" />
         <link rel="dns-prefetch" href="//privacy.gatekeeperconsent.com" />
-        
+
         <link rel="preconnect" href="//fonts.googleapis.com" crossOrigin="" />
         <link rel="preconnect" href="//fonts.gstatic.com" crossOrigin="" />
         <link rel="preconnect" href="//www.ezojs.com" crossOrigin="" />
-        
+
         {/* Favicon and PWA icons */}
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        
+
         {/* Seobility Verification */}
         <meta name="seobility" content="eeb290f1902ff1f4679f69365f3ac07c" />
-        
+
         {/* Ezoic Privacy Scripts - with resource hints for faster loading */}
         <link rel="preload" href="https://cmp.gatekeeperconsent.com/min.js" as="script" />
         <link rel="preload" href="https://the.gatekeeperconsent.com/cmp.min.js" as="script" />
         <script src="https://cmp.gatekeeperconsent.com/min.js" data-cfasync="false"></script>
         <script src="https://the.gatekeeperconsent.com/cmp.min.js" data-cfasync="false"></script>
-        
+
         {/* Ezoic Header Script with preload */}
         <link rel="preload" href="//www.ezojs.com/ezoic/sa.min.js" as="script" />
         <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
