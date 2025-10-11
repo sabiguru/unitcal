@@ -1,0 +1,69 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Introduction
+Our **seed spacing calculator** helps UK gardeners plan their vegetable patches, raised beds, and allotments with precision. By entering your bed dimensions and crop spacing, it instantly calculates how many plants will fit—saving you money on seeds and ensuring optimal growing conditions.
+
+### How It Works
+The calculator uses standard horticultural guidelines to determine plant density based on:
+- **In-row spacing**: Distance between plants in a row (e.g., 10 cm for beetroot)
+- **Between-row spacing**: Distance between rows (e.g., 30 cm for carrots)
+- **Layout type**: Choose between **grid** (standard) or **staggered** (triangular, 15% more efficient)
+
+### How to Use
+1. Select your **layout** (grid or staggered)
+2. Enter **bed length and width** (in cm, m, ft, or in)
+3. Input **in-row** and **between-row spacing** from your seed packet
+4. The tool shows **total plants** that fit
+5. Add a **buffer** (10–30%) to account for germination and thinning
+
+This tool is ideal for planning raised beds, traditional rows, or square-foot gardens, and supports both metric and imperial units.
+
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+**Scenario**: You have a **1.2 m × 2.4 m raised bed** and want to grow **kale** with recommended spacing of **35 cm between plants and rows**.
+
+**Steps**:
+1. Select **Grid Layout**
+2. Enter Bed Length: `2.4 m`, Bed Width: `1.2 m`
+3. Enter In-Row Spacing: `35 cm`, Between-Row Spacing: `35 cm`
+4. Calculator computes:
+   - Plants per row: \( 240 ÷ 35 ≈ 6 \)
+   - Rows: \( 120 ÷ 35 ≈ 3 \)
+   - Total plants: \( 6 × 3 = 18 \)
+5. Add a 10% buffer for transplants: \( 18 × 1.1 = 19.8 → 20 \) plants
+
+✅ **Result**: You can grow **18 mature kale plants**, and should buy **20 seedlings** to allow for losses.
+
+</TabPanel>
+
+<TabPanel title="FAQ">
+### Where do I find the correct spacing for my crops?
+Check the **seed packet or plant label**—it lists spacing for that specific variety. General guides (like RHS recommendations) are also reliable for common UK vegetables.
+
+### What’s the difference between grid and staggered layout?
+- **Grid**: Plants aligned in straight rows and columns.
+- **Staggered**: Rows offset like bricks—allows **~15% more plants** in the same area while maintaining airflow.
+
+### Should I include a buffer for seeds?
+Yes. Add:
+- **10–15%** for transplants or large seeds (beans, peas)
+- **20–30%** for small seeds requiring thinning (carrots, lettuce, radishes)
+
+### Can I use this for flowers or herbs?
+Yes! Just input the appropriate spacing for your chosen species—e.g., 25 cm for marigolds, 45 cm for rosemary.
+
+### Does it work for irregularly shaped beds?
+For non-rectangular beds, **divide the area into rectangles**, calculate each, and sum the totals manually.
+
+### Why is proper spacing important?
+Correct spacing prevents overcrowding, reduces disease risk, improves yields, and makes weeding and harvesting easier—especially in the UK’s damp climate.
+
+### Can I plan interplanting with this tool?
+Use it **separately for each crop**. For example, calculate lettuce positions first, then fill gaps with radishes using their own spacing.
+
+</TabPanel>
+</Tabs>

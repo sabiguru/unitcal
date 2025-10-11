@@ -1,0 +1,59 @@
+{
+calc name: Solar Panel Savings Calculator
+calc url: /calculator/solar-panel-savings
+Calc features: Calculate potential savings from solar panel installation, Electricity usage and rate inputs, Solar system size and efficiency calculations, Installation cost and incentive considerations, Payback period analysis, Net metering benefits, Environmental impact calculations, Return on investment projections
+}
+
+{
+calc name: Space Weight Calculator
+calc url: /calculator/space-weight
+Calc features: Calculate weight on different planets and celestial bodies, Earth weight input with unit conversions, Gravity comparisons across planets, Moon phases and their effects, Interesting space facts for each celestial body, Weight comparison charts, Educational astronomy information
+}
+
+{
+calc name: Speed Calculator
+calc url: /calculator/speed
+Calc features: Calculate speed, distance, and time relationships, Unit conversions between different speed measurements, Average speed calculations for trips, Velocity and acceleration calculations, Time zone considerations for travel, Fuel efficiency at different speeds, Speed limit and safety recommendations
+}
+
+{
+calc name: Stairs Calculator
+calc url: /calculator/stairs
+Calc features: Calculate staircase dimensions and building code compliance, Rise and run calculations, Total staircase height and length, Number of steps and step dimensions, Handrail and safety requirements, Material quantity estimations, Building code compliance checking, Staircase design optimization
+}
+
+{
+calc name: Stoichiometry Calculator
+calc url: /calculator/stoichiometry
+Calc features: Calculate chemical reaction quantities and molar relationships, Balanced chemical equation input, Reactant and product quantity calculations, Limiting reagent identification, Percent yield calculations, Molar mass and mole conversions, Theoretical vs actual yield analysis
+}
+
+{
+calc name: Subnet Calculator
+calc url: /calculator/subnet
+Calc features: Calculate network subnets and IP address ranges, CIDR notation support, Subnet mask calculations, Network and broadcast address identification, Host range calculations, VLSM (Variable Length Subnet Masking) support, IPv4 and IPv6 subnet planning
+}
+
+{
+calc name: Tax Calculator
+calc url: /calculator/tax
+Calc features: Calculate income tax based on tax brackets, Federal and state tax estimations, Tax withholding and refund projections, Deduction and credit considerations, Self-employment tax calculations, Quarterly tax payment estimations, Tax planning strategies
+}
+
+{
+calc name: Tile Calculator
+calc url: /calculator/tile
+Calc features: Calculate tile quantities for flooring and wall projects, Room area calculations with irregular shapes, Tile size and layout pattern considerations, Waste factor and breakage allowances, Grout line spacing calculations, Cost estimations for tiles and installation, Pattern layout optimization
+}
+
+{
+calc name: Tip Calculator
+calc url: /calculator/tip
+Calc features: Calculate tips for different service percentages, Bill splitting among multiple people, Custom tip percentage options, Tax inclusion/exclusion options, Round up/down to convenient amounts, Service quality tip recommendations, International tipping guide
+}
+
+{
+calc name: Tire Size Calculator
+calc url: /calculator/tire-size
+Calc features: Compare different tire sizes and their effects, Speedometer error calculations, Overall diameter and circumference changes, Load index and speed rating comparisons, Tire size conversion between metric and imperial, Wheel well clearance considerations, Performance impact analysis
+}

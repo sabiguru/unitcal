@@ -1,0 +1,79 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **date calculator** helps you add or subtract days from any date, or find the exact number of days between two dates—accounting for leap years, variable month lengths, and business days. Whether you’re planning a project, calculating a deadline, or tracking time until an event, this tool provides accurate, reliable results in seconds.
+
+### How It Works
+The calculator uses the **Julian Day Number (JDN)** system—a continuous count of days since a fixed historical point—to perform date arithmetic. This method automatically handles:
+- **Leap years** (e.g., 2024, 2028)
+- **Variable month lengths** (28–31 days)
+- **Century year rules** (1900 not a leap year; 2000 is)
+
+For **business days**, it excludes weekends and optional holidays you define.
+
+### Key Features
+- **Add/Subtract Days**: Find a future or past date from a starting point.
+- **Days Between Dates**: Get the exact duration in days, weeks, or months.
+- **Business Days Mode**: Exclude weekends and custom holidays for work-related deadlines.
+- **Inclusive/Exclusive Options**: Choose whether to count the start/end date.
+- **Time Zone Awareness**: For precise timing, specify the event’s time zone.
+
+### How to Use
+1. **For duration**: Enter a **start date** and **end date** → see total days.
+2. **For future/past dates**: Enter a **start date** and **number of days to add/subtract**.
+3. Toggle **Business Days** if your calculation excludes weekends.
+4. Add **custom holidays** for accurate business-day counts.
+5. Click **Calculate** to see your result instantly.
+
+Use this tool for legal deadlines, project planning, travel prep, or personal goal tracking.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: You sign a contract on **Friday, 4 April 2025**, that gives you **10 calendar days** to respond.
+
+**Inputs**:
+- Start Date: 4 April 2025
+- Days to Add: 10
+- Mode: Calendar Days
+
+**Calculation**:  
+- 4 April + 10 days = **14 April 2025 (Monday)**  
+- Includes weekend days (5–6 April)
+
+**Another Example**:  
+A task starts **1 May 2025** and takes **15 business days** (excluding weekends and UK bank holidays).  
+- The calculator skips weekends and holidays like 5 May (Early May Bank Holiday).  
+- Result: **Completion date = 22 May 2025**
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What’s the difference between calendar and business days?
+**Calendar days** include every day (weekends and holidays). **Business days** are Monday–Friday, excluding public holidays. A 10-calendar-day period is shorter in working time than 10 business days.
+
+### How does the calculator handle leap years?
+It uses the Gregorian calendar rule: a year is a leap year if divisible by 4, **except** century years not divisible by 400 (e.g., 2000 was a leap year; 1900 was not).
+
+### Can I exclude holidays from business-day calculations?
+Yes. You can add custom holidays (e.g., company-specific or national holidays) to ensure accurate business-day counts.
+
+### Why is the result different when I include the start date?
+This is about **inclusive vs. exclusive counting**. For example, from Monday to Wednesday:
+- **Exclusive**: 2 days (Tuesday, Wednesday)
+- **Inclusive**: 3 days (Monday, Tuesday, Wednesday)  
+Most legal and business contexts use **exclusive** counting.
+
+### Can I add months or years?
+Adding **days** is precise. Adding **months** is complex (e.g., 31 Jan + 1 month = ?). For accuracy, convert months to days (e.g., 30 or 31 days) or use a dedicated calendar tool.
+
+### Is this calculator accurate for historical dates?
+Yes, for dates after 1582 (Gregorian calendar adoption). For earlier dates, the Julian calendar applies—but this tool assumes Gregorian rules.
+
+### How do I calculate age?
+Use our dedicated [Age Calculator](/calculator/age) for precise age in years, months, and days. The date calculator gives total days, which you can convert manually.
+
+### Does time of day matter?
+For **day-based calculations**, no. For **hour/minute precision**, use our [Time Calculator](/calculator/time) or [Countdown Timer](/calculator/countdown-timer).
+</TabPanel>
+</Tabs>

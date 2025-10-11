@@ -1,0 +1,85 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **interest calculator** helps you compare simple and compound interest for savings, investments, or loans. By inputting your principal, interest rate, time period, and compounding frequency, you’ll see exactly how your money grows—or how debt accumulates—over time. This tool also converts between **APR (Annual Percentage Rate)** and **APY (Annual Percentage Yield)**, so you can make apples-to-apples comparisons between financial products. Whether you’re evaluating a savings account, planning for retirement, or understanding credit card costs, this calculator reveals the true power of interest.
+
+### How It Works
+The calculator uses standard financial formulas:
+- **Simple Interest**: `A = P(1 + r × t)`
+- **Compound Interest**: `A = P(1 + r/n)^(n×t)`
+- **APY**: `APY = (1 + r/n)^n – 1`
+
+It supports compounding frequencies from **annually** to **daily**, and shows total interest earned or paid.
+
+### Key Features
+- **Simple vs. Compound Comparison**: See side-by-side results to understand the impact of compounding.
+- **APR/APY Converter**: Input an APR to see its effective APY (or vice versa).
+- **Debt Analysis**: Model credit card or loan growth with daily compounding.
+- **Time Slider**: Adjust years to see how interest compounds over decades.
+- **Visual Chart**: View growth curves to grasp exponential vs. linear patterns.
+
+### How to Use
+1. Enter your **principal amount** (e.g., £5,000).
+2. Input the **annual interest rate** (e.g., 5%).
+3. Select **compounding frequency** (e.g., monthly for savings, daily for credit cards).
+4. Set the **time period** in years.
+5. Click **Calculate** to see final amount, total interest, and APY.
+
+Use this to compare savings accounts, project investment growth, or understand the true cost of debt.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Comparing a savings account and credit card.
+
+**Savings Account**:  
+- Principal: £3,000  
+- Rate: 2.5% APR  
+- Compounding: Monthly  
+- Time: 5 years  
+
+**Calculation**:  
+- APY = `(1 + 0.025/12)^12 – 1 = 2.529%`  
+- Final Amount = `3000 × (1 + 0.025/12)^60 ≈ **£3,394**`  
+- Interest Earned: **£394**
+
+**Credit Card**:  
+- Balance: £3,000  
+- Rate: 22% APR  
+- Compounding: Daily  
+- Time: 5 years (no payments)  
+
+**Calculation**:  
+- Final Amount = `3000 × (1 + 0.22/365)^1825 ≈ **£8,950**`  
+- Interest Paid: **£5,950**
+
+**Insight**: The same £3,000 grows modestly in savings but balloons in debt—highlighting why paying off high-interest debt is the best “investment.”
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is the difference between APR and APY?
+**APR** is the nominal annual rate without compounding. **APY** includes compounding and reflects the true annual return. Always compare APYs for savings and APRs for loans.
+
+### How does compounding frequency affect my savings?
+More frequent compounding (e.g., daily vs. annually) increases your returns slightly. For a 5% rate, daily compounding yields ~0.1% more than annual over 10 years.
+
+### Can I calculate interest with regular contributions?
+This calculator focuses on a **single lump sum**. For regular deposits (e.g., monthly savings), use our [Compound Interest Calculator](/calculator/compound-interest).
+
+### Why is my credit card interest so high?
+Credit cards compound **daily**, and rates are often 20–30% APR. A £1,000 balance at 24% APR becomes £1,271 in one year—**£271 in interest**.
+
+### What is a good APY for savings?
+As of 2025, **2–5% APY** is typical for online savings accounts. High-yield accounts may offer 4–5%, while traditional banks offer 0.01–1%.
+
+### Does this work for loans?
+Yes. Input your loan balance and APR to see total repayment. For amortising loans (e.g., mortgages), use our [Loan Calculator](/calculator/loan).
+
+### How accurate is this calculator?
+It’s mathematically precise for the inputs provided. However, real-world returns vary for investments, and loan terms may include fees not modelled here.
+
+### Is compound interest taxed?
+Yes. Interest from savings is taxable as income in the UK (unless in an ISA). The calculator shows pre-tax growth—adjust for your tax bracket for net returns.
+</TabPanel>
+</Tabs>

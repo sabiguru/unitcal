@@ -1,0 +1,84 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **GPA calculator** helps you compute your semester and cumulative GPA using standard 4.0, weighted, or custom grade scales. Whether you’re tracking academic progress, planning for scholarships, or aiming for graduate school, this tool provides accurate, step-by-step calculations that account for credit hours, plus/minus grades, and course weighting. You can also run “what-if” scenarios to see how future grades will impact your GPA—turning abstract goals into actionable plans.
+
+### How It Works
+The calculator uses the standard GPA formula:  
+**`GPA = Total Quality Points / Total Credit Hours`**  
+where **Quality Points = Grade Points × Credit Hours**.
+
+It supports:
+- **Unweighted GPA**: Standard 4.0 scale (A = 4.0)
+- **Weighted GPA**: Extra points for Honors/AP/IB courses
+- **Custom scales**: Input your school’s specific grade points
+- **Cumulative tracking**: Add past semesters to project future GPA
+
+### Key Features
+- **Grade scale presets**: Choose from common 4.0, 4.3, or 5.0 scales
+- **Credit hour weighting**: Ensures high-credit courses impact GPA correctly
+- **“What-if” mode**: Model future semesters to hit GPA targets
+- **Plus/minus support**: A-, B+, etc., with precise point values
+- **Exportable results**: Save or print your GPA report
+
+### How to Use
+1. Select your **grade scale** (unweighted, weighted, or custom).
+2. Enter your **current cumulative GPA and credits** (for cumulative mode).
+3. Add your **courses**, grades, and credit hours.
+4. Click **Calculate** to see your GPA and quality points.
+5. Use **“What-If”** to plan future semesters.
+
+This tool is ideal for high school and university students managing academic goals.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Calculating a weighted semester GPA.
+
+**Inputs**:
+- AP Biology: 4 credits, A (5.0 points)
+- Honors English: 3 credits, B+ (3.8 points)
+- Algebra II: 3 credits, A- (3.7 points)
+
+**Calculation**:
+1. Quality Points:  
+   - AP Bio: `5.0 × 4 = 20.0`  
+   - Honors English: `3.8 × 3 = 11.4`  
+   - Algebra II: `3.7 × 3 = 11.1`  
+2. Total Quality Points: `20.0 + 11.4 + 11.1 = 42.5`  
+3. Total Credits: `4 + 3 + 3 = 10`  
+4. **Weighted GPA**: `42.5 / 10 = 4.25`
+
+**Insight**: The weighted GPA (4.25) reflects the rigor of AP/Honors courses, while the unweighted GPA would be `(4.0×4 + 3.3×3 + 3.7×3)/10 = 3.70`.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How do I calculate my GPA?
+Multiply each course’s grade points by its credit hours to get quality points. Sum all quality points and divide by total credit hours. Our calculator automates this process.
+
+### What is a weighted GPA?
+A weighted GPA adds extra points (e.g., +1.0) for advanced courses like AP or Honors, allowing GPAs above 4.0. It rewards students for taking challenging classes.
+
+### Can I calculate cumulative GPA?
+Yes. Enter your prior cumulative GPA and total credits, then add your current semester’s courses. The calculator will compute your new cumulative GPA.
+
+### How do I use the “what-if” feature?
+Enter your current GPA and credits, then add hypothetical future courses and grades. The tool shows the GPA you’d achieve, helping you set grade targets.
+
+### Does this support my school’s grading scale?
+It supports common scales (4.0, 4.3, 5.0). If your school uses a unique scale (e.g., A- = 3.67), use the “custom” option to input exact values.
+
+### Do pass/fail courses count?
+No. Pass/Fail courses don’t contribute grade points, so they’re excluded from GPA calculations. Only letter-graded courses are included.
+
+### Why is my GPA lower than expected?
+Common causes:  
+- Not accounting for credit hours (a B in a 4-credit course hurts more than in a 1-credit course)  
+- Using an incorrect grade scale  
+- Forgetting that cumulative GPA includes all past semesters
+
+### Is this calculator accurate for official purposes?
+It’s highly accurate if you input correct data. However, your institution’s registrar is the official source for transcript GPA, as they apply specific policies (e.g., grade forgiveness).
+</TabPanel>
+</Tabs>

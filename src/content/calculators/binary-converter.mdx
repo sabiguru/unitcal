@@ -1,0 +1,78 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+
+## What is a Binary Converter?
+
+A **binary converter** is a specialised tool that instantly translates numbers between the core numeral systems used in computing: **binary (base-2), decimal (base-10), hexadecimal (base-16), and octal (base-8)**. This **binary to decimal converter** is essential for programmers, network engineers, and students, providing accurate conversions for tasks like debugging code, analysing memory dumps, or understanding network protocols. It supports both **signed and unsigned integers**, making it a versatile **hex to decimal** and **octal to decimal** calculator for any digital problem.
+
+## How Conversion Works
+
+The tool uses the mathematical principle of positional notation. Each digit in a number is multiplied by its base (2 for binary, 16 for hex, etc.) raised to the power of its position. Our **binary converter** automates this process, handling the complex maths behind the scenes to deliver results in real-time. It also correctly implements the **two's complement** system for representing signed negative numbers in binary.
+
+</TabPanel>
+<TabPanel title="How to Use">
+
+## How to Use This Converter
+
+Using this **binary hex octal decimal converter** is a simple three-step process.
+
+1.  **Select Input System:** Choose the type of number you are starting with (e.g., **Binary, Decimal, Hex, Octal**).
+2.  **Enter Your Value:** Type or paste your number into the input field. You can use standard prefixes like `0b1010` for binary or `0xFF` for hex for clarity.
+3.  **Configure (For Binary):** If converting to or from binary, select **Signed/Unsigned** and a **bit-width** (8-bit, 16-bit, etc.) to define how negative numbers are handled.
+4.  **Get Instant Results:** The converted values in all other systems will be displayed immediately. No need to press a button; it updates as you type.
+
+### Pro Tip
+For the most accurate interpretation of binary numbers, especially from programming contexts, always set the correct **bit-width** and choose between **Signed** and **Unsigned**. The same binary pattern can represent different decimal values depending on these settings.
+
+</TabPanel>
+<TabPanel title="Example">
+
+## A Step-by-Step Example
+
+**Scenario:** You need to convert the **binary number** `1101 0110` to decimal and hexadecimal.
+
+1.  **Select Input:** Choose **"Binary"**.
+2.  **Enter Value:** Type `11010110`.
+3.  **Configure:** First, select **Unsigned** and **8-bit**.
+4.  **View Results:**
+    *   **Decimal:** The tool calculates and displays **214**.
+    *   **Hexadecimal:** It groups the bits into `1101` (D) and `0110` (6), displaying **0xD6**.
+    *   **Octal:** It also shows the octal equivalent.
+
+Now, change the configuration to **Signed** and **8-bit**.
+*   The results change instantly. The **Decimal** value now shows **-42**, because the tool interprets the number using two's complement.
+
+This example shows the importance of the signed/unsigned setting in this **binary to hex converter**.
+
+### Try It Yourself
+*   Convert the **decimal number** `255` to 8-bit binary and hex.
+*   Convert the **hexadecimal number** `0xA5` to decimal and binary.
+*   Explore how the signed/unsigned setting changes the result for binary `1000 0000`.
+
+</TabPanel>
+<TabPanel title="FAQ">
+
+## Frequently Asked Questions
+
+**Q: What is the difference between a binary converter and a hex converter?**
+A: This tool is both. A **binary converter** focuses on base-2, while a **hex converter** focuses on base-16. This tool is a universal **binary hex octal decimal converter** that handles all four systems interchangeably.
+
+**Q: Why are my binary to decimal results different when I change the signed/unsigned setting?**
+A: This is correct and crucial. The same binary pattern represents different values. **Unsigned** interprets all bits as a positive number. **Signed** uses the first bit as a sign flag (for negative numbers using two's complement). For example, 8-bit `10000000` is **128** unsigned but **-128** signed.
+
+**Q: What does 'Invalid Input' mean?**
+A: This error appears if you enter characters not valid for the selected number system. For example, entering `2` or `9` in a binary field, or `G` in a hexadecimal field. Ensure your input only uses valid digits for the chosen base.
+
+**Q: Can this converter handle floating-point numbers?**
+A: No, this converter is designed for integer numbers (whole numbers) only. Floating-point conversion (for numbers with decimals) requires a different, more complex standard (IEEE 754).
+
+**Q: What are the prefixes `0b`, `0x`, and `0o` for?**
+A: These are standard prefixes used in programming to clarify the base of a number. `0b` indicates binary (e.g., `0b1010`), `0x` indicates hexadecimal (e.g., `0xFF`), and `0o` indicates octal (e.g., `0o755`). Using them is good practice but optional with this tool.
+
+**Q: How does the tool convert decimal to binary so quickly?**
+A: It uses a highly efficient algorithm based on repeated division and modulus operations, which is performed instantly by your computer's processor. This is much faster than manual calculation.
+
+</TabPanel>
+</Tabs>

@@ -1,0 +1,91 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **electrical calculator** helps you solve for voltage, current, resistance, and power in DC circuits using **Ohm’s Law** and **power formulas**. Whether you’re designing a simple LED circuit, sizing a resistor, or troubleshooting a power supply, this tool provides instant, accurate results to ensure your projects are safe and efficient.
+
+### How It Works
+The calculator uses the core electrical formulas:
+- **Ohm’s Law**: `V = I × R`
+- **Power**: `P = V × I = I² × R = V² / R`
+
+For **series circuits**, it sums resistances. For **parallel circuits**, it calculates the reciprocal sum. You can also combine both in mixed networks.
+
+### Key Inputs
+- **Circuit Type**: Select series, parallel, or mixed.
+- **Known Values**: Enter any two of voltage, current, resistance, or power.
+- **Resistor Values**: Add individual resistors for combination calculations.
+- **AC Mode**: For AC circuits, input power factor to calculate real/apparent power.
+
+The tool instantly shows:
+- Missing electrical values
+- Total resistance for combinations
+- Power dissipation per component
+- Safety warnings if components are overloaded
+
+### How to Use
+1. Choose your **circuit type**.
+2. Enter **known values** (e.g., voltage and resistance).
+3. Click **Calculate** to solve for unknowns.
+4. For resistor networks, add values and see total resistance.
+5. Use the results to select appropriate components and ensure safe operation.
+
+Always verify calculations with a multimeter before powering your circuit.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Powering an LED with a 9V battery.
+
+**Inputs**:
+- Supply Voltage: 9V
+- LED Forward Voltage: 2.1V
+- Desired Current: 20mA (0.02A)
+
+**Calculation**:
+1. Voltage across resistor: `9V – 2.1V = 6.9V`
+2. Resistor value: `R = V / I = 6.9V / 0.02A = 345Ω`
+3. Power dissipation: `P = I² × R = (0.02)² × 345 = 0.138W`
+
+**Result**: Use a **345Ω resistor** (or nearest standard 330Ω or 360Ω) rated for **at least 0.25W**.
+
+This ensures the LED operates safely without burning out.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is Ohm’s Law?
+Ohm’s Law states that **voltage = current × resistance** (`V = I × R`). It defines the relationship between these three fundamental electrical quantities in resistive circuits.
+
+### How do I calculate total resistance?
+- **Series**: Add all resistances: `R_total = R₁ + R₂ + ...`  
+- **Parallel**: Use `1/R_total = 1/R₁ + 1/R₂ + ...`  
+For two resistors in parallel: `R_total = (R₁ × R₂) / (R₁ + R₂)`
+
+### What is the difference between real and apparent power?
+**Real power (W)** does useful work (e.g., heat, light). **Apparent power (VA)** is the product of voltage and current. In AC circuits with inductive/capacitive loads, they differ due to **power factor**.
+
+### Can I use this for AC circuits?
+Yes—for **resistive AC loads** (heaters, incandescent bulbs), DC formulas apply using RMS values. For **reactive loads** (motors, transformers), enable AC mode and input power factor.
+
+### How do I choose a resistor wattage?
+Calculate power dissipation (`P = I² × R`) and select a resistor rated for **at least double** that value (e.g., 0.25W resistor for 0.1W load) for safety and longevity.
+
+### Why is my calculation not matching my multimeter?
+Possible reasons:  
+- Component tolerances (±5% resistors)  
+- Battery internal resistance  
+- Temperature effects  
+- Measurement error  
+Always measure under actual operating conditions.
+
+### Is this calculator safe for mains voltage?
+No. This tool is for **low-voltage DC circuits** (e.g., batteries, USB power). **Never use it to design or troubleshoot mains AC circuits** without professional training and certification.
+
+### What are common beginner mistakes?
+- Confusing mA with A (e.g., 20mA = 0.02A)  
+- Forgetting LED forward voltage  
+- Using undersized resistors  
+- Ignoring power dissipation  
+- Reversing polarity on polarised components
+</TabPanel>
+</Tabs>

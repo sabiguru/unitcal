@@ -1,0 +1,87 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **EV range calculator** helps you estimate your electric vehicle’s real-world driving range by accounting for your **usable battery capacity**, **energy consumption**, and key variables like **speed, temperature, HVAC use, and terrain**. Unlike manufacturer estimates, this tool provides a personalized range prediction that reflects your actual driving conditions—eliminating range anxiety and enabling confident trip planning.
+
+### How It Works
+The calculator uses the fundamental energy relationship:  
+**`Range = (Usable Battery Capacity) / (Adjusted Energy Consumption)`**
+
+It starts with your baseline consumption (kWh/100 km or Wh/mi), then applies multipliers for:
+- **Speed**: Higher speeds increase consumption exponentially
+- **Temperature**: Cold weather reduces battery efficiency and adds HVAC load
+- **HVAC**: Heating and cooling draw constant power
+- **Terrain**: Hills increase energy consumption
+- **Payload**: Extra weight requires more energy
+
+The result is a realistic range estimate with a recommended **10–20% safety buffer** for unexpected conditions.
+
+### Key Inputs
+- **Usable Battery Capacity**: Your EV’s available kWh (not total capacity)
+- **Baseline Consumption**: Your typical energy use (from trip computer)
+- **Driving Conditions**: Select speed, temperature, HVAC, and terrain
+- **Safety Buffer**: Choose 10%, 15%, or 20% reserve
+
+The tool instantly shows:
+- Adjusted energy consumption
+- Realistic driving range
+- Range reduction compared to ideal conditions
+- Charging stop recommendations for long trips
+
+### How to Use
+1. Enter your **usable battery capacity** (check your manual or EV database)
+2. Input your **baseline consumption** (from your car’s trip computer)
+3. Select your **driving conditions** (highway vs. city, temperature, etc.)
+4. Choose a **safety buffer** (recommended: 15%)
+5. Click **Calculate** to see your realistic range
+
+Use this for daily commuting, road trip planning, or understanding how weather affects your range.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Highway driving in cold weather.
+
+**Inputs**:
+- Usable Battery: 75 kWh
+- Baseline Consumption: 25 kWh/100 mi (city)
+- Highway Adjustment: +12% (28 kWh/100 mi)
+- Cold Weather (-5°C): +15% consumption
+- HVAC Use: +8% consumption
+- Safety Buffer: 15%
+
+**Calculation**:
+1. Adjusted Consumption: `28 × 1.15 × 1.08 = **34.7 kWh/100 mi**`
+2. Raw Range: `(75 / 34.7) × 100 = **216 miles**`
+3. With 15% Buffer: `216 × 0.85 = **184 miles**`
+
+**Result**: Plan your trip with **184 miles** of reliable range, not the EPA’s 300-mile estimate.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is usable battery capacity?
+Usable capacity is the energy available for driving—typically **5–10% less** than the total battery capacity. Manufacturers reserve this buffer to protect battery health. Always use usable capacity for accurate calculations.
+
+### How do I find my baseline consumption?
+Check your EV’s **trip computer** or **energy screen**. Most cars show long-term average consumption in kWh/100 km or Wh/mi. Reset the trip meter after a full charge for the most accurate reading.
+
+### Why is my real range less than the EPA estimate?
+EPA tests use ideal lab conditions: moderate temperatures, no HVAC, gentle acceleration, and fixed speed profiles. Real-world driving with highway speeds, temperature extremes, and aggressive driving reduces range by **20–40%**.
+
+### How much does cold weather affect range?
+In temperatures below **0°C (32°F)**, range can drop by **30–40%** due to reduced battery efficiency and energy used for cabin/battery heating.
+
+### Does highway driving reduce range?
+Yes. Highway driving at **70+ mph** can increase energy consumption by **25–30%** compared to city driving due to aerodynamic drag.
+
+### What is a good safety buffer?
+Plan to arrive with **10–20% State of Charge**. This accounts for unexpected detours, traffic, headwinds, or charging station issues.
+
+### Can I use this for trip planning?
+Yes. The calculator shows your realistic range, helping you identify where you’ll need charging stops. For detailed routing, use it alongside apps like A Better Routeplanner (ABRP).
+
+### How accurate is this calculator?
+It’s highly accurate for **personalized estimates** when you input your actual consumption data. However, individual results may vary based on driving style, road conditions, and vehicle-specific factors.
+</TabPanel>
+</Tabs>

@@ -1,0 +1,69 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## How to Use the Prime Number Calculator
+The **prime number calculator** performs two essential number theory tasks: **checking if a number is prime** and **finding its prime factorisation**. Simply enter any integer greater than 1, and the tool instantly determines its primality using efficient algorithms. For composite numbers, it breaks them down into a product of prime factors in exponential form. It can also **generate a list of all prime numbers up to a specified limit** using the Sieve of Eratosthenes. This makes it perfect for homework verification, cryptographic exploration, or satisfying mathematical curiosity.
+
+### Key Functions & Methods
+- **Primality Test**: Uses trial division for small numbers and optimised algorithms for larger ones.
+- **Prime Factorisation**: Applies repeated division by smallest primes to build a complete factor tree.
+- **Prime Generation**: Implements the Sieve of Eratosthenes for fast, accurate prime lists.
+- **Fundamental Theorem Compliance**: Ensures every factorisation is unique and complete.
+
+### Best Practices for Effective Use
+1.  **For primality testing**, enter numbers up to 10¹² for instant results.
+2.  **For factorisation**, the calculator handles numbers up to 10¹⁵ efficiently.
+3.  **When generating primes**, limits up to 100,000 are processed in seconds.
+4.  **Use the results to cross-verify manual calculations**—especially for exams or homework.
+5.  **Explore patterns**: Generate primes in ranges to study gaps, twins, or distributions.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+You want to analyse the number **504**.
+
+**Step 1**: Enter **504** into the calculator.  
+**Step 2**: The tool checks primality → **Composite**  
+**Step 3**: It performs factorisation:  
+- Divides by 2 → 252  
+- Divides by 2 → 126  
+- Divides by 2 → 63  
+- Divides by 3 → 21  
+- Divides by 3 → 7 (prime)  
+**Result**: **504 = 2³ × 3² × 7**
+
+**Alternative**: To find all primes under **30**:  
+- Select “Generate Primes”  
+- Enter limit = 30  
+- Result: **2, 3, 5, 7, 11, 13, 17, 19, 23, 29**
+
+This instant breakdown saves time and builds number intuition.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How does the calculator test for primality?
+For numbers **below 10⁶**, it uses **trial division up to √n**. For larger numbers, it employs a combination of **deterministic checks** (for small factors) and the **Miller-Rabin probabilistic test** with multiple bases, which is >99.999% accurate for practical purposes.
+
+### Why does factorisation stop at prime numbers?
+Because of the **Fundamental Theorem of Arithmetic**: every integer >1 has a unique representation as a product of primes. Once all factors are prime, the decomposition is complete and cannot be simplified further.
+
+### Can this calculator handle very large numbers?
+It can factorise numbers up to **10¹⁵** reliably. Beyond that, factorisation becomes computationally intensive—even for supercomputers. This is the basis of modern RSA encryption, which uses primes with hundreds of digits.
+
+### What is the largest number I can test for primality?
+The primality test works for integers up to **10¹⁸**. For numbers in this range, the Miller-Rabin test provides a **probable prime** result with extremely high confidence.
+
+### Is 2 really a prime number?
+Yes. **2 is the only even prime** because it has exactly two divisors: 1 and 2. All other even numbers are divisible by 2 and hence composite.
+
+### Why does the Sieve of Eratosthenes stop at √n?
+Because any composite number ≤ n must have a prime factor ≤ √n. Crossing out multiples beyond √n is redundant—all composites would have already been marked by smaller primes.
+
+### Can I use this for homework?
+Absolutely. The calculator shows the **full factor tree** and **primality logic**, making it an excellent tool for learning and verifying your manual work. Just ensure you understand the steps—it’s a tutor, not a shortcut.
+
+### What if I enter 1 or 0?
+The calculator will return an error or note that **1 and 0 are not prime** by definition. Prime numbers must be **natural numbers greater than 1**.
+</TabPanel>
+</Tabs>

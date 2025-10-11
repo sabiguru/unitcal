@@ -1,0 +1,72 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Scientific Calculator — Trig, Logs, Exponents & More
+Our online scientific calculator replicates the functionality of physical models like the Casio fx-83 or TI-30X, with a clean, intuitive interface. It supports **trigonometric functions**, **logarithms**, **exponents**, **combinatorics**, and **scientific notation**, all while enforcing correct **order of operations**. Perfect for students, engineers, and anyone tackling advanced maths, physics, or chemistry problems.
+
+### Key Features
+- **Angle Modes**: Switch between **DEG** (degrees) and **RAD** (radians)  
+- **Scientific Notation**: Use the **EE** key for efficient entry (e.g., `6.02 EE 23`)  
+- **Memory Functions**: Store, recall, and clear values with **M+**, **MR**, **MC**  
+- **History**: Review and reuse past calculations  
+- **Error Prevention**: Parentheses auto-balance and syntax highlighting
+
+### Common Uses
+- Solving equations with **sin**, **cos**, **tan**  
+- Calculating **log**, **ln**, **10ˣ**, **eˣ**  
+- Computing **factorials**, **nPr**, **nCr**  
+- Converting units with exponents  
+- Verifying homework or exam prep
+
+This tool is ideal for GCSE, A-level, IB, AP, and university-level coursework.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step: Calculating pH from Hydrogen Ion Concentration
+**Scenario**: Find the pH of a solution with `[H⁺] = 2.5 × 10^-⁴ M`.  
+*(Formula: `pH = −log[H⁺]`)*
+
+1. **Enter the concentration**: `2.5 EE (−)4`  
+2. **Press `log`**: Result ≈ `−3.602`  
+3. **Press `(−)` or `+/−`**: Final result = **3.602**
+
+**Result**: pH ≈ **3.60** (acidic)
+
+Try other chemistry calculations:  
+- **pOH**: `pOH = −log[OH⁻]`  
+- **Antilog**: `10^(−pH)` to find `[H⁺]`
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How do I switch between degrees and radians?
+Click the **DEG/RAD** toggle above the display. Always check this before trig calculations—using the wrong mode is the most common error.
+
+### How do I enter scientific notation?
+Use the **EE** key (not `×10^`). For `1.6 × 10^-¹⁹`, type: `1.6 EE (−)19`. The `(−)` key is for negative exponents.
+
+### Why is `−3²` giving −9 instead of 9?
+Because the calculator interprets it as `−(3²)`. For `(−3)²`, type: `( (−)3 ) x²`.
+
+### Can I use parentheses?
+Yes! The calculator supports nested parentheses for complex expressions like `(2 + 3) × (4 − 1)`.
+
+### What does the `ANS` key do?
+It recalls the **last result**. After calculating `5! = 120`, press `ANS ÷ 10` to get `12`.
+
+### How do I calculate a square root?
+Press the **√** key, then enter the number. For cube roots, use `x^(1/3)`.
+
+### Is this calculator exam-compliant?
+It mirrors approved physical models (e.g., Casio fx-83), but **online tools aren’t allowed in exams**. Use this for homework and practice only.
+
+### How do I clear everything?
+Press **AC** (All Clear) to reset the current calculation, or **C** to clear the last entry.
+
+### Can I calculate combinations?
+Yes! Use **nCr**: For "8 choose 3", type `8 nCr 3` → **56**.
+
+### Why does `sin(30)` give −0.988?
+You’re in **RAD** mode. Switch to **DEG** for `sin(30°) = 0.5`.
+</TabPanel>
+</Tabs>

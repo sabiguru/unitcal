@@ -1,0 +1,282 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+# How to Use a Scientific Calculator — Trig, Logs & Advanced Functions
+
+## Introduction
+
+A scientific calculator is far more than a basic arithmetic tool—it's a **gateway to solving complex problems** in mathematics, physics, engineering, and chemistry. Unlike simple calculators, it handles advanced functions with precision while respecting the correct **order of operations**.
+
+### What Makes Scientific Calculators Powerful?
+- **Trigonometric functions** (sin, cos, tan)
+- **Logarithms** (log, ln) and exponentials
+- **Scientific notation** for very large/small numbers
+- **Combinatorics** (factorials, permutations, combinations)
+- **Memory functions** for multi-step calculations
+
+### Common Challenges
+Many students and professionals **underuse** these capabilities due to:
+- Unfamiliarity with button layouts and modes
+- The infamous **degree/radian error**
+- Confusion with syntax and order of operations
+- Not knowing advanced features exist
+
+This comprehensive guide **demystifies every major function**, explains common pitfalls, and provides step-by-step workflows for real-world problems. Whether you're preparing for an exam, analysing data, or tackling homework, you'll learn to harness your scientific calculator with **confidence and accuracy**.
+
+<Tabs>
+<TabPanel title="Complete Guide">
+## Core Principles: Order of Operations and Syntax
+
+The foundation of **reliable calculation** is understanding how your calculator interprets expressions.
+
+### PEMDAS/BODMAS: The Non-Negotiable Rule
+
+Scientific calculators follow the standard mathematical hierarchy:
+
+1. **P**arentheses / **B**rackets
+2. **E**xponents / **O**rders (powers, roots)
+3. **M**ultiplication & **D**ivision (left to right)
+4. **A**ddition & **S**ubtraction (left to right)
+
+> **Critical Tip**: Always use parentheses to **explicitly group** numerators, denominators, exponents, and negative terms.
+
+**Examples:**
+- ✅ **Correct**: `(5 + 3) / (2 - 1)` = **8**
+- ❌ **Risky**: `5 + 3 / 2 - 1` = **5.5** (not what you expected!)
+
+### Negative Numbers vs. Subtraction
+
+Understanding the difference between these two keys prevents **80% of calculation errors**:
+
+- **Subtraction key** `−`: Binary operator (e.g., `5 − 3`)
+- **Negative sign** `(−)` or `+/−`: Unary operator (e.g., `(−)5`)
+
+**Common Mistake**: Typing `−5²` gives **−25**, not **25**
+**Why?** Calculator reads it as `−(5²) = −25`
+
+✅ **For (−5)²**: Type `( (−)5 ) x²` = **25**
+
+## Essential Function Groups Explained
+
+### 1. Trigonometric Functions (`sin`, `cos`, `tan`) and Inverses
+
+These relate angles to side ratios in right triangles—but **angle mode is everything**.
+
+#### Angle Modes: The #1 Source of Errors
+
+| Mode | Full Circle | Common Use | Example |
+|------|-------------|------------|---------|
+| **DEG** | 360° | Geometry, navigation | `sin(30°) = 0.5` |
+| **RAD** | 2π | Calculus, physics | `sin(π/6) ≈ 0.5` |
+| **GRAD** | 400 grads | Rare/surveying | Avoid unless specified |
+
+#### How to Avoid Angle Mode Errors
+
+> **The single most important habit**: Check the mode indicator **before every calculation**
+
+**3-Step Prevention Method**:
+1. **Check the mode indicator** (usually "DEG", "RAD", or "GRAD" on screen)
+2. **Set mode before entering values**
+3. **Know your context**: Exam questions often specify the unit
+
+**Quick Test**: `sin(30)` should give **0.5** in DEG mode, **−0.988** in RAD mode
+
+### 2. Logarithmic and Exponential Functions
+
+Essential for **chemistry** (pH calculations), **physics** (radioactive decay), and **finance** (compound interest).
+
+#### The Four Core Functions
+
+| Function | What It Does | Example |
+|----------|--------------|---------|
+| **`log(x)`** | Base-10 logarithm | `log(1000) = 3` |
+| **`ln(x)`** | Natural log (base *e* ≈ 2.718) | `ln(e²) = 2` |
+| **`10ˣ`** | Inverse of `log` | `10³ = 1000` |
+| **`eˣ`** | Inverse of `ln` | `e² ≈ 7.389` |
+
+#### Change of Base Formula
+
+For any base *b*: **`log_b(a) = ln(a) / ln(b)`**
+
+**Example**: `log₂(8) = ln(8)/ln(2) = 2.079/0.693 ≈ 3`
+
+**When to use**: Computing logs in bases other than 10 or *e*
+
+### 3. Powers, Roots, and Scientific Notation
+
+#### Power Functions
+
+| Function | Use Case | Example |
+|----------|----------|---------|
+| **`xʸ`** | General exponentiation | `2^10 = 1024` |
+| **`x²`, `x³`** | Quick squares/cubes | `7² = 49` |
+| **`√x`, `∛x`** | Square/cube roots | `√64 = 8` |
+
+#### Scientific Notation: The Right Way
+
+**Use the `EE` or `EXP` key** for numbers like `6.02 × 10²³`:
+
+- ✅ **Correct**: `6.02 EE 23`
+- ❌ **Avoid**: `6.02 × 10 ^ 23` (prone to order-of-operations errors)
+
+**Why `EE` is better**: It treats the entire expression as one unit, preventing calculation mistakes.
+
+### 4. Combinatorics: Factorials, Permutations, Combinations
+
+Essential for **probability**, **statistics**, and **discrete mathematics**.
+
+#### The Three Core Functions
+
+| Function | When to Use | Formula | Example |
+|----------|-------------|---------|---------|
+| **`n!`** | Factorial (arrangements) | `n × (n-1) × ... × 1` | `5! = 120` |
+| **`nPr`** | Permutations (order matters) | `n! / (n−r)!` | `nPr(5,2) = 20` |
+| **`nCr`** | Combinations (order irrelevant) | `n! / (r!(n−r)!)` | `nCr(5,2) = 10` |
+
+#### Quick Decision Guide
+
+- **Order matters?** → Use **`nPr`** (permutations)
+- **Order doesn't matter?** → Use **`nCr`** (combinations)
+- **All arrangements?** → Use **`n!`** (factorial)
+
+### 5. Memory and History Functions
+
+Perfect for **multi-step calculations** where you need to store intermediate results.
+
+#### Memory Functions
+
+| Function | Purpose | When to Use |
+|----------|---------|-------------|
+| **`M+`** | Add to memory | Building running totals |
+| **`M−`** | Subtract from memory | Correcting stored values |
+| **`MR`** | Recall memory | Retrieving stored number |
+| **`MC`** | Clear memory | Starting fresh |
+
+#### Special Functions
+
+- **`ANS`**: Recall **last result** (e.g., `ANS × 2` doubles previous answer)
+- **History**: Many digital calculators show **past entries**—use to verify or edit
+
+**Pro tip**: Use `ANS` for chained calculations instead of retyping long numbers.
+
+## Pro Tips for Accuracy and Efficiency
+
+### ✅ What You Should Always Do
+
+- **Use `EE` for scientific notation**—it's faster and safer than manual entry
+- **Parenthesise fractional exponents**: `8^(2/3)` not `8^2/3`
+- **Verify trig mode before every session**—this prevents 80% of calculation errors
+- **Use `ANS` for chained calculations**: compute area, then `ANS × density` for mass
+- **Round only at the end**—keep full precision in intermediate steps
+
+### ❌ Common Mistakes to Avoid
+
+- **Don't trust default modes**—always confirm DEG/RAD setting
+- **Don't skip parentheses**—ambiguous input leads to wrong answers
+- **Don't use `×10^` instead of `EE`**—it's error-prone
+- **Don't ignore order of operations**—when in doubt, add parentheses
+
+## Common Applications by Field
+- **Maths**: Solving equations, graphing prep, statistics  
+- **Physics**: Kinematics (`v = u + at`), wave functions (`sin(ωt)`)  
+- **Chemistry**: pH (`pH = -log[H⁺]`), reaction rates (`k = A e^(−Ea/RT)`)  
+- **Engineering**: AC circuits (`Xc = 1/(2πfC)`), stress calculations  
+- **Finance**: Compound interest (`A = P(1 + r/n)^(nt)`)
+</TabPanel>
+
+<TabPanel title="Examples & Practice">
+## Worked Examples & Practice Problems
+
+### Example 1: Trigonometry in Radians
+**Problem**: Calculate `cos(π/3) + sin(π/6)`  
+**Steps**:  
+1. Set mode to **RAD**  
+2. Enter: `cos( π ÷ 3 ) + sin( π ÷ 6 )`  
+3. Result: `0.5 + 0.5 = 1.0`  
+**Note**: `π` is usually a dedicated key or `2nd` + `^`
+
+### Example 2: Scientific Notation & Logs
+**Problem**: Find `log(2.5 × 10⁴)`  
+**Steps**:  
+1. Enter: `log( 2.5 EE 4 )`  
+2. Result: `≈4.3979`  
+**Check**: `10^4.3979 ≈ 25,000`
+
+### Example 3: Combinatorics
+**Problem**: How many 4-digit codes can be made from digits 0–9 if no repeats?  
+**Solution**: Order matters → **permutations**  
+- `nPr(10, 4) = 10! / (10−4)! = 5040`
+
+### Example 4: Chained Calculation with Memory
+**Problem**: Compute `(3.2 × 10⁵) × (1.8 × 10⁻³)`, then divide by `7.2`  
+**Steps**:  
+1. `3.2 EE 5 × 1.8 EE -3 =` → **576**  
+2. `÷ 7.2 =` → **80**  
+Or use `ANS`: After step 1, press `÷ 7.2 =`
+
+### Practice Problems
+1. **Trig**: In **DEG** mode, find `tan(45) + cos(60)`  
+2. **Logs**: Calculate `ln(100)` and `log(e)`  
+3. **Exponents**: Compute `(−2)⁴` and `−2⁴`—explain the difference  
+4. **Combinatorics**: How many ways to choose 3 books from 8? (`nCr`)  
+5. **Scientific Notation**: Multiply `4.5 × 10⁶` by `2 × 10⁻³`
+
+### Answers
+1. `1 + 0.5 = 1.5`  
+2. `ln(100) ≈ 4.605`; `log(e) ≈ 0.434`  
+3. `(−2)⁴ = 16`; `−2⁴ = −16` (exponentiation before negation)  
+4. `nCr(8,3) = 56`  
+5. `4.5 EE 6 × 2 EE -3 = 9000`
+</TabPanel>
+
+<TabPanel title="FAQ">
+### Why does my calculator give a different answer than the textbook?
+The #1 cause is **incorrect angle mode** (DEG vs RAD). Always verify this first. Other reasons:  
+- Missing parentheses (e.g., `1/2x` vs `1/(2x)`)  
+- Rounding at intermediate steps  
+- Using approximate vs exact values (e.g., `3.14` vs `π`)
+
+### How do I enter negative exponents?
+Use the **negative sign key**, not subtraction.  
+✅ Correct: `5 EE (−)3` → `0.005`  
+❌ Wrong: `5 EE − 3` → may cause syntax error
+
+### What’s the difference between `log` and `ln`?
+- **`log`** = base-10 logarithm (common log)  
+- **`ln`** = base-*e* logarithm (natural log, *e* ≈ 2.718)  
+In higher maths and science, `ln` is far more common.
+
+### How do I calculate a cube root?
+Use the general root function (often `x√y`) or fractional exponent:  
+- `∛27` = `27^(1/3)` = **3**  
+- On some calculators: `3 x√y 27`
+
+### Can I use a scientific calculator for statistics?
+Yes! Most support:  
+- Mean, standard deviation (`σ`)  
+- Summation (`Σx`, `Σx²`)  
+- Linear regression (`y = mx + c`)  
+Enter data via a "STAT" mode or list function.
+
+### Why does `sin⁻¹(2)` give an error?
+The sine function only outputs values between **−1 and 1**. Thus, `sin⁻¹(x)` is only defined for `x ∈ [−1, 1]`. `sin⁻¹(2)` is mathematically undefined.
+
+### How do I convert between degrees and radians manually?
+- **Degrees to radians**: `rad = deg × π / 180`  
+- **Radians to degrees**: `deg = rad × 180 / π`  
+Example: `90° = 90 × π/180 = π/2 rad`
+
+### What does the "2nd" or "Shift" key do?
+It accesses **secondary functions** printed above keys.  
+Example:  
+- `sin` → sine  
+- `2nd` + `sin` → `sin⁻¹` (arcsine)
+
+### Is a scientific calculator allowed in exams?
+Usually **yes** for GCSE, A-level, IB, and AP exams—but **graphing calculators may be restricted**. Always check exam board rules. Common approved models: Casio fx-83/85, TI-30X.
+
+### How do I reset my calculator?
+- **Physical**: Press reset button (if available)  
+- **Digital**: Refresh the page or use a "Clear All" button  
+- **Mode reset**: Look for "Mode" → "Default" or similar
+</TabPanel>
+</Tabs>

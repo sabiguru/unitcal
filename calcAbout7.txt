@@ -1,0 +1,59 @@
+{
+calc name: Resistor Calculator
+calc url: /calculator/resistor
+Calc features: Calculate resistor values from color codes, Support for 4-band, 5-band, and 6-band resistors, Reverse lookup from resistance value to color codes, Tolerance and temperature coefficient calculations, Power rating recommendations, Standard resistor value finder, Series and parallel resistance calculations
+}
+
+{
+calc name: Retirement Calculator
+calc url: /calculator/retirement
+Calc features: Plan retirement savings and withdrawal strategies, Current age, retirement age, and life expectancy inputs, Monthly contribution and employer match calculations, Investment growth projections with different scenarios, Withdrawal rate sustainability analysis, Social Security benefit estimations, Inflation impact on retirement needs
+}
+
+{
+calc name: ROI Calculator
+calc url: /calculator/roi
+Calc features: Calculate return on investment and profitability metrics, Investment cost and return value inputs, ROI percentage and ratio calculations, Annualized return calculations, Risk-adjusted return considerations, Investment comparison tools, Portfolio ROI tracking
+}
+
+{
+calc name: Roman Numerals Converter
+calc url: /calculator/roman-numerals
+Calc features: Convert between Roman numerals and decimal numbers, Support for numbers up to 3999 (standard Roman numeral range), Input validation for proper Roman numeral format, Historical context and rules explanation, Step-by-step conversion process, Roman numeral arithmetic operations
+}
+
+{
+calc name: Roofing Calculator
+calc url: /calculator/roofing
+Calc features: Calculate roofing materials and square footage, Roof area calculations for different roof shapes, Shingle, tile, or metal roofing material estimates, Underlayment and flashing requirements, Waste factor and overage calculations, Cost estimations for materials and labor, Roof pitch and slope considerations
+}
+
+{
+calc name: Salary Calculator
+calc url: /calculator/salary
+Calc features: Convert between different salary periods (hourly, weekly, monthly, yearly), Gross to net pay calculations, Tax withholding estimations, Overtime pay calculations, Benefits value calculations, Salary negotiation tools, Cost of living adjustments
+}
+
+{
+calc name: Scientific Calculator
+calc url: /calculator/scientific
+Calc features: Advanced mathematical functions including trigonometric, logarithmic, and exponential operations, Memory functions and storage, Degree/radian mode switching, Statistical calculations, Factorial and permutation/combination functions, Scientific notation support, Programmable functions and constants
+}
+
+{
+calc name: Seed Spacing Calculator
+calc url: /calculator/seed-spacing
+Calc features: Calculate optimal seed spacing for garden plants, Plant-specific spacing recommendations, Row and plant spacing calculations, Garden area utilization optimization, Seed quantity estimations for plots, Companion planting spacing considerations, Square foot gardening layouts
+}
+
+{
+calc name: Significant Figures Calculator
+calc url: /calculator/significant-figures
+Calc features: Round numbers to specified significant figures, Identify significant figures in given numbers, Arithmetic operations with significant figure rules, Scientific notation conversions, Measurement precision analysis, Laboratory calculation support, Educational examples and explanations
+}
+
+{
+calc name: Sleep Calculator
+calc url: /calculator/sleep
+Calc features: Calculate optimal sleep and wake times based on sleep cycles, 90-minute sleep cycle optimization, Bedtime recommendations for desired wake time, Sleep debt calculations, Nap timing recommendations, Sleep quality analysis, Circadian rhythm considerations, Age-based sleep requirement guidelines
+}

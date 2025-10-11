@@ -1,0 +1,83 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **compound interest calculator** projects how your savings or investments will grow over time by accounting for your initial deposit, regular contributions, interest rate, and compounding frequency. Whether you’re saving for retirement, a house, or education, this tool shows the powerful effect of compounding—and how small, consistent contributions can lead to significant long-term wealth.
+
+### How It Works
+The calculator uses the standard compound interest formula:
+- **Without contributions**: `FV = P × (1 + r/n)^(n×t)`
+- **With contributions**: `FV = P × (1 + r/n)^(n×t) + PMT × [((1 + r/n)^(n×t) - 1) / (r/n)]`
+
+Where **`P`** is your starting amount, **`PMT`** is your monthly contribution, **`r`** is your annual interest rate, **`n`** is compounding frequency, and **`t`** is time in years.
+
+### Key Inputs
+- **Initial Investment**: Your starting balance.
+- **Monthly Contribution**: Regular deposits (e.g., salary savings).
+- **Annual Interest Rate**: Expected return (e.g., 4% for savings, 7% for investments).
+- **Compounding Frequency**: Daily, monthly, quarterly, or annually.
+- **Time Horizon**: Number of years you’ll invest.
+
+The tool instantly shows:
+- Future value of your investment
+- Total contributions (principal + deposits)
+- Total interest earned
+- Year-by-year growth chart
+
+### How to Use
+1. Enter your **initial investment** (e.g., £5,000).
+2. Add your **monthly contribution** (e.g., £200).
+3. Input your expected **annual return** (use 4–7% for long-term investments).
+4. Select **compounding frequency** (monthly is standard for most accounts).
+5. Set your **time horizon** (e.g., 30 years for retirement).
+6. Click **Calculate** to see your projected growth.
+
+Use the results to adjust your savings rate, time horizon, or investment strategy to meet your financial goals.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Saving for retirement with a £10,000 initial investment and £300 monthly contributions.
+
+**Inputs**:
+- Initial Investment: £10,000
+- Monthly Contribution: £300
+- Annual Return: 6%
+- Compounding: Monthly
+- Time: 30 years
+
+**Calculation**:
+- Total contributions: `£10,000 + (£300 × 360) = £118,000`
+- Total interest earned: **£243,575**
+- **Future Value**: **£361,575**
+
+**Insight**: Over 67% of your final balance comes from compound interest—not your deposits. This highlights why starting early and staying consistent is crucial.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is compound interest?
+Compound interest is interest calculated on your initial principal **and** all previously accumulated interest. This creates exponential growth over time, unlike simple interest, which only applies to the original amount.
+
+### How does compounding frequency affect growth?
+More frequent compounding (e.g., daily vs. annually) leads to slightly higher returns because interest is added to your balance more often, allowing it to earn its own interest sooner.
+
+### What is a realistic annual return?
+- **Savings accounts**: 1–4% (low risk, guaranteed)
+- **Government bonds**: 3–5% (low-medium risk)
+- **Stock market (long-term)**: 5–7% after inflation (medium-high risk, not guaranteed)
+
+Use conservative estimates for long-term planning.
+
+### Can I use this for debt?
+Yes—but in reverse. High-interest debt (e.g., credit cards at 24% APR) compounds **against you**, making balances grow rapidly. Always prioritise paying off high-interest debt before investing.
+
+### Should I include inflation?
+The calculator shows **nominal returns**. For real-world purchasing power, subtract expected inflation (e.g., 2–3%) from your annual return. A 6% return with 3% inflation = 3% real growth.
+
+### Is compound interest taxable?
+In the UK, interest from savings is taxable unless held in a **Cash ISA**. Investment gains are tax-free in **Stocks and Shares ISAs** or **SIPPs**. Always use tax-efficient accounts to maximise compounding.
+
+### How accurate is this calculator?
+It’s mathematically precise for **fixed-rate scenarios** (e.g., savings accounts). For investments, actual returns will vary due to market fluctuations—use it as a projection, not a guarantee.
+</TabPanel>
+</Tabs>

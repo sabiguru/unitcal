@@ -1,0 +1,74 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+
+## What is a Calorie Calculator?
+
+A **calorie calculator** is an essential tool for anyone looking to manage their weight or optimise their nutrition. It estimates your **Total Daily Energy Expenditure (TDEE)**—the number of calories you burn each day—and provides a personalised calorie target based on your goal, whether that's weight loss, maintenance, or muscle gain. By using scientifically validated formulas like **Mifflin-St Jeor**, this calculator takes the guesswork out of diet planning. It helps you understand your body's energy needs, allowing you to create a sustainable plan for fat loss without extreme hunger or for fuelling muscle growth effectively.
+
+## The Formula Explained Simply
+
+The calculation is a two-step process based on your personal metrics.
+
+1.  **Calculate Basal Metabolic Rate (BMR):** This is the calories your body needs at complete rest. The Mifflin-St Jeor formula uses your weight, height, age, and sex.
+    - **Example for a man:** `BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age) + 5`
+
+2.  **Adjust for Activity (TDEE):** Your BMR is then multiplied by an activity factor that reflects your lifestyle, from sedentary to extremely active.
+    - **TDEE = BMR × Activity Multiplier**
+
+Your TDEE is your maintenance calories. To lose weight, you eat less than this number. To gain weight, you eat more.
+
+## How to Use This Calculator
+
+Using our **calorie calculator** is a simple three-step process.
+
+1.  **Enter Your Details:** Input your age, sex, weight, height, and activity level. Be honest about your activity for the most accurate result.
+2.  **Select Your Goal:** Choose your objective: weight loss, maintenance, or muscle gain. The calculator will automatically create the appropriate calorie deficit or surplus.
+3.  **Get Your Calorie Target:** Your personalised daily calorie goal will be displayed. This is the number you should aim for to reach your goal.
+
+</TabPanel>
+<TabPanel title="Example">
+
+## A Step-by-Step Example
+
+Let's see how the calculation works for a real person.
+
+**Scenario:** Mark wants to lose weight. He is 35 years old, weighs 90 kg, is 180 cm tall, and goes to the gym 3 times a week (Moderately Active).
+
+1.  **Calculate BMR (Male Formula):**
+    `BMR = (10 × 90) + (6.25 × 180) - (5 × 35) + 5`
+    `BMR = 900 + 1125 - 175 + 5 = 1,855 calories`
+
+2.  **Calculate TDEE (Maintenance Calories):**
+    `TDEE = BMR × Activity Multiplier (1.55)`
+    `TDEE = 1,855 × 1.55 = 2,875 calories`
+
+3.  **Calculate Weight Loss Target (500 calorie deficit):**
+    `Target = 2,875 - 500 = 2,375 calories`
+
+**Result:** To lose weight consistently, Mark should aim to eat approximately **2,375 calories** per day.
+
+### Try It Yourself
+*   Calculate the maintenance calories for a 40-year-old woman who is 165 cm tall, weighs 70 kg, and is Lightly Active.
+*   **Use the calculator above to find your own personalised calorie target!**
+
+</TabPanel>
+<TabPanel title="FAQ">
+
+## Frequently Asked Questions
+
+### How accurate is the calorie calculator?
+The calculator is highly accurate for most people, typically within 10% of your true energy needs. It uses the Mifflin-St Jeor equation, which is considered the gold standard. However, individual metabolism can vary, so use the result as a strong starting point and adjust based on your progress over 2-4 weeks.
+
+### What is the difference between BMR and TDEE?
+**BMR (Basal Metabolic Rate)** is the number of calories your body burns at complete rest just to keep you alive. **TDEE (Total Daily Energy Expenditure)** is the total calories you burn in a full day, including BMR, daily activities, and exercise. TDEE is the number you use to plan your diet.
+
+### What is a safe calorie deficit for weight loss?
+A deficit of 500 calories per day from your TDEE is generally considered safe and sustainable, leading to a loss of about 1 pound (0.45 kg) per week. Larger deficits can be counterproductive, leading to muscle loss and a slower metabolism.
+
+### Why am I not losing weight even though I'm eating at a deficit?
+If the scale isn't moving after 3-4 weeks of consistency, the most likely causes are: 1) Inaccurate tracking of food intake (e.g., forgetting cooking oils, drinks, or snacks), 2) Overestimation of your activity level, or 3) Water weight fluctuations. Re-evaluate your tracking and activity assessment before making further changes.
+
+</TabPanel>
+</Tabs>

@@ -1,0 +1,75 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Introduction
+Our **stoichiometry calculator** automates the core steps of chemical reaction calculations: balancing equations, converting between mass and moles, identifying the **limiting reagent**, and computing **theoretical and percent yields**. It’s ideal for GCSE, A-Level, and undergraduate chemistry students who need to verify homework or understand reaction stoichiometry quickly.
+
+### How It Works
+1. **Balances** your chemical equation using standard algorithms.
+2. **Converts** input masses to moles using up-to-date atomic weights.
+3. **Applies mole ratios** from the balanced equation.
+4. **Identifies the limiting reagent** by comparing product yields.
+5. **Calculates theoretical yield** and **percent yield** (if actual yield is provided).
+
+### How to Use
+1. Enter your unbalanced chemical equation (e.g., `Fe + O2 -> Fe2O3`)
+2. Input the **mass (or moles)** of each reactant
+3. (Optional) Enter the **actual yield** to compute percent yield
+4. The tool shows:
+   - Balanced equation
+   - Moles of each reactant
+   - Limiting reagent
+   - Theoretical yield (in grams and moles)
+   - Percent yield (if applicable)
+
+This calculator supports hydrates (e.g., `CuSO4·5H2O`) and common polyatomic ions.
+
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+**Scenario**: You react **10.0 g of hydrogen (H₂)** with **64.0 g of oxygen (O₂)** to form water. What is the theoretical yield?
+
+**Steps**:
+1. Enter equation: `H2 + O2 -> H2O`
+2. Input masses: H₂ = `10.0 g`, O₂ = `64.0 g`
+3. The calculator:
+   - Balances to: `2H₂ + O₂ → 2H₂O`
+   - Converts to moles: H₂ = 4.96 mol, O₂ = 2.00 mol
+   - Calculates H₂O from H₂: 4.96 mol  
+     H₂O from O₂: 4.00 mol → **O₂ is limiting**
+   - Theoretical yield = `4.00 mol × 18.02 g/mol = 72.1 g`
+
+✅ **Result**: **72.1 g of H₂O** (O₂ limits the reaction)
+
+</TabPanel>
+
+<TabPanel title="FAQ">
+### Do I need to balance the equation myself?
+No. The calculator balances it automatically. Just enter the reactants and products.
+
+### Can I use this for ionic equations?
+Yes, as long as the equation is written with correct formulas (e.g., `AgNO3 + NaCl -> AgCl + NaNO3`).
+
+### How does it handle hydrates?
+Enter them with a dot, like `CuSO4·5H2O`. The calculator includes water in molar mass.
+
+### What if I only have one reactant?
+The calculator assumes the other reactants are in excess and calculates product based on the given reactant.
+
+### Does it work with gas volumes?
+Not directly. Convert gas volume to moles first (using 24.0 L/mol at RTP for UK exams), then input moles.
+
+### Why does it show "limiting reagent" even with one reactant?
+It only shows this when **two or more reactants** are provided. With one, it assumes excess others.
+
+### Can I calculate percent yield?
+Yes. Enter the **actual yield** (from your experiment), and it will compute:  
+`% Yield = (Actual / Theoretical) × 100%`
+
+### Are atomic masses up to date?
+Yes. The calculator uses IUPAC 2021 standard atomic weights.
+
+</TabPanel>
+</Tabs>

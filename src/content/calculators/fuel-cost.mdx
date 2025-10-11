@@ -1,0 +1,83 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **fuel cost calculator** helps you estimate the total expense of any road trip or commute by combining your vehicle’s fuel economy, trip distance, and current fuel prices. Whether you’re budgeting for a holiday, comparing cars, or optimising your daily drive, this tool provides an accurate, personalised cost estimate that accounts for real-world driving conditions. By understanding your fuel costs, you can make smarter decisions about routes, vehicles, and driving habits to save money and reduce your environmental impact.
+
+### How It Works
+The calculator uses standard fuel cost formulas:
+- **MPG (Imperial)**: `Fuel Needed = Distance ÷ MPG`  
+- **L/100 km (Metric)**: `Fuel Needed = (Distance × L/100 km) ÷ 100`  
+Total cost is then `Fuel Needed × Price per Unit`.
+
+It also converts between MPG and L/100 km using the standard factor (`235.215 ÷ MPG = L/100 km`).
+
+### Key Inputs
+- **Trip Distance**: Total miles or kilometers.
+- **Fuel Economy**: Your car’s MPG or L/100 km (use real-world data, not advertised figures).
+- **Fuel Price**: Current cost per gallon or litre.
+- **Adjustments**: Add a buffer for highway speeds, hills, or AC use.
+
+The tool instantly shows:
+- Total fuel needed
+- Total trip cost
+- Cost per mile/kilometer
+- Comparison to alternative vehicles or routes
+
+### How to Use
+1. Enter your **trip distance** (use Google Maps for accuracy).
+2. Input your **real-world fuel economy** (from your trip computer or manual calculation).
+3. Add the **current fuel price** in your area.
+4. Click **Calculate** to see your estimated cost.
+5. Use the **“Compare”** feature to test different vehicles or routes.
+
+For the most accurate results, use your own observed fuel economy over several tanks—not the manufacturer’s idealised figure.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: A 300-mile road trip in a car that averages 28 MPG. Fuel costs £1.90/gallon.
+
+**Inputs**:
+- Distance: 300 miles
+- Fuel Economy: 28 MPG
+- Fuel Price: £1.90/gallon
+
+**Calculation**:
+1. Fuel Needed: `300 ÷ 28 = 10.71 gallons`
+2. Total Cost: `10.71 × £1.90 = **£20.35**`
+3. Cost per Mile: `£20.35 ÷ 300 = **£0.068/mile**`
+
+**Insight**: If you drove a less efficient car (22 MPG), the cost would rise to **£25.91**—a **£5.56 difference** for the same trip.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How do I find my real fuel economy?
+Reset your trip computer after a full tank and drive normally. After 2–3 tanks, note the average MPG or L/100 km. For manual calculation: `MPG = Miles Driven ÷ Gallons Added`.
+
+### Can I use this for diesel?
+Yes. Just enter the current **diesel price**, which may differ from gasoline.
+
+### Why is my actual cost different from the estimate?
+Real-world factors like **aggressive driving**, **high speeds**, **AC use**, **hills**, and **traffic** reduce fuel economy. The calculator assumes steady, moderate driving—add a 10–20% buffer for realism.
+
+### What’s the difference between MPG and L/100 km?
+**MPG** (miles per gallon) is used in the US/UK—**higher is better**. **L/100 km** (litres per 100 km) is used in Europe—**lower is better**. The calculator converts between them automatically.
+
+### How can I reduce my fuel costs?
+- Drive at 55–65 mph on highways  
+- Accelerate and brake smoothly  
+- Keep tires inflated  
+- Remove roof racks when not in use  
+- Compare fuel prices and fill up in cheaper areas
+
+### Does this work for electric vehicles?
+No. For EVs, use our [EV Range Calculator](/calculator/ev-range), which estimates electricity costs based on kWh/100 km and your electricity rate.
+
+### Can I calculate cost per mile?
+Yes. The calculator shows **cost per mile or km**, which is useful for budgeting, reimbursement, or comparing transport options.
+
+### Is this accurate for long trips?
+Yes—if you use your real-world fuel economy and average fuel prices along your route. For cross-country trips, break the journey into segments with different fuel prices for greater accuracy.
+</TabPanel>
+</Tabs>

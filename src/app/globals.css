@@ -24,3 +24,874 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* MDX Content Styling */
+.mdx-content {
+  line-height: 1.7;
+}
+
+.mdx-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.mdx-content h1:first-child {
+  margin-top: 0;
+}
+
+.mdx-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.75rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mdx-content h2:first-child {
+  margin-top: 0;
+}
+
+.mdx-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.mdx-content h3:first-child {
+  margin-top: 0;
+}
+
+.mdx-content p {
+  margin-bottom: 1rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.mdx-content strong {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.mdx-content em {
+  font-style: italic;
+  color: #4b5563;
+}
+
+.mdx-content ul, .mdx-content ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.mdx-content li {
+  margin-bottom: 0.5rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.mdx-content code {
+  background-color: #f3f4f6;
+  color: #1f2937;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-family: 'Courier New', monospace;
+}
+
+.mdx-content pre {
+  background-color: #1f2937;
+  color: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.mdx-content pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+.mdx-content blockquote {
+  border-left: 4px solid #3b82f6;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: #4b5563;
+}
+
+.mdx-content a {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+.mdx-content a:hover {
+  color: #2563eb;
+}
+
+/* Special styling for FAQ sections */
+.mdx-content p:has(strong:first-child) {
+  background-color: #f8fafc;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border-left: 3px solid #3b82f6;
+  margin-bottom: 0.5rem;
+}
+
+/* Category sections with background */
+.mdx-content h3 + p {
+  background-color: #f9fafb;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  border: 1px solid #e5e7eb;
+  margin-top: 0.5rem;
+}
+
+/* Mobile-responsive fixes for calculators */
+@media (max-width: 768px) {
+  /* Force minimum viewport width to prevent horizontal scrolling */
+  body {
+    min-width: 320px;
+    overflow-x: hidden;
+  }
+  
+  /* Container adjustments */
+  .max-w-7xl {
+    max-width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  /* Calculator headers - make responsive */
+  .calculator-header h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  .calculator-header p {
+    font-size: 0.875rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  /* Input fields - prevent overflow */
+  input[type="number"], 
+  input[type="text"], 
+  select {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Grid layouts - make single column on mobile */
+  .grid-cols-2 {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+  
+  .grid-cols-3 {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+  
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+  
+  /* Calculator displays - responsive text */
+  .calculator-display {
+    font-size: 1.5rem !important;
+    padding: 0.75rem !important;
+  }
+  
+  /* Button sizing for mobile */
+  .calculator-button {
+    padding: 0.75rem 0.5rem !important;
+    font-size: 0.875rem !important;
+    min-height: 48px !important;
+  }
+  
+  /* Results sections - better spacing */
+  .results-section {
+    padding: 1rem !important;
+    margin: 0.5rem 0 !important;
+  }
+  
+  /* Tables - horizontal scroll */
+  .calculator-table {
+    overflow-x: auto !important;
+    display: block !important;
+    white-space: nowrap !important;
+  }
+  
+  /* Form sections - full width */
+  .calculator-form > div {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Absolute positioned elements - adjust for mobile */
+  .absolute.right-3 {
+    right: 0.75rem !important;
+    font-size: 0.875rem !important;
+  }
+  
+  /* Prevent horizontal scrolling */
+  .calculator-container {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+  }
+  
+  /* Text overflow fixes */
+  .text-3xl {
+    font-size: 1.5rem !important;
+  }
+  
+  .text-2xl {
+    font-size: 1.25rem !important;
+  }
+  
+  .text-xl {
+    font-size: 1.125rem !important;
+  }
+  
+  /* Padding adjustments */
+  .p-8 {
+    padding: 1rem !important;
+  }
+  
+  .p-6 {
+    padding: 0.75rem !important;
+  }
+  
+  .px-4 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+  
+  .py-3 {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+  
+  /* Specific fixes for form elements in calculators */
+  .calculator-form input,
+  .calculator-form select {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+  
+  .calculator-form .relative {
+    position: relative !important;
+    width: 100% !important;
+  }
+  
+  .calculator-form .absolute {
+    position: absolute !important;
+    font-size: 0.875rem !important;
+  }
+  
+  /* Results and tables mobile fixes */
+  .results-section table {
+    font-size: 0.875rem !important;
+    overflow-x: auto !important;
+    display: block !important;
+    white-space: nowrap !important;
+  }
+  
+  .results-section td,
+  .results-section th {
+    padding: 0.5rem !important;
+    min-width: 80px !important;
+  }
+  
+  /* Button improvements */
+  button {
+    touch-action: manipulation !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+  
+  /* Prevent text selection on calculator buttons */
+  .calculator-button {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    user-select: none !important;
+  }
+}
+
+/* Accessibility improvements */
+/* Improve focus indicators */
+*:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Button focus improvements */
+button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Link focus improvements */
+a:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  text-decoration: none;
+}
+
+/* Improve contrast for third-party elements */
+/* Ezoic cookie banner improvements */
+#ez-cookie-dialog {
+  color: #1f2937 !important;
+  background-color: #ffffff !important;
+  border: 1px solid #d1d5db !important;
+}
+
+#ez-cookie-dialog .ez-switch-view-btn {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+  border: 2px solid #3b82f6 !important;
+  padding: 8px 16px !important;
+  font-weight: 500 !important;
+}
+
+#ez-cookie-dialog .ez-switch-view-btn:hover {
+  background-color: #2563eb !important;
+  border-color: #2563eb !important;
+}
+
+#ez-cookie-dialog .ez-switch-view-btn:focus {
+  outline: 2px solid #1d4ed8 !important;
+  outline-offset: 2px !important;
+}
+
+#ez-cookie-dialog a {
+  color: #3b82f6 !important;
+  text-decoration: underline !important;
+}
+
+#ez-cookie-dialog a:hover {
+  color: #2563eb !important;
+}
+
+/* Calculator link improvements */
+.calculator-grid a {
+  color: #1f2937 !important;
+  text-decoration: none !important;
+}
+
+.calculator-grid a:hover {
+  color: #111827 !important;
+}
+
+.calculator-grid a:focus {
+  outline: 2px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+  border-radius: 8px !important;
+}
+
+/* Ensure sufficient contrast for all card elements */
+.bg-white {
+  color: #1f2937;
+}
+
+.text-gray-500 {
+  color: #6b7280 !important;
+}
+
+.text-gray-600 {
+  color: #4b5563 !important;
+}
+
+.text-gray-700 {
+  color: #374151 !important;
+}
+
+.text-gray-800 {
+  color: #1f2937 !important;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .mdx-content p,
+  .mdx-content li {
+    color: #000000;
+  }
+  
+  .mdx-content h1,
+  .mdx-content h2,
+  .mdx-content h3 {
+    color: #000000;
+  }
+  
+  .text-gray-500,
+  .text-gray-600,
+  .text-gray-700,
+  .text-gray-800 {
+    color: #000000 !important;
+  }
+}
+
+/* ==========================================
+   Enhanced Learn Page Styling
+   ========================================== */
+
+/* Base styling for learn content */
+.learn-mdx-content {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.7;
+  color: #374151;
+}
+
+/* Enhanced headings with visual hierarchy */
+.learn-mdx-content h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.learn-mdx-content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.learn-mdx-content h2:first-child {
+  margin-top: 0;
+}
+
+.learn-mdx-content h3 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.75rem;
+  margin-top: 2rem;
+  padding-left: 1rem;
+  border-left: 4px solid #3b82f6;
+  background-color: #f8fafc;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.learn-mdx-content h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Enhanced paragraph styling */
+.learn-mdx-content p {
+  margin-bottom: 1.25rem;
+  color: #374151;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Enhanced text emphasis */
+.learn-mdx-content strong {
+  font-weight: 700;
+  color: #1f2937;
+  background-color: #fef3c7;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.learn-mdx-content em {
+  font-style: italic;
+  color: #6b7280;
+}
+
+/* Lists with better spacing */
+.learn-mdx-content ul,
+.learn-mdx-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.learn-mdx-content li {
+  margin-bottom: 0.75rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.learn-mdx-content li::marker {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+/* Enhanced code styling */
+.learn-mdx-content code {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  color: #1f2937;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', monospace;
+  border: 1px solid #d1d5db;
+  font-weight: 500;
+}
+
+.learn-mdx-content pre {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  color: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  border: 1px solid #374151;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.learn-mdx-content pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  border: none;
+  font-weight: 400;
+}
+
+/* Enhanced blockquotes with colored backgrounds */
+.learn-mdx-content blockquote {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border-left: 6px solid #3b82f6;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0 0.75rem 0.75rem 0;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.1);
+}
+
+.learn-mdx-content blockquote::before {
+  content: "💡";
+  position: absolute;
+  top: -0.25rem;
+  left: -0.5rem;
+  background: #3b82f6;
+  color: white;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.learn-mdx-content blockquote p {
+  color: #1e40af;
+  font-weight: 500;
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+/* Enhanced links */
+.learn-mdx-content a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.learn-mdx-content a:hover {
+  color: #1d4ed8;
+  border-bottom-color: #3b82f6;
+}
+
+/* Enhanced table styling */
+.learn-mdx-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.learn-mdx-content th {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.learn-mdx-content td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+}
+
+.learn-mdx-content tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.learn-mdx-content tr:hover {
+  background-color: #f3f4f6;
+}
+
+/* Special styling for formulas and mathematical expressions */
+.learn-mdx-content .formula,
+.learn-mdx-content p:has(code:only-child) {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  border: 2px solid #10b981;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.learn-mdx-content .formula::before {
+  content: "📐";
+  position: absolute;
+  top: -0.5rem;
+  left: 1rem;
+  background: #10b981;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+}
+
+.learn-mdx-content .formula code {
+  background: white;
+  color: #065f46;
+  font-weight: 600;
+  font-size: 1.125rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #10b981;
+}
+
+/* Enhanced example boxes */
+.learn-mdx-content .example {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 2px solid #f59e0b;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.learn-mdx-content .example::before {
+  content: "📝 Example";
+  position: absolute;
+  top: -0.5rem;
+  left: 1rem;
+  background: #f59e0b;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Warning/Important boxes */
+.learn-mdx-content .warning {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  border: 2px solid #ef4444;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.learn-mdx-content .warning::before {
+  content: "⚠️ Important";
+  position: absolute;
+  top: -0.5rem;
+  left: 1rem;
+  background: #ef4444;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* FAQ Questions styling */
+.learn-mdx-content p:has(strong:first-child) {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 1px solid #0ea5e9;
+  border-left: 4px solid #0ea5e9;
+  padding: 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.learn-mdx-content p:has(strong:first-child)::before {
+  content: "Q";
+  position: absolute;
+  top: -0.5rem;
+  left: -0.5rem;
+  background: #0ea5e9;
+  color: white;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Step-by-step instructions */
+.learn-mdx-content ol.steps {
+  counter-reset: step-counter;
+  list-style: none;
+  padding-left: 0;
+}
+
+.learn-mdx-content ol.steps li {
+  counter-increment: step-counter;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #cbd5e1;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 4rem;
+}
+
+.learn-mdx-content ol.steps li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* Tips and Pro Tips */
+.learn-mdx-content .tip {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border: 2px solid #22c55e;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.learn-mdx-content .tip::before {
+  content: "💡 Pro Tip";
+  position: absolute;
+  top: -0.5rem;
+  left: 1rem;
+  background: #22c55e;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Key concepts highlighting */
+.learn-mdx-content .concept {
+  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+  border: 2px solid #8b5cf6;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.learn-mdx-content .concept::before {
+  content: "🔑 Key Concept";
+  position: absolute;
+  top: -0.5rem;
+  left: 1rem;
+  background: #8b5cf6;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .learn-mdx-content h1 {
+    font-size: 1.875rem;
+  }
+
+  .learn-mdx-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .learn-mdx-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .learn-mdx-content table {
+    font-size: 0.875rem;
+  }
+
+  .learn-mdx-content th,
+  .learn-mdx-content td {
+    padding: 0.75rem;
+  }
+
+  .learn-mdx-content .formula,
+  .learn-mdx-content .example,
+  .learn-mdx-content .warning,
+  .learn-mdx-content .tip,
+  .learn-mdx-content .concept {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .learn-mdx-content ol.steps li {
+    padding: 1rem;
+    padding-left: 3.5rem;
+  }
+
+  .learn-mdx-content ol.steps li::before {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.75rem;
+  }
+}

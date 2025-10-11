@@ -1,0 +1,77 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Introduction
+Our **suanpan abacus calculator** brings the ancient Chinese 2:5 abacus to your browser. It’s an interactive tool for learning and practising bead arithmetic, ideal for students, educators, and mental maths enthusiasts. The suanpan’s two upper beads (each = 5) and five lower beads (each = 1) per rod offer unique flexibility for mastering complements and advanced operations.
+
+### Core Features
+- **Authentic 2:5 layout**: True to the traditional Chinese suanpan
+- **Number representation**: Visualise place value and bead values
+- **Complement support**: Learn and apply complements to 5 and 10
+- **Four operations**: Practise addition, subtraction, multiplication, and division
+- **Clear/reset**: Instantly reset to zero
+
+### How to Use
+1. **Click beads** to move them toward the beam (activate) or away (deactivate)
+2. **Read the number** from left (highest place value) to right
+3. **Perform calculations** by manipulating beads according to suanpan rules
+4. Use the **Clear** button to reset all rods to zero
+5. Refer to the **Examples** tab for step-by-step problems
+
+This tool is perfect for classroom demonstrations, self-study, or developing mental arithmetic skills rooted in a 2,000-year-old tradition.
+
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+**Problem**: Add **348 + 576** using the suanpan.
+
+**Steps**:
+1. **Enter 348**:  
+   - Hundreds rod: 3 lower beads up  
+   - Tens rod: 4 lower beads up  
+   - Units rod: 1 upper + 3 lower beads up (5 + 3 = 8)
+2. **Add 6 to units**:  
+   - 8 + 6 = 14 → subtract 4 (complement of 6 to 10), carry 1 to tens  
+   - Units now show 4; tens increase from 4 to 5
+3. **Add 7 to tens**:  
+   - 5 + 7 = 12 → subtract 3 (complement of 7 to 10), carry 1 to hundreds  
+   - Tens now show 2; hundreds increase from 3 to 4
+4. **Add 5 to hundreds**:  
+   - 4 + 5 = 9 → hundreds rod shows 1 upper + 4 lower beads
+5. **Final result**: **924**
+
+✅ **Answer**: **924**
+
+This demonstrates how complements and carrying work seamlessly on the suanpan.
+
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How do I represent the number 7?
+Move **1 upper bead down** (value 5) and **2 lower beads up** (value 2). Total = 5 + 2 = **7**.
+
+### What are complements and why are they important?
+Complements are pairs that add to 5 or 10 (e.g., 3 and 7 for 10). They allow you to **avoid counting beads one by one**, making calculations faster and more efficient.
+
+### Can I do decimals?
+Yes. Choose any rod as the **units place**. Rods to the right become **tenths, hundredths**, etc. The calculation method is identical.
+
+### How is this different from a soroban?
+The **suanpan** has **2 upper and 5 lower beads** per rod; the **soroban** (Japanese) has **1 upper and 4 lower**. The suanpan allows more intermediate states, while the soroban is optimised for speed.
+
+### Do I need to know Chinese to use it?
+No. The suanpan is a **universal mathematical tool**. The bead values and operations are based on arithmetic, not language.
+
+### Is this useful for modern maths?
+Yes! It builds **mental arithmetic fluency**, **number sense**, and **concentration**—skills that transfer to all areas of mathematics and problem-solving.
+
+### How do I clear the abacus?
+Click the **Clear** button, or manually push all upper beads **up** and all lower beads **down** (away from the central beam).
+
+### Can I use this for multiplication?
+Yes. Use the **partial products method**: multiply each digit of the multiplier by the entire multiplicand, adding results with appropriate place-value shifts.
+
+</TabPanel>
+</Tabs>

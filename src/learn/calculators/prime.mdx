@@ -1,0 +1,211 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+# How to Test Primes & Factorise — Methods & Tips
+
+## Introduction
+
+Prime numbers are the **fundamental building blocks of all integers**—a concept as elegant as it is powerful. These special numbers have fascinated mathematicians for centuries and form the foundation of modern cryptography.
+
+### Why Learn Prime Numbers?
+
+Understanding primes is essential for:
+
+- **Number theory** and mathematical foundations
+- **Cryptography** and digital security systems
+- **Computer science** algorithms and optimization
+- **Everyday problem-solving** (fractions, LCM, GCD)
+- **Academic success** in mathematics and science
+
+### Practical Applications
+
+Prime knowledge helps with:
+
+- **Simplifying fractions** to lowest terms
+- **Finding least common multiples** (LCM)
+- **Greatest common divisors** (GCD) calculations
+- **Cryptographic security** understanding
+- **Mathematical reasoning** and problem-solving
+
+### Essential Skills You'll Develop
+
+Learning **how to check if a number is prime** and perform **prime factorisation** builds:
+
+- **Logical thinking** and systematic approaches
+- **Pattern recognition** in number relationships
+- **Algorithmic understanding** for efficiency
+- **Mathematical confidence** with large numbers
+- **Foundation knowledge** for advanced topics
+
+### What You'll Master
+
+This guide covers:
+
+- **Manual primality testing** methods and shortcuts
+- **Step-by-step factorisation** techniques
+- **Efficient algorithms** (Sieve of Eratosthenes)
+- **Prime list generation** strategies
+- **Real-world applications** and problem-solving
+
+With **clear examples and practical tips**, you'll gain the skills to **deconstruct any number into its prime components** and verify primality with confidence.
+
+<Tabs>
+<TabPanel title="Complete Guide">
+## Understanding Prime Numbers: The Foundation
+A **prime number** is a natural number greater than 1 that has exactly two distinct positive divisors: **1 and itself**. The number **2** is the smallest and only even prime; all other primes are odd. The number **1 is not prime**—it has only one divisor, and excluding it ensures the **Fundamental Theorem of Arithmetic** holds: every integer greater than 1 has a **unique prime factorisation**.
+
+### 1. Primality Testing: Is This Number Prime?
+To determine if a number `n` is prime, you must check whether it has any divisors other than 1 and itself.
+
+#### Trial Division: The Manual Method
+For small numbers, **trial division** is straightforward:
+1.  **Check divisibility by 2**: If `n` is even and `n ≠ 2`, it’s composite.
+2.  **Check odd divisors up to √n**: If no divisor ≤ √n divides `n`, then `n` is prime.
+
+> **Why √n?** If `n = a × b` and both `a, b > √n`, then `a × b > n`—a contradiction. So at least one factor must be ≤ √n.
+
+*Example*: Is **97** prime?  
+- √97 ≈ 9.85  
+- Check primes ≤ 9: 2, 3, 5, 7  
+- 97 is not divisible by any → **97 is prime**
+
+*Example*: Is **221** prime?  
+- √221 ≈ 14.86  
+- Check primes ≤ 14: 2, 3, 5, 7, 11, 13  
+- 221 ÷ 13 = 17 → **221 = 13 × 17 (composite)**
+
+#### Optimisations for Manual Testing
+- **Skip even numbers** after 2.
+- **Use divisibility rules**:
+  - **3**: Sum of digits divisible by 3
+  - **5**: Ends in 0 or 5
+  - **11**: Alternating sum of digits divisible by 11
+
+### 2. Prime Factorisation: Breaking Down Composite Numbers
+Every composite number can be expressed as a product of primes. The **factor tree** method is intuitive and visual.
+
+#### Step-by-Step Factor Tree
+1.  Start with the number.
+2.  Break it into any two factors (not 1 and itself).
+3.  Continue factoring each composite branch until all leaves are prime.
+4.  Write the primes in ascending order, using exponents for repeats.
+
+*Example*: Factorise **504**  
+- 504 = 2 × 252  
+- 252 = 2 × 126  
+- 126 = 2 × 63  
+- 63 = 3 × 21  
+- 21 = 3 × 7  
+- **504 = 2³ × 3² × 7**
+
+> 💡 **Tip**: Always start with the smallest prime factor (2, then 3, etc.) to avoid missing factors.
+
+### 3. Generating Primes: The Sieve of Eratosthenes
+To find all primes up to a limit `n`, the **Sieve of Eratosthenes** is efficient and ancient (c. 240 BCE).
+
+#### Steps:
+1.  List all integers from 2 to `n`.
+2.  Start with the first number (2)—it’s prime.
+3.  Cross out all multiples of 2 (≥ 4).
+4.  Move to the next uncrossed number (3)—it’s prime.
+5.  Cross out all multiples of 3 (≥ 9).
+6.  Repeat until you reach √n.
+7.  All remaining uncrossed numbers are prime.
+
+*Example*: Primes ≤ 30  
+- After sieving: **2, 3, 5, 7, 11, 13, 17, 19, 23, 29**
+
+### 4. Advanced Methods (For Context)
+- **Miller-Rabin Test**: A probabilistic algorithm for very large numbers (used in cryptography). It’s fast and reliable but has a tiny error probability.
+- **AKS Primality Test**: A deterministic polynomial-time algorithm—but too complex for manual use.
+
+## Pro Tips & Common Mistakes
+- **1 is not prime**: This is a common misconception. Primes must have **exactly two** divisors.
+- **Check √n, not n**: Testing up to `n` is unnecessary and inefficient.
+- **Use factor trees for clarity**: They prevent missed factors in complex numbers.
+- **Memorise small primes**: Knowing primes up to 100 speeds up manual testing.
+- **For even numbers > 2**: They’re always composite—no need to test further.
+
+## Practical Applications
+- **Cryptography**: RSA encryption relies on the difficulty of factoring large semiprimes.
+- **Mathematics**: Simplifying fractions, finding GCF/LCM, solving Diophantine equations.
+- **Computer Science**: Hash functions, random number generation, algorithm design.
+- **Education**: Building number sense and logical reasoning in students.
+</TabPanel>
+
+<TabPanel title="Examples & Practice">
+## Worked Examples & Practice Problems
+
+### 1. Primality Testing
+- **Is 101 prime?**  
+  √101 ≈ 10.05 → Check 2, 3, 5, 7  
+  101 not divisible by any → **Prime**
+- **Is 247 prime?**  
+  √247 ≈ 15.7 → Check up to 13  
+  247 ÷ 13 = 19 → **Composite (13 × 19)**
+
+### 2. Prime Factorisation
+- **84**:  
+  84 = 2 × 42 = 2 × 2 × 21 = 2² × 3 × 7
+- **500**:  
+  500 = 2 × 250 = 2² × 125 = 2² × 5³
+- **97**:  
+  97 is prime → **97** (no factorisation)
+
+### 3. Sieve of Eratosthenes
+- **Primes under 50**:  
+  2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 → **15 primes**
+- **Twin primes under 50**:  
+  (3,5), (5,7), (11,13), (17,19), (29,31), (41,43)
+
+### 4. Challenge Problems
+1.  Find the **largest prime factor of 126**:  
+    126 = 2 × 3² × 7 → **7**
+2.  Factorise **1,155**:  
+    1155 = 3 × 5 × 7 × 11
+3.  Is **1,009** prime? (√1009 ≈ 31.8 → check primes ≤ 31)
+
+### Practice Your Own
+- Pick a 3-digit number and test its primality.
+- Factorise your birth year.
+- Use the sieve to list primes between 80 and 100.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is a prime number?
+A prime number is a natural number greater than 1 that cannot be formed by multiplying two smaller natural numbers. It has exactly two distinct positive divisors: 1 and itself. Examples: 2, 3, 5, 7, 11.
+
+### Why is 1 not considered a prime number?
+The definition requires **exactly two** positive divisors. The number 1 has only one (itself). Excluding 1 ensures the **Fundamental Theorem of Arithmetic**—that every integer >1 has a unique prime factorisation—remains valid.
+
+### How do you check if a large number is prime by hand?
+For numbers up to ~10,000, use **trial division up to √n**. For larger numbers, manual checking becomes impractical—this is why computers use probabilistic tests like Miller-Rabin in real-world applications (e.g., cryptography).
+
+### What is the Sieve of Eratosthenes, and why is it useful?
+The Sieve is an ancient algorithm to find all primes up to a given limit. It’s useful for generating prime lists efficiently without testing each number individually for primality. It’s a foundational algorithm in computer science education.
+
+### Can negative numbers be prime?
+No. By definition, prime numbers are **positive integers** greater than 1. Negative numbers and zero are excluded from primality.
+
+### What is prime factorisation, and why is it important?
+Prime factorisation is expressing a composite number as a product of prime numbers. It’s crucial for:
+- Simplifying fractions
+- Finding the Greatest Common Factor (GCF) and Least Common Multiple (LCM)
+- Solving problems in number theory
+- Modern encryption (e.g., RSA)
+
+### How do I know when to stop dividing in factorisation?
+Stop when the quotient is a **prime number**. You can verify this by checking divisibility up to its square root.
+
+### Are there infinitely many prime numbers?
+Yes. This was proven by Euclid over 2,000 years ago. No matter how large a prime you find, there’s always a larger one.
+</TabPanel>
+</Tabs>
+
+## Related Calculators
+- [Scientific Calculator](/calculator/scientific) – Has GCF and LCM functions
+- [Fraction Calculator](/calculator/fraction) – Simplify fractions using prime factorisation
+- [Equation Solver](/calculator/equation-solver) – Solve number theory problems
+- [Basic Calculator](/calculator/basic) – For division and multiplication checks
+
+## Call to Action
+Unlock the hidden structure of numbers. Practice primality tests and factorisation daily—soon, you’ll see the prime architecture behind every integer.

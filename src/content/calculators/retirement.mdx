@@ -1,0 +1,81 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## How to Use the Retirement Calculator
+The **retirement calculator** helps you project your future savings, determine if you’re on track, and model different scenarios for retirement. Enter your current age, retirement age, current savings, annual contributions, and expected return, and the tool calculates your projected portfolio value. It also estimates your annual retirement income using the **4% rule** (or your custom withdrawal rate) and factors in **State Pension** or other income sources. This empowers you to test “what-if” scenarios—like working longer, saving more, or adjusting your return assumptions—to build a resilient retirement plan.
+
+### Key Formulas Used
+- **Future Value**: `FV = P(1+r)^t + PMT[((1+r)^t - 1)/r]`
+- **Retirement Income**: `Annual Withdrawal = Total Savings × Withdrawal Rate`
+- **Savings Target**: `Target = (Annual Need – Other Income) × 25`
+
+### Best Practices for Accurate Results
+1.  **Use real returns**: Enter returns **after inflation** (e.g., 4–5% instead of 7–8%).
+2.  **Include all income**: Add State Pension, final salary pensions, or rental income.
+3.  **Be conservative**: Use lower return assumptions (4% real) and higher expense estimates.
+4.  **Test multiple scenarios**: See how a 2-year delay or 1% higher savings rate changes your outcome.
+5.  **Update annually**: Life changes—your plan should too.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+You’re 45, have £150,000 saved, and contribute £12,000/year. You plan to retire at 67.
+
+**Step 1**: Enter your details:  
+- Current Age: 45  
+- Retirement Age: 67  
+- Current Savings: £150,000  
+- Annual Contribution: £12,000  
+- Real Return: 4%  
+
+**Step 2**: The calculator projects:  
+- **Portfolio at 67**: ~£680,000  
+- **4% Withdrawal**: £27,200/year  
+- **With State Pension (£11,000)**: **£38,200 total income**
+
+**Step 3**: Test a scenario—delay retirement to 70:  
+- Portfolio grows to ~£820,000  
+- Withdrawal = £32,800 + £11,000 = **£43,800**  
+- Just 3 extra years of work boosts income by **£5,600/year**
+
+This tool turns abstract goals into concrete numbers you can act on.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is a realistic rate of return to use?
+For long-term planning, use a **real return** (after inflation) of **4–5%** for a balanced portfolio. This assumes:
+- 60% global stocks (7–8% nominal return)
+- 40% bonds (3–4% nominal return)
+- 2.5% inflation  
+Nominal return = ~6.5%; real return = 6.5% – 2.5% = **4%**.
+
+### How do I account for the State Pension?
+Enter your estimated State Pension as “Other Annual Income” in retirement. The calculator will add this to your portfolio withdrawal to show total income. Get your forecast at [GOV.UK](https://www.gov.uk/check-state-pension).
+
+### Is the 4% rule too aggressive?
+For UK retirees, **3.5% may be safer**, especially if:
+- You retire early (before 60)
+- You have high healthcare costs
+- Your portfolio is heavily UK-focused  
+The calculator lets you adjust the withdrawal rate to test different levels of safety.
+
+### Should I include my home equity in my retirement savings?
+Generally, **no**—unless you plan to downsize or use equity release. Your primary home is a lifestyle asset, not a liquid income source. The calculator focuses on **investable assets** (pensions, ISAs, savings).
+
+### How does tax affect my retirement income?
+- **Pensions**: 25% tax-free lump sum; rest taxed as income  
+- **ISAs**: All withdrawals tax-free  
+- **Savings**: First £1,000 interest tax-free (basic rate)  
+The calculator shows **gross withdrawals**—you’ll need to estimate your net income based on your tax situation.
+
+### Can I use this for early retirement planning?
+Yes. For early retirement (before State Pension age), set “Other Income” to £0 until your State Pension starts. Use a **3–3.5% withdrawal rate** and ensure you have 5+ years of expenses in accessible accounts (ISAs, savings).
+
+### What if my portfolio is mostly in a SIPP?
+A SIPP is just a tax wrapper—the underlying investments determine your returns. Enter your SIPP balance as “Current Savings” and model it like any other investment portfolio.
+
+### How often should I update my plan?
+**Annually**, or after major life events (marriage, job change, inheritance). Small, consistent adjustments keep you on track without drastic changes later.
+</TabPanel>
+</Tabs>

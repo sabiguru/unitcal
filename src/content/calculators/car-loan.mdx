@@ -1,0 +1,76 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **car loan calculator** helps you estimate your monthly payment, total interest, and full amortisation schedule for any auto loan in the UK. Whether you’re buying new or used, this tool lets you compare loan terms, deposit amounts, and APRs to find an affordable option that minimises long-term costs.
+
+### How It Works
+The calculator uses the standard amortisation formula:  
+**`PMT = P × [r(1 + r)ⁿ] / [(1 + r)ⁿ – 1]`**  
+Where **P** is the loan amount, **r** is the monthly interest rate (APR ÷ 12), and **n** is the number of months.
+
+### Key Inputs
+- **Car price**: Total cost of the vehicle.
+- **Deposit**: Upfront payment (aim for at least 10–20%).
+- **APR**: Annual Percentage Rate (includes fees).
+- **Term**: Loan length in months (12–84 typical).
+
+The tool instantly shows:
+- Monthly payment
+- Total amount repayable
+- Total interest paid
+- Amortisation schedule (optional)
+
+### How to Use
+1. Enter the **car price** and your **deposit**.
+2. Input the **APR** (check your pre-approval or dealer quote).
+3. Select the **loan term**.
+4. Click **Calculate** to see your payment and total cost.
+5. Adjust inputs to model different scenarios (e.g., larger deposit, shorter term).
+
+Always compare offers using **APR**, not just monthly payment—longer terms reduce payments but increase total interest.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Buying a used car for £18,000 with a £3,000 deposit.
+
+**Inputs**:
+- Car price: £18,000
+- Deposit: £3,000
+- Loan amount: £15,000
+- APR: 6%
+- Term: 48 months
+
+**Calculation**:
+- Monthly rate: `6% ÷ 12 = 0.5% (0.005)`
+- Payment: `£15,000 × [0.005(1.005)⁴⁸] / [(1.005)⁴⁸ – 1] = **£352.28/month**`
+- Total repayable: `£352.28 × 48 = **£16,909.44**`
+- Total interest: `£16,909.44 – £15,000 = **£1,909.44**`
+
+**Insight**: A 60-month term would lower the payment to £289.99 but increase total interest to £2,399.40—£490 more.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is APR?
+APR (Annual Percentage Rate) is the true annual cost of borrowing, including interest and compulsory fees. UK law requires lenders to display APR, making it the best figure for comparing loans.
+
+### How much deposit should I put down?
+Aim for **at least 10–20%** of the car’s price. A larger deposit reduces your loan amount, monthly payment, and total interest, and helps avoid negative equity.
+
+### Should I choose a shorter or longer loan term?
+**Shorter terms** (36–48 months) cost less in interest and get you debt-free faster. **Longer terms** (60–84 months) lower monthly payments but significantly increase total cost. Choose the shortest term you can afford.
+
+### Can I pay off the loan early?
+Yes. UK law allows early repayment. Lenders may charge up to **58 days’ interest** as a fee, but many waive it—check your agreement.
+
+### What is negative equity?
+Negative equity (or being “upside-down”) means you owe more on the loan than the car is worth. It’s common early in the loan due to rapid depreciation. A larger deposit reduces this risk.
+
+### How does my credit score affect the loan?
+Your credit score directly impacts your APR. Higher scores (e.g., Experian 880+) qualify for lower rates. Check your report before applying.
+
+### Is dealer finance better than a bank loan?
+Not necessarily. Always **get pre-approved** from a bank or credit union first. Use that offer to negotiate with the dealer—they may beat it, or you can walk away with a better deal.
+</TabPanel>
+</Tabs>

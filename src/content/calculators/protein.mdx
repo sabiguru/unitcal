@@ -1,0 +1,58 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## How to Use the Protein Calculator
+The **protein calculator** helps you determine your optimal daily protein intake based on your weight, goals, and activity level. Whether you’re focused on **muscle gain, fat loss, or general health**, simply enter your weight and select your objective, and the tool instantly provides a personalised protein target in grams per day. It also breaks down your intake into practical per-meal portions and compares your needs to the official RDA, ensuring you’re not just meeting minimums—but optimising for results.
+
+### Key Formulas Used
+- **Weight in kg** = Weight in lbs ÷ 2.2
+- **Daily Protein (g)** = Weight (kg) × Protein Factor (g/kg)
+  - *Factors*: 0.8 (RDA), 1.6–2.4 (fat loss), 1.6–2.2 (muscle gain)
+
+### Best Practices
+1.  **Use current body weight**—not goal weight—for accurate calculations.
+2.  **Choose your primary goal**—the calculator adjusts protein ranges accordingly.
+3.  **Distribute intake evenly** across 3–4 meals for best muscle synthesis.
+4.  **Combine with calorie tracking**—protein alone won’t drive fat loss or muscle gain without proper energy balance.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+You weigh **165 lbs** and want to **build muscle**.
+
+**Step 1**: Convert to kg → 165 ÷ 2.2 = **75 kg**  
+**Step 2**: Select goal → **Muscle Gain** (uses 1.8 g/kg)  
+**Step 3**: Calculate → 75 × 1.8 = **135 g protein/day**  
+**Step 4**: Per-meal target → 135 ÷ 4 = **34 g per meal**
+
+The calculator also shows:
+- **RDA comparison**: 75 × 0.8 = 60 g (you need **2.25× more**)
+- **Food examples**: 5 oz chicken breast = ~35g protein
+
+This gives you a clear, actionable target for meal planning.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What if I’m overweight—should I use total or lean body weight?
+For simplicity, use **total body weight**. Research shows it’s effective and easier to track. If you’re very high body fat (>30% men, >40% women), you can use **target weight** instead.
+
+### Can I eat all my protein in one meal?
+Technically yes—but your body can only utilise ~20–40g per meal for muscle synthesis. Spreading intake maximises benefits.
+
+### Is plant protein as effective as animal protein?
+Plant proteins are slightly less bioavailable and may lack some essential amino acids. To compensate, increase intake by 10–20% and combine sources (e.g., rice + beans).
+
+### How does age affect protein needs?
+After 65, protein needs increase to **1.2–2.0 g/kg** to combat sarcopenia (age-related muscle loss). Don’t stick to the RDA if you’re older.
+
+### Should I adjust protein on rest days?
+No—keep intake consistent daily. Muscle repair continues 24–48 hours post-workout.
+
+### Can high protein cause weight gain?
+Only if it pushes you into a calorie surplus. Protein itself is not fattening—but excess calories are.
+
+### What’s the best protein source?
+The best source is the one you’ll eat consistently. Prioritise **whole foods** (eggs, fish, legumes), and use **protein powder** for convenience.
+</TabPanel>
+</Tabs>

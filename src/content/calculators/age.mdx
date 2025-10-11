@@ -1,0 +1,78 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+
+## What is an Age Calculator?
+
+An **age calculator** is a simple yet powerful tool designed to compute the exact amount of time between two dates. While most often used to determine a person's age from their **date of birth** to the present day, it is equally effective for calculating the time until a future event, the duration between two historical dates, or verifying eligibility based on a specific age requirement. It provides a clear, broken-down result in years, months, and days, offering a precise measurement that simple subtraction cannot.
+
+## How Age Calculation Works
+
+Calculating an exact age is more complex than it seems because it must account for the irregularities of the Gregorian calendar. The algorithm used by this tool carefully handles:
+
+*   **Variable Month Lengths:** It knows exactly how many days are in each month.
+*   **Leap Years:** It correctly accounts for February 29th in leap years (those divisible by 4, but not by 100 unless also divisible by 400).
+*   **Sequential Logic:** It doesn't just subtract years; it calculates full years first, then the remaining months, and finally the remaining days to ensure absolute accuracy.
+
+</TabPanel>
+<TabPanel title="How to Use">
+
+## How to Use This Calculator
+
+Using the calculator is a straightforward process that delivers instant, precise results.
+
+1.  **Enter Your Birthdate:** Click on the "Date of Birth" field and select your birth date from the calendar picker. Using the picker avoids format confusion.
+2.  **(Optional) Set an "As of" Date:** By default, the calculator uses today's date. If you need to know your age on a specific past or future date (e.g., for an eligibility check), change this field accordingly.
+3.  **Click "Calculate":** Press the calculate button. The tool will process the dates instantly.
+4.  **Review Your Results:** The results will display your exact age in years, months, and days, as well as the total number of days you have been alive.
+
+### Pro Tip
+For official purposes, always use the **YYYY-MM-DD** format (e.g., 1990-03-15) to prevent any ambiguity between day-month and month-day formats.
+
+</TabPanel>
+<TabPanel title="Example">
+
+## A Step-by-Step Example
+
+**Scenario:** What is the age of someone born on **August 10, 2010**, on **May 5, 2025**?
+
+1.  **Input the Dates:**
+    *   **Date of Birth:** `2010-08-10`
+    *   **As of Date:** `2025-05-05`
+
+2.  **The Calculation Logic:**
+    *   The tool first calculates the provisional years: `2025 - 2010 = 15 years`.
+    *   It then checks if the birthday in 2025 has occurred. Since May (5) is before August (8), it has not. So, it adjusts the age down to **14 years**.
+    *   It then calculates the months from the last birthday (August 10, 2024) to the "as of" date (May 5, 2025). This is **8 months**.
+    *   Finally, it calculates the days, resulting in a final age of **14 years, 8 months, and 25 days**.
+
+3.  **Result:** The calculator will instantly display this accurate breakdown.
+
+### Try It Yourself
+*   Calculate your exact age today.
+*   Find out how many days old you are.
+*   Check how old you will be on your next birthday.
+
+</TabPanel>
+<TabPanel title="FAQ">
+
+## Frequently Asked Questions
+
+**Q: How is this calculator more accurate than just subtracting years?**
+A: Simple subtraction ignores whether your birthday has already occurred this year. This calculator performs a detailed calendar analysis, accounting for the exact day and month, as well as leap years, to give you a precise result in years, months, and days.
+
+**Q: Can I calculate my age on a specific date in the past or future?**
+A: Yes, absolutely. This is a key feature. By changing the "As of Date" from today to any other date, you can find out how old you were on a past date or how old you will be on a future date.
+
+**Q: How does the tool handle leap years?**
+A: It fully accounts for them. If your date range includes February 29th, it will be counted as a full day. This ensures complete accuracy for people born around this date.
+
+**Q: What does the 'Total Days' result mean?**
+A: This is the total number of days that have elapsed from your birth date to the "As of Date." It's a single figure representing your age without being broken into years and months, which is useful for specific milestones or scientific calculations.
+
+**Q: Can I use this to calculate the time between any two events?**
+A: Yes. While it's called an age calculator, it is effectively a general-purpose date duration calculator. You can input any two dates to find the time between them.
+
+</TabPanel>
+</Tabs>

@@ -1,0 +1,173 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+# How to Calculate NPV & IRR — Discounted Cash Flow Analysis
+
+## Introduction
+In the world of finance and investment, not all dollars are created equal. A dollar today is worth more than a dollar tomorrow—a principle known as the **time value of money**. This foundational concept underpins two of the most powerful metrics in capital budgeting: **Net Present Value (NPV)** and **Internal Rate of Return (IRR)**. Learning **how to calculate NPV and IRR** empowers you to evaluate the true profitability of projects, compare investment opportunities on an equal footing, and make data-driven decisions that maximize value. Whether you’re a business owner assessing a new venture, an investor analyzing a startup, or a student mastering corporate finance, this guide explains the logic, formulas, and strategic application of these essential tools—with practical examples and pro tips to avoid common pitfalls.
+
+<Tabs>
+<TabPanel title="Complete Guide">
+## The Core Concepts: NPV and IRR Defined
+### Net Present Value (NPV)
+**NPV** is the sum of all future cash flows from a project, discounted back to today’s dollars using a required rate of return (your **hurdle rate** or **cost of capital**). It answers the question: *“What is this project worth to me right now?”*
+
+- **NPV > $0**: The project creates value—**accept it**.
+- **NPV < $0**: The project destroys value—**reject it**.
+- **NPV = $0**: The project breaks even at your hurdle rate.
+
+### Internal Rate of Return (IRR)
+**IRR** is the discount rate that makes the NPV of a project equal to zero. It represents the **annualized rate of return** the project is expected to generate. It answers: *“What is the effective return on this investment?”*
+
+- **IRR > Hurdle Rate**: Return exceeds cost of capital—**accept**.
+- **IRR < Hurdle Rate**: Return is insufficient—**reject**.
+
+### The Time Value of Money (TVM) Foundation
+Both metrics rely on **discounting**—converting future cash flows into present value using:
+**`PV = CF / (1 + r)^t`**  
+Where:
+- **`CF`** = Cash flow in period `t`
+- **`r`** = Discount rate (hurdle rate)
+- **`t`** = Time period (years)
+
+This accounts for opportunity cost: money invested here can’t earn returns elsewhere.
+
+## Step-by-Step Calculation Process
+### 1. Gather Your Cash Flow Timeline
+List all expected cash flows, including:
+- **Year 0**: Initial investment (negative cash flow)
+- **Years 1–n**: Net operating cash inflows (positive) or outflows (negative)
+
+*Example*:  
+- Year 0: –$100,000 (initial investment)  
+- Years 1–5: +$30,000/year (net cash inflows)
+
+### 2. Choose Your Discount Rate (Hurdle Rate)
+This should reflect:
+- **Cost of capital** (e.g., WACC for corporations)
+- **Risk level** of the project (higher risk = higher rate)
+- **Opportunity cost** of alternative investments
+
+*Example*: 10% hurdle rate for a moderate-risk project.
+
+### 3. Calculate NPV
+Apply the NPV formula:  
+**`NPV = Σ [CFₜ / (1 + r)ᵗ]`**
+
+*Example*:  
+`NPV = –100,000 + 30,000/(1.1) + 30,000/(1.1)² + ... + 30,000/(1.1)⁵ = **$13,724**`  
+→ **Accept** (NPV > 0)
+
+### 4. Calculate IRR
+Solve for `r` in:  
+**`0 = Σ [CFₜ / (1 + IRR)ᵗ]`**
+
+This requires **iteration** (trial-and-error) or financial software.  
+*Example*: IRR ≈ **15.2%** for the above cash flows  
+→ **Accept** (15.2% > 10% hurdle rate)
+
+### 5. Analyze Supporting Metrics
+- **Profitability Index (PI)**: `(NPV + Initial Investment) / Initial Investment`  
+  PI > 1.0 = profitable project
+- **Payback Period**: Time to recover initial investment  
+  Shorter = less risky
+
+## Pro Tips & Best Practices
+- **Prioritize NPV over IRR for mutually exclusive projects**: NPV measures absolute value creation; IRR can be misleading with different project scales or timing.
+- **Use XIRR for irregular cash flows**: If cash flows don’t occur at even intervals, use **XIRR** (which uses exact dates).
+- **Conduct sensitivity analysis**: Test how NPV/IRR change if:
+  - Initial cost is 10% higher
+  - Cash inflows are 15% lower
+  - Discount rate increases by 2%
+- **Beware of IRR pitfalls**:
+  - **Multiple IRRs**: Occur with non-conventional cash flows (e.g., – + –)
+  - **Reinvestment assumption**: IRR assumes cash flows are reinvested at the IRR itself (often unrealistic)
+- **Combine with qualitative factors**: NPV/IRR don’t capture strategic value, regulatory risks, or brand impact.
+
+## Practical Applications
+- **Capital Budgeting**: Choose between factory upgrades, R&D projects, or new product lines.
+- **Real Estate**: Evaluate property acquisitions or development projects.
+- **Startup Investing**: Assess pitch decks with projected cash flows.
+- **Personal Finance**: Decide between paying off debt (guaranteed return) vs. investing (risky return).
+</TabPanel>
+
+<TabPanel title="Examples & Practice">
+## Practice Evaluating Investment Projects
+
+### Scenario 1: Standard Project Analysis
+**Cash Flows**:  
+- Year 0: –$50,000  
+- Years 1–4: +$18,000/year  
+- Hurdle Rate: 12%  
+
+**Tasks**:  
+1. Calculate **NPV**  
+2. Calculate **IRR**  
+3. Determine **Payback Period**  
+4. Should you accept the project?
+
+### Scenario 2: Mutually Exclusive Projects (NPV vs. IRR Conflict)
+**Project A**:  
+- Initial Cost: –$20,000  
+- Annual Cash Flow: $8,000 for 4 years  
+- IRR: 21.9%, NPV @ 10%: $5,368  
+
+**Project B**:  
+- Initial Cost: –$50,000  
+- Annual Cash Flow: $18,000 for 4 years  
+- IRR: 16.6%, NPV @ 10%: $7,008  
+
+**Task**:  
+Which project should you choose? Why does IRR favor A while NPV favors B?
+
+### Scenario 3: Sensitivity Analysis
+Using Scenario 1’s project:  
+1. **Base Case**: NPV @ 12% = ?  
+2. **Worst Case**: Initial cost = –$55,000; Cash flows = $15,000/year  
+3. **Best Case**: Initial cost = –$45,000; Cash flows = $21,000/year  
+4. **High Discount Rate**: NPV @ 15%  
+
+**Task**:  
+Which variable has the biggest impact on NPV?
+
+### Scenario 4: Non-Conventional Cash Flows (Multiple IRR Problem)
+**Cash Flows**:  
+- Year 0: –$100,000  
+- Year 1: +$300,000  
+- Year 2: –$250,000  
+
+**Tasks**:  
+1. Try to calculate IRR—what happens?  
+2. Calculate NPV at 5% and 25% discount rates  
+3. How can NPV help you decide when IRR fails?
+</TabPanel>
+
+<TabPanel title="FAQ">
+### Should I use NPV or IRR for decision-making?
+**Use NPV as your primary metric**, especially for mutually exclusive projects. NPV directly measures value creation in dollars. IRR is useful for understanding return percentages but can conflict with NPV when projects differ in scale or timing. When in doubt, trust NPV.
+
+### What discount rate should I use?
+Use your **Weighted Average Cost of Capital (WACC)** for corporate projects—it reflects your blended cost of debt and equity. For personal investments, use your **opportunity cost** (e.g., expected stock market return). Always adjust for project risk: add a premium for high-risk ventures.
+
+### Why does my calculator say “No IRR” or “Multiple IRRs”?
+This occurs with **non-conventional cash flows** (sign changes more than once). Example: –$100K (invest), +$300K (profit), –$250K (cleanup cost). The IRR equation has multiple solutions or none. **NPV is more reliable here**—calculate NPV at your hurdle rate instead.
+
+### What’s the difference between IRR and XIRR?
+- **IRR** assumes cash flows occur at regular intervals (e.g., annually).  
+- **XIRR** uses exact dates for each cash flow, making it essential for irregular investments (e.g., private equity, angel investing). **XIRR is more precise** for real-world scenarios.
+
+### How does the reinvestment assumption differ between NPV and IRR?
+- **NPV** assumes cash flows are reinvested at the **discount rate** (your hurdle rate)—a conservative, realistic assumption.  
+- **IRR** assumes reinvestment at the **IRR itself**—often unrealistically high. This is why **Modified IRR (MIRR)** exists, using a more realistic reinvestment rate.
+
+### Is a higher IRR always better?
+Not necessarily. A small project with 50% IRR might add $10K in value, while a large project with 20% IRR adds $1M. **NPV captures scale**; IRR does not. Always consider both metrics, but prioritize NPV for value maximization.
+
+### What is the Profitability Index (PI)?
+**PI = (NPV + Initial Investment) / Initial Investment**. It shows value created per dollar invested. PI > 1.0 means the project is profitable. Useful for capital rationing (limited budget)—rank projects by PI.
+
+### Can NPV be used for perpetuities or growing cash flows?
+Yes! For a **perpetuity** (infinite cash flows): `NPV = CF / r`  
+For a **growing perpetuity**: `NPV = CF₁ / (r – g)` (where `g` = growth rate, `r > g`)  
+Common in valuing stocks or real estate with stable growth.
+</TabPanel>
+</Tabs>

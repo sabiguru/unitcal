@@ -1,0 +1,82 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **equation solver** helps you find solutions to linear, quadratic, and systems of equations with clear, detailed steps. Whether you’re checking homework, studying for an exam, or solving real-world problems, this tool breaks down the solution process using methods like **factoring**, the **quadratic formula**, and **substitution**—so you understand not just the answer, but how to get there.
+
+### How It Works
+The solver uses standard algebraic techniques:
+- **Linear equations**: Isolates the variable using inverse operations.
+- **Quadratic equations**: Applies factoring, completing the square, or the quadratic formula based on the equation’s structure.
+- **Systems of equations**: Uses substitution or elimination to find the intersection point.
+
+For quadratics, it calculates the **discriminant** (`b² – 4ac`) to determine the number and type of solutions (real or complex).
+
+### Key Features
+- **Step-by-step solutions**: See every algebraic step, not just the final answer.
+- **Multiple methods**: Choose your preferred solving technique or let the solver pick the most efficient one.
+- **Complex number support**: Handles equations with imaginary solutions.
+- **Fractional precision**: Keeps answers exact using fractions, not decimals.
+- **Verification**: Automatically checks solutions in the original equation.
+
+### How to Use
+1. Select your **equation type** (linear, quadratic, or system).
+2. Enter the **coefficients** (e.g., for `ax² + bx + c = 0`, input `a`, `b`, `c`).
+3. Click **Solve** to see the solution(s) and the step-by-step process.
+4. Use the result to verify your work or learn a new solving method.
+
+This tool is ideal for students, teachers, and anyone needing to solve equations accurately and efficiently.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Solve the quadratic equation `2x² + 4x – 6 = 0`.
+
+**Inputs**:
+- a = 2
+- b = 4
+- c = –6
+
+**Solution Process**:
+1. **Calculate discriminant**: `D = b² – 4ac = 16 – 4(2)(–6) = 16 + 48 = 64`
+2. **Apply quadratic formula**:  
+   `x = [–4 ± √64] / (2×2) = [–4 ± 8] / 4`
+3. **Find roots**:  
+   `x₁ = (–4 + 8)/4 = 1`  
+   `x₂ = (–4 – 8)/4 = –3`
+
+**Result**: The solutions are **x = 1** and **x = –3**.  
+Both satisfy the original equation:  
+- `2(1)² + 4(1) – 6 = 0` ✓  
+- `2(–3)² + 4(–3) – 6 = 0` ✓
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What types of equations can this solver handle?
+It solves **linear equations** (`ax + b = 0`), **quadratic equations** (`ax² + bx + c = 0`), and **systems of two linear equations**. It supports real and complex solutions.
+
+### How does it choose a solving method?
+For quadratics, it first attempts **factoring**. If that fails, it uses the **quadratic formula**. For systems, it selects **substitution** or **elimination** based on coefficient simplicity.
+
+### What is the discriminant and why does it matter?
+The **discriminant** (`b² – 4ac`) tells you how many real solutions a quadratic has:
+- **Positive**: Two real solutions
+- **Zero**: One real solution
+- **Negative**: Two complex solutions
+
+### Can it solve equations with fractions?
+Yes. Enter coefficients as fractions (e.g., `1/2`), and the solver will maintain exact fractional form throughout the solution.
+
+### Why are there two solutions for a quadratic?
+A quadratic equation represents a parabola, which can cross the x-axis at **0, 1, or 2 points**. Each crossing point is a real solution.
+
+### Does it show work for systems of equations?
+Yes. It displays every step of substitution or elimination, including how variables are isolated and back-substituted.
+
+### Can I use this for homework?
+Absolutely. It’s designed to help you **learn**, not just get answers. The step-by-step breakdown teaches you the method so you can solve similar problems on your own.
+
+### What if my equation has no solution?
+The solver will indicate **“no real solution”** (for quadratics with negative discriminant) or **“no solution”** (for inconsistent systems like parallel lines).
+</TabPanel>
+</Tabs>

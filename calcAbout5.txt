@@ -1,0 +1,59 @@
+{
+calc name: Investment Calculator
+calc url: /calculator/investment
+Calc features: Calculate investment returns and growth projections, Initial investment and monthly contribution inputs, Expected return rate and time horizon settings, Inflation adjustment options, Tax considerations for investment growth, Risk tolerance assessments, Portfolio diversification recommendations
+}
+
+{
+calc name: Loan Calculator
+calc url: /calculator/loan
+Calc features: Calculate loan payments, interest, and amortization schedules, Loan amount, interest rate, and term inputs, Monthly payment calculations, Total interest and cost analysis, Amortization table with payment breakdowns, Extra payment impact calculations, Loan comparison tools
+}
+
+{
+calc name: Love Calculator
+calc url: /calculator/love-calculator
+Calc features: Calculate love compatibility percentage between two names, Fun algorithm based on name analysis, Compatibility meter display, Relationship advice based on results, Social sharing of results, Multiple name combination testing, Entertainment-focused love predictions
+}
+
+{
+calc name: Matrix Calculator
+calc url: /calculator/matrix
+Calc features: Perform matrix operations and calculations, Matrix addition, subtraction, and multiplication, Determinant and inverse calculations, Transpose and rank operations, Support for different matrix sizes, Step-by-step operation display, Matrix equation solving
+}
+
+{
+calc name: Molecular Weight Calculator
+calc url: /calculator/molecular-weight
+Calc features: Calculate molecular weight of chemical compounds, Chemical formula input with element recognition, Automatic atomic weight lookup, Compound composition analysis, Molar mass calculations, Support for complex chemical formulas, Element percentage by mass calculations
+}
+
+{
+calc name: Morse Code Converter
+calc url: /calculator/morse-code
+Calc features: Convert text to Morse code and vice versa, Audio playback of Morse code, Visual dot-dash representation, Adjustable transmission speed, Character-by-character conversion display, Support for letters, numbers, and punctuation, Learning tools for Morse code
+}
+
+{
+calc name: Mortgage Calculator
+calc url: /calculator/mortgage
+Calc features: Calculate home loan payments including principal and interest, PMI (Private Mortgage Insurance) calculations, Property tax and insurance inclusions, Down payment impact analysis, Loan term comparisons (15 vs 30 year), Total interest paid over loan life, Monthly payment breakdowns
+}
+
+{
+calc name: MPG Calculator
+calc url: /calculator/mpg
+Calc features: Calculate vehicle fuel efficiency in miles per gallon, Miles driven and fuel consumed inputs, Cost per mile/gallon calculations, Fuel efficiency comparisons between vehicles, Trip cost estimations, Fuel consumption tracking over time, Environmental impact calculations
+}
+
+{
+calc name: NPV & IRR Calculator
+calc url: /calculator/npv-irr
+Calc features: Calculate Net Present Value and Internal Rate of Return, Cash flow input for multiple periods, Discount rate settings for NPV calculations, Investment profitability analysis, Payback period calculations, Profitability index calculations, Investment comparison tools
+}
+
+{
+calc name: Ohm's Law Calculator
+calc url: /calculator/ohms-law
+Calc features: Calculate voltage, current, resistance, and power relationships, Interactive Ohm's law triangle, Any three values calculate the fourth, AC and DC circuit applications, Power dissipation calculations, Electrical safety considerations, Unit conversions for electrical values
+}

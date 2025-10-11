@@ -1,0 +1,72 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Introduction
+Our **water intake calculator** estimates your daily fluid needs based on your body weight, activity level, and climate. It moves beyond the generic “8 glasses a day” rule to provide a personalised hydration target that supports your health, energy, and performance.
+
+### How It Works
+The calculator uses evidence-based formulas:
+1. **Baseline**: `Body weight × 0.033 L/kg` (or `× 0.67 oz/lb`)
+2. **Activity Adjustment**: Adds 500–1000 mL per hour of exercise
+3. **Climate Adjustment**: Adds 250–750 mL for hot, dry, or high-altitude environments
+
+### How to Use
+1. Enter your **weight** (kg or lbs)
+2. Select your **activity level** (sedentary, light, moderate, intense)
+3. Choose your **climate** (temperate, hot, cold, high altitude)
+4. The tool shows:
+   - **Daily fluid target** (in litres and ounces)
+   - **Breakdown** of baseline vs. adjustments
+   - **Practical tips** for meeting your goal
+
+Ideal for athletes, health-conscious individuals, and anyone seeking to optimise their daily hydration.
+
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+**Scenario**: You weigh **75 kg**, exercise **1 hour daily**, and live in a **hot climate**.
+
+**Steps**:
+1. **Baseline**: `75 kg × 0.033 = 2.48 L`
+2. **Activity**: +1.0 L (1 hour moderate exercise)
+3. **Climate**: +0.75 L (hot environment)
+4. **Total Target**: `2.48 + 1.0 + 0.75 = 4.23 L`
+
+✅ **Result**: Aim to drink **4.2 litres (143 oz)** of fluids per day.
+
+This includes water, tea, and other non-alcoholic beverages—but water should make up the majority.
+
+</TabPanel>
+
+<TabPanel title="FAQ">
+### Does this include water from food?
+No. This calculator estimates **fluid intake from drinks only**. Food typically provides ~20% of total water needs, so your total water consumption will be higher.
+
+### Do coffee and tea count?
+Yes. Despite mild diuretic effects, caffeinated beverages still contribute to net hydration. However, water is the healthiest primary source.
+
+### How do I know if I’m drinking enough?
+Check your **urine colour**: pale yellow = well-hydrated; dark yellow = drink more. Thirst is a late sign—don’t wait for it.
+
+### Should I drink more when sick?
+Yes. Fever, vomiting, or diarrhoea increase fluid loss. Sip water or oral rehydration solutions frequently.
+
+### Can I drink too much water?
+Yes. Overhydration (hyponatremia) is rare but serious. Symptoms include nausea, headache, and confusion. Stick to your calculated target unless advised otherwise by a doctor.
+
+### Is tap water safe in the UK?
+Yes. UK tap water meets strict safety standards and is perfectly suitable for daily hydration.
+
+### How can I remember to drink water?
+- Use a marked water bottle
+- Set phone reminders
+- Drink a glass before each meal
+- Pair with daily habits (e.g., after brushing teeth)
+
+### Does pregnancy increase water needs?
+Yes. Pregnant and breastfeeding women need ~300–500 mL extra daily. Consult your midwife for personalised advice.
+
+</TabPanel>
+</Tabs>

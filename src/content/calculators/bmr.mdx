@@ -1,0 +1,70 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+
+## What is a BMR Calculator?
+
+A **BMR calculator** is a specialised tool that estimates your Basal Metabolic Rate—the number of calories your body burns at complete rest to maintain vital functions like breathing, circulation, and cell production. Think of it as the energy your body would need if you slept all day. This figure is the foundation of your Total Daily Energy Expenditure (TDEE). Knowing your BMR is crucial for creating effective weight loss, maintenance, or muscle gain plans, as it provides a personalised starting point far more accurate than generic calorie recommendations.
+
+## The Formula Explained Simply
+
+Our calculator primarily uses the **Mifflin-St Jeor equation**, considered the most accurate for the general population. It factors in your weight, height, age, and sex.
+
+**Mifflin-St Jeor Formula:**
+- **For Men:** `BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age) + 5`
+- **For Women:** `BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age) - 161`
+
+The formula calculates the energy required to sustain your body's basic functions. The result is your BMR in calories per day. To find your total daily needs (TDEE), this number is then multiplied by an activity factor that reflects your lifestyle.
+
+## How to Use This Calculator
+
+Using our **BMR calculator** is a simple three-step process that gives you powerful insights into your metabolism.
+
+1.  **Enter Your Statistics:** Input your age, sex, weight, and height. The calculator automatically handles unit conversions.
+2.  **Select Your Activity Level:** Choose the description that best matches your typical weekly exercise and daily activity. Be honest for the most accurate result.
+3.  **Review Your Results:** You will see your BMR and your estimated TDEE. Your TDEE is the number of calories you need to maintain your current weight.
+
+</TabPanel>
+<TabPanel title="Example">
+
+## A Step-by-Step Example
+
+Let's calculate the BMR for a 40-year-old man who weighs 90 kg and is 180 cm tall.
+
+1.  **Apply the Male Formula:**
+    `BMR = (10 × 90) + (6.25 × 180) - (5 × 40) + 5`
+2.  **Perform the Calculations:**
+    - `(10 × 90) = 900`
+    - `(6.25 × 180) = 1,125`
+    - `(5 × 40) = 200`
+    - Combine: `900 + 1,125 = 2,025`
+    - `2,025 - 200 = 1,825`
+    - `1,825 + 5 = 1,830`
+3.  **Result:** His BMR is **1,830 calories** per day.
+4.  **Find TDEE:** If he is moderately active (multiplier of 1.55), his TDEE is `1,830 × 1.55 = 2,837 calories` to maintain his weight.
+
+### Try It Yourself
+*   Calculate the BMR for a 35-year-old woman weighing 70 kg and measuring 165 cm tall.
+*   If her BMR is 1,450 calories and she is lightly active, what is her TDEE?
+*   **Use the calculator above to find your exact BMR and TDEE!**
+
+</TabPanel>
+<TabPanel title="FAQ">
+
+## Frequently Asked Questions
+
+### How accurate is the BMR calculator?
+Our calculator using the Mifflin-St Jeor equation is highly accurate for most people, typically within 10% of your actual metabolic rate. However, individual variations in genetics, muscle mass, and health conditions can affect your true BMR. Use the result as a strong starting point and adjust based on your real-world progress.
+
+### What is the difference between BMR and TDEE?
+BMR (Basal Metabolic Rate) is the calories you burn at complete rest. TDEE (Total Daily Energy Expenditure) is the total calories you burn in a day, including BMR, physical activity, and the energy used to digest food. TDEE is the number you use to plan your diet.
+
+### Can I use BMR for weight loss?
+Absolutely. Your BMR is the first step to weight loss. To lose weight, you would create a calorie deficit by eating fewer calories than your TDEE. A safe deficit is typically 500 calories below your TDEE, leading to a loss of about 1 pound (0.45 kg) per week.
+
+### Why is my BMR different from my friend's who is the same weight?
+BMR is influenced by more than just weight. Factors like height, age, sex, and, most importantly, body composition (muscle-to-fat ratio) play a significant role. A person with more muscle will have a higher BMR than someone of the same weight with less muscle.
+
+</TabPanel>
+</Tabs>

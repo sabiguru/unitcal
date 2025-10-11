@@ -1,0 +1,83 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **depreciation calculator** helps you compute annual depreciation expense and book value using four standard methods: **straight-line**, **double declining balance (DDB)**, **sum-of-the-years’-digits (SYD)**, and **MACRS** (for US tax purposes). Whether you’re managing business accounts, studying accounting, or planning asset purchases, this tool provides a clear depreciation schedule to support financial reporting and tax compliance.
+
+### How It Works
+The calculator applies industry-standard formulas based on your inputs:
+- **Straight-Line**: Even depreciation over asset life
+- **DDB**: Accelerated depreciation (double the straight-line rate)
+- **SYD**: Accelerated depreciation using remaining-life fractions
+- **MACRS**: US tax method with IRS-defined rates
+
+### Key Inputs
+- **Asset Cost**: Purchase price (including delivery and setup)
+- **Salvage Value**: Estimated resale value at end of life
+- **Useful Life**: Number of years the asset will be used
+- **Method**: Choose your depreciation approach
+- **Start Date**: For partial-year calculations
+
+The tool instantly generates:
+- Annual depreciation expense
+- End-of-year book value
+- Full depreciation schedule (exportable)
+- Visual chart of value decline
+
+### How to Use
+1. Enter the **asset cost** and **salvage value**.
+2. Input the **useful life** in years.
+3. Select your preferred **depreciation method**.
+4. Click **Calculate** to see your schedule.
+5. Compare methods to understand tax and accounting impacts.
+
+For tax purposes, consult a professional—UK businesses use **capital allowances**, while US businesses use **MACRS**.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: A company buys a £20,000 machine with a £2,000 salvage value and 5-year life.
+
+**Straight-Line Method**:  
+- Annual Depreciation: `(£20,000 – £2,000) ÷ 5 = **£3,600/year**`  
+- Book Value after Year 3: `£20,000 – (3 × £3,600) = **£9,200**`
+
+**Double Declining Balance**:  
+- Rate: `2 ÷ 5 = 40%`  
+- Year 1: `40% × £20,000 = **£8,000**`  
+- Year 2: `40% × £12,000 = **£4,800**`  
+- Year 3: `40% × £7,200 = **£2,880**`  
+- Book Value after Year 3: **£4,320**
+
+**Insight**: DDB provides larger early deductions, reducing taxable income faster.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is straight-line depreciation?
+Straight-line depreciation spreads an asset’s cost evenly over its useful life. It’s the simplest method and most commonly used for financial reporting.
+
+### What is double declining balance (DDB)?
+DDB is an accelerated method that applies double the straight-line rate to the asset’s declining book value each year. It’s ideal for assets that lose value quickly.
+
+### Can I use this for UK tax purposes?
+No. The UK uses **capital allowances** (e.g., Annual Investment Allowance, Writing Down Allowances), not depreciation, for tax. This calculator is for **accounting/book purposes** or **US tax (MACRS)**.
+
+### What is MACRS?
+MACRS (Modified Accelerated Cost Recovery System) is the US tax depreciation system. It uses predefined tables with asset classes (3-year, 5-year, etc.) and assumes a half-year convention.
+
+### How do I choose a depreciation method?
+- **Financial statements**: Straight-line for simplicity  
+- **Tax (US)**: MACRS (required)  
+- **Matching usage**: DDB or SYD for high early wear  
+- **Conservatism**: Accelerated methods reduce early profits
+
+### Does land depreciate?
+No. Land is not depreciable because it does not wear out or become obsolete. Only buildings and improvements on land are depreciated.
+
+### Can I change methods later?
+Yes, but only **prospectively** (for future years). You cannot restate prior years’ depreciation.
+
+### What is book value?
+Book value = Original cost – Accumulated depreciation. It’s the asset’s value on your balance sheet.
+</TabPanel>
+</Tabs>

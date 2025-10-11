@@ -1,0 +1,75 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **fitness calculator** helps you estimate key performance metrics—**one-rep max (1RM)**, **running pace**, **VO₂ max**, and **calorie burn**—using scientifically validated formulas. Whether you’re planning strength workouts, pacing a race, tracking cardiovascular fitness, or managing energy balance, this tool provides actionable data to optimise your training. By inputting your recent performance (e.g., weight lifted for reps, run time/distance), you’ll get precise estimates to set goals, avoid plateaus, and measure progress objectively.
+
+### How It Works
+The calculator uses industry-standard formulas:
+- **1RM**: Epley and Brzycki methods for safe strength estimation
+- **Pace**: Converts time/distance into min/mile or min/km splits
+- **VO₂ Max**: Field-test formulas (e.g., 1.5-mile run) for aerobic capacity
+- **Calories**: MET-based calculation using weight, activity, and duration
+
+### Key Features
+- **Multiple 1RM formulas**: Compare Epley vs. Brzycki for accuracy
+- **Pace/speed conversion**: Toggle between min/km, min/mile, km/h, mph
+- **VO₂ max norms**: See how your score compares to age/sex benchmarks
+- **MET database**: Choose from 100+ activities for calorie estimates
+- **Training zones**: Get strength/hypertrophy loads based on 1RM
+
+### How to Use
+1. **For strength**: Enter weight lifted and reps to estimate 1RM.  
+2. **For running**: Input distance and time to get pace/splits.  
+3. **For cardio**: Enter 1.5-mile time to estimate VO₂ max.  
+4. **For calories**: Select activity, enter weight and duration.  
+5. Use results to plan workouts, set race goals, or adjust nutrition.
+
+This tool is ideal for athletes, coaches, and fitness enthusiasts who want data-driven training.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Estimating 1RM for bench press.
+
+**Inputs**:
+- Weight: 75 kg
+- Reps: 6
+
+**Calculation**:
+1. **Epley**: `75 × (1 + 6/30) = 75 × 1.2 = 90 kg`  
+2. **Brzycki**: `75 × 36 / (37 – 6) = 2,700 / 31 ≈ 87.1 kg`  
+
+**Result**: Use **87 kg** as your estimated 1RM (Brzycki is more conservative).  
+- **Strength training** (85% 1RM): `0.85 × 87 ≈ 74 kg` for 3–5 reps  
+- **Hypertrophy** (75% 1RM): `0.75 × 87 ≈ 65 kg` for 8–12 reps  
+
+This ensures progressive overload without guessing weights.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### Which 1RM formula is best?
+**Brzycki** is more accurate for 6–12 reps; **Epley** works well for 1–5 reps. For safety, use Brzycki—it’s more conservative and reduces injury risk from overestimation.
+
+### How do I use pace for race planning?
+Calculate your goal pace (e.g., 5:00/km for a 50-min 10K), then practice running at that pace in training. Use a GPS watch to maintain even splits—avoid starting too fast.
+
+### Is VO₂ max estimation accurate?
+Field tests are 85–90% accurate for tracking trends. They won’t match lab results but reliably show improvement over time. Test under consistent conditions (same course, time of day).
+
+### Why do calorie estimates vary?
+MET values are population averages. Your actual burn depends on fitness level, efficiency, terrain, and environment. Use estimates as a baseline—adjust based on real-world results.
+
+### Can I calculate pace for intervals?
+Yes. Enter total distance and time for your interval set. For example, 5 × 1 km in 4:30/km → total time = 22:30 for 5 km.
+
+### How often should I re-test 1RM?
+Every 6–8 weeks. Frequent testing increases injury risk and doesn’t reflect true strength gains, which take time to develop.
+
+### Does this work for cycling or swimming?
+Yes. For cycling, use power (watts) or speed to estimate effort. For swimming, input distance/time to get pace (min/100m). Calorie estimates use activity-specific METs.
+
+### Are these formulas suitable for beginners?
+Yes. Beginners benefit most from structure—these calculations prevent common mistakes like lifting too heavy or pacing races poorly. Start with conservative estimates and build gradually.
+</TabPanel>
+</Tabs>

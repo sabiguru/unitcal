@@ -1,0 +1,68 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Introduction
+Our **significant figures calculator** helps students, scientists, and engineers round numbers and perform calculations with the correct precision. It enforces standard sig fig rules to ensure your results reflect the accuracy of your original measurements—critical for lab reports, exams, and technical documentation.
+
+### Core Rules Applied
+- **Counting Sig Figs**: Identifies significant digits using the four standard rules (non-zero digits, sandwiched zeros, leading/trailing zeros).
+- **Rounding**: Rounds to your specified number of sig figs, handling decimals and scientific notation correctly.
+- **Arithmetic**: Applies proper sig fig propagation:
+  - **Multiplication/Division**: Result has the same sig figs as the least precise input.
+  - **Addition/Subtraction**: Result has the same decimal places as the least precise input.
+
+### How to Use
+1. Enter your number or expression (e.g., `12.3 * 4.56`)
+2. Specify the number of significant figures (for rounding) or let the calculator auto-apply rules for expressions
+3. The tool shows the rounded result with clear explanation of the rule used
+4. Use scientific notation (e.g., `6.02e23`) for unambiguous input
+
+Ideal for GCSE, A-Level, and university STEM coursework where precision and data integrity are essential.
+
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+**Scenario**: You measure a rectangle as **8.25 cm** long and **3.4 cm** wide. You need to report the area with correct significant figures.
+
+**Steps**:
+1. Enter the expression: `8.25 * 3.4`
+2. The calculator computes: `28.05`
+3. It identifies sig figs: `8.25` has **3**, `3.4` has **2**
+4. Applies multiplication rule: result must have **2 sig figs**
+5. Rounds `28.05` to **2 sig figs** → **`28`**
+
+✅ **Final Answer**: **28 cm²** (or `2.8 × 10¹ cm²` to explicitly show 2 sig figs)
+
+This ensures your reported area doesn’t falsely imply precision beyond your ruler’s capability.
+
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What counts as a significant figure?
+All non-zero digits, zeros between non-zero digits, and trailing zeros **only if** a decimal point is present. Leading zeros never count.
+
+### How do I round 0.00456 to 2 sig figs?
+Identify the first two sig figs: `4` and `5`. The next digit is `6` (≥5), so round up: **`0.0046`**.
+
+### Why does 100 have only 1 sig fig?
+Without a decimal point, trailing zeros are ambiguous. By convention, `100` is assumed to have **1 sig fig**. To show 3 sig figs, write `100.` or `1.00 × 10²`.
+
+### Does the calculator handle scientific notation?
+Yes. Enter `6.02e23` or `6.02 × 10^23`—it will preserve sig figs correctly.
+
+### What’s the rule for addition vs multiplication?
+- **Addition/Subtraction**: Match the **least number of decimal places**
+- **Multiplication/Division**: Match the **least number of sig figs**
+
+### Can I use this for chemistry and physics labs?
+Absolutely. It’s designed for A-Level and undergraduate lab reports where correct sig fig usage is required for full marks.
+
+### Why is my answer rounded to fewer digits than I expected?
+Your input with the **fewest sig figs** (or decimal places) determines the precision of the result—this is intentional to reflect measurement limits.
+
+### Should I round intermediate steps?
+No. The calculator keeps full precision during calculation and only rounds the **final result**, preventing cumulative rounding errors.
+</TabPanel>
+</Tabs>

@@ -1,0 +1,62 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Time Calculator — Add, Subtract & Convert Durations
+Our Time Calculator handles all time arithmetic with precision, whether you’re tracking work hours, planning events, or managing projects. It adds and subtracts **hours, minutes, and seconds**, calculates **differences between clock times**, and converts results to **decimal hours** for payroll—all while automatically managing base-60 carry/borrow logic.
+
+### How It Works
+- **Core Logic**: Converts inputs to total seconds, performs math, then converts back to readable time.  
+- **Time vs. Duration**: Handles both clock times (e.g., `9:30 AM`) and durations (e.g., `2:45`).  
+- **Decimal Conversion**: Instantly converts `HH:MM` to decimal hours (e.g., `7:30` → `7.5`).  
+- **Cross-Day Awareness**: Automatically adjusts for durations spanning midnight.
+
+### Key Features
+- **Add/Subtract**: Combine multiple time durations.  
+- **Time Difference**: Find elapsed time between two clock times.  
+- **Decimal Hours**: Toggle between `HH:MM` and decimal for payroll.  
+- **Multiplication/Division**: Scale durations (e.g., `1:20 × 5 = 6:40`).  
+
+Perfect for **timesheets**, **project tracking**, **event planning**, and **fitness logging**.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step: Calculating Net Work Hours
+**Scenario**: You clocked in at **8:47 AM** and out at **5:22 PM**, with a **40-minute unpaid lunch**.
+
+1. **Calculate total time**:  
+   - `17:22 – 08:47 = 8 hours 35 minutes`  
+2. **Subtract lunch**:  
+   - `8:35 – 0:40 = 7 hours 55 minutes`  
+3. **Convert to decimal**:  
+   - `7 + (55/60) ≈ 7.92 hours`
+
+Use the calculator to input start/end times and breaks—it handles all conversions automatically!
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How do I calculate time difference for a night shift?
+If your shift crosses midnight (e.g., `10:00 PM` to `6:00 AM`), the calculator automatically adds 24 hours to the end time. Just enter the times as-is—the result will be **8 hours**.
+
+### Can I add more than two time durations?
+Yes! Use the “Add Duration” button to sum multiple entries (e.g., daily work logs for a week).
+
+### Why convert to decimal hours?
+Payroll systems require decimal hours (e.g., `7.75`), not `7:45`. The calculator provides both formats for flexibility.
+
+### Does this work for seconds?
+Yes—enter `HH:MM:SS` for second-level precision in scientific, sports, or technical applications.
+
+### How do I handle AM/PM?
+The calculator accepts both 12-hour (with AM/PM) and 24-hour formats. For time differences, 24-hour is recommended to avoid ambiguity.
+
+### Can I multiply time by a number?
+Yes—e.g., if a task takes `1:15`, enter `1:15 × 8` to get **10:00** total.
+
+### Is this suitable for timesheets?
+Absolutely. It’s designed for accurate payroll calculations, including break subtraction and decimal conversion.
+
+### What if my total exceeds 24 hours?
+No problem—the calculator displays totals like `25:30` (25 hours 30 minutes), ideal for weekly hour tracking.
+</TabPanel>
+</Tabs>

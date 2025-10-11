@@ -1,0 +1,90 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **molecular weight calculator** computes the molar mass of any chemical compound from its formula, using standard atomic weights from the periodic table. Simply enter a chemical formula (e.g., `H2SO4`, `Ca(NO3)2`, `CuSO4·5H2O`), and the tool instantly calculates the total molar mass in grams per mole (g/mol). It correctly handles **parentheses**, **hydrates**, **polyatomic ions**, and **isotopic averages**, making it perfect for students, teachers, and lab professionals who need quick, accurate results for stoichiometry, solution preparation, or chemical analysis.
+
+### How It Works
+The calculator parses your chemical formula and:
+1. **Identifies elements** and counts atoms (e.g., `Al2(SO4)3` → 2 Al, 3 S, 12 O)
+2. **Looks up atomic masses** from a built-in periodic table (e.g., S = 32.06 g/mol)
+3. **Sums the masses** to compute total molar mass
+4. **Handles special notation**: 
+   - Hydrates: `·` or `.` (e.g., `MgSO4·7H2O`)
+   - Parentheses: `(NO3)2` → 2 N, 6 O
+   - Case sensitivity: `Co` = cobalt, `CO` = carbon monoxide
+
+### Key Features
+- **Hydrate support**: Automatically includes water molecules in molar mass
+- **Error checking**: Alerts you to invalid formulas (e.g., `H2O2` vs. `H202`)
+- **Step-by-step breakdown**: Shows atomic masses and counts for verification
+- **Common compounds**: Pre-loaded examples for quick reference
+- **Mobile-friendly**: Works on phones, tablets, and desktops
+
+### How to Use
+1. Enter a **chemical formula** in standard notation (e.g., `C6H12O6` for glucose)
+2. Click **Calculate** to see the molar mass and atomic breakdown
+3. Use the result for:
+   - Preparing molar solutions
+   - Balancing chemical equations
+   - Calculating percent composition
+   - Determining empirical formulas
+
+This tool is ideal for homework, lab work, or quick reference—ensuring you never miscalculate molar mass again.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Calculate the molar mass of copper(II) sulfate pentahydrate.
+
+**Inputs**:
+- Formula: `CuSO4·5H2O`
+
+**Calculation Process**:
+1. **Parse the formula**:  
+   - Anhydrous part: Cu, S, 4 O  
+   - Hydrate: 5 × (2 H, 1 O) = 10 H, 5 O  
+   - Total: Cu, S, 9 O, 10 H
+2. **Look up atomic masses**:  
+   - Cu = 63.55, S = 32.06, O = 16.00, H = 1.008
+3. **Compute**:  
+   - Cu: 63.55  
+   - S: 32.06  
+   - O: 9 × 16.00 = 144.00  
+   - H: 10 × 1.008 = 10.08  
+   - **Total = 63.55 + 32.06 + 144.00 + 10.08 = 249.69 g/mol**
+
+**Result**: The molar mass is **249.69 g/mol**. This means 1 mole of CuSO₄·5H₂O weighs 249.69 grams—essential for preparing accurate solutions in the lab.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How do I enter a hydrate?
+Use a dot (`·`) or period (`.`) between the compound and water:  
+- `CuSO4·5H2O` or `CuSO4.5H2O`  
+The calculator recognizes both and includes the water in the molar mass.
+
+### What if my formula has parentheses?
+Enter them normally:  
+- `Ca(NO3)2` → 1 Ca, 2 N, 6 O  
+- `Al2(SO4)3` → 2 Al, 3 S, 12 O  
+The calculator handles nested parentheses correctly.
+
+### Does it work for organic compounds?
+Yes. Enter formulas like `C2H5OH` (ethanol) or `C6H12O6` (glucose). The calculator counts all atoms correctly.
+
+### Why is my result slightly different from my textbook?
+Atomic masses are weighted averages of isotopes. Some sources round differently (e.g., Cl = 35.45 vs. 35.5). Our calculator uses IUPAC-standard values to two decimal places for consistency.
+
+### Can I calculate molar mass for ions?
+Yes, but note: molar mass is the same for an ion and its neutral atom (electrons have negligible mass). For example, Na⁺ and Na both have a molar mass of 22.99 g/mol.
+
+### What if I enter an invalid formula?
+The calculator will show an error (e.g., "Invalid element: Xy"). Check your spelling and capitalization—chemical symbols are case-sensitive (`Co` = cobalt, `CO` = carbon monoxide).
+
+### Is this accurate for lab work?
+Yes. The calculator uses standard atomic weights from the periodic table, which are sufficient for most laboratory and educational purposes. For high-precision work (e.g., mass spectrometry), use exact isotopic masses.
+
+### Can I use this for mixtures?
+No. Molar mass applies only to pure compounds with a fixed chemical formula. Mixtures (e.g., air, saltwater) don’t have a single molar mass.
+</TabPanel>
+</Tabs>

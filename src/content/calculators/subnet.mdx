@@ -1,0 +1,86 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Introduction
+Our **subnet calculator** instantly breaks down any IPv4 or IPv6 address with CIDR notation into its core components: **network address**, **broadcast address**, **usable host range**, **subnet mask**, and **wildcard mask**. It’s an essential tool for network engineers, students, and IT professionals who need to validate designs, troubleshoot connectivity, or study for certifications.
+
+### How It Works
+For **IPv4**:
+- Converts CIDR (e.g., `/26`) to dotted-decimal subnet mask
+- Calculates network and broadcast addresses
+- Lists first/last usable IPs and total host count
+- Shows wildcard mask for ACLs
+
+For **IPv6**:
+- Validates address format
+- Displays network prefix and interface ID
+- Confirms standard `/64` LAN sizing
+
+### How to Use
+1. Enter an IP address with CIDR (e.g., `192.168.1.50/26`)
+2. The tool shows:
+   - **Network**: `192.168.1.0`
+   - **Broadcast**: `192.168.1.63`
+   - **Usable Hosts**: `192.168.1.1 – 192.168.1.62` (62 hosts)
+   - **Subnet Mask**: `255.255.255.192`
+   - **Wildcard**: `0.0.0.63`
+3. Use the results for network planning, documentation, or exam prep
+
+Ideal for CCNA, Network+, and real-world network configuration.
+
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+**Scenario**: You’re given the IP `10.20.30.100/27` and need to identify the subnet details.
+
+**Steps**:
+1. Enter `10.20.30.100/27` into the calculator
+2. The tool computes:
+   - **Subnet Mask**: `255.255.255.224` (27 network bits)
+   - **Block Size**: 32 (from last octet `11100000`)
+   - **Network Address**: `10.20.30.96` (largest multiple of 32 ≤ 100)
+   - **Broadcast Address**: `10.20.30.127` (96 + 32 − 1)
+   - **Usable Host Range**: `10.20.30.97` to `10.20.30.126`
+   - **Total Usable Hosts**: **30**
+
+✅ **Result**: This subnet supports 30 devices, with `.96` and `.127` reserved.
+
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is CIDR notation?
+CIDR (Classless Inter-Domain Routing) is a compact way to write an IP address and its associated network prefix, e.g., `192.168.1.0/24`. The number after the slash (`/24`) indicates how many bits are used for the network portion.
+
+### How many hosts are in a /24 network?
+A `/24` has **254 usable hosts** (256 total addresses minus network and broadcast).
+
+### What is a wildcard mask?
+A wildcard mask is the **bitwise inverse** of the subnet mask. It’s used in access control lists (ACLs) and routing protocols like OSPF. For `255.255.255.0`, the wildcard is `0.0.0.255`.
+
+### Can I use this for IPv6?
+Yes. Enter an IPv6 address with prefix (e.g., `2001:db8::1/64`). The calculator validates the format and displays the network prefix.
+
+### Why is my IP address invalid?
+Common issues:
+- Missing CIDR (e.g., `192.168.1.1` instead of `192.168.1.1/24`)
+- Invalid octet (e.g., `192.168.300.1`)
+- CIDR out of range (e.g., `/33` for IPv4)
+
+### What’s the difference between public and private subnets?
+- **Private IPs** (e.g., `10.0.0.0/8`, `192.168.0.0/16`) are for internal networks and not routable on the internet.
+- **Public IPs** are globally unique and assigned by ISPs.
+
+### How do I subnet a network manually?
+Use the **block size method**:
+1. Find subnet mask from CIDR
+2. Determine block size (value of least significant 1 in mask)
+3. Find network address (multiple of block size)
+4. Broadcast = network + block − 1
+
+### Is this calculator accurate for exams?
+Yes. It follows standard networking principles used in CompTIA, Cisco, and other certification exams. Use it to verify your manual calculations.
+
+</TabPanel>
+</Tabs>

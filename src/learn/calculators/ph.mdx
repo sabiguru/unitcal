@@ -1,0 +1,171 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+# How to Calculate pH & pOH — Strong/Weak Acids
+
+## Introduction
+Understanding **how to calculate pH and pOH** is fundamental to chemistry, biology, and environmental science. pH quantifies the acidity or alkalinity of a solution, influencing everything from enzyme function to water quality. While the core concept is simple—pH is the negative log of hydrogen ion concentration—the calculations become nuanced when dealing with strong acids, weak acids, bases, and buffers. This comprehensive guide walks you through the step-by-step methods for each scenario, explains when to use approximations versus exact solutions (like the quadratic formula), and clarifies the role of Ka, pKa, and ICE tables. With practical examples and pro tips, you’ll gain the confidence to tackle any acid-base problem.
+
+<Tabs>
+<TabPanel title="Complete Guide">
+## The Foundation: Water, pH, and pOH
+All pH calculations stem from the autoionisation of water:
+> **`H₂O ⇌ H⁺ + OH⁻`**
+
+At 25°C, the **ion product of water** is:
+> **`Kw = [H⁺][OH⁻] = 1.0 × 10⁻¹⁴`**
+
+From this, we derive the key relationships:
+- **`pH = -log₁₀[H⁺]`**
+- **`pOH = -log₁₀[OH⁻]`**
+- **`pH + pOH = 14.00`** (at 25°C)
+
+These equations allow you to interconvert between [H⁺], [OH⁻], pH, and pOH.
+
+### 1. Strong Acids and Bases: Complete Dissociation
+Strong acids (e.g., HCl, HNO₃) and strong bases (e.g., NaOH, KOH) dissociate **100%** in water.
+
+#### Strong Acid Example:
+For a **0.01 M HCl** solution:
+- **[H⁺] = 0.01 M** (since HCl → H⁺ + Cl⁻)
+- **pH = -log(0.01) = 2.00**
+
+#### Strong Base Example:
+For a **0.001 M NaOH** solution:
+- **[OH⁻] = 0.001 M**
+- **pOH = -log(0.001) = 3.00**
+- **pH = 14.00 – 3.00 = 11.00**
+
+> ⚠️ **Assumption**: Valid for concentrations **> 10⁻⁶ M**. For very dilute solutions, water’s contribution to [H⁺] or [OH⁻] must be considered.
+
+### 2. Weak Acids and Bases: Partial Dissociation
+Weak acids (e.g., CH₃COOH) establish an equilibrium:
+> **`HA ⇌ H⁺ + A⁻`**
+
+The **acid dissociation constant (Ka)** is:
+> **`Ka = [H⁺][A⁻] / [HA]`**
+
+#### The ICE Table Method
+For a weak acid with initial concentration **C**:
+| Species | Initial (M) | Change (M) | Equilibrium (M) |
+|--------|------------|-----------|----------------|
+| HA     | C          | –x        | C – x          |
+| H⁺     | 0          | +x        | x              |
+| A⁻     | 0          | +x        | x              |
+
+Substitute into Ka:
+> **`Ka = x² / (C – x)`**
+
+#### When to Use the Approximation
+If **C / Ka > 100**, then **x ≪ C**, so:
+> **`Ka ≈ x² / C` → `x ≈ √(Ka·C)`**
+
+*Example*: 0.10 M acetic acid (Ka = 1.8 × 10⁻⁵)  
+- C / Ka = 0.10 / 1.8e-5 ≈ 5,555 > 100 → approximation valid  
+- **[H⁺] ≈ √(1.8e-5 × 0.10) = √(1.8e-6) ≈ 1.34 × 10⁻³ M**  
+- **pH ≈ -log(1.34e-3) ≈ 2.87**
+
+#### When to Solve the Quadratic
+If **C / Ka below 100**, solve:
+> **`x² + Ka·x – Ka·C = 0`**
+
+*Example*: 1.0 × 10⁻⁴ M weak acid (Ka = 1.0 × 10⁻⁵)  
+- C / Ka = 10 below 100 → use quadratic  
+- **x² + (1.0e-5)x – (1.0e-9) = 0**  
+- **x = [H⁺] ≈ 9.5 × 10⁻⁵ M** (vs. 1.0 × 10⁻⁴ M from approximation—5% error)
+
+### 3. Buffer Solutions: The Henderson-Hasselbalch Equation
+A buffer contains a weak acid (HA) and its conjugate base (A⁻). Its pH is given by:
+> **`pH = pKa + log₁₀([A⁻] / [HA])`**
+
+*Example*: 0.30 M HA and 0.20 M A⁻ (pKa = 4.74)  
+- **pH = 4.74 + log(0.20 / 0.30) = 4.74 + log(0.667) ≈ 4.74 – 0.176 = 4.56**
+
+> 💡 **Buffer capacity is highest when [A⁻] = [HA] → pH = pKa**
+
+## Pro Tips & Common Mistakes
+- **Always identify the system first**: Strong vs. weak vs. buffer.
+- **Check the C/Ka ratio** before using the approximation.
+- **Use concentrations, not moles**, in Henderson-Hasselbalch (unless volume is identical).
+- **Report pH to 2 decimal places** for typical lab concentrations (e.g., 0.10 M).
+- **Temperature matters**: Kw = 1.0 × 10⁻¹⁴ only at 25°C.
+- **For polyprotic acids**, usually only the first dissociation matters (Ka₁ >> Ka₂).
+
+## Practical Applications
+- **Biological systems**: Blood pH buffered at ~7.4 by H₂CO₃/HCO₃⁻
+- **Environmental science**: Monitoring acid rain (pH below 5.6)
+- **Industrial processes**: Controlling pH in fermentation, dyeing, wastewater treatment
+- **Laboratory work**: Preparing buffer solutions for experiments
+</TabPanel>
+
+<TabPanel title="Examples & Practice">
+## Worked Examples & Practice Problems
+
+### 1. Strong Acid/Base
+- **0.025 M HCl**: [H⁺] = 0.025 → pH = -log(0.025) = **1.60**
+- **0.0050 M KOH**: [OH⁻] = 0.0050 → pOH = 2.30 → pH = **11.70**
+- **pH = 3.50**: [H⁺] = 10⁻³·⁵⁰ = **3.16 × 10⁻⁴ M** → [OH⁻] = 1e-14 / 3.16e-4 = **3.16 × 10⁻¹¹ M**
+
+### 2. Weak Acid (Acetic Acid, Ka = 1.8e-5)
+- **0.10 M solution**:
+  - Approximation: [H⁺] = √(1.8e-6) = 1.34e-3 → pH = **2.87**
+  - Quadratic: x² + 1.8e-5x – 1.8e-6 = 0 → x = 1.33e-3 → pH = **2.88** (negligible difference)
+
+### 3. Buffer (Acetic Acid/Sodium Acetate)
+- **0.30 mol HA + 0.20 mol A⁻ in 1.0 L**:
+  - [HA] = 0.30 M, [A⁻] = 0.20 M
+  - pH = 4.74 + log(0.20/0.30) = **4.56**
+- **After adding 0.05 mol OH⁻**:
+  - HA = 0.30 – 0.05 = 0.25 mol
+  - A⁻ = 0.20 + 0.05 = 0.25 mol
+  - pH = 4.74 + log(1) = **4.74**
+
+### 4. When Approximation Fails
+- **1.0e-4 M weak acid (Ka = 1.0e-5)**:
+  - Approximation: [H⁺] = √(1.0e-9) = 3.16e-5 → pH = **4.50**
+  - Quadratic: x = 9.51e-5 → pH = **4.02** (significant error!)
+
+### Practice Challenges
+1. Calculate pH of 0.050 M NH₃ (Kb = 1.8e-5).
+2. What is the pH of a buffer with 0.10 M H₂PO₄⁻ and 0.15 M HPO₄²⁻? (pKa₂ = 7.21)
+3. A solution has [OH⁻] = 2.5 × 10⁻³ M. Find pH and pOH.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What’s the difference between strong and weak acids?
+- **Strong acids** dissociate completely (e.g., HCl → H⁺ + Cl⁻). [H⁺] = initial concentration.
+- **Weak acids** partially dissociate (e.g., CH₃COOH ⇌ H⁺ + CH₃COO⁻). [H⁺] < initial concentration, calculated using Ka.
+
+### When should I use the quadratic formula?
+Use it when **C / Ka below 100**. The approximation `x = √(Ka·C)` overestimates [H⁺] in concentrated weak acids or those with high Ka.
+
+### What is an ICE table, and why is it useful?
+An **ICE table** (Initial, Change, Equilibrium) organizes concentrations for equilibrium problems. It’s essential for setting up the Ka expression correctly and solving for unknowns.
+
+### How do I calculate pH for a diprotic acid like H₂SO₄?
+- **H₂SO₄** is strong for the first proton (H₂SO₄ → H⁺ + HSO₄⁻), weak for the second (HSO₄⁻ ⇌ H⁺ + SO₄²⁻, Ka₂ = 0.012).
+- For 0.10 M H₂SO₄: [H⁺] ≈ 0.10 + [H⁺ from second dissociation] → solve Ka₂ equilibrium.
+
+### Why is pH + pOH = 14?
+Because **Kw = [H⁺][OH⁻] = 1.0 × 10⁻¹⁴** at 25°C. Taking -log of both sides:  
+`-log([H⁺][OH⁻]) = -log(1e-14)` → `-log[H⁺] + (-log[OH⁻]) = 14` → `pH + pOH = 14`.
+
+### Can pH be negative or above 14?
+Yes—for very high [H⁺] (>1 M) or very high [OH⁻] (>1 M).  
+*Example*: 2 M HCl → pH = -log(2) = **-0.30**
+
+### How does dilution affect pH?
+- **Strong acid**: Diluting 10× increases pH by 1 unit.
+- **Weak acid**: Diluting 10× increases pH by ~0.5 units (due to increased dissociation).
+
+### What is pKa, and how is it related to Ka?
+**pKa = -log(Ka)**. A lower pKa means a stronger acid (higher Ka).  
+*Example*: HCl (pKa ≈ -7) is stronger than acetic acid (pKa = 4.74).
+</TabPanel>
+</Tabs>
+
+## Related Calculators
+- [Molecular Weight Calculator](/calculator/molecular-weight) – Calculate molar masses for solution prep
+- [Stoichiometry Calculator](/calculator/stoichiometry) – Balance acid-base reactions
+
+## Call to Action
+Master acid-base chemistry with confidence. Use these methods to predict reaction outcomes, design buffers, and interpret experimental data—no more guessing at pH.

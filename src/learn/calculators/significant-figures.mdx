@@ -1,0 +1,199 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+# How to Use Significant Figures — Rules & Rounding
+
+## Introduction
+
+In scientific measurement and calculation, **precision matters**—not just the numerical result, but how honestly it reflects the limitations of your instruments and data. This is where **significant figures** (often called "sig figs") come in.
+
+### Why Significant Figures Matter
+
+**Significant figures** are the **language of scientific integrity**, ensuring that:
+
+- **Measurement precision** is accurately communicated
+- **Data reliability** is properly represented
+- **Calculation results** reflect true accuracy
+- **Scientific honesty** is maintained in reporting
+- **Instrument limitations** are acknowledged
+
+### Academic and Professional Importance
+
+Understanding sig figs is essential for:
+
+- **GCSE and A-Level science** examinations
+- **University lab reports** and research
+- **Engineering specifications** and tolerances
+- **Financial reporting** with consistent rounding
+- **Quality control** in manufacturing
+
+### Calculator vs Manual Understanding
+
+A **significant figures calculator** automates the process, but **mastering the underlying rules** empowers you to:
+
+- **Interpret data critically** and spot errors
+- **Avoid common pitfalls** in measurement
+- **Communicate results** with clarity and honesty
+- **Handle ambiguous cases** with confidence
+- **Understand uncertainty** in real-world measurements
+
+### What You'll Learn
+
+This guide explains how to:
+
+- **Count significant figures** accurately
+- **Round numbers** using proper rules
+- **Apply sig figs** in all arithmetic operations
+- **Handle ambiguous cases** (trailing zeros)
+- **Use scientific notation** to eliminate confusion
+
+These rules exist **not as arbitrary conventions**, but as **practical tools for managing uncertainty** in real-world measurements.
+
+<Tabs>
+<TabPanel title="Complete Guide">
+## The Four Foundational Rules for Counting Significant Figures
+Before you can round or calculate, you must correctly identify how many significant figures a number contains. Follow these rules in order:
+
+### 1. All Non-Zero Digits Are Significant
+Digits 1 through 9 always count.
+- **Example**: `347` has **3** sig figs; `0.892` has **3**.
+
+### 2. Zeros Between Non-Zero Digits Are Significant
+These “sandwiched” zeros are part of the measured value.
+- **Example**: `202` has **3** sig figs; `4.005` has **4**.
+
+### 3. Leading Zeros Are Never Significant
+Zeros before the first non-zero digit only locate the decimal point.
+- **Example**: `0.0042` has **2** sig figs (just 4 and 2); `0.0007030` has **4** (7, 0, 3, 0).
+
+### 4. Trailing Zeros Are Significant Only If a Decimal Point Is Present
+This is the most nuanced rule—and the reason scientific notation exists.
+- **With decimal**: `350.0` has **4** sig figs; `8.200` has **4**.
+- **Without decimal**: `3500` is **ambiguous**—it could have 2, 3, or 4 sig figs.
+- **Solution**: Use scientific notation:
+  - `3.5 × 10³` → **2** sig figs
+  - `3.50 × 10³` → **3** sig figs
+  - `3.500 × 10³` → **4** sig figs
+
+### Special Cases
+- **Exact numbers** (e.g., “5 trials”, “12 inches in a foot”) have **infinite** sig figs—they don’t limit your calculation.
+- **Defined constants** (like π or *e*) should be used with **at least one more digit** than your least precise measurement.
+
+## Rounding to a Specified Number of Significant Figures
+Once you know how many sig figs you need, follow this process:
+1. Identify the **first significant digit** (leftmost non-zero).
+2. Count to the desired number of sig figs.
+3. Look at the **next digit** (the “decider”):
+   - If **≥ 5**, round **up** the last kept digit.
+   - If **below 5**, leave it **unchanged**.
+4. Replace extra digits with zeros **or** use scientific notation to preserve place value.
+
+**Example**: Round `0.0045678` to **3** sig figs.
+- First sig fig: `4`
+- Count 3: `4`, `5`, `6`
+- Decider: `7` (≥5) → round `6` up to `7`
+- Result: `0.00457`
+
+## Rules for Arithmetic: Propagating Uncertainty
+The result of a calculation cannot be more precise than the least precise input.
+
+### Multiplication & Division
+→ **Round to the fewest number of sig figs** among all inputs.
+
+**Example**:  
+`12.3 (3 sf) × 0.45 (2 sf) = 5.535` → **2 sig figs** → **`5.5`**
+
+### Addition & Subtraction
+→ **Round to the fewest number of decimal places** among all inputs.
+
+**Example**:  
+`14.25 (2 dp) + 3.1 (1 dp) = 17.35` → **1 decimal place** → **`17.4`**
+
+### Mixed Operations
+→ Apply rules **step by step**, but **keep extra digits** during intermediate steps to avoid rounding error. Only round the **final answer**.
+
+**Example**:  
+`(8.2 × 3.1416) + 0.5`  
+- Multiply: `8.2 (2 sf) × 3.1416 ≈ 25.761` (keep all digits)
+- Add: `25.761 + 0.5 (1 dp) = 26.261`
+- Final rounding: **1 decimal place** → **`26.3`**
+
+## Pro Tips for Real-World Application
+- **Always use scientific notation** for large or small numbers to avoid ambiguity.
+- **Never round intermediate results** in multi-step calculations—use your calculator’s memory or “ANS” key.
+- **When in doubt, under-report precision**. It’s better to say “≈ 2.5 g” than “2.5034 g” if your balance only reads to 0.1 g.
+- **In lab reports**, state the precision of your instruments (e.g., “mass measured to ±0.01 g”) to justify your sig figs.
+
+</TabPanel>
+
+<TabPanel title="Examples & Practice">
+## Worked Examples & Practice Problems
+
+### Example 1: Counting Sig Figs
+Determine the number of significant figures:
+1. `0.007050` → Leading zeros (×3) don’t count; trailing zero after decimal **does** → **4 sig figs**
+2. `4200` → Ambiguous! Assume **2 sig figs** unless specified otherwise.
+3. `9.000 × 10⁻²` → Mantissa has **4 sig figs**
+
+### Example 2: Rounding Practice
+Round `298.765` to:
+- **2 sig figs**: `3.0 × 10²` (not `300`—ambiguous!)
+- **4 sig figs**: `298.8`
+- **6 sig figs**: `298.765` (already there)
+
+### Example 3: Calculation with Proper Rounding
+**Problem**: A rectangle is `12.4 cm` long and `5.6 cm` wide. Find its area.
+- Calculation: `12.4 × 5.6 = 69.44 cm²`
+- Sig figs: `12.4` (3 sf), `5.6` (2 sf) → answer must have **2 sig figs**
+- Final answer: **`69 cm²`** (or `6.9 × 10¹ cm²`)
+
+### Example 4: Addition with Decimal Places
+**Problem**: Add `100.25 g` and `3.4 g`.
+- Sum: `103.65 g`
+- Decimal places: `100.25` (2 dp), `3.4` (1 dp) → round to **1 dp**
+- Final answer: **`103.7 g`**
+
+### Practice Problems (Try These!)
+1. How many sig figs in `0.040050`?
+2. Round `0.006789` to 2 sig figs.
+3. Calculate `(2.50 × 4.1) – 1.23` and round correctly.
+4. Express `5600` with **3 sig figs** in scientific notation.
+
+**Answers**:  
+1. **5** (4,0,0,5,0)  
+2. `0.0068`  
+3. `2.50×4.1=10.25`; `10.25–1.23=9.02`; `4.1` has 2 sf → **`9.0`**  
+4. `5.60 × 10³`
+
+</TabPanel>
+
+<TabPanel title="FAQ">
+### Why are significant figures important in science?
+They prevent **false precision**. Reporting a result with more digits than your instrument can measure misleads others about the reliability of your data. Sig figs ensure honesty and reproducibility in scientific communication.
+
+### How do I handle trailing zeros without a decimal point?
+Treat them as **ambiguous**. In formal work, **always use scientific notation** to clarify. For example, write `1.20 × 10⁴` instead of `12000` if you mean 3 sig figs.
+
+### Can a number have zero significant figures?
+No. Even `0.000` implies a measurement precise to the thousandths place, so it has **1 sig fig** (the final zero after the decimal). The number `0` itself is a special case—it has **1 sig fig** by convention when it represents a measured null value.
+
+### What if my calculator shows more digits than I need?
+**Ignore them until the final step**. Use all digits during calculation, then round the final answer according to sig fig rules. Never round intermediate values.
+
+### Do percentages follow sig fig rules?
+Yes. A percentage like `25%` (from `25/100`) has **2 sig figs**. If it came from `25.0/100.0`, it would be `25.0%` (**3 sig figs**).
+
+### How do I apply sig figs to logarithms?
+For `log(x)`, the number of **decimal places** in the result equals the number of **sig figs** in `x`.  
+- Example: `log(2.5 × 10³)` → `2.5` has 2 sig figs → `log = 3.39794...` → round to **2 decimal places** → **`3.40`**
+
+### Is there a difference between “significant figures” and “decimal places”?
+Yes!  
+- **Sig figs** count **all meaningful digits**, regardless of decimal position.  
+- **Decimal places** count digits **after the decimal point**.  
+They are used in different contexts: sig figs for multiplication/division, decimal places for addition/subtraction.
+
+### What if two numbers in a calculation have the same number of sig figs but different magnitudes?
+The rule still applies. For example, `100.` (3 sf) × `0.00200` (3 sf) = `0.200` (3 sf)—scientific notation (`1.00 × 10² × 2.00 × 10⁻³ = 2.00 × 10⁻¹`) makes this clearer.
+
+</TabPanel>
+</Tabs>

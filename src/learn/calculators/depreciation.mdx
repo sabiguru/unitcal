@@ -1,0 +1,157 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+# How to Calculate Depreciation — Straight-Line, DDB & SYD
+
+## Introduction
+Depreciation is a fundamental accounting concept that allocates the cost of a tangible asset over its useful life. Rather than expensing the entire purchase price in the year of acquisition, businesses spread the cost to match revenue generation—a principle known as the **matching concept**. Learning **how to calculate depreciation manually** is essential for small business owners, accountants, students, and investors to understand financial statements, plan for asset replacement, and comply with tax regulations. This guide explains the four most common depreciation methods—**straight-line**, **declining balance**, **sum-of-the-years’-digits (SYD)**, and **MACRS**—with step-by-step formulas, realistic examples, and practical guidance on when to use each method for both book and tax purposes.
+
+<Tabs>
+<TabPanel title="Complete Guide">
+## Why Depreciation Matters
+Depreciation serves three key purposes:
+1. **Financial Reporting**: Matches asset cost to the periods it generates revenue.
+2. **Tax Deduction**: Reduces taxable income by allowing annual expense deductions.
+3. **Asset Management**: Tracks the declining book value of equipment, vehicles, and property.
+
+The choice of method affects **profitability**, **tax liability**, and **balance sheet values**—making it a strategic financial decision.
+
+### 1. Straight-Line Depreciation (Simplest & Most Common)
+This method spreads the cost evenly over the asset’s useful life.
+
+**Formula**:  
+`Annual Depreciation = (Cost – Salvage Value) ÷ Useful Life`
+
+*Example*:  
+- Asset Cost: £25,000  
+- Salvage Value: £3,000  
+- Useful Life: 5 years  
+- Annual Depreciation: `(£25,000 – £3,000) ÷ 5 = **£4,400/year**`  
+- Book Value after Year 3: `£25,000 – (3 × £4,400) = £11,800`
+
+**Best for**: Office furniture, buildings, and assets with consistent usage.
+
+### 2. Declining Balance (Accelerated Depreciation)
+This method front-loads depreciation, reflecting higher usage in early years.
+
+**Double Declining Balance (DDB) Formula**:  
+`Annual Depreciation = (2 ÷ Useful Life) × Book Value at Start of Year`
+
+*Example* (Same asset, 5-year life):  
+- Year 1: `(2 ÷ 5) × £25,000 = **£10,000**`  
+- Year 2: `40% × (£25,000 – £10,000) = **£6,000**`  
+- Year 3: `40% × £9,000 = **£3,600**`  
+- Switch to straight-line when it yields higher depreciation.
+
+**Best for**: Technology, vehicles, and assets that lose value quickly.
+
+### 3. Sum-of-the-Years’-Digits (SYD)
+Another accelerated method that uses a fraction based on remaining life.
+
+**Formula**:  
+`Depreciation = (Remaining Life ÷ SYD Total) × (Cost – Salvage)`
+
+Where **SYD Total** = `n(n+1)/2` (for n = useful life)
+
+*Example* (5-year asset):  
+- SYD Total = `5×6/2 = 15`  
+- Year 1: `(5/15) × £22,000 = **£7,333**`  
+- Year 2: `(4/15) × £22,000 = **£5,867**`  
+- Year 3: `(3/15) × £22,000 = **£4,400**`
+
+**Best for**: Manufacturing equipment with high early wear.
+
+### 4. MACRS (Modified Accelerated Cost Recovery System)
+The **US tax standard** (not used in UK GAAP). MACRS uses predefined tables with:
+- **Asset classes** (e.g., 3-year, 5-year, 7-year property)
+- **Half-year convention** (assume asset placed in service mid-year)
+- **No salvage value**
+
+*Example*: A £10,000 computer (5-year property) under MACRS:  
+- Year 1: 20% → £2,000  
+- Year 2: 32% → £3,200  
+- Year 3: 19.2% → £1,920  
+- (Rates from IRS Publication 946)
+
+**Note**: UK businesses use **capital allowances** instead of MACRS.
+
+## Pro Tips & Common Mistakes
+- **Don’t depreciate land**: Land is not depreciable (it doesn’t wear out).
+- **Track partial-year depreciation**: For assets bought mid-year, prorate the first year.
+- **Reassess useful life**: If an asset’s lifespan changes, adjust future depreciation (not past).
+- **Separate components**: A building’s roof and HVAC may have different useful lives.
+- **Tax vs. book differences**: Use straight-line for financial statements and accelerated methods for taxes (create deferred tax liabilities).
+- **Salvage value estimation**: Be conservative—overestimating reduces annual depreciation.
+
+## Practical Applications
+- **Small business accounting**: Deduct asset costs over time to smooth profits.
+- **Investment analysis**: Compare companies using EBITDA (which adds back depreciation).
+- **Lease vs. buy decisions**: Depreciation affects the true cost of ownership.
+- **Insurance claims**: Book value helps determine replacement cost vs. actual cash value.
+- **Financial modeling**: Forecast depreciation expense in 3-statement models.
+</TabPanel>
+
+<TabPanel title="Examples & Practice">
+## Practice Calculating Depreciation
+
+### Scenario 1: Office Equipment (Straight-Line)
+- Cost: £8,000  
+- Salvage: £500  
+- Life: 4 years  
+**Task**: Calculate annual depreciation and book value at end of Year 2.
+
+### Scenario 2: Delivery Van (Double Declining Balance)
+- Cost: £30,000  
+- Salvage: £4,000  
+- Life: 5 years  
+**Task**: Calculate depreciation for Years 1–3. When should you switch to straight-line?
+
+### Scenario 3: Machinery (SYD)
+- Cost: £50,000  
+- Salvage: £5,000  
+- Life: 6 years  
+**Task**:  
+1. Compute SYD total.  
+2. Calculate Year 1 and Year 4 depreciation.
+
+### Scenario 4: Partial-Year Purchase
+A £12,000 asset (5-year life, £1,000 salvage) is bought on 1 July.  
+**Task**: Calculate Year 1 depreciation using straight-line (assume company uses half-year convention).
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is the difference between depreciation and amortisation?
+**Depreciation** applies to **tangible assets** (machinery, buildings). **Amortisation** applies to **intangible assets** (patents, copyrights). Both spread cost over useful life.
+
+### Can I choose any depreciation method?
+For **financial reporting**, you can choose any systematic method (straight-line, DDB, SYD). For **tax purposes**, governments often mandate specific methods (e.g., MACRS in the US, capital allowances in the UK).
+
+### What is salvage value?
+**Salvage value** (or residual value) is the estimated amount you’ll receive when you sell or dispose of the asset at the end of its useful life. It’s subtracted from cost to determine depreciable base.
+
+### Why use accelerated depreciation?
+Accelerated methods (DDB, SYD) reduce taxable income more in early years, improving cash flow. They also better match expense to actual asset usage (e.g., a car loses 20% of its value in Year 1).
+
+### How does depreciation affect financial statements?
+- **Income Statement**: Reduces net income (non-cash expense)  
+- **Balance Sheet**: Reduces asset book value  
+- **Cash Flow Statement**: Added back in operating activities (since it’s non-cash)
+
+### What is accumulated depreciation?
+**Accumulated depreciation** is the total depreciation expense recorded for an asset since acquisition. It’s a contra-asset account that offsets the asset’s original cost on the balance sheet.
+
+### Can I change depreciation methods?
+Yes, but it’s a **change in accounting estimate**, not principle. Apply the new method **prospectively** (only to future periods), not retroactively.
+
+### What assets cannot be depreciated?
+- **Land** (does not wear out)  
+- **Inventory** (expensed when sold)
+- **Personal-use assets** (unless used partly for business)
+- **Assets held for investment** (e.g., rental property is depreciated, but land isn't)
+</TabPanel>
+</Tabs>
+
+## Conclusion
+
+Understanding **how to calculate depreciation** is crucial for accurate financial reporting, tax planning, and business decision-making. Whether you use straight-line depreciation for simplicity, declining balance for accelerated write-offs, or units of production for usage-based assets, choosing the right method affects your business's financial statements and tax obligations significantly. Proper depreciation calculations ensure compliance with accounting standards and optimize your tax strategy.
+
+Remember that depreciation is both an accounting tool and a business reality—assets do lose value over time, and systematic depreciation helps you plan for replacements and understand true profitability. Work with accounting professionals to ensure your depreciation methods align with regulations and business objectives. **Calculate asset depreciation accurately with our [Depreciation Calculator](/calculator/depreciation) to optimize your accounting and tax planning strategies.**

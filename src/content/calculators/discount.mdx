@@ -1,0 +1,72 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## How to Use the Discount Calculator
+The **discount calculator** instantly computes **sale prices, savings amounts, and discount percentages** for any shopping or pricing scenario. Simply enter the original price and discount percentage to get your sale price and total savings. It also handles **multiple sequential discounts**, **VAT-inclusive pricing**, and **bulk deal comparisons**—making it perfect for shoppers hunting deals, e-commerce sellers setting promotions, or businesses negotiating bulk orders. No more mental math or spreadsheet errors—just clear, accurate results in seconds.
+
+### Key Formulas Used
+- **Sale Price**: `Original × (1 – Discount%)`
+- **Savings**: `Original – Sale Price`
+- **Multiple Discounts**: `Original × (1 – D₁) × (1 – D₂)`
+- **With VAT**: Apply discount pre-tax, then add 20% VAT (UK standard)
+
+### Best Practices for Accurate Results
+1.  **Enter pre-tax prices**—the calculator adds VAT after discounts (standard retail practice).
+2.  **For multiple discounts**, enter them in the order applied (e.g., sale discount first, then loyalty discount).
+3.  **Use exact percentages**—avoid rounding until the final result.
+4.  **For bulk deals**, calculate per-unit price to compare fairly with % discounts.
+5.  **Verify “was” prices**—retailers sometimes inflate originals to exaggerate savings.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+You’re buying a laptop originally priced at **£800** with a **15% student discount**. VAT is 20%.
+
+**Step 1**: Enter original price = **£800**  
+**Step 2**: Enter discount = **15%**  
+**Step 3**: The calculator shows:  
+- **Discount Amount**: £800 × 0.15 = **£120**  
+- **Sale Price (excl. VAT)**: **£680**  
+- **Total with 20% VAT**: £680 × 1.20 = **£816**
+
+**Alternative**: If the store offers **“20% off + extra 10% for members”**:  
+- Final Price = £800 × 0.80 × 0.90 = **£576** (excl. VAT)  
+- With VAT: **£691.20**  
+→ **Savings of £108.80** vs. single discount
+
+This tool turns complex pricing into simple, actionable numbers.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How do I calculate the discount percentage if I only know the original and sale price?
+Use the formula: `[(Original – Sale) ÷ Original] × 100`. The calculator does this automatically—just enter both prices.
+
+### Can this handle “Buy 2, Get 1 Free” deals?
+Not directly—but you can calculate the effective discount:  
+- Total items = 3, Paid items = 2 → Discount = (1/3) × 100 ≈ **33.3%**  
+Enter 33.3% as the discount percentage to get the per-item sale price.
+
+### Does this work for VAT-inclusive prices?
+Yes—but specify whether the original price includes VAT. The calculator assumes **pre-VAT pricing** (standard for discounts). If your input includes VAT, select the “VAT-inclusive” option to adjust correctly.
+
+### Why is my total with two discounts not 30% off?
+Discounts are **multiplicative, not additive**. A 20% + 10% discount = 28% off:  
+`1 – (0.80 × 0.90) = 0.28`. The calculator shows the true combined discount.
+
+### Can I compare two different sale offers?
+Yes! Calculate the **final price per unit** for each:  
+- Offer A: 3 for £15 → £5/unit  
+- Offer B: 25% off £7 → £5.25/unit  
+The calculator helps you input these scenarios to see which saves more.
+
+### Is this accurate for international sales tax?
+The calculator uses **20% VAT** by default (UK standard). For other regions, manually adjust the tax rate or calculate pre-tax.
+
+### How do I find the original price from a sale price?
+Enter the sale price and discount percentage. The calculator reverses the formula: `Original = Sale ÷ (1 – Discount%)`.
+
+### What if the discount is a fixed amount (e.g., £20 off)?
+Select “Fixed Amount” mode. Enter the discount as a currency value instead of a percentage. The calculator will compute the effective % and final price.
+</TabPanel>
+</Tabs>

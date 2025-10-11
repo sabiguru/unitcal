@@ -1,0 +1,65 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## How to Use the pH Calculator
+The **pH calculator** instantly computes **pH, pOH, [H⁺], and [OH⁻]** for strong acids/bases, weak acids/bases, and buffer solutions. Simply select your solution type, enter the concentration and Ka/Kb (if applicable), and the tool applies the correct method—whether it’s a direct log calculation, the quadratic formula, or the Henderson-Hasselbalch equation. It even shows step-by-step working, making it perfect for learning and verifying homework. For weak acids, it automatically checks if the approximation is valid or if the exact quadratic solution is needed.
+
+### Key Formulas Used
+- **Strong Acid**: `pH = -log(C)`
+- **Strong Base**: `pH = 14 + log(C)`
+- **Weak Acid**: Solves `Ka = x²/(C - x)` (approximation or quadratic)
+- **Buffer**: `pH = pKa + log([A⁻]/[HA])`
+- **Universal**: `pH + pOH = 14`, `[H⁺][OH⁻] = 1e-14`
+
+### Best Practices for Accurate Results
+1.  **Select the correct solution type**—using the wrong model gives incorrect results.
+2.  **Enter Ka or Kb values accurately**—use standard tables if unsure.
+3.  **For buffers**, input equilibrium concentrations of acid and conjugate base.
+4.  **Assume 25°C** unless specified—the calculator uses Kw = 1.0 × 10^-14.
+5.  **Verify very dilute solutions** (below 10^-6 M)—water's autoionisation may need manual adjustment.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+You have a **0.10 M acetic acid** solution (Ka = 1.8 × 10^-⁵).
+
+**Step 1**: Select **“Weak Acid”**  
+**Step 2**: Enter concentration = 0.10, Ka = 1.8e-5  
+**Step 3**: The calculator checks C/Ka = 5,555 > 100 → uses approximation  
+**Step 4**: Computes [H⁺] = √(1.8e-5 × 0.10) = 1.34 × 10^-³ M  
+**Step 5**: Returns **pH = 2.87**, **pOH = 11.13**, **[OH⁻] = 7.46 × 10^-¹² M**
+
+For a **buffer** with 0.20 M acetate and 0.30 M acetic acid:  
+- Select **“Buffer”**, enter [HA] = 0.30, [A⁻] = 0.20, pKa = 4.74  
+- Result: **pH = 4.56**
+
+This tool handles the complexity so you can focus on understanding the chemistry.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### Can this calculate pH for polyprotic acids?
+It handles **monoprotic** acids/bases and simple buffers. For diprotic acids (e.g., H₂SO₄, H₂CO₃), you’ll need to calculate each dissociation step separately—this tool can assist with individual steps.
+
+### Why does it sometimes use the quadratic formula?
+For weak acids where the concentration is low or Ka is high (C/Ka below 100), the standard approximation introduces significant error. The calculator automatically switches to the exact quadratic solution for accuracy.
+
+### How do I find Ka if I know pH?
+Rearrange the weak acid formula: `Ka = [H⁺]² / (C - [H⁺])`. Enter your known values, and the calculator can solve for Ka if you select the appropriate mode.
+
+### Is temperature accounted for?
+The calculator assumes **25°C** (Kw = 1.0 × 10^-¹⁴). For other temperatures, you’d need to adjust Kw manually—this is beyond the scope of a standard educational tool.
+
+### Can I use this for very concentrated solutions?
+For [H⁺] > 1 M (pH below 0) or [OH⁻] > 1 M (pH > 14), the calculator still works mathematically, but real solutions may deviate due to activity effects.
+
+### What if my buffer has unequal volumes?
+Always use **final equilibrium concentrations** in the Henderson-Hasselbalch equation. If you mix 50 mL of 0.4 M HA with 50 mL of 0.2 M A⁻, the final [HA] = 0.2 M and [A⁻] = 0.1 M.
+
+### Does this work for basic buffers?
+Yes—use the **conjugate acid** form. For an NH₃/NH₄⁺ buffer, treat NH₄⁺ as the weak acid (Ka = Kw/Kb) and NH₃ as the conjugate base.
+
+### How precise are the results?
+Results are shown to **4 significant figures** internally, with pH reported to **2 decimal places**—standard for most laboratory work.
+</TabPanel>
+</Tabs>

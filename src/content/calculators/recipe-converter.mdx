@@ -1,0 +1,75 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## How to Use the Recipe Converter
+The **recipe converter** solves the two biggest challenges in home baking: **scaling recipes** and **converting between volume (cups) and weight (grams)**. Simply enter your recipe ingredients, choose a scaling factor (e.g., 0.5 for half, 2.0 for double), and select your preferred output units. The tool uses **ingredient-specific densities**—so flour, sugar, and butter are converted accurately, not with a generic 240g-per-cup rule. It also helps you **adjust for different pan sizes** by calculating area-based scaling factors, ensuring your cakes bake evenly and your cookies spread correctly.
+
+### Key Features & Formulas
+- **Scaling**: `New Amount = Original × Scaling Factor`
+- **Volume-to-Weight**: `Grams = Cups × Density (g/cup)`
+- **Pan Area**: `Round = πr²`, `Rectangle = L × W`
+- **Density Database**: Pre-loaded with accurate weights for 50+ common ingredients
+
+### Best Practices for Perfect Results
+1.  **Weigh your ingredients**—use the gram output for baking.
+2.  **Scale the entire recipe at once**—don’t convert then scale (rounding errors compound).
+3.  **For pan changes**, use the area scaling factor but **adjust baking time**—shallower batters cook faster.
+4.  **Round sensibly**—the calculator shows precise values, but 10.6g salt is best rounded to 11g.
+5.  **Don’t scale leavening excessively**—for >3x recipes, consider using multiple batches.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+You have a US cookie recipe that serves 24:
+- **2¼ cups flour**
+- **1 cup butter**
+- **¾ cup sugar**
+
+You need **36 cookies** and want metric weights.
+
+**Step 1**: Enter ingredients and select “cups” as input unit.  
+**Step 2**: Set scaling factor = 36 ÷ 24 = **1.5**  
+**Step 3**: Choose output unit = **grams**  
+**Step 4**: The calculator returns:
+- Flour: 2.25 × 120 × 1.5 = **405 g**
+- Butter: 1 × 227 × 1.5 = **341 g**
+- Sugar: 0.75 × 200 × 1.5 = **225 g**
+
+**Bonus**: If you’re using a larger baking sheet, the tool can suggest if you need to adjust spacing or baking time.
+
+This eliminates guesswork and ensures perfect cookies every time.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How accurate are the cup-to-gram conversions?
+They use **industry-standard densities** (e.g., 120g/cup for flour, 200g/cup for sugar). While actual weights can vary slightly by brand or humidity, these values ensure **consistency**—which is what matters most in baking.
+
+### Can I convert a recipe from UK to US measurements?
+Yes. The converter handles:
+- UK metric (grams, mL) ↔ US customary (cups, tbsp, oz)
+- Temperature (°C ↔ °F)
+- Pan sizes (cm ↔ inches)
+
+### What if an ingredient isn’t in the database?
+For uncommon items, use a close substitute (e.g., almond flour ≈ 96g/cup) or enter a custom density if the tool allows. When in doubt, **weigh it yourself** once and save the value.
+
+### Why does pan size matter for scaling?
+Because **batter depth affects heat transfer**. A recipe scaled to a much larger pan will have a thinner layer, baking faster and potentially drying out. The converter calculates the area ratio so you can decide whether to scale ingredients or use multiple pans.
+
+### Can I scale a recipe that uses “to taste” ingredients?
+Yes—the converter scales the base recipe. For salt, spices, and herbs, it will show the scaled amount, but you should **always adjust to taste** after mixing.
+
+### Do I need to adjust oven temperature when scaling?
+Generally, **no for small scales** (½x to 2x). For **large scales** (3x+), lower the temperature by 10–15°C and extend baking time to prevent burning.
+
+### Is it okay to mix volume and weight in one recipe?
+**No**. Choose one system (preferably grams) and stick to it. Mixing units increases the risk of error and makes replication difficult.
+
+### How do I handle eggs in scaled recipes?
+The calculator shows the mathematical value (e.g., 1.5 eggs). In practice:
+- For **½ egg**: Beat one egg, use half by volume or weight
+- For **1.5 eggs**: Use one whole + half of another
+- For large batches, **weigh eggs** (1 large ≈ 50g without shell)
+</TabPanel>
+</Tabs>

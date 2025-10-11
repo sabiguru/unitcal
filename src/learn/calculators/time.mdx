@@ -1,0 +1,243 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+# How to Add, Subtract & Convert Time — A Complete Guide
+
+## Introduction
+
+Time is one of the few measurements that doesn't follow our familiar base-10 number system—it's built on **base-60** (60 seconds in a minute, 60 minutes in an hour) and **base-24** (24 hours in a day). This makes manual time calculations **surprisingly error-prone**.
+
+### Why Time Calculations Are Tricky
+
+Unlike decimal arithmetic, time uses **mixed number bases**:
+- **60 seconds** = 1 minute (base-60)
+- **60 minutes** = 1 hour (base-60)
+- **24 hours** = 1 day (base-24)
+- **Carry-over rules** differ from standard arithmetic
+
+### Essential Time Calculation Skills
+
+These calculations are essential for:
+- **Work schedule management** and shift planning
+- **Billable hours tracking** for freelancers and consultants
+- **Event planning** and timeline coordination
+- **Travel time estimation** and itinerary planning
+- **Payroll calculations** and time conversion
+
+### Common Time Calculation Challenges
+
+- **Adding durations** across time boundaries
+- **Finding differences** between clock times
+- **Converting to decimal hours** for payroll
+- **Handling AM/PM confusion** in 12-hour format
+- **Managing time zones** and daylight saving
+
+### What You'll Master
+
+This comprehensive guide covers:
+- **Time vs duration** concepts and differences
+- **Manual calculation methods** for all operations
+- **Base-60 arithmetic** and carry-over rules
+- **Decimal conversion** for business applications
+- **Common pitfall avoidance** strategies
+
+You'll learn **reliable manual methods** and how to **handle any time-related calculation with confidence**, from simple everyday problems to complex scheduling scenarios.
+
+<Tabs>
+<TabPanel title="Complete Guide">
+## Core Concepts: Time vs. Duration
+Before calculating, distinguish between two key ideas:
+- **Time of Day**: A specific point on the 24-hour clock (e.g., `2:30 PM` or `14:30`). This is **not** a quantity you can directly add or subtract.
+- **Duration**: A length of elapsed time (e.g., `3 hours 20 minutes`). This **is** what you add, subtract, multiply, or divide.
+
+**Example**:  
+- **Time**: “My meeting starts at **9:15 AM**.”  
+- **Duration**: “The meeting lasts **1 hour 45 minutes**.”  
+- **Resulting Time**: **11:00 AM**
+
+Always convert **time of day** problems into **duration** problems first.
+
+## The Base-60 System: Why It’s Tricky
+Unlike decimal math (where 10 units = 1 higher unit), time uses:
+- **60 seconds = 1 minute**  
+- **60 minutes = 1 hour**  
+- **24 hours = 1 day**
+
+This means **carrying and borrowing** happen at **60**, not 10:
+- **Addition**: If seconds ≥ 60, convert to minutes.  
+- **Subtraction**: If seconds below 0, borrow 60 from minutes.
+
+### Step-by-Step: Adding Time Durations
+**Problem**: Add `2 hours 47 minutes` + `1 hour 38 minutes`.
+
+1. **Add minutes**: 47 + 38 = **85 minutes**  
+2. **Convert excess minutes**: 85 ÷ 60 = **1 hour 25 minutes**  
+3. **Add hours**: 2 + 1 + 1 = **4 hours**  
+4. **Final result**: **4 hours 25 minutes**
+
+### Step-by-Step: Subtracting Time Durations
+**Problem**: Subtract `1 hour 20 minutes` from `3 hours 10 minutes`.
+
+1. **Minutes**: 10 – 20 → can’t do → **borrow 1 hour (60 minutes)**  
+   → Hours: 3 – 1 = **2**  
+   → Minutes: 10 + 60 = **70**  
+2. **Now subtract**:  
+   - Minutes: 70 – 20 = **50**  
+   - Hours: 2 – 1 = **1**  
+3. **Result**: **1 hour 50 minutes**
+
+## Calculating Time Differences (Clock Times)
+To find how long something lasted:
+**Formula**: `End Time – Start Time = Duration`
+
+But **always convert to 24-hour format first** to avoid AM/PM confusion.
+
+**Example**: Start = `2:45 PM`, End = `5:20 PM`  
+- 24-hour: `14:45` to `17:20`  
+- Minutes: 20 – 45 → borrow → 80 – 45 = **35**  
+- Hours: 16 – 14 = **2**  
+- Duration = **2 hours 35 minutes**
+
+### Handling Cross-Midnight Scenarios
+If end time < start time (e.g., night shift), **add 24 hours** to the end time.
+
+**Example**: Start = `10:30 PM`, End = `6:15 AM`  
+- 24-hour: `22:30` to `06:15` → add 24 → `30:15`  
+- Duration = `30:15 – 22:30 = 7 hours 45 minutes`
+
+## Converting to Decimal Hours (Critical for Payroll)
+Payroll systems use **decimal hours**, not `HH:MM`.
+
+**Formula**:  
+`Decimal Hours = Hours + (Minutes ÷ 60)`
+
+**Examples**:
+- `8:30` → 8 + (30/60) = **8.5 hours**  
+- `7:45` → 7 + (45/60) = **7.75 hours**  
+- `9:20` → 9 + (20/60) ≈ **9.333 hours**
+
+To convert back:  
+- `0.75 hours` × 60 = **45 minutes** → `7.75` = **7:45**
+
+## Multiplying and Dividing Time
+Time durations can be scaled:
+- **Multiplication**: `2 × (1:30)` = **3:00**  
+- **Division**: `(4:00) ÷ 2` = **2:00**
+
+**Real-world use**:  
+- If one task takes `1:15`, 8 tasks take `8 × 1:15 = 10:00`.
+
+## Pro Tips & Common Mistakes
+✅ **Always use 24-hour time** for differences—eliminates AM/PM errors.  
+✅ **Convert to total seconds** for complex calculations:  
+   - `Total Seconds = (H × 3600) + (M × 60) + S`  
+   - Do math, then convert back.  
+✅ **Round consistently** for payroll (e.g., nearest 0.25 or 0.1 hours).  
+❌ **Don’t mix time of day and duration**—they’re different data types.  
+❌ **Don’t forget to borrow/carry at 60**—not 100!  
+❌ **Don’t ignore cross-day scenarios**—verify if duration spans midnight.
+
+## Practical Applications
+- **Payroll**: Convert clock-in/out times to decimal hours.  
+- **Project Management**: Track task durations and total effort.  
+- **Travel**: Calculate flight or drive times across time zones.  
+- **Cooking**: Add prep, cook, and rest times accurately.  
+- **Fitness**: Log workout durations for training logs.
+</TabPanel>
+
+<TabPanel title="Examples & Practice">
+## Worked Examples & Practice Problems
+
+### Example 1: Payroll Time Conversion
+**Scenario**: Employee clocks in at `8:53 AM`, out at `5:17 PM`, with a 45-minute unpaid lunch.  
+**Steps**:  
+1. Total time: `17:17 – 08:53 = 8 hours 24 minutes`  
+2. Subtract lunch: `8:24 – 0:45 = 7 hours 39 minutes`  
+3. Convert to decimal: 7 + (39/60) = **7.65 hours**
+
+### Example 2: Cross-Midnight Shift
+**Scenario**: Nurse works from `11:20 PM` to `7:40 AM`.  
+**Steps**:  
+1. Convert end time: `7:40 AM` + 24 = `31:40`  
+2. Duration: `31:40 – 23:20 = 8 hours 20 minutes`  
+3. Decimal: 8 + (20/60) ≈ **8.333 hours**
+
+### Example 3: Multiplying Task Time
+**Scenario**: One report takes `1 hour 25 minutes`. How long for 6 reports?  
+**Steps**:  
+1. Convert to minutes: 85 × 6 = **510 minutes**  
+2. Convert back: 510 ÷ 60 = **8 hours 30 minutes**
+
+### Practice Problems
+1. Add `3:47` + `2:38`  
+2. Subtract `1:50` from `4:20`  
+3. Convert `6:40` to decimal hours  
+4. Find duration from `9:15 AM` to `4:50 PM`  
+5. A 10-hour workday includes two 15-minute breaks and a 30-minute lunch. What’s net work time?
+
+### Answers
+1. `6:25`  
+2. `2:30`  
+3. **6.667 hours**  
+4. **7 hours 35 minutes**  
+5. `10:00 – 1:00 = 9:00` → **9 hours**
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How do I calculate the difference between two times?
+1. Convert both to **24-hour format**.  
+2. If end time < start time, **add 24 hours** to end time.  
+3. Subtract hours and minutes separately, **borrowing 60** if needed.  
+**Example**: `8:20 AM` to `3:45 PM` → `15:45 – 08:20 = 7:25`.
+
+### Why do we use base-60 for time?
+The sexagesimal (base-60) system dates to ancient Sumer and Babylon. 60 is highly composite (divisible by 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60), making it easy to divide hours into halves, thirds, quarters, fifths, etc.—ideal for timekeeping before decimals.
+
+### How do I convert minutes to decimal hours?
+Divide minutes by 60:  
+- `15 min` = 15/60 = **0.25**  
+- `30 min` = 30/60 = **0.5**  
+- `45 min` = 45/60 = **0.75**
+
+### What’s the fastest way to add time manually?
+Use the **total seconds method**:  
+1. Convert all durations to seconds.  
+2. Add them.  
+3. Convert back:  
+   - Hours = total ÷ 3600  
+   - Remainder ÷ 60 = minutes  
+   - Final remainder = seconds
+
+### How do I handle AM/PM confusion?
+**Always convert to 24-hour time first**:  
+- **AM**: `12:XX AM` = `00:XX`; `1:XX–11:XX AM` = `01:XX–11:XX`  
+- **PM**: `12:XX PM` = `12:XX`; `1:XX–11:XX PM` = `13:XX–23:XX`
+
+### Can I use this for time zones?
+Not directly. A time calculator handles **durations**. For time zones:  
+1. Convert both times to **UTC**.  
+2. Then use the time calculator to find the difference.
+
+### Why is my payroll time wrong?
+Common causes:  
+- Forgetting to **subtract breaks**  
+- Not converting to **decimal hours**  
+- **Rounding inconsistently** (e.g., sometimes up, sometimes down)  
+- **AM/PM errors** in clock times
+
+### How do I calculate overtime?
+1. Calculate **total hours worked**.  
+2. Subtract **standard hours** (e.g., 40/week).  
+3. Multiply excess by **overtime rate** (e.g., 1.5×).  
+Always use **decimal hours** for accuracy.
+
+### Is there a formula for time addition?
+Yes—via total seconds:  
+`Total = (H₁×3600 + M₁×60 + S₁) + (H₂×3600 + M₂×60 + S₂)`  
+Then convert back to `HH:MM:SS`.
+
+### What if I need second-level precision?
+The same rules apply—just include seconds in all steps.  
+**Borrowing**: 1 minute = 60 seconds.  
+**Carrying**: 60 seconds = 1 minute.
+</TabPanel>
+</Tabs>

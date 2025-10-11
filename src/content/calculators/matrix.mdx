@@ -1,0 +1,84 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **matrix calculator** performs essential linear algebra operations—including **multiplication**, **inverse**, **determinant**, **transpose**, **rank**, and solving **Ax = b** systems—with step-by-step solutions. Whether you’re a student checking homework, an engineer solving circuit equations, or a data scientist working with transformations, this tool handles matrices of any size with precision and clarity. Input your matrices using standard notation, and get instant results with detailed breakdowns to deepen your understanding of linear algebra.
+
+### How It Works
+The calculator uses standard mathematical algorithms:
+- **Multiplication**: Validates dimensions and computes dot products of rows and columns
+- **Determinant**: Uses cofactor expansion or row reduction for accuracy
+- **Inverse**: Applies Gauss-Jordan elimination on [A | I] to find A⁻¹
+- **Ax = b**: Solves via Gaussian elimination or inverse method (if invertible)
+- **Rank**: Counts non-zero rows in row echelon form
+
+It supports matrices up to **6×6** with real-number entries and provides exact fractions or decimals.
+
+### Key Features
+- **Step-by-step solutions**: See every row operation and calculation
+- **Multiple operations**: Compute inverse, det, and rank in one go
+- **Error checking**: Alerts you to dimension mismatches or singular matrices
+- **Copy/paste**: Input matrices in standard format (e.g., `[[1,2],[3,4]]`)
+- **Educational focus**: Ideal for learning and verifying manual calculations
+
+### How to Use
+1. Select your **operation** (e.g., Multiply, Inverse, Solve Ax=b)
+2. Enter your **matrix/matrices** using bracket notation
+3. Click **Calculate** to see the result and step-by-step process
+4. Use the solution to check your work or understand the method
+
+For large matrices or complex systems, this tool saves time and reduces errors—making linear algebra accessible and efficient.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Find the inverse of a 2×2 matrix.
+
+**Inputs**:
+- Matrix A: `[[4, 7], [2, 6]]`
+
+**Calculation Process**:
+1. **Compute determinant**: `det = (4)(6) – (7)(2) = 24 – 14 = 10`
+2. **Apply inverse formula**:  
+   `A⁻¹ = (1/10) × [[6, -7], [-2, 4]]`
+3. **Simplify**:  
+   `A⁻¹ = [[0.6, -0.7], [-0.2, 0.4]]`
+
+**Verification**:  
+`A × A⁻¹ = [[4×0.6 + 7×(-0.2), 4×(-0.7) + 7×0.4], [2×0.6 + 6×(-0.2), 2×(-0.7) + 6×0.4]] = [[1, 0], [0, 1]] = I`
+
+This confirms the inverse is correct.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How do I enter a matrix?
+Use double brackets with rows separated by commas:  
+`[[1, 2, 3], [4, 5, 6]]` for a 2×3 matrix.  
+Decimals and fractions are accepted (e.g., `0.5` or `1/2`).
+
+### What if my matrix isn’t square?
+- **Multiplication**: Works if inner dimensions match (e.g., 2×3 × 3×4 = 2×4)  
+- **Determinant/Inverse**: Only defined for square matrices (n×n)  
+- **Ax = b**: A must be square for inverse method; otherwise, use elimination
+
+### Why is my matrix not invertible?
+A matrix is **singular** (non-invertible) if its **determinant is zero**. This means its rows/columns are linearly dependent, and the system Ax = b either has no solution or infinitely many.
+
+### Can I solve systems with more equations than unknowns?
+Yes. The calculator uses **least-squares** or **Gaussian elimination** to find solutions or indicate inconsistency. Overdetermined systems may have no exact solution.
+
+### How accurate are the results?
+The calculator uses exact arithmetic for fractions and high-precision decimals. For large matrices, rounding may occur, but results are mathematically sound.
+
+### What’s the difference between rank and determinant?
+- **Determinant**: Scalar value for square matrices; zero = singular  
+- **Rank**: Number of independent rows/columns; works for any matrix  
+A full-rank square matrix has non-zero determinant.
+
+### Can I use this for eigenvalues?
+Not directly. Eigenvalue computation requires iterative methods (e.g., QR algorithm), which are beyond this tool’s scope. Use specialized software like MATLAB or Python’s NumPy for eigenvalues.
+
+### Is this calculator suitable for exams?
+It’s perfect for **checking homework** and **learning methods**, but always understand the manual process—exams often require showing work without tools.
+</TabPanel>
+</Tabs>

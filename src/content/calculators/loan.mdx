@@ -1,0 +1,79 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **loan calculator** helps you estimate monthly payments, total interest, and payoff timelines for any fixed-rate loan. By inputting your loan amount, APR, and term, you’ll see a complete amortization schedule and discover how extra payments can save you money and shorten your debt term. Whether you’re financing a car, consolidating debt, or planning a major purchase, this tool provides the clarity to borrow wisely and repay efficiently.
+
+### How It Works
+The calculator uses the standard amortization formula:  
+**`PMT = [P × r × (1 + r)^n] / [(1 + r)^n – 1]`**  
+where **P** = principal, **r** = monthly rate (APR/12), and **n** = total payments.
+
+It then generates:
+- **Monthly payment**: Fixed amount for the loan term
+- **Total interest**: Sum of all interest paid
+- **Amortization schedule**: Breakdown of principal vs. interest per payment
+- **Extra payment impact**: Shows time and interest saved with additional payments
+
+### Key Features
+- **Extra payment modeling**: Add monthly or one-time payments to see savings
+- **Term comparison**: Adjust loan length to compare total costs
+- **Visual charts**: See how principal and interest change over time
+- **Mobile-friendly**: Works on any device for on-the-go planning
+
+### How to Use
+1. Enter your **loan amount** (e.g., £15,000 for a car)
+2. Input the **APR** (e.g., 6%)
+3. Select the **loan term** in months or years
+4. Click **Calculate** to see your payment and schedule
+5. Use the **extra payment** feature to explore payoff acceleration
+
+This tool is ideal for comparing loan offers, budgeting for debt, or planning early payoff strategies.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: £12,000 personal loan at 7% APR for 4 years.
+
+**Inputs**:
+- Loan Amount: £12,000
+- APR: 7%
+- Term: 48 months
+
+**Calculation**:
+1. **Monthly Payment**:  
+   `r = 0.07/12 = 0.005833`  
+   `PMT = [12000 × 0.005833 × (1.005833)^48] / [(1.005833)^48 – 1] = **£287.34**`
+2. **Total Repayment**: `£287.34 × 48 = **£13,792.32**`
+3. **Total Interest**: `£13,792.32 – £12,000 = **£1,792.32**`
+
+**Extra Payment Insight**:  
+Adding £40/month reduces payoff time to **38 months** and saves **£320** in interest.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How accurate is this calculator?
+It uses the exact amortization formula used by lenders, so results are mathematically precise for fixed-rate loans. Actual payments may vary slightly due to rounding or lender-specific rules.
+
+### Can I model extra payments?
+Yes. Add monthly or one-time extra payments to see how they reduce your loan term and total interest. The calculator shows exact savings.
+
+### What’s the difference between APR and interest rate?
+**APR** includes fees (origination, etc.), while the **interest rate** is just the cost of borrowing. Always compare APRs when shopping for loans.
+
+### Should I choose a shorter loan term?
+Yes—if you can afford the higher payment. A shorter term (e.g., 3 years vs. 5 years) drastically reduces total interest, often by 30–50%.
+
+### Does this work for mortgages?
+Yes—for the principal/interest portion. Mortgages often include taxes and insurance, which this calculator doesn’t model. Use our [Mortgage Calculator](/calculator/mortgage) for full estimates.
+
+### How do extra payments save money?
+They reduce your principal immediately, which lowers all future interest calculations. Even small extra payments create a snowball effect over time.
+
+### Can I pay off my loan early?
+Most personal and auto loans allow early payoff without penalties. Always confirm with your lender, as some mortgages charge prepayment fees.
+
+### Is this calculator secure?
+Yes. All calculations happen in your browser—no data is sent to our servers or stored.
+</TabPanel>
+</Tabs>

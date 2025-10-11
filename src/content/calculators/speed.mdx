@@ -1,0 +1,62 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Speed, Distance & Time Calculator
+Our speed and velocity calculator solves for any one of the three variables—**speed**, **distance**, or **time**—as long as you know the other two. It automatically handles unit conversions between **mph, km/h, and m/s**, and correctly computes **true average speed** for multi-leg journeys, avoiding the common pitfall of simply averaging speeds.
+
+### How It Works
+- **Core Formula**: `Speed = Distance / Time`  
+- **Rearrangements**:  
+  - `Distance = Speed × Time`  
+  - `Time = Distance / Speed`  
+- **Average Speed**: Always calculated as **Total Distance ÷ Total Time**, never as an arithmetic mean.
+
+### How to Use
+1. Select the variable you want to calculate (speed, distance, or time).  
+2. Enter the known values with their units.  
+3. The calculator instantly computes the result with correct unit handling.  
+4. For trips with multiple segments, use the “Add Leg” feature to get accurate average speed.
+
+Perfect for **road trip planning**, **fitness tracking**, **physics homework**, and everyday curiosity.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step: Calculating Trip Time
+**Scenario**: You’re driving 180 miles at an average speed of 60 mph. How long will it take?
+
+1. **Select “Time”** as the unknown.  
+2. **Enter Distance**: 180 miles  
+3. **Enter Speed**: 60 mph  
+4. **Calculate**:  
+   - Time = 180 ÷ 60 = **3 hours**
+
+**Now add a stop**: If you take a 30-minute break, total trip time = **3 hours 30 minutes**.
+
+Try it yourself—enter your own distance and speed to plan your next journey!
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How do I calculate average speed for a trip with stops?
+Include **all time**—driving and stops—in the total time.  
+Example: Drive 100 miles in 2 hours, plus 30-minute stop → Total Time = 2.5 hrs → Avg Speed = 100 ÷ 2.5 = **40 mph**.
+
+### Can I mix units (e.g., km and mph)?
+No—always use consistent units. The calculator will auto-convert if you select matching unit pairs (e.g., km with km/h), but don’t mix km with mph manually.
+
+### Why is my average speed lower than expected?
+Because average speed is **total distance ÷ total time**, including slow segments. A 10-minute traffic jam at 5 mph drastically reduces average speed, even after 50 minutes at 70 mph.
+
+### Does this work for running or cycling?
+Yes! Enter distance in km or miles and time in hours/minutes to get speed (km/h or mph) or pace (min/km or min/mile).
+
+### How do I convert speed units?
+Use the unit dropdowns. For example, input speed as **10 m/s**, and the calculator can display it as **36 km/h** or **22.4 mph**.
+
+### What if I have multiple trip legs?
+Use the “Add Leg” button to input each segment. The calculator sums total distance and total time, then computes the correct average speed.
+
+### Is this suitable for physics problems?
+Absolutely. It handles constant-speed kinematics problems with precision and proper unit management—ideal for GCSE, A-level, or introductory university physics.
+</TabPanel>
+</Tabs>

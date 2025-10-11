@@ -1,0 +1,93 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **investment calculator** projects the future value of your portfolio by combining your starting balance, regular contributions, expected returns, and time horizon. Unlike basic compound interest tools, it accounts for **monthly deposits**, **inflation**, and **contribution timing**—making it ideal for retirement planning, education savings, or major purchase goals. By inputting realistic assumptions, you’ll see exactly how much to save monthly to hit your target, or what your current plan will yield.
+
+### How It Works
+The calculator uses the future value of an annuity formula:  
+**`FV = P(1 + r/n)^(nt) + PMT × [((1 + r/n)^(nt) – 1) / (r/n)]`**
+
+Key features:
+- **Contribution timing**: Choose start-of-month or end-of-month
+- **Inflation adjustment**: See real purchasing power of future balances
+- **Goal solving**: Input your target amount to find required monthly savings
+- **Visual charts**: Track growth of principal vs. contributions vs. earnings
+
+### Key Inputs
+- **Starting Balance**: Current investment value
+- **Monthly Contribution**: Amount added regularly
+- **Annual Return**: Expected net return (after fees)
+- **Time Horizon**: Years until you need the money
+- **Inflation Rate**: To calculate real (inflation-adjusted) value
+
+The tool instantly shows:
+- Future value (nominal and real)
+- Total contributions vs. investment earnings
+- Monthly savings needed to reach a target
+
+### How to Use
+1. Enter your **current portfolio value**
+2. Add your **monthly investment amount**
+3. Set **expected return** (use 6–7% for balanced portfolios)
+4. Input **time horizon** (e.g., 30 years to retirement)
+5. Add **inflation rate** (2–3% is typical)
+6. Click **Calculate** to see your projected growth
+
+Use the **“Solve for Contribution”** mode to find exactly how much to save monthly for goals like retirement or a house deposit.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Saving for retirement with £10,000 initial investment.
+
+**Inputs**:
+- Starting Balance: £10,000
+- Monthly Contribution: £400
+- Annual Return: 7%
+- Time Horizon: 30 years
+- Inflation: 2.5%
+
+**Calculation**:
+- **Nominal FV**: `10,000(1.07)^30 + 400 × [((1.07)^30 – 1)/0.07] = **£480,000**`
+- **Real FV** (inflation-adjusted): `480,000 / (1.025)^30 = **£228,000**`
+- **Total Contributions**: `£10,000 + (£400 × 360) = £154,000`
+- **Investment Earnings**: **£326,000** (68% of total)
+
+**Insight**: Consistent investing turns £154K in contributions into £480K—demonstrating compounding’s power.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What’s the difference between nominal and real returns?
+**Nominal return** is your portfolio’s raw growth. **Real return** adjusts for inflation, showing your actual increase in purchasing power. Always prioritize real returns for goal planning.
+
+### How do I choose a realistic return rate?
+Use **net returns** (after fees):
+- **4–5%**: Conservative (bonds/cash)
+- **6–7%**: Balanced (60/40 stocks/bonds)
+- **8–9%**: Aggressive (100% stocks)  
+Historical S&P 500 average is 10% gross—but includes high volatility.
+
+### Should I include inflation?
+Yes. A £500,000 portfolio in 30 years may only have £250,000 in today’s purchasing power at 2.5% inflation. The calculator shows both values so you can plan accordingly.
+
+### Can I model irregular contributions?
+This tool assumes fixed monthly deposits. For irregular amounts (bonuses, windfalls), calculate the base scenario first, then add lump sums separately using our [Compound Interest Calculator](/calculator/compound-interest).
+
+### What if my actual returns differ?
+The calculator shows a **mathematical projection**, not a guarantee. Actual returns will vary due to market volatility. Use it as a planning tool—not a prediction—and revisit annually.
+
+### How do fees affect results?
+Fees reduce net returns. A 1% annual fee can cut your final balance by 25–30% over 30 years. Always input **net returns** (gross return minus fees).
+
+### Is this accurate for retirement planning?
+Yes—for **estimation purposes**. For precise retirement planning, also consider:
+- Withdrawal rates (e.g., 4% rule)
+- Tax implications of withdrawals
+- Social Security/pension income
+- Healthcare costs
+
+### Can I use this for education savings?
+Absolutely. Set your time horizon to your child’s college start date (e.g., 18 years), use a conservative 5–6% return, and solve for monthly contributions to cover tuition costs.
+</TabPanel>
+</Tabs>

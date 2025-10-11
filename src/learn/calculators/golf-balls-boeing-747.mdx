@@ -1,0 +1,203 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+# How to Estimate Golf Balls in a Boeing 747 — Fermi Problem Guide
+
+## Introduction
+
+"How many golf balls can fit in a Boeing 747?" is a classic **Fermi estimation problem**—a type of question designed not to test your knowledge of obscure facts, but to evaluate your **ability to break down complex problems** into manageable parts.
+
+### What Are Fermi Problems?
+
+These problems teach:
+
+- **Logical decomposition** of complex challenges
+- **Reasonable assumption** making under uncertainty
+- **Order-of-magnitude** thinking and estimation
+- **Structured problem-solving** methodologies
+- **Confidence** in tackling "impossible" questions
+
+### Why They Matter
+
+Fermi estimation is used in:
+
+- **Tech and consulting interviews** (Google, McKinsey)
+- **Business forecasting** and market sizing
+- **Engineering design** and feasibility studies
+- **Scientific research** and hypothesis testing
+- **Everyday decision-making** and planning
+
+### Beyond the Golf Ball Question
+
+Learning **how to estimate golf balls in a 747** teaches a **powerful problem-solving framework** applicable to:
+
+- **Market sizing**: "How many pizza shops in London?"
+- **Resource planning**: "How many teachers do we need?"
+- **Feasibility studies**: "Can this stadium fit enough people?"
+- **Investment analysis**: "What's the addressable market?"
+- **Engineering estimates**: "How much concrete for this bridge?"
+
+### The Method Matters Most
+
+This isn't about memorizing facts—it's about mastering:
+
+- **Step-by-step decomposition** processes
+- **Reasonable assumption** strategies
+- **Sphere packing physics** and volume calculations
+- **Sanity-checking** and result validation
+- **"Back-of-the-envelope"** confidence building
+
+You'll gain the skills to **confidently approach any estimation challenge** with structured thinking and logical reasoning.
+
+<Tabs>
+<TabPanel title="Complete Guide">
+## The Fermi Estimation Framework
+Fermi problems follow a simple but powerful structure:
+1. **Decompose** the problem into smaller, estimable components.
+2. **Estimate** each component using reasonable assumptions and known facts.
+3. **Calculate** by combining estimates with basic math.
+4. **Sanity-check** the result for plausibility.
+
+For the golf ball question, we decompose it as:  
+**Total Golf Balls = (Usable Aircraft Volume) / (Volume per Golf Ball × Packing Efficiency)**
+
+### Step 1: Estimate the Boeing 747’s Usable Volume
+The Boeing 747-400 (a common reference model) has multiple internal spaces, but we focus on **pressurised cabin volume**, as cargo holds are irregular and not fully accessible.
+
+- **Total internal volume**: ~876 m³ (from Boeing technical data)
+- **Cabin-only volume**: ~690 m³ (passenger + upper deck)
+- **Cargo hold volume**: ~186 m³ (lower holds)
+
+However, the cabin contains seats, galleys, lavatories, and overhead bins—**not empty space**. A realistic **usable empty volume** is **~50–60%** of total cabin volume.
+
+**Assumption**:  
+`Usable Volume = 690 m³ × 0.55 = **380 m³**`
+
+### Step 2: Calculate the Volume of a Golf Ball
+A standard golf ball has a diameter of **4.27 cm** (1.68 inches), per USGA rules.
+
+- **Radius**: 2.135 cm = 0.02135 m
+- **Volume**: `V = (4/3)πr³ = (4/3) × 3.1416 × (0.02135)³ ≈ **4.08 × 10⁻⁵ m³**  
+  (or **40.8 cm³**)
+
+### Step 3: Account for Sphere Packing Efficiency
+Spheres don’t pack perfectly—there’s always empty space between them. The maximum packing density for identical spheres is:
+- **Random close packing**: ~64% (realistic for dumped balls)
+- **Hexagonal close packing**: ~74% (theoretical maximum, requires perfect arrangement)
+
+For a Fermi estimate, **64%** is more realistic.
+
+**Effective volume per golf ball**:  
+`4.08 × 10⁻⁵ m³ / 0.64 ≈ **6.38 × 10⁻⁵ m³**`
+
+### Step 4: Perform the Final Calculation
+`Total Golf Balls = 380 m³ / (6.38 × 10⁻⁵ m³/ball) ≈ **5,960,000**`
+
+So, approximately **6 million golf balls** could fit in the usable cabin space of a Boeing 747.
+
+### Refinements and Real-World Constraints
+- **Cargo holds**: Adding 186 m³ (at 64% efficiency) adds ~2.9 million more → **~9 million total**.
+- **Obstructions**: Seats, frames, and wiring reduce usable space—our 55% cabin assumption accounts for this.
+- **Ball deformation**: Golf balls are rigid, so no compression.
+- **Access**: You can’t actually load balls into every nook—but Fermi problems assume ideal filling.
+
+## Why Fermi Estimation Matters
+Fermi problems teach **order-of-magnitude thinking**—focusing on whether an answer is 10³, 10⁶, or 10⁹, not the exact number. This skill is invaluable for:
+- **Business**: Estimating market size (“How many electric vehicles will be sold in the UK by 2030?”)
+- **Engineering**: Sizing systems without detailed specs
+- **Science**: Checking if experimental results are plausible
+- **Interviews**: Demonstrating structured, logical thinking under pressure
+
+## Pro Tips for Solving Fermi Problems
+- **Use round numbers**: 4.27 cm → 4 cm; π → 3. This simplifies mental math.
+- **Anchor to known quantities**: A car is ~2 m wide; a person is ~1.7 m tall.
+- **Break into ratios**: Instead of absolute volumes, compare relative sizes.
+- **State assumptions clearly**: “Assuming the cabin is half empty…”
+- **Embrace uncertainty**: A factor-of-2 error is acceptable; a factor-of-100 is not.
+
+## Common Variations and Extensions
+- **“How many tennis balls?”**: Larger diameter (6.7 cm) → fewer balls (~1.5 million in cabin).
+- **“How many ping pong balls?”**: Smaller (4 cm diameter) → more balls (~8 million).
+- **“How many people?”**: Average human volume ~0.07 m³ → ~3,000 people (ignoring safety!).
+- **“How much would it weigh?”**: Golf ball mass = 45.9 g → 6M balls = **275,000 kg** (heavier than the 747’s max takeoff weight of 412,000 kg!).
+
+## Practical Applications Beyond the Interview
+- **Logistics**: Estimating how many items fit in a shipping container.
+- **Urban planning**: Calculating parking space needs for a new development.
+- **Energy**: Estimating solar panel coverage for a roof.
+- **Finance**: Rough revenue projections for a startup (“If 1% of Londoners buy…”).
+</TabPanel>
+
+<TabPanel title="Examples & Practice">
+## Practice Fermi Estimation
+
+### Scenario 1: Tennis Balls in a School Bus
+**Goal**: Estimate how many tennis balls fit in a standard school bus.
+
+**Steps**:
+1. Bus dimensions: ~10 m × 2.5 m × 2.5 m = **62.5 m³**
+2. Usable volume (seats, aisle): ~50% → **31 m³**
+3. Tennis ball diameter: 6.7 cm → radius 0.0335 m
+4. Volume: `(4/3)π(0.0335)³ ≈ 1.57 × 10⁻⁴ m³`
+5. Packing efficiency: 64% → effective volume = **2.45 × 10⁻⁴ m³**
+6. Total balls: `31 / 2.45e-4 ≈ **126,000**`
+
+### Scenario 2: Smartphones in a Shipping Container
+**Goal**: How many iPhones fit in a 40-foot container?
+
+**Steps**:
+1. Container volume: 40 ft × 8 ft × 8.5 ft ≈ **2,720 ft³** = **77 m³**
+2. iPhone 15 volume: 147 × 72 × 7.8 mm ≈ **825,000 mm³** = **8.25 × 10⁻⁴ m³**
+3. Packing efficiency (rectangular): ~90% (minimal wasted space)
+4. Effective volume: **9.17 × 10⁻⁴ m³**
+5. Total phones: `77 / 9.17e-4 ≈ **84,000**`
+
+### Scenario 3: Grains of Sand on a Beach
+**Goal**: Estimate grains on a 1 km × 100 m × 10 cm beach.
+
+**Steps**:
+1. Beach volume: 1,000 × 100 × 0.1 = **10,000 m³**
+2. Sand grain diameter: 0.5 mm → volume ≈ **6.5 × 10⁻¹¹ m³**
+3. Packing efficiency: 60% → effective volume = **1.08 × 10⁻¹⁰ m³**
+4. Total grains: `10,000 / 1.08e-10 ≈ **9.3 × 10¹³**` (93 trillion)
+
+### Scenario 4: Your Own Fermi Problem
+**Task**: Estimate how many golf balls fit in your living room.
+
+1. Measure room: length × width × height
+2. Subtract furniture volume (~30%)
+3. Use golf ball volume and 64% packing
+4. Calculate total
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is a Fermi problem?
+A **Fermi problem** is an estimation question that seems impossible to answer due to lack of data but can be solved by breaking it into smaller, logical parts and using reasonable assumptions. Named after physicist Enrico Fermi, who famously estimated the yield of an atomic bomb from falling paper scraps.
+
+### Why is sphere packing efficiency important?
+Spheres can’t fill 100% of a space—there’s always gaps. **Random close packing** (64%) is realistic for dumped balls; **hexagonal packing** (74%) is ideal but impractical in large volumes. Ignoring packing efficiency overestimates by ~50%.
+
+### How accurate is this estimate?
+Fermi estimates aim for **order-of-magnitude accuracy** (within 10x). Our 6 million golf balls is likely within 2–3x of reality. The exact number is irrelevant—the method is what matters.
+
+### Can I use this for real logistics?
+Yes, with refinements. Real cargo loading uses **stowage factors** and accounts for weight limits, balance, and access. But the Fermi method gives a quick feasibility check.
+
+### What if the golf balls are compressed?
+Golf balls are rigid (solid core or liquid-filled) and won’t compress under their own weight. Only foam or hollow balls would compress.
+
+### How does the 747’s shape affect the estimate?
+The 747 has a hump and tapered tail, but we used **total cabin volume** from manufacturer data, which accounts for shape. Our 55% usable assumption handles irregularities.
+
+### Why not include the fuel tanks or wings?
+Those spaces are **not accessible** and contain fuel, hydraulics, and structure. Fermi problems focus on **usable volume**—what you could theoretically fill.
+
+### What’s the point if it’s not exact?
+The goal is to demonstrate **structured thinking**, not precision. In business or science, a rough estimate that’s directionally correct is far more valuable than no estimate at all.
+
+### How do I get better at Fermi problems?
+- Practice daily: “How many streetlights in London?”
+- Memorise key numbers: world population (8B), UK population (67M), car length (4.5m)
+- Play with unit conversions: m³ to ft³, cm³ to liters
+- Read books like *“Guesstimation”* by Lawrence Weinstein
+</TabPanel>
+</Tabs>

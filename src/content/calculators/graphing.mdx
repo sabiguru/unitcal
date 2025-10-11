@@ -1,0 +1,84 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **graphing calculator** lets you plot and analyze functions in **Cartesian**, **parametric**, and **polar** coordinates with ease. Whether you’re visualizing a quadratic equation, tracing a parametric curve, or exploring polar roses, this tool provides an interactive, dynamic graph with analysis features like intercepts, derivatives, and integrals. Perfect for students, teachers, and professionals, it transforms abstract equations into clear visual insights—helping you understand mathematical relationships at a glance.
+
+### How It Works
+The calculator supports multiple graphing modes:
+- **Cartesian**: Enter `y = f(x)` (e.g., `y = x^2`, `y = sin(x)`)
+- **Parametric**: Define `x(t)` and `y(t)` (e.g., `x = cos(t)`, `y = sin(t)`)
+- **Polar**: Enter `r(θ)` (e.g., `r = 3cos(2θ)`)
+
+It uses numerical methods to:
+- Plot smooth curves
+- Find intercepts and intersections
+- Calculate derivatives (slope) and integrals (area)
+- Identify asymptotes and critical points
+
+### Key Features
+- **Interactive Plotting**: Click and drag to pan; scroll to zoom
+- **Multiple Functions**: Plot up to 5 functions simultaneously
+- **Analysis Tools**: Trace coordinates, find roots, maxima/minima
+- **Custom Window**: Set x/y ranges manually or use auto-fit
+- **Export**: Download your graph as an image for reports or study
+
+### How to Use
+1. Select your **graphing mode** (Cartesian, parametric, or polar)
+2. Enter your **function(s)** using standard math notation
+3. Adjust the **window settings** to focus on key features
+4. Click **Graph** to plot
+5. Use **analysis tools** to explore intercepts, slopes, and areas
+
+For parametric and polar graphs, specify the **parameter range** (e.g., `t = 0 to 2π`) to control how much of the curve is displayed.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Plot a circle using parametric equations.
+
+**Inputs**:
+- Mode: Parametric
+- x(t): `3*cos(t)`
+- y(t): `3*sin(t)`
+- t-min: 0
+- t-max: 6.28 (≈2π)
+
+**Result**:  
+A perfect circle with radius 3 centered at the origin.  
+- **Intercepts**: (3,0), (0,3), (-3,0), (0,-3)  
+- **Domain**: x ∈ [-3, 3]  
+- **Range**: y ∈ [-3, 3]
+
+**Analysis**:  
+Use the trace tool to see coordinates as you move around the circle. The derivative tool shows the slope of the tangent line at any point—vertical at (0,±3), horizontal at (±3,0).
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What types of functions can I plot?
+You can plot polynomials, trigonometric, exponential, logarithmic, rational, and piecewise functions in Cartesian mode. Parametric mode handles curves like circles and ellipses. Polar mode plots roses, cardioids, and spirals.
+
+### How do I find intercepts?
+Use the **“Find Intercepts”** tool. For x-intercepts, it solves `f(x) = 0`. For y-intercepts, it evaluates `f(0)`.
+
+### Can I plot multiple functions at once?
+Yes. Enter up to 5 functions, each in a different color. Use the **“Find Intersection”** tool to locate where they cross.
+
+### Why is my graph blank or incomplete?
+- **Check syntax**: Use `*` for multiplication (`2*x`, not `2x`)  
+- **Adjust window**: The graph may be outside the current view—use “Zoom Fit”  
+- **Domain issues**: Functions like `√x` or `ln(x)` only plot for valid x-values
+
+### How do I switch between degrees and radians?
+The calculator uses **radians by default** (required for calculus). For degree-based trig functions, wrap angles in `deg()` (e.g., `sin(deg(x))`).
+
+### Can I calculate the area under a curve?
+Yes. Use the **“Numerical Integral”** tool. Enter the start and end x-values, and it computes the definite integral (area between curve and x-axis).
+
+### What’s the difference between parametric and polar?
+**Parametric** uses a parameter `t` to define x and y separately—ideal for motion paths. **Polar** uses angle `θ` to define distance from origin—ideal for symmetric, circular patterns.
+
+### Can I save my graph?
+Yes. Click **“Download”** to save as PNG or JPEG. You can also copy the graph to your clipboard for pasting into documents.
+</TabPanel>
+</Tabs>

@@ -1,0 +1,79 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Introduction
+Our **solar panel savings calculator** helps UK homeowners estimate the financial benefits of installing solar PV. By entering your system size, location, electricity tariff, and export rate, it calculates your **annual savings**, **payback period**, and **25-year return**—so you can make an informed investment decision.
+
+### How It Works
+The calculator uses UK-specific solar irradiance data and standard assumptions to model:
+- **Annual energy production** (kWh) based on system size and roof orientation
+- **Self-consumption savings** (using your electricity rate)
+- **Export income** (via Smart Export Guarantee rates)
+- **Total annual savings** and **payback period**
+
+### How to Use
+1. Enter your **system size** (e.g., 4 kWp)
+2. Select your **roof orientation** (South, East, West, etc.)
+3. Input your **electricity rate** (e.g., £0.28/kWh)
+4. Enter your **SEG export rate** (e.g., £0.08/kWh)
+5. Adjust **self-consumption %** (default: 40%)
+6. The tool shows **annual savings**, **payback years**, and **lifetime ROI**
+
+This calculator is ideal for comparing quotes, planning battery additions, or understanding how energy price changes affect your savings.
+
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+**Scenario**: You’re considering a **4 kWp solar system** in the Midlands. Your electricity costs **£0.28/kWh**, your SEG rate is **£0.07/kWh**, and you expect to use **35%** of the solar power at home.
+
+**Steps**:
+1. Enter System Size: `4 kWp`
+2. Select Roof Orientation: `South`
+3. Enter Electricity Rate: `0.28`
+4. Enter SEG Rate: `0.07`
+5. Set Self-Consumption: `35%`
+6. The calculator estimates:
+   - Annual Production: **3,504 kWh**
+   - Self-Consumption Savings: **£343**
+   - Export Income: **£159**
+   - **Total Annual Savings**: **£502**
+   - **Payback Period**: **16 years** (on an £8,000 system)
+
+✅ **Result**: You’ll save over **£12,500** in 25 years, even after system cost.
+
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How accurate is this calculator?
+It uses **PVWatts methodology** adapted for UK weather and MCS standards. It’s excellent for initial estimates but not a substitute for a professional site survey.
+
+### What is self-consumption?
+The percentage of solar energy you **use directly** in your home. Typical UK homes use 30–40% without a battery. Higher self-consumption = greater savings.
+
+### Do I need a smart meter for SEG?
+Yes. A **smart meter** is required to measure exported electricity and receive SEG payments from your supplier.
+
+### How does roof orientation affect output?
+- **South**: Maximum output (100%)
+- **East/West**: ~85% of south-facing
+- **North**: ~65% — still viable, but longer payback
+
+### Can I include battery storage in this calculator?
+Not directly. But you can **increase your self-consumption %** (e.g., to 60–70%) to model the effect of a battery on savings.
+
+### Are there hidden costs?
+The calculator assumes a standard installation. Additional costs may include:
+- Scaffolding (£300–£600)
+- Inverter replacement after 10–15 years (£800–£1,200)
+- Battery (if added later)
+
+### Is solar worth it in Scotland or the North?
+Yes! While output is 15–20% lower than southern England, high electricity prices and 0% VAT still make solar financially viable, with payback typically 16–18 years.
+
+### How do I find my SEG rate?
+Check your energy supplier’s website or use Ofgem’s SEG register. Rates range from **£0.04 to £0.15/kWh**—shop around annually for the best deal.
+
+</TabPanel>
+</Tabs>

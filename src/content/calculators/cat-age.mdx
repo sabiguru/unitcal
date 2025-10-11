@@ -1,0 +1,80 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **cat age calculator** converts your cat’s age to human years using the modern, life-stage-based method endorsed by veterinarians. Forget the outdated “multiply by 7” rule—this tool gives you an accurate equivalent that reflects your cat’s true developmental stage, helping you provide better care and understand their needs.
+
+### How It Works
+The calculator uses a two-phase model:
+- **First year**: 1 cat year = 15 human years
+- **Second year**: Adds 9 more human years (total 24 at age 2)
+- **Each year after**: Adds 4 human years per cat year
+
+Formula for cats 3+:  
+**Human Age = 24 + (Cat Age – 2) × 4**
+
+### Why It Matters
+Knowing your cat’s human-equivalent age helps you:
+- Choose the right diet (kitten, adult, senior)
+- Anticipate health screenings (e.g., kidney tests from age 7)
+- Understand behaviour changes (e.g., reduced play in seniors)
+- Plan vet visit frequency (annual for adults, biannual for seniors)
+
+### How to Use
+1. Enter your cat’s **age in years** (use 0.5 for 6 months, etc.).
+2. The calculator instantly shows:
+   - Human-equivalent age
+   - Life stage (Kitten, Prime, Senior, etc.)
+   - Key care recommendations for that stage
+3. Use the result to guide nutrition, vet care, and enrichment.
+
+This method aligns with guidelines from the American Association of Feline Practitioners and UK veterinary standards.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Your cat is 8 years old.
+
+**Calculation**:
+- First 2 years = 24 human years
+- Remaining 6 years × 4 = 24 human years
+- **Total human age = 24 + 24 = 48 years**
+
+**Life Stage**: Mature (7–10 years)
+
+**Care Recommendations**:
+- Schedule biannual vet check-ups
+- Begin senior bloodwork to monitor kidney and thyroid health
+- Consider switching to a mature or senior diet
+- Provide joint support if your cat shows stiffness
+- Keep litter boxes easily accessible (low sides)
+
+This tells you your cat is entering middle age and needs proactive health monitoring—not just “getting old.”
+</TabPanel>
+
+<TabPanel title="FAQ">
+### Is the “cat years × 7” rule accurate?
+No. It’s a myth. Cats age rapidly in their first two years (15 human years at age 1, 24 at age 2), then slow to about 4 human years per cat year thereafter.
+
+### How do I know my rescue cat’s age?
+Vets estimate age by examining teeth, eyes, muscle tone, and coat condition. While not exact, this gives a useful range for care planning.
+
+### Do indoor and outdoor cats age differently?
+Biologically, no—the aging rate is the same. But **indoor cats live longer** (12–18 years vs. 2–5 for outdoor cats) due to fewer hazards.
+
+### What age is a senior cat?
+Cats enter the **senior stage at 11 years** (≈60 human years). **Mature** starts at 7 years (≈44 human years)—a key time to begin preventive care.
+
+### Why does my 3-year-old cat seem “middle-aged”?
+At 3 years (28 human years), your cat is in their **prime adult stage**—energetic but past the hyperactivity of kittenhood. This is normal.
+
+### Should I change my cat’s food at a certain age?
+Yes. Transition to **adult food at 1 year**, and consider **senior food at 7–10 years**. Senior formulas support kidney health, joints, and digestion.
+
+### How often should senior cats see the vet?
+**Every 6 months**. Cats hide illness well, and early detection of conditions like kidney disease significantly improves quality of life.
+
+### Can I use this for kittens?
+Yes. For kittens under 1 year, the calculator uses monthly milestones (e.g., 6 months ≈ 10 human years) to reflect rapid development.
+</TabPanel>
+</Tabs>

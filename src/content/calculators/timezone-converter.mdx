@@ -1,0 +1,77 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Time Zone Converter — Global Time Made Simple
+Our Time Zone Converter instantly translates any local time to another time zone anywhere in the world, automatically accounting for **Daylight Saving Time (DST)** and the **International Date Line**. Whether you’re scheduling a global meeting, planning travel, or coordinating with international friends, this tool ensures you never miss a beat—or a date.
+
+### How It Works
+- **Core Logic**: Converts via **UTC (Coordinated Universal Time)** for accuracy.  
+- **Smart DST Handling**: Detects whether DST is active on your chosen date.  
+- **Date Line Awareness**: Automatically adjusts the calendar day when crossing 180° longitude.  
+- **Multi-Zone View**: Compare up to 6 time zones side-by-side to find optimal meeting times.
+
+### Key Features
+- **City or Region Search**: Type “London” or “Asia/Tokyo” for precise zone selection.  
+- **Date-Specific**: Enter any future or past date to get accurate DST-adjusted results.  
+- **UTC Reference**: See all times relative to UTC for unambiguous coordination.  
+- **Mobile-Friendly**: Perfect for on-the-go scheduling.
+
+Ideal for remote teams, travellers, event planners, and global citizens.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step: Scheduling a Call from London to Sydney
+**Scenario**: You’re in London and want to call a colleague in Sydney at a reasonable hour. You propose **2:00 PM London time** on July 15.
+
+1. **Enter Source**:  
+   - Time: **2:00 PM**  
+   - Zone: **London (BST, UTC+1 in summer)**  
+   - Date: **July 15, 2025**
+
+2. **Enter Target**:  
+   - Zone: **Sydney (AEST/AEDT)**
+
+3. **Calculate**:  
+   - London 2:00 PM BST = **1:00 AM next day in Sydney**  
+   - *Too late!*
+
+4. **Adjust**: Try **9:00 AM London time** → **7:00 PM Sydney** (acceptable).
+
+Use the **multi-zone view** to test multiple cities at once and find the perfect window.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### Does this converter account for Daylight Saving Time?
+Yes. It uses the **IANA Time Zone Database** to apply correct DST rules based on your selected date. Always enter the exact date of your event.
+
+### What is UTC, and why is it used?
+**UTC (Coordinated Universal Time)** is the global time standard. All time zones are offsets from UTC. Using UTC eliminates ambiguity in international coordination.
+
+### Why does the date sometimes change?
+Crossing the **International Date Line** (near 180° longitude) changes the calendar day. The converter handles this automatically—e.g., a flight from LA to Tokyo may land “tomorrow.”
+
+### Can I compare more than two time zones?
+Yes! Use the “Add Zone” button to compare up to 6 time zones simultaneously—ideal for team meetings across continents.
+
+### How do I know if a location observes DST?
+The converter shows the **current offset** (e.g., “London: UTC+1 (BST)”) and adjusts automatically. You don’t need to know DST rules—just select the city and date.
+
+### What if my country recently changed its time zone?
+Our database is updated regularly. For critical plans, verify with official government sources close to your event date.
+
+### Can I use this for historical dates?
+Yes, but note that DST rules have changed over time. The converter uses the best available historical data.
+
+### Why are some time zones 30 or 45 minutes off?
+Some regions (e.g., India, Nepal) use fractional offsets for geographical or historical reasons. The converter handles these precisely.
+
+### Is this suitable for flight planning?
+Yes—enter your departure time and zone, then convert to your destination zone to estimate arrival time (add flight duration manually).
+
+### How do I schedule a fair meeting for a global team?
+1. Use the **multi-zone view** to see everyone’s local time.  
+2. Aim for **overlap in business hours** (e.g., 9 AM–5 PM local).  
+3. **Rotate times** so the same people aren’t always inconvenienced.
+</TabPanel>
+</Tabs>

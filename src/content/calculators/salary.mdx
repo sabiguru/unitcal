@@ -1,0 +1,64 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## How to Use the Salary Calculator
+The **salary calculator** converts between hourly wages and yearly salaries, factors in overtime, bonuses, and commission, and breaks down your earnings by pay period (monthly, weekly, bi-weekly). Simply enter your base rate, working hours, and additional income, and the tool instantly shows your total gross compensation in all common formats. It’s perfect for evaluating job offers, planning a side hustle, or understanding your payslip—ensuring you never undervalue your work again.
+
+### Key Formulas Used
+- **Hourly to Annual**: `Hourly × Hours/Week × 52`
+- **Overtime**: `Overtime Hours × Hourly × 1.5`
+- **Pay Periods**: Annual ÷ 12 (monthly), ÷ 26 (bi-weekly), ÷ 52 (weekly)
+
+### Best Practices for Accurate Results
+1.  **Use your actual contracted hours**—not idealised full-time hours.
+2.  **Include all income sources**: bonuses, commission, tips.
+3.  **Specify pay frequency**—bi-weekly vs. semi-monthly changes your annual total.
+4.  **For UK users**, remember that employer pension contributions are part of your total compensation.
+5.  **Pair with a tax calculator** to estimate net (take-home) pay for budgeting.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+You’re offered a job at **£24/hour** for **35 hours/week**, with **5 hours of overtime weekly**.
+
+**Step 1**: Enter hourly rate = £24, regular hours = 35  
+**Step 2**: Add overtime = 5 hours at 1.5× rate  
+**Step 3**: The calculator shows:  
+- **Regular Weekly Pay**: 35 × 24 = **£840**  
+- **Overtime Weekly Pay**: 5 × 36 = **£180**  
+- **Total Weekly**: **£1,020**  
+- **Annual Salary**: 1,020 × 52 = **£53,040**  
+- **Monthly (bi-weekly)**: £2,040  
+
+This gives you a complete picture to compare with salaried offers.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How do I account for unpaid leave?
+Reduce the “weeks per year” from 52 to your actual working weeks (e.g., 50 for 2 weeks unpaid holiday).
+
+### Can this handle commission-based pay?
+Yes—enter your base salary plus average monthly commission. The calculator will annualise the total.
+
+### What if my overtime rate is 2× instead of 1.5×?
+Adjust the overtime multiplier in the settings. Some roles (e.g., weekend work) pay double time.
+
+### Is this accurate for UK tax calculations?
+The calculator shows **gross pay**. For net pay, use our [UK Tax Calculator](/calculator/tax) which includes income tax, National Insurance, and pension deductions.
+
+### How do I compare a salaried role to an hourly contract?
+Convert both to annual gross income using this tool. Then add employer benefits (pension, healthcare) to the salaried role for a fair comparison.
+
+### Does this include holiday pay?
+Yes—if you’re paid hourly, holiday pay is included in your regular rate under UK law. The annual calculation assumes 52 weeks of pay.
+
+### Can I calculate my effective hourly rate from a salary?
+Yes—enter your annual salary and working hours. The tool will compute your hourly equivalent.
+
+### What’s the difference between gross and net pay?
+- **Gross pay**: Your total earnings before deductions  
+- **Net pay**: Your take-home pay after tax, NI, and pension  
+This calculator shows gross; use a tax calculator for net.
+</TabPanel>
+</Tabs>

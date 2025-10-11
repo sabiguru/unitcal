@@ -1,0 +1,77 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Introduction
+Our **unit converter** instantly transforms measurements between **metric and imperial systems**—from length and weight to temperature, volume, and speed. Whether you’re cooking, travelling, studying, or working on a DIY project, this tool ensures accurate, hassle-free conversions with a single click.
+
+### How It Works
+1. **Select a category** (e.g., Length, Weight, Temperature)
+2. **Choose your “from” and “to” units** (e.g., miles → kilometres)
+3. **Enter a value**—the tool instantly displays the converted result
+4. **Supports compound units** like speed (mph ↔ km/h) and density
+
+### Key Features
+- **Comprehensive coverage**: 50+ units across 10+ categories
+- **Exact conversion factors**: Uses internationally agreed standards (e.g., 1 inch = 2.54 cm)
+- **Bidirectional**: Convert A→B or B→A with one toggle
+- **Mobile-friendly**: Works seamlessly on any device
+
+Ideal for students, chefs, engineers, and travellers who need reliable, instant conversions.
+
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+**Scenario**: You’re driving in Europe and see a speed limit of **90 km/h**. What is that in miles per hour?
+
+**Steps**:
+1. Select category: **Speed**
+2. Set “From”: `km/h`, “To”: `mph`
+3. Enter value: `90`
+4. The calculator instantly shows: **55.92 mph**
+
+✅ **Result**: **90 km/h ≈ 56 mph**
+
+This helps you stay within legal limits while driving abroad.
+
+</TabPanel>
+
+<TabPanel title="FAQ">
+### Does it handle US vs. UK gallons?
+Yes. The converter distinguishes between:
+- **US gallon** (3.785 L)
+- **UK (imperial) gallon** (4.546 L)  
+Select the correct one based on your region.
+
+### Can I convert temperature?
+Yes. Supports:
+- Celsius ↔ Fahrenheit
+- Celsius ↔ Kelvin
+- Fahrenheit ↔ Kelvin  
+Uses exact formulas: `°F = (°C × 9/5) + 32`
+
+### How accurate are the conversions?
+All conversions use **internationally standardised factors** (e.g., NIST, ISO). Results are precise to 6+ decimal places—more than sufficient for everyday use.
+
+### Can I convert area or volume?
+Yes. Includes:
+- **Area**: square feet ↔ square metres, acres ↔ hectares
+- **Volume**: litres ↔ gallons, cubic feet ↔ cubic metres  
+Automatically applies squared/cubed conversion factors.
+
+### What if my unit isn’t listed?
+The converter covers the most common units. If you need a rare unit (e.g., furlongs, stones), use the **dimensional analysis method** described in our Learn guide.
+
+### Is this suitable for scientific work?
+Yes—for most educational and engineering purposes. For high-precision scientific research, always verify with primary standards.
+
+### Can I convert cooking measurements?
+Yes. Includes:
+- Cups ↔ millilitres
+- Ounces ↔ grams
+- Tablespoons ↔ millilitres  
+Note: For dry ingredients, weight (grams) is more accurate than volume (cups).
+
+</TabPanel>
+</Tabs>

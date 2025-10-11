@@ -1,0 +1,85 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **energy usage calculator** helps you estimate electricity consumption and costs for individual appliances or your entire home. By converting wattage ratings and usage patterns into kilowatt-hours (kWh) and pounds, this tool reveals which devices contribute most to your energy bill—so you can prioritise efficiency upgrades and reduce costs.
+
+### How It Works
+The calculator uses the standard energy formula:  
+**`Energy (kWh) = Power (W) × Time (h) ÷ 1,000`**  
+Then multiplies by your electricity rate to show costs.
+
+For appliances that cycle on/off (fridges, AC), it applies a **duty cycle** (%) to estimate average power. You can also model **time-of-use tariffs** (e.g., Economy 7) by specifying different rates for peak/off-peak hours.
+
+### Key Inputs
+- **Appliance**: Select from common devices or enter custom wattage
+- **Usage**: Hours per day and days per month
+- **Duty Cycle**: For cycling appliances (default: 50% for fridges)
+- **Electricity Rate**: Enter your £/kWh rate (check your bill)
+- **Tariff Type**: Standard or time-of-use (ToU)
+
+The tool instantly shows:
+- Daily/monthly energy consumption (kWh)
+- Monthly cost (£)
+- Annual cost and CO₂ emissions
+- Savings from efficiency upgrades
+
+### How to Use
+1. **For single appliances**: Enter wattage, usage, and rate to see costs.
+2. **For whole-home audit**: Add multiple appliances to identify top energy users.
+3. **For efficiency planning**: Compare old vs. new appliance costs to calculate payback periods.
+4. **For tariff optimisation**: Model ToU rates to shift loads to cheaper periods.
+
+Always use actual wattage from nameplates or energy monitors for best accuracy.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Calculating costs for a household fridge.
+
+**Inputs**:
+- Appliance: Refrigerator
+- Nameplate Wattage: 200W
+- Duty Cycle: 50% (runs half the time)
+- Usage: 24 hours/day
+- Electricity Rate: £0.28/kWh
+
+**Calculation**:
+- Average Power: `200W × 0.5 = 100W`
+- Daily Energy: `(100W × 24h) ÷ 1,000 = 2.4 kWh`
+- Monthly Cost: `2.4 kWh × 30 × £0.28 = **£20.16**`
+- Annual Cost: **£242**
+
+**Insight**: This fridge costs £242/year to run. Replacing it with a 100W model would save **£121/year**—paying for itself in 3–4 years.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How do I find my appliance’s wattage?
+Check the **nameplate** (sticker on the device), user manual, or manufacturer’s website. If unavailable, use our database of typical values—but for accuracy, measure with an energy monitor.
+
+### What is a duty cycle?
+**Duty cycle** is the percentage of time a cycling appliance (like a fridge or AC) actually runs. A 50% duty cycle means it’s on half the time. The calculator uses this to estimate average power consumption.
+
+### Can I model time-of-use tariffs?
+Yes. Select “Time-of-Use” tariff and enter separate rates for peak and off-peak hours. The calculator will show savings from shifting usage (e.g., running dishwasher overnight).
+
+### How accurate is this calculator?
+It’s highly accurate if you input correct wattage and usage. Nameplate ratings are often maximums—actual use may be 10–30% lower. For precise results, use a plug-in energy monitor.
+
+### What are phantom loads?
+**Phantom loads** are energy used by devices in standby mode (e.g., TVs, chargers). They typically add 5–10% to bills. Use our calculator to estimate these by entering always-on devices.
+
+### How can I reduce my energy bill?
+- Replace old appliances with efficient models (A+++ rating)
+- Switch to LED lighting
+- Use smart power strips to eliminate standby power
+- Shift high-energy tasks to off-peak hours
+- Lower thermostats by 1–2°C
+
+### Does this include gas usage?
+No. This calculator is for **electricity only**. For gas, use our [Home Energy Audit Calculator](/calculator/home-energy-audit).
+
+### Can I estimate solar savings?
+Yes. The calculator shows your total kWh usage—use this to size solar panels. A typical UK home uses 8–12 kWh/day, requiring a 3–5 kW solar system.
+</TabPanel>
+</Tabs>

@@ -1,0 +1,71 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Introduction
+Our **volume calculator** computes the 3D space occupied by common shapes—rectangular prisms, cylinders, spheres, cones, and more. It’s ideal for students, DIYers, engineers, and anyone needing quick, accurate volume estimates for containers, rooms, tanks, or materials.
+
+### How It Works
+1. **Select a shape** (e.g., cylinder, sphere)
+2. **Enter dimensions** (length, radius, height, etc.)
+3. The tool:
+   - Applies the correct geometric formula
+   - Converts results to multiple units (m³, L, ft³, US gal)
+   - Handles partial fills for horizontal cylindrical tanks
+
+### How to Use
+- Use **metric or imperial units** (but be consistent)
+- For **cylinders**, enter **radius or diameter**
+- For **partial tanks**, input **fill height**
+- The calculator shows **total volume** and **unit conversions**
+
+Ideal for planning concrete pours, aquarium stocking, shipping logistics, or science experiments.
+
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+**Scenario**: You’re filling a **cylindrical water tank** with a **diameter of 1.8 m** and **height of 2.5 m**. What’s its capacity in litres?
+
+**Steps**:
+1. Select **Cylinder**
+2. Enter **Diameter**: `1.8 m` (or Radius: `0.9 m`)
+3. Enter **Height**: `2.5 m`
+4. The calculator computes:
+   - Volume = π × (0.9)² × 2.5 ≈ 6.36 m³
+   - In litres: 6.36 × 1,000 = 6,360 L
+   - In US gallons: 6,360 ÷ 3.785 ≈ 1,680 gal
+
+✅ **Result**: The tank holds **6,360 litres** of water.
+
+</TabPanel>
+
+<TabPanel title="FAQ">
+### Can I calculate partial tank volume?
+Yes. For **horizontal cylindrical tanks**, enter the **tank length**, **diameter**, and **fill height**. The calculator uses segment geometry to estimate liquid volume.
+
+### What units does it support?
+- **Metric**: m³, cm³, litres
+- **Imperial**: ft³, in³, US gallons, UK gallons  
+Results are shown in multiple units for convenience.
+
+### Do I need to use radius for cylinders?
+You can enter either **radius** or **diameter**—the calculator handles the conversion automatically.
+
+### How accurate is the partial volume calculation?
+It uses the exact circular segment formula, so it’s mathematically precise. However, real tanks may have domed ends or internal structures that reduce usable capacity.
+
+### Can I calculate the volume of a room?
+Yes. Select **Rectangular Prism** and enter **length**, **width**, and **height**. Useful for HVAC sizing or paint estimation.
+
+### What if my shape isn’t listed?
+Break it into listed shapes (e.g., a silo = cylinder + hemisphere), calculate each, and sum manually.
+
+### Does it account for wall thickness?
+No. It calculates **geometric volume** based on input dimensions. For containers, use **internal dimensions** to find capacity.
+
+### Is this suitable for academic work?
+Yes. It shows the correct formulas and units, making it ideal for checking homework or lab calculations.
+
+</TabPanel>
+</Tabs>

@@ -1,0 +1,76 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **coffee ratio calculator** helps you brew the perfect cup every time by converting your preferred **coffee-to-water ratio** into precise gram measurements. Whether you’re using a V60, French press, or espresso machine, this tool ensures consistency and lets you experiment scientifically with strength and extraction.
+
+### How It Works
+The calculator uses the formula:  
+**Water (g) = Coffee Dose (g) × Ratio**  
+For example, a 1:16 ratio with 20g of coffee requires `20 × 16 = 320g` of water.
+
+### Key Ratios by Brew Method
+- **Pour-over (V60, Chemex)**: 1:15 to 1:17  
+- **French Press**: 1:12 to 1:15  
+- **AeroPress**: 1:10 to 1:16 (depending on concentration)  
+- **Espresso**: Brew ratio of 1:2 (e.g., 18g in → 36g out)  
+- **Cold Brew (concentrate)**: 1:5 to 1:8  
+
+The **Specialty Coffee Association (SCA) Golden Cup Standard** recommends 55g of coffee per litre of water (1:18.2 ratio) for balanced extraction.
+
+### How to Use
+1. Select your **brew method** or enter a custom ratio.
+2. Input your **coffee dose** (in grams).
+3. The calculator instantly shows the **exact water weight** needed.
+4. For espresso, enter your **dose** and **target yield** to get your brew ratio.
+5. Use a **digital scale** for best results—volume measurements (scoops) are inaccurate.
+
+Always use **filtered water** at **90–96°C** and **freshly ground beans** for optimal flavour.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example: Pour-Over Brew
+**Goal**: Brew a single cup using a 1:16 ratio.
+
+**Inputs**:
+- Brew method: Pour-over
+- Coffee dose: 22g
+- Ratio: 1:16
+
+**Calculation**:
+- Water needed = `22g × 16 = 352g`
+
+**Brew Steps**:
+1. Boil water and let cool to 93°C.
+2. Grind 22g of beans to medium-fine (like sea salt).
+3. Place filter in dripper, rinse with hot water.
+4. Add coffee, then pour 44g water to **bloom** (wait 30 seconds).
+5. Slowly pour remaining 308g water over 2 minutes.
+6. Total brew time: ~2:30.
+
+This yields a balanced, clean cup. Adjust the ratio to 1:15 for stronger or 1:17 for lighter coffee.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### Should I measure coffee by weight or volume?
+Always use **weight (grams)**. A “scoop” varies by bean density and grind size—weight is the only accurate method.
+
+### What is the SCA Golden Cup ratio?
+The Specialty Coffee Association recommends **55g of coffee per 1 litre of water** (a 1:18.2 ratio) for optimal strength and extraction. Many prefer slightly stronger (1:16) for everyday brewing.
+
+### Why does my coffee taste bitter?
+Bitterness usually means **over-extraction**. Try a **coarser grind**, **shorter brew time**, or a **weaker ratio** (e.g., 1:17 instead of 1:15).
+
+### Why does my coffee taste sour?
+Sourness indicates **under-extraction**. Use a **finer grind**, **longer brew time**, or a **stronger ratio** (e.g., 1:14).
+
+### Can I use this for espresso?
+Yes! For espresso, the calculator uses **brew ratio** (dose:yield). A standard 1:2 ratio means 18g of coffee produces 36g of liquid espresso in 25–30 seconds.
+
+### Do I need a special scale?
+Any digital kitchen scale that measures in **1g increments** works. For espresso, 0.1g precision is ideal.
+
+### Can I save my favourite ratios?
+While the calculator doesn’t save data, note your ideal dose and ratio for each bean in your phone for repeatable results.
+</TabPanel>
+</Tabs>

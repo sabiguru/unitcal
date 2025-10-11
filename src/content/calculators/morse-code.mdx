@@ -1,0 +1,92 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **Morse code converter** translates text to International Morse code (and vice versa) using the official ITU standard. Whether you’re learning the code, sending a secret message, or identifying an aviation beacon, this tool provides accurate, properly spaced translations with optional audio playback. You can customize the speed in Words Per Minute (WPM) and choose between standard or Farnsworth timing to match your learning stage.
+
+### How It Works
+The converter uses a precise lookup table for all letters (A–Z), numbers (0–9), and common punctuation. It applies strict spacing rules:
+- **No space** between dots/dashes in a character
+- **One space** between characters
+- **Forward slash (/)** between words
+
+For audio, it generates tones following exact ITU timing:
+- **Dit**: 1 unit
+- **Dah**: 3 units
+- **Character gap**: 3 units
+- **Word gap**: 7 units
+
+### Key Features
+- **Text ↔ Morse**: Bidirectional conversion
+- **Audio Playback**: Adjustable speed (5–40 WPM)
+- **Farnsworth Mode**: Extended spacing for learners
+- **Prosign Support**: SOS, CQ, 73, and other abbreviations
+- **Copy/Paste**: Easy input and output handling
+
+### How to Use
+1. **For encoding**: Type your message in the top box. The Morse appears below with correct spacing.
+2. **For decoding**: Paste dots/dashes into the bottom box. Use `/` for word breaks.
+3. **For audio**: Click "Play" to hear the message. Adjust WPM to match your skill level.
+4. **For learning**: Use Farnsworth mode to build character recognition at high speeds.
+
+This tool is perfect for students, amateur radio operators, and anyone exploring this timeless communication system.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Sending "HELLO WORLD" in Morse.
+
+**Inputs**:
+- Text: `HELLO WORLD`
+
+**Conversion Process**:
+1. **H** = `....`  
+2. **E** = `.`  
+3. **L** = `.-..` (×2)  
+4. **O** = `---`  
+5. **Word break**: `/`  
+6. **W** = `.--`  
+7. **O** = `---`  
+8. **R** = `.-.`  
+9. **L** = `.-..`  
+10. **D** = `-..`
+
+**Result**:  
+`.... . .-.. .-.. --- / .-- --- .-. .-.. -..`
+
+**Audio**: At 15 WPM, this plays as a smooth, rhythmic sequence—perfect for practice.
+
+**Pro Tip**: The space in "HELLO WORLD" becomes a `/`, creating the 7-unit word gap essential for readability.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is International Morse Code?
+The **International Telecommunication Union (ITU)** standard used worldwide since 1865. It’s the only version you should learn—it includes standardized letters, numbers, and prosigns.
+
+### How do I space Morse code correctly?
+- **Within a letter**: No spaces (e.g., `.-..` for L)
+- **Between letters**: One space (e.g., `.... .` for HE)
+- **Between words**: Slash `/` or seven-unit gap (e.g., `.... . / .-- ---` for HE WO)
+
+### Can I hear the Morse code?
+Yes! Click "Play" to hear your message. Adjust speed from 5 WPM (beginner) to 40 WPM (expert). Use **Farnsworth mode** to keep character speed high while extending spacing—ideal for learning.
+
+### What’s the difference between American and International Morse?
+**American Morse** is obsolete, with different codes for numbers and some letters. **International Morse** is the modern global standard—this converter uses ITU exclusively.
+
+### How fast should I practice?
+- **Beginner**: 5–10 WPM standard spacing
+- **Intermediate**: 10–15 WPM Farnsworth
+- **Advanced**: 20+ WPM standard spacing  
+Never sacrifice accuracy for speed—build clean habits first.
+
+### Does this work for emergency signaling?
+Yes! The universal **SOS** (`··· --- ···`) requires no special equipment—tap it on pipes, blink it with a flashlight, or whistle it. This converter helps you practice the exact 3-dit / 3-dah / 3-dit rhythm.
+
+### Can I decode real-world Morse?
+Absolutely. Aviation beacons (NDBs) transmit 2–3 letter IDs in Morse. Amateur radio operators use prosigns like `CQ` (`—·—· ——·—`) to call stations. This tool includes all standard abbreviations.
+
+### Is Morse code hard to learn?
+Not if you use the right method. The **Farnsworth technique**—high character speed with extended spacing—builds recognition faster than slow, counted code. With 10 minutes of daily practice, you’ll decode basic messages in weeks.
+</TabPanel>
+</Tabs>

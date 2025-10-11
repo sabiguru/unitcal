@@ -1,0 +1,66 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## How to Use the MPG Calculator
+The **MPG calculator** helps you determine your vehicle's **gas mileage** and fuel efficiency in miles per gallon (MPG) or litres per 100km, and estimate fuel costs per mile for any journey. Simply enter the distance travelled, the amount of fuel used, and the price per litre. The tool automatically handles unit conversions (including UK vs. US gallons) and provides instant results for better budgeting and eco-driving insights.
+
+### Key Formulas Used
+- **MPG** = Distance (miles) / Fuel Used (gallons)
+- **L/100km** = (Fuel Used (litres) / Distance (km)) × 100
+- **Trip Cost** = (Distance / MPG) × 4.546 × Price per Litre
+- **Cost/mile** = (1 / MPG) × 4.546 × Price per Litre
+
+> **Note**: This calculator uses **UK imperial gallons** (4.546 L). For US gallons, results will differ.
+
+### How to Get Accurate Results
+1.  Fill your tank completely and reset your trip odometer.
+2.  Drive normally until you need to refuel.
+3.  Note the **exact miles driven** and **litres/gallons added**.
+4.  Enter these values for a real-world MPG reading.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+Imagine you’ve just completed a road trip:
+
+- **Distance driven**: 320 miles  
+- **Fuel added**: 42 litres  
+- **Fuel price**: £1.60 per litre  
+
+**Step 1**: Convert litres to UK gallons  
+42 ÷ 4.546 ≈ **9.24 gallons**
+
+**Step 2**: Calculate MPG  
+320 ÷ 9.24 ≈ **34.6 MPG**
+
+**Step 3**: Calculate total fuel cost  
+42 × £1.60 = **£67.20**
+
+**Step 4**: Convert to L/100km  
+(42 / (320 ÷ 1.609)) × 100 ≈ **21.1 L/100km**  
+*(320 miles = 515 km)*
+
+The calculator performs all these steps instantly—just input your numbers!
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What’s the difference between UK and US MPG?
+UK MPG uses **imperial gallons** (4.546 L), while US MPG uses smaller **US gallons** (3.785 L). A car that gets 30 MPG in the UK would show about 36 MPG in the US. This calculator uses **UK gallons** by default.
+
+### Why should I calculate my own MPG?
+Manufacturer figures are often optimistic. Manual calculation gives your **real-world fuel economy**, helping you budget accurately and spot engine problems early.
+
+### Can I use this for diesel or hybrid cars?
+Yes! The formula works for **any fuel type**—petrol, diesel, LPG, or plug-in hybrids (for the combustion portion).
+
+### How do I convert MPG to L/100km?
+Use the formula: **L/100km = 282.5 / MPG (UK)**. For example, 40 MPG = 282.5 ÷ 40 ≈ 7.06 L/100km.
+
+### Does this calculator account for driving conditions?
+No—it calculates based on your inputs. For best results, average multiple trips to account for motorway vs. city driving.
+
+### Is higher MPG always better?
+Generally, yes—higher MPG means lower fuel costs and emissions. But also consider vehicle safety, reliability, and suitability for your needs.
+</TabPanel>
+</Tabs>

@@ -1,0 +1,171 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+# How to Convert Binary — A Complete Guide to Decimal, Hex & Octal
+
+## Introduction
+
+Learning **how to convert binary** to decimal, hexadecimal, and octal is a **fundamental skill** in computer science, digital electronics, and programming. These number systems, or **base systems**, are the languages of computers.
+
+### Why Learn Binary Conversion?
+
+Understanding binary conversion is key for:
+
+- **Computer science** and programming fundamentals
+- **Digital electronics** and hardware design
+- **Network administration** and data analysis
+- **Cybersecurity** and systems analysis
+- **Academic success** in technical fields
+
+### Essential Technical Skills
+
+These conversions are crucial for:
+
+- **Debugging code** and understanding data representation
+- **Analysing network data** and packet inspection
+- **Understanding hardware** operations and memory
+- **Working with assembly** language and low-level programming
+- **Binary arithmetic** and logical operations
+
+### Manual vs Tool Understanding
+
+While online tools provide instant results, **mastering the manual process** builds:
+
+- **Deep, intuitive understanding** of computer systems
+- **Problem-solving confidence** when tools aren't available
+- **Technical interview** preparation and competence
+- **Foundation knowledge** for advanced computing topics
+- **Troubleshooting abilities** in various technical contexts
+
+### What You'll Master
+
+This comprehensive guide covers:
+
+- **Step-by-step conversion methods** for all number systems
+- **Bit weighting** and positional notation
+- **Two's complement** for negative numbers
+- **Binary arithmetic** and practical applications
+- **Worked examples** for confident manual calculation
+
+You'll learn to **translate between binary, decimal, hexadecimal, and octal** with confidence, building the foundation for advanced computer science concepts.
+
+<Tabs>
+<TabPanel title="Base Systems Explained">
+
+### What are Binary, Decimal, Hexadecimal, and Octal?
+At its core, a number system is defined by its **base** (or radix), which indicates how many digits it uses.
+*   **Decimal (Base-10):** The system we use daily. It has ten digits (0-9). Each position represents a power of 10.
+*   **Binary (Base-2):** The native language of computers. It has two digits (0 and 1), called bits. Each position represents a power of 2.
+*   **Hexadecimal (Base-16):** A compact, human-friendly way to represent binary. It has sixteen digits: 0-9 and A-F (where A=10, B=11, ..., F=15). One hex digit represents four bits (a **nibble**).
+*   **Octal (Base-8):** An older system that uses eight digits (0-7). One octal digit represents three bits.
+
+### The Principle of Positional Notation
+The value of a number in any system is the sum of each digit multiplied by the base raised to the power of its position, starting from 0 on the right. This is the universal formula for conversion to decimal.
+
+**General Formula:** `Decimal = (dₙ × baseⁿ) + (dₙ₋₁ × baseⁿ⁻¹) + ... + (d₁ × base¹) + (d₀ × base⁰)`
+
+</TabPanel>
+<TabPanel title="Step-by-Step Conversion">
+
+### Method 1: Binary to Decimal (The Bit Weighting Method)
+This is the most direct method, using the positional notation formula.
+
+**Step-by-Step:**
+1.  Write down the binary number.
+2.  List the powers of 2 above each bit, starting from 2⁰ on the right.
+3.  Multiply each bit by its corresponding power of 2.
+4.  Sum all the products to get the decimal value.
+
+**Example: Convert `1101₂` to decimal.**
+1.  Binary: `1 1 0 1`
+2.  Powers: `2³ 2² 2¹ 2⁰` (which are `8, 4, 2, 1`)
+3.  Calculate: `(1×8) + (1×4) + (0×2) + (1×1)`
+4.  Sum: `8 + 4 + 0 + 1 = 13`
+**Result:** `1101₂ = 13₁₀`
+
+### Method 2: Decimal to Binary (Repeated Division-by-2)
+To convert from decimal to binary, we use repeated division.
+
+**Step-by-Step:**
+1.  Divide the decimal number by 2.
+2.  Write down the remainder (this will be 0 or 1).
+3.  Use the quotient from step 1 as the new number to divide.
+4.  Repeat steps 1-3 until the quotient is 0.
+5.  The binary number is the **remainders read from bottom to top**.
+
+**Example: Convert `25₁₀` to binary.**
+**Result:** `25₁₀ = 11001₂`
+
+### Method 3: Binary to Hexadecimal (Grouping by Nibbles)
+This conversion is easy due to the 4:1 relationship between bits and hex digits.
+
+**Step-by-Step:**
+1.  Group the binary digits into sets of four, starting from the right. Add leading zeros if necessary.
+2.  Convert each 4-bit group into its corresponding hex digit.
+
+**Example: Convert `11010111₂` to hex.**
+*   Group: `1101` and `0111`.
+*   Convert: `1101` = D (13), `0111` = 7.
+**Result:** `0xD7`
+
+### Method 4: Binary to Octal (Grouping by Triplets)
+This uses a similar grouping method but with sets of three bits.
+
+**Step-by-Step:**
+1.  Group the binary digits into sets of three, starting from the right. Add leading zeros if necessary.
+2.  Convert each 3-bit group into its corresponding octal digit (0-7).
+
+**Example: Convert `10111010₂` to octal.**
+*   Group: `010`, `111`, `010`. (Note the leading zero added to the first group).
+*   Convert: `010`=2, `111`=7, `010`=2.
+**Result:** `0o272`
+
+</TabPanel>
+<TabPanel title="Signed Numbers & Two's Complement">
+
+### Understanding Signed vs. Unsigned
+So far, we've worked with **unsigned integers**, which are always positive. Computers also need to represent negative numbers using **signed integers**. The most common method is **two's complement**.
+
+**Key Concept:** In an n-bit system (e.g., 8-bit), the leftmost bit (the Most Significant Bit, or MSB) is the sign bit.
+*   `0` in the MSB means a positive number.
+*   `1` in the MSB means a negative number.
+
+### How Two's Complement Works
+To find the binary representation of a negative number:
+
+**Step-by-Step to Represent a Negative Number:**
+1.  Start with the binary representation of the positive equivalent.
+2.  **Invert** all the bits (change 0s to 1s and 1s to 0s). This is called the **ones' complement**.
+3.  **Add 1** to the result.
+
+**Example: Represent `-5` as an 8-bit signed integer.**
+1.  Positive `5` in 8-bit: `0000 0101`
+2.  Invert all bits: `1111 1010`
+3.  Add 1: `1111 1010 + 1 = 1111 1011`
+**Result:** `-5₁₀ = 1111 1011₂` in two's complement.
+
+To convert a negative binary number back to decimal, you reverse the process.
+
+</TabPanel>
+<TabPanel title="Using the Online Tool">
+
+### How to Use the Binary Converter on calcfort.com
+While manual calculation is educational, using an online tool ensures speed and accuracy, especially for signed numbers and large values.
+
+1.  **Navigate to the Tool:** Go to the [Binary & Hex Converter](/calculator/binary-converter) page.
+2.  **Select Input Type:** Choose the system of the number you're starting with (Binary, Decimal, Hex, or Octal).
+3.  **Enter Your Value:** Type or paste your number. Using prefixes like `0b1010` (binary) or `0xFF` (hex) is recommended for clarity.
+4.  **Configure Settings:** This is crucial for binary. Select **Signed** or **Unsigned** and a **bit-width** (e.g., 8-bit, 16-bit) if you are working with negative numbers.
+5.  **View Results:** The converted values in all other systems are displayed instantly. Use the **copy** button to easily use the results in your code or notes.
+
+### Example: Verifying a Two's Complement Calculation
+**Scenario:** Verify that the 8-bit binary `1111 1011` represents `-5` in decimal.
+1.  Select Input: **Binary**.
+2.  Enter Value: `11111011`.
+3.  Configure: Select **Signed** and **8-bit**.
+4.  **Result:** The Decimal output will instantly show **-5**, confirming your manual calculation.
+
+</TabPanel>
+</Tabs>
+
+## Conclusion
+Mastering **how to convert binary** manually demystifies the core operations of digital technology. The step-by-step methods for decimal, hex, and octal conversion, along with an understanding of two's complement, provide a solid foundation for any technical field. However, for efficiency and verification in your daily work, a dedicated tool is invaluable. **Use our [Binary & Hex Converter](/calculator/binary-converter) to check your work, handle large numbers, and explore these concepts with ease.**

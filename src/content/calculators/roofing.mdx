@@ -1,0 +1,68 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## How to Use the Roofing Calculator
+The **roofing calculator** helps you estimate the exact materials needed for a new roof or re-roofing project. Simply enter your home’s **length and width**, select your **roof pitch**, and specify your **waste factor**, and the tool instantly calculates your **roofing squares, shingle bundles, underlayment rolls, and drip edge**. It accounts for the increased surface area due to roof slope, ensuring you never under-order materials again. Whether you’re getting quotes from contractors or planning a DIY project, this calculator gives you the precise quantities to budget accurately and avoid mid-project delays.
+
+### Key Formulas Used
+- **Actual Roof Area** = Footprint × Pitch Multiplier
+- **Squares** = Actual Area ÷ 100
+- **Bundles** = Squares × 3 (for standard shingles)
+- **With Waste** = Squares × (1 + Waste Factor)
+
+### Best Practices for Accurate Results
+1.  **Measure your home’s footprint accurately**—include overhangs if significant.
+2.  **Choose the correct pitch**—use a pitch gauge app or measure from the ground.
+3.  **Use 10% waste for simple roofs**, 15–20% for complex roofs with hips/valleys.
+4.  **Always round up squares**—suppliers sell in whole squares.
+5.  **Add extra for repairs**—order at least 1 full square more than calculated.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+You’re re-roofing a **30 ft × 40 ft** house with a **6:12 pitch**.
+
+**Step 1**: Enter dimensions → Footprint = 1,200 sq ft  
+**Step 2**: Select pitch = 6:12 → Multiplier = 1.12  
+**Step 3**: Actual Area = 1,200 × 1.12 = **1,344 sq ft**  
+**Step 4**: Squares = 1,344 ÷ 100 = **13.44 → 14 squares**  
+**Step 5**: Add 15% waste → 14 × 1.15 = **16.1 → 17 squares**  
+**Step 6**: Results:
+- **Shingle Bundles**: 17 × 3 = **51**
+- **Underlayment**: 17 ÷ 4 = **5 rolls**
+- **Drip Edge**: Measure eaves + rakes (e.g., 140 linear ft)
+
+This tool turns complex geometry into a simple shopping list.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How do I measure roof pitch from the ground?
+Use a **smartphone pitch gauge app**, or:
+1. Hold a level against the gable siding.
+2. Mark 12 inches from the wall.
+3. Measure vertically from that point to the roof edge.
+4. This is your rise (e.g., 6 inches = 6:12 pitch).
+
+### What if my roof has multiple sections?
+Break your roof into simple rectangles or triangles. Calculate each section separately, then sum the squares.
+
+### Can this calculator handle dormers or skylights?
+It calculates the **main roof area**. For dormers, add their area manually. Skylights don’t significantly affect material needs—waste factor covers small penetrations.
+
+### How accurate is the pitch multiplier?
+Pitch multipliers are mathematically precise (based on Pythagoras). For a 6:12 roof: √(6² + 12²) / 12 = √180 / 12 ≈ 13.416 / 12 ≈ **1.118** → rounded to **1.12**.
+
+### Do I need to include the garage?
+Yes—if it’s under the same roof or you’re re-roofing it separately. Measure it as a distinct section.
+
+### What’s the difference between 3-tab and architectural shingles?
+Both cover 100 sq ft per square, but architectural shingles are heavier and may require **4 bundles per square**. Check the product specs.
+
+### Can I use this for metal roofing?
+No—metal roofing is sold by **panels or sheets**, not squares. Use a metal roofing calculator instead.
+
+### Should I hire a professional to measure?
+If your roof is complex (multiple hips, valleys, turrets), yes. For simple gable roofs, this calculator is highly accurate.
+</TabPanel>
+</Tabs>

@@ -1,0 +1,90 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **golf balls in Boeing 747 calculator** helps you solve this classic Fermi estimation problem step by step. Rather than giving a single number, this tool walks you through the logic of estimating how many golf balls could fit in a 747’s cabin and cargo holds, using realistic assumptions about aircraft volume, golf ball size, and sphere packing efficiency. Whether you’re preparing for a job interview, teaching problem-solving skills, or just satisfying curiosity, this calculator demonstrates the power of back-of-the-envelope reasoning.
+
+### How It Works
+The calculator uses the Fermi estimation framework:
+1. **Aircraft Volume**: Uses Boeing 747-400 cabin and cargo hold volumes from technical specifications.
+2. **Golf Ball Volume**: Based on the official USGA diameter of 4.27 cm.
+3. **Packing Efficiency**: Applies a 64% random close packing factor for spheres.
+4. **Usable Space**: Accounts for seats, galleys, and structure by assuming only 50–60% of cabin volume is fillable.
+
+The formula is:  
+**Total Golf Balls = (Usable Volume) / (Golf Ball Volume / Packing Efficiency)**
+
+### Key Inputs
+- **Aircraft Model**: Select 747-400 (default) or adjust volumes manually.
+- **Golf Ball Diameter**: Default 4.27 cm (USGA standard).
+- **Packing Efficiency**: 64% (random) or 74% (ideal hexagonal).
+- **Usable Cabin %**: Adjust from 40% to 70% based on your assumptions.
+
+The tool instantly shows:
+- Volume of one golf ball
+- Effective volume per ball (with packing)
+- Total balls in cabin, cargo, and combined
+- Weight of all golf balls (for fun)
+
+### How to Use
+1. Accept default values for a standard estimate.
+2. Adjust assumptions to see how they change the result (e.g., “What if the cabin is 70% empty?”).
+3. Use the step-by-step breakdown to understand the logic.
+4. Apply the same method to other Fermi problems (e.g., tennis balls in a bus).
+
+This tool is educational—designed to teach estimation, not provide exact logistics data.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Standard estimate for a Boeing 747-400.
+
+**Inputs**:
+- Cabin Volume: 690 m³
+- Usable Cabin: 55% → 380 m³
+- Cargo Volume: 186 m³ (assumed 100% usable)
+- Golf Ball Diameter: 4.27 cm
+- Packing Efficiency: 64%
+
+**Calculation**:
+1. Golf ball volume: **40.8 cm³** (4.08 × 10^-5 m³)
+2. Effective volume per ball: `40.8 / 0.64 = **63.75 cm³**`
+3. Cabin balls: `380 m³ / 6.375e-5 m³ = **5,960,000**`
+4. Cargo balls: `186 / 6.375e-5 = **2,920,000**`
+5. **Total**: **8,880,000 golf balls**
+
+**Weight Check**:  
+8.88M balls × 45.9 g = **407,000 kg**—close to the 747’s max takeoff weight (412,000 kg), showing the estimate is plausible.
+
+This demonstrates how assumptions drive the result—and why the method matters more than the number.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is a Fermi problem?
+A Fermi problem is an estimation challenge that seems impossible but can be solved by breaking it into smaller parts and using logical assumptions. It’s named after physicist Enrico Fermi and is used to test structured thinking.
+
+### Why can’t spheres fill 100% of the space?
+Spheres leave gaps when packed. The maximum random packing density is **64%**—meaning 36% of the volume is empty space. Ignoring this overestimates by ~50%.
+
+### Is this estimate realistic?
+It’s **order-of-magnitude accurate** (within 2–3x of reality). You couldn’t actually load 9 million golf balls due to access and structure, but the math is sound for an idealised scenario.
+
+### Can I use this for other objects?
+Yes! Change the diameter to estimate tennis balls (6.7 cm), ping pong balls (4.0 cm), or marbles (1.5 cm). The calculator handles any spherical object.
+
+### Why is the cabin only 55% usable?
+The cabin contains seats, overhead bins, galleys, and lavatories—solid structures that can’t be filled with golf balls. 55% is a realistic estimate of empty space.
+
+### Does the calculator include the wings or fuel tanks?
+No. Only **pressurised cabin and cargo holds** are included, as those are the only accessible volumes. Wings and fuel tanks are structural and off-limits.
+
+### What’s the point if it’s not exact?
+The goal is to **demonstrate problem-solving**, not precision. In interviews or real-world planning, a rough estimate that’s logically derived is far more valuable than guessing.
+
+### How do I improve my estimation skills?
+- Practice daily with real-world objects
+- Memorise key volumes (car, room, shipping container)
+- Always state your assumptions clearly
+- Focus on powers of 10, not exact numbers
+</TabPanel>
+</Tabs>

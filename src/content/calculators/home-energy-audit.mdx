@@ -1,0 +1,99 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **home energy audit calculator** helps you assess your home’s energy efficiency and identify cost-effective upgrades. By answering questions about your insulation, windows, heating system, and appliances, you’ll receive a personalised **efficiency score** (0–100) and a prioritised list of improvements with estimated costs and savings. Whether you’re a homeowner looking to cut bills or a landlord ensuring compliance with MEES regulations, this tool provides actionable insights to make your home more comfortable, affordable, and sustainable.
+
+### How It Works
+The calculator evaluates your home across four key areas:
+1. **Building Envelope**: Insulation levels, window types, and air leakage
+2. **Heating System**: Boiler efficiency, thermostat type, and controls
+3. **Water Heating**: Cylinder insulation and shower flow rates
+4. **Lighting & Appliances**: Bulb types and energy ratings
+
+It then generates:
+- An **efficiency score** (0–100)
+- **Annual savings potential** (£)
+- **Priority upgrade list** with payback periods
+- **Grant eligibility** for UK government schemes (ECO4, Boiler Upgrade)
+
+### Key Inputs
+- **Property Type**: Detached, semi-detached, terraced, or flat
+- **Construction Era**: Pre-1920s, 1920s–1949, 1950s–1980s, 1990s–present
+- **Insulation**: Loft, walls, floors (with thickness if known)
+- **Windows**: Single, double, or triple glazing
+- **Heating**: Boiler type, age, and controls
+- **Appliances**: Lighting and major appliance efficiency ratings
+
+The tool uses UK-specific data from the Standard Assessment Procedure (SAP) and Energy Performance Certificate (EPC) methodologies.
+
+### How to Use
+1. Select your **property type and age**
+2. Answer questions about **insulation, windows, and heating**
+3. Add details about **lighting and appliances**
+4. Click **Calculate** to see your efficiency score and recommendations
+5. Use the **“What-If”** feature to model upgrade scenarios
+
+For official EPC ratings or grant applications, consult a qualified Domestic Energy Assessor—but this tool is perfect for initial planning and prioritisation.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: A 1970s semi-detached house with basic insulation.
+
+**Inputs**:
+- Property: Semi-detached, built 1970s
+- Loft Insulation: 100mm (below recommended 270mm)
+- Walls: Cavity filled (standard for era)
+- Windows: Double-glazed (installed 2010)
+- Heating: 15-year-old B-rated boiler
+- Lighting: 50% LED, 50% halogen
+
+**Results**:
+- **Efficiency Score**: 28/100 (Fair)
+- **Annual Energy Waste**: £320
+- **Top Recommendations**:
+  1. **Loft insulation top-up** (to 270mm): Cost £250, saves £120/year (payback: 2.1 years)
+  2. **Boiler replacement** (A-rated condensing): Cost £3,000, saves £200/year (payback: 15 years)
+  3. **Full LED lighting**: Cost £80, saves £60/year (payback: 1.3 years)
+- **Grant Eligibility**: Qualifies for ECO4 loft insulation grant (free upgrade)
+
+This shows how small, low-cost upgrades deliver the fastest returns.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is a good energy efficiency score?
+- **80–100**: Excellent (EPC A–B)
+- **60–79**: Good (EPC C)
+- **40–59**: Fair (EPC D–E)
+- **Below 40**: Poor (EPC F–G, non-compliant with future MEES standards)
+
+### How accurate is this calculator?
+It uses the same methodology as official EPC assessments but relies on your inputs. For precise results, measure insulation depths and check appliance labels. The calculator is highly accurate for relative comparisons (e.g., “Is loft insulation worth it?”).
+
+### Can I use this for rental properties?
+Yes. It helps landlords comply with **MEES regulations** (minimum EPC E from 2025, EPC C from 2028). The tool identifies upgrades needed to reach compliance and estimates costs.
+
+### What grants are available in the UK?
+- **ECO4**: Free insulation for low-income households
+- **Boiler Upgrade Scheme**: £7,500 for heat pumps
+- **0% VAT**: On insulation and renewable heating until 2027
+The calculator flags your eligibility based on property details.
+
+### Should I get a professional audit?
+If your DIY score is **below 30**, or you're planning major renovations, a **professional Domestic Energy Assessor** (£100–£250) can provide:
+- Official EPC rating
+- Blower door test for air leakage
+- Thermal imaging for hidden issues
+- Detailed costed upgrade plan
+
+### How often should I re-audit?
+Re-run the calculator **annually** to track progress, or after major upgrades (e.g., new boiler, insulation). Update it before winter to prepare for heating season.
+
+### Does this work for listed buildings?
+Yes—but note that external wall insulation may require planning permission. The calculator suggests non-invasive upgrades like secondary glazing and radiator reflectors for heritage properties.
+
+### How much can I save?
+Most UK homes can save **£200–£500/year** through cost-effective upgrades like loft insulation, LED lighting, and boiler maintenance. Major upgrades (heat pumps, solar PV) can save £500–£1,000/year but have longer payback periods.
+</TabPanel>
+</Tabs>

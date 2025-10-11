@@ -1,0 +1,68 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Stair Calculator — Rise, Run & Stringers
+Our stair calculator transforms your total vertical rise into a complete, code-aware staircase plan. It computes the optimal number of steps, exact riser height, tread depth, total horizontal run, and stringer length—ensuring your stairs are safe, comfortable, and compliant with common residential building standards.
+
+### How It Works
+- **Input**: Total rise (vertical height between finished floors)  
+- **Output**:  
+  - Number of risers and treads  
+  - Exact riser height and total run  
+  - Stringer length (via Pythagoras)  
+  - Comfort check (2R + T ≈ 25")  
+  - Code compliance alerts (riser/tread limits)
+
+### Key Formulas Used
+- **Risers**: `Total Rise ÷ Target Riser → Round Up`  
+- **Treads**: `Number of Risers – 1`  
+- **Stringer**: `√(Rise² + Run²)`  
+- **Comfort**: `2 × Riser + Tread`
+
+Perfect for **DIY builders**, **carpenters**, and **home renovators** planning basement stairs, deck steps, or interior staircases.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step: Designing Basement Stairs
+**Scenario**: Total rise = 106 inches (from finished basement floor to finished first floor).
+
+1. **Enter 106" as Total Rise**  
+2. **Select target riser** (default 7.5")  
+3. **Calculator computes**:  
+   - Risers: 106 ÷ 7.5 = 14.13 → **15 risers**  
+   - Exact Riser: 106 ÷ 15 = **7.07"**  
+   - Treads: 15 – 1 = **14**  
+   - Total Run (at 10" tread): 14 × 10 = **140"**  
+   - Stringer: √(106² + 140²) ≈ **175.6"**  
+   - Comfort: 2×7.07 + 10 = **24.14"** → ✅ Good
+
+Use these dimensions to cut your stringers and build with confidence!
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is total rise, and how do I measure it?
+Total rise is the **vertical distance between finished floor surfaces**. Measure from the basement floor (e.g., concrete) to the top floor (e.g., hardwood). If flooring isn’t installed, add its thickness to the top measurement.
+
+### Why do I need to round up the number of risers?
+Rounding up ensures **no riser exceeds the maximum height** (typically 7.75"). A taller riser would violate building codes and create a tripping hazard.
+
+### Can I change the tread depth?
+Yes—adjust the tread depth to fit your available run space. The calculator will update total run and comfort score accordingly.
+
+### Does this work for deck stairs?
+Yes! For open-riser deck stairs, the **riser height** still applies (vertical spacing between treads), and tread depth must meet code (usually ≥10").
+
+### How accurate is the stringer length?
+The calculator uses the **Pythagorean Theorem** for geometric accuracy. Remember to account for **tread thickness** when cutting notches in the stringer.
+
+### What if my stairs don’t pass the comfort check?
+A score below 24" feels steep; above 25" feels shallow. Adjust by changing the target riser height (e.g., try 7" instead of 7.5") and recalculate.
+
+### Do I need a landing?
+If your total rise exceeds **12 feet (144")**, most codes require a landing. For rises under 12', a single flight is usually acceptable.
+
+### Can I use this for metric measurements?
+Yes—enter rise in millimetres or centimetres, and the calculator will output metric dimensions with appropriate code limits (e.g., max riser 197 mm).
+</TabPanel>
+</Tabs>

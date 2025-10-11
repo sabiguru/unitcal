@@ -1,0 +1,71 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Introduction
+Our **sleep calculator** helps you plan bedtimes and wake times based on your body’s natural **90-minute sleep cycles**. By waking at the end of a light sleep phase—not during deep sleep—you’ll reduce grogginess and start your day feeling refreshed.
+
+### How It Works
+The calculator uses two key inputs:
+- Your **desired wake time** (or bedtime)
+- Your estimated **time to fall asleep** (typically 10–20 minutes)
+
+It then calculates optimal bedtimes (or wake times) for **4, 5, or 6 sleep cycles** (6, 7.5, or 9 hours of sleep), ensuring you rise at the end of a cycle.
+
+### How to Use
+1. Choose whether you’re setting a **wake time** or **bedtime**
+2. Enter your time (e.g., `7:00 AM`)
+3. Enter your **sleep onset** (time to fall asleep)
+4. The tool shows recommended times for 4–6 cycles
+5. Pick the option that fits your schedule and lifestyle
+
+This tool is ideal for students, shift workers, parents, and anyone seeking better morning alertness.
+
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+**Scenario**: You need to wake at **6:30 AM** and usually take **15 minutes** to fall asleep. You’d like to get a full 7.5 hours (5 cycles).
+
+**Steps**:
+1. Select **“Wake Time”** as your input type
+2. Enter `6:30 AM` as your wake time
+3. Enter `15` minutes for sleep onset
+4. The calculator shows:
+   - **4 cycles (6 hrs)**: Bedtime = **12:15 AM**
+   - **5 cycles (7.5 hrs)**: Bedtime = **10:45 PM**
+   - **6 cycles (9 hrs)**: Bedtime = **9:15 PM**
+5. You choose **10:45 PM** as your target bedtime
+
+✅ **Result**: Aim to be in bed with lights out by **10:45 PM** to wake refreshed at **6:30 AM**.
+
+</TabPanel>
+
+<TabPanel title="FAQ">
+### Why 90 minutes?
+Sleep occurs in ~90-minute cycles of light, deep, and REM sleep. Waking at the end of a cycle (during light sleep) minimises grogginess.
+
+### How many cycles do I need?
+Most adults need **5–6 cycles (7.5–9 hours)**. Start with 5 and adjust based on how you feel during the day.
+
+### What if I don’t fall asleep in the time I entered?
+The calculator assumes your estimate is accurate. If you’re often wrong, adjust your sleep onset input (e.g., from 15 to 25 minutes).
+
+### Can I use this for naps?
+Yes! For naps, choose either:
+- **20–30 minutes** (power nap, avoids deep sleep)
+- **90 minutes** (one full cycle)
+
+Avoid 45–60 minute naps—they often end in deep sleep, causing inertia.
+
+### Does this work for shift workers?
+Absolutely. Enter your intended **daytime sleep window** and the calculator will suggest optimal wake times based on the same 90-minute principle.
+
+### What if I wake up before my alarm?
+That’s a good sign! It likely means you completed your cycles and are in a light sleep phase. Note that time—it may reflect your natural rhythm.
+
+### Is this a medical tool?
+No. This is for general wellness planning only. If you have chronic insomnia, sleep apnea, or excessive daytime fatigue, consult a healthcare professional.
+
+</TabPanel>
+</Tabs>

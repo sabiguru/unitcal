@@ -1,0 +1,75 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Introduction
+Our **tax calculator** estimates your U.S. federal income tax liability based on your income, deductions, credits, and filing status. It helps you understand how much you’ll owe or receive as a refund, and lets you test “what-if” scenarios—like increasing retirement contributions or claiming a new credit.
+
+### How It Works
+The calculator follows the official IRS method:
+1. Subtracts **adjustments** (e.g., 401(k) contributions) to get **AGI**
+2. Applies the **standard or itemised deduction** to get **taxable income**
+3. Applies **progressive tax brackets** by filing status
+4. Subtracts **tax credits** (e.g., Child Tax Credit)
+5. Compares to **withholding** to show refund or amount due
+
+### How to Use
+1. Select your **filing status** (Single, Married Filing Jointly, etc.)
+2. Enter **gross income** from all sources
+3. Add **adjustments** (retirement, HSA, student loan interest)
+4. Choose **deduction type** (standard or itemised)
+5. Enter **tax credits** you qualify for
+6. Input **total withholding** to see refund or balance due
+
+This tool is ideal for mid-year tax planning, bonus impact analysis, and retirement contribution optimisation.
+
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+**Scenario**: You’re **single**, earn **$70,000**, contribute **$7,000** to a 401(k), take the **standard deduction**, and had **$10,000** withheld.
+
+**Steps**:
+1. **AGI**: $70,000 – $7,000 = **$63,000**
+2. **Taxable Income**: $63,000 – $14,600 = **$48,400**
+3. **Tax Calculation**:
+   - 10% on first $11,600 = $1,160
+   - 12% on next $35,550 = $4,266
+   - 22% on remaining $1,250 = $275
+   - **Total Tax**: **$5,701**
+4. **Refund**: $10,000 – $5,701 = **$4,299**
+
+✅ **Result**: You’ll receive a **$4,299 refund**.
+
+This shows how pre-tax contributions lower your tax bill and increase your refund.
+
+</TabPanel>
+
+<TabPanel title="FAQ">
+### Is this calculator accurate?
+It uses current IRS tax brackets and rules to provide a **close estimate**. However, it doesn’t handle every complex situation (e.g., AMT, rental depreciation). For precise filing, use official tax software or a CPA.
+
+### Can I use it for state taxes?
+No. This calculator is for **federal income tax only**. State tax rules vary significantly—use a state-specific tool for those estimates.
+
+### What’s the difference between standard and itemised deductions?
+- **Standard Deduction**: A fixed amount based on filing status. Most taxpayers use this.
+- **Itemised Deductions**: Sum of specific expenses (mortgage interest, charity, SALT). Only beneficial if total exceeds the standard deduction.
+
+### How do 401(k) contributions affect my tax?
+They reduce your **AGI**, lowering taxable income and tax liability. A $1,000 contribution in the 22% bracket saves **$220** in federal tax.
+
+### Why do I owe taxes despite having withholding?
+You may have **multiple income sources** (freelance, investments) with insufficient withholding, or experienced a **life change** (marriage, new job) that altered your tax situation.
+
+### Can I model a bonus?
+Yes. Add your bonus to **gross income**. The calculator will show its true tax impact (not the flat 22% withholding rate).
+
+### Does it include self-employment tax?
+No. This calculator covers **federal income tax only**. Self-employment tax (15.3%) is separate and applies to freelance or business income.
+
+### How often are tax brackets updated?
+Tax brackets are adjusted **annually for inflation**. This calculator uses the latest available data for the selected tax year.
+
+</TabPanel>
+</Tabs>

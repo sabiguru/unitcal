@@ -1,0 +1,72 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## How to Use the Refinance Calculator
+The **refinance calculator** helps you determine whether refinancing your mortgage will save you money by comparing your current loan to a new one. Enter your existing mortgage details and the proposed new terms, and the tool instantly calculates your **monthly savings, total interest savings, and break-even point**—the number of months it will take for your savings to cover closing costs. It also models **cash-out scenarios** and lets you adjust the loan term to avoid extending your repayment unnecessarily. This empowers you to negotiate with lenders and make a data-driven decision.
+
+### Key Formulas Used
+- **Monthly Savings**: `Current P&I – New P&I`
+- **Break-Even Point**: `Closing Costs / Monthly Savings`
+- **Total Interest**: `(Monthly Payment × Term in Months) – Loan Amount`
+
+### Best Practices for Accurate Results
+1.  **Use P&I only**—exclude taxes, insurance, and PMI from payment comparisons.
+2.  **Include all closing costs**—lender fees, valuation, legal, etc.
+3.  **Match loan terms**—if you’ve paid 5 years on a 30-year loan, compare to a 25-year refinance to keep the same payoff date.
+4.  **Be realistic about your timeline**—only refinance if you’ll stay past the break-even point.
+5.  **Model multiple scenarios**—test different rates, terms, and cash-out amounts.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+You have a mortgage with:
+- **Current Balance**: £180,000  
+- **Current Rate**: 5.25%  
+- **Remaining Term**: 25 years  
+- **Current P&I**: £1,080  
+
+You’re offered a refinance at:
+- **New Rate**: 4.0%  
+- **New Term**: 30 years  
+- **Closing Costs**: £3,500  
+
+**Step 1**: The calculator shows your new P&I = **£859**  
+**Step 2**: Monthly savings = 1080 – 859 = **£221**  
+**Step 3**: Break-even = 3500 ÷ 221 ≈ **15.8 months**  
+**Step 4**: Total interest (current): £144,000  
+**Step 5**: Total interest (new): £129,000 → **£15,000 saved**  
+
+But if you choose a **25-year term** instead:  
+- New P&I = £950  
+- Total interest = £105,000 → **£39,000 saved**  
+
+The calculator reveals the better option instantly.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is the break-even point, and why does it matter?
+The break-even point is how many months it takes for your monthly savings to equal your closing costs. If you move or sell before this point, you’ll lose money on the refinance. Always ensure you’ll stay in the home longer than this period.
+
+### Should I choose a shorter loan term when refinancing?
+Yes—if you can afford the higher payment. A shorter term (e.g., 20 years instead of 30) dramatically reduces total interest and builds equity faster, even if the monthly savings are smaller.
+
+### Can this calculator handle cash-out refinances?
+Yes. Enter a **higher new loan amount** than your current balance. The calculator will show your new payment and whether the cash-out makes sense based on your goals.
+
+### Do I need to include PMI in my calculations?
+If your current loan has PMI and the refinance eliminates it (e.g., by reaching 80% LTV), include the PMI savings in your monthly savings calculation. The calculator allows you to toggle PMI on/off.
+
+### How accurate are the interest savings?
+The calculator uses precise amortisation math, so results are highly accurate for fixed-rate loans. For variable rates, it assumes the initial rate remains constant.
+
+### What if my closing costs are rolled into the loan?
+The calculator can model this—just increase the new loan amount by the closing costs. But note: this increases your total interest and may extend your break-even.
+
+### Is refinancing worth it for a small rate drop?
+Only if closing costs are low and you'll stay long-term. Use the calculator to test: a 0.25% drop might save $25/month—worth it only if break-even is under 2 years.
+
+### Can I use this for a UK mortgage?
+Yes. The calculator works for any fixed-rate mortgage. Just ensure you input **repayment (not interest-only)** loan details for accurate amortisation.
+</TabPanel>
+</Tabs>

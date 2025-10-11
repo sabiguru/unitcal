@@ -1,0 +1,59 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## How to Use the Ratio Calculator
+The **ratio calculator** helps you simplify ratios, scale them up or down, and solve for missing values in proportions. Whether you’re adjusting a recipe, mixing paint, or solving a maths problem, simply enter your known values, and the tool instantly provides simplified forms, scaled equivalents, or the unknown term. It handles two-term and multi-term ratios, decimals, and whole numbers, ensuring accuracy and saving you time on manual calculations.
+
+### Key Functions
+- **Simplify**: Reduce `18:24` to `3:4`
+- **Scale**: Enlarge `2:3` to serve 10 people
+- **Solve Proportions**: Find `x` in `5:7 = x:49`
+- **Convert**: Turn ratios into fractions or percentages
+
+### Best Practices
+1.  **Use consistent units** (convert kg to g, hours to minutes, etc.).
+2.  **Simplify first** before scaling to avoid large numbers.
+3.  For recipes, **scale based on one known ingredient**.
+4.  In proportions, **cross-multiply** to verify results.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+You’re making concrete with a **cement:sand:gravel** ratio of `1:2:4`. You have **6 buckets of gravel**.
+
+**Step 1**: Enter the ratio: `1:2:4`  
+**Step 2**: Enter known quantity: Gravel = 4 parts = 6 buckets  
+**Step 3**: The calculator scales the ratio:  
+- Cement = (1/4) × 6 = **1.5 buckets**  
+- Sand = (2/4) × 6 = **3 buckets**  
+- Gravel = **6 buckets**
+
+Result: Mix **1.5:3:6**, which simplifies back to **1:2:4**—perfectly proportional.
+
+This same method works for recipes, paint, or financial ratios.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How do I simplify a ratio like 0.8:2?
+Multiply both terms by 10 to remove decimals: `8:20`, then divide by GCD (4) → **`2:5`**.
+
+### Can this handle three-part ratios?
+Yes! Enter `1:2:5` for concrete, cocktail mixes, or investment allocations.
+
+### What if I only know one part of a proportion?
+Enter the known ratio and the one known value in the second ratio. The calculator solves for the missing term using cross-multiplication.
+
+### Is a ratio the same as a fraction?
+Not exactly. A ratio compares parts to parts (`3:5`), while a fraction compares part to whole (`3/8`). But they are mathematically related.
+
+### How do I scale a recipe for fewer people?
+Divide all ingredients by the scaling factor. The calculator does this automatically—just input your target serving size.
+
+### Can I use this for aspect ratios (like 16:9)?
+Yes! Simplify or compare screen, photo, or video aspect ratios to ensure correct scaling without distortion.
+
+### Why is my simplified ratio still a decimal?
+The calculator will convert decimals to whole numbers by multiplying all terms by 10, 100, etc., then simplify.
+</TabPanel>
+</Tabs>

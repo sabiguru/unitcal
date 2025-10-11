@@ -1,0 +1,79 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+
+## What is a Body Fat Calculator?
+
+A **body fat calculator** is an advanced assessment tool that estimates your body fat percentage (%BF) using simple body measurements. Unlike a standard scale or BMI calculator, it helps you understand your body composition—the ratio of fat mass to lean mass (muscle, bone, water). This is a much better indicator of health and fitness than weight alone. Our calculator uses the well-researched **U.S. Navy body fat method**, which requires only a tape measure. Knowing your body fat percentage is essential for setting realistic fitness goals, accurately tracking progress, and understanding your true health risks.
+
+## The Formula Explained Simply
+
+The calculator uses predictive equations based on extensive research. The formula differs for men and women to account for different fat distribution patterns.
+
+**Core Principle:** The method uses circumference measurements to estimate body density, which is then converted to a body fat percentage.
+
+**Key Measurements:**
+- **For Men:** Height, Neck, and Abdomen (Waist).
+- **For Women:** Height, Neck, Waist, and Hips.
+
+The formulas are complex (involving logarithms), but they essentially compare the size of areas where fat is stored (like the waist) to areas that tend to be leaner (like the neck). Our calculator handles all the complex maths instantly.
+
+## How to Use This Calculator
+
+Using our **body fat calculator** is straightforward. Accuracy depends on taking correct measurements.
+
+1.  **Select Your Sex.** This determines which measurements you need to provide.
+2.  **Take Your Measurements.** Use a flexible tape measure.
+    - **Neck:** Measure below the Adam's apple.
+    - **Waist (Men):** Measure at the navel.
+    - **Waist (Women):** Measure at the narrowest point, or at the navel.
+    - **Hips (Women):** Measure at the widest point.
+    - **Height:** Measure without shoes.
+3.  **Enter Your Measurements.** Input the values into the calculator. Be sure to select the correct units.
+4.  **View Your Result.** Click calculate to see your estimated body fat percentage and its corresponding health category.
+
+</TabPanel>
+<TabPanel title="Example">
+
+## A Step-by-Step Example
+
+Let's estimate the body fat percentage for a woman using the U.S. Navy method.
+
+**Scenario:** Anna is 165 cm tall. Her measurements are: Neck 33 cm, Waist 76 cm, Hips 98 cm.
+
+1.  **The calculator uses the formula for women:**
+    `%BF = 163.205 × log10(waist + hip - neck) - 97.684 × log10(height) - 78.387`
+2.  **It plugs in the values:**
+    `= 163.205 × log10(76 + 98 - 33) - 97.684 × log10(165) - 78.387`
+    `= 163.205 × log10(141) - 97.684 × log10(165) - 78.387`
+3.  **After calculating the logarithms, it solves the equation.** The result is approximately **32.5%**.
+
+**Interpretation:** For a woman, a body fat percentage of 32.5% is generally considered to be in the "Average" range, but nearing the "Obese" category, suggesting a focus on healthy fat loss could be beneficial.
+
+### Try It Yourself
+*   What category would a man with a 100 cm waist and 40 cm neck be in? (Assume height 180 cm).
+*   **Use the calculator above with your own measurements to get your personalised result!**
+
+</TabPanel>
+<TabPanel title="FAQ">
+
+## Frequently Asked Questions
+
+### How accurate is this body fat calculator?
+The U.S. Navy method is one of the most accurate circumference-based methods available, with an error margin of approximately ±3-4% for most people. It is more accurate than BMI for assessing body composition. However, for clinical-grade precision, methods like DEXA scans are required.
+
+### What is a good body fat percentage?
+"Good" depends on your age, sex, and goals. Generally:
+- **For Men:** 10-20% is considered good for health and appearance.
+- **For Women:** 18-28% is considered a healthy range.
+Athletes will typically be at the lower end of these ranges. Our calculator will show you your specific category based on established standards.
+
+### Why do the measurements differ for men and women?
+Men and women store fat differently. Men tend to store more fat in the abdominal area (android pattern), while women store more around the hips and thighs (gynoid pattern). The formulas are tailored to these patterns for greater accuracy.
+
+### Can I use this calculator if I am very muscular?
+The calculator may overestimate body fat percentage for highly muscular individuals because it interprets large circumferences as high body fat. If you have a significant amount of muscle mass, the result should be interpreted with caution, and other methods like skinfold calipers might be more appropriate.
+
+</TabPanel>
+</Tabs>

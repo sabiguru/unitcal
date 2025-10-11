@@ -1,0 +1,99 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **paint calculator** helps you estimate exactly how much paint and primer you need for any room or project. By inputting your room dimensions, number of doors/windows, and paint specifications, you’ll get a precise shopping list that accounts for walls, ceilings, trim, multiple coats, and a waste buffer. Whether you’re refreshing a bedroom or tackling your entire home, this tool prevents costly overbuying and frustrating mid-project shortages.
+
+### How It Works
+The calculator uses standard painting formulas:
+- **Wall area**: `2 × (Length + Width) × Height`
+- **Net area**: Subtract doors/windows (21 sq ft per door, 16 sq ft per window)
+- **Paint needed**: `(Net Area ÷ Coverage per Gallon) × Coats × 1.10` (10% waste buffer)
+
+It handles:
+- **Multiple surfaces**: Walls, ceilings, and trim
+- **Custom openings**: Adjust for non-standard doors/windows
+- **Coverage rates**: 250–400 sq ft/gallon based on surface texture
+- **Primer estimates**: Separate calculation for sealing and base coats
+
+### Key Inputs
+- **Room dimensions**: Length, width, height
+- **Openings**: Number and size of doors/windows
+- **Paint coverage**: From your paint can label (default: 375 sq ft/gallon)
+- **Coats**: Typically 2 for walls/ceiling, 1 for trim
+- **Surface type**: Smooth, textured, or exterior
+
+The tool instantly shows:
+- Gallons of paint needed
+- Gallons of primer (if selected)
+- Total cost estimate (if paint price is entered)
+- Shopping list with recommended quantities
+
+### How to Use
+1. Enter your **room dimensions** (length, width, height)
+2. Add **doors and windows** (standard sizes or custom)
+3. Select **surface type** (smooth, textured, etc.)
+4. Input your **paint’s coverage rate** (from the can)
+5. Choose **number of coats** and whether to include **primer**
+6. Click **Calculate** to get your precise paint estimate
+
+Always round up to the nearest gallon—paint batches vary, and you’ll want extra for touch-ups.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Painting a 12×10 ft bedroom with 8 ft ceilings.
+
+**Inputs**:
+- Length: 12 ft
+- Width: 10 ft
+- Height: 8 ft
+- Doors: 1 (standard)
+- Windows: 1 (standard)
+- Coverage: 375 sq ft/gallon
+- Coats: 2 (walls/ceiling), 1 (trim)
+- Surface: Smooth
+
+**Calculation**:
+1. **Wall area**: `2 × (12 + 10) × 8 = 352 sq ft`
+2. **Openings**: 21 + 16 = 37 sq ft
+3. **Net wall area**: 352 – 37 = 315 sq ft
+4. **Ceiling**: 12 × 10 = 120 sq ft
+5. **Total area**: 315 + 120 = 435 sq ft
+6. **Paint needed**: `(435 ÷ 375) × 2 = 2.32 gallons`
+7. **With 10% buffer**: 2.32 × 1.1 = **2.55 gallons**
+
+**Result**: **Buy 3 gallons** of paint. If adding trim (25 sq ft), total becomes **2.63 gallons**—still **3 gallons**.
+
+This ensures you have enough for two flawless coats and future touch-ups.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How accurate is this calculator?
+It’s highly accurate if you input correct dimensions and coverage rates. The 10% waste buffer accounts for real-world variables like spillage and surface texture.
+
+### What if my room isn’t rectangular?
+Calculate each wall separately: measure width and height of each wall, multiply to get area, then sum all walls. The calculator allows manual entry of total wall area if needed.
+
+### Do I need to include the ceiling?
+Only if you’re painting it. Ceilings typically require 1–2 coats and add significantly to the total area (Length × Width).
+
+### Should I buy primer?
+Yes—if you’re painting new drywall, covering stains, or making a drastic color change. The calculator provides a separate primer estimate based on net wall area.
+
+### What’s the standard coverage rate?
+Most quality interior paints cover **350–400 sq ft/gallon** on smooth, primed surfaces. For textured walls, use **250–300 sq ft/gallon**.
+
+### Why do I need two coats?
+Two coats ensure uniform color, complete coverage (especially over previous colors), and a consistent sheen. One coat often looks patchy and translucent.
+
+### Can I return unused paint?
+Most stores accept returns of **unopened** paint. **Opened** paint is usually non-returnable—so the 10% buffer is for touch-ups, not overbuying.
+
+### How do I measure high ceilings?
+For vaulted or cathedral ceilings, break walls into rectangular and triangular sections. Calculate each separately, then sum the areas.
+
+### Does this work for exterior painting?
+Yes—just adjust the coverage rate to **250–350 sq ft/gallon** for exterior surfaces, which are typically more porous and textured.
+</TabPanel>
+</Tabs>

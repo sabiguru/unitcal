@@ -1,0 +1,165 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+# How to Solve Linear and Quadratic Equations — Step-by-Step Methods
+
+## Introduction
+Solving equations is a foundational skill in mathematics, essential for everything from academic success to real-world problem-solving in engineering, finance, and data analysis. Whether you’re balancing a chemical equation, calculating break-even points in business, or modelling physical phenomena, the ability to isolate variables and find unknown values is indispensable. Learning **how to solve linear and quadratic equations**—using methods like substitution, factoring, completing the square, and the quadratic formula—builds logical thinking and prepares you for more advanced algebra and calculus. This guide provides a comprehensive, step-by-step walkthrough of each method, explains when to use them, and offers practical examples to help you master equation-solving with confidence and precision.
+
+<Tabs>
+<TabPanel title="Complete Guide">
+## Understanding Equation Types and Solution Goals
+An **equation** is a mathematical statement that two expressions are equal. The goal of solving an equation is to find the value(s) of the variable(s) that make the equation true—these are called **solutions** or **roots**.
+
+### 1. Linear Equations (First Degree)
+A linear equation has the form:  
+**`ax + b = 0`**  
+where `a` and `b` are constants, and `a ≠ 0`. It has **exactly one solution**.
+
+**Solution Method**: Isolate the variable using inverse operations (addition/subtraction, multiplication/division).
+
+*Example*:  
+`3x – 7 = 8`  
+→ Add 7: `3x = 15`  
+→ Divide by 3: `x = 5`
+
+### 2. Quadratic Equations (Second Degree)
+A quadratic equation has the form:  
+**`ax² + bx + c = 0`**  
+where `a ≠ 0`. It can have **0, 1, or 2 real solutions**, depending on the discriminant.
+
+#### Method 1: Factoring
+Best when the quadratic factors neatly into two binomials.
+
+*Example*:  
+`x² – 5x + 6 = 0`  
+→ Factor: `(x – 2)(x – 3) = 0`  
+→ Set each factor to zero: `x = 2` or `x = 3`
+
+#### Method 2: Quadratic Formula
+The universal method that works for all quadratics:
+**`x = [-b ± √(b² – 4ac)] / (2a)`**
+
+The **discriminant** `D = b² – 4ac` determines the nature of the roots:
+- **D > 0**: Two distinct real roots
+- **D = 0**: One real root (repeated)
+- **D below 0**: Two complex conjugate roots
+
+*Example*:  
+`2x² + 4x – 6 = 0`  
+→ `a=2, b=4, c=–6`  
+→ `D = 16 + 48 = 64`  
+→ `x = [–4 ± 8]/4 → x = 1 or x = –3`
+
+#### Method 3: Completing the Square
+Useful for deriving the quadratic formula and solving equations not easily factored.
+
+*Steps*:  
+1. Move constant to right: `x² + 6x = –5`  
+2. Add `(b/2)²` to both sides: `x² + 6x + 9 = 4`  
+3. Write as square: `(x + 3)² = 4`  
+4. Take square root: `x + 3 = ±2`  
+5. Solve: `x = –1 or x = –5`
+
+### 3. Systems of Linear Equations
+A system involves two or more equations with multiple variables. The solution is the point where their graphs intersect.
+
+#### Substitution Method
+1. Solve one equation for one variable.
+2. Substitute into the other equation.
+3. Solve and back-substitute.
+
+*Example*:  
+`y = 2x + 1`  
+`3x + y = 11`  
+→ Substitute: `3x + (2x + 1) = 11 → 5x = 10 → x = 2`  
+→ `y = 5`
+
+#### Elimination Method
+1. Multiply equations to align coefficients.
+2. Add/subtract to eliminate one variable.
+3. Solve and back-substitute.
+
+*Example*:  
+`2x + 3y = 13`  
+`–x + 4y = 5`  
+→ Multiply second by 2: `–2x + 8y = 10`  
+→ Add: `11y = 23 → y = 23/11`  
+→ `x = 37/11`
+
+## Pro Tips & Common Mistakes
+- **Always simplify first**: Combine like terms and move all terms to one side before solving.
+- **Check your solutions**: Plug answers back into the original equation to verify.
+- **Use fractions for precision**: Avoid decimals until the final step to prevent rounding errors.
+- **Watch signs**: A common error is mishandling negative signs during distribution or transposition.
+- **Know when to use each method**:
+  - **Factoring**: Fast for simple quadratics
+  - **Quadratic formula**: Reliable for all cases
+  - **Completing the square**: Needed for vertex form or conic sections
+- **For systems**: Use elimination when coefficients are easily aligned; substitution when one equation is already solved for a variable.
+
+## Practical Applications
+- **Finance**: Break-even analysis (`Revenue = Cost`)
+- **Physics**: Kinematic equations (`d = vt + ½at²`)
+- **Engineering**: Circuit analysis (Ohm’s Law systems)
+- **Economics**: Supply and demand equilibrium
+- **Computer Science**: Algorithm complexity and optimization
+- **Everyday life**: Budgeting, recipe scaling, travel planning
+</TabPanel>
+
+<TabPanel title="Examples & Practice">
+## Practice Solving Equations
+
+### Linear Equations
+1. **Basic**: `5x – 10 = 0` → `x = 2`  
+2. **With fractions**: `(1/2)x + 4 = 10` → `x = 12`  
+3. **Multi-step**: `3(x – 4) + 2x = 13` → `x = 5`
+
+### Quadratic Equations
+1. **Factoring**: `x² + 6x + 8 = 0` → `(x+2)(x+4)=0` → `x = –2, –4`  
+2. **Quadratic formula**: `3x² – 10x + 3 = 0` → `x = 3, 1/3`  
+3. **Complex roots**: `x² + 9 = 0` → `x = ±3i`
+
+### Systems of Equations
+1. **Substitution**:  
+   `y = 2x + 1`  
+   `3x + y = 11` → `x=2, y=5`  
+2. **Elimination**:  
+   `4x + 2y = 8`  
+   `–2x + 3y = 11` → `x=–0.5, y=5`  
+3. **Word problem**:  
+   “A coffee and a muffin cost £4. Two coffees and three muffins cost £10. Find each price.”  
+   → `c + m = 4`, `2c + 3m = 10` → `c=£2, m=£2`
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is the difference between an expression and an equation?
+An **expression** (e.g., `3x + 2`) can be simplified but not solved. An **equation** (e.g., `3x + 2 = 11`) contains an equals sign and can be solved for the variable.
+
+### Which method is best for solving quadratics?
+- **Try factoring first**—it’s fastest if the equation factors nicely.  
+- **Use the quadratic formula** if factoring is difficult or you need a guaranteed method.  
+- **Completing the square** is essential for advanced topics like conic sections.
+
+### What does a negative discriminant mean?
+A negative discriminant (`b² – 4ac below 0`) means there are **no real solutions**—only complex ones (e.g., `x = –1 ± 2i`). This is common in physics when a scenario is physically impossible (e.g., negative time).
+
+### How many solutions can a system of two linear equations have?
+- **One solution**: Lines intersect at a point (most common).  
+- **No solution**: Lines are parallel (same slope, different intercepts).  
+- **Infinite solutions**: Lines are identical (same equation).
+
+### Can I solve equations with fractions?
+Yes. Multiply both sides by the **least common denominator (LCD)** to eliminate fractions first.  
+*Example*: `(x/2) + (x/3) = 5` → Multiply by 6: `3x + 2x = 30 → x = 6`
+
+### Why do I need to check my solutions?
+To catch errors in algebra (e.g., sign mistakes) and to identify **extraneous solutions** (solutions that don’t satisfy the original equation, common in radical or rational equations).
+
+### What if my quadratic won’t factor?
+Use the **quadratic formula**. Every quadratic can be solved this way—even if the roots are irrational or complex.
+
+### How do I solve equations with variables on both sides?
+Move all variable terms to one side and constants to the other.  
+*Example*: `5x – 3 = 2x + 9` → `3x = 12` → `x = 4`
+</TabPanel>
+</Tabs>

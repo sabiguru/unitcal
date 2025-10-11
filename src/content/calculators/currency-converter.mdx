@@ -1,0 +1,79 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **currency converter** provides live exchange rates for over 170 currencies, allowing you to instantly calculate how much your money is worth abroad. Whether you’re planning a trip, shopping online, or sending money internationally, this tool uses real-time forex data to give you accurate, up-to-date conversions—so you can make informed financial decisions.
+
+### How It Works
+The converter uses live **mid-market rates** from global forex markets. Simply:
+1. Enter the **amount** you want to convert.
+2. Select the **from currency** (e.g., GBP).
+3. Select the **to currency** (e.g., EUR, USD, JPY).
+4. The tool instantly displays the converted amount.
+
+The formula is:  
+**Converted Amount = Original Amount × Live Exchange Rate**
+
+### Key Features
+- **Real-time rates**: Updated every 60 seconds from reliable financial data sources.
+- **170+ currencies**: Includes major, minor, and exotic currencies.
+- **Historical data**: View past rates to track trends (available in advanced mode).
+- **Reverse conversion**: Easily swap currencies with one click.
+- **Mobile-friendly**: Works seamlessly on phones and tablets.
+
+### How to Use
+1. **For travel**: Convert your budget into the destination currency to plan daily spending.
+2. **For online shopping**: See the true cost of imported goods before checkout.
+3. **For remittances**: Compare how much your recipient will receive before sending money.
+4. **For investing**: Understand the impact of currency fluctuations on overseas assets.
+
+Always remember: the rate you see is the **mid-market rate**. Banks and transfer services may apply markups or fees, so your actual received amount may differ slightly.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: You’re travelling to the US with £600.
+
+**Inputs**:
+- From: GBP
+- To: USD
+- Amount: 600
+- Live Rate: 1.27
+
+**Calculation**:  
+`£600 × 1.27 = $762`
+
+**Insight**: You’ll have **$762** to spend. If your hotel costs $200/night, you can afford nearly 4 nights just from this amount.
+
+**Another Example**:  
+Buying a €999 laptop from Germany:  
+`€999 ÷ 1.18 (GBP/EUR rate) = £846.61`  
+This helps you decide if it’s cheaper than buying in the UK.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### Are these rates real-time?
+Yes. Our converter pulls live **mid-market exchange rates** updated every minute from global forex data providers.
+
+### Why is my bank’s rate different?
+Banks and money services add a **markup** (typically 2–5%) to the mid-market rate to make a profit. Our tool shows the baseline rate—your actual transfer will likely be slightly less due to these margins.
+
+### What is the mid-market rate?
+The **mid-market rate** is the midpoint between the buy and sell prices of two currencies in global markets. It’s the fairest rate and is used by financial institutions when trading among themselves.
+
+### Can I use this for historical rates?
+Yes. In the advanced view, you can select any date in the past 10 years to see historical exchange rates—useful for accounting or analysing trends.
+
+### Does this include fees?
+No. This tool shows **pure currency conversion** using live rates. It does not include bank fees, transfer fees, or foreign transaction charges. Always check total costs with your provider.
+
+### How accurate is this converter?
+It’s highly accurate for **informational purposes**. The rates match those used by financial professionals. However, consumer services rarely offer the exact mid-market rate.
+
+### What’s the best way to get this rate in real life?
+Use **specialist money transfer services** like Wise or Revolut, which offer rates very close to the mid-market with transparent fees. Avoid airport kiosks and high-street banks for large amounts.
+
+### Can I convert cryptocurrencies?
+Not in this tool. This converter is for **fiat currencies** only (e.g., GBP, USD, EUR). Cryptocurrency conversions require a different data source due to volatility and market fragmentation.
+</TabPanel>
+</Tabs>

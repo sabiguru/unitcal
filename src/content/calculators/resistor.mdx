@@ -1,0 +1,66 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## How to Use the Resistor Calculator
+The **resistor calculator** solves the three most common electronics challenges: **decoding color bands**, **combining resistors in series/parallel**, and **calculating power dissipation**. Simply select your task, input values (colors, resistance, voltage, current), and get instant results with clear explanations. It helps you identify unknown resistors, design custom resistance values, and ensure your components won’t overheat—making it indispensable for students, hobbyists, and engineers.
+
+### Key Functions & Formulas
+- **Color Decoding**: Maps bands to digits, multiplier, and tolerance
+- **Series Resistance**: `R_total = R₁ + R₂ + …`
+- **Parallel Resistance**: `1/R_total = 1/R₁ + 1/R₂ + …` (with 2-resistor shortcut)
+- **Power Calculation**: `P = V²/R`, `P = I²×R`, `P = V×I`
+- **Derating**: Recommends 2× safety margin on power rating
+
+### Best Practices for Reliable Circuits
+1.  **Always derate power**: If calculation shows 0.3W, use a 0.5W or 1W resistor.
+2.  **Verify with a multimeter**: Colors can be ambiguous—measure critical resistors.
+3.  **Use metal film for precision**: Carbon film is fine for non-critical uses.
+4.  **Check voltage ratings**: High-voltage circuits need resistors rated for >300V.
+5.  **Combine for non-standard values**: Two 1kΩ in parallel = 500Ω.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+You have a resistor with bands: **Brown, Black, Red, Gold**.
+
+**Step 1**: Select “Decode Color Bands”  
+**Step 2**: Enter bands: Brown (1), Black (0), Red (×100), Gold (±5%)  
+**Result**: **1,000 Ω (1kΩ) ±5%**
+
+**Alternative**: You need to drop 12V to 5V for a sensor drawing 10mA.  
+- Voltage across resistor = 12V – 5V = **7V**  
+- `R = V/I = 7 / 0.01 = 700Ω`  
+- `P = V×I = 7 × 0.01 = 0.07W`  
+- **Recommendation**: Use a **750Ω (standard value) 0.25W metal film resistor**
+
+The calculator handles both identification and design instantly.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How do I know if it’s a 4-band or 5-band resistor?
+- **4-band**: Wider spacing between multiplier and tolerance bands.
+- **5-band**: All bands evenly spaced; tolerance band is usually brown, red, or green (not gold/silver).
+
+### Can this calculator handle 6-band resistors?
+It decodes the first 5 bands (value and tolerance). The 6th band (temperature coefficient) is noted but not used in resistance calculation.
+
+### Why does my resistor get hot?
+It’s dissipating power as heat. If it’s hot to touch, it’s likely near or above its rating. Recalculate power and upgrade to a higher-wattage resistor.
+
+### What if I don’t know the current or voltage?
+Use Ohm’s Law: if you know any two of V, I, R, you can find the third. Measure with a multimeter if possible.
+
+### Is the parallel formula accurate for more than two resistors?
+Yes—the calculator uses the full reciprocal sum for any number of resistors. The two-resistor shortcut is just a convenience.
+
+### Can I use this for surface-mount (SMD) resistors?
+No—SMD resistors use numeric codes (e.g., “103” = 10kΩ). This tool is for through-hole color-coded resistors.
+
+### How accurate is the color decoding?
+It uses the standard EIA color code. Faded or misread bands are the main source of error—always verify with a multimeter.
+
+### What’s the difference between carbon and metal film in the calculator?
+The calculator doesn’t distinguish type—it calculates value and power. You choose the type based on your circuit’s needs (precision vs. cost).
+</TabPanel>
+</Tabs>

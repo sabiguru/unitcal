@@ -1,0 +1,86 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **capacitor calculator** helps you solve for capacitance, voltage, charge, energy, reactance, and time constants in both DC and AC circuits. Whether you’re designing a filter, sizing a decoupling capacitor, or calculating energy storage, this tool provides instant, accurate results using standard electrical formulas.
+
+### How It Works
+The calculator uses core capacitor equations:
+- **Charge**: `Q = C × V`
+- **Energy**: `E = ½ × C × V²`
+- **Reactance**: `Xc = 1 / (2πfC)`
+- **Time Constant**: `τ = R × C`
+
+For **series/parallel networks**, it applies combination rules:
+- **Parallel**: `C_total = C₁ + C₂ + ...`
+- **Series**: `1/C_total = 1/C₁ + 1/C₂ + ...`
+
+### Key Inputs
+- **Circuit Type**: Select DC (charge/energy) or AC (reactance).
+- **Known Values**: Enter any two of capacitance, voltage, frequency, resistance, or charge.
+- **Network**: Add multiple capacitors to calculate total capacitance.
+
+The tool instantly shows:
+- Missing electrical values
+- Total capacitance for combinations
+- Reactance at your frequency
+- Time constant for RC circuits
+- Energy storage capacity
+
+### How to Use
+1. Choose your **calculation type** (e.g., “Find Reactance”).
+2. Enter **known values** (e.g., capacitance and frequency).
+3. Click **Calculate** to solve for unknowns.
+4. For networks, add capacitor values and see total capacitance.
+5. Use results to select appropriate components and ensure circuit performance.
+
+Always verify calculations with a multimeter and consult component datasheets for real-world tolerances.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Design a high-pass filter with a **1 kHz** cutoff using a **10 kΩ** resistor.
+
+**Inputs**:
+- Filter Type: High-pass
+- Cutoff Frequency: 1,000 Hz
+- Resistance: 10,000 Ω
+
+**Calculation**:
+- Formula: `C = 1 / (2π × f × R)`
+- `C = 1 / (2 × 3.1416 × 1000 × 10000) ≈ 15.9 nF`
+
+**Result**: Use a **15 nF or 16 nF ceramic capacitor**. At 1 kHz, its reactance equals the resistor value (10 kΩ), creating the -3dB cutoff point.
+
+This ensures frequencies above 1 kHz pass with minimal attenuation, while lower frequencies are blocked.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is capacitive reactance?
+Capacitive reactance (`Xc`) is the opposition a capacitor offers to alternating current. It’s measured in ohms and calculated as `Xc = 1/(2πfC)`. Unlike resistance, it **decreases as frequency increases**.
+
+### How do I calculate energy stored in a capacitor?
+Use `E = ½ × C × V²`, where `E` is energy in joules, `C` is capacitance in farads, and `V` is voltage. For example, a 1000 µF capacitor at 12V stores **0.072 J**.
+
+### What is an RC time constant?
+The **RC time constant** (`τ = R × C`) is the time for a capacitor to charge to 63.2% of the supply voltage through a resistor. It’s used in timing circuits, filters, and delay generators.
+
+### Can I calculate series and parallel capacitors?
+Yes. For **parallel**, add capacitances directly. For **series**, use `1/C_total = 1/C₁ + 1/C₂ + ...`. The calculator handles both automatically.
+
+### Why does my capacitor calculation not match real-world behaviour?
+Real capacitors have **parasitic effects**: ESR (resistance), ESL (inductance), leakage current, and tolerance (±10–20%). Always derate voltage and check datasheets for frequency/temperature performance.
+
+### What capacitor type should I use for high-frequency circuits?
+**Ceramic capacitors** (especially C0G/NP0) are ideal for high-frequency decoupling (>1 MHz). Avoid electrolytics—they have high ESR and inductance at high frequencies.
+
+### How do I avoid capacitor failure?
+- **Never reverse polarity** on electrolytic/tantalum capacitors.  
+- **Derate voltage** by 30–50%.  
+- **Stay within ripple current limits** for power applications.  
+- **Avoid mechanical stress** on leads or body.
+
+### Is this calculator safe for mains voltage circuits?
+No. This tool is for **low-voltage DC and signal-level AC circuits**. **Never design or troubleshoot mains-connected circuits** without professional training and safety certification.
+</TabPanel>
+</Tabs>

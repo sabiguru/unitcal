@@ -1,0 +1,82 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **car lease calculator** helps you estimate your monthly lease payment by accounting for depreciation, finance charges, VAT, and upfront costs. Whether you’re comparing dealer quotes or deciding between leasing and buying, this tool provides a transparent breakdown of what you’ll actually pay.
+
+### How It Works
+The calculator uses the standard lease formula:  
+**Monthly Payment = [(Cap Cost – Residual) ÷ Term + (Cap Cost + Residual) × Money Factor] × 1.20 (VAT)**
+
+### Key Inputs
+- **MSRP**: The car’s list price.
+- **Negotiated Price**: Your agreed purchase price (cap cost)—**always negotiate this**.
+- **Residual Value**: The car’s predicted value at lease end (usually % of MSRP).
+- **Money Factor**: The lease’s interest rate (e.g., 0.00150 ≈ 3.6% APR).
+- **Term**: Lease length in months (24–48 typical).
+- **Initial Rental**: Upfront payment (e.g., 3, 6, or 9 months’ rent).
+- **Fees**: Acquisition or documentation fees.
+
+The tool instantly shows:
+- Monthly payment (including VAT)
+- Total upfront cost
+- Total cost over the lease term
+- Breakdown of depreciation vs. finance fees
+
+### How to Use
+1. Enter the **MSRP** and your **negotiated price**.
+2. Input the **residual percentage** (ask the dealer) and **money factor**.
+3. Select the **term** and **initial rental** amount.
+4. Add any **capitalised fees**.
+5. Click **Calculate** to see your payment and total cost.
+6. Adjust inputs to model different scenarios (e.g., higher residual, lower initial rental).
+
+Always compare **total cost**, not just monthly payment—large initial rentals can mask true expense.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Leasing a £35,000 SUV with a £32,000 negotiated price.
+
+**Inputs**:
+- MSRP: £35,000
+- Negotiated Price: £32,000
+- Residual: 55% → £19,250
+- Money Factor: 0.00150
+- Term: 36 months
+- Initial Rental: £1,500
+- Acquisition Fee: £500
+
+**Calculation**:
+- Adjusted Cap Cost = £32,000 + £500 – £1,500 = £31,000
+- Depreciation = (£31,000 – £19,250) ÷ 36 = £326.39
+- Finance Fee = (£31,000 + £19,250) × 0.00150 = £75.38
+- Pre-VAT Payment = £326.39 + £75.38 = £401.77
+- **Monthly Payment (with 20% VAT)** = £401.77 × 1.20 = **£482.12**
+
+**Total Cost**: £1,500 (initial) + (£482.12 × 36) = **£18,856.32**
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is a money factor?
+The **money factor** is a decimal that represents your lease’s interest rate. Multiply it by 2,400 to estimate the APR (e.g., 0.00150 × 2,400 = 3.6%).
+
+### Should I pay a large initial rental?
+It lowers your monthly payment but increases risk. If the car is written off early, you won’t recover the initial rental. A modest amount (e.g., 1–3 months) is safer.
+
+### Can I negotiate the residual value?
+No. Residuals are set by the finance company. But you **can and should negotiate the cap cost** (selling price)—this has a bigger impact on your payment.
+
+### What is included in the monthly payment?
+Your payment covers **depreciation**, **finance charges**, and **20% VAT**. It does not include insurance, fuel, or maintenance (unless you add a service package).
+
+### What happens if I exceed my mileage?
+You’ll pay an **excess mileage fee** (typically £0.10–£0.30 per mile) at lease end. It’s often cheaper to pre-buy extra miles at signing.
+
+### Is leasing better than buying?
+Leasing offers **lower monthly payments** and **new-car reliability** every few years. Buying builds **equity** and offers **long-term savings**. Use our [Car Loan Calculator](/calculator/car-loan) to compare total costs.
+
+### Are there hidden fees?
+Yes. Watch for **acquisition fees**, **disposition fees** (£200–£500 at end), and **excess wear-and-tear charges**. Always read the full agreement.
+</TabPanel>
+</Tabs>

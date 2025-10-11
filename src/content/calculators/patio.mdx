@@ -1,0 +1,65 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## How to Use the Patio Calculator
+The **patio calculator** helps you estimate the exact materials needed for a DIY paver patio—including pavers, gravel, sand, and edging. Simply enter your patio dimensions, paver size, and base specifications, and the tool instantly calculates quantities while accounting for industry-standard waste factors and drainage requirements. Whether you’re building a small courtyard or a large entertainment space, this calculator ensures you order the right amount of materials, avoid costly overruns, and create a stable, long-lasting surface.
+
+### Key Formulas Used
+- **Patio Area**: `Length × Width` (or `π × Radius²` for circles)
+- **Pavers Needed**: `(Area ÷ Paver Area) × (1 + Waste Factor)`
+- **Gravel Volume**: `Area × (Gravel Depth ÷ 12)` → convert to cubic yards (÷27)
+- **Sand Volume**: `Area ÷ 12` (for 1-inch layer)
+- **Edging**: Perimeter in linear feet/metres
+
+### Best Practices for Accurate Results
+1.  **Measure carefully**—include overhang for excavation.
+2.  **Choose the right waste factor**: 10% for simple layouts, 15% for curves or herringbone.
+3.  **Use 4–6 inches of compacted gravel**—never skip the base.
+4.  **Slope away from your house** at 1/4 inch per foot for drainage.
+5.  **Order 10% extra pavers** for cuts and future repairs.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+You’re building a **10 ft × 12 ft** rectangular patio with **6" × 9"** pavers.
+
+**Step 1**: Enter dimensions → Area = 120 sq ft  
+**Step 2**: Select paver size → 6" × 9" = 0.375 sq ft per paver  
+**Step 3**: Choose waste factor → 10% (standard rectangle)  
+**Step 4**: Set base → 4" gravel, 1" sand  
+
+**Results**:
+- **Pavers**: (120 ÷ 0.375) × 1.10 = **352 pavers**
+- **Gravel**: 120 × (4/12) = 40 cu ft → **1.5 cubic yards**
+- **Sand**: 120 ÷ 12 = 10 cu ft → **0.4 cubic yards**
+- **Edging**: 2×(10+12) = **44 linear feet**
+
+The calculator does all this instantly—just input your numbers!
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What waste factor should I use?
+- **7–10%**: Straight edges, simple patterns (grid, running bond)
+- **10–15%**: Curved edges, complex patterns (herringbone, circles)
+- **15%+**: Very intricate designs or inexperienced installers
+
+### Can I use this for a walkway?
+Yes! Just enter the walkway’s length and width. All calculations are the same.
+
+### How do I convert to metric?
+The calculator supports both imperial and metric. Enter dimensions in metres, paver size in cm, and it will output materials in cubic metres and square metres.
+
+### Why is the gravel depth so important?
+The gravel base bears the load and provides drainage. A thin base will settle, causing uneven pavers and tripping hazards.
+
+### Do I need geotextile fabric?
+If your soil is clay, sandy, or prone to weeds, yes—lay fabric between soil and gravel to prevent mixing and weed growth.
+
+### How much polymeric sand do I need?
+As a rule of thumb: **1 bag (20kg) covers 8–10 m²** (or 80–100 sq ft). The calculator can estimate this if you enable the option.
+
+### Can I build a patio directly on soil?
+No. Without a compacted gravel base, your patio will sink, crack, and become uneven within a year—especially in the UK’s wet climate.
+</TabPanel>
+</Tabs>

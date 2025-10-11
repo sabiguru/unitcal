@@ -1,0 +1,76 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## How to Use the Roman Numerals Converter
+The **Roman numerals converter** instantly translates between modern Arabic numbers (1, 2, 3) and Roman numerals (I, II, III). Simply enter a number between **1 and 3,999**, and the tool will generate the correct Roman numeral using standard subtractive notation (e.g., IV for 4, not IIII). Conversely, enter a valid Roman numeral, and it will return the corresponding Arabic number. The converter also validates your input, flagging common errors like invalid repetitions (`VV`) or non-standard subtractive pairs (`IL`), making it perfect for learning, verifying homework, or decoding historical dates.
+
+### Key Rules Applied
+- **Standard subtractive notation**: Uses IV, IX, XL, XC, CD, CM
+- **No more than three repeats**: Enforces `III` (3) but rejects `IIII` (4)
+- **Valid symbols only**: Accepts I, V, X, L, C, D, M (case-insensitive)
+- **Range limit**: Numbers must be between 1 and 3,999 (MMMCMXCIX)
+
+### Best Practices for Accurate Use
+1.  **Use uppercase letters** for Roman numerals (the converter accepts lowercase but outputs uppercase).
+2.  **Avoid stylistic variants** like `IIII` for 4—use `IV` for formal correctness.
+3.  **For large numbers**, remember the 3,999 limit—larger values require non-standard notation.
+4.  **Validate manually**: If the converter rejects your input, check for invalid subtractive pairs (e.g., `IC` for 99).
+5.  **Use for decoding**: Enter film copyrights, clock faces, or monument dates to understand their meaning.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+You see a film copyright: **© MMXXIV**.
+
+**Step 1**: Enter `MMXXIV` into the Roman-to-number field.  
+**Step 2**: The converter validates the input:  
+- `M` = 1,000 → 2,000  
+- `X` = 10 → 20  
+- `IV` = 4  
+**Result**: **2024**
+
+**Alternative**: You want to write **1984** in Roman numerals.  
+- Enter `1984` into the number-to-Roman field.  
+- The converter breaks it down:  
+  - 1,000 = M  
+  - 900 = CM  
+  - 80 = LXXX  
+  - 4 = IV  
+**Result**: **MCMLXXXIV**
+
+This tool ensures you always use the correct, canonical form.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How do I write 4 in Roman numerals?
+The correct form is **IV** (5 – 1). While some clocks use **IIII** for stylistic reasons, **IV** is the standard in formal writing, historical documents, and modern usage.
+
+### Why can’t I write 99 as IC?
+Because **I** (1) can only be subtracted from **V** (5) and **X** (10)—not from **C** (100). The correct form is **XCIX** (90 + 9 = 100–10 + 10–1).
+
+### What’s the highest number this converter handles?
+**3,999**, written as **MMMCMXCIX**. This is the practical limit of the standard Roman numeral system. Larger numbers require non-standard extensions (e.g., a bar over a numeral), which are not supported here.
+
+### Does this converter accept lowercase letters?
+Yes—it’s case-insensitive. You can enter `mcmlxxxiv` and it will output **MCMLXXXIV**. However, formal Roman numerals are always uppercase.
+
+### Why does the converter reject “VX” for 5?
+Because **VX** is invalid. **V** (5) cannot be followed by a larger numeral for subtraction, and **X** (10) alone represents 10. To write 5, use **V**.
+
+### Can I use this for math operations?
+No—Roman numerals are for **representation, not calculation**. Convert to Arabic numbers, perform the math, then convert the result back if needed.
+
+### Is zero possible in Roman numerals?
+No. The Roman system has **no symbol for zero**. The concept of zero as a number wasn’t part of ancient Roman mathematics.
+
+### How do I know if a Roman numeral is valid?
+The converter validates input using strict rules:
+- Only I, V, X, L, C, D, M are allowed
+- No more than three identical symbols in a row
+- Only six subtractive pairs are permitted
+- Symbols are in descending order (except for valid subtractive pairs)
+
+If your input is rejected, it violates one of these rules.
+</TabPanel>
+</Tabs>

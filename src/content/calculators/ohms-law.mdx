@@ -1,0 +1,63 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## How to Use the Ohm's Law Calculator
+The **Ohm's Law calculator** solves for any two of the four electrical quantities—**Voltage (V), Current (I), Resistance (R), and Power (P)**—and instantly computes the other two. Simply enter any two known values, and the tool applies the correct formulas (`V = I × R`, `P = V × I`, etc.) to give you accurate results. It also supports **series and parallel resistor combinations**, making it perfect for circuit design, troubleshooting, and education.
+
+### Core Formulas Used
+- **Ohm’s Law**: `V = I × R`
+- **Power**: `P = V × I = I² × R = V² / R`
+- **Series Resistors**: `R_total = R₁ + R₂ + …`
+- **Parallel Resistors**: `1/R_total = 1/R₁ + 1/R₂ + …`
+
+### How to Get the Best Results
+1.  Ensure your circuit is **de-energised** before measuring resistance.
+2.  For power calculations, confirm your load is **resistive** (e.g., not a motor or LED without a resistor).
+3.  Use **RMS values** for AC circuits with resistive loads.
+4.  Always **derate components**—choose resistors with at least double the calculated power rating.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+You’re powering an LED from a 9V battery. The LED has a forward voltage of 2.2V and you want 15mA of current.
+
+**Step 1**: Calculate voltage across the resistor  
+`9V - 2.2V = 6.8V`
+
+**Step 2**: Enter known values into the calculator  
+- Voltage = 6.8V  
+- Current = 0.015A (15mA)
+
+**Step 3**: The calculator returns:  
+- **Resistance** = 6.8 / 0.015 ≈ **453Ω** (use 470Ω standard value)  
+- **Power** = 6.8 × 0.015 = **0.102W**
+
+**Step 4**: Choose a **1/4W (0.25W) resistor**—it’s safely above 0.102W and follows derating best practices.
+
+This same process works for any DC circuit analysis.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What if I only know power and resistance?
+The calculator uses `I = √(P / R)` and `V = √(P × R)` to find current and voltage automatically.
+
+### Can this handle AC circuits?
+For **resistive AC loads** (like heaters), yes—input RMS voltage and current. For inductive or capacitive loads (motors, transformers), results are approximate only.
+
+### Why does my resistor get hot?
+It’s dissipating power as heat. If the calculated power is near the resistor’s rating (e.g., 0.24W on a 0.25W resistor), it will run hot. Always **derate**—use a higher-rated resistor.
+
+### How accurate are the resistor combination results?
+The calculator assumes ideal resistors. Real-world tolerances (±1%, ±5%) mean actual values may vary slightly.
+
+### Is this suitable for high-voltage circuits?
+The math is valid, but **never work on mains voltage without proper training and safety equipment**. This tool is for low-voltage DC projects unless you’re a qualified electrician.
+
+### What units should I use?
+- Voltage: **Volts (V)**
+- Current: **Amperes (A)** – enter mA as 0.015 for 15mA
+- Resistance: **Ohms (Ω)**
+- Power: **Watts (W)**
+</TabPanel>
+</Tabs>

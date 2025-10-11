@@ -1,0 +1,86 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **concrete calculator** helps you estimate the exact volume of concrete needed for slabs, footings, columns, and more—saving you money and preventing project delays. Whether you’re ordering ready-mix by the cubic yard or using bagged concrete for small jobs, this tool ensures you get the right amount every time.
+
+### How It Works
+The calculator uses geometric formulas based on your project shape:
+- **Slab/Footing**: `Length × Width × Thickness`
+- **Column**: `π × Radius² × Height`
+- **Stairs**: Sum of individual step volumes
+
+All inputs are converted to **cubic feet**, then to **cubic yards** (÷27) for ready-mix orders. For bagged concrete, it estimates the number of 60-lb or 80-lb bags needed.
+
+### Key Inputs
+- **Shape**: Select slab, footing, column, or stairs.
+- **Dimensions**: Enter length, width, thickness, diameter, or height.
+- **Waste Factor**: Add 5–15% for spillage and uneven ground (recommended: 10%).
+- **Bag Size**: Choose 60-lb or 80-lb for small projects.
+
+The tool instantly shows:
+- Volume in cubic feet and cubic yards
+- Recommended order quantity (with waste)
+- Number of concrete bags (if applicable)
+
+### How to Use
+1. Measure your formwork dimensions accurately.
+2. Select the correct shape.
+3. Enter all dimensions in feet or inches (the calculator handles conversion).
+4. Add a waste factor (default: 10%).
+5. Click **Calculate** to see your results.
+6. Use the output to place your order with confidence.
+
+Always double-check measurements—concrete can’t be returned!
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example: Patio Slab
+**Project**: 15 ft × 12 ft patio, 4" thick.
+
+**Inputs**:
+- Shape: Slab
+- Length: 15 ft
+- Width: 12 ft
+- Thickness: 4 in
+- Waste: 10%
+
+**Calculation**:
+- Thickness in feet: `4 ÷ 12 = 0.333 ft`
+- Volume: `15 × 12 × 0.333 = 60 ft³`
+- Cubic yards: `60 ÷ 27 = 2.22 yd³`
+- With waste: `2.22 × 1.10 = 2.44 yd³`
+
+**Result**: Order **2.5 cubic yards** of ready-mix concrete.
+
+For a small post hole (18" diameter, 24" deep), the calculator shows **3.5 ft³**, requiring **6 bags** of 80-lb concrete.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How do I convert inches to feet for thickness?
+Divide inches by 12. For example, 6" = 6 ÷ 12 = 0.5 ft. The calculator does this automatically if you select “inches.”
+
+### What waste factor should I use?
+Use **10%** for most projects. For complex shapes or uneven ground, use **15%**. For simple, well-formed slabs, **5%** may suffice.
+
+### How many bags of concrete do I need?
+- **60-lb bag** yields ~0.45 ft³  
+- **80-lb bag** yields ~0.60 ft³  
+The calculator divides your total volume by the bag yield and rounds up.
+
+### Can I calculate stairs with this tool?
+Yes. Enter the number of steps, tread depth, riser height, and width. The calculator sums the volume of all treads.
+
+### What if my slab is on a slope?
+Measure thickness at the high and low points, then use the **average**. For example, 4" and 6" → average = 5".
+
+### Should I order extra concrete?
+Yes. It’s cheaper to order 5–10% extra than to pay for a short-load delivery. The calculator includes this via the waste factor.
+
+### How accurate is this calculator?
+Very accurate—provided your measurements are correct. The formulas are standard engineering practice used by contractors.
+
+### Do I need to account for rebar?
+No. Rebar displaces less than 2% of concrete volume, which is ignored in standard estimates.
+</TabPanel>
+</Tabs>

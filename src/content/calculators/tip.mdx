@@ -1,0 +1,65 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Tip Calculator — Calculate Gratuities & Split Bills
+Our Tip Calculator takes the guesswork out of gratuities and group payments. Whether you’re dining solo or splitting a bill with friends, it instantly computes the right tip amount, total payment, and per-person share—customisable by percentage, pre-tax or post-tax base, and number of people.
+
+### How It Works
+- **Core Formula**: `Tip = Bill × Percentage`  
+- **Splitting Logic**: Divides total (bill + tip) equally or proportionally by number of people  
+- **Smart Defaults**: Pre-tax calculation (recommended), with common percentages (10%, 15%, 18%, 20%)
+
+### Key Features
+- **Flexible Base**: Choose to tip on pre-tax or total amount  
+- **Group Splitting**: Enter number of people for instant per-person totals  
+- **Round-Up Option**: Round tip or total to nearest pound/dollar for simplicity  
+- **Service Charge Alert**: Avoid double-tipping with clear guidance
+
+Perfect for restaurants, delivery, taxis, and salons in the UK, US, and beyond.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step: Splitting a Dinner Bill
+**Scenario**: You and three friends have a £80 meal (pre-tax). VAT is 20%. You want to leave a 15% tip on the pre-tax amount.
+
+1. **Enter Bill**: £80  
+2. **Select “Pre-tax”** as tip base  
+3. **Set Tip %**: 15%  
+4. **Enter People**: 4  
+5. **Calculate**:  
+   - Tip = £80 × 0.15 = **£12**  
+   - Total with tax and tip = £80 + £16 (VAT) + £12 = **£108**  
+   - Per person = £108 ÷ 4 = **£27**
+
+Use the calculator to adjust percentages, split unevenly, or add a service charge.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### Should I tip on tax?
+No—tip on the **pre-tax subtotal**. Tax is a government charge, not part of the service. Our calculator defaults to pre-tax for accuracy.
+
+### How do I avoid double-tipping?
+Check your receipt for an **automatic service charge** (common for groups of 6+). If present, no additional tip is needed.
+
+### Can I split the bill unevenly?
+The basic calculator splits equally. For itemised splits, calculate each person’s food share first, then apply the same tip percentage manually.
+
+### What’s a standard tip in the UK?
+10–15% if no service charge is added. Many UK restaurants include a 12.5% service charge—check your bill before adding more.
+
+### Does this work for delivery?
+Yes! Enter the delivery total and apply 10–15% for standard service, or more for bad weather or large orders.
+
+### Can I round the tip?
+Yes—use the “Round Up” option to round the tip or total to the nearest whole currency unit for cash payments.
+
+### Is tipping mandatory in the US?
+In full-service restaurants, **yes**—15–20% is expected. Servers rely on tips as part of their income.
+
+### How do I calculate tip without a calculator?
+- **10%**: Move decimal left once (£50 → £5)  
+- **20%**: Double that (£10)  
+- **15%**: Average of 10% and 20% (£7.50)
+</TabPanel>
+</Tabs>

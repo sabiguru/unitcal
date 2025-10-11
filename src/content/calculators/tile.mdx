@@ -1,0 +1,79 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Introduction
+Our **tile calculator** helps you estimate the number of tiles, thinset, and grout needed for any tiling project—floors, walls, or backsplashes. By accounting for **grout lines**, **waste factors**, and **layout complexity**, it ensures you order the right amount of materials from the start, avoiding costly mid-project shortages.
+
+### How It Works
+1. **Measures area** from your room dimensions
+2. **Adjusts for grout lines** to calculate effective tile coverage
+3. **Applies waste factor** based on your selected layout (straight, diagonal, herringbone)
+4. **Estimates thinset and grout** using industry-standard coverage rates
+
+### How to Use
+1. Enter **room length and width** (metric or imperial)
+2. Select **tile size** (or enter custom dimensions)
+3. Choose **grout width** (e.g., 2 mm, 1/8")
+4. Pick your **layout pattern** to set the waste factor
+5. The tool shows:
+   - Total area
+   - Number of tiles needed (with waste)
+   - Boxes required (based on common pack sizes)
+   - Estimated thinset and grout quantities
+
+Ideal for DIYers, tradespeople, and interior designers planning residential or commercial tiling projects.
+
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+**Scenario**: You’re tiling a **2.4 m × 1.8 m bathroom floor** with **300 mm × 300 mm tiles**, using **3 mm grout lines** in a **straight lay pattern**.
+
+**Steps**:
+1. Enter Room Dimensions: `2.4 m` × `1.8 m`
+2. Enter Tile Size: `300 mm` × `300 mm`
+3. Select Grout Width: `3 mm`
+4. Choose Layout: `Straight Lay` (10% waste)
+5. The calculator computes:
+   - Total Area: **4.32 m²**
+   - Effective Tile Area: **0.0918 m²**
+   - Base Tiles: **47**
+   - Final Tiles (with 10% waste): **52**
+   - Boxes (10 tiles/box): **6 boxes**
+   - Thinset: **~14 kg** (3.2 kg/m² × 4.32 m²)
+   - Grout: **~2.2 kg** (0.5 kg/m² × 4.32 m²)
+
+✅ **Result**: Order **6 boxes of tiles**, **15 kg thinset**, and **2.5 kg grout**.
+
+</TabPanel>
+
+<TabPanel title="FAQ">
+### Why does the calculator include grout lines?
+Grout lines take up space—ignoring them causes under-ordering. A 300 mm tile with 3 mm grout covers **2% less area** than its face size suggests.
+
+### How is the waste factor determined?
+- **Straight Lay**: 10% (simple cuts)
+- **Running Bond**: 15% (half-tile cuts)
+- **Diagonal/Herringbone**: 20%+ (45° cuts on every tile)
+
+### Can I use this for walls and backsplashes?
+Yes. Just enter the **height** instead of room width for backsplashes, or total wall area for full-height tiling.
+
+### What if my tiles are sold by the square metre?
+The calculator shows **total m² needed** (including waste), so you can order directly by area.
+
+### How accurate are the thinset and grout estimates?
+They’re based on **industry averages**. For precise amounts, check your product’s coverage chart—porous tiles or uneven substrates may require more.
+
+### Should I include the area under fixtures?
+Yes. Always tile the **entire floor**, including under toilets and cabinets, in case they’re moved later.
+
+### Can I calculate border or accent tiles?
+Not directly. Calculate the main field first, then measure the **perimeter** separately for border tiles.
+
+### What if my room has a bay window?
+Break the room into **rectangles**, calculate each section, and sum the totals manually.
+
+</TabPanel>
+</Tabs>

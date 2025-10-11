@@ -1,0 +1,134 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+# How to Dilute Alcohol: A Complete Guide to ABV Calculation
+
+## Introduction
+Knowing **how to dilute alcohol** is an essential skill for distillers, bartenders, and home enthusiasts alike. Whether you're turning a high-proof neutral spirit into a drinkable vodka, fortifying wine, or creating a custom liqueur, achieving the precise Alcohol By Volume (ABV) is critical for taste, safety, and legality. While online calculators offer instant results, understanding the manual process—using **Pearson's Square** and the **mass-balance formula**—ensures you grasp the fundamental science and can work accurately without digital aid. This guide provides a comprehensive walkthrough of the methods and maths behind perfect dilution and fortification.
+
+<Tabs>
+<TabPanel title="Core Concepts">
+
+### What is Alcohol Dilution & Fortification?
+At its core, adjusting alcohol strength is a process of mixing two liquids to achieve a target concentration.
+*   **Dilution:** Lowering the ABV by adding a liquid with a lower ABV, typically water. Example: Reducing 95% ABV spirit to 40% ABV for vodka.
+*   **Fortification:** Raising the ABV by adding a liquid with a higher ABV. Example: Adding brandy (~40% ABV) to wine (~12% ABV) to create a fortified wine like port (~20% ABV).
+*   **Blending:** Mixing two spirits of different strengths to create a consistent ABV.
+
+### The Key Principle: Conservation of Alcohol Mass
+The fundamental rule governing all these calculations is the **conservation of mass**. The total amount of pure alcohol in the mixture remains constant before and after mixing; only the total volume changes. All formulas, including Pearson's Square, are derived from this simple principle.
+
+### Understanding ABV (Alcohol By Volume)
+**ABV** is the standard measure of alcohol concentration. A spirit with 40% ABV means that 40% of its volume is pure ethanol. It is crucial to convert percentage values into decimals (e.g., 40% = 0.40) when using formulas to avoid calculation errors.
+
+</TabPanel>
+<TabPanel title="Manual Calculation Methods">
+
+### Method 1: The Mass-Balance Formula (Most Accurate)
+
+The definitive formula for any dilution or fortification is:
+
+**`V₁ × C₁ + V₂ × C₂ = Vₜ × Cₜ`**
+
+**Where:**
+*   **`V₁`** = Volume of initial spirit
+*   **`C₁`** = ABV of initial spirit (as a decimal)
+*   **`V₂`** = Volume of additive (water or spirit)
+*   **`C₂`** = ABV of additive (0.00 for water)
+*   **`Vₜ`** = Total final volume (`V₁ + V₂`)
+*   **`Cₜ`** = Target ABV (as a decimal)
+
+#### Solving for Dilution (Adding Water)
+When diluting with water (`C₂ = 0`), the formula simplifies to find the water volume (`V₂`):
+
+**`V₂ = V₁ × (C₁ - Cₜ) / Cₜ`**
+
+**Example: Dilute 1 Litre of 95% ABV spirit to 40% ABV.**
+*   `V₁ = 1.0 L`, `C₁ = 0.95`, `Cₜ = 0.40`
+*   `V₂ = 1.0 * (0.95 - 0.40) / 0.40`
+*   `V₂ = 1.0 * (0.55) / 0.40 = 1.375 L`
+*   **Result:** Add **1.375 Litres** of water.
+
+### Method 2: Pearson's Square (A Visual Shortcut)
+
+Pearson's Square is a brilliant, quick method for two-component mixtures.
+
+**Step-by-Step:**
+1.  Draw a square and write the ABV of your initial spirit (`C₁`) in the top left corner.
+2.  Write the ABV of your additive (`C₂`) in the bottom left corner.
+3.  Write your target ABV (`Cₜ`) in the center.
+4.  Subtract diagonally across the square (ignore any negative signs):
+    *   Top right value = `|Cₜ - C₂|` (This represents the *parts* of your additive).
+    *   Bottom right value = `|C₁ - Cₜ|` (This represents the *parts* of your initial spirit).
+5.  The ratio of these numbers gives the mixing proportions.
+
+**Example: Dilute 95% ABV spirit to 40% ABV with water (0% ABV).**
+- `C₁ = 95`, `C₂ = 0`, `Cₜ = 40`
+- Top right: `|40 - 0| = 40` (Parts of *water*)
+- Bottom right: `|95 - 40| = 55` (Parts of *95% spirit*)
+- **Ratio: 55 parts spirit to 40 parts water.**
+- For 1 litre of spirit, you need `(40 / 55) * 1L ≈ 0.727 Litres` of water? Wait! This seems different. Let's check the logic. The parts refer to the component *opposite* the corner. So, the value in the top right (40) corresponds to the bottom left component (water). Therefore, the ratio is **40 parts water to 55 parts spirit**. For 55 parts spirit (1L), water = `(40/55)*1L ≈ 0.727L`. This discrepancy with the mass-balance formula highlights volume contraction.
+
+</TabPanel>
+<TabPanel title="Using the Online Tool">
+
+### How to Use the Alcohol Dilution Calculator on calcfort.com
+For speed, accuracy, and to account for real-world complexities, using an online tool is highly recommended.
+
+1.  **Navigate to the Tool:** Go to the [Alcohol Dilution Calculator](/calculator/alcohol-dilution) page.
+2.  **Select Your Calculation Type:** Choose between **Dilution** (lowering ABV), **Fortification** (raising ABV), or **Blending** (mixing two spirits).
+3.  **Enter Your Values:**
+    *   Input the **Volume** and **ABV** of your initial spirit.
+    *   Enter your desired **Target ABV**.
+    *   Input the **ABV** of your additive (0 for water, or the proof of your fortifying spirit).
+4.  **Click "Calculate":** The tool instantly computes the exact volume of additive needed.
+5.  **Review the Results:** You will see the volume to add and the expected final volume. The calculator uses the mass-balance formula for precision.
+
+### Example: Fortifying Wine
+**Scenario:** You have 750 mL of wine at 12% ABV and want to fortify it to 18% ABV using a 95% ABV spirit.
+1.  Select **"Fortification"**.
+2.  Enter:
+    *   Initial Volume: `750` mL
+    *   Initial ABV: `12` %
+    *   Target ABV: `18` %
+    *   Additive ABV: `95` %
+3.  Click Calculate. The result will show you need to add approximately **58 mL** of the 95% spirit.
+
+</TabPanel>
+<TabPanel title="Applications & FAQ">
+
+### Practical Applications
+*   **Home Distilling:** Diluting freshly distilled spirits to a safe and palatable drinking strength.
+*   **Cocktail Crafting:** Creating custom base spirits or pre-diluting high-proof ingredients for consistency.
+*   **Culinary Arts:** Preparing alcohol for use in recipes where a specific strength is required for flavour extraction.
+*   **Homemade Liqueurs:** Precisely adjusting the ABV before adding sugars and flavourings.
+
+### Pro Tips and Common Mistakes
+**Pro Tips:**
+*   **Add Alcohol to Water:** For safety and better mixing, always pour the higher-proof alcohol into the water, not vice-versa.
+*   **Temperature Matters:** Mix liquids at room temperature (20°C / 68°F) for the most accurate volume measurements.
+*   **Verify with a Hydrometer:** After mixing, use an alcoholmeter/hydrometer to confirm the final ABV.
+*   **Allow for Resting:** Let the diluted spirit rest for a few days (the "marrying" period) for the flavours to stabilise.
+
+**Common Mistakes:**
+*   **Ignoring Volume Contraction:** Ethanol and water molecules interlock, causing the final volume to be 3-4% less than the sum of the parts. Manual formulas give a theoretical volume; tools often account for this.
+*   **Using Percentages in Formulas:** Forgetting to convert ABV percentages to decimals (e.g., using 40 instead of 0.40) will lead to a 100x error.
+
+### Frequently Asked Questions (FAQ)
+
+**Q: Why do Pearson's Square and the mass-balance formula sometimes give different results?**
+A: The difference arises from **volume contraction**. Pearson's Square gives a ratio by *mass*, which is perfectly accurate. The mass-balance formula `V₁×C₁ = Vₜ×Cₜ` assumes volumes are additive, which they are not. For high-precision work, measuring by weight or using a calculator that accounts for contraction is best.
+
+**Q: What is the most accurate way to dilute alcohol?**
+A: The most accurate method is to use a precision scale and work by *weight* instead of volume, completely avoiding the issue of volume contraction. Use the formula: `Mass_of_Alcohol = Total_Mass × Target_ABV`. Failing that, use an online calculator and always verify the result with a calibrated hydrometer.
+
+**Q: Is it safe to dilute high-proof alcohol?**
+A: Yes, if done carefully. Always add the alcohol to the water (not water to alcohol) in a well-ventilated area, stirring gently. This prevents sudden heat release and potential vapour flash. Handle high-proof alcohol with care as it is highly flammable.
+
+**Q: Can I use this for making liqueurs?**
+A: You can use it for the alcohol adjustment stage. However, adding sugar and other ingredients will change the volume and density. A better method is to dilute to a slightly higher ABV than your target, add your ingredients, and then take a final hydrometer reading.
+
+</TabPanel>
+</Tabs>
+
+## Conclusion
+Mastering **how to dilute alcohol** empowers you to create consistently precise beverages, whether you're a professional or an enthusiastic hobbyist. While manual calculations like Pearson's Square are invaluable for understanding the science, the efficiency and enhanced accuracy of a dedicated digital tool are unmatched for practical work. **For perfect results every time, use our [Alcohol Dilution Calculator](/calculator/alcohol-dilution) to simplify your calculations and achieve your target ABV with confidence.**

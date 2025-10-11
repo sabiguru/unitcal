@@ -1,0 +1,62 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Master the Japanese Soroban Abacus Online
+The soroban is a traditional Japanese 1:4 abacus that builds lightning-fast mental arithmetic skills through tactile, visual learning. Unlike digital calculators, it teaches the *logic* behind numbers using bead manipulation and complement rules. Our interactive soroban lets you drag beads or input numbers directly to practise addition, subtraction, and place value in real time.
+
+### How It Works
+- **Heaven bead** (top): worth **5** when moved down to the beam  
+- **Earth beads** (bottom): each worth **1** when moved up to the beam  
+- **Each rod** = a place value (units, tens, hundreds…)  
+- **Complement rules** (to 5 and 10) enable efficient carries/borrows  
+
+### How to Use This Calculator
+1. **Clear** the abacus (all beads away from beam)  
+2. **Set a number** by dragging beads or typing in the input box  
+3. **Perform calculations** by manipulating beads using complement logic  
+4. **Read the result** from the digital display above  
+
+This tool is perfect for students, educators, and anyone wanting to improve number sense and mental maths.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step: Adding 47 + 68 on the Soroban
+1. **Set 47**:  
+   - Tens rod: 4 earth beads up (4)  
+   - Units rod: 1 heaven bead down + 2 earth beads up (5 + 2 = 7)  
+2. **Add 60**:  
+   - Tens = 4 + 6 = 10 → **carry to hundreds**  
+   - Clear tens rod, add 1 to hundreds rod  
+3. **Add 8 to units**:  
+   - Units = 7 + 8 = 15 → **carry again**  
+   - Use complement: +8 = +10 – 2  
+   - Add 1 to tens rod (now 1), subtract 2 from units (7 – 2 = 5)  
+4. **Final result**: Hundreds = 1, Tens = 1, Units = 5 → **115**  
+
+Use the interactive abacus above to replicate this and feel the bead movements!
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is a 1:4 abacus?
+A 1:4 abacus (like the soroban) has **one upper bead** (value 5) and **four lower beads** (value 1 each) per rod. This streamlined design is optimised for base-10 calculations and forces efficient use of complement rules.
+
+### How do I clear the soroban?
+Move all **upper beads up** and all **lower beads down** so no beads touch the central beam. The digital readout should show **0**.
+
+### Can I use this for decimals?
+Yes. Simply decide which rod represents the decimal point (e.g., the middle rod). All rods to its right are fractional (tenths, hundredths, etc.). The calculation rules remain unchanged.
+
+### Why use a soroban instead of a calculator?
+The soroban builds **number intuition**, **concentration**, and **mental calculation skills**—benefits a standard calculator cannot provide. It’s a cognitive workout, not just a tool for answers.
+
+### Is this suitable for children?
+Absolutely. The visual, hands-on nature makes abstract maths concrete. It’s widely used in Japanese schools to develop foundational arithmetic fluency and focus.
+
+### How do I learn the complement rules?
+Start with small numbers:  
+- To add 6 when you have 4: **+6 = +10 – 4**  
+- To subtract 7 from 2: **–7 = –10 + 3**  
+Practise daily with our drills to internalise these patterns.
+</TabPanel>
+</Tabs>

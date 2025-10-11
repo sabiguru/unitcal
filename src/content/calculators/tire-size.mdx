@@ -1,0 +1,80 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Introduction
+Our **tyre size calculator** compares the physical dimensions of two tyre sizes to help you choose upgrades that fit safely and function correctly. By decoding sidewall markings like `225/45R17`, it calculates overall diameter, circumference, and revolutions per mile—so you can predict speedometer error, gearing changes, and clearance issues before you buy.
+
+### How It Works
+1. **Decodes tyre codes** (metric and flotation sizes)
+2. **Calculates key dimensions**:
+   - Overall diameter (inches/mm)
+   - Section width
+   - Circumference
+   - Revolutions per mile/km
+3. **Compares two sizes** to show:
+   - Absolute and percentage difference in diameter
+   - Speedometer error at 60/70 mph
+   - Clearance implications
+
+### How to Use
+1. Enter your **current tyre size** (e.g., `205/55R16`)
+2. Enter your **proposed new size** (e.g., `225/45R17`)
+3. The tool shows:
+   - Dimensions for both tyres
+   - Diameter difference (%)
+   - Speedometer error
+   - Fitment recommendation (within or outside 3% rule)
+
+Ideal for planning performance upgrades, winter tyres, or off-road conversions.
+
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+**Scenario**: Your car has **205/55R16** tyres. You’re considering **225/45R17**.
+
+**Steps**:
+1. Enter Current Size: `205/55R16`
+2. Enter New Size: `225/45R17`
+3. The calculator computes:
+   - **Current Diameter**: 24.88"
+   - **New Diameter**: 24.98"
+   - **Difference**: +0.1" (**+0.4%**)
+   - **Speedometer Error**: At 70 mph, actual speed = **70.3 mph**
+4. **Verdict**: ✅ **Safe upgrade**—well within the 3% rule.
+
+This change gives you a wider contact patch for better grip and a more aggressive look, with negligible impact on electronics or gearing.
+
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What does the 3% rule mean?
+It means your new tyre’s **overall diameter** should be within **±3%** of the original. This keeps speedometer error below ~2 mph at 70 mph and ensures ABS/traction control systems work correctly.
+
+### Can I compare metric and flotation sizes?
+Yes. Enter metric sizes as `225/45R17` and flotation sizes as `35x12.50R18`. The calculator handles both formats.
+
+### Why is my speedometer off after new tyres?
+Larger tyres travel farther per revolution, so your car’s computer **under-reads** speed. A 3% larger tyre makes your speedo read **3% slower** than actual speed.
+
+### Does this account for wheel offset?
+No. This calculator only compares **tyre dimensions**. Wheel offset affects lateral clearance and must be evaluated separately.
+
+### How accurate are the calculations?
+They use standard geometric formulas. Actual mounted dimensions may vary slightly by brand, model, and inflation—but the estimate is accurate enough for fitment planning.
+
+### Can I use this for winter tyres?
+Yes. Just ensure the overall diameter stays within 3% of your summer or all-season tyres to avoid recalibration.
+
+### What if my new size is outside the 3% rule?
+You’ll likely need to:
+- Recalibrate your speedometer (via OBD2 tool or dealer)
+- Check for ABS/stability control warnings
+- Verify physical clearance with a test fit
+
+### Do I need to change my spare tyre?
+If your spare is a **temporary "donut"**, it’s designed for short distances only and doesn’t need to match. If it’s a **full-size spare**, it should match your new tyres to avoid drivetrain stress (especially in AWD vehicles).
+
+</TabPanel>
+</Tabs>

@@ -1,0 +1,76 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Introduction
+Our **Western abacus calculator** is an interactive, online version of the classic 10-bead school abacus. It's designed to help children and beginners **visualise place value**, practice **counting**, and **perform addition and subtraction** with regrouping (carrying and borrowing). Each rod has 10 beads, perfectly mirroring the base-10 number system.
+
+### Core Features
+- **10 beads per rod**: All beads on a rod have the same value (1, 10, 100, etc.)
+- **Place value rods**: Units, tens, hundreds, thousands
+- **Regrouping support**: Visualise carrying and borrowing in real time
+- **Input options**: Click beads manually or type a number to auto-display
+- **Clear/reset**: Instantly return to zero
+
+### How to Use
+1. **Clear the abacus** to start from zero
+2. **Build a number** by clicking beads to move them to the active area (right side)
+3. **Perform addition** by moving more beads to the right
+4. **Perform subtraction** by moving beads back to the left
+5. **Regroup automatically**: When you have 10 beads on a rod, carry to the next; when borrowing, exchange 1 higher bead for 10 lower ones
+6. **Read the result** from the digital display above
+
+Ideal for home learning, classroom demonstrations, or building confidence in early arithmetic.
+
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step Example
+**Problem**: Add **27 + 15** using the Western abacus.
+
+**Steps**:
+1. **Set 27**:
+   - Click 2 beads on the **tens rod** (value = 20)
+   - Click 7 beads on the **units rod** (value = 7)
+2. **Add 5 to units**:
+   - Click 5 more beads on the units rod → total = 12 beads
+3. **Carry**:
+   - The calculator automatically carries: 10 units beads are cleared, and 1 bead is added to the tens rod
+   - Units now show **2**, tens show **3**
+4. **Add 1 to tens**:
+   - Click 1 more bead on the tens rod → tens now show **4**
+5. **Final result**: **42**
+
+✅ **Answer**: **42**
+
+This demonstrates how the abacus makes regrouping visible and intuitive.
+
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How do I represent the number 8?
+Move **8 beads** on the **units rod** to the active area (right side). Each bead = 1, so 8 beads = 8.
+
+### What is regrouping?
+**Regrouping** is exchanging 10 of a smaller unit for 1 of the next larger unit (e.g., 10 ones = 1 ten). It’s the foundation of carrying in addition and borrowing in subtraction.
+
+### Can I use this for decimals?
+Yes. The rod to the right of the units rod represents **tenths**, the next **hundredths**, etc. All operations work the same way.
+
+### How is this different from a soroban?
+The **Western abacus** has **10 beads per rod**, all of equal value, and is for **learning concepts**. The **soroban** (Japanese) has **1 upper + 4 lower beads** and is for **fast calculation** using complements.
+
+### Is this suitable for older students?
+Yes! It’s excellent for students who need to **reinforce place value** or struggle with regrouping. It’s also used in **special education** for its concrete, visual approach.
+
+### Can I do multiplication?
+You can model multiplication as **repeated addition** (e.g., 3 × 4 = 4 + 4 + 4). For larger products, it’s better to use a standard calculator once the concept is understood.
+
+### How do I clear the abacus?
+Click the **Clear** button, or manually move all beads back to the inactive area (left side).
+
+### Why is the Western abacus still relevant?
+Because it builds **number sense**—a deep, intuitive understanding of how numbers work. This foundation is critical for all future maths success, from fractions to algebra.
+
+</TabPanel>
+</Tabs>

@@ -1,0 +1,177 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+# How to Calculate Resistor Values — Color Codes, Series & Parallel
+
+## Introduction
+Resistors are the silent workhorses of every electronic circuit—limiting current, dividing voltage, and protecting sensitive components. Yet their small size belies a wealth of information and complexity. Learning **how to calculate resistor values** is essential for anyone building, repairing, or designing electronics. This comprehensive guide covers the three core skills: **decoding color bands** to determine resistance and tolerance, **combining resistors** in series and parallel to achieve custom values, and **sizing resistors for power** to prevent overheating and failure. With step-by-step examples, pro tips, and clear explanations of the underlying physics, you’ll gain the confidence to select, combine, and deploy resistors like a professional engineer.
+
+<Tabs>
+<TabPanel title="Complete Guide">
+## The Three Pillars of Resistor Mastery
+Every resistor calculation falls into one of three categories, each critical for circuit design and troubleshooting.
+
+### 1. Decoding Resistor Color Bands
+Resistors use a standardized color-coding system to indicate their value, tolerance, and sometimes temperature coefficient—without printing tiny numbers.
+
+#### 4-Band Resistors (Most Common)
+- **Band 1**: First significant digit  
+- **Band 2**: Second significant digit  
+- **Band 3**: Multiplier (number of zeros)  
+- **Band 4**: Tolerance (Gold = ±5%, Silver = ±10%)
+
+*Example*: **Brown, Black, Red, Gold**  
+- Brown = 1, Black = 0 → “10”  
+- Red = ×100 → 10 × 100 = **1,000 Ω (1kΩ)**  
+- Gold = ±5% → **1kΩ ±5%**
+
+#### 5-Band Resistors (Precision)
+- **Bands 1–3**: Three significant digits  
+- **Band 4**: Multiplier  
+- **Band 5**: Tolerance (Brown = ±1%, Red = ±2%)
+
+*Example*: **Red, Red, Black, Brown, Brown**  
+- 220 × 10 = **2,200 Ω (2.2kΩ) ±1%**
+
+#### 6-Band Resistors
+- Adds a **6th band** for **temperature coefficient** (e.g., Brown = 100 ppm/°C)
+
+> 💡 **Memory Aid**: **BB ROY Great Britain Very Good Wife**  
+> Black (0), Brown (1), Red (2), Orange (3), Yellow (4), Green (5), Blue (6), Violet (7), Grey (8), White (9)
+
+### 2. Combining Resistors: Series and Parallel
+When you can’t find the exact resistor value, combine standard ones.
+
+#### Series Connection
+- Current flows through one resistor after another.
+- **Total Resistance**: `R_total = R₁ + R₂ + R₃ + …`
+- *Use case*: Increase total resistance or voltage drop.
+
+#### Parallel Connection
+- Current splits across multiple paths.
+- **Total Resistance**: `1/R_total = 1/R₁ + 1/R₂ + 1/R₃ + …`
+- For **two resistors**: `R_total = (R₁ × R₂) / (R₁ + R₂)`
+- *Use case*: Decrease total resistance or increase power handling.
+
+> ⚠️ **Key Insight**: Parallel resistors always yield a total resistance **less than the smallest individual resistor**.
+
+### 3. Calculating Power Dissipation (Wattage)
+Resistors convert electrical energy into heat. Exceeding their power rating causes failure.
+
+#### Power Formulas (Ohm’s Law)
+- `P = V² / R` (best when you know voltage across resistor)
+- `P = I² × R` (best when you know current through resistor)
+- `P = V × I` (universal)
+
+#### The 2x Derating Rule
+- **Never** operate a resistor at its maximum rated power.
+- **Always choose a resistor with at least 2× the calculated power dissipation**.
+  - *Example*: 0.3W calculated → use **0.5W or 1W** resistor.
+
+> 🔥 **Why?** Derating ensures reliability, reduces thermal drift, and prevents fire risk in enclosed spaces.
+
+## Pro Tips & Common Mistakes
+- **Tolerance matters**: A 1kΩ ±5% resistor can be 950–1050Ω. Use ±1% for precision circuits (e.g., voltage dividers for sensors).
+- **Type selection**:
+  - **Carbon film**: General purpose, 5% tolerance
+  - **Metal film**: Low noise, 1% tolerance, stable
+  - **Wirewound**: High power (5W+)
+- **Voltage rating**: High-value resistors in high-voltage circuits (e.g., tube amps) can arc if voltage exceeds rating.
+- **Measure with a multimeter**: Color bands can fade; verify critical values before soldering.
+- **Combine for non-standard values**: Need 500Ω? Use two 1kΩ in parallel. Need 1.5kΩ? Use 1kΩ + 500Ω (two 1kΩ in parallel).
+
+## Practical Applications
+- **LED current limiting**: Calculate resistor to drop voltage and limit current.
+- **Voltage dividers**: Scale down sensor voltages for microcontrollers.
+- **Pull-up/pull-down resistors**: Set default logic states in digital circuits.
+- **Power supply filtering**: Combine with capacitors for RC networks.
+- **Fuse replacement**: Use a high-wattage resistor as a temporary fuse for testing.
+</TabPanel>
+
+<TabPanel title="Examples & Practice">
+## Worked Examples & Practice Problems
+
+### 1. Color Band Decoding
+Decode these resistors:
+1. **Yellow, Violet, Orange, Silver**  
+   → 47 × 1,000 = **47kΩ ±10%**
+2. **Brown, Black, Black, Red, Brown**  
+   → 100 × 100 = **10kΩ ±1%**
+3. **Red, Red, Black, Brown, Brown**  
+   → 220 × 10 = **2.2kΩ ±1%**
+
+### 2. Resistor Networks
+Calculate total resistance:
+1. **Series**: 220Ω + 470Ω + 1.2kΩ = **1,890Ω**
+2. **Parallel**: 100Ω // 100Ω = **50Ω**
+3. **Parallel**: 1kΩ // 2kΩ = (1000×2000)/(3000) ≈ **667Ω**
+4. **Series-Parallel**: 1kΩ + (2kΩ // 2kΩ) = 1kΩ + 1kΩ = **2kΩ**
+
+### 3. Power Sizing
+1. **12V across 470Ω**:  
+   `P = V²/R = 144 / 470 ≈ 0.306W` → Use **0.5W or 1W** resistor.
+2. **50mA through 100Ω**:  
+   `P = I²R = (0.05)² × 100 = 0.25W` → Use **0.5W** resistor.
+3. **5V, 100mA**:  
+   `R = V/I = 5 / 0.1 = 50Ω`, `P = V×I = 0.5W` → Use **1W** resistor.
+
+### 4. Custom Value Creation
+You need **750Ω** but only have 1kΩ resistors:
+- **Two in parallel**: 500Ω → too low
+- **Two in series**: 2kΩ → too high
+- **Solution**: Three 1kΩ in parallel = **333Ω** → not helpful  
+  **Better**: Use **3kΩ // 1.5kΩ**, but since you only have 1kΩ:  
+  → **Two 1kΩ in series = 2kΩ**  
+  → **Two 1kΩ in parallel = 500Ω**  
+  → **2kΩ // 500Ω = (2000×500)/2500 = 400Ω** → still not 750Ω  
+  **Practical answer**: Use a **680Ω or 820Ω** standard value—750Ω is not a standard E12 value.
+
+### Practice Challenge
+Design an LED circuit:
+- Supply: 9V
+- LED: 2.1V drop, 20mA current
+1. Calculate resistor value
+2. Calculate power dissipation
+3. Choose resistor type, tolerance, and wattage
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How do I read 4-band vs. 5-band resistors?
+- **4-band**: First two = digits, third = multiplier, fourth = tolerance. Used for 5–10% tolerance.
+- **5-band**: First three = digits, fourth = multiplier, fifth = tolerance. Used for 1% or better tolerance. The extra digit provides higher precision.
+
+### What happens if I use a resistor with too low a wattage?
+The resistor will **overheat**, potentially:
+- Drifting in value (changing circuit behavior)
+- Burning out (open circuit)
+- Catching fire (in extreme cases)  
+Always derate—use 2× the calculated power.
+
+### Why combine resistors in parallel?
+Two reasons:
+1. **Achieve non-standard values** (e.g., 500Ω from two 1kΩ)
+2. **Increase power handling** (two 0.5W resistors in parallel handle 1W total)
+
+### What is tolerance, and why does it matter?
+Tolerance is the allowed deviation from the stated resistance. A 1kΩ ±5% resistor can be 950–1050Ω. For non-critical uses (e.g., LED current limiting), 5% is fine. For precision circuits (e.g., sensor calibration), use 1% or 0.1%.
+
+### Can I use these formulas for AC circuits?
+Yes—for **resistive loads** (heaters, incandescent bulbs)—but use **RMS voltage and current**. For reactive loads (motors, capacitors), impedance and phase matter—Ohm’s Law alone is insufficient.
+
+### What does the temperature coefficient mean?
+It indicates how much resistance changes with temperature (in ppm/°C). A 1000Ω resistor with 100 ppm/°C changes by 0.1Ω per 1°C rise. Critical for precision instrumentation.
+
+### How do I measure an unknown resistor?
+Use a **digital multimeter (DMM)** in resistance mode. Disconnect it from the circuit first—measuring in-circuit gives false readings due to parallel paths.
+
+### Are carbon and metal film resistors interchangeable?
+Not always. Metal film has lower noise, better stability, and tighter tolerance—ideal for audio and precision circuits. Carbon film is cheaper and fine for power supplies or digital pull-ups.
+</TabPanel>
+</Tabs>
+
+## Related Calculators
+- [Ohm's Law Calculator](/calculator/ohms-law) – Calculate voltage, current, and resistance
+- [Electrical Calculator](/calculator/electrical) – Analyze complex circuits
+- [Capacitor Calculator](/calculator/capacitor) – For RC time constants
+
+## Call to Action
+Stop guessing resistor values. Decode bands, calculate networks, and size for safety—build circuits that work reliably, every time.

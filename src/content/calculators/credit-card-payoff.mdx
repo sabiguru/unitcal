@@ -1,0 +1,83 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **credit card payoff calculator** helps you create clear, actionable debt repayment plans to become debt-free. By entering your current balances, APRs, and monthly payments, you’ll see exactly how long it will take to pay off your debt, how much interest you’ll pay, and how much you can save by making extra payments. The tool also lets you compare the **debt avalanche** (highest interest first) and **debt snowball** (smallest balance first) strategies side by side—so you can choose the approach that fits your personality and financial goals.
+
+### How It Works
+The calculator uses the standard loan amortisation formula to model your payoff timeline:
+**`N = -log(1 - (r × B) / P) / log(1 + r)`**  
+Where **`N`** is months to payoff, **`r`** is the monthly interest rate (APR ÷ 12), **`B`** is your balance, and **`P`** is your monthly payment.
+
+For multiple cards, it simulates both payoff strategies:
+- **Avalanche**: Minimises total interest by targeting the highest APR first.
+- **Snowball**: Builds motivation by clearing the smallest balance first.
+
+### Key Inputs
+- **Card details**: Balance, APR, and minimum payment for each card.
+- **Monthly budget**: Total amount you can pay toward debt each month.
+- **Extra payments**: One-time or recurring additional payments.
+- **Strategy**: Choose avalanche, snowball, or custom order.
+
+The tool instantly shows:
+- Months to debt freedom
+- Total interest paid
+- Monthly payment schedule
+- Savings from extra payments
+
+### How to Use
+1. List all your credit card debts.
+2. Enter each balance, APR, and minimum payment.
+3. Input your total monthly debt budget.
+4. Select your preferred payoff strategy.
+5. Click **Calculate** to see your payoff plan.
+6. Adjust inputs to model different scenarios (e.g., higher payments, balance transfers).
+
+Always aim to pay **more than the minimum**—even £20 extra/month can save hundreds in interest.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Two credit cards:
+- **Card A**: £2,000 balance, 29.9% APR, £60 minimum
+- **Card B**: £4,500 balance, 19.9% APR, £135 minimum
+- **Total monthly budget**: £300
+
+**Avalanche Method** (pay Card A first):
+- Pay £205 to Card A, £95 to Card B (minimums covered)
+- Card A paid off in **12 months**
+- Total payoff time: **28 months**
+- Total interest: **£1,120**
+
+**Snowball Method** (pay Card A first—same order here):
+- Same result since Card A is both smallest and highest APR
+
+If Card B were £800, snowball would prioritise it first, costing slightly more in interest but providing a quicker first win.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is the debt avalanche method?
+The **debt avalanche** method prioritises paying off the debt with the **highest interest rate first** while making minimum payments on others. It minimises total interest paid and is the most mathematically efficient strategy.
+
+### What is the debt snowball method?
+The **debt snowball** method prioritises the **smallest debt balance first**. It provides quick psychological wins, which can help you stay motivated to continue paying off larger debts.
+
+### How much can I save with extra payments?
+Even small extra payments save significant interest. For example, adding £50/month to a £4,000 balance at 24% APR can save **£500+ in interest** and cut **12 months** off your payoff time.
+
+### Should I pay off high-interest or small-balance cards first?
+If you’re disciplined, **high-interest first** (avalanche) saves money. If you need motivation, **small-balance first** (snowball) builds momentum. Both are valid—consistency matters most.
+
+### Can I include a balance transfer?
+Yes. Enter the new balance and 0% APR for the promotional period. The calculator will show if you can pay it off before the rate reverts.
+
+### What if I can only pay the minimum?
+Paying only the minimum can take **decades** and cost more in interest than the original debt. Use the calculator to see how even a small increase (e.g., £20/month) dramatically shortens your timeline.
+
+### Does this work for store cards?
+Yes. Store cards often have very high APRs (25–35%), making them prime targets for the avalanche method.
+
+### Is my data saved?
+No. All calculations happen in your browser. We don’t store or track your financial information.
+</TabPanel>
+</Tabs>

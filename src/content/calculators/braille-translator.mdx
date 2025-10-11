@@ -1,0 +1,70 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+
+## What is a Braille Translator?
+
+A **Braille translator** is a specialised accessibility tool that converts standard text into braille and braille back into text. It supports the creation of accessible materials for people who are blind or visually impaired. Modern translators handle **Unified English Braille (UEB)**, the current standard, and can work with both **Grade 1 (uncontracted)** and **Grade 2 (contracted)** braille. Grade 1 is a direct letter-for-letter translation, while Grade 2 uses abbreviations and contractions to save space and increase reading speed. This tool is essential for educators, transcribers, and anyone committed to making information accessible.
+
+## How Braille Translation Works
+
+Braille uses a cell of six raised dots in various combinations to represent letters, numbers, and punctuation. The translator follows a set of complex linguistic rules to convert text accurately.
+
+**The Translation Process:**
+1.  **Text Analysis:** The software analyses the input text for words, punctuation, and formatting.
+2.  **Rule Application:** For Grade 2 translation, it applies hundreds of rules for contractions and abbreviations (e.g., "the" becomes a single braille character).
+3.  **Character Mapping:** Each character or word segment is mapped to its corresponding braille cell(s).
+4.  **Output Generation:** The final braille is displayed using Unicode symbols, which can be interpreted by screen readers or sent to braille embossers.
+
+## How to Use This Translator
+
+Our online **braille converter** is designed for ease of use.
+
+1.  **Enter Text.** Type or paste the text you want to translate into the input box.
+2.  **Select Grade (Optional).** Choose between Grade 1 and Grade 2 translation. Grade 2 is recommended for general use as it is the publishing standard.
+3.  **Translate to Braille.** Click the "Translate" button to convert your text into braille symbols.
+4.  **Translate from Braille (Optional).** Use the reverse translation feature to convert braille back to text, which is useful for verification.
+
+</TabPanel>
+<TabPanel title="Example">
+
+## Translation Examples
+
+See how different types of text are converted into braille.
+
+**Example 1: Simple Phrase (Grade 2)**
+- **Input Text:** "Hello world"
+- **Braille Output:** ⠠⠓⠑⠇⠇⠕ ⠺⠕⠗⠇⠙
+- **Explanation:** The capital 'H' is indicated by the capital sign (⠠). "World" is contracted to ⠺⠕⠗⠇⠙.
+
+**Example 2: Grade 1 vs. Grade 2**
+- **Text:** "I will go to the park."
+- **Grade 1:** ⠠⠊ ⠺⠊⠇⠇ ⠛⠕ ⠞⠕ ⠞⠓⠑ ⠏⠁⠗⠅⠲
+- **Grade 2:** ⠠⠊ ⠺ ⠛ ⠞ ⠮ ⠏⠜⠅⠲
+- **Note:** Grade 2 is much shorter due to contractions for "will" (⠺), "go" (⠛), "to" (⠞), and "the" (⠮).
+
+### Try It Yourself
+*   Translate your name into Grade 1 braille.
+*   Write a short sentence and compare the Grade 1 and Grade 2 outputs.
+*   **Use the translator above to experiment with different texts!**
+
+</TabPanel>
+<TabPanel title="FAQ">
+
+## Frequently Asked Questions
+
+### What is the difference between Grade 1 and Grade 2 Braille?
+Grade 1 Braille is a direct, letter-for-letter transcription of text. It is mainly for beginners. Grade 2 Braille uses a system of contractions (short forms for common words and letter combinations) to make reading faster and reduce the space needed for braille documents. Grade 2 is the standard for most books and publications.
+
+### How accurate is this braille translator?
+Our translator is highly accurate for standard text using Unified English Braille (UEB) rules. It correctly handles contractions, punctuation, and basic formatting. For highly technical content (e.g., complex mathematics or music notation), specialised braille codes are needed which may not be fully supported.
+
+### Can I use this to create physical braille documents?
+The braille output uses Unicode characters, which can be copied and used in word processors. To create physical braille (embossed paper), you need specialised software that can convert the text into a file format (like .BRF) that braille embossers can read. Our tool is a great first step in this process.
+
+### How are numbers shown in braille?
+Numbers in braille are represented using the same dots as the letters a-j, but they are preceded by a number sign (⠼). For example, the number 1 is written as ⠼⠁ (number sign + 'a'), and 5 is ⠼⠑ (number sign + 'e').
+
+</TabPanel>
+</Tabs>

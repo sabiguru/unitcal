@@ -1,0 +1,87 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **heart rate calculator** helps you determine your personalised target heart rate zones for optimal cardiovascular training. By inputting your age and resting heart rate, you’ll get precise ranges for five training intensities—from easy recovery to maximum effort—using either the standard **% of max HR** method or the more accurate **Karvonen (Heart Rate Reserve)** method. Whether you’re a beginner building endurance or an athlete fine-tuning performance, these zones ensure every workout is purposeful and effective.
+
+### How It Works
+The calculator uses two established methods:
+- **% of Max HR**: `Target HR = % × (220 – Age)`  
+- **Karvonen Method**: `Target HR = (% × (Max HR – Resting HR)) + Resting HR`
+
+It then defines five zones:
+- **Zone 1 (50–60%)**: Recovery  
+- **Zone 2 (60–70%)**: Aerobic/fat-burning  
+- **Zone 3 (70–80%)**: Tempo  
+- **Zone 4 (80–90%)**: Threshold  
+- **Zone 5 (90–100%)**: VO₂ max  
+
+### Key Inputs
+- **Age**: For max HR estimation
+- **Resting Heart Rate**: Measured first thing in the morning (optional but recommended)
+- **Method**: Choose %MHR (simple) or Karvonen (personalised)
+
+The tool instantly shows:
+- Your estimated max HR
+- All five target zones in BPM
+- A visual chart of your training spectrum
+- Guidance on when to use each zone
+
+### How to Use
+1. Enter your **age** (required)
+2. Input your **resting heart rate** (for Karvonen method)
+3. Select your preferred **calculation method**
+4. Click **Calculate** to see your zones
+5. Use the results to plan workouts, monitor intensity, and track fitness progress
+
+For best accuracy, measure RHR over several mornings and use a chest strap heart rate monitor during exercise.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: A 35-year-old runner with a resting heart rate of 55 bpm.
+
+**Inputs**:
+- Age: 35
+- Resting HR: 55 bpm
+- Method: Karvonen
+
+**Calculation**:
+1. **Max HR**: `220 – 35 = 185 bpm`
+2. **Heart Rate Reserve**: `185 – 55 = 130 bpm`
+3. **Zone 2 (60–70%)**:  
+   - Lower: `(130 × 0.6) + 55 = 133 bpm`  
+   - Upper: `(130 × 0.7) + 55 = 146 bpm`
+4. **Zone 4 (80–90%)**:  
+   - Lower: `(130 × 0.8) + 55 = 159 bpm`  
+   - Upper: `(130 × 0.9) + 55 = 172 bpm`
+
+**Result**: For endurance runs, stay between **133–146 bpm**. For interval training, push to **159–172 bpm**.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is the Karvonen method?
+The **Karvonen method** calculates target heart rate using your **heart rate reserve** (max HR minus resting HR), then adds back your resting HR. This personalised approach accounts for your fitness level, making it more accurate than simple % of max HR.
+
+### How do I measure my resting heart rate?
+Measure first thing in the morning before getting out of bed. Count your pulse for 60 seconds (or 30 seconds × 2). Repeat for 3–5 days and use the average. A normal RHR is 60–100 bpm; athletes often have 40–60 bpm.
+
+### Which method should I use?
+Use **Karvonen** if you know your resting heart rate—it’s more accurate. Use **% of max HR** for a quick estimate if you don’t have an RHR measurement.
+
+### Why is my max heart rate different from 220 minus my age?
+The `220 – age` formula is a population average. Your true max HR can be 10–15 bpm higher or lower. For precise training, consider a field test or lab assessment—but never attempt max HR testing without medical clearance.
+
+### Can I use this for cycling or swimming?
+Yes, but note that heart rate is typically **10–15 bpm lower in cycling** and hardest to measure in swimming due to water pressure. For serious multi-sport training, establish sport-specific zones.
+
+### How often should I update my zones?
+Recalculate every **3–6 months**, or whenever your resting heart rate changes significantly. As fitness improves, your RHR decreases, shifting your zones upward.
+
+### What if I’m on heart medication?
+Beta-blockers and other cardiac medications can lower your max HR. **Consult your doctor** before using HR-based training if you’re on medication. Perceived exertion may be a safer guide.
+
+### Is heart rate the best way to measure intensity?
+Heart rate is excellent for steady-state cardio but lags during intervals. Combine it with **perceived exertion** and **power/speed metrics** for a complete picture of intensity.
+</TabPanel>
+</Tabs>

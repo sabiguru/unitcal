@@ -1,0 +1,83 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **NPV & IRR calculator** helps you evaluate investment projects by calculating **Net Present Value (NPV)** and **Internal Rate of Return (IRR)** from a series of cash flows. Simply input your initial investment, future cash inflows/outflows, and discount rate to determine if a project will create value (NPV > 0) or meet your return requirements (IRR > hurdle rate). This tool is essential for business owners, investors, and finance students making capital budgeting decisions.
+
+### How It Works
+The calculator uses standard discounted cash flow (DCF) formulas:
+- **NPV**: `Σ [CFₜ / (1 + r)ᵗ]`  
+- **IRR**: The rate `r` where NPV = 0 (solved iteratively)
+
+It also provides:
+- **Profitability Index (PI)**: Value per dollar invested
+- **Payback Period**: Time to recover initial investment
+- **XIRR support**: For irregular cash flows with exact dates
+
+### Key Features
+- **Cash Flow Table**: Enter up to 20 years of cash flows
+- **Sensitivity Analysis**: See how NPV changes with ±10% cost/cash flow adjustments
+- **Mutually Exclusive Comparison**: Evaluate two projects side-by-side
+- **Exportable Results**: Download your analysis as CSV
+
+### How to Use
+1. Enter your **initial investment** (negative cash flow in Year 0)
+2. Add **future cash flows** (positive for inflows, negative for outflows)
+3. Input your **discount rate** (hurdle rate or cost of capital)
+4. Click **Calculate** to see NPV, IRR, PI, and payback period
+5. Use **Sensitivity Analysis** to stress-test your assumptions
+
+This tool transforms complex financial analysis into actionable insights—so you can invest with confidence.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Evaluating a $100,000 equipment purchase.
+
+**Inputs**:
+- Year 0: –$100,000
+- Years 1–5: +$30,000/year
+- Discount Rate: 10%
+
+**Calculation**:
+- **NPV**: –100,000 + 30,000/1.1 + ... + 30,000/1.1⁵ = **$13,724**  
+- **IRR**: **15.2%**  
+- **PI**: (13,724 + 100,000) / 100,000 = **1.14**  
+- **Payback**: 3.33 years
+
+**Conclusion**:  
+Accept the project—NPV > 0, IRR > 10%, and PI > 1.0.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is a good IRR?
+A “good” IRR exceeds your **hurdle rate** (e.g., 10–12% for moderate-risk projects). For context:
+- **Safe investments**: 3–5% (bonds)
+- **Stock market**: 7–10% historical average
+- **Venture capital**: 25%+ (high risk)
+
+### Why is NPV better than IRR?
+NPV measures **absolute value creation** ($), while IRR measures **percentage return** (%). For mutually exclusive projects, NPV avoids IRR’s scale and timing biases—making it the gold standard for value-maximizing decisions.
+
+### Can I use this for irregular cash flows?
+Yes! Use the **XIRR** mode—enter exact dates for each cash flow (e.g., “Jan 15, 2025” for initial investment, “Mar 30, 2026” for first inflow). This is critical for angel investing, real estate, or any non-annual cash flows.
+
+### What if my cash flows change sign multiple times?
+You may get **multiple IRRs** or “No IRR.” In these cases, **rely on NPV**—calculate it at your hurdle rate to decide. NPV remains reliable even when IRR fails.
+
+### How do I choose a discount rate?
+Use your **cost of capital**:
+- **Businesses**: WACC (Weighted Average Cost of Capital)
+- **Individuals**: Expected return on alternative investments (e.g., 7% for S&P 500)
+- **Adjust for risk**: Add 3–5% for high-risk projects
+
+### Does this account for taxes?
+No—input **after-tax cash flows** for accuracy. Taxes significantly impact project economics, so model them separately before entering cash flows here.
+
+### What’s the difference between PI and NPV?
+**NPV** shows total value added ($). **PI** (Profitability Index) shows value per dollar invested (NPV / Initial Investment). Use PI when capital is rationed; use NPV when maximizing total value.
+
+### Is this calculator accurate for real-world decisions?
+Yes—for **financial modeling**. However, always pair it with qualitative analysis (market risk, execution risk, strategic fit). The calculator assumes cash flow estimates are accurate—garbage in, garbage out!
+</TabPanel>
+</Tabs>

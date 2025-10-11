@@ -1,0 +1,70 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+Our **countdown timer** creates a live, real-time countdown to any future event or deadline. Whether you’re anticipating a wedding, launching a product, or tracking a personal goal, this tool displays the exact time remaining in days, hours, minutes, and seconds—and automatically adjusts for your time zone to ensure global accuracy.
+
+### How It Works
+The timer calculates the difference between the **current time** (from your device or a synced time server) and your **target date and time**. It then breaks this duration into readable units and updates every second for a live ticking effect.
+
+Key features include:
+- **Time zone awareness**: Set the event time in its local time zone (e.g., “New York”), and the timer shows the correct countdown for viewers worldwide.
+- **Daylight Saving Time (DST) handling**: Automatically adjusts for DST changes using global time zone rules.
+- **Shareable links**: Generate a unique URL to share your countdown with anyone.
+- **Embed code**: Insert the timer directly into your website or blog.
+- **Finale actions**: Play a sound, show a message, or trigger an animation when time runs out.
+
+### How to Use
+1. Enter your **event name** (e.g., “Product Launch”).
+2. Set the **target date and time**.
+3. Select the **correct time zone** (critical for accuracy).
+4. Click **Create Timer**.
+5. Use the **Share** button to send the link or **Embed** to add it to your site.
+
+Always set the time zone to where the **event is happening**, not your current location—this ensures everyone counts down to the same global moment.
+</TabPanel>
+
+<TabPanel title="Example">
+### Step-by-Step Example
+**Scenario**: Countdown to a webinar on **10 July 2025 at 2:00 PM BST (London time)**.
+
+**Steps**:
+1. Event Name: “Q3 Strategy Webinar”
+2. Date: 10 July 2025
+3. Time: 14:00
+4. Time Zone: `Europe/London`
+
+**Result**:  
+- A viewer in London sees: “3 days, 5 hours…”  
+- A viewer in New York sees: “3 days, 0 hours…” (since it’s 9 AM there)  
+- Both reach zero at the **exact same universal time**
+
+**Use**: Share the link in your email invite so all attendees know precisely when to join.
+</TabPanel>
+
+<TabPanel title="FAQ">
+### How do I set the correct time zone?
+Always choose the time zone **where the event is taking place**. For example, if your wedding is in Paris, select `Europe/Paris`. The timer will then show the correct countdown for guests in Tokyo, Sydney, or Los Angeles.
+
+### Can I embed this timer on my website?
+Yes. After creating your timer, click **Embed** to get an HTML code snippet. Paste this into your website’s HTML to display the live countdown directly on your page.
+
+### What happens when the timer reaches zero?
+You can configure the finale: display a custom message (e.g., “It’s live!”), play a sound, show confetti, or redirect to a URL. By default, it stops ticking and shows “00:00:00:00”.
+
+### Does it work on mobile phones?
+Yes. The timer is fully responsive and works seamlessly on smartphones, tablets, and desktops.
+
+### Is the timer accurate across time zones?
+Yes. It uses Coordinated Universal Time (UTC) as a reference and applies IANA time zone rules, including Daylight Saving Time adjustments, so all users see the correct remaining time to the same global event.
+
+### Can I create multiple timers?
+Yes. You can create as many timers as you need—for different events, deadlines, or goals. Each has its own unique shareable link.
+
+### What if I enter a past date?
+The timer will show a negative countdown (e.g., “-2 days”) to indicate the event has already passed. You can edit or delete it.
+
+### Do I need to keep the page open?
+No. The countdown is based on absolute time, not your session. You can close the tab and reopen the link later—the timer will instantly show the correct remaining time.
+</TabPanel>
+</Tabs>

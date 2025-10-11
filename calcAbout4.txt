@@ -1,0 +1,59 @@
+{
+calc name: Equation Solver
+calc url: /calculator/equation-solver
+Calc features: Solve linear and quadratic equations, Step-by-step solution display, Multiple equation formats support, Variable isolation and manipulation, Graphical representation of solutions, Equation validation and error checking, Support for complex numbers in solutions
+}
+
+{
+calc name: EV Range Calculator
+calc url: /calculator/ev-range
+Calc features: Calculate electric vehicle range and efficiency, Battery capacity and consumption rate inputs, Driving conditions adjustments (city, highway, mixed), Weather impact on range (temperature effects), Charging time calculations, Cost per mile/km calculations, Range anxiety mitigation tools
+}
+
+{
+calc name: Fitness Calculator
+calc url: /calculator/fitness
+Calc features: Calculate one-rep max (1RM) from submaximal lifts, Calorie burn estimation for various activities, Running pace and speed conversions, VO2 max estimations, Training zone calculations, Body composition measurements, Fitness goal tracking and recommendations
+}
+
+{
+calc name: Fraction Calculator
+calc url: /calculator/fraction
+Calc features: Add, subtract, multiply, and divide fractions, Mixed number and improper fraction conversions, Fraction simplification and reduction, Decimal to fraction conversions, Common denominator calculations, Step-by-step fraction arithmetic, Visual fraction representations
+}
+
+{
+calc name: Fuel Cost Calculator
+calc url: /calculator/fuel-cost
+Calc features: Calculate trip fuel costs and efficiency, Distance and fuel price inputs, Vehicle MPG/fuel consumption settings, Route-based cost estimations, Fuel efficiency comparisons between vehicles, Cost per mile/kilometer calculations, Fuel savings projections
+}
+
+{
+calc name: Golf Balls in Boeing 747
+calc url: /calculator/golf-balls-boeing-747
+Calc features: Calculate theoretical number of golf balls that fit in a Boeing 747, Aircraft interior volume calculations, Golf ball packing efficiency considerations, Different packing arrangements (random, optimal), Visual representations of the calculation, Fun facts about the Boeing 747 and golf balls
+}
+
+{
+calc name: GPA Calculator
+calc url: /calculator/gpa
+Calc features: Calculate Grade Point Average from course grades, Support for different grading scales (4.0, 5.0, letter grades), Credit hour weighting, Cumulative GPA calculations, Semester and overall GPA tracking, Grade requirements for target GPA, What-if scenario analysis
+}
+
+{
+calc name: Graphing Calculator
+calc url: /calculator/graphing
+Calc features: Plot mathematical functions and equations, Support for multiple function types (linear, quadratic, trigonometric, logarithmic), Interactive graph with zoom and pan, Function intersection calculations, Derivative and integral visualizations, Multiple functions on same graph, Grid and axis customization
+}
+
+{
+calc name: Heart Rate Calculator
+calc url: /calculator/heartrate
+Calc features: Calculate target heart rate zones for exercise, Age-based maximum heart rate estimation, Training zone calculations (fat burn, cardio, peak), Resting heart rate considerations, Karvonen formula implementation, Zone-specific workout recommendations, Heart rate monitoring guidance
+}
+
+{
+calc name: Interest Calculator
+calc url: /calculator/interest
+Calc features: Calculate simple and compound interest, Principal, rate, and time period inputs, Interest earning projections, Comparison between simple and compound interest, Different compounding frequencies, Future value calculations, Interest rate conversions (annual, monthly, daily)
+}

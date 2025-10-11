@@ -1,0 +1,65 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+<Tabs>
+<TabPanel title="Quick Guide">
+## Space Weight Calculator — Your Weight on Planets & Moons
+Discover what you’d weigh on the Moon, Mars, Jupiter, and other celestial bodies with our Space Weight Calculator. This tool demonstrates a key physics principle: while your **mass** stays constant, your **weight** changes with gravity. Simply enter your Earth weight, and the calculator instantly shows your weight across the solar system using real NASA gravity data.
+
+### How It Works
+- **Core Formula**: `Weight_new = Weight_earth × (g_new / g_earth)`  
+- **Gravity Ratios**: Pre-loaded with accurate surface gravity values for planets, moons, and dwarf planets.
+- **Units**: Works with pounds (lb) or kilograms (kg)—interpreted as Earth weight (force).
+
+### Why It Matters
+- **Educational**: Perfect for students learning Newtonian physics and the mass/weight distinction.
+- **Curiosity**: Satisfy your wonder about life on other worlds.
+- **Space Enthusiasts**: Understand the real challenges of human spaceflight and planetary exploration.
+
+This calculator is ideal for classrooms, science fairs, and anyone fascinated by our solar system.
+</TabPanel>
+
+<TabPanel title="Example">
+## Step-by-Step: Calculating Weight on Mars
+**Scenario**: You weigh **150 pounds** on Earth. What would you weigh on Mars?
+
+1. **Enter 150** as your Earth weight.
+2. **Select Mars** from the celestial body list.
+3. **The calculator applies Mars’ gravity ratio (0.38)**:
+   - `150 lb × 0.38 = 57 lb`
+4. **Result**: You would weigh **57 pounds** on Mars—less than half your Earth weight!
+
+Try it with Jupiter (2.53×) to see how heavy you’d feel, or Pluto (0.06×) to feel nearly weightless!
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What’s the difference between mass and weight?
+**Mass** is the amount of matter (constant everywhere). **Weight** is the force of gravity on that mass (changes with location). This calculator shows your *weight* on other worlds, not your mass.
+
+### Are the gravity values accurate?
+Yes. We use standard surface gravity ratios from NASA and the International Astronomical Union (IAU). For gas giants, gravity is given at the 1-bar atmospheric level.
+
+### Why is my weight on Saturn almost the same as on Earth?
+Saturn is massive (95× Earth), but its large radius dilutes surface gravity. At its cloud-top “surface,” gravity is only **1.07× Earth’s**.
+
+### Can I use kilograms?
+Yes—but note: if you enter **70 kg**, the calculator treats it as your *Earth weight* (like 70 kgf), not mass. Your mass would actually be ~70 kg, and your Earth weight ~686 N.
+
+### Does this work for the Sun?
+Technically yes (gravity ratio = 27.9), but you couldn’t stand on the Sun—it’s a plasma ball with no solid surface. The value is included for educational comparison.
+
+### How is the Moon’s gravity so low?
+The Moon has only **1.2% of Earth’s mass** and **27% of Earth’s radius**, resulting in **1/6th Earth’s gravity**.
+
+### Is there gravity in space?
+Yes! Astronauts in orbit experience **microgravity** because they’re in freefall around Earth—not because gravity is absent. At the ISS’s altitude, gravity is still ~90% of Earth’s surface strength.
+
+### Can I calculate weight on exoplanets?
+Not in this tool—but if you know an exoplanet’s mass and radius, you can estimate its gravity using `g ∝ M/R²`.
+
+### Why do gas giants have “surface” gravity?
+Since they lack a solid surface, scientists define “surface” gravity at the atmospheric pressure level of **1 bar** (equal to Earth’s sea-level pressure).
+
+### Is this suitable for school projects?
+Absolutely. It’s a safe, engaging way to teach Newton’s laws, gravity, and planetary science. Try comparing weights across all planets to see the solar system’s diversity!
+</TabPanel>
+</Tabs>
