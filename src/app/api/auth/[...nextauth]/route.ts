@@ -7,7 +7,7 @@ import bcrypt from 'bcryptjs';
 import { prisma } from '@/lib/prisma';
 
 const handler = NextAuth({
-  adapter: PrismaAdapter(prisma),
+  adapter: process.env.DATABASE_URL ? PrismaAdapter(prisma) : undefined,
   providers: [
     CredentialsProvider({
       name: 'credentials',
@@ -22,57 +22,62 @@ const handler = NextAuth({
           return null;
         }
 
-        // If verification token is provided (from email verification flow)
-        if (credentials.verificationToken) {
-          const user = await prisma.user.findUnique({
-            where: {
-              email: credentials.email
+        try {
+          // If verification token is provided (from email verification flow)
+          if (credentials.verificationToken) {
+            const user = await prisma.user.findUnique({
+              where: {
+                email: credentials.email
+              }
+            });
+
+            if (!user) {
+              return null;
             }
-          });
 
-          if (!user) {
-            return null;
+            return {
+              id: user.id,
+              email: user.email,
+              name: user.name,
+              image: user.image,
+              rememberMe: credentials.rememberMe === 'true',
+            };
           }
 
-          return {
-            id: user.id,
-            email: user.email,
-            name: user.name,
-            image: user.image,
-            rememberMe: credentials.rememberMe === 'true',
-          };
-        }
+          // Legacy password-based login (for existing users)
+          if (credentials.password) {
+            const user = await prisma.user.findUnique({
+              where: {
+                email: credentials.email
+              }
+            });
 
-        // Legacy password-based login (for existing users)
-        if (credentials.password) {
-          const user = await prisma.user.findUnique({
-            where: {
-              email: credentials.email
+            if (!user || !user.password) {
+              return null;
             }
-          });
 
-          if (!user || !user.password) {
-            return null;
+            const isPasswordValid = await bcrypt.compare(
+              credentials.password,
+              user.password
+            );
+
+            if (!isPasswordValid) {
+              return null;
+            }
+
+            return {
+              id: user.id,
+              email: user.email,
+              name: user.name,
+              image: user.image,
+            };
           }
 
-          const isPasswordValid = await bcrypt.compare(
-            credentials.password,
-            user.password
-          );
-
-          if (!isPasswordValid) {
-            return null;
-          }
-
-          return {
-            id: user.id,
-            email: user.email,
-            name: user.name,
-            image: user.image,
-          };
+          return null;
+        } catch (error) {
+          console.error('Auth error:', error);
+          return null;
         }
-
-        return null;
       }
     }),
     ...(process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET && process.env.GOOGLE_CLIENT_ID !== 'your-google-client-id' ? [
@@ -119,6 +124,7 @@ const handler = NextAuth({
     signIn: '/auth/login',
     signUp: '/auth/signup',
   },
+  secret: process.env.NEXTAUTH_SECRET || 'fallback-secret-for-build',
 });
 
 export { handler as GET, handler as POST };

@@ -449,8 +449,8 @@ export default function Home() {
                     ))
                   ) : (
                     <div className="text-center py-3">
-                      <div className="text-gray-400 text-xs">No calculations yet</div>
-                      <div className="text-xs text-gray-500 mt-1">Start calculating to see your history</div>
+                      <div className="text-gray-600 text-xs">No calculations yet</div>
+                      <div className="text-xs text-gray-600 mt-1">Start calculating to see your history</div>
                     </div>
                   )}
                 </div>
