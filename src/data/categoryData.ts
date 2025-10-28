@@ -346,6 +346,28 @@ export const calculatorCategories: CategoryData[] = [
     ]
   },
   {
+    title: 'Space & Astronomy',
+    icon: '🚀',
+    slug: 'space',
+    description: 'Space calculators for astronomy and planetary science.',
+    color: 'from-indigo-600 to-purple-700',
+    literature: {
+      introduction: "Space and astronomy fascinate people of all ages. Our space calculators help you understand planetary motion, gravitational effects, and time scales across our solar system, making complex astronomical concepts accessible and engaging.",
+      keyTopics: [
+        "Planetary orbital periods and age conversions",
+        "Gravitational effects on different celestial bodies",
+        "Martian time systems and calendar calculations",
+        "Weight variations across the solar system",
+        "Comparative planetology and space science"
+      ],
+      useCases: "Perfect for students learning astronomy, space enthusiasts exploring planetary science, educators teaching solar system concepts, or anyone curious about how age, weight, and time work on other worlds."
+    },
+    calculators: [
+      { name: 'Age on Mars Calculator', description: 'Calculate your age on Mars and other planets', popular: true, link: '/calculator/age-on-mars' },
+      { name: 'Space Weight Calculator', description: 'Calculate your weight on different planets and moons', popular: true, link: '/calculator/space-weight' }
+    ]
+  },
+  {
     title: 'Unique & Niche',
     icon: '🎲',
     slug: 'unique',
@@ -355,17 +377,15 @@ export const calculatorCategories: CategoryData[] = [
       introduction: "Sometimes calculations are just for fun! Our unique and niche calculators provide entertainment, satisfy curiosity, and offer playful ways to explore interesting concepts and relationships.",
       keyTopics: [
         "Entertainment and novelty calculations",
-        "Space and physics curiosities",
         "Probability and chance calculations",
         "Fun facts and trivia generators",
-        "Creative mathematical explorations"
+        "Creative mathematical explorations",
+        "Playful applications of mathematics"
       ],
       useCases: "Perfect for parties, educational entertainment, satisfying curiosity, or just having fun with numbers. These calculators turn serious mathematics into playful exploration of interesting concepts."
     },
     calculators: [
       { name: 'Love Calculator', description: 'Calculate compatibility between two people (just for fun!)', popular: true, link: '/calculator/love-calculator' },
-      { name: 'Space Weight Calculator', description: 'Calculate your weight on different planets and moons', link: '/calculator/space-weight' },
-      { name: 'Age on Mars Calculator', description: 'Calculate your age on Mars and other planets', link: '/calculator/age-on-mars' },
       { name: 'Golf Balls in Boeing 747', description: 'Calculate how many golf balls fit inside a Boeing 747', link: '/calculator/golf-balls-boeing-747' },
       { name: 'Aquarium Volume Calculator', description: 'Calculate aquarium volume, water weight, and equipment recommendations', link: '/calculator/aquarium-volume' }
     ]

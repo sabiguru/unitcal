@@ -100,9 +100,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       'lifestyle': [
         'baking', 'recipe-converter', 'coffee-ratio', 'dog-age', 'cat-age', 'love-calculator',
         'timezone-converter', 'countdown-timer', 'morse-code', 'password-generator',
-        'braille-translator', 'age-on-mars', 'planetary-years', 'time-on-mars', 'weight-on-mars',
-        'space-weight', 'golf-balls-boeing-747', 'alcohol-dilution', 'aquarium-volume',
+        'braille-translator', 'golf-balls-boeing-747', 'alcohol-dilution', 'aquarium-volume',
         'home-energy-audit', 'gpa', 'seed-spacing', 'suanpan-abacus', 'soroban-abacus', 'western-abacus'
+      ],
+      'space': [
+        'age-on-mars', 'space-weight', 'planetary-years', 'time-on-mars', 'weight-on-mars'
       ]
     };
 

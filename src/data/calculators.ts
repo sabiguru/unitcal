@@ -148,7 +148,7 @@ const calculatorsBase: CalcEntry[] = [
     slug: 'age-on-mars',
     title: 'Age on Mars Calculator',
     description: 'Calculate your age on Mars and other planets in our solar system',
-    category: 'Unique & Niche',
+    category: 'Space & Astronomy',
     component: AgeOnMarsCalculator,
     mdx: 'age-on-mars.mdx'
   },
@@ -684,7 +684,7 @@ const calculatorsBase: CalcEntry[] = [
     slug: 'space-weight',
     title: 'Space Weight Calculator',
     description: 'Calculate your weight on different planets and celestial bodies',
-    category: 'Unique & Niche',
+    category: 'Space & Astronomy',
     component: SpaceWeightCalculator,
     mdx: 'space-weight.mdx'
   },
