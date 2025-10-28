@@ -100,6 +100,13 @@ export default function Header() {
                           <div className="text-xs text-gray-500">7 calculators</div>
                         </div>
                       </Link>
+                      <Link href="/category/space" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                        <span className="text-lg">🚀</span>
+                        <div>
+                          <div className="font-medium text-gray-900">Space & Astronomy</div>
+                          <div className="text-xs text-gray-500">2 calculators</div>
+                        </div>
+                      </Link>
                     </div>
                   </div>
                 )}
@@ -159,6 +166,20 @@ export default function Header() {
                         <div>
                           <div className="font-medium text-gray-900">Automotive</div>
                           <div className="text-xs text-gray-500">Learn car calculations</div>
+                        </div>
+                      </Link>
+                      <Link href="/learn/category/space" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                        <span className="text-lg">🚀</span>
+                        <div>
+                          <div className="font-medium text-gray-900">Space & Astronomy</div>
+                          <div className="text-xs text-gray-500">Learn space concepts</div>
+                        </div>
+                      </Link>
+                      <Link href="/learn/category/lifestyle" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                        <span className="text-lg">📅</span>
+                        <div>
+                          <div className="font-medium text-gray-900">Lifestyle</div>
+                          <div className="text-xs text-gray-500">Learn everyday calculations</div>
                         </div>
                       </Link>
                     </div>
