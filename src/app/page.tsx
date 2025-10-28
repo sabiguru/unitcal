@@ -493,7 +493,7 @@ export default function Home() {
                           </Link>
                           <p className="text-xs text-gray-500">{category.calculators.length} calculators</p>
                         </div>
-                        <Link href={`/category/${category.slug}`} className="text-blue-600 hover:text-blue-800 transition-colors" aria-label={`View all ${category.title} calculators`}>
+                        <Link href={`/category/${category.slug}`} className="text-blue-600 hover:text-blue-800 transition-colors p-3 -m-3" aria-label={`View all ${category.title} calculators`}>
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                           </svg>
@@ -524,7 +524,7 @@ export default function Home() {
                         <div className="mt-3 pt-3 border-t border-gray-200">
                           <Link
                             href={`/category/${category.slug}`}
-                            className="text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors"
+                            className="inline-block text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors py-2"
                           >
                             View all {category.calculators.length} calculators →
                           </Link>

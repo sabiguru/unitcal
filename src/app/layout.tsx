@@ -99,6 +99,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.ezojs.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://cmp.gatekeeperconsent.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://the.gatekeeperconsent.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://privacy.gatekeeperconsent.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://g.ezoic.net" crossOrigin="anonymous" />
 
         {/* Favicon and PWA icons */}
