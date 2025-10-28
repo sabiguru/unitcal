@@ -8,6 +8,7 @@ import LearnMDXContent from '@/components/LearnMDXContent';
 import LearnNavigation from '@/components/LearnNavigation';
 import EzoicAd from '@/components/ads/EzoicAd';
 import { EZOIC_PLACEMENTS } from '@/config/ezoicPlacements';
+import { getRelatedCalculators } from '@/data/relatedCalculators';
 
 interface LearnPageProps {
   params: Promise<{ slug: string }>;
@@ -64,6 +65,7 @@ export default async function LearnPage({ params }: LearnPageProps) {
 
   const seoData = getLearnSeo(slug);
   const title = seoData?.metaTitle || slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  const relatedCalculators = getRelatedCalculators(slug);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-amber-50">
@@ -82,25 +84,23 @@ export default async function LearnPage({ params }: LearnPageProps) {
             {/* Quick Navigation */}
             <LearnNavigation slug={slug} />
 
-            {/* Related Calculators */}
+            {/* Related Calculators - Dynamic based on article slug */}
             <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                 <span className="text-purple-500 mr-2">🔗</span>
                 Related Calculators
               </h3>
               <div className="space-y-3">
-                <a href="/calculator/scientific" className="block p-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors">
-                  <div className="font-medium text-gray-800">Scientific Calculator</div>
-                  <div className="text-sm text-gray-600">Advanced mathematical functions</div>
-                </a>
-                <a href="/calculator/percentage" className="block p-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors">
-                  <div className="font-medium text-gray-800">Percentage Calculator</div>
-                  <div className="text-sm text-gray-600">Calculate percentages easily</div>
-                </a>
-                <a href="/calculator/fraction" className="block p-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors">
-                  <div className="font-medium text-gray-800">Fraction Calculator</div>
-                  <div className="text-sm text-gray-600">Work with fractions and mixed numbers</div>
-                </a>
+                {relatedCalculators.map((calc) => (
+                  <a
+                    key={calc.slug}
+                    href={`/calculator/${calc.slug}`}
+                    className="block p-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors"
+                  >
+                    <div className="font-medium text-gray-800">{calc.name}</div>
+                    <div className="text-sm text-gray-600">{calc.description}</div>
+                  </a>
+                ))}
               </div>
             </div>
 
