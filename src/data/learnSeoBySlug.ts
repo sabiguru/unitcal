@@ -892,7 +892,60 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
   metaDescription: "Find your weight on the Moon, Mars, Jupiter, and other planets. Use gravity ratios to compare your Earth weight across the solar system.",
   lastResearched: "2025-09-28"
 },
-
+  "weight-on-mars": {
+    "primaryKeyword": "weight on Mars calculator",
+    "variants": [
+      "how much would you weigh on Mars",
+      "Mars gravity weight conversion",
+      "calculate your Martian weight",
+      "body weight on Mars planet"
+    ],
+    "longTails": [
+      "how to calculate my weight on Mars step by step",
+      "what would a 70 kg person weigh on Mars",
+      "Mars surface gravity vs Earth weight comparison",
+      "weight loss illusion on Mars due to gravity difference"
+    ],
+    "metaTitle": "Calculate Your Weight on Mars – Mars Gravity Explained",
+    "metaDescription": "Discover how your weight would change on Mars due to its weaker gravity. Use our calculator and get step-by-step explanation with comparisons across planets.",
+    "lastResearched": "2025-10-28"
+  },
+  "time-on-mars": {
+    "primaryKeyword": "day on Mars length",
+    "variants": [
+      "how long is a sol on Mars",
+      "Mars day vs Earth day",
+      "Martian time conversion guide",
+      "Mars sol calendar explanation"
+    ],
+    "longTails": [
+      "how many hours is a sol on Mars compared to Earth",
+      "what is a Martian year how many days",
+      "living on Mars schedule adjusting to sol length",
+      "Mars seasons and calendar explained for colonisation"
+    ],
+    "metaTitle": "A Day on Mars (Sol) & Martian Time Explained",
+    "metaDescription": "Learn how a day and year work on Mars: what a ‘sol’ is, how long Martian seasons last, and how time-keeping would adapt for life on the Red Planet.",
+    "lastResearched": "2025-10-28"
+  },
+  "planetary-years": {
+    "primaryKeyword": "planetary years explained",
+    "variants": [
+      "calculate age on other planets",
+      "how many Earth years is a year on Mars",
+      "orbital period and age conversion planets",
+      "why each planet has different year length"
+    ],
+    "longTails": [
+      "step by step calculate your age on Jupiter Saturn Mars",
+      "orbital period of planets and what it means for birthdays",
+      "Earth age to Mercury Venus Mars years conversion",
+      "how outer planets impact human age concept in space"
+    ],
+    "metaTitle": "Planetary Years Explained – How Age Changes Across Worlds",
+    "metaDescription": "Explore how each planet’s orbit affects the length of a year and your ‘age’. Use our calculators and see how old you’d be across the Solar System.",
+    "lastResearched": "2025-10-28"
+  },
 "tire-size": {
   primaryKeyword: "tire size calculator",
   variants: [
