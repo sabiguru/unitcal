@@ -17,24 +17,24 @@ export default function CalculatorLearnCrosslink({ calculatorSlug, calculatorTit
   }
 
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-200 p-6 mb-8">
+    <div className="bg-gray-50 rounded-xl border border-gray-200 p-6 mb-8">
       <div className="flex items-start space-x-4">
         <div className="flex-shrink-0">
-          <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+          <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center">
             <span className="text-2xl">📖</span>
           </div>
         </div>
         <div className="flex-1 min-w-0">
-          <h3 className="text-lg font-semibold text-blue-900 mb-2">
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">
             📚 Learn How to Use This Calculator
           </h3>
-          <p className="text-blue-700 mb-4">
+          <p className="text-gray-700 mb-4">
             Master the {calculatorTitle.toLowerCase()} with our comprehensive step-by-step guide,
             complete with examples, tips, and frequently asked questions.
           </p>
           <Link
             href={`/learn/${calculatorSlug}`}
-            className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors"
+            className="inline-flex items-center px-4 py-2 bg-gray-800 hover:bg-gray-900 text-white text-sm font-medium rounded-lg transition-colors"
           >
             <span className="mr-2">📖</span>
             Read the Guide
