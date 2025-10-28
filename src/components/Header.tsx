@@ -175,11 +175,60 @@ export default function Header() {
                           <div className="text-xs text-gray-500">Learn space concepts</div>
                         </div>
                       </Link>
-                      <Link href="/learn/category/lifestyle" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/category/everyday" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
                         <span className="text-lg">📅</span>
                         <div>
-                          <div className="font-medium text-gray-900">Lifestyle</div>
+                          <div className="font-medium text-gray-900">Everyday Life</div>
                           <div className="text-xs text-gray-500">Learn everyday calculations</div>
+                        </div>
+                      </Link>
+                      <Link href="/learn/category/construction" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                        <span className="text-lg">🏗️</span>
+                        <div>
+                          <div className="font-medium text-gray-900">Construction & DIY</div>
+                          <div className="text-xs text-gray-500">Learn construction calculations</div>
+                        </div>
+                      </Link>
+                      <Link href="/learn/category/cooking" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                        <span className="text-lg">👨‍🍳</span>
+                        <div>
+                          <div className="font-medium text-gray-900">Cooking & Food</div>
+                          <div className="text-xs text-gray-500">Learn cooking calculations</div>
+                        </div>
+                      </Link>
+                      <Link href="/learn/category/conversions" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                        <span className="text-lg">🔄</span>
+                        <div>
+                          <div className="font-medium text-gray-900">Specialized Conversions</div>
+                          <div className="text-xs text-gray-500">Learn conversion tools</div>
+                        </div>
+                      </Link>
+                      <Link href="/learn/category/energy" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                        <span className="text-lg">🌱</span>
+                        <div>
+                          <div className="font-medium text-gray-900">Energy & Environment</div>
+                          <div className="text-xs text-gray-500">Learn energy calculations</div>
+                        </div>
+                      </Link>
+                      <Link href="/learn/category/education" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                        <span className="text-lg">🔬</span>
+                        <div>
+                          <div className="font-medium text-gray-900">Education & Science</div>
+                          <div className="text-xs text-gray-500">Learn science calculations</div>
+                        </div>
+                      </Link>
+                      <Link href="/learn/category/animal-age" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                        <span className="text-lg">🐾</span>
+                        <div>
+                          <div className="font-medium text-gray-900">Animal Age</div>
+                          <div className="text-xs text-gray-500">Learn pet age calculations</div>
+                        </div>
+                      </Link>
+                      <Link href="/learn/category/unique" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                        <span className="text-lg">🎲</span>
+                        <div>
+                          <div className="font-medium text-gray-900">Unique & Niche</div>
+                          <div className="text-xs text-gray-500">Learn fun calculations</div>
                         </div>
                       </Link>
                     </div>

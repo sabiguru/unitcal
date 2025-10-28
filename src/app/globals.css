@@ -517,9 +517,6 @@ a:focus {
 .learn-mdx-content strong {
   font-weight: 700;
   color: #1f2937;
-  background-color: #fef3c7;
-  padding: 0.125rem 0.25rem;
-  border-radius: 0.25rem;
 }
 
 .learn-mdx-content em {
@@ -541,7 +538,7 @@ a:focus {
 }
 
 .learn-mdx-content li::marker {
-  color: #3b82f6;
+  color: #6b7280;
   font-weight: 600;
 }
 
@@ -578,33 +575,15 @@ a:focus {
 
 /* Enhanced blockquotes with colored backgrounds */
 .learn-mdx-content blockquote {
-  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-  border-left: 6px solid #3b82f6;
+  background: #f9fafb;
+  border-left: 4px solid #9ca3af;
   padding: 1.25rem 1.5rem;
   margin-bottom: 1.5rem;
-  border-radius: 0 0.75rem 0.75rem 0;
-  position: relative;
-  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.1);
-}
-
-.learn-mdx-content blockquote::before {
-  content: "💡";
-  position: absolute;
-  top: -0.25rem;
-  left: -0.5rem;
-  background: #3b82f6;
-  color: white;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
+  border-radius: 0 0.5rem 0.5rem 0;
 }
 
 .learn-mdx-content blockquote p {
-  color: #1e40af;
+  color: #374151;
   font-weight: 500;
   margin-bottom: 0;
   font-style: italic;
@@ -612,16 +591,15 @@ a:focus {
 
 /* Enhanced links */
 .learn-mdx-content a {
-  color: #3b82f6;
-  text-decoration: none;
+  color: #1f2937;
+  text-decoration: underline;
+  text-decoration-color: #9ca3af;
   font-weight: 500;
-  border-bottom: 2px solid transparent;
   transition: all 0.2s ease;
 }
 
 .learn-mdx-content a:hover {
-  color: #1d4ed8;
-  border-bottom-color: #3b82f6;
+  text-decoration-color: #1f2937;
 }
 
 /* Enhanced table styling */

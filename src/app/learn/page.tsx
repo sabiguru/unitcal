@@ -84,8 +84,11 @@ function mapLearnArticlesToCategories() {
     'animal-age': [
       'dog-age', 'cat-age'
     ],
+    'space': [
+      'age-on-mars', 'space-weight', 'planetary-years', 'time-on-mars', 'weight-on-mars'
+    ],
     'unique': [
-      'love-calculator', 'space-weight', 'age-on-mars', 'golf-balls-boeing-747', 'aquarium-volume'
+      'love-calculator', 'golf-balls-boeing-747', 'aquarium-volume'
     ]
   };
 
