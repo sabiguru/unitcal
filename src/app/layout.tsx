@@ -75,6 +75,22 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Performance optimization - DNS prefetch and preconnect FIRST for maximum benefit */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://www.ezojs.com" />
+        <link rel="dns-prefetch" href="https://cmp.gatekeeperconsent.com" />
+        <link rel="dns-prefetch" href="https://the.gatekeeperconsent.com" />
+        <link rel="dns-prefetch" href="https://privacy.gatekeeperconsent.com" />
+        <link rel="dns-prefetch" href="https://g.ezoic.net" />
+
+        <link rel="preconnect" href="https://www.ezojs.com" />
+        <link rel="preconnect" href="https://privacy.gatekeeperconsent.com" />
+        <link rel="preconnect" href="https://g.ezoic.net" />
+        <link rel="preconnect" href="https://cmp.gatekeeperconsent.com" />
+        <link rel="preconnect" href="https://the.gatekeeperconsent.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-EXX45NBE5F"></script>
         <script dangerouslySetInnerHTML={{
@@ -85,22 +101,6 @@ export default function RootLayout({
             gtag('config', 'G-EXX45NBE5F');
           `
         }}></script>
-
-        {/* Performance optimization - DNS prefetch and preconnect */}
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://www.ezojs.com" />
-        <link rel="dns-prefetch" href="https://cmp.gatekeeperconsent.com" />
-        <link rel="dns-prefetch" href="https://the.gatekeeperconsent.com" />
-        <link rel="dns-prefetch" href="https://privacy.gatekeeperconsent.com" />
-        <link rel="dns-prefetch" href="https://g.ezoic.net" />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://www.ezojs.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://cmp.gatekeeperconsent.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://the.gatekeeperconsent.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://privacy.gatekeeperconsent.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://g.ezoic.net" crossOrigin="anonymous" />
 
         {/* Favicon and PWA icons */}
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
