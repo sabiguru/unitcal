@@ -87,15 +87,19 @@ export default function RootLayout({
         }}></script>
 
         {/* Performance optimization - DNS prefetch and preconnect */}
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//www.ezojs.com" />
-        <link rel="dns-prefetch" href="//cmp.gatekeeperconsent.com" />
-        <link rel="dns-prefetch" href="//the.gatekeeperconsent.com" />
-        <link rel="dns-prefetch" href="//privacy.gatekeeperconsent.com" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://www.ezojs.com" />
+        <link rel="dns-prefetch" href="https://cmp.gatekeeperconsent.com" />
+        <link rel="dns-prefetch" href="https://the.gatekeeperconsent.com" />
+        <link rel="dns-prefetch" href="https://privacy.gatekeeperconsent.com" />
+        <link rel="dns-prefetch" href="https://g.ezoic.net" />
 
-        <link rel="preconnect" href="//fonts.googleapis.com" crossOrigin="" />
-        <link rel="preconnect" href="//fonts.gstatic.com" crossOrigin="" />
-        <link rel="preconnect" href="//www.ezojs.com" crossOrigin="" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.ezojs.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://cmp.gatekeeperconsent.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://the.gatekeeperconsent.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://g.ezoic.net" crossOrigin="anonymous" />
 
         {/* Favicon and PWA icons */}
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
@@ -106,15 +110,12 @@ export default function RootLayout({
         {/* Seobility Verification */}
         <meta name="seobility" content="eeb290f1902ff1f4679f69365f3ac07c" />
 
-        {/* Ezoic Privacy Scripts - with resource hints for faster loading */}
-        <link rel="preload" href="https://cmp.gatekeeperconsent.com/min.js" as="script" />
-        <link rel="preload" href="https://the.gatekeeperconsent.com/cmp.min.js" as="script" />
-        <script src="https://cmp.gatekeeperconsent.com/min.js" data-cfasync="false"></script>
-        <script src="https://the.gatekeeperconsent.com/cmp.min.js" data-cfasync="false"></script>
+        {/* Ezoic Privacy Scripts - defer for better performance */}
+        <script defer src="https://cmp.gatekeeperconsent.com/min.js" data-cfasync="false"></script>
+        <script defer src="https://the.gatekeeperconsent.com/cmp.min.js" data-cfasync="false"></script>
 
-        {/* Ezoic Header Script with preload */}
-        <link rel="preload" href="//www.ezojs.com/ezoic/sa.min.js" as="script" />
-        <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+        {/* Ezoic Header Script - async loading */}
+        <script async src="https://www.ezojs.com/ezoic/sa.min.js"></script>
         <script dangerouslySetInnerHTML={{
           __html: `
             window.ezstandalone = window.ezstandalone || {};
