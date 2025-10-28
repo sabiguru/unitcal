@@ -87,7 +87,7 @@ export default async function LearnPage({ params }: LearnPageProps) {
             {/* Related Calculators - Dynamic based on article slug */}
             <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                <span className="text-purple-500 mr-2">🔗</span>
+                <span className="text-gray-600 mr-2">🔗</span>
                 Related Calculators
               </h3>
               <div className="space-y-3">
@@ -110,22 +110,22 @@ export default async function LearnPage({ params }: LearnPageProps) {
             </div>
 
             {/* Tips Box */}
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl border border-green-200 p-6">
-              <h3 className="text-lg font-semibold text-green-800 mb-3 flex items-center">
-                <span className="text-green-600 mr-2">💡</span>
+            <div className="bg-gray-50 rounded-xl border border-gray-200 p-6">
+              <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+                <span className="text-gray-600 mr-2">💡</span>
                 Quick Tips
               </h3>
-              <ul className="space-y-2 text-sm text-green-700">
+              <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-start">
-                  <span className="text-green-500 mr-2 mt-0.5">•</span>
+                  <span className="text-gray-500 mr-2 mt-0.5">•</span>
                   Bookmark this page for quick reference
                 </li>
                 <li className="flex items-start">
-                  <span className="text-green-500 mr-2 mt-0.5">•</span>
+                  <span className="text-gray-500 mr-2 mt-0.5">•</span>
                   Practice with real examples to master the concepts
                 </li>
                 <li className="flex items-start">
-                  <span className="text-green-500 mr-2 mt-0.5">•</span>
+                  <span className="text-gray-500 mr-2 mt-0.5">•</span>
                   Use keyboard shortcuts for faster calculations
                 </li>
               </ul>

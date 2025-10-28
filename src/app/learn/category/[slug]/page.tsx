@@ -57,8 +57,11 @@ function getLearnArticlesForCategory(categorySlug: string) {
     'animal-age': [
       'dog-age', 'cat-age'
     ],
+    'space': [
+      'age-on-mars', 'space-weight', 'planetary-years', 'time-on-mars', 'weight-on-mars'
+    ],
     'unique': [
-      'love-calculator', 'space-weight', 'age-on-mars', 'golf-balls-boeing-747', 'aquarium-volume'
+      'love-calculator', 'golf-balls-boeing-747', 'aquarium-volume'
     ]
   };
 
@@ -168,8 +171,11 @@ export function generateStaticParams() {
     'animal-age': [
       'dog-age', 'cat-age'
     ],
+    'space': [
+      'age-on-mars', 'space-weight', 'planetary-years', 'time-on-mars', 'weight-on-mars'
+    ],
     'unique': [
-      'love-calculator', 'space-weight', 'age-on-mars', 'golf-balls-boeing-747', 'aquarium-volume'
+      'love-calculator', 'golf-balls-boeing-747', 'aquarium-volume'
     ]
   };
 
@@ -269,7 +275,7 @@ export default async function LearnCategoryPage({ params }: LearnCategoryPagePro
                       className="group bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl hover:shadow-lg hover:border-gray-300 transition-all duration-300 transform hover:-translate-y-1 p-6"
                     >
                       <div className="mb-4">
-                        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-2 line-clamp-2">
+                        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-gray-700 transition-colors mb-2 line-clamp-2">
                           {article.title}
                         </h3>
                         <p className="text-sm text-gray-600 line-clamp-3">
@@ -278,7 +284,7 @@ export default async function LearnCategoryPage({ params }: LearnCategoryPagePro
                       </div>
 
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center text-sm text-blue-600 group-hover:text-blue-800 transition-colors">
+                        <div className="flex items-center text-sm text-gray-700 group-hover:text-gray-900 transition-colors">
                           <span>Read Guide</span>
                           <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
@@ -310,7 +316,7 @@ export default async function LearnCategoryPage({ params }: LearnCategoryPagePro
                           <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">
                             {cat.icon}
                           </div>
-                          <div className="text-sm font-medium text-gray-700 group-hover:text-blue-600 transition-colors">
+                          <div className="text-sm font-medium text-gray-700 group-hover:text-gray-900 transition-colors">
                             {cat.title}
                           </div>
                         </Link>
