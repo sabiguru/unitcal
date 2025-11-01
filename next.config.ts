@@ -18,8 +18,6 @@ const nextConfig: NextConfig = {
     // Remove console.log in production
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  // Optimize CSS
-  optimizeCss: true,
   // Enable modern JavaScript output for better performance
   transpilePackages: [],
   // Optimize images

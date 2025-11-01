@@ -74,6 +74,65 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
   metaDescription: "Learn how to generate uncrackable passwords using entropy, passphrases, and best practices. Step-by-step guide to password strength, managers, and 2FA.",
   lastResearched: "2025-09-27"
 },
+  "wearable-tech-data-driven-fitness": {
+    "primaryKeyword": "wearable fitness technology",
+    "variants": [
+      "wearable fitness tracker benefits",
+      "data driven fitness training",
+      "using heart rate variability for recovery",
+      "smartwatch health tracking guide"
+    ],
+    "longTails": [
+      "how to use wearable fitness data to improve performance",
+      "heart rate variability and recovery explained",
+      "best health metrics to track with a fitness watch",
+      "how to connect wearable data to calorie tracking",
+      "is hrv accurate for training readiness"
+    ],
+    "metaTitle": "Wearable Tech & Data-Driven Fitness: How to Use HRV, Sleep, and Recovery Data to Train Smarter",
+    "metaDescription": "Learn how wearable fitness tech and recovery metrics like HRV, sleep score, and resting heart rate can improve performance, fat loss, and recovery. See how to connect device data with BMI, body fat %, and calorie needs.",
+    "lastResearched": "2025-11-01"
+  },
+
+  "strength-training-building-muscle-healthgoal": {
+    "primaryKeyword": "benefits of strength training",
+    "variants": [
+      "how to build muscle safely",
+      "strength training for longevity",
+      "muscle building for beginners",
+      "why building muscle improves health"
+    ],
+    "longTails": [
+      "how much strength training do I need per week for health",
+      "does lifting weights help with fat loss and metabolism",
+      "beginner strength training plan 3 days a week",
+      "how to eat for muscle gain without getting bulky",
+      "how to track body fat and muscle growth over time"
+    ],
+    "metaTitle": "Strength Training for Everyone: Why Building Muscle Is Essential for Health and Longevity",
+    "metaDescription": "Discover why building muscle is critical for metabolism, joint health, mobility, ageing, and disease prevention. Get a beginner-friendly strength plan, recovery tips, and guidance on calories, protein, and body fat tracking.",
+    "lastResearched": "2025-11-01"
+  },
+
+  "holistic-recovery-mobility-low-impact-training": {
+    "primaryKeyword": "mobility and recovery training",
+    "variants": [
+      "low impact workout benefits",
+      "mobility training for longevity",
+      "breathwork for recovery",
+      "active recovery vs rest day"
+    ],
+    "longTails": [
+      "how to improve mobility and reduce soreness without heavy training",
+      "best low impact cardio options for joint health",
+      "how breathwork improves recovery and sleep",
+      "what is active recovery and how often should I do it",
+      "8 week mobility and recovery routine for beginners"
+    ],
+    "metaTitle": "Holistic Recovery & Mobility: Low-Impact Training, Breathwork, and Smarter Recovery for Long-Term Health",
+    "metaDescription": "Learn how mobility work, low-impact cardio, breathwork, and recovery tracking can prevent injury, improve energy, and protect long-term health. Includes sample weekly routine and progress tracking tips.",
+    "lastResearched": "2025-11-01"
+  },
 "patio": {
   primaryKeyword: "how to calculate patio materials",
   variants: [

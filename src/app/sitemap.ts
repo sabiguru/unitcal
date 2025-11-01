@@ -80,7 +80,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
         'significant-figures', 'roman-numerals', 'binary-converter', 'time', 'speed'
       ],
       'health': [
-        'bmi', 'bmr', 'bodyfat', 'calorie', 'protein', 'heartrate', 'fitness', 'sleep', 'water'
+        'bmi', 'bmr', 'bodyfat', 'calorie', 'protein', 'heartrate', 'fitness', 'sleep', 'water',
+        'wearable-tech-data-driven-fitness', 'strength-training-building-muscle-healthgoal',
+        'holistic-recovery-mobility-low-impact-training'
       ],
       'financial': [
         'budget', 'compound-interest', 'credit-card-payoff', 'currency-converter', 'depreciation',

@@ -5,33 +5,31 @@ interface LearnNavigationProps {
 }
 
 export default function LearnNavigation({ slug }: LearnNavigationProps) {
-  const handleTabClick = (tabType: 'intro' | 'examples' | 'faq') => {
-    const tabButtons = document.querySelectorAll('[role="tab"]');
-    let targetTab: HTMLButtonElement | null = null;
+  const scrollToSection = (sectionType: 'intro' | 'examples' | 'faq') => {
+    // Common heading patterns in learn articles
+    const headingPatterns: Record<string, string[]> = {
+      intro: ['introduction', 'what is', 'overview', 'understanding'],
+      examples: ['example', 'worked example', 'practice', 'how to calculate'],
+      faq: ['faq', 'frequently asked questions', 'common questions']
+    };
 
-    switch (tabType) {
-      case 'intro':
-        targetTab = Array.from(tabButtons).find(btn =>
-          btn.textContent?.toLowerCase().includes('guide') ||
-          btn.textContent?.toLowerCase().includes('complete')
-        ) as HTMLButtonElement;
-        break;
-      case 'examples':
-        targetTab = Array.from(tabButtons).find(btn =>
-          btn.textContent?.toLowerCase().includes('example') ||
-          btn.textContent?.toLowerCase().includes('practice')
-        ) as HTMLButtonElement;
-        break;
-      case 'faq':
-        targetTab = Array.from(tabButtons).find(btn =>
-          btn.textContent?.toLowerCase().includes('faq')
-        ) as HTMLButtonElement;
-        break;
+    const patterns = headingPatterns[sectionType];
+    const allHeadings = document.querySelectorAll('h2, h3');
+
+    for (const heading of allHeadings) {
+      const headingText = heading.textContent?.toLowerCase() || '';
+      const matchesPattern = patterns.some(pattern => headingText.includes(pattern));
+
+      if (matchesPattern) {
+        heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Add offset for fixed header if needed
+        window.scrollBy(0, -100);
+        return;
+      }
     }
 
-    if (targetTab) {
-      targetTab.click();
-    }
+    // Fallback: scroll to top if no matching section found
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -43,30 +41,30 @@ export default function LearnNavigation({ slug }: LearnNavigationProps) {
       <ul className="space-y-3 text-sm">
         <li>
           <button
-            onClick={() => handleTabClick('intro')}
-            className="text-blue-600 hover:text-blue-800 transition-colors w-full text-left"
+            onClick={() => scrollToSection('intro')}
+            className="text-blue-600 hover:text-blue-800 transition-colors w-full text-left hover:underline"
           >
             📖 Introduction
           </button>
         </li>
         <li>
           <button
-            onClick={() => handleTabClick('examples')}
-            className="text-blue-600 hover:text-blue-800 transition-colors w-full text-left"
+            onClick={() => scrollToSection('examples')}
+            className="text-blue-600 hover:text-blue-800 transition-colors w-full text-left hover:underline"
           >
             💡 Examples & Practice
           </button>
         </li>
         <li>
           <button
-            onClick={() => handleTabClick('faq')}
-            className="text-blue-600 hover:text-blue-800 transition-colors w-full text-left"
+            onClick={() => scrollToSection('faq')}
+            className="text-blue-600 hover:text-blue-800 transition-colors w-full text-left hover:underline"
           >
             ❓ FAQ
           </button>
         </li>
         <li>
-          <a href={`/calculator/${slug}`} className="text-green-600 hover:text-green-800 transition-colors font-medium">
+          <a href={`/calculator/${slug}`} className="block text-green-600 hover:text-green-800 transition-colors font-medium hover:underline">
             🧮 Try the Calculator
           </a>
         </li>

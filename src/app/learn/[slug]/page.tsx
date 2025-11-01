@@ -5,7 +5,6 @@ import { Metadata } from 'next';
 import Header from '@/components/Header';
 import { getLearnSeo } from '@/data/learnSeoBySlug';
 import LearnMDXContent from '@/components/LearnMDXContent';
-import LearnNavigation from '@/components/LearnNavigation';
 import EzoicAd from '@/components/ads/EzoicAd';
 import { EZOIC_PLACEMENTS } from '@/config/ezoicPlacements';
 import { getRelatedCalculators } from '@/data/relatedCalculators';
@@ -81,9 +80,6 @@ export default async function LearnPage({ params }: LearnPageProps) {
 
           {/* Sidebar */}
           <div className="lg:col-span-4 space-y-6">
-            {/* Quick Navigation */}
-            <LearnNavigation slug={slug} />
-
             {/* Related Calculators - Dynamic based on article slug */}
             <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">

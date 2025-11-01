@@ -194,6 +194,24 @@ export const relatedCalculatorsMap: Record<string, RelatedCalculator[]> = {
     { slug: 'calorie', name: 'Calorie Calculator', description: 'Calculate daily calorie needs' },
     { slug: 'fitness', name: 'Fitness Calculator', description: 'Track fitness metrics' },
   ],
+  'wearable-tech-data-driven-fitness': [
+    { slug: 'heartrate', name: 'Heart Rate Calculator', description: 'Calculate training zones and heart rate' },
+    { slug: 'calorie', name: 'Calorie Calculator', description: 'Calculate daily calorie needs' },
+    { slug: 'fitness', name: 'Fitness Calculator', description: 'Track fitness metrics' },
+    { slug: 'bmr', name: 'BMR Calculator', description: 'Calculate Basal Metabolic Rate' },
+  ],
+  'strength-training-building-muscle-healthgoal': [
+    { slug: 'protein', name: 'Protein Calculator', description: 'Calculate daily protein needs' },
+    { slug: 'calorie', name: 'Calorie Calculator', description: 'Calculate daily calorie needs' },
+    { slug: 'bmi', name: 'BMI Calculator', description: 'Calculate Body Mass Index' },
+    { slug: 'bodyfat', name: 'Body Fat Calculator', description: 'Calculate body fat percentage' },
+  ],
+  'holistic-recovery-mobility-low-impact-training': [
+    { slug: 'bmi', name: 'BMI Calculator', description: 'Calculate Body Mass Index' },
+    { slug: 'bodyfat', name: 'Body Fat Calculator', description: 'Calculate body fat percentage' },
+    { slug: 'calorie', name: 'Calorie Calculator', description: 'Calculate daily calorie needs' },
+    { slug: 'heartrate', name: 'Heart Rate Calculator', description: 'Calculate training zones' },
+  ],
 
   // Financial & Business
   'mortgage': [
