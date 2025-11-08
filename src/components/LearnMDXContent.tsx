@@ -8,7 +8,7 @@ interface LearnMDXContentProps {
 
 export default function LearnMDXContent({ slug }: LearnMDXContentProps) {
   const MdxComponent = dynamic(() => import(`@/learn/calculators/${slug}.mdx`), {
-    ssr: false,
+    ssr: true,
     loading: () => (
       <div className="animate-pulse bg-gray-200 h-32 rounded-lg flex items-center justify-center">
         <div className="text-gray-500">Loading content...</div>
