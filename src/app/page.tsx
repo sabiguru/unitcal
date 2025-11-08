@@ -551,29 +551,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Middle Section - Quick Stats */}
-        <div className="mb-6">
-          <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-md">
-            <h3 className="text-lg font-semibold text-slate-700 mb-4">Quick Stats</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <div className="text-sm text-gray-600 mb-1">Calculations Today</div>
-                <div className="text-2xl font-bold text-gray-900">1,247</div>
-              </div>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <div className="text-sm text-gray-600 mb-1">Active Users</div>
-                <div className="text-2xl font-bold text-gray-900">892</div>
-              </div>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <div className="text-sm text-gray-600 mb-1">Calculators</div>
-                <div className="text-2xl font-bold text-gray-900">
-                  {calculatorCategories.reduce((total, cat) => total + cat.calculators.length, 0)}+
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Banner Advertisement */}
         <div className="mb-12">
           <EzoicAd placementId={EZOIC_PLACEMENTS.HOME_BANNER} className="text-center" />
