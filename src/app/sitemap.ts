@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import { calculators } from '@/data/calculators';
 import { calculatorCategories } from '@/data/categoryData';
 import { getAvailableLearnSlugs } from '@/data/learnSeoBySlug';
+import { getCategoryForSlug } from '@/utils/learnCategoryMapping';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://calcfort.com';
@@ -129,13 +130,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // Dynamic individual learn article routes
-  const learnArticleRoutes: MetadataRoute.Sitemap = getAvailableLearnSlugs().map(slug => ({
-    url: `${baseUrl}/learn/${slug}`,
-    lastModified: currentDate,
-    changeFrequency: 'yearly' as const,
-    priority: 0.8,
-  }));
+  // Dynamic individual learn article routes (with category-based URLs)
+  const learnArticleRoutes: MetadataRoute.Sitemap = getAvailableLearnSlugs().map(slug => {
+    const category = getCategoryForSlug(slug);
+    return {
+      url: category ? `${baseUrl}/learn/${category}/${slug}` : `${baseUrl}/learn/${slug}`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly' as const,
+      priority: 0.8,
+    };
+  });
 
   return [
     ...staticRoutes,

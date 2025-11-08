@@ -8,16 +8,44 @@ import LearnMDXContent from '@/components/LearnMDXContent';
 import EzoicAd from '@/components/ads/EzoicAd';
 import { EZOIC_PLACEMENTS } from '@/config/ezoicPlacements';
 import { getRelatedCalculators } from '@/data/relatedCalculators';
+import { getCategoryForSlug, getSlugsForCategory } from '@/utils/learnCategoryMapping';
+import { calculatorCategories } from '@/data/categoryData';
+import { getAvailableLearnSlugs } from '@/data/learnSeoBySlug';
 
 interface LearnPageProps {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ category: string; slug: string }>;
+}
+
+// Generate static params for all category/slug combinations
+export async function generateStaticParams() {
+  const availableLearnSlugs = getAvailableLearnSlugs();
+  const params: { category: string; slug: string }[] = [];
+
+  for (const slug of availableLearnSlugs) {
+    const category = getCategoryForSlug(slug);
+    if (category) {
+      params.push({ category, slug });
+    }
+  }
+
+  return params;
 }
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: LearnPageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { category, slug } = await params;
+
+  // Verify the slug belongs to this category
+  const correctCategory = getCategoryForSlug(slug);
+  if (correctCategory !== category) {
+    return {
+      title: 'Article Not Found | Calcfort',
+      description: 'The requested article could not be found.'
+    };
+  }
+
   const seoData = getLearnSeo(slug);
-  
+
   if (seoData) {
     return {
       title: seoData.metaTitle,
@@ -33,9 +61,12 @@ export async function generateMetadata({ params }: LearnPageProps): Promise<Meta
         title: seoData.metaTitle,
         description: seoData.metaDescription,
       },
+      alternates: {
+        canonical: `https://calcfort.com/learn/${category}/${slug}`,
+      },
     };
   }
-  
+
   // Fallback metadata for slugs not in SEO data
   return {
     title: `Learn ${slug.replace(/-/g, ' ')} - Calculator Fort`,
@@ -44,6 +75,9 @@ export async function generateMetadata({ params }: LearnPageProps): Promise<Meta
       title: `Learn ${slug.replace(/-/g, ' ')} - Calculator Fort`,
       description: `Learn how to use the ${slug.replace(/-/g, ' ')} calculator with examples, FAQs, and detailed guides.`,
       type: 'article',
+    },
+    alternates: {
+      canonical: `https://calcfort.com/learn/${category}/${slug}`,
     },
   };
 }
@@ -55,9 +89,15 @@ function checkLearnContent(slug: string) {
 }
 
 export default async function LearnPage({ params }: LearnPageProps) {
-  const { slug } = await params;
-  const contentExists = checkLearnContent(slug);
+  const { category, slug } = await params;
 
+  // Verify the slug belongs to this category
+  const correctCategory = getCategoryForSlug(slug);
+  if (correctCategory !== category || !correctCategory) {
+    notFound();
+  }
+
+  const contentExists = checkLearnContent(slug);
   if (!contentExists) {
     notFound();
   }
@@ -66,11 +106,43 @@ export default async function LearnPage({ params }: LearnPageProps) {
   const title = seoData?.metaTitle || slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
   const relatedCalculators = getRelatedCalculators(slug);
 
+  // Get category info for breadcrumbs
+  const categoryData = calculatorCategories.find(cat => cat.slug === category);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-amber-50">
       <Header />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Breadcrumbs for SEO */}
+        <nav className="mb-6" aria-label="Breadcrumb">
+          <ol className="flex items-center space-x-2 text-sm text-gray-600">
+            <li>
+              <a href="/" className="hover:text-blue-600">Home</a>
+            </li>
+            <li className="flex items-center">
+              <svg className="w-4 h-4 mx-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+              </svg>
+              <a href="/learn" className="hover:text-blue-600">Learn</a>
+            </li>
+            <li className="flex items-center">
+              <svg className="w-4 h-4 mx-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+              </svg>
+              <a href={`/learn/category/${category}`} className="hover:text-blue-600">
+                {categoryData?.title || category}
+              </a>
+            </li>
+            <li className="flex items-center">
+              <svg className="w-4 h-4 mx-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+              </svg>
+              <span className="text-gray-900 font-medium">{title}</span>
+            </li>
+          </ol>
+        </nav>
+
         {/* Main Content with Sidebar Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Main Content Area */}
