@@ -124,7 +124,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Dynamic learn category routes
   const learnCategoryRoutes: MetadataRoute.Sitemap = getLearnCategoriesWithContent().map(categorySlug => ({
-    url: `${baseUrl}/learn/category/${categorySlug}`,
+    url: `${baseUrl}/learn/${categorySlug}`,
     lastModified: currentDate,
     changeFrequency: 'weekly' as const,
     priority: 0.8,

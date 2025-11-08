@@ -4,75 +4,22 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { calculatorCategories } from '@/data/categoryData';
+import { getSlugsForCategory } from '@/utils/learnCategoryMapping';
 import { getAvailableLearnSlugs, getLearnSeo } from '@/data/learnSeoBySlug';
 
 interface LearnCategoryPageProps {
   params: Promise<{
-    slug: string;
+    category: string;
   }>;
   searchParams: Promise<{
     page?: string;
   }>;
 }
 
-// Function to map learn articles to categories (same as in main page)
+// Function to map learn articles to categories using centralized mapping
 function getLearnArticlesForCategory(categorySlug: string) {
   const availableLearnSlugs = getAvailableLearnSlugs();
-
-  const categoryMapping: Record<string, string[]> = {
-    'mathematics': [
-      'basic', 'scientific', 'graphing', 'fraction', 'percentage', 'ratio', 'prime', 'matrix',
-      'equation-solver', 'significant-figures', 'binary-converter', 'suanpan-abacus',
-      'soroban-abacus', 'western-abacus', 'speed'
-    ],
-    'health': [
-      'bmi', 'bmr', 'bodyfat', 'calorie', 'protein', 'heartrate', 'fitness', 'sleep', 'water',
-      'wearable-tech-data-driven-fitness', 'strength-training-building-muscle-healthgoal',
-      'holistic-recovery-mobility-low-impact-training', 'quick-home-workouts'
-    ],
-    'financial': [
-      'budget', 'compound-interest', 'credit-card-payoff', 'currency-converter', 'depreciation',
-      'discount', 'interest', 'investment', 'loan', 'mortgage', 'npv-irr', 'refinance',
-      'retirement', 'roi', 'salary', 'tax', 'car-lease', 'car-loan', 'finance-automation-2026',
-      'remote-work-2026'
-    ],
-    'engineering': [
-      'capacitor', 'electrical', 'ohms-law', 'resistor', 'subnet', 'password-generator',
-      'ai-engineering-2026', 'concept-to-silicon'
-    ],
-    'automotive': [
-      'mpg', 'fuel-cost', 'ev-range', 'tire-size'
-    ],
-    'construction': [
-      'paint', 'patio', 'concrete', 'roofing', 'stairs', 'tile', 'area', 'volume'
-    ],
-    'cooking': [
-      'baking', 'recipe-converter', 'coffee-ratio', 'alcohol-dilution'
-    ],
-    'education': [
-      'gpa', 'molecular-weight', 'stoichiometry', 'ph'
-    ],
-    'everyday': [
-      'age', 'date', 'tip', 'time', 'timezone-converter', 'countdown-timer'
-    ],
-    'conversions': [
-      'unit-converter', 'roman-numerals', 'morse-code', 'braille-translator'
-    ],
-    'energy': [
-      'solar-panel-savings', 'seed-spacing', 'energy-usage', 'carbon-footprint', 'home-energy-audit'
-    ],
-    'animal-age': [
-      'dog-age', 'cat-age'
-    ],
-    'space': [
-      'age-on-mars', 'space-weight', 'planetary-years', 'time-on-mars', 'weight-on-mars'
-    ],
-    'unique': [
-      'love-calculator', 'golf-balls-boeing-747', 'aquarium-volume'
-    ]
-  };
-
-  const learnSlugs = categoryMapping[categorySlug] || [];
+  const learnSlugs = getSlugsForCategory(categorySlug);
   const availableArticles = learnSlugs.filter(slug => availableLearnSlugs.includes(slug));
 
   return availableArticles.map(slug => {
@@ -92,8 +39,8 @@ function getLearnArticlesForCategory(categorySlug: string) {
 
 // Enhanced metadata generation for category learn pages
 export async function generateMetadata({ params }: LearnCategoryPageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const categoryData = calculatorCategories.find(cat => cat.slug === slug);
+  const { category } = await params;
+  const categoryData = calculatorCategories.find(cat => cat.slug === category);
 
   if (!categoryData) {
     return {
@@ -102,7 +49,7 @@ export async function generateMetadata({ params }: LearnCategoryPageProps): Prom
     };
   }
 
-  const learnArticles = getLearnArticlesForCategory(slug);
+  const learnArticles = getLearnArticlesForCategory(category);
 
   return {
     title: `Learn ${categoryData.title} | Calcfort`,
@@ -118,7 +65,7 @@ export async function generateMetadata({ params }: LearnCategoryPageProps): Prom
     openGraph: {
       title: `Learn ${categoryData.title} | Calcfort`,
       description: `${learnArticles.length} guides for ${categoryData.title.toLowerCase()}. ${categoryData.description}`,
-      url: `https://calcfort.com/learn/category/${slug}`,
+      url: `https://calcfort.com/learn/${category}`,
       siteName: 'Calcfort',
       type: 'website',
     },
@@ -132,7 +79,7 @@ export async function generateMetadata({ params }: LearnCategoryPageProps): Prom
       follow: true,
     },
     alternates: {
-      canonical: `https://calcfort.com/learn/category/${slug}`,
+      canonical: `https://calcfort.com/learn/${category}`,
     },
   };
 }
@@ -141,81 +88,28 @@ export async function generateMetadata({ params }: LearnCategoryPageProps): Prom
 export function generateStaticParams() {
   const availableLearnSlugs = getAvailableLearnSlugs();
 
-  const categoryMapping: Record<string, string[]> = {
-    'mathematics': [
-      'basic', 'scientific', 'graphing', 'fraction', 'percentage', 'ratio', 'prime', 'matrix',
-      'equation-solver', 'significant-figures', 'binary-converter', 'suanpan-abacus',
-      'soroban-abacus', 'western-abacus', 'speed'
-    ],
-    'health': [
-      'bmi', 'bmr', 'bodyfat', 'calorie', 'protein', 'heartrate', 'fitness', 'sleep', 'water',
-      'wearable-tech-data-driven-fitness', 'strength-training-building-muscle-healthgoal',
-      'holistic-recovery-mobility-low-impact-training', 'quick-home-workouts'
-    ],
-    'financial': [
-      'budget', 'compound-interest', 'credit-card-payoff', 'currency-converter', 'depreciation',
-      'discount', 'interest', 'investment', 'loan', 'mortgage', 'npv-irr', 'refinance',
-      'retirement', 'roi', 'salary', 'tax', 'car-lease', 'car-loan', 'finance-automation-2026',
-      'remote-work-2026'
-    ],
-    'engineering': [
-      'capacitor', 'electrical', 'ohms-law', 'resistor', 'subnet', 'password-generator',
-      'ai-engineering-2026', 'concept-to-silicon'
-    ],
-    'automotive': [
-      'mpg', 'fuel-cost', 'ev-range', 'tire-size'
-    ],
-    'construction': [
-      'paint', 'patio', 'concrete', 'roofing', 'stairs', 'tile', 'area', 'volume'
-    ],
-    'cooking': [
-      'baking', 'recipe-converter', 'coffee-ratio', 'alcohol-dilution'
-    ],
-    'education': [
-      'gpa', 'molecular-weight', 'stoichiometry', 'ph'
-    ],
-    'everyday': [
-      'age', 'date', 'tip', 'time', 'timezone-converter', 'countdown-timer'
-    ],
-    'conversions': [
-      'unit-converter', 'roman-numerals', 'morse-code', 'braille-translator'
-    ],
-    'energy': [
-      'solar-panel-savings', 'seed-spacing', 'energy-usage', 'carbon-footprint', 'home-energy-audit'
-    ],
-    'animal-age': [
-      'dog-age', 'cat-age'
-    ],
-    'space': [
-      'age-on-mars', 'space-weight', 'planetary-years', 'time-on-mars', 'weight-on-mars'
-    ],
-    'unique': [
-      'love-calculator', 'golf-balls-boeing-747', 'aquarium-volume'
-    ]
-  };
-
   return calculatorCategories
     .filter(category => {
-      const learnSlugs = categoryMapping[category.slug] || [];
+      const learnSlugs = getSlugsForCategory(category.slug);
       const availableArticles = learnSlugs.filter(slug => availableLearnSlugs.includes(slug));
       return availableArticles.length > 0;
     })
     .map(category => ({
-      slug: category.slug,
+      category: category.slug,
     }));
 }
 
 export default async function LearnCategoryPage({ params, searchParams }: LearnCategoryPageProps) {
-  const { slug } = await params;
+  const { category } = await params;
   const { page: pageParam } = await searchParams;
 
-  const categoryData = calculatorCategories.find(cat => cat.slug === slug);
+  const categoryData = calculatorCategories.find(cat => cat.slug === category);
 
   if (!categoryData) {
     notFound();
   }
 
-  const allLearnArticles = getLearnArticlesForCategory(slug);
+  const allLearnArticles = getLearnArticlesForCategory(category);
 
   if (allLearnArticles.length === 0) {
     notFound();
@@ -244,7 +138,7 @@ export default async function LearnCategoryPage({ params, searchParams }: LearnC
     "@type": "CollectionPage",
     "name": `Learn ${categoryData.title} - Step-by-Step Guides`,
     "description": `${totalPosts} comprehensive guides for ${categoryData.title.toLowerCase()}. Learn calculation methods, formulas, and practical examples.`,
-    "url": `https://calcfort.com/learn/category/${slug}`,
+    "url": `https://calcfort.com/learn/${category}`,
     "mainEntity": {
       "@type": "ItemList",
       "numberOfItems": totalPosts,
@@ -255,7 +149,7 @@ export default async function LearnCategoryPage({ params, searchParams }: LearnC
           "@type": "Article",
           "name": article.title,
           "description": article.description,
-          "url": `https://calcfort.com/learn/${slug}/${article.slug}`
+          "url": `https://calcfort.com/learn/${category}/${article.slug}`
         }
       }))
     },
@@ -267,7 +161,7 @@ export default async function LearnCategoryPage({ params, searchParams }: LearnC
 
   // Get related calculators for sidebar
   const relatedCalculators = calculatorCategories
-    .filter(cat => cat.slug !== slug)
+    .filter(cat => cat.slug !== category)
     .slice(0, 6);
 
   return (
@@ -306,7 +200,7 @@ export default async function LearnCategoryPage({ params, searchParams }: LearnC
               {learnArticles.map((article) => (
                 <Link
                   key={article.slug}
-                  href={`/learn/${slug}/${article.slug}`}
+                  href={`/learn/${category}/${article.slug}`}
                   className="group block bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md hover:border-gray-300 transition-all duration-300 overflow-hidden"
                 >
                   <div className="p-6">
@@ -352,7 +246,7 @@ export default async function LearnCategoryPage({ params, searchParams }: LearnC
               <div className="mt-8 flex items-center justify-center gap-2">
                 {currentPage > 1 ? (
                   <Link
-                    href={`/learn/category/${slug}?page=${currentPage - 1}`}
+                    href={`/learn/${category}?page=${currentPage - 1}`}
                     className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                   >
                     Previous
@@ -375,7 +269,7 @@ export default async function LearnCategoryPage({ params, searchParams }: LearnC
                     ) : (
                       <Link
                         key={page}
-                        href={`/learn/category/${slug}?page=${page}`}
+                        href={`/learn/${category}?page=${page}`}
                         className="px-4 py-2 text-sm font-medium rounded-lg text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors"
                       >
                         {page}
@@ -386,7 +280,7 @@ export default async function LearnCategoryPage({ params, searchParams }: LearnC
 
                 {currentPage < totalPages ? (
                   <Link
-                    href={`/learn/category/${slug}?page=${currentPage + 1}`}
+                    href={`/learn/${category}?page=${currentPage + 1}`}
                     className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                   >
                     Next
@@ -420,7 +314,7 @@ export default async function LearnCategoryPage({ params, searchParams }: LearnC
                   {relatedCalculators.map((cat) => (
                     <Link
                       key={cat.slug}
-                      href={`/learn/category/${cat.slug}`}
+                      href={`/learn/${cat.slug}`}
                       className="flex items-center gap-3 p-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors group"
                     >
                       <div className="text-2xl group-hover:scale-110 transition-transform">

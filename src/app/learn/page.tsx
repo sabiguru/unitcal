@@ -138,7 +138,7 @@ export default function LearnIndexPage() {
           "@type": "WebPage",
           "name": `Learn ${category.title}`,
           "description": `${category.learnCount} learning guides for ${category.title.toLowerCase()}`,
-          "url": `https://calcfort.com/learn/category/${category.slug}`
+          "url": `https://calcfort.com/learn/${category.slug}`
         }
       }))
     },
@@ -174,7 +174,7 @@ export default function LearnIndexPage() {
                   {categoriesWithLearnContent.map((category, index) => (
                     <Link
                       key={index}
-                      href={`/learn/category/${category.slug}`}
+                      href={`/learn/${category.slug}`}
                       className="group p-6 bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl hover:shadow-lg hover:border-gray-300 transition-all duration-300 transform hover:-translate-y-1"
                     >
                       <div className="text-center">

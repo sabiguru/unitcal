@@ -133,98 +133,98 @@ export default function Header() {
                           <div className="text-xs text-gray-500">Browse all learning content</div>
                         </div>
                       </Link>
-                      <Link href="/learn/category/mathematics" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/mathematics" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
                         <span className="text-lg">🧮</span>
                         <div>
                           <div className="font-medium text-gray-900">Mathematics & Basic Tools</div>
                           <div className="text-xs text-gray-500">Learn calculation methods</div>
                         </div>
                       </Link>
-                      <Link href="/learn/category/health" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/health" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
                         <span className="text-lg">🏃‍♂️</span>
                         <div>
                           <div className="font-medium text-gray-900">Health & Fitness</div>
                           <div className="text-xs text-gray-500">Learn health calculations</div>
                         </div>
                       </Link>
-                      <Link href="/learn/category/financial" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/financial" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
                         <span className="text-lg">💰</span>
                         <div>
                           <div className="font-medium text-gray-900">Financial & Business</div>
                           <div className="text-xs text-gray-500">Learn financial formulas</div>
                         </div>
                       </Link>
-                      <Link href="/learn/category/engineering" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/engineering" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
                         <span className="text-lg">⚡</span>
                         <div>
                           <div className="font-medium text-gray-900">Engineering & Technology</div>
                           <div className="text-xs text-gray-500">Learn technical concepts</div>
                         </div>
                       </Link>
-                      <Link href="/learn/category/automotive" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/automotive" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
                         <span className="text-lg">🚗</span>
                         <div>
                           <div className="font-medium text-gray-900">Automotive</div>
                           <div className="text-xs text-gray-500">Learn car calculations</div>
                         </div>
                       </Link>
-                      <Link href="/learn/category/space" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/space" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
                         <span className="text-lg">🚀</span>
                         <div>
                           <div className="font-medium text-gray-900">Space & Astronomy</div>
                           <div className="text-xs text-gray-500">Learn space concepts</div>
                         </div>
                       </Link>
-                      <Link href="/learn/category/everyday" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/everyday" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
                         <span className="text-lg">📅</span>
                         <div>
                           <div className="font-medium text-gray-900">Everyday Life</div>
                           <div className="text-xs text-gray-500">Learn everyday calculations</div>
                         </div>
                       </Link>
-                      <Link href="/learn/category/construction" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/construction" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
                         <span className="text-lg">🏗️</span>
                         <div>
                           <div className="font-medium text-gray-900">Construction & DIY</div>
                           <div className="text-xs text-gray-500">Learn construction calculations</div>
                         </div>
                       </Link>
-                      <Link href="/learn/category/cooking" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/cooking" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
                         <span className="text-lg">👨‍🍳</span>
                         <div>
                           <div className="font-medium text-gray-900">Cooking & Food</div>
                           <div className="text-xs text-gray-500">Learn cooking calculations</div>
                         </div>
                       </Link>
-                      <Link href="/learn/category/conversions" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/conversions" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
                         <span className="text-lg">🔄</span>
                         <div>
                           <div className="font-medium text-gray-900">Specialized Conversions</div>
                           <div className="text-xs text-gray-500">Learn conversion tools</div>
                         </div>
                       </Link>
-                      <Link href="/learn/category/energy" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/energy" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
                         <span className="text-lg">🌱</span>
                         <div>
                           <div className="font-medium text-gray-900">Energy & Environment</div>
                           <div className="text-xs text-gray-500">Learn energy calculations</div>
                         </div>
                       </Link>
-                      <Link href="/learn/category/education" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/education" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
                         <span className="text-lg">🔬</span>
                         <div>
                           <div className="font-medium text-gray-900">Education & Science</div>
                           <div className="text-xs text-gray-500">Learn science calculations</div>
                         </div>
                       </Link>
-                      <Link href="/learn/category/animal-age" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/animal-age" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
                         <span className="text-lg">🐾</span>
                         <div>
                           <div className="font-medium text-gray-900">Animal Age</div>
                           <div className="text-xs text-gray-500">Learn pet age calculations</div>
                         </div>
                       </Link>
-                      <Link href="/learn/category/unique" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/unique" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
                         <span className="text-lg">🎲</span>
                         <div>
                           <div className="font-medium text-gray-900">Unique & Niche</div>
