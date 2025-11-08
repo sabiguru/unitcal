@@ -3,6 +3,7 @@ import { calculators } from '@/data/calculators';
 import { calculatorCategories } from '@/data/categoryData';
 import { getAvailableLearnSlugs } from '@/data/learnSeoBySlug';
 import { getCategoryForSlug } from '@/utils/learnCategoryMapping';
+import { getCategoryForCalculator } from '@/utils/calculatorCategoryMapping';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://calcfort.com';
@@ -29,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/categories`,
+      url: `${baseUrl}/calculators`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -56,16 +57,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
 
   // Dynamic calculator routes
-  const calculatorRoutes: MetadataRoute.Sitemap = calculators.map(calculator => ({
-    url: `${baseUrl}/calculator/${calculator.slug}`,
-    lastModified: currentDate,
-    changeFrequency: 'yearly' as const,
-    priority: 0.9,
-  }));
+  const calculatorRoutes: MetadataRoute.Sitemap = calculators.map(calculator => {
+    const category = getCategoryForCalculator(calculator.slug);
+    return {
+      url: category ? `${baseUrl}/calculator/${category}/${calculator.slug}` : `${baseUrl}/calculator/${calculator.slug}`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly' as const,
+      priority: 0.9,
+    };
+  });
 
   // Dynamic category routes
   const categoryRoutes: MetadataRoute.Sitemap = calculatorCategories.map(category => ({
-    url: `${baseUrl}/category/${category.slug}`,
+    url: `${baseUrl}/calculator/${category.slug}`,
     lastModified: currentDate,
     changeFrequency: 'weekly' as const,
     priority: 0.7,

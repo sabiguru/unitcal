@@ -8,14 +8,14 @@ import Header from '@/components/Header';
 
 interface CategoryPageProps {
   params: Promise<{
-    slug: string;
+    category: string;
   }>;
 }
 
 // Enhanced metadata generation for category pages
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const category = calculatorCategories.find(cat => cat.slug === slug);
+  const { category: categorySlug } = await params;
+  const category = calculatorCategories.find(cat => cat.slug === categorySlug);
   
   if (!category) {
     return {
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
     openGraph: {
       title: `${category.title} | CalcFort`,
       description: `Free ${category.title.toLowerCase()} calculators and tools. ${category.description}`,
-      url: `https://calcfort.com/category/${category.slug}`,
+      url: `https://calcfort.com/calculator/${category.slug}`,
       siteName: 'CalcFort',
       images: [
         {
@@ -76,7 +76,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
       },
     },
     alternates: {
-      canonical: `https://calcfort.com/category/${category.slug}`,
+      canonical: `https://calcfort.com/calculator/${category.slug}`,
     },
     other: {
       'og:image:alt': `${category.title} Calculators`,
@@ -87,15 +87,15 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
 
 // Generate static params for all categories
 export function generateStaticParams() {
-  return calculatorCategories.map((category) => ({
-    slug: category.slug,
+  return calculatorCategories.map((cat) => ({
+    category: cat.slug,
   }));
 }
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
-  const { slug } = await params;
-  const category = calculatorCategories.find(cat => cat.slug === slug);
-  const schemas = categorySchemas[slug as keyof typeof categorySchemas];
+  const { category: categorySlug } = await params;
+  const category = calculatorCategories.find(cat => cat.slug === categorySlug);
+  const schemas = categorySchemas[categorySlug as keyof typeof categorySchemas];
 
   if (!category) {
     notFound();

@@ -58,7 +58,7 @@ export default function Header() {
                 {showCategoriesDropdown && (
                   <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
                     <div className="p-2">
-                      <Link href="/categories" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors mb-2 border-b border-gray-100">
+                      <Link href="/calculators" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors mb-2 border-b border-gray-100">
                         <span className="text-lg">📋</span>
                         <div>
                           <div className="font-medium text-gray-900">All Categories</div>
@@ -302,7 +302,7 @@ export default function Header() {
               {/* Mobile navigation */}
               <div className="space-y-2">
                 <Link
-                  href="/categories"
+                  href="/calculators"
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
                   onClick={() => setShowMobileMenu(false)}
                 >
