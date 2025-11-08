@@ -12,19 +12,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: baseUrl,
       lastModified: currentDate,
-      changeFrequency: 'daily',
+      changeFrequency: 'weekly',
       priority: 1.0,
     },
     {
       url: `${baseUrl}/about`,
       lastModified: currentDate,
-      changeFrequency: 'monthly',
+      changeFrequency: 'yearly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/contact`,
       lastModified: currentDate,
-      changeFrequency: 'monthly',
+      changeFrequency: 'yearly',
       priority: 0.8,
     },
     {
@@ -36,13 +36,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/auth/login`,
       lastModified: currentDate,
-      changeFrequency: 'monthly',
+      changeFrequency: 'yearly',
       priority: 0.5,
     },
     {
       url: `${baseUrl}/auth/signup`,
       lastModified: currentDate,
-      changeFrequency: 'monthly',
+      changeFrequency: 'yearly',
       priority: 0.5,
     },
     {
@@ -58,7 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const calculatorRoutes: MetadataRoute.Sitemap = calculators.map(calculator => ({
     url: `${baseUrl}/calculator/${calculator.slug}`,
     lastModified: currentDate,
-    changeFrequency: 'weekly' as const,
+    changeFrequency: 'yearly' as const,
     priority: 0.9,
   }));
 
@@ -133,7 +133,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const learnArticleRoutes: MetadataRoute.Sitemap = getAvailableLearnSlugs().map(slug => ({
     url: `${baseUrl}/learn/${slug}`,
     lastModified: currentDate,
-    changeFrequency: 'weekly' as const,
+    changeFrequency: 'yearly' as const,
     priority: 0.8,
   }));
 
