@@ -255,7 +255,7 @@ export default async function LearnCategoryPage({ params, searchParams }: LearnC
           "@type": "Article",
           "name": article.title,
           "description": article.description,
-          "url": `https://calcfort.com/learn/${article.slug}`
+          "url": `https://calcfort.com/learn/${slug}/${article.slug}`
         }
       }))
     },
@@ -306,7 +306,7 @@ export default async function LearnCategoryPage({ params, searchParams }: LearnC
               {learnArticles.map((article) => (
                 <Link
                   key={article.slug}
-                  href={`/learn/${article.slug}`}
+                  href={`/learn/${slug}/${article.slug}`}
                   className="group block bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md hover:border-gray-300 transition-all duration-300 overflow-hidden"
                 >
                   <div className="p-6">

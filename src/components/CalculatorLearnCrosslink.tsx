@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getAvailableLearnSlugs } from '@/data/learnSeoBySlug';
+import { getCategoryForSlug } from '@/utils/learnCategoryMapping';
 
 interface CalculatorLearnCrosslinkProps {
   calculatorSlug: string;
@@ -15,6 +16,10 @@ export default function CalculatorLearnCrosslink({ calculatorSlug, calculatorTit
   if (!hasLearnArticle) {
     return null;
   }
+
+  // Get the category for this slug to build the correct URL
+  const category = getCategoryForSlug(calculatorSlug);
+  const learnUrl = category ? `/learn/${category}/${calculatorSlug}` : `/learn/${calculatorSlug}`;
 
   return (
     <div className="bg-gray-50 rounded-xl border border-gray-200 p-6 mb-8">
@@ -33,7 +38,7 @@ export default function CalculatorLearnCrosslink({ calculatorSlug, calculatorTit
             complete with examples, tips, and frequently asked questions.
           </p>
           <Link
-            href={`/learn/${calculatorSlug}`}
+            href={learnUrl}
             className="inline-flex items-center px-4 py-2 bg-gray-800 hover:bg-gray-900 text-white text-sm font-medium rounded-lg transition-colors"
           >
             <span className="mr-2">📖</span>
