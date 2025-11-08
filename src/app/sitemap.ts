@@ -82,16 +82,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       'health': [
         'bmi', 'bmr', 'bodyfat', 'calorie', 'protein', 'heartrate', 'fitness', 'sleep', 'water',
         'wearable-tech-data-driven-fitness', 'strength-training-building-muscle-healthgoal',
-        'holistic-recovery-mobility-low-impact-training'
+        'holistic-recovery-mobility-low-impact-training', 'quick-home-workouts'
       ],
       'financial': [
         'budget', 'compound-interest', 'credit-card-payoff', 'currency-converter', 'depreciation',
         'discount', 'interest', 'investment', 'loan', 'mortgage', 'npv-irr', 'refinance',
-        'retirement', 'roi', 'salary', 'tax', 'car-lease', 'car-loan'
+        'retirement', 'roi', 'salary', 'tax', 'car-lease', 'car-loan', 'finance-automation-2026',
+        'remote-work-2026'
       ],
       'engineering': [
         'capacitor', 'electrical', 'energy-usage', 'ohms-law', 'resistor', 'molecular-weight',
-        'stoichiometry', 'ph', 'subnet', 'carbon-footprint'
+        'stoichiometry', 'ph', 'subnet', 'carbon-footprint', 'ai-engineering-2026', 'concept-to-silicon'
       ],
       'automotive': [
         'mpg', 'fuel-cost', 'ev-range', 'tire-size'

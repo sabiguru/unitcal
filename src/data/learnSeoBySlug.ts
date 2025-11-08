@@ -951,6 +951,106 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
   metaDescription: "Find your weight on the Moon, Mars, Jupiter, and other planets. Use gravity ratios to compare your Earth weight across the solar system.",
   lastResearched: "2025-09-28"
 },
+"finance-automation-2026": {
+  primaryKeyword: "automate personal finances",
+  variants: [
+    "financial automation 2026",
+    "automated budgeting tools",
+    "how to automate savings",
+    "AI finance tools",
+    "personal finance calculators"
+  ],
+  longTails: [
+    "how to automate personal finances in 2025",
+    "best budgeting automation apps",
+    "financial automation strategies for beginners",
+    "automated savings and investment setup",
+    "how to use calculators to track financial goals"
+  ],
+  metaTitle: "The Ultimate Guide to Automating Your Personal Finances in 2025/26",
+  metaDescription: "Learn how to automate your income, savings, and investments using smart finance tools and Calcfort calculators to simplify your financial life.",
+  lastResearched: "2025-11-08"
+},
+"ai-engineering-2026": {
+  primaryKeyword: "generative AI in engineering",
+  variants: [
+    "AI design tools 2026",
+    "AI in technology innovation",
+    "generative AI chip design",
+    "AI for mechanical engineering",
+    "engineering AI applications"
+  ],
+  longTails: [
+    "how generative AI is changing engineering in 2026",
+    "AI powered design and simulation tools",
+    "generative AI use cases in semiconductor design",
+    "AI assisted product development",
+    "AI engineering tools to improve efficiency"
+  ],
+  metaTitle: "How Generative AI Tools Are Reshaping Engineering and Technology in 2026",
+  metaDescription: "Explore how generative AI is transforming design, simulation, and manufacturing in 2026—and see how Calcfort calculators help measure real efficiency gains.",
+  lastResearched: "2025-11-08"
+},
+"quick-home-workouts": {
+  primaryKeyword: "home workouts for professionals",
+  variants: [
+    "quick desk workouts",
+    "short workouts for remote workers",
+    "15 minute office workouts",
+    "home exercise routine for busy people",
+    "daily movement for productivity"
+  ],
+  longTails: [
+    "best quick home workouts for busy professionals",
+    "workout routine for remote workers",
+    "short daily exercise for desk jobs",
+    "at home fitness for office professionals",
+    "how to stay active working from home"
+  ],
+  metaTitle: "10 Quick Workouts You Can Do at Home for Busy Professionals",
+  metaDescription: "Discover 10 efficient home workouts designed for busy professionals and remote workers. Improve energy, posture, and focus using Calcfort’s health calculators.",
+  lastResearched: "2025-11-08"
+},
+"concept-to-silicon": {
+  primaryKeyword: "physical design and implementation",
+  variants: [
+    "chip design process",
+    "silicon implementation flow",
+    "ASIC physical design guide",
+    "floorplanning and timing closure",
+    "digital design to silicon"
+  ],
+  longTails: [
+    "how to go from concept to silicon in chip design",
+    "physical design flow for ASIC engineers",
+    "step by step guide to chip implementation",
+    "understanding timing power and area tradeoffs",
+    "tools used in physical design implementation"
+  ],
+  metaTitle: "From Concept to Silicon – A Practical Guide to Physical Design & Implementation for Engineers",
+  metaDescription: "Learn how digital designs move from RTL to silicon through physical design and implementation. Understand timing, power, and area with Calcfort engineering calculators.",
+  lastResearched: "2025-11-08"
+},
+"remote-work-2026": {
+  primaryKeyword: "remote work 2026",
+  variants: [
+    "future of remote work",
+    "virtual teams management",
+    "hybrid work trends",
+    "AI in remote work",
+    "distributed teams productivity"
+  ],
+  longTails: [
+    "how remote work is changing in 2026",
+    "managing virtual teams effectively",
+    "best productivity tools for hybrid teams",
+    "financial benefits of remote work",
+    "remote work technology trends 2026"
+  ],
+  metaTitle: "Remote Work & Virtual Teams in 2026 – What’s Changing and How to Stay Ahead",
+  metaDescription: "Explore how remote work and virtual teams are evolving in 2026. Learn to manage distributed teams, track productivity, and measure performance using Calcfort calculators.",
+  lastResearched: "2025-11-08"
+},
   "weight-on-mars": {
     "primaryKeyword": "weight on Mars calculator",
     "variants": [

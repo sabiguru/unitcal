@@ -1,0 +1,143 @@
+import { Tabs, TabPanel } from '@/components/ui/Tabs';
+
+# From Concept to Silicon: A Practical Guide to Physical Design & Implementation for Engineers
+
+## Introduction
+Every chip design begins as an idea—but turning that idea into silicon is where real engineering begins.  
+Physical design and implementation bridge the gap between RTL logic and the actual layout that becomes a chip. Understanding this process doesn’t just make you a better designer—it gives you visibility into power, timing, and performance trade-offs that shape modern hardware.
+
+In this guide, we’ll take a clear, structured look at **how a digital design moves from concept to silicon**, the tools used at each stage, and how engineers can evaluate design metrics using online tools like our [Frequency Calculator](https://calcfort.com/calculator/frequency-converter) and [Power Calculator](https://calcfort.com/calculator/power-calculator).
+
+<Tabs>
+<TabPanel title="The Design Journey">
+## From RTL to GDSII — The Full Flow
+The physical design flow converts your synthesised netlist into a manufacturable layout file (GDSII). Here’s the typical sequence:
+
+1. **Design Entry & RTL Coding**  
+   Start with Verilog or VHDL. Clean, synchronous RTL design is the foundation for successful physical implementation.
+
+2. **Logic Synthesis**  
+   Converts RTL into a gate-level netlist based on a standard-cell library.  
+   Use timing estimates with our [Propagation Delay Calculator](https://calcfort.com/calculator/time-converter) to understand timing constraints early.
+
+3. **Floorplanning**  
+   Define block placement, power grid, and I/O locations. Early floorplan decisions affect congestion, power, and timing closure.
+
+4. **Placement & Clock Tree Synthesis (CTS)**  
+   Tools place cells optimally and insert balanced clock trees to minimise skew and delay.
+
+5. **Routing**  
+   Connects all cells physically. This stage consumes the most runtime and impacts timing, noise, and power integrity.
+
+6. **Sign-Off & GDSII Export**  
+   After physical verification (DRC/LVS), the design is ready for fabrication.
+
+</TabPanel>
+
+<TabPanel title="Key Concepts & Metrics">
+## Timing, Power, and Area — The Core Trade-Offs
+These three metrics—**T, P, A**—govern every physical design decision.
+
+### Timing (Performance)
+- Measured in clock frequency and slack.  
+- Improving one path can worsen another—understanding slack balance is essential.
+
+> Use the [Frequency Converter Calculator](https://calcfort.com/calculator/frequency-converter) to evaluate equivalent clock speeds across process corners.
+
+### Power
+- Split into dynamic and leakage power.  
+- Modern SoCs rely on multi-Vt cells and clock gating for savings.  
+- Our [Power Calculator](https://calcfort.com/calculator/power-calculator) helps estimate consumption from voltage, current, and switching activity.
+
+### Area
+- Smaller area means fewer masks and lower cost—but can worsen congestion or heat.  
+- Density analysis helps find the sweet spot between compactness and reliability.
+
+</TabPanel>
+
+<TabPanel title="Toolchain Overview">
+## Common Tools & Platforms
+| Stage | Popular Tools | Purpose |
+|-------|----------------|----------|
+| Synthesis | Synopsys Design Compiler, Cadence Genus | RTL → Netlist |
+| Floorplan/Placement | Cadence Innovus, Synopsys ICC2 | Layout and CTS |
+| Timing Analysis | PrimeTime, Tempus | Setup/Hold verification |
+| DRC/LVS | Calibre, Pegasus | Physical verification |
+
+Integrating scripting languages (Tcl, Python) is key for automation and reproducibility across these stages.
+
+</TabPanel>
+
+<TabPanel title="Design Optimization">
+## Optimization Techniques
+Physical implementation isn’t just about running tools—it’s about iteration.
+
+### 1. Timing Closure Strategies
+- Focus on the worst negative slack first  
+- Use multi-corner, multi-mode analysis  
+- Explore buffer insertion and resizing  
+
+### 2. Power Reduction
+- Apply voltage islands where possible  
+- Gate unused logic blocks  
+- Leverage multi-threshold libraries  
+
+### 3. Area Efficiency
+- Consolidate clock domains  
+- Limit macro fragmentation  
+- Reuse IP with proven layouts  
+
+You can simulate efficiency improvements using our [Efficiency Gain Calculator](https://calcfort.com/calculator/efficiency-gain).
+
+</TabPanel>
+
+<TabPanel title="Verification & Tape-Out">
+## Before Silicon — Sign-Off Matters
+Verification ensures your design behaves exactly as intended before tape-out.
+
+### Sign-Off Checks
+- **Static Timing Analysis (STA)** for all corners  
+- **IR Drop Analysis** for power integrity  
+- **Electromigration (EM) Checks**  
+- **Design Rule Check (DRC)** and **Layout vs. Schematic (LVS)**  
+
+A missed violation here can cost millions in re-spins.
+
+> Calculate the financial impact of design delays using the [Project Cost Calculator](https://calcfort.com/calculator/project-cost).
+
+</TabPanel>
+
+<TabPanel title="Career & Future Trends">
+## The Evolving Role of Physical Design Engineers
+As process nodes shrink and AI accelerators grow, physical design is evolving rapidly. Engineers now need:
+- A solid foundation in digital logic and circuits  
+- Tool automation skills (Tcl/Python scripting)  
+- Cross-disciplinary collaboration with architecture and verification teams  
+
+### Emerging Trends
+- **AI-assisted placement and routing** using reinforcement learning  
+- **3D IC design** for compact, power-efficient SoCs  
+- **Low-power physical IPs** for edge computing and IoT  
+
+Future engineers will blend hardware design intuition with automation and analytics—turning data into faster, cooler, and smarter silicon.
+
+</TabPanel>
+
+<TabPanel title="FAQ">
+### What is the difference between logical and physical design?
+Logical design focuses on function (RTL and synthesis), while physical design focuses on how it’s built (layout, timing, power).
+
+### Which programming skills help in this field?
+Tcl and Python dominate automation. Knowing shell scripting and version control is also valuable.
+
+### How long does a typical PD cycle take?
+Anywhere between 3–6 months for mid-sized chips, depending on team size and design complexity.
+
+### Can AI replace physical design engineers?
+AI accelerates exploration but engineers remain essential for constraint definition and interpretation.
+
+### How can I learn practical PD skills?
+Start with open-source EDA tools like OpenROAD and track power or timing with our calculators for hands-on learning.
+
+</TabPanel>
+</Tabs>

@@ -524,6 +524,38 @@ export const relatedCalculatorsMap: Record<string, RelatedCalculator[]> = {
     { slug: 'volume', name: 'Volume Calculator', description: 'Calculate volumes' },
     { slug: 'unit-converter', name: 'Unit Converter', description: 'Convert units' },
   ],
+
+  // New Blogs 2026
+  'finance-automation-2026': [
+    { slug: 'budget', name: 'Budget Calculator', description: 'Track income and expenses' },
+    { slug: 'investment', name: 'Investment Calculator', description: 'Project investment returns' },
+    { slug: 'retirement', name: 'Retirement Calculator', description: 'Plan retirement savings' },
+    { slug: 'tax', name: 'Tax Calculator', description: 'Estimate tax obligations' },
+  ],
+  'ai-engineering-2026': [
+    { slug: 'scientific', name: 'Scientific Calculator', description: 'Advanced mathematical functions' },
+    { slug: 'binary-converter', name: 'Binary/Hex Calculator', description: 'Convert number systems' },
+    { slug: 'subnet', name: 'IP Subnet Calculator', description: 'Calculate network subnets' },
+    { slug: 'electrical', name: 'Electrical Calculator', description: 'Calculate power and energy' },
+  ],
+  'quick-home-workouts': [
+    { slug: 'bmi', name: 'BMI Calculator', description: 'Calculate Body Mass Index' },
+    { slug: 'calorie', name: 'Calorie Calculator', description: 'Calculate daily calorie needs' },
+    { slug: 'fitness', name: 'Fitness Calculator', description: 'Track fitness metrics' },
+    { slug: 'heartrate', name: 'Heart Rate Calculator', description: 'Calculate training zones' },
+  ],
+  'concept-to-silicon': [
+    { slug: 'electrical', name: 'Electrical Calculator', description: 'Calculate power and energy' },
+    { slug: 'resistor', name: 'Resistor Calculator', description: 'Calculate resistor values' },
+    { slug: 'ohms-law', name: "Ohm's Law Calculator", description: 'Calculate voltage, current, resistance' },
+    { slug: 'scientific', name: 'Scientific Calculator', description: 'Advanced mathematical functions' },
+  ],
+  'remote-work-2026': [
+    { slug: 'salary', name: 'Salary Calculator', description: 'Convert salary formats' },
+    { slug: 'budget', name: 'Budget Calculator', description: 'Track income and expenses' },
+    { slug: 'timezone-converter', name: 'Time Zone Converter', description: 'Convert times between zones' },
+    { slug: 'tip', name: 'Tip Calculator', description: 'Calculate tips and split bills' },
+  ],
 };
 
 // Default related calculators shown when no specific mapping exists
