@@ -81,6 +81,17 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
   const breadcrumbs = generateCalculatorBreadcrumbs(meta.title, meta.category);
   const relatedCalculators = getRelatedCalculators(slug);
 
+  // Dynamically import MDX content if it exists
+  let MdxContent = null;
+  if (meta.mdx) {
+    try {
+      const mdxModule = await import(`@/content/calculators/${meta.mdx}`);
+      MdxContent = mdxModule.default;
+    } catch (error) {
+      console.error(`Failed to load MDX for ${slug}:`, error);
+    }
+  }
+
   return (
     <>
       {seoData?.structuredData && (
@@ -105,9 +116,9 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
               <Calc />
             </div>
 
-            {meta.mdxContent && (
+            {MdxContent && (
               <div className="bg-white rounded-xl border border-gray-200 shadow-md p-6">
-                <MDXContent>{meta.mdxContent}</MDXContent>
+                <MdxContent />
               </div>
             )}
           </main>
