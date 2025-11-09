@@ -5,6 +5,7 @@ export interface RelatedCalculator {
   slug: string;
   name: string;
   description: string;
+  link?: string;
 }
 
 export const relatedCalculatorsMap: Record<string, RelatedCalculator[]> = {
@@ -567,5 +568,17 @@ export const defaultRelatedCalculators: RelatedCalculator[] = [
 
 // Helper function to get related calculators for a given slug
 export function getRelatedCalculators(slug: string): RelatedCalculator[] {
-  return relatedCalculatorsMap[slug] || defaultRelatedCalculators;
+  const calculators = relatedCalculatorsMap[slug] || defaultRelatedCalculators;
+
+  // Import the category mapping utility
+  const { getCategoryForCalculator } = require('@/utils/calculatorCategoryMapping');
+
+  // Add the link property to each calculator
+  return calculators.map(calc => {
+    const category = getCategoryForCalculator(calc.slug);
+    return {
+      ...calc,
+      link: category ? `/calculator/${category}/${calc.slug}` : `/calculator/${calc.slug}`
+    };
+  });
 }
