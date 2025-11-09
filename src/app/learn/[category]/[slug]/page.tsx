@@ -162,7 +162,7 @@ export default async function LearnPage({ params }: LearnPageProps) {
                 {relatedCalculators.map((calc) => (
                   <a
                     key={calc.slug}
-                    href={`/calculator/${calc.slug}`}
+                    href={calc.link}
                     className="block p-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors"
                   >
                     <div className="font-medium text-gray-800">{calc.name}</div>

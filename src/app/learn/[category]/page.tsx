@@ -305,16 +305,16 @@ export default async function LearnCategoryPage({ params, searchParams }: LearnC
                 </div>
               </div>
 
-              {/* Related Calculators */}
+              {/* Related Calculator Categories */}
               <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
                 <h3 className="text-lg font-bold text-gray-900 mb-4">
-                  Related Calculators
+                  Calculator Categories
                 </h3>
                 <div className="space-y-3">
                   {relatedCalculators.map((cat) => (
                     <Link
                       key={cat.slug}
-                      href={`/learn/${cat.slug}`}
+                      href={`/calculator/${cat.slug}`}
                       className="flex items-center gap-3 p-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors group"
                     >
                       <div className="text-2xl group-hover:scale-110 transition-transform">
