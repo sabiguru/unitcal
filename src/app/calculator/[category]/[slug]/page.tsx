@@ -1,6 +1,7 @@
 import { notFound, redirect } from 'next/navigation';
 import { calculators, bySlug } from '@/data/calculators';
 import { seoBySlug } from '@/data/seoBySlug';
+import Header from '@/components/Header';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { generateCalculatorBreadcrumbs } from '@/lib/breadcrumbs';
 import EzoicAd from '@/components/ads/EzoicAd';
@@ -90,6 +91,7 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
           }}
         />
       )}
+      <Header />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <Breadcrumbs items={breadcrumbs} />
 

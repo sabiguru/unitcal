@@ -486,14 +486,14 @@ export default function Home() {
                           <span className="text-lg">{category.icon}</span>
                         </div>
                         <div className="flex-1">
-                          <Link href={`/category/${category.slug}`}>
+                          <Link href={`/calculator/${category.slug}`}>
                             <h3 className="text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors cursor-pointer">
                               {category.title}
                             </h3>
                           </Link>
                           <p className="text-xs text-gray-500">{category.calculators.length} calculators</p>
                         </div>
-                        <Link href={`/category/${category.slug}`} className="text-blue-600 hover:text-blue-800 transition-colors p-3 -m-3" aria-label={`View all ${category.title} calculators`}>
+                        <Link href={`/calculator/${category.slug}`} className="text-blue-600 hover:text-blue-800 transition-colors p-3 -m-3" aria-label={`View all ${category.title} calculators`}>
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                           </svg>
@@ -523,7 +523,7 @@ export default function Home() {
                       {category.calculators.length > 6 && (
                         <div className="mt-3 pt-3 border-t border-gray-200">
                           <Link
-                            href={`/category/${category.slug}`}
+                            href={`/calculator/${category.slug}`}
                             className="inline-block text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors py-2"
                           >
                             View all {category.calculators.length} calculators →
@@ -568,7 +568,7 @@ export default function Home() {
               {calculatorCategories.map((category, index) => (
                 <Link
                   key={index}
-                  href={`/category/${category.slug}`}
+                  href={`/calculator/${category.slug}`}
                   className="group p-6 bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl hover:shadow-lg hover:border-gray-300 transition-all duration-300 transform hover:-translate-y-1"
                 >
                   <div className="text-center">
