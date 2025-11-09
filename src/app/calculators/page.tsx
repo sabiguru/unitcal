@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Calculator Categories - Browse All Tools | CalcFort',
     description: 'Browse calculator categories: mathematics, finance, engineering, health, and more tools.',
-    url: 'https://calcfort.com/categories',
+    url: 'https://calcfort.com/calculators',
     siteName: 'CalcFort',
     type: 'website',
   },
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://calcfort.com/categories',
+    canonical: 'https://calcfort.com/calculators',
   },
 };
 
@@ -50,7 +50,7 @@ export default function CategoriesPage() {
     "@type": "CollectionPage",
     "name": "Calculator Categories - Browse All Tools",
     "description": "Browse calculator categories: mathematics, finance, engineering, health, and more tools.",
-    "url": "https://calcfort.com/categories",
+    "url": "https://calcfort.com/calculators",
     "mainEntity": {
       "@type": "ItemList",
       "numberOfItems": calculatorCategories.length,
@@ -61,7 +61,7 @@ export default function CategoriesPage() {
           "@type": "WebPage",
           "name": category.title,
           "description": category.description,
-          "url": `https://calcfort.com/category/${category.slug}`
+          "url": `https://calcfort.com/calculator/${category.slug}`
         }
       }))
     },
@@ -97,7 +97,7 @@ export default function CategoriesPage() {
                   {calculatorCategories.map((category, index) => (
                     <Link
                       key={index}
-                      href={`/category/${category.slug}`}
+                      href={`/calculator/${category.slug}`}
                       className="group p-6 bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl hover:shadow-lg hover:border-gray-300 transition-all duration-300 transform hover:-translate-y-1"
                     >
                       <div className="text-center">

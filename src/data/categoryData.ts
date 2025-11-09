@@ -36,22 +36,22 @@ export const calculatorCategories: CategoryData[] = [
       useCases: "Whether you're a student learning calculus, an engineer designing structures, or someone calculating tips at a restaurant, our mathematical tools cover every scenario from simple addition to complex matrix operations."
     },
     calculators: [
-      { name: 'Basic Calculator', description: 'Perform standard arithmetic operations with a simple interface', popular: true, link: '/calculator/basic' },
-      { name: 'Scientific Calculator', description: 'Advanced mathematical functions including trigonometry and logarithms', popular: true, link: '/calculator/scientific' },
-      { name: 'Graphing Calculator', description: 'Plot functions and analyze mathematical relationships visually', link: '/calculator/graphing' },
-      { name: 'Fraction Calculator', description: 'Add, subtract, multiply, and divide fractions with ease', link: '/calculator/fraction' },
-      { name: 'Percentage Calculator', description: 'Calculate percentages, percentage change, and percentage of amounts', popular: true, link: '/calculator/percentage' },
-      { name: 'Ratio Calculator', description: 'Find ratios, proportions, and scale factors', link: '/calculator/ratio' },
-      { name: 'Prime Number Calculator', description: 'Check if numbers are prime and find prime factorizations', link: '/calculator/prime' },
-      { name: 'Matrix Calculator', description: 'Perform matrix operations including multiplication and determinants', link: '/calculator/matrix' },
-      { name: 'Equation Solver', description: 'Solve linear, quadratic, and polynomial equations step by step', link: '/calculator/equation-solver' },
-      { name: 'Age Calculator', description: 'Calculate exact age with milestones and fun facts', link: '/calculator/age' },
-      { name: 'Date Calculator', description: 'Add, subtract, or find the difference between dates', link: '/calculator/date' },
-      { name: 'Tip Calculator', description: 'Calculate tips and split bills easily', link: '/calculator/tip' },
-      { name: 'Significant Figures Calculator', description: 'Count, round, and calculate with significant figures', link: '/calculator/significant-figures' },
-      { name: 'Soroban Abacus Calculator', description: 'Master the Japanese soroban abacus with 1:4 bead configuration', link: '/calculator/soroban-abacus' },
-      { name: 'Suanpan Abacus Calculator', description: 'Learn the Chinese suanpan abacus with 2:5 bead configuration', link: '/calculator/suanpan-abacus' },
-      { name: 'Western Abacus Calculator', description: 'Practice with the Western classroom abacus with counting beads', link: '/calculator/western-abacus' }
+      { name: 'Basic Calculator', description: 'Perform standard arithmetic operations with a simple interface', popular: true, link: '/calculator/mathematics/basic' },
+      { name: 'Scientific Calculator', description: 'Advanced mathematical functions including trigonometry and logarithms', popular: true, link: '/calculator/mathematics/scientific' },
+      { name: 'Graphing Calculator', description: 'Plot functions and analyze mathematical relationships visually', link: '/calculator/mathematics/graphing' },
+      { name: 'Fraction Calculator', description: 'Add, subtract, multiply, and divide fractions with ease', link: '/calculator/mathematics/fraction' },
+      { name: 'Percentage Calculator', description: 'Calculate percentages, percentage change, and percentage of amounts', popular: true, link: '/calculator/mathematics/percentage' },
+      { name: 'Ratio Calculator', description: 'Find ratios, proportions, and scale factors', link: '/calculator/mathematics/ratio' },
+      { name: 'Prime Number Calculator', description: 'Check if numbers are prime and find prime factorizations', link: '/calculator/mathematics/prime' },
+      { name: 'Matrix Calculator', description: 'Perform matrix operations including multiplication and determinants', link: '/calculator/mathematics/matrix' },
+      { name: 'Equation Solver', description: 'Solve linear, quadratic, and polynomial equations step by step', link: '/calculator/mathematics/equation-solver' },
+      { name: 'Age Calculator', description: 'Calculate exact age with milestones and fun facts', link: '/calculator/mathematics/age' },
+      { name: 'Date Calculator', description: 'Add, subtract, or find the difference between dates', link: '/calculator/mathematics/date' },
+      { name: 'Tip Calculator', description: 'Calculate tips and split bills easily', link: '/calculator/mathematics/tip' },
+      { name: 'Significant Figures Calculator', description: 'Count, round, and calculate with significant figures', link: '/calculator/mathematics/significant-figures' },
+      { name: 'Soroban Abacus Calculator', description: 'Master the Japanese soroban abacus with 1:4 bead configuration', link: '/calculator/mathematics/soroban-abacus' },
+      { name: 'Suanpan Abacus Calculator', description: 'Learn the Chinese suanpan abacus with 2:5 bead configuration', link: '/calculator/mathematics/suanpan-abacus' },
+      { name: 'Western Abacus Calculator', description: 'Practice with the Western classroom abacus with counting beads', link: '/calculator/mathematics/western-abacus' }
     ]
   },
   {
@@ -72,15 +72,15 @@ export const calculatorCategories: CategoryData[] = [
       useCases: "Whether you're starting a fitness journey, training for competition, managing weight, or simply maintaining health, our tools help you make informed decisions about nutrition, exercise, and lifestyle choices."
     },
     calculators: [
-      { name: 'BMI Calculator', description: 'Calculate Body Mass Index and assess weight categories', popular: true, link: '/calculator/bmi' },
-      { name: 'Calorie Calculator', description: 'Calculate daily calorie needs for weight management goals', popular: true, link: '/calculator/calorie' },
-      { name: 'BMR Calculator', description: 'Calculate your Basal Metabolic Rate using multiple formulas', link: '/calculator/bmr' },
-      { name: 'Body Fat Calculator', description: 'Calculate body fat percentage using multiple measurement methods', link: '/calculator/bodyfat' },
-      { name: 'Heart Rate Calculator', description: 'Calculate training zones and target heart rates for optimal fitness', link: '/calculator/heartrate' },
-      { name: 'Protein Calculator', description: 'Calculate daily protein needs for your fitness goals', popular: true, link: '/calculator/protein' },
-      { name: 'Water Intake Calculator', description: 'Calculate your daily water needs for optimal hydration', link: '/calculator/water' },
-      { name: 'Sleep Calculator', description: 'Optimize your sleep schedule using sleep cycle science', link: '/calculator/sleep' },
-      { name: 'Fitness Calculator', description: 'Calculate 1RM, calories burned, running pace, and VO2 Max', link: '/calculator/fitness' }
+      { name: 'BMI Calculator', description: 'Calculate Body Mass Index and assess weight categories', popular: true, link: '/calculator/health/bmi' },
+      { name: 'Calorie Calculator', description: 'Calculate daily calorie needs for weight management goals', popular: true, link: '/calculator/health/calorie' },
+      { name: 'BMR Calculator', description: 'Calculate your Basal Metabolic Rate using multiple formulas', link: '/calculator/health/bmr' },
+      { name: 'Body Fat Calculator', description: 'Calculate body fat percentage using multiple measurement methods', link: '/calculator/health/bodyfat' },
+      { name: 'Heart Rate Calculator', description: 'Calculate training zones and target heart rates for optimal fitness', link: '/calculator/health/heartrate' },
+      { name: 'Protein Calculator', description: 'Calculate daily protein needs for your fitness goals', popular: true, link: '/calculator/health/protein' },
+      { name: 'Water Intake Calculator', description: 'Calculate your daily water needs for optimal hydration', link: '/calculator/health/water' },
+      { name: 'Sleep Calculator', description: 'Optimize your sleep schedule using sleep cycle science', link: '/calculator/health/sleep' },
+      { name: 'Fitness Calculator', description: 'Calculate 1RM, calories burned, running pace, and VO2 Max', link: '/calculator/health/fitness' }
     ]
   },
   {
@@ -101,22 +101,22 @@ export const calculatorCategories: CategoryData[] = [
       useCases: "From calculating mortgage payments to planning retirement savings, our financial tools help individuals and businesses make data-driven financial decisions with confidence."
     },
     calculators: [
-      { name: 'Loan Calculator', description: 'Calculate monthly payments, interest, and amortization schedules', popular: true, link: '/calculator/loan' },
-      { name: 'Mortgage Calculator', description: 'Estimate mortgage payments including PMI and property taxes', popular: true, link: '/calculator/mortgage' },
-      { name: 'Interest Calculator', description: 'Calculate simple and compound interest on investments', popular: true, link: '/calculator/interest' },
-      { name: 'ROI Calculator', description: 'Measure return on investment for business decisions', link: '/calculator/roi' },
-      { name: 'Retirement Calculator', description: 'Plan retirement savings and estimate future needs', popular: true, link: '/calculator/retirement' },
-      { name: 'Budget Calculator', description: 'Track income, expenses, and savings goals', link: '/calculator/budget' },
-      { name: 'Salary Calculator', description: 'Convert between hourly, monthly, and annual salaries', link: '/calculator/salary' },
-      { name: 'Tax Calculator', description: 'Estimate federal and state income tax obligations', link: '/calculator/tax' },
-      { name: 'NPV/IRR Calculator', description: 'Calculate net present value and internal rate of return', link: '/calculator/npv-irr' },
-      { name: 'Compound Interest Calculator', description: 'Calculate compound interest with optional contributions', link: '/calculator/compound-interest' },
-      { name: 'Refinance Calculator', description: 'Compare mortgage refinance options and savings', link: '/calculator/refinance' },
-      { name: 'Currency Converter', description: 'Convert between world currencies with live exchange rates', link: '/calculator/currency-converter' },
-      { name: 'Credit Card Payoff', description: 'Calculate payoff time and interest savings strategies', link: '/calculator/credit-card-payoff' },
-      { name: 'Investment Calculator', description: 'Project investment growth with regular contributions', link: '/calculator/investment' },
-      { name: 'Depreciation Calculator', description: 'Calculate asset depreciation using various methods', link: '/calculator/depreciation' },
-      { name: 'Discount Calculator', description: 'Calculate discounts, sale prices, and savings amounts', link: '/calculator/discount' }
+      { name: 'Loan Calculator', description: 'Calculate monthly payments, interest, and amortization schedules', popular: true, link: '/calculator/financial/loan' },
+      { name: 'Mortgage Calculator', description: 'Estimate mortgage payments including PMI and property taxes', popular: true, link: '/calculator/financial/mortgage' },
+      { name: 'Interest Calculator', description: 'Calculate simple and compound interest on investments', popular: true, link: '/calculator/financial/interest' },
+      { name: 'ROI Calculator', description: 'Measure return on investment for business decisions', link: '/calculator/financial/roi' },
+      { name: 'Retirement Calculator', description: 'Plan retirement savings and estimate future needs', popular: true, link: '/calculator/financial/retirement' },
+      { name: 'Budget Calculator', description: 'Track income, expenses, and savings goals', link: '/calculator/financial/budget' },
+      { name: 'Salary Calculator', description: 'Convert between hourly, monthly, and annual salaries', link: '/calculator/financial/salary' },
+      { name: 'Tax Calculator', description: 'Estimate federal and state income tax obligations', link: '/calculator/financial/tax' },
+      { name: 'NPV/IRR Calculator', description: 'Calculate net present value and internal rate of return', link: '/calculator/financial/npv-irr' },
+      { name: 'Compound Interest Calculator', description: 'Calculate compound interest with optional contributions', link: '/calculator/financial/compound-interest' },
+      { name: 'Refinance Calculator', description: 'Compare mortgage refinance options and savings', link: '/calculator/financial/refinance' },
+      { name: 'Currency Converter', description: 'Convert between world currencies with live exchange rates', link: '/calculator/financial/currency-converter' },
+      { name: 'Credit Card Payoff', description: 'Calculate payoff time and interest savings strategies', link: '/calculator/financial/credit-card-payoff' },
+      { name: 'Investment Calculator', description: 'Project investment growth with regular contributions', link: '/calculator/financial/investment' },
+      { name: 'Depreciation Calculator', description: 'Calculate asset depreciation using various methods', link: '/calculator/financial/depreciation' },
+      { name: 'Discount Calculator', description: 'Calculate discounts, sale prices, and savings amounts', link: '/calculator/financial/discount' }
     ]
   },
   {
@@ -137,13 +137,13 @@ export const calculatorCategories: CategoryData[] = [
       useCases: "Whether you're designing circuits, configuring networks, converting between number systems, or analyzing electrical systems, our engineering tools help professionals work more efficiently and accurately."
     },
     calculators: [
-      { name: 'Electrical Calculator', description: 'Calculate power, energy, cost, and AC circuit parameters', popular: true, link: '/calculator/electrical' },
-      { name: 'Resistor Calculator', description: 'Calculate resistor values, color codes, and combinations', popular: true, link: '/calculator/resistor' },
-      { name: 'Capacitor Calculator', description: 'Calculate capacitance, reactance, energy storage, and charging', link: '/calculator/capacitor' },
-      { name: 'IP Subnet Calculator', description: 'Calculate network subnets, IP ranges, and VLSM', link: '/calculator/subnet' },
-      { name: 'Password Generator', description: 'Generate secure passwords and analyze strength', link: '/calculator/password-generator' },
-      { name: 'Ohm\'s Law Calculator', description: 'Calculate voltage, current, resistance, and power relationships', link: '/calculator/ohms-law' },
-      { name: 'Binary/Hex Calculator', description: 'Convert between binary, decimal, hexadecimal, and octal', link: '/calculator/binary-converter' }
+      { name: 'Electrical Calculator', description: 'Calculate power, energy, cost, and AC circuit parameters', popular: true, link: '/calculator/engineering/electrical' },
+      { name: 'Resistor Calculator', description: 'Calculate resistor values, color codes, and combinations', popular: true, link: '/calculator/engineering/resistor' },
+      { name: 'Capacitor Calculator', description: 'Calculate capacitance, reactance, energy storage, and charging', link: '/calculator/engineering/capacitor' },
+      { name: 'IP Subnet Calculator', description: 'Calculate network subnets, IP ranges, and VLSM', link: '/calculator/engineering/subnet' },
+      { name: 'Password Generator', description: 'Generate secure passwords and analyze strength', link: '/calculator/engineering/password-generator' },
+      { name: 'Ohm\'s Law Calculator', description: 'Calculate voltage, current, resistance, and power relationships', link: '/calculator/engineering/ohms-law' },
+      { name: 'Binary/Hex Calculator', description: 'Convert between binary, decimal, hexadecimal, and octal', link: '/calculator/mathematics/binary-converter' }
     ]
   },
   {
@@ -164,12 +164,12 @@ export const calculatorCategories: CategoryData[] = [
       useCases: "From calculating fuel costs for road trips to analyzing vehicle efficiency and planning maintenance budgets, our automotive tools help drivers optimize their vehicle ownership experience."
     },
     calculators: [
-      { name: 'Fuel Cost Calculator', description: 'Calculate fuel costs for trips and optimize travel budget', popular: true, link: '/calculator/fuel-cost' },
-      { name: 'MPG Calculator', description: 'Calculate vehicle fuel efficiency and cost per mile', popular: true, link: '/calculator/mpg' },
-      { name: 'EV Range Calculator', description: 'Calculate electric vehicle range and charging needs', link: '/calculator/ev-range' },
-      { name: 'Tire Size Calculator', description: 'Compare tire sizes and calculate speedometer differences', link: '/calculator/tire-size' },
-      { name: 'Car Lease Calculator', description: 'Calculate monthly lease payments and total costs', link: '/calculator/car-lease' },
-      { name: 'Car Loan Calculator', description: 'Calculate auto loan payments and interest', link: '/calculator/car-loan' }
+      { name: 'Fuel Cost Calculator', description: 'Calculate fuel costs for trips and optimize travel budget', popular: true, link: '/calculator/automotive/fuel-cost' },
+      { name: 'MPG Calculator', description: 'Calculate vehicle fuel efficiency and cost per mile', popular: true, link: '/calculator/automotive/mpg' },
+      { name: 'EV Range Calculator', description: 'Calculate electric vehicle range and charging needs', link: '/calculator/automotive/ev-range' },
+      { name: 'Tire Size Calculator', description: 'Compare tire sizes and calculate speedometer differences', link: '/calculator/automotive/tire-size' },
+      { name: 'Car Lease Calculator', description: 'Calculate monthly lease payments and total costs', link: '/calculator/financial/car-lease' },
+      { name: 'Car Loan Calculator', description: 'Calculate auto loan payments and interest', link: '/calculator/financial/car-loan' }
     ]
   },
   {
@@ -190,10 +190,10 @@ export const calculatorCategories: CategoryData[] = [
       useCases: "Whether you're scaling a recipe for a dinner party, calculating baker's percentages for artisan bread, brewing the perfect cup of coffee, or diluting spirits for cocktails, our culinary tools ensure precision in every dish and drink."
     },
     calculators: [
-      { name: 'Recipe Converter', description: 'Scale recipes up or down to match your serving size needs', popular: true, link: '/calculator/recipe-converter' },
-      { name: 'Baking Calculator', description: 'Professional baking measurements and ingredient conversions', popular: true, link: '/calculator/baking' },
-      { name: 'Coffee Ratio Calculator', description: 'Perfect coffee brewing ratios for every method', popular: true, link: '/calculator/coffee-ratio' },
-      { name: 'Alcohol Dilution Calculator', description: 'Calculate alcohol dilution, fortification, and blending', link: '/calculator/alcohol-dilution' }
+      { name: 'Recipe Converter', description: 'Scale recipes up or down to match your serving size needs', popular: true, link: '/calculator/cooking/recipe-converter' },
+      { name: 'Baking Calculator', description: 'Professional baking measurements and ingredient conversions', popular: true, link: '/calculator/cooking/baking' },
+      { name: 'Coffee Ratio Calculator', description: 'Perfect coffee brewing ratios for every method', popular: true, link: '/calculator/cooking/coffee-ratio' },
+      { name: 'Alcohol Dilution Calculator', description: 'Calculate alcohol dilution, fortification, and blending', link: '/calculator/cooking/alcohol-dilution' }
     ]
   },
   {
@@ -214,10 +214,10 @@ export const calculatorCategories: CategoryData[] = [
       useCases: "From tracking academic progress and calculating GPA to performing complex chemistry calculations and analyzing molecular structures, our educational tools support learning and research at all levels from high school to graduate studies."
     },
     calculators: [
-      { name: 'GPA Calculator', description: 'Calculate your Grade Point Average and track academic performance', popular: true, link: '/calculator/gpa' },
-      { name: 'Molecular Weight Calculator', description: 'Calculate molecular weight and composition of chemical compounds', popular: true, link: '/calculator/molecular-weight' },
-      { name: 'pH Calculator', description: 'Calculate pH, pOH, and ion concentrations', link: '/calculator/ph' },
-      { name: 'Stoichiometry Calculator', description: 'Calculate molar relationships in chemical reactions', link: '/calculator/stoichiometry' }
+      { name: 'GPA Calculator', description: 'Calculate your Grade Point Average and track academic performance', popular: true, link: '/calculator/education/gpa' },
+      { name: 'Molecular Weight Calculator', description: 'Calculate molecular weight and composition of chemical compounds', popular: true, link: '/calculator/education/molecular-weight' },
+      { name: 'pH Calculator', description: 'Calculate pH, pOH, and ion concentrations', link: '/calculator/education/ph' },
+      { name: 'Stoichiometry Calculator', description: 'Calculate molar relationships in chemical reactions', link: '/calculator/education/stoichiometry' }
     ]
   },
   {
@@ -238,12 +238,12 @@ export const calculatorCategories: CategoryData[] = [
       useCases: "From calculating your exact age with fun facts to planning travel across time zones, splitting restaurant bills, or setting up countdown timers for important events, our everyday calculators make daily tasks simple and accurate."
     },
     calculators: [
-      { name: 'Age Calculator', description: 'Calculate exact age with milestones and fun facts', popular: true, link: '/calculator/age' },
-      { name: 'Date Calculator', description: 'Add, subtract, or find the difference between dates', popular: true, link: '/calculator/date' },
-      { name: 'Tip Calculator', description: 'Calculate tips and split bills easily', popular: true, link: '/calculator/tip' },
-      { name: 'Time Calculator', description: 'Add, subtract, and convert time durations', link: '/calculator/time' },
-      { name: 'Time Zone Converter', description: 'Convert time between different time zones', link: '/calculator/timezone-converter' },
-      { name: 'Countdown Timer', description: 'Count down to important dates and events', link: '/calculator/countdown-timer' }
+      { name: 'Age Calculator', description: 'Calculate exact age with milestones and fun facts', popular: true, link: '/calculator/mathematics/age' },
+      { name: 'Date Calculator', description: 'Add, subtract, or find the difference between dates', popular: true, link: '/calculator/mathematics/date' },
+      { name: 'Tip Calculator', description: 'Calculate tips and split bills easily', popular: true, link: '/calculator/mathematics/tip' },
+      { name: 'Time Calculator', description: 'Add, subtract, and convert time durations', link: '/calculator/mathematics/time' },
+      { name: 'Time Zone Converter', description: 'Convert time between different time zones', link: '/calculator/everyday/timezone-converter' },
+      { name: 'Countdown Timer', description: 'Count down to important dates and events', link: '/calculator/everyday/countdown-timer' }
     ]
   },
   {
@@ -264,14 +264,14 @@ export const calculatorCategories: CategoryData[] = [
       useCases: "Whether you're planning a kitchen renovation, calculating concrete for a driveway, estimating paint for a room, or designing stairs for a deck, our construction tools provide accurate measurements and material estimates."
     },
     calculators: [
-      { name: 'Patio Calculator', description: 'Calculate materials and costs for patio construction', popular: true, link: '/calculator/patio' },
-      { name: 'Area Calculator', description: 'Calculate area for rooms, yards, and construction projects', popular: true, link: '/calculator/area' },
-      { name: 'Volume Calculator', description: 'Calculate volume for concrete, mulch, and storage spaces', link: '/calculator/volume' },
-      { name: 'Tile Calculator', description: 'Estimate tile quantities and costs for flooring projects', popular: true, link: '/calculator/tile' },
-      { name: 'Paint Calculator', description: 'Calculate paint coverage and quantity needed', popular: true, link: '/calculator/paint' },
-      { name: 'Concrete Calculator', description: 'Calculate concrete quantities for construction projects', link: '/calculator/concrete' },
-      { name: 'Stair Calculator', description: 'Calculate stair dimensions and building requirements', link: '/calculator/stairs' },
-      { name: 'Roofing Calculator', description: 'Estimate roofing materials and costs', link: '/calculator/roofing' }
+      { name: 'Patio Calculator', description: 'Calculate materials and costs for patio construction', popular: true, link: '/calculator/construction/patio' },
+      { name: 'Area Calculator', description: 'Calculate area for rooms, yards, and construction projects', popular: true, link: '/calculator/construction/area' },
+      { name: 'Volume Calculator', description: 'Calculate volume for concrete, mulch, and storage spaces', link: '/calculator/construction/volume' },
+      { name: 'Tile Calculator', description: 'Estimate tile quantities and costs for flooring projects', popular: true, link: '/calculator/construction/tile' },
+      { name: 'Paint Calculator', description: 'Calculate paint coverage and quantity needed', popular: true, link: '/calculator/construction/paint' },
+      { name: 'Concrete Calculator', description: 'Calculate concrete quantities for construction projects', link: '/calculator/construction/concrete' },
+      { name: 'Stair Calculator', description: 'Calculate stair dimensions and building requirements', link: '/calculator/construction/stairs' },
+      { name: 'Roofing Calculator', description: 'Estimate roofing materials and costs', link: '/calculator/construction/roofing' }
     ]
   },
   {
@@ -292,10 +292,10 @@ export const calculatorCategories: CategoryData[] = [
       useCases: "From decoding Roman numerals in historical documents to converting text to Morse code for amateur radio, or translating text to Braille for accessibility, these specialized tools serve unique educational and practical purposes."
     },
     calculators: [
-      { name: 'Unit Converter', description: 'Convert between various units of measurement', popular: true, link: '/calculator/unit-converter' },
-      { name: 'Roman Numerals Converter', description: 'Convert between Roman numerals and decimal numbers', popular: true, link: '/calculator/roman-numerals' },
-      { name: 'Morse Code Converter', description: 'Encode and decode Morse code messages', link: '/calculator/morse-code' },
-      { name: 'Braille Translator', description: 'Convert text to Braille notation for accessibility', link: '/calculator/braille-translator' }
+      { name: 'Unit Converter', description: 'Convert between various units of measurement', popular: true, link: '/calculator/conversions/unit-converter' },
+      { name: 'Roman Numerals Converter', description: 'Convert between Roman numerals and decimal numbers', popular: true, link: '/calculator/conversions/roman-numerals' },
+      { name: 'Morse Code Converter', description: 'Encode and decode Morse code messages', link: '/calculator/conversions/morse-code' },
+      { name: 'Braille Translator', description: 'Convert text to Braille notation for accessibility', link: '/calculator/conversions/braille-translator' }
     ]
   },
   {
@@ -316,11 +316,11 @@ export const calculatorCategories: CategoryData[] = [
       useCases: "Whether you're considering solar panels for your home, trying to reduce energy bills, calculating carbon offsets for travel, or planning energy-efficient improvements, our tools provide accurate environmental and financial analysis."
     },
     calculators: [
-      { name: 'Solar Panel Savings Calculator', description: 'Calculate solar panel costs, savings, and payback period', popular: true, link: '/calculator/solar-panel-savings' },
+      { name: 'Solar Panel Savings Calculator', description: 'Calculate solar panel costs, savings, and payback period', popular: true, link: '/calculator/energy/solar-panel-savings' },
       { name: 'Seed Spacing Calculator', description: 'Calculate optimal seed spacing for your garden plants', popular: true, link: '/calculator/seed-spacing' },
-      { name: 'Energy Usage Calculator', description: 'Monitor and optimize home energy consumption', link: '/calculator/energy-usage' },
-      { name: 'Carbon Footprint Calculator', description: 'Calculate your environmental impact and CO₂ emissions.', link: '/calculator/carbon-footprint' },
-      { name: 'Home Energy Audit Calculator', description: 'Assess home energy efficiency and improvement opportunities', link: '/calculator/home-energy-audit' }
+      { name: 'Energy Usage Calculator', description: 'Monitor and optimize home energy consumption', link: '/calculator/energy/energy-usage' },
+      { name: 'Carbon Footprint Calculator', description: 'Calculate your environmental impact and CO₂ emissions.', link: '/calculator/energy/carbon-footprint' },
+      { name: 'Home Energy Audit Calculator', description: 'Assess home energy efficiency and improvement opportunities', link: '/calculator/energy/home-energy-audit' }
     ]
   },
   {
@@ -341,8 +341,8 @@ export const calculatorCategories: CategoryData[] = [
       useCases: "Perfect for pet owners wanting to understand their pet's development stage, plan appropriate care, discuss health needs with veterinarians, or simply satisfy curiosity about their furry friend's age in human terms."
     },
     calculators: [
-      { name: 'Dog Age Calculator', description: 'Convert dog years to human years with size considerations', popular: true, link: '/calculator/dog-age' },
-      { name: 'Cat Age Calculator', description: 'Convert cat years to human years with lifestyle factors', popular: true, link: '/calculator/cat-age' }
+      { name: 'Dog Age Calculator', description: 'Convert dog years to human years with size considerations', popular: true, link: '/calculator/animal-age/dog-age' },
+      { name: 'Cat Age Calculator', description: 'Convert cat years to human years with lifestyle factors', popular: true, link: '/calculator/animal-age/cat-age' }
     ]
   },
   {
@@ -363,8 +363,8 @@ export const calculatorCategories: CategoryData[] = [
       useCases: "Perfect for students learning astronomy, space enthusiasts exploring planetary science, educators teaching solar system concepts, or anyone curious about how age, weight, and time work on other worlds."
     },
     calculators: [
-      { name: 'Age on Mars Calculator', description: 'Calculate your age on Mars and other planets', popular: true, link: '/calculator/age-on-mars' },
-      { name: 'Space Weight Calculator', description: 'Calculate your weight on different planets and moons', popular: true, link: '/calculator/space-weight' }
+      { name: 'Age on Mars Calculator', description: 'Calculate your age on Mars and other planets', popular: true, link: '/calculator/space/age-on-mars' },
+      { name: 'Space Weight Calculator', description: 'Calculate your weight on different planets and moons', popular: true, link: '/calculator/space/space-weight' }
     ]
   },
   {
@@ -385,9 +385,9 @@ export const calculatorCategories: CategoryData[] = [
       useCases: "Perfect for parties, educational entertainment, satisfying curiosity, or just having fun with numbers. These calculators turn serious mathematics into playful exploration of interesting concepts."
     },
     calculators: [
-      { name: 'Love Calculator', description: 'Calculate compatibility between two people (just for fun!)', popular: true, link: '/calculator/love-calculator' },
-      { name: 'Golf Balls in Boeing 747', description: 'Calculate how many golf balls fit inside a Boeing 747', link: '/calculator/golf-balls-boeing-747' },
-      { name: 'Aquarium Volume Calculator', description: 'Calculate aquarium volume, water weight, and equipment recommendations', link: '/calculator/aquarium-volume' }
+      { name: 'Love Calculator', description: 'Calculate compatibility between two people (just for fun!)', popular: true, link: '/calculator/unique/love-calculator' },
+      { name: 'Golf Balls in Boeing 747', description: 'Calculate how many golf balls fit inside a Boeing 747', link: '/calculator/unique/golf-balls-boeing-747' },
+      { name: 'Aquarium Volume Calculator', description: 'Calculate aquarium volume, water weight, and equipment recommendations', link: '/calculator/unique/aquarium-volume' }
     ]
   }
 ];
