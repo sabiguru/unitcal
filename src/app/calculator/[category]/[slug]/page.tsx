@@ -6,10 +6,10 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { generateCalculatorBreadcrumbs } from '@/lib/breadcrumbs';
 import EzoicAd from '@/components/ads/EzoicAd';
 import { EZOIC_PLACEMENTS } from '@/config/ezoicPlacements';
-import MDXContent from '@/components/MDXContent';
 import CalculatorLearnCrosslink from '@/components/CalculatorLearnCrosslink';
 import { getRelatedCalculators } from '@/data/relatedCalculators';
 import { getCategoryForCalculator } from '@/utils/calculatorCategoryMapping';
+import MDXContent from '@/components/MDXContent';
 
 export function generateStaticParams() {
   return calculators.map((c) => {
@@ -81,17 +81,6 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
   const breadcrumbs = generateCalculatorBreadcrumbs(meta.title, meta.category);
   const relatedCalculators = getRelatedCalculators(slug);
 
-  // Dynamically import MDX content if it exists
-  let MdxContent = null;
-  if (meta.mdx) {
-    try {
-      const mdxModule = await import(`@/content/calculators/${meta.mdx}`);
-      MdxContent = mdxModule.default;
-    } catch (error) {
-      console.error(`Failed to load MDX for ${slug}:`, error);
-    }
-  }
-
   return (
     <>
       {seoData?.structuredData && (
@@ -110,17 +99,15 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
           <main className="col-span-12 lg:col-span-8 space-y-6">
             <CalculatorLearnCrosslink calculatorSlug={slug} calculatorTitle={meta.title} />
 
-            <div className="bg-white rounded-xl border border-gray-200 shadow-md p-6 mb-6">
-              <h1 className="text-3xl font-bold text-slate-700 mb-4">{meta.title}</h1>
-              <p className="text-gray-600 mb-6">{meta.description}</p>
-              <Calc />
+            <div className="bg-white rounded-none sm:rounded-xl shadow-lg border-0 sm:border border-gray-200 overflow-hidden">
+              <div className="p-3 sm:p-6">
+                <Calc />
+              </div>
             </div>
 
-            {MdxContent && (
-              <div className="bg-white rounded-xl border border-gray-200 shadow-md p-6">
-                <MdxContent />
-              </div>
-            )}
+            <EzoicAd placementId={EZOIC_PLACEMENTS.CALCULATOR_CONTENT} className="text-center" />
+
+            {meta.mdx && <MDXContent slug={meta.mdx.replace('.mdx', '')} />}
           </main>
 
           <aside className="col-span-12 lg:col-span-4 space-y-6">
