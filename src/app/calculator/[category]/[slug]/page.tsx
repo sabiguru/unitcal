@@ -97,8 +97,6 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
 
         <div className="grid grid-cols-12 gap-6">
           <main className="col-span-12 lg:col-span-8 space-y-6">
-            <CalculatorLearnCrosslink calculatorSlug={slug} calculatorTitle={meta.title} />
-
             <div className="bg-white rounded-none sm:rounded-xl shadow-lg border-0 sm:border border-gray-200 overflow-hidden">
               <div className="p-3 sm:p-6">
                 <Calc />
@@ -106,6 +104,8 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
             </div>
 
             <EzoicAd placementId={EZOIC_PLACEMENTS.CALCULATOR_CONTENT} className="text-center" />
+
+            <CalculatorLearnCrosslink calculatorSlug={slug} calculatorTitle={meta.title} />
 
             {meta.mdx && <MDXContent slug={meta.mdx.replace('.mdx', '')} />}
           </main>
