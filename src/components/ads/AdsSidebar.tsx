@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { getCalculatorUrl } from '@/utils/calculatorCategoryMapping';
 
 interface AdsSidebarProps {
   hidePopularCalculators?: boolean;
@@ -16,12 +17,12 @@ export default function AdsSidebar({
   customCalculationTips
 }: AdsSidebarProps) {
   const popularCalculators = [
-    { name: 'BMI Calculator', link: '/calculator/bmi', icon: '💪' },
-    { name: 'Percentage Calculator', link: '/calculator/percentage', icon: '📊' },
-    { name: 'Loan Calculator', link: '/calculator/loan', icon: '💰' },
-    { name: 'Age Calculator', link: '/calculator/age', icon: '🎂' },
-    { name: 'Currency Converter', link: '/calculator/currency-converter', icon: '💱' },
-    { name: 'Tip Calculator', link: '/calculator/tip', icon: '🍽️' }
+    { name: 'BMI Calculator', link: getCalculatorUrl('bmi'), icon: '💪' },
+    { name: 'Percentage Calculator', link: getCalculatorUrl('percentage'), icon: '📊' },
+    { name: 'Loan Calculator', link: getCalculatorUrl('loan'), icon: '💰' },
+    { name: 'Age Calculator', link: getCalculatorUrl('age'), icon: '🎂' },
+    { name: 'Currency Converter', link: getCalculatorUrl('currency-converter'), icon: '💱' },
+    { name: 'Tip Calculator', link: getCalculatorUrl('tip'), icon: '🍽️' }
   ];
 
   const calculationTips = [
@@ -39,10 +40,10 @@ export default function AdsSidebar({
   ];
 
   const quickConverters = [
-    { from: 'Currency', to: 'Exchange Rates', link: '/calculator/currency-converter' },
-    { from: 'Binary', to: 'Decimal', link: '/calculator/binary-converter' },
-    { from: 'Various Units', to: 'Convert Anything', link: '/calculator/unit-converter' },
-    { from: 'Fractions', to: 'Decimals', link: '/calculator/fraction' }
+    { from: 'Currency', to: 'Exchange Rates', link: getCalculatorUrl('currency-converter') },
+    { from: 'Binary', to: 'Decimal', link: getCalculatorUrl('binary-converter') },
+    { from: 'Various Units', to: 'Convert Anything', link: getCalculatorUrl('unit-converter') },
+    { from: 'Fractions', to: 'Decimals', link: getCalculatorUrl('fraction') }
   ];
 
   return (
