@@ -10,6 +10,8 @@ import CalculatorLearnCrosslink from '@/components/CalculatorLearnCrosslink';
 import { getRelatedCalculators } from '@/data/relatedCalculators';
 import { getCategoryForCalculator } from '@/utils/calculatorCategoryMapping';
 import MDXContent from '@/components/MDXContent';
+import SchemaMarkup from '@/components/SchemaMarkup';
+import { organizationSchema, generateCalculatorSchema, generateWebPageSchema } from '@/config/schemas';
 
 export function generateStaticParams() {
   return calculators.map((c) => {
@@ -81,16 +83,31 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
   const breadcrumbs = generateCalculatorBreadcrumbs(meta.title, meta.category);
   const relatedCalculators = getRelatedCalculators(slug);
 
+  // Generate schemas for calculator page
+  const calculatorUrl = `https://calcfort.com/calculator/${category}/${slug}`;
+  const calculatorSchemaData = generateCalculatorSchema(
+    meta.title,
+    calculatorUrl,
+    meta.description,
+    meta.category
+  );
+  const webPageSchemaData = generateWebPageSchema(
+    meta.title,
+    calculatorUrl,
+    meta.description,
+    breadcrumbs.map(b => ({ name: b.label, url: `https://calcfort.com${b.href}` }))
+  );
+
+  const allSchemas = [
+    organizationSchema,
+    calculatorSchemaData,
+    webPageSchemaData,
+    ...(seoData?.structuredData ? [seoData.structuredData] : [])
+  ];
+
   return (
     <>
-      {seoData?.structuredData && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(seoData.structuredData)
-          }}
-        />
-      )}
+      <SchemaMarkup schema={allSchemas} />
       <Header />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <Breadcrumbs items={breadcrumbs} />

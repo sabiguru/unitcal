@@ -11,6 +11,8 @@ import { getRelatedCalculators } from '@/data/relatedCalculators';
 import { getCategoryForSlug, getSlugsForCategory } from '@/utils/learnCategoryMapping';
 import { calculatorCategories } from '@/data/categoryData';
 import { getAvailableLearnSlugs } from '@/data/learnSeoBySlug';
+import SchemaMarkup from '@/components/SchemaMarkup';
+import { organizationSchema, generateArticleSchema, generateWebPageSchema } from '@/config/schemas';
 
 interface LearnPageProps {
   params: Promise<{ category: string; slug: string }>;
@@ -109,8 +111,36 @@ export default async function LearnPage({ params }: LearnPageProps) {
   // Get category info for breadcrumbs
   const categoryData = calculatorCategories.find(cat => cat.slug === category);
 
+  // Generate schemas for learn page
+  const learnUrl = `https://calcfort.com/learn/${category}/${slug}`;
+  const description = seoData?.metaDescription || `Learn about ${title}`;
+  const currentDate = new Date().toISOString();
+
+  const articleSchemaData = generateArticleSchema(
+    title,
+    description,
+    learnUrl,
+    currentDate,
+    currentDate
+  );
+
+  const webPageSchemaData = generateWebPageSchema(
+    title,
+    learnUrl,
+    description,
+    [
+      { name: 'Home', url: 'https://calcfort.com' },
+      { name: 'Learn', url: 'https://calcfort.com/learn' },
+      { name: categoryData?.title || category, url: `https://calcfort.com/learn/${category}` },
+      { name: title, url: learnUrl }
+    ]
+  );
+
+  const allSchemas = [organizationSchema, articleSchemaData, webPageSchemaData];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-amber-50">
+      <SchemaMarkup schema={allSchemas} />
       <Header />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

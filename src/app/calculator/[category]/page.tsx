@@ -5,6 +5,8 @@ import { categorySchemas } from '@/data/schemas/categorySchemas';
 import { generateCategoryBreadcrumbs } from '@/lib/breadcrumbs';
 import CategoryPageClient from '@/components/CategoryPageClient';
 import Header from '@/components/Header';
+import SchemaMarkup from '@/components/SchemaMarkup';
+import { organizationSchema, generateCollectionPageSchema, generateWebPageSchema } from '@/config/schemas';
 
 interface CategoryPageProps {
   params: Promise<{
@@ -103,10 +105,34 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   const breadcrumbs = generateCategoryBreadcrumbs(category.title);
 
+  // Generate schemas for category page
+  const categoryUrl = `https://calcfort.com/calculator/${categorySlug}`;
+  const collectionSchemaData = generateCollectionPageSchema(
+    `${category.title} Calculators`,
+    categoryUrl,
+    category.description,
+    category.calculators.length
+  );
+
+  const webPageSchemaData = generateWebPageSchema(
+    `${category.title} Calculators`,
+    categoryUrl,
+    category.description,
+    breadcrumbs.map(b => ({ name: b.label, url: `https://calcfort.com${b.href}` }))
+  );
+
+  const allSchemas = [
+    organizationSchema,
+    collectionSchemaData,
+    webPageSchemaData,
+    ...(schemas?.webApp ? [schemas.webApp] : [])
+  ];
+
   return (
     <>
-      {/* JSON-LD Structured Data */}
-      {schemas?.webApp && (
+      <SchemaMarkup schema={allSchemas} />
+      {/* Removed old schema code - now using SchemaMarkup component */}
+      {false && schemas?.webApp && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

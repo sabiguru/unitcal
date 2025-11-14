@@ -7,6 +7,8 @@ import { calculatorCategories } from '@/data/categoryData';
 import EzoicAd from '@/components/ads/EzoicAd';
 import AdsSidebar from '@/components/ads/AdsSidebar';
 import { EZOIC_PLACEMENTS } from '@/config/ezoicPlacements';
+import SchemaMarkup from '@/components/SchemaMarkup';
+import { organizationSchema, websiteSchema } from '@/config/schemas';
 
 export default function Home() {
   const [display, setDisplay] = useState('0');
@@ -199,6 +201,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-amber-50">
+      {/* Schema.org Structured Data */}
+      <SchemaMarkup schema={[organizationSchema, websiteSchema]} />
+
       {/* Header/Navbar */}
       <Header />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
