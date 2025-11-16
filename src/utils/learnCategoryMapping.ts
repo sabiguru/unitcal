@@ -35,7 +35,8 @@ export const LEARN_CATEGORY_MAPPING: Record<string, string[]> = {
     'gpa', 'molecular-weight', 'stoichiometry', 'ph'
   ],
   'everyday': [
-    'age', 'date', 'tip', 'time', 'timezone-converter', 'countdown-timer'
+    'age', 'date', 'tip', 'time', 'timezone-converter', 'countdown-timer',
+    'ai-everyday-calculations', 'ai-tools-2026', 'math-behind-ai', 'ai-habits-health'
   ],
   'conversions': [
     'unit-converter', 'roman-numerals', 'morse-code', 'braille-translator'

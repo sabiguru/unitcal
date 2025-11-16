@@ -557,6 +557,30 @@ export const relatedCalculatorsMap: Record<string, RelatedCalculator[]> = {
     { slug: 'timezone-converter', name: 'Time Zone Converter', description: 'Convert times between zones' },
     { slug: 'tip', name: 'Tip Calculator', description: 'Calculate tips and split bills' },
   ],
+  'ai-everyday-calculations': [
+    { slug: 'budget', name: 'Budget Calculator', description: 'Track income and expenses' },
+    { slug: 'loan', name: 'Loan Calculator', description: 'Calculate loan payments and interest' },
+    { slug: 'bmi', name: 'BMI Calculator', description: 'Calculate Body Mass Index' },
+    { slug: 'calorie', name: 'Calorie Calculator', description: 'Calculate daily calorie needs' },
+  ],
+  'ai-tools-2026': [
+    { slug: 'time', name: 'Time Calculator', description: 'Add, subtract, and convert time' },
+    { slug: 'budget', name: 'Budget Calculator', description: 'Track income and expenses' },
+    { slug: 'investment', name: 'Investment Calculator', description: 'Project investment returns' },
+    { slug: 'fitness', name: 'Fitness Calculator', description: 'Track fitness metrics' },
+  ],
+  'math-behind-ai': [
+    { slug: 'scientific', name: 'Scientific Calculator', description: 'Advanced mathematical functions' },
+    { slug: 'matrix', name: 'Matrix Calculator', description: 'Perform matrix operations' },
+    { slug: 'percentage', name: 'Percentage Calculator', description: 'Calculate percentages easily' },
+    { slug: 'graphing', name: 'Graphing Calculator', description: 'Plot mathematical functions' },
+  ],
+  'ai-habits-health': [
+    { slug: 'calorie', name: 'Calorie Calculator', description: 'Calculate daily calorie needs' },
+    { slug: 'sleep', name: 'Sleep Calculator', description: 'Optimize your sleep schedule' },
+    { slug: 'heartrate', name: 'Heart Rate Calculator', description: 'Calculate training zones' },
+    { slug: 'fitness', name: 'Fitness Calculator', description: 'Track fitness metrics' },
+  ],
 };
 
 // Default related calculators shown when no specific mapping exists

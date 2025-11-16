@@ -113,6 +113,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ],
       'space': [
         'age-on-mars', 'space-weight', 'planetary-years', 'time-on-mars', 'weight-on-mars'
+      ],
+      'everyday': [
+        'age', 'date', 'tip', 'time', 'timezone-converter', 'countdown-timer',
+        'ai-everyday-calculations', 'ai-tools-2026', 'math-behind-ai', 'ai-habits-health'
       ]
     };
 
