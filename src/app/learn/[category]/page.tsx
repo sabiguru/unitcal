@@ -6,6 +6,8 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { calculatorCategories } from '@/data/categoryData';
 import { getSlugsForCategory } from '@/utils/learnCategoryMapping';
 import { getAvailableLearnSlugs, getLearnSeo } from '@/data/learnSeoBySlug';
+import EzoicAd from '@/components/ads/EzoicAd';
+import { EZOIC_PLACEMENTS } from '@/config/ezoicPlacements';
 
 interface LearnCategoryPageProps {
   params: Promise<{
@@ -297,13 +299,7 @@ export default async function LearnCategoryPage({ params, searchParams }: LearnC
           {/* Right Sidebar */}
           <aside className="col-span-12 lg:col-span-4">
             <div className="sticky top-6 space-y-6">
-              {/* Ad Space Placeholder */}
-              <div className="bg-gradient-to-br from-gray-100 to-gray-50 rounded-xl border-2 border-dashed border-gray-300 p-8">
-                <div className="text-center">
-                  <div className="text-gray-400 text-sm font-medium mb-2">Advertisement</div>
-                  <div className="text-gray-300 text-xs">Ad Space (300x250)</div>
-                </div>
-              </div>
+              <EzoicAd placementId={EZOIC_PLACEMENTS.LEARN_SIDEBAR} />
 
               {/* Related Calculator Categories */}
               <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
@@ -333,13 +329,7 @@ export default async function LearnCategoryPage({ params, searchParams }: LearnC
                 </div>
               </div>
 
-              {/* Second Ad Space */}
-              <div className="bg-gradient-to-br from-gray-100 to-gray-50 rounded-xl border-2 border-dashed border-gray-300 p-8">
-                <div className="text-center">
-                  <div className="text-gray-400 text-sm font-medium mb-2">Advertisement</div>
-                  <div className="text-gray-300 text-xs">Ad Space (300x600)</div>
-                </div>
-              </div>
+              <EzoicAd placementId={EZOIC_PLACEMENTS.LEARN_SIDEBAR} />
             </div>
           </aside>
         </div>
