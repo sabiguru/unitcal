@@ -38,13 +38,10 @@ const nextConfig: NextConfig = {
         destination: 'https://calcfort.com/:path*',
         permanent: true,
       },
-    ];
-  },
-  async rewrites() {
-    return [
       {
         source: '/ads.txt',
         destination: 'https://srv.adstxtmanager.com/19390/calcfort.com',
+        permanent: true, // 301 redirect
       },
     ];
   },
