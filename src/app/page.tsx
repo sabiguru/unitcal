@@ -9,11 +9,12 @@ import AdsSidebar from '@/components/ads/AdsSidebar';
 import { EZOIC_PLACEMENTS } from '@/config/ezoicPlacements';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import { organizationSchema, websiteSchema } from '@/config/schemas';
+import Decimal from 'decimal.js';
 
 export default function Home() {
   const [display, setDisplay] = useState('0');
   const [expression, setExpression] = useState('');
-  const [previousValue, setPreviousValue] = useState<number | null>(null);
+  const [previousValue, setPreviousValue] = useState<Decimal | null>(null);
   const [operation, setOperation] = useState<string | null>(null);
   const [waitingForNewValue, setWaitingForNewValue] = useState(false);
   const [memory, setMemory] = useState(0);
@@ -26,18 +27,33 @@ export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState('All Categories');
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
 
+  const toDecimal = (value: string | Decimal) => new Decimal(value || '0');
+
+  const formatDisplay = (value: Decimal | number | string) => {
+    if (value instanceof Decimal) {
+      const str = value.toString();
+      return str.includes('.') ? str.replace(/\.?0+$/, '') || '0' : str;
+    }
+    return String(value);
+  };
+
   const inputNumber = (num: string) => {
+    if (!waitingForNewValue && num === '.' && display.includes('.')) {
+      return;
+    }
+
     if (waitingForNewValue) {
-      setDisplay(num);
+      const nextValue = num === '.' ? '0.' : num;
+      setDisplay(nextValue);
       if (operation && previousValue !== null) {
         const operatorSymbol = operation === '*' ? '×' : operation === '/' ? '÷' : operation;
-        setExpression(`${previousValue} ${operatorSymbol} ${num}`);
+        setExpression(`${previousValue} ${operatorSymbol} ${nextValue}`);
       } else {
-        setExpression(num);
+        setExpression(nextValue);
       }
       setWaitingForNewValue(false);
     } else {
-      const newDisplay = display === '0' ? num : display + num;
+      const newDisplay = display === '0' && num !== '.' ? num : display + num;
       setDisplay(newDisplay);
       if (operation && previousValue !== null) {
         const operatorSymbol = operation === '*' ? '×' : operation === '/' ? '÷' : operation;
@@ -49,16 +65,16 @@ export default function Home() {
   };
 
   const inputOperation = (nextOperation: string) => {
-    const inputValue = parseFloat(display);
+    const inputValue = toDecimal(display);
     const operatorSymbol = nextOperation === '*' ? '×' : nextOperation === '/' ? '÷' : nextOperation;
 
     if (previousValue === null) {
       setPreviousValue(inputValue);
       setExpression(`${inputValue} ${operatorSymbol} `);
     } else if (operation && !waitingForNewValue) {
-      const currentValue = previousValue || 0;
+      const currentValue = previousValue;
       const result = calculate(currentValue, inputValue, operation);
-      setDisplay(String(result));
+      setDisplay(formatDisplay(result));
       setPreviousValue(result);
       setExpression(`${result} ${operatorSymbol} `);
     } else {
@@ -69,37 +85,43 @@ export default function Home() {
     setOperation(nextOperation);
   };
 
-  const calculate = (firstValue: number, secondValue: number, operation: string) => {
+  const calculate = (firstValue: Decimal, secondValue: Decimal, operation: string) => {
     switch (operation) {
-      case '+': return firstValue + secondValue;
-      case '-': return firstValue - secondValue;
-      case '*': return firstValue * secondValue;
-      case '/': return firstValue / secondValue;
-      case '^': return Math.pow(firstValue, secondValue);
-      case 'yx': return Math.pow(firstValue, secondValue);
-      case 'mod': return firstValue % secondValue;
+      case '+': return firstValue.plus(secondValue);
+      case '-': return firstValue.minus(secondValue);
+      case '*': return firstValue.times(secondValue);
+      case '/': return firstValue.dividedBy(secondValue);
+      case '^': return firstValue.pow(secondValue);
+      case 'yx': return firstValue.pow(secondValue);
+      case 'mod': return firstValue.mod(secondValue);
       case 'nCr': return combination(firstValue, secondValue);
       case 'nPr': return permutation(firstValue, secondValue);
       default: return secondValue;
     }
   };
 
-  const combination = (n: number, r: number) => {
-    return factorial(n) / (factorial(r) * factorial(n - r));
+  const combination = (n: Decimal, r: Decimal) => {
+    const nInt = Math.floor(n.toNumber());
+    const rInt = Math.floor(r.toNumber());
+    if (rInt > nInt || rInt < 0) return new Decimal(0);
+    return new Decimal(factorial(nInt) / (factorial(rInt) * factorial(nInt - rInt)));
   };
 
-  const permutation = (n: number, r: number) => {
-    return factorial(n) / factorial(n - r);
+  const permutation = (n: Decimal, r: Decimal) => {
+    const nInt = Math.floor(n.toNumber());
+    const rInt = Math.floor(r.toNumber());
+    if (rInt > nInt || rInt < 0) return new Decimal(0);
+    return new Decimal(factorial(nInt) / factorial(nInt - rInt));
   };
 
   const handleEqual = () => {
-    const inputValue = parseFloat(display);
+    const inputValue = toDecimal(display);
     if (previousValue !== null && operation) {
       const result = calculate(previousValue, inputValue, operation);
       const finalExpression = expression + ' = ' + result;
       setHistory([...history, finalExpression]);
       setExpression(finalExpression);
-      setDisplay(String(result));
+      setDisplay(formatDisplay(result));
       setPreviousValue(null);
       setOperation(null);
       setWaitingForNewValue(true);
@@ -158,7 +180,7 @@ export default function Home() {
     
     setHistory([...history, funcExpression]);
     setExpression(funcExpression);
-    setDisplay(String(result));
+    setDisplay(formatDisplay(result));
     setWaitingForNewValue(true);
     setIsInverse(false);
     setIsHyperbolic(false);
