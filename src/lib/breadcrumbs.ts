@@ -23,7 +23,7 @@ export function generateCalculatorBreadcrumbs(
   if (categorySlug) {
     breadcrumbs.push({
       label: categoryName,
-      href: `/category/${categorySlug}`
+      href: `/calculator/${categorySlug}`
     });
   }
 
@@ -44,7 +44,7 @@ export function generateCategoryBreadcrumbs(categoryTitle: string): BreadcrumbIt
     },
     {
       label: 'Categories',
-      href: '/categories'
+      href: '/calculators'
     },
     {
       label: categoryTitle,
