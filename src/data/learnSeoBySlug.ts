@@ -153,6 +153,64 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
   lastResearched: "2025-09-27"
 },
 
+  "cost-of-living-2026": {
+    primaryKeyword: "cost of living calculator 2026 UK",
+    variants: [
+      "UK cost of living forecast 2026",
+      "personal inflation rate UK",
+      "real purchasing power calculator",
+      "2026 inflation impact on households"
+    ],
+    longTails: [
+      "how to calculate personal inflation rate in the UK",
+      "2026 cost of living projection UK",
+      "measure your real purchasing power UK",
+      "how rising prices affect disposable income 2026",
+      "UK household budget calculator for inflation"
+    ],
+    metaTitle: "Cost of Living 2026 — How to Measure Real Purchasing Power",
+    metaDescription: "Learn how to calculate your personal cost of living for 2026 using real inflation, spending weights, income projections, and UK benchmarks. A complete guide to measuring purchasing power.",
+    lastResearched: "2025-12-07"
+  },
+  "space-discoveries-2026": {
+    primaryKeyword: "space discoveries 2026",
+    variants: [
+      "solar flare impact 2026",
+      "2026 astronomy breakthroughs",
+      "exoplanet data 2026",
+      "space weather and gps accuracy"
+    ],
+    longTails: [
+      "how solar storms affect gps accuracy",
+      "latest 2026 space discoveries explained",
+      "how to calculate solar flare tech impact",
+      "space weather forecast tools for beginners",
+      "understanding orbital dynamics for 2026 astronomy"
+    ],
+    metaTitle: "Space Discoveries 2026 — How New Astronomy Breakthroughs Impact Everyday Life",
+    metaDescription: "Explore 2026’s biggest space discoveries and how they influence GPS accuracy, energy grids, climate models, navigation, and technology. Includes formulas, examples, and practical models.",
+    lastResearched: "2025-12-07"
+  },
+  "ai-finance-2026": {
+    primaryKeyword: "AI finance tools 2026",
+    variants: [
+      "AI budgeting apps 2026",
+      "AI investment tools UK",
+      "personal finance automation AI",
+      "AI debt reduction tools"
+    ],
+    longTails: [
+      "how AI will change personal finance in 2026",
+      "AI powered budgeting tools for UK households",
+      "AI investment forecasting tools 2026",
+      "automated debt repayment strategies UK",
+      "how to calculate financial health with AI"
+    ],
+    metaTitle: "AI and Finance 2026 — Automation, Investments, Debt & Budgeting Guide",
+    metaDescription: "Learn how AI will transform personal finance in 2026. Automation in budgeting, AI investing, debt modelling, savings calculations and real-time financial forecasting.",
+    lastResearched: "2025-12-07"
+  },
+  
 "seed-spacing": {
   primaryKeyword: "how to calculate seed spacing for a garden",
   variants: [

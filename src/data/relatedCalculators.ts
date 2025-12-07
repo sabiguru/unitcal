@@ -581,6 +581,24 @@ export const relatedCalculatorsMap: Record<string, RelatedCalculator[]> = {
     { slug: 'heartrate', name: 'Heart Rate Calculator', description: 'Calculate training zones' },
     { slug: 'fitness', name: 'Fitness Calculator', description: 'Track fitness metrics' },
   ],
+  'cost-of-living-2026': [
+    { slug: 'budget', name: 'Budget Calculator', description: 'Track income and expenses' },
+    { slug: 'salary', name: 'Salary Calculator', description: 'Estimate take-home pay and bonuses' },
+    { slug: 'loan', name: 'Loan Calculator', description: 'Calculate loan payments and interest' },
+    { slug: 'roi', name: 'ROI Calculator', description: 'Evaluate returns on investments' },
+  ],
+  'ai-finance-2026': [
+    { slug: 'budget', name: 'Budget Calculator', description: 'Track income and expenses' },
+    { slug: 'investment', name: 'Investment Calculator', description: 'Project investment returns' },
+    { slug: 'credit-card-payoff', name: 'Credit Card Payoff Calculator', description: 'Plan debt repayment' },
+    { slug: 'roi', name: 'ROI Calculator', description: 'Evaluate returns on investments' },
+  ],
+  'space-discoveries-2026': [
+    { slug: 'space-weight', name: 'Space Weight Calculator', description: 'Calculate weight on different planets' },
+    { slug: 'age-on-mars', name: 'Age on Mars Calculator', description: 'Calculate your age on other planets' },
+    { slug: 'scientific', name: 'Scientific Calculator', description: 'Advanced mathematical functions' },
+    { slug: 'time-on-mars', name: 'Time on Mars Calculator', description: 'Convert Earth time to Mars time' },
+  ],
 };
 
 // Default related calculators shown when no specific mapping exists

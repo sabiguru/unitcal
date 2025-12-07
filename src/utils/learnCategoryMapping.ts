@@ -16,7 +16,7 @@ export const LEARN_CATEGORY_MAPPING: Record<string, string[]> = {
     'budget', 'compound-interest', 'credit-card-payoff', 'currency-converter', 'depreciation',
     'discount', 'interest', 'investment', 'loan', 'mortgage', 'npv-irr', 'refinance',
     'retirement', 'roi', 'salary', 'tax', 'car-lease', 'car-loan', 'finance-automation-2026',
-    'remote-work-2026'
+    'remote-work-2026', 'cost-of-living-2026', 'ai-finance-2026'
   ],
   'engineering': [
     'capacitor', 'electrical', 'energy-usage', 'ohms-law', 'resistor', 'molecular-weight',
@@ -48,7 +48,7 @@ export const LEARN_CATEGORY_MAPPING: Record<string, string[]> = {
     'dog-age', 'cat-age'
   ],
   'space': [
-    'age-on-mars', 'space-weight', 'planetary-years', 'time-on-mars', 'weight-on-mars'
+    'age-on-mars', 'space-weight', 'planetary-years', 'time-on-mars', 'weight-on-mars', 'space-discoveries-2026'
   ],
   'unique': [
     'love-calculator', 'golf-balls-boeing-747', 'aquarium-volume'
