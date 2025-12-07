@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import KeypadGrid from '@/components/ui/KeypadGrid';
+import Decimal from 'decimal.js';
 
 type NumberBase = 'DEC' | 'HEX' | 'OCT' | 'BIN';
 type StatMode = 'OFF' | 'STAT';
@@ -9,7 +10,7 @@ type StatMode = 'OFF' | 'STAT';
 export default function ScientificCalculator() {
   const [display, setDisplay] = useState('0');
   const [expression, setExpression] = useState('');
-  const [previousValue, setPreviousValue] = useState<number | null>(null);
+  const [previousValue, setPreviousValue] = useState<Decimal | null>(null);
   const [operation, setOperation] = useState<string | null>(null);
   const [waitingForNewValue, setWaitingForNewValue] = useState(false);
   const [memory, setMemory] = useState([0, 0, 0, 0]); // 4 memory slots
@@ -28,6 +29,16 @@ export default function ScientificCalculator() {
   const [summationEnd, setSummationEnd] = useState<number | null>(null);
   const [summationStep, setSummationStep] = useState(1);
 
+  const toDecimal = (value: string | Decimal) => new Decimal(value || '0');
+
+  const formatDisplay = (value: Decimal | number | string) => {
+    if (value instanceof Decimal) {
+      const str = value.toString();
+      return str.includes('.') ? str.replace(/\.?0+$/, '') || '0' : str;
+    }
+    return String(value);
+  };
+
   const inputNumber = (num: string) => {
     // Handle different number bases
     if (numberBase !== 'DEC') {
@@ -40,18 +51,23 @@ export default function ScientificCalculator() {
         return; // Invalid character for current base
       }
     }
+
+    if (numberBase === 'DEC' && !waitingForNewValue && num === '.' && display.includes('.')) {
+      return;
+    }
     
     if (waitingForNewValue) {
-      setDisplay(num);
+      const nextValue = num === '.' ? '0.' : num;
+      setDisplay(nextValue);
       if (operation && previousValue !== null) {
         const operatorSymbol = operation === '*' ? '×' : operation === '/' ? '÷' : operation;
-        setExpression(`${previousValue} ${operatorSymbol} ${num}`);
+        setExpression(`${previousValue} ${operatorSymbol} ${nextValue}`);
       } else {
-        setExpression(num);
+        setExpression(nextValue);
       }
       setWaitingForNewValue(false);
     } else {
-      const newDisplay = display === '0' ? num : display + num;
+      const newDisplay = display === '0' && num !== '.' ? num : display + num;
       setDisplay(newDisplay);
       if (operation && previousValue !== null) {
         const operatorSymbol = operation === '*' ? '×' : operation === '/' ? '÷' : operation;
@@ -79,16 +95,16 @@ export default function ScientificCalculator() {
   };
 
   const inputOperation = (nextOperation: string) => {
-    const inputValue = parseFloat(display);
+    const inputValue = toDecimal(display);
     const operatorSymbol = nextOperation === '*' ? '×' : nextOperation === '/' ? '÷' : nextOperation;
 
     if (previousValue === null) {
       setPreviousValue(inputValue);
       setExpression(`${inputValue} ${operatorSymbol} `);
     } else if (operation && !waitingForNewValue) {
-      const currentValue = previousValue || 0;
+      const currentValue = previousValue;
       const result = calculate(currentValue, inputValue, operation);
-      setDisplay(String(result));
+      setDisplay(formatDisplay(result));
       setPreviousValue(result);
       setExpression(`${result} ${operatorSymbol} `);
     } else {
@@ -99,51 +115,57 @@ export default function ScientificCalculator() {
     setOperation(nextOperation);
   };
 
-  const calculate = (firstValue: number, secondValue: number, operation: string) => {
+  const calculate = (firstValue: Decimal, secondValue: Decimal, operation: string) => {
     switch (operation) {
-      case '+': return firstValue + secondValue;
-      case '-': return firstValue - secondValue;
-      case '*': return firstValue * secondValue;
-      case '/': return firstValue / secondValue;
-      case '^': return Math.pow(firstValue, secondValue);
-      case 'yx': return Math.pow(firstValue, secondValue);
-      case 'nrt': return Math.pow(secondValue, 1/firstValue); // nth root
-      case 'mod': return firstValue % secondValue;
+      case '+': return firstValue.plus(secondValue);
+      case '-': return firstValue.minus(secondValue);
+      case '*': return firstValue.times(secondValue);
+      case '/': return firstValue.dividedBy(secondValue);
+      case '^': return firstValue.pow(secondValue);
+      case 'yx': return firstValue.pow(secondValue);
+      case 'nrt': return secondValue.pow(firstValue.recip()); // nth root
+      case 'mod': return firstValue.mod(secondValue);
       case 'nCr': return combination(firstValue, secondValue);
       case 'nPr': return permutation(firstValue, secondValue);
-      case 'logb': return Math.log(secondValue) / Math.log(firstValue); // log base firstValue of secondValue
-      case 'GCD': return gcd(firstValue, secondValue);
-      case 'LCM': return lcm(firstValue, secondValue);
-      case 'AND': return Math.floor(firstValue) & Math.floor(secondValue); // Bitwise AND
-      case 'OR': return Math.floor(firstValue) | Math.floor(secondValue); // Bitwise OR
-      case 'XOR': return Math.floor(firstValue) ^ Math.floor(secondValue); // Bitwise XOR
+      case 'logb': return firstValue.ln().isZero() ? new Decimal(NaN) : secondValue.ln().dividedBy(firstValue.ln()); // log base firstValue of secondValue
+      case 'GCD': return new Decimal(gcd(firstValue, secondValue));
+      case 'LCM': return new Decimal(lcm(firstValue, secondValue));
+      case 'AND': return new Decimal(Math.floor(firstValue.toNumber()) & Math.floor(secondValue.toNumber())); // Bitwise AND
+      case 'OR': return new Decimal(Math.floor(firstValue.toNumber()) | Math.floor(secondValue.toNumber())); // Bitwise OR
+      case 'XOR': return new Decimal(Math.floor(firstValue.toNumber()) ^ Math.floor(secondValue.toNumber())); // Bitwise XOR
       default: return secondValue;
     }
   };
   
-  const combination = (n: number, r: number) => {
-    if (r > n || r < 0) return 0;
-    return factorial(n) / (factorial(r) * factorial(n - r));
+  const combination = (n: Decimal, r: Decimal) => {
+    const nInt = Math.floor(n.toNumber());
+    const rInt = Math.floor(r.toNumber());
+    if (rInt > nInt || rInt < 0) return new Decimal(0);
+    return new Decimal(factorial(nInt) / (factorial(rInt) * factorial(nInt - rInt)));
   };
   
-  const permutation = (n: number, r: number) => {
-    if (r > n || r < 0) return 0;
-    return factorial(n) / factorial(n - r);
+  const permutation = (n: Decimal, r: Decimal) => {
+    const nInt = Math.floor(n.toNumber());
+    const rInt = Math.floor(r.toNumber());
+    if (rInt > nInt || rInt < 0) return new Decimal(0);
+    return new Decimal(factorial(nInt) / factorial(nInt - rInt));
   };
   
-  const gcd = (a: number, b: number): number => {
-    a = Math.abs(Math.floor(a));
-    b = Math.abs(Math.floor(b));
-    while (b !== 0) {
-      const temp = b;
-      b = a % b;
-      a = temp;
+  const gcd = (a: Decimal, b: Decimal): number => {
+    let aNum = Math.abs(Math.floor(a.toNumber()));
+    let bNum = Math.abs(Math.floor(b.toNumber()));
+    while (bNum !== 0) {
+      const temp = bNum;
+      bNum = aNum % bNum;
+      aNum = temp;
     }
-    return a;
+    return aNum;
   };
   
-  const lcm = (a: number, b: number): number => {
-    return Math.abs(Math.floor(a) * Math.floor(b)) / gcd(a, b);
+  const lcm = (a: Decimal, b: Decimal): number => {
+    const aNum = Math.floor(a.toNumber());
+    const bNum = Math.floor(b.toNumber());
+    return Math.abs(aNum * bNum) / gcd(new Decimal(aNum), new Decimal(bNum));
   };
   
   // Number base conversion functions
@@ -176,12 +198,12 @@ export default function ScientificCalculator() {
   };
 
   const handleEqual = () => {
-    const inputValue = parseFloat(display);
+    const inputValue = toDecimal(display);
     if (previousValue !== null && operation) {
       const result = calculate(previousValue, inputValue, operation);
       const finalExpression = expression + ' = ' + result;
       setExpression(finalExpression);
-      setDisplay(String(result));
+      setDisplay(formatDisplay(result));
       setPreviousValue(null);
       setOperation(null);
       setWaitingForNewValue(true);

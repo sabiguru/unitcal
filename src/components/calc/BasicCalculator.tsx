@@ -2,26 +2,42 @@
 
 import { useState } from 'react';
 import KeypadGrid from '@/components/ui/KeypadGrid';
+import Decimal from 'decimal.js';
 
 export default function BasicCalculator() {
   const [display, setDisplay] = useState('0');
   const [expression, setExpression] = useState('');
-  const [previousValue, setPreviousValue] = useState<number | null>(null);
+  const [previousValue, setPreviousValue] = useState<Decimal | null>(null);
   const [operation, setOperation] = useState<string | null>(null);
   const [waitingForNewValue, setWaitingForNewValue] = useState(false);
 
+  const toDecimal = (value: string | Decimal) => new Decimal(value || '0');
+
+  const formatDisplay = (value: Decimal | number | string) => {
+    if (value instanceof Decimal) {
+      const str = value.toString();
+      return str.includes('.') ? str.replace(/\.?0+$/, '') || '0' : str;
+    }
+    return String(value);
+  };
+
   const inputNumber = (num: string) => {
+    if (!waitingForNewValue && num === '.' && display.includes('.')) {
+      return;
+    }
+
     if (waitingForNewValue) {
-      setDisplay(num);
+      const nextValue = num === '.' ? '0.' : num;
+      setDisplay(nextValue);
       if (operation && previousValue !== null) {
         const operatorSymbol = operation === '*' ? '×' : operation === '/' ? '÷' : operation;
-        setExpression(`${previousValue} ${operatorSymbol} ${num}`);
+        setExpression(`${previousValue} ${operatorSymbol} ${nextValue}`);
       } else {
-        setExpression(num);
+        setExpression(nextValue);
       }
       setWaitingForNewValue(false);
     } else {
-      const newDisplay = display === '0' ? num : display + num;
+      const newDisplay = display === '0' && num !== '.' ? num : display + num;
       setDisplay(newDisplay);
       if (operation && previousValue !== null) {
         const operatorSymbol = operation === '*' ? '×' : operation === '/' ? '÷' : operation;
@@ -33,16 +49,16 @@ export default function BasicCalculator() {
   };
 
   const inputOperation = (nextOperation: string) => {
-    const inputValue = parseFloat(display);
+    const inputValue = toDecimal(display);
     const operatorSymbol = nextOperation === '*' ? '×' : nextOperation === '/' ? '÷' : nextOperation;
 
     if (previousValue === null) {
       setPreviousValue(inputValue);
       setExpression(`${inputValue} ${operatorSymbol} `);
     } else if (operation && !waitingForNewValue) {
-      const currentValue = previousValue || 0;
+      const currentValue = previousValue;
       const result = calculate(currentValue, inputValue, operation);
-      setDisplay(String(result));
+      setDisplay(formatDisplay(result));
       setPreviousValue(result);
       setExpression(`${result} ${operatorSymbol} `);
     } else {
@@ -53,23 +69,23 @@ export default function BasicCalculator() {
     setOperation(nextOperation);
   };
 
-  const calculate = (firstValue: number, secondValue: number, operation: string) => {
+  const calculate = (firstValue: Decimal, secondValue: Decimal, operation: string) => {
     switch (operation) {
-      case '+': return firstValue + secondValue;
-      case '-': return firstValue - secondValue;
-      case '*': return firstValue * secondValue;
-      case '/': return firstValue / secondValue;
+      case '+': return firstValue.plus(secondValue);
+      case '-': return firstValue.minus(secondValue);
+      case '*': return firstValue.times(secondValue);
+      case '/': return firstValue.dividedBy(secondValue);
       default: return secondValue;
     }
   };
 
   const handleEqual = () => {
-    const inputValue = parseFloat(display);
+    const inputValue = toDecimal(display);
     if (previousValue !== null && operation) {
       const result = calculate(previousValue, inputValue, operation);
       const finalExpression = expression + ' = ' + result;
       setExpression(finalExpression);
-      setDisplay(String(result));
+      setDisplay(formatDisplay(result));
       setPreviousValue(null);
       setOperation(null);
       setWaitingForNewValue(true);
