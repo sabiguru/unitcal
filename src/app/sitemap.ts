@@ -81,8 +81,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const categoryMapping: Record<string, string[]> = {
       'mathematics': [
         'basic', 'scientific', 'graphing', 'fraction', 'percentage', 'ratio', 'prime', 'matrix',
-        'equation-solver', 'age', 'date', 'tip', 'area', 'volume',
-        'significant-figures', 'binary-converter', 'time', 'speed'
+        'equation-solver', 'significant-figures', 'binary-converter', 'speed',
+        'suanpan-abacus', 'soroban-abacus', 'western-abacus'
       ],
       'health': [
         'bmi', 'bmr', 'bodyfat', 'calorie', 'protein', 'heartrate', 'fitness', 'sleep', 'water',
@@ -96,14 +96,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         'remote-work-2026'
       ],
       'engineering': [
-        'capacitor', 'electrical', 'energy-usage', 'ohms-law', 'resistor', 'molecular-weight',
-        'stoichiometry', 'ph', 'subnet', 'carbon-footprint', 'ai-engineering-2026', 'concept-to-silicon'
+        'capacitor', 'electrical', 'ohms-law', 'resistor', 'molecular-weight',
+        'stoichiometry', 'ph', 'subnet', 'ai-engineering-2026', 'concept-to-silicon'
       ],
       'automotive': [
         'mpg', 'fuel-cost', 'ev-range', 'tire-size'
       ],
       'construction': [
-        'paint', 'patio', 'concrete', 'roofing', 'stairs', 'tile'
+        'paint', 'patio', 'concrete', 'roofing', 'stairs', 'tile', 'area', 'volume'
       ],
       'cooking': [
         'baking', 'recipe-converter', 'coffee-ratio', 'alcohol-dilution'
