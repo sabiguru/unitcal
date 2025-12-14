@@ -20,12 +20,7 @@ interface LearnPageProps {
 
 // Generate static params for all category/slug combinations
 export async function generateStaticParams() {
-  const availableLearnSlugs = Array.from(
-    new Set([
-      ...getAvailableLearnSlugs(),
-      ...Object.values(require('@/utils/learnCategoryMapping').LEARN_CATEGORY_MAPPING).flat()
-    ])
-  );
+  const availableLearnSlugs = getAvailableLearnSlugs();
   const params: { category: string; slug: string }[] = [];
 
   for (const slug of availableLearnSlugs) {

@@ -20,12 +20,7 @@ interface LearnCategoryPageProps {
 
 // Function to map learn articles to categories using centralized mapping
 function getLearnArticlesForCategory(categorySlug: string) {
-  const availableLearnSlugs = Array.from(
-    new Set([
-      ...getAvailableLearnSlugs(),
-      ...Object.values(require('@/utils/learnCategoryMapping').LEARN_CATEGORY_MAPPING).flat()
-    ])
-  );
+  const availableLearnSlugs = getAvailableLearnSlugs();
   const learnSlugs = getSlugsForCategory(categorySlug);
   const availableArticles = learnSlugs.filter(slug => availableLearnSlugs.includes(slug));
 
