@@ -6,7 +6,7 @@ import { Tabs, TabPanel } from '@/components/ui/Tabs';
 Every chip design begins as an idea—but turning that idea into silicon is where real engineering begins.  
 Physical design and implementation bridge the gap between RTL logic and the actual layout that becomes a chip. Understanding this process doesn’t just make you a better designer—it gives you visibility into power, timing, and performance trade-offs that shape modern hardware.
 
-In this guide, we'll take a clear, structured look at **how a digital design moves from concept to silicon**, the tools used at each stage, and how engineers can evaluate design metrics using online tools like our [Scientific Calculator](https://calcfort.com/calculator/scientific) and [Electrical Calculator](https://calcfort.com/calculator/electrical).
+In this guide, we'll take a clear, structured look at **how a digital design moves from concept to silicon**, the tools used at each stage, and how engineers can evaluate design metrics using online tools like our [Scientific Calculator](https://calcfort.com/calculator/mathematics/scientific) and [Electrical Calculator](https://calcfort.com/calculator/engineering/electrical).
 
 <Tabs>
 <TabPanel title="The Design Journey">
@@ -18,7 +18,7 @@ The physical design flow converts your synthesised netlist into a manufacturable
 
 2. **Logic Synthesis**
    Converts RTL into a gate-level netlist based on a standard-cell library.
-   Use timing estimates with our [Time Calculator](https://calcfort.com/calculator/time) to understand timing constraints early.
+   Use timing estimates with our [Time Calculator](https://calcfort.com/calculator/mathematics/time) to understand timing constraints early.
 
 3. **Floorplanning**  
    Define block placement, power grid, and I/O locations. Early floorplan decisions affect congestion, power, and timing closure.
@@ -42,12 +42,12 @@ These three metrics—**T, P, A**—govern every physical design decision.
 - Measured in clock frequency and slack.
 - Improving one path can worsen another—understanding slack balance is essential.
 
-> Use the [Scientific Calculator](https://calcfort.com/calculator/scientific) to evaluate equivalent clock speeds across process corners.
+> Use the [Scientific Calculator](https://calcfort.com/calculator/mathematics/scientific) to evaluate equivalent clock speeds across process corners.
 
 ### Power
 - Split into dynamic and leakage power.
 - Modern SoCs rely on multi-Vt cells and clock gating for savings.
-- Our [Electrical Calculator](https://calcfort.com/calculator/electrical) helps estimate consumption from voltage, current, and switching activity.
+- Our [Electrical Calculator](https://calcfort.com/calculator/engineering/electrical) helps estimate consumption from voltage, current, and switching activity.
 
 ### Area
 - Smaller area means fewer masks and lower cost—but can worsen congestion or heat.  
@@ -87,7 +87,7 @@ Physical implementation isn’t just about running tools—it’s about iteratio
 - Limit macro fragmentation
 - Reuse IP with proven layouts
 
-You can simulate efficiency improvements using our [Percentage Calculator](https://calcfort.com/calculator/percentage).
+You can simulate efficiency improvements using our [Percentage Calculator](https://calcfort.com/calculator/mathematics/percentage).
 
 </TabPanel>
 
@@ -103,7 +103,7 @@ Verification ensures your design behaves exactly as intended before tape-out.
 
 A missed violation here can cost millions in re-spins.
 
-> Calculate the financial impact of design delays using the [ROI Calculator](https://calcfort.com/calculator/roi).
+> Calculate the financial impact of design delays using the [ROI Calculator](https://calcfort.com/calculator/financial/roi).
 
 </TabPanel>
 
