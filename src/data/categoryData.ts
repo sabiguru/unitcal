@@ -383,7 +383,8 @@ export const calculatorCategories: CategoryData[] = [
     },
     calculators: [
       { name: 'Age on Mars Calculator', description: 'Calculate your age on Mars and other planets', popular: true, link: '/calculator/space/age-on-mars' },
-      { name: 'Space Weight Calculator', description: 'Calculate your weight on different planets and moons', popular: true, link: '/calculator/space/space-weight' }
+      { name: 'Space Weight Calculator', description: 'Calculate your weight on different planets and moons', popular: true, link: '/calculator/space/space-weight' },
+      { name: 'Time on Mars Calculator', description: 'Convert Earth time to Mars time', link: '/calculator/space/time-on-mars' }
     ]
   },
   {
