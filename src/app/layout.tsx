@@ -123,9 +123,6 @@ export default function RootLayout({
             ezstandalone.cmd = ezstandalone.cmd || [];
           `
         }}></script>
-
-        {/* Linkbot script */}
-        <script type='text/javascript' id='pagemapIdscript' defer src='https://bot.linkbot.com/bot.js#47756-c0e8c?property-id=47756-c0e8c'></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
