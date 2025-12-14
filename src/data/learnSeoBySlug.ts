@@ -2166,22 +2166,7 @@ export function getLearnSeo(slug: string): LearnSEO | null {
 }
 
 // Helper function to get all available learn slugs
-import { readdirSync } from 'fs';
-import { join } from 'path';
 
 export function getAvailableLearnSlugs(): string[] {
-  const seoSlugs = Object.keys(learnSeoBySlug);
-  let fileSlugs: string[] = [];
-
-  try {
-    const dir = join(process.cwd(), 'src', 'learn', 'calculators');
-    fileSlugs = readdirSync(dir)
-      .filter((file) => file.endsWith('.mdx'))
-      .map((file) => file.replace(/\.mdx$/, ''));
-  } catch {
-    // If the directory is missing in some environments, fall back to SEO slugs only
-    fileSlugs = [];
-  }
-
-  return Array.from(new Set([...seoSlugs, ...fileSlugs]));
+  return Object.keys(learnSeoBySlug);
 }
