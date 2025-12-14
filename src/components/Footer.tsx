@@ -49,7 +49,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/categories" className="text-slate-300 hover:text-white transition-colors">
+                <Link href="/calculators" className="text-slate-300 hover:text-white transition-colors">
                   All Categories →
                 </Link>
               </li>
@@ -66,7 +66,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/categories" className="text-slate-300 hover:text-white transition-colors">
+                <Link href="/calculators" className="text-slate-300 hover:text-white transition-colors">
                   All Categories
                 </Link>
               </li>

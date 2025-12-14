@@ -505,7 +505,7 @@ Reply to: ${userEmail}
                     <li><strong>Business/Technical Support:</strong> Expect a response within 1-2 business days</li>
                 </ul>
                 
-                <p>In the meantime, feel free to explore our <a href="https://calcfort.com" style="color: #3b82f6;">calculator tools</a> or browse our <a href="https://calcfort.com/categories" style="color: #3b82f6;">categories</a> for more useful calculators.</p>
+                <p>In the meantime, feel free to explore our <a href="https://calcfort.com" style="color: #3b82f6;">calculator tools</a> or browse our <a href="https://calcfort.com/calculators" style="color: #3b82f6;">categories</a> for more useful calculators.</p>
                 
                 <p>If you have any urgent questions, you can also reach us directly at <a href="mailto:support@calcfort.com" style="color: #3b82f6;">support@calcfort.com</a>.</p>
                 
