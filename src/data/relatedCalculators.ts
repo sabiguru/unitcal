@@ -597,7 +597,8 @@ export const relatedCalculatorsMap: Record<string, RelatedCalculator[]> = {
     { slug: 'space-weight', name: 'Space Weight Calculator', description: 'Calculate weight on different planets' },
     { slug: 'age-on-mars', name: 'Age on Mars Calculator', description: 'Calculate your age on other planets' },
     { slug: 'scientific', name: 'Scientific Calculator', description: 'Advanced mathematical functions' },
-    { slug: 'time-on-mars', name: 'Time on Mars Calculator', description: 'Convert Earth time to Mars time' },
+    { slug: 'timezone-converter', name: 'Time Zone Converter', description: 'Convert times between zones' },
+    { slug: 'time', name: 'Time Calculator', description: 'Add, subtract, and convert time' },
   ],
 };
 
