@@ -41,7 +41,7 @@ export default function CategoriesPageClient() {
           {calculatorCategories.map((category, index) => (
             <Link
               key={index}
-              href={`/category/${category.slug}`}
+              href={`/calculator/${category.slug}`}
               className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 block"
             >
               <div className="p-6">

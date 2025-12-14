@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { calculatorCategories } from '@/data/categoryData';
+import CalculatorCategoryGrid from '@/components/CalculatorCategoryGrid';
 
 export const metadata: Metadata = {
   title: 'About CalcFort - Free Online Calculator Tools',
@@ -132,26 +132,7 @@ export default function AboutPage() {
 
         {/* Calculator Categories */}
         <div className="mb-20">
-          <h2 className="text-3xl font-bold text-slate-700 text-center mb-12">Calculator Categories</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {calculatorCategories.map((category, index) => (
-              <Link
-                key={index}
-                href={`/category/${category.slug}`}
-                className="group bg-white rounded-xl shadow-md border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
-              >
-                <div className="flex items-center space-x-4">
-                  <div className="text-3xl">{category.icon}</div>
-                  <div>
-                    <h3 className="font-semibold text-slate-700 group-hover:text-blue-600 transition-colors">
-                      {category.title}
-                    </h3>
-                    <p className="text-sm text-gray-500">{category.calculators.length} calculators</p>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
+          <CalculatorCategoryGrid title="Calculator Categories" />
         </div>
 
         {/* Team Section */}

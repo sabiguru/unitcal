@@ -34,17 +34,17 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/category/financial" className="text-slate-300 hover:text-white transition-colors">
+                <Link href="/calculator/financial" className="text-slate-300 hover:text-white transition-colors">
                   Financial & Business
                 </Link>
               </li>
               <li>
-                <Link href="/category/health" className="text-slate-300 hover:text-white transition-colors">
+                <Link href="/calculator/health" className="text-slate-300 hover:text-white transition-colors">
                   Health & Fitness
                 </Link>
               </li>
               <li>
-                <Link href="/category/engineering" className="text-slate-300 hover:text-white transition-colors">
+                <Link href="/calculator/engineering" className="text-slate-300 hover:text-white transition-colors">
                   Engineering & Technology
                 </Link>
               </li>

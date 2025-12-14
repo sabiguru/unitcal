@@ -109,7 +109,7 @@ export default function AccountDashboard() {
                         {calculatorCategories.map((cat, index) => (
                           <Link
                             key={index}
-                            href={`/category/${cat.slug}`}
+                            href={`/calculator/${cat.slug}`}
                             className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors"
                           >
                             <span className="text-lg">{cat.icon}</span>
