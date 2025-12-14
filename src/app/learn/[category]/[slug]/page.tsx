@@ -8,7 +8,7 @@ import LearnMDXContent from '@/components/LearnMDXContent';
 import EzoicAd from '@/components/ads/EzoicAd';
 import { EZOIC_PLACEMENTS } from '@/config/ezoicPlacements';
 import { getRelatedCalculators } from '@/data/relatedCalculators';
-import { getCategoryForSlug, getSlugsForCategory } from '@/utils/learnCategoryMapping';
+import { getCategoryForSlug, getSlugsForCategory, LEARN_CATEGORY_MAPPING } from '@/utils/learnCategoryMapping';
 import { calculatorCategories } from '@/data/categoryData';
 import { getAvailableLearnSlugs } from '@/data/learnSeoBySlug';
 import SchemaMarkup from '@/components/SchemaMarkup';
@@ -23,7 +23,7 @@ export async function generateStaticParams() {
   const availableLearnSlugs = Array.from(
     new Set([
       ...getAvailableLearnSlugs(),
-      ...Object.values(require('@/utils/learnCategoryMapping').LEARN_CATEGORY_MAPPING).flat()
+      ...Object.values(LEARN_CATEGORY_MAPPING).flat(),
     ])
   );
   const params: { category: string; slug: string }[] = [];
