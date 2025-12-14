@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { calculatorCategories } from '@/data/categoryData';
-import { getSlugsForCategory, LEARN_CATEGORY_MAPPING } from '@/utils/learnCategoryMapping';
+import { getSlugsForCategory } from '@/utils/learnCategoryMapping';
 import { getAvailableLearnSlugs, getLearnSeo } from '@/data/learnSeoBySlug';
 import EzoicAd from '@/components/ads/EzoicAd';
 import { EZOIC_PLACEMENTS } from '@/config/ezoicPlacements';
@@ -23,7 +23,7 @@ function getLearnArticlesForCategory(categorySlug: string) {
   const availableLearnSlugs = Array.from(
     new Set([
       ...getAvailableLearnSlugs(),
-      ...Object.values(LEARN_CATEGORY_MAPPING).flat()
+      ...Object.values(require('@/utils/learnCategoryMapping').LEARN_CATEGORY_MAPPING).flat()
     ])
   );
   const learnSlugs = getSlugsForCategory(categorySlug);
