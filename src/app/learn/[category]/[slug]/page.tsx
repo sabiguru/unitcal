@@ -18,6 +18,8 @@ interface LearnPageProps {
   params: Promise<{ category: string; slug: string }>;
 }
 
+export const dynamicParams = true;
+
 // Generate static params for all category/slug combinations
 export async function generateStaticParams() {
   const availableLearnSlugs = Array.from(
