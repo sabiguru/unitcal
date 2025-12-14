@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
       siteName: 'CalcFort',
       images: [
         {
-          url: `/og-images/category-${category.slug}.jpg`,
+          url: `/og-image.png`,
           width: 1200,
           height: 630,
           alt: `${category.title} Calculators - CalcFort`,
@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
       card: 'summary_large_image',
       title: `${category.title} | CalcFort`,
       description: `${calculatorCount} free ${category.title.toLowerCase()} calculators. ${category.description}`,
-      images: [`/twitter-images/category-${category.slug}.jpg`],
+      images: [`/og-image.png`],
       creator: '@CalcFort',
       site: '@CalcFort',
     },
