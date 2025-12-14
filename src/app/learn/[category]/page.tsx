@@ -18,8 +18,6 @@ interface LearnCategoryPageProps {
   }>;
 }
 
-export const dynamicParams = true;
-
 // Function to map learn articles to categories using centralized mapping
 function getLearnArticlesForCategory(categorySlug: string) {
   const availableLearnSlugs = Array.from(
