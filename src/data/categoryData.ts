@@ -48,6 +48,7 @@ export const calculatorCategories: CategoryData[] = [
       { name: 'Age Calculator', description: 'Calculate exact age with milestones and fun facts', link: '/calculator/mathematics/age' },
       { name: 'Date Calculator', description: 'Add, subtract, or find the difference between dates', link: '/calculator/mathematics/date' },
       { name: 'Tip Calculator', description: 'Calculate tips and split bills easily', link: '/calculator/mathematics/tip' },
+      { name: 'Speed Calculator', description: 'Calculate speed, distance, and time relationships', link: '/calculator/mathematics/speed' },
       { name: 'Significant Figures Calculator', description: 'Count, round, and calculate with significant figures', link: '/calculator/mathematics/significant-figures' },
       { name: 'Soroban Abacus Calculator', description: 'Master the Japanese soroban abacus with 1:4 bead configuration', link: '/calculator/mathematics/soroban-abacus' },
       { name: 'Suanpan Abacus Calculator', description: 'Learn the Chinese suanpan abacus with 2:5 bead configuration', link: '/calculator/mathematics/suanpan-abacus' },
@@ -383,8 +384,7 @@ export const calculatorCategories: CategoryData[] = [
     },
     calculators: [
       { name: 'Age on Mars Calculator', description: 'Calculate your age on Mars and other planets', popular: true, link: '/calculator/space/age-on-mars' },
-      { name: 'Space Weight Calculator', description: 'Calculate your weight on different planets and moons', popular: true, link: '/calculator/space/space-weight' },
-      { name: 'Time on Mars Calculator', description: 'Convert Earth time to Mars time', link: '/calculator/space/time-on-mars' }
+      { name: 'Space Weight Calculator', description: 'Calculate your weight on different planets and moons', popular: true, link: '/calculator/space/space-weight' }
     ]
   },
   {

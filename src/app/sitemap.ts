@@ -128,7 +128,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         'dog-age', 'cat-age'
       ],
       'space': [
-        'age-on-mars', 'space-weight', 'planetary-years', 'time-on-mars', 'weight-on-mars'
+        'age-on-mars', 'space-weight', 'planetary-years', 'weight-on-mars'
       ],
       'unique': [
         'love-calculator', 'golf-balls-boeing-747', 'aquarium-volume'
