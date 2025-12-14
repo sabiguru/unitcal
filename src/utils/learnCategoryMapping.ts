@@ -20,8 +20,8 @@ export const LEARN_CATEGORY_MAPPING: Record<string, string[]> = {
     'remote-work-2026', 'cost-of-living-2026', 'ai-finance-2026'
   ],
   'engineering': [
-    'capacitor', 'electrical', 'ohms-law', 'resistor', 'molecular-weight',
-    'stoichiometry', 'ph', 'subnet', 'ai-engineering-2026', 'concept-to-silicon'
+    'capacitor', 'electrical', 'ohms-law', 'resistor', 'password-generator',
+    'subnet', 'ai-engineering-2026', 'concept-to-silicon'
   ],
   'automotive': [
     'mpg', 'fuel-cost', 'ev-range', 'tire-size'
@@ -59,7 +59,7 @@ export const LEARN_CATEGORY_MAPPING: Record<string, string[]> = {
   ],
   'lifestyle': [
     'baking', 'recipe-converter', 'coffee-ratio', 'dog-age', 'cat-age', 'love-calculator',
-    'timezone-converter', 'countdown-timer', 'morse-code', 'password-generator',
+    'timezone-converter', 'countdown-timer', 'morse-code',
     'braille-translator', 'golf-balls-boeing-747', 'alcohol-dilution', 'aquarium-volume',
     'home-energy-audit', 'gpa'
   ]

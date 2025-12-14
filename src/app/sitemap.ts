@@ -96,8 +96,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         'remote-work-2026'
       ],
       'engineering': [
-        'capacitor', 'electrical', 'ohms-law', 'resistor', 'molecular-weight',
-        'stoichiometry', 'ph', 'subnet', 'ai-engineering-2026', 'concept-to-silicon'
+        'capacitor', 'electrical', 'ohms-law', 'resistor', 'subnet', 'password-generator',
+        'ai-engineering-2026', 'concept-to-silicon'
       ],
       'automotive': [
         'mpg', 'fuel-cost', 'ev-range', 'tire-size'
