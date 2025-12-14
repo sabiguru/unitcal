@@ -29,7 +29,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Popular Categories</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/category/mathematics" className="text-slate-300 hover:text-white transition-colors">
+                <Link href="/calculator/mathematics" className="text-slate-300 hover:text-white transition-colors">
                   Mathematics & Basic Tools
                 </Link>
               </li>
