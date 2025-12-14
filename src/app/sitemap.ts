@@ -2,12 +2,13 @@ import { MetadataRoute } from 'next';
 import { calculators } from '@/data/calculators';
 import { calculatorCategories } from '@/data/categoryData';
 import { getAvailableLearnSlugs } from '@/data/learnSeoBySlug';
-import { getCategoryForSlug } from '@/utils/learnCategoryMapping';
+import { getCategoryForSlug, getSlugsForCategory } from '@/utils/learnCategoryMapping';
 import { getCategoryForCalculator } from '@/utils/calculatorCategoryMapping';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://calcfort.com';
   const currentDate = new Date();
+  const POSTS_PER_PAGE = 8; // keep in sync with /learn/[category] pagination
 
   // Static routes
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -153,6 +154,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  // Pagination for learn category routes (page 2+)
+  const learnCategoryPaginationRoutes: MetadataRoute.Sitemap = getLearnCategoriesWithContent()
+    .flatMap(categorySlug => {
+      const availableLearnSlugs = getAvailableLearnSlugs();
+      const slugs = getSlugsForCategory(categorySlug);
+      const totalPosts = slugs.filter(slug => availableLearnSlugs.includes(slug)).length;
+      const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
+
+      if (totalPages <= 1) return [];
+
+      return Array.from({ length: totalPages - 1 }, (_, i) => i + 2).map(page => ({
+        url: `${baseUrl}/learn/${categorySlug}?page=${page}`,
+        lastModified: currentDate,
+        changeFrequency: 'weekly' as const,
+        priority: 0.6,
+      }));
+    });
+
   // Dynamic individual learn article routes (with category-based URLs)
   const learnArticleRoutes: MetadataRoute.Sitemap = getAvailableLearnSlugs().map(slug => {
     const category = getCategoryForSlug(slug);
@@ -169,6 +188,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...calculatorRoutes,
     ...categoryRoutes,
     ...learnCategoryRoutes,
+    ...learnCategoryPaginationRoutes,
     ...learnArticleRoutes,
   ];
 }
