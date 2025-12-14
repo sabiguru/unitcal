@@ -313,14 +313,33 @@ export const calculatorCategories: CategoryData[] = [
         "Home energy audit and improvement planning",
         "Renewable energy investment analysis"
       ],
-      useCases: "Whether you're considering solar panels for your home, trying to reduce energy bills, calculating carbon offsets for travel, or planning energy-efficient improvements, our tools provide accurate environmental and financial analysis."
+    useCases: "Whether you're considering solar panels for your home, trying to reduce energy bills, calculating carbon offsets for travel, or planning energy-efficient improvements, our tools provide accurate environmental and financial analysis."
     },
     calculators: [
       { name: 'Solar Panel Savings Calculator', description: 'Calculate solar panel costs, savings, and payback period', popular: true, link: '/calculator/energy/solar-panel-savings' },
-      { name: 'Seed Spacing Calculator', description: 'Calculate optimal seed spacing for your garden plants', popular: true, link: '/calculator/seed-spacing' },
       { name: 'Energy Usage Calculator', description: 'Monitor and optimize home energy consumption', link: '/calculator/energy/energy-usage' },
       { name: 'Carbon Footprint Calculator', description: 'Calculate your environmental impact and CO₂ emissions.', link: '/calculator/energy/carbon-footprint' },
       { name: 'Home Energy Audit Calculator', description: 'Assess home energy efficiency and improvement opportunities', link: '/calculator/energy/home-energy-audit' }
+    ]
+  },
+  {
+    title: 'Agriculture & Gardening',
+    icon: '🌾',
+    slug: 'agriculture',
+    description: 'Grow smarter with planting, spacing, and harvest calculators.',
+    color: 'from-green-500 to-lime-600',
+    literature: {
+      introduction: "Agriculture calculators help growers plan beds, optimize spacing, and estimate yields so plants thrive and resources aren’t wasted.",
+      keyTopics: [
+        "Seed and plant spacing",
+        "Row planning and bed layout",
+        "Yield and harvest planning",
+        "Resource and input estimation"
+      ],
+      useCases: "Plan your beds, avoid overcrowding, and predict harvests with practical tools for gardeners and growers."
+    },
+    calculators: [
+      { name: 'Seed Spacing Calculator', description: 'Calculate optimal seed spacing for your garden plants', popular: true, link: '/calculator/agriculture/seed-spacing' }
     ]
   },
   {

@@ -4417,7 +4417,7 @@ export const seoSchemas = {
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "Seed Spacing Calculator",
-        "url": "https://bytecalculator.com/calculator/seed-spacing",
+        "url": "https://calcfort.com/calculator/agriculture/seed-spacing",
         "description": "Calculate optimal seed spacing for your garden plants",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Web",

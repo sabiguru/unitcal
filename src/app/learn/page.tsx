@@ -83,7 +83,10 @@ function mapLearnArticlesToCategories() {
       'unit-converter', 'roman-numerals', 'morse-code', 'braille-translator'
     ],
     'energy': [
-      'solar-panel-savings', 'seed-spacing', 'energy-usage', 'carbon-footprint', 'home-energy-audit'
+      'solar-panel-savings', 'energy-usage', 'carbon-footprint', 'home-energy-audit'
+    ],
+    'agriculture': [
+      'seed-spacing'
     ],
     'animal-age': [
       'dog-age', 'cat-age'

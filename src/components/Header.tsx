@@ -93,6 +93,13 @@ export default function Header() {
                           <div className="text-xs text-gray-500">8 calculators</div>
                         </div>
                       </Link>
+                      <Link href="/calculator/agriculture" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                        <span className="text-lg">🌾</span>
+                        <div>
+                          <div className="font-medium text-gray-900">Agriculture & Gardening</div>
+                          <div className="text-xs text-gray-500">1 calculator</div>
+                        </div>
+                      </Link>
                       <Link href="/calculator/automotive" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
                         <span className="text-lg">🚗</span>
                         <div>
@@ -159,6 +166,13 @@ export default function Header() {
                         <div>
                           <div className="font-medium text-gray-900">Engineering & Technology</div>
                           <div className="text-xs text-gray-500">Learn technical concepts</div>
+                        </div>
+                      </Link>
+                      <Link href="/learn/agriculture" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                        <span className="text-lg">🌾</span>
+                        <div>
+                          <div className="font-medium text-gray-900">Agriculture & Gardening</div>
+                          <div className="text-xs text-gray-500">Learn planting and spacing</div>
                         </div>
                       </Link>
                       <Link href="/learn/automotive" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">

@@ -42,7 +42,10 @@ export const LEARN_CATEGORY_MAPPING: Record<string, string[]> = {
     'unit-converter', 'roman-numerals', 'morse-code', 'braille-translator'
   ],
   'energy': [
-    'solar-panel-savings', 'seed-spacing', 'energy-usage', 'carbon-footprint', 'home-energy-audit'
+    'solar-panel-savings', 'energy-usage', 'carbon-footprint', 'home-energy-audit'
+  ],
+  'agriculture': [
+    'seed-spacing'
   ],
   'animal-age': [
     'dog-age', 'cat-age'
@@ -57,7 +60,7 @@ export const LEARN_CATEGORY_MAPPING: Record<string, string[]> = {
     'baking', 'recipe-converter', 'coffee-ratio', 'dog-age', 'cat-age', 'love-calculator',
     'timezone-converter', 'countdown-timer', 'morse-code', 'password-generator',
     'braille-translator', 'golf-balls-boeing-747', 'alcohol-dilution', 'aquarium-volume',
-    'home-energy-audit', 'gpa', 'seed-spacing', 'suanpan-abacus', 'soroban-abacus', 'western-abacus'
+    'home-energy-audit', 'gpa', 'suanpan-abacus', 'soroban-abacus', 'western-abacus'
   ]
 };
 

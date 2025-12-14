@@ -39,6 +39,9 @@ export const CALCULATOR_CATEGORY_MAPPING: Record<string, string[]> = {
   'energy': [
     'solar-panel-savings', 'energy-usage', 'carbon-footprint', 'home-energy-audit'
   ],
+  'agriculture': [
+    'seed-spacing'
+  ],
   'animal-age': [
     'dog-age', 'cat-age'
   ],

@@ -482,6 +482,47 @@ export const categorySchemas = {
     }
   },
 
+  agriculture: {
+    webApp: {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Agriculture & Gardening Calculators",
+      "url": "https://calcfort.com/calculator/agriculture",
+      "description": "Plan beds and optimize planting with agriculture and gardening calculators.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Calculator Fort"
+      },
+      "featureList": [
+        "Seed and plant spacing",
+        "Bed layout planning",
+        "Yield planning",
+        "Resource estimation"
+      ]
+    },
+    collectionPage: {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Agriculture & Gardening Calculators",
+      "description": "Tools to plan planting, spacing, and harvests.",
+      "url": "https://calcfort.com/calculator/agriculture",
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": 1,
+        "itemListElement": [
+          { "@type": "SoftwareApplication", "name": "Seed Spacing Calculator", "url": "https://calcfort.com/calculator/agriculture/seed-spacing" }
+        ]
+      }
+    }
+  },
+
   "animal-age": {
     webApp: {
       "@context": "https://schema.org",

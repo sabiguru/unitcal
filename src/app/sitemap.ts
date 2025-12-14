@@ -81,8 +81,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const categoryMapping: Record<string, string[]> = {
       'mathematics': [
         'basic', 'scientific', 'graphing', 'fraction', 'percentage', 'ratio', 'prime', 'matrix',
-        'equation-solver', 'age', 'date', 'tip', 'unit-converter', 'area', 'volume',
-        'significant-figures', 'roman-numerals', 'binary-converter', 'time', 'speed'
+        'equation-solver', 'age', 'date', 'tip', 'area', 'volume',
+        'significant-figures', 'binary-converter', 'time', 'speed'
       ],
       'health': [
         'bmi', 'bmr', 'bodyfat', 'calorie', 'protein', 'heartrate', 'fitness', 'sleep', 'water',
@@ -105,18 +105,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
       'construction': [
         'paint', 'patio', 'concrete', 'roofing', 'stairs', 'tile'
       ],
-      'lifestyle': [
-        'baking', 'recipe-converter', 'coffee-ratio', 'dog-age', 'cat-age', 'love-calculator',
-        'timezone-converter', 'countdown-timer', 'morse-code', 'password-generator',
-        'braille-translator', 'golf-balls-boeing-747', 'alcohol-dilution', 'aquarium-volume',
-        'home-energy-audit', 'gpa', 'seed-spacing', 'suanpan-abacus', 'soroban-abacus', 'western-abacus'
+      'cooking': [
+        'baking', 'recipe-converter', 'coffee-ratio', 'alcohol-dilution'
       ],
-      'space': [
-        'age-on-mars', 'space-weight', 'planetary-years', 'time-on-mars', 'weight-on-mars'
+      'education': [
+        'gpa', 'molecular-weight', 'stoichiometry', 'ph'
       ],
       'everyday': [
         'age', 'date', 'tip', 'time', 'timezone-converter', 'countdown-timer',
         'ai-everyday-calculations', 'ai-tools-2026', 'math-behind-ai', 'ai-habits-health'
+      ],
+      'conversions': [
+        'unit-converter', 'roman-numerals', 'morse-code', 'braille-translator'
+      ],
+      'energy': [
+        'solar-panel-savings', 'energy-usage', 'carbon-footprint', 'home-energy-audit'
+      ],
+      'agriculture': [
+        'seed-spacing'
+      ],
+      'animal-age': [
+        'dog-age', 'cat-age'
+      ],
+      'space': [
+        'age-on-mars', 'space-weight', 'planetary-years', 'time-on-mars', 'weight-on-mars'
+      ],
+      'unique': [
+        'love-calculator', 'golf-balls-boeing-747', 'aquarium-volume'
       ]
     };
 
