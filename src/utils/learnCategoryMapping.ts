@@ -4,8 +4,8 @@
 export const LEARN_CATEGORY_MAPPING: Record<string, string[]> = {
   'mathematics': [
     'basic', 'scientific', 'graphing', 'fraction', 'percentage', 'ratio', 'prime', 'matrix',
-    'equation-solver', 'age', 'date', 'tip', 'unit-converter', 'area', 'volume',
-    'significant-figures', 'roman-numerals', 'binary-converter', 'time', 'speed'
+    'equation-solver', 'age', 'date', 'tip', 'area', 'volume',
+    'significant-figures', 'binary-converter', 'time', 'speed'
   ],
   'health': [
     'bmi', 'bmr', 'bodyfat', 'calorie', 'protein', 'heartrate', 'fitness', 'sleep', 'water',
