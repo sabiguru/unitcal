@@ -170,7 +170,7 @@ export const categorySchemas = {
         "itemListElement": [
           { "@type": "SoftwareApplication", "name": "Electrical Calculator", "url": "https://calcfort.com/calculator/electrical" },
           { "@type": "SoftwareApplication", "name": "Resistor Calculator", "url": "https://calcfort.com/calculator/resistor" },
-          { "@type": "SoftwareApplication", "name": "Binary Converter", "url": "https://calcfort.com/calculator/binary-converter" }
+          { "@type": "SoftwareApplication", "name": "Binary Converter", "url": "https://calcfort.com/calculator/mathematics/binary-converter" }
         ]
       }
     }
@@ -434,7 +434,7 @@ export const categorySchemas = {
         "itemListElement": [
           { "@type": "SoftwareApplication", "name": "Roman Numerals Converter", "url": "https://calcfort.com/calculator/roman-numerals" },
           { "@type": "SoftwareApplication", "name": "Morse Code Converter", "url": "https://calcfort.com/calculator/morse-code" },
-          { "@type": "SoftwareApplication", "name": "Braille Translator", "url": "https://calcfort.com/calculator/braille-translator" }
+          { "@type": "SoftwareApplication", "name": "Braille Translator", "url": "https://calcfort.com/calculator/conversions/braille-translator" }
         ]
       }
     }
