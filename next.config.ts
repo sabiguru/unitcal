@@ -146,6 +146,7 @@ const legacyRedirects = [
   { source: '/learn/western-abacus', destination: '/learn/mathematics/western-abacus', permanent: true },
   { source: '/learn/golf-balls-boeing-747', destination: '/learn/unique/golf-balls-boeing-747', permanent: true },
   { source: '/learn/significant-figures', destination: '/learn/mathematics/significant-figures', permanent: true },
+  { source: '/learn/weight-on-mars', destination: '/learn/space/weight-on-mars', permanent: true },
 ];
 
 const nextConfig: NextConfig = {
