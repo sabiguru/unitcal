@@ -74,16 +74,30 @@ export default function RootLayout({
         <link rel="preconnect" href="https://cmp.gatekeeperconsent.com" />
         <link rel="preconnect" href="https://the.gatekeeperconsent.com" />
 
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EXX45NBE5F"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-EXX45NBE5F');
-          `
-        }}></script>
+        {/* Google tag (gtag.js) - lazy load after page settles */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              function loadGtag() {
+                if (document.getElementById('gtag-js')) return;
+                const s = document.createElement('script');
+                s.id = 'gtag-js';
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-EXX45NBE5F';
+                s.async = true;
+                document.head.appendChild(s);
+                gtag('js', new Date());
+                gtag('config', 'G-EXX45NBE5F');
+              }
+              if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadGtag, { timeout: 2000 });
+              } else {
+                window.addEventListener('load', loadGtag);
+              }
+            `
+          }}
+        />
 
         {/* Favicon and PWA icons */}
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
