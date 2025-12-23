@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import Footer from "@/components/Footer";
@@ -16,20 +15,6 @@ if (typeof window === 'undefined') {
     console.error('🚨 Uncaught Exception:', error);
   });
 }
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-  display: 'swap',
-  preload: true,
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: 'swap',
-  preload: true,
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://calcfort.com'),
@@ -88,8 +73,6 @@ export default function RootLayout({
         <link rel="preconnect" href="https://g.ezoic.net" />
         <link rel="preconnect" href="https://cmp.gatekeeperconsent.com" />
         <link rel="preconnect" href="https://the.gatekeeperconsent.com" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-EXX45NBE5F"></script>
@@ -125,7 +108,7 @@ export default function RootLayout({
         }}></script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className="antialiased"
         suppressHydrationWarning
       >
         <Providers>
