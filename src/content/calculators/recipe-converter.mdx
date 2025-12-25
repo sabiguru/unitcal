@@ -1,7 +1,3 @@
-import { Tabs, TabPanel } from '@/components/ui/Tabs';
-
-<Tabs>
-<TabPanel title="Quick Guide">
 ## How to Use the Recipe Converter
 The **recipe converter** solves the two biggest challenges in home baking: **scaling recipes** and **converting between volume (cups) and weight (grams)**. Simply enter your recipe ingredients, choose a scaling factor (e.g., 0.5 for half, 2.0 for double), and select your preferred output units. The tool uses **ingredient-specific densities**—so flour, sugar, and butter are converted accurately, not with a generic 240g-per-cup rule. It also helps you **adjust for different pan sizes** by calculating area-based scaling factors, ensuring your cakes bake evenly and your cookies spread correctly.
 
@@ -17,9 +13,7 @@ The **recipe converter** solves the two biggest challenges in home baking: **sca
 3.  **For pan changes**, use the area scaling factor but **adjust baking time**—shallower batters cook faster.
 4.  **Round sensibly**—the calculator shows precise values, but 10.6g salt is best rounded to 11g.
 5.  **Don’t scale leavening excessively**—for >3x recipes, consider using multiple batches.
-</TabPanel>
 
-<TabPanel title="Example">
 ## Step-by-Step Example
 You have a US cookie recipe that serves 24:
 - **2¼ cups flour**
@@ -39,9 +33,7 @@ You need **36 cookies** and want metric weights.
 **Bonus**: If you’re using a larger baking sheet, the tool can suggest if you need to adjust spacing or baking time.
 
 This eliminates guesswork and ensures perfect cookies every time.
-</TabPanel>
 
-<TabPanel title="FAQ">
 ### How accurate are the cup-to-gram conversions?
 They use **industry-standard densities** (e.g., 120g/cup for flour, 200g/cup for sugar). While actual weights can vary slightly by brand or humidity, these values ensure **consistency**—which is what matters most in baking.
 
@@ -71,5 +63,3 @@ The calculator shows the mathematical value (e.g., 1.5 eggs). In practice:
 - For **½ egg**: Beat one egg, use half by volume or weight
 - For **1.5 eggs**: Use one whole + half of another
 - For large batches, **weigh eggs** (1 large ≈ 50g without shell)
-</TabPanel>
-</Tabs>

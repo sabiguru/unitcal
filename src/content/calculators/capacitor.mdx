@@ -1,7 +1,3 @@
-import { Tabs, TabPanel } from '@/components/ui/Tabs';
-
-<Tabs>
-<TabPanel title="Quick Guide">
 Our **capacitor calculator** helps you solve for capacitance, voltage, charge, energy, reactance, and time constants in both DC and AC circuits. Whether you’re designing a filter, sizing a decoupling capacitor, or calculating energy storage, this tool provides instant, accurate results using standard electrical formulas.
 
 ### How It Works
@@ -35,9 +31,7 @@ The tool instantly shows:
 5. Use results to select appropriate components and ensure circuit performance.
 
 Always verify calculations with a multimeter and consult component datasheets for real-world tolerances.
-</TabPanel>
 
-<TabPanel title="Example">
 ### Step-by-Step Example
 **Scenario**: Design a high-pass filter with a **1 kHz** cutoff using a **10 kΩ** resistor.
 
@@ -53,9 +47,7 @@ Always verify calculations with a multimeter and consult component datasheets fo
 **Result**: Use a **15 nF or 16 nF ceramic capacitor**. At 1 kHz, its reactance equals the resistor value (10 kΩ), creating the -3dB cutoff point.
 
 This ensures frequencies above 1 kHz pass with minimal attenuation, while lower frequencies are blocked.
-</TabPanel>
 
-<TabPanel title="FAQ">
 ### What is capacitive reactance?
 Capacitive reactance (`Xc`) is the opposition a capacitor offers to alternating current. It’s measured in ohms and calculated as `Xc = 1/(2πfC)`. Unlike resistance, it **decreases as frequency increases**.
 
@@ -82,5 +74,3 @@ Real capacitors have **parasitic effects**: ESR (resistance), ESL (inductance), 
 
 ### Is this calculator safe for mains voltage circuits?
 No. This tool is for **low-voltage DC and signal-level AC circuits**. **Never design or troubleshoot mains-connected circuits** without professional training and safety certification.
-</TabPanel>
-</Tabs>

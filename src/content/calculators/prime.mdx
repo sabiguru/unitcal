@@ -1,7 +1,3 @@
-import { Tabs, TabPanel } from '@/components/ui/Tabs';
-
-<Tabs>
-<TabPanel title="Quick Guide">
 ## How to Use the Prime Number Calculator
 The **prime number calculator** performs two essential number theory tasks: **checking if a number is prime** and **finding its prime factorisation**. Simply enter any integer greater than 1, and the tool instantly determines its primality using efficient algorithms. For composite numbers, it breaks them down into a product of prime factors in exponential form. It can also **generate a list of all prime numbers up to a specified limit** using the Sieve of Eratosthenes. This makes it perfect for homework verification, cryptographic exploration, or satisfying mathematical curiosity.
 
@@ -17,9 +13,7 @@ The **prime number calculator** performs two essential number theory tasks: **ch
 3.  **When generating primes**, limits up to 100,000 are processed in seconds.
 4.  **Use the results to cross-verify manual calculations**—especially for exams or homework.
 5.  **Explore patterns**: Generate primes in ranges to study gaps, twins, or distributions.
-</TabPanel>
 
-<TabPanel title="Example">
 ## Step-by-Step Example
 You want to analyse the number **504**.
 
@@ -39,9 +33,7 @@ You want to analyse the number **504**.
 - Result: **2, 3, 5, 7, 11, 13, 17, 19, 23, 29**
 
 This instant breakdown saves time and builds number intuition.
-</TabPanel>
 
-<TabPanel title="FAQ">
 ### How does the calculator test for primality?
 For numbers **below 10⁶**, it uses **trial division up to √n**. For larger numbers, it employs a combination of **deterministic checks** (for small factors) and the **Miller-Rabin probabilistic test** with multiple bases, which is >99.999% accurate for practical purposes.
 
@@ -65,5 +57,3 @@ Absolutely. The calculator shows the **full factor tree** and **primality logic*
 
 ### What if I enter 1 or 0?
 The calculator will return an error or note that **1 and 0 are not prime** by definition. Prime numbers must be **natural numbers greater than 1**.
-</TabPanel>
-</Tabs>

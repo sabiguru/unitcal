@@ -1,7 +1,3 @@
-import { Tabs, TabPanel } from '@/components/ui/Tabs';
-
-<Tabs>
-<TabPanel title="Quick Guide">
 ## Time Calculator — Add, Subtract & Convert Durations
 Our Time Calculator handles all time arithmetic with precision, whether you’re tracking work hours, planning events, or managing projects. It adds and subtracts **hours, minutes, and seconds**, calculates **differences between clock times**, and converts results to **decimal hours** for payroll—all while automatically managing base-60 carry/borrow logic.
 
@@ -18,9 +14,7 @@ Our Time Calculator handles all time arithmetic with precision, whether you’re
 - **Multiplication/Division**: Scale durations (e.g., `1:20 × 5 = 6:40`).  
 
 Perfect for **timesheets**, **project tracking**, **event planning**, and **fitness logging**.
-</TabPanel>
 
-<TabPanel title="Example">
 ## Step-by-Step: Calculating Net Work Hours
 **Scenario**: You clocked in at **8:47 AM** and out at **5:22 PM**, with a **40-minute unpaid lunch**.
 
@@ -32,9 +26,7 @@ Perfect for **timesheets**, **project tracking**, **event planning**, and **fitn
    - `7 + (55/60) ≈ 7.92 hours`
 
 Use the calculator to input start/end times and breaks—it handles all conversions automatically!
-</TabPanel>
 
-<TabPanel title="FAQ">
 ### How do I calculate time difference for a night shift?
 If your shift crosses midnight (e.g., `10:00 PM` to `6:00 AM`), the calculator automatically adds 24 hours to the end time. Just enter the times as-is—the result will be **8 hours**.
 
@@ -58,5 +50,3 @@ Absolutely. It’s designed for accurate payroll calculations, including break s
 
 ### What if my total exceeds 24 hours?
 No problem—the calculator displays totals like `25:30` (25 hours 30 minutes), ideal for weekly hour tracking.
-</TabPanel>
-</Tabs>

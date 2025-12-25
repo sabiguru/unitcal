@@ -1,7 +1,3 @@
-import { Tabs, TabPanel } from '@/components/ui/Tabs';
-
-<Tabs>
-<TabPanel title="Quick Guide">
 ## Introduction
 Our **subnet calculator** instantly breaks down any IPv4 or IPv6 address with CIDR notation into its core components: **network address**, **broadcast address**, **usable host range**, **subnet mask**, and **wildcard mask**. It’s an essential tool for network engineers, students, and IT professionals who need to validate designs, troubleshoot connectivity, or study for certifications.
 
@@ -29,9 +25,7 @@ For **IPv6**:
 
 Ideal for CCNA, Network+, and real-world network configuration.
 
-</TabPanel>
 
-<TabPanel title="Example">
 ## Step-by-Step Example
 **Scenario**: You’re given the IP `10.20.30.100/27` and need to identify the subnet details.
 
@@ -47,9 +41,7 @@ Ideal for CCNA, Network+, and real-world network configuration.
 
 ✅ **Result**: This subnet supports 30 devices, with `.96` and `.127` reserved.
 
-</TabPanel>
 
-<TabPanel title="FAQ">
 ### What is CIDR notation?
 CIDR (Classless Inter-Domain Routing) is a compact way to write an IP address and its associated network prefix, e.g., `192.168.1.0/24`. The number after the slash (`/24`) indicates how many bits are used for the network portion.
 
@@ -81,6 +73,3 @@ Use the **block size method**:
 
 ### Is this calculator accurate for exams?
 Yes. It follows standard networking principles used in CompTIA, Cisco, and other certification exams. Use it to verify your manual calculations.
-
-</TabPanel>
-</Tabs>

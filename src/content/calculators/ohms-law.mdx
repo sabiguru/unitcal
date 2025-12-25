@@ -1,7 +1,3 @@
-import { Tabs, TabPanel } from '@/components/ui/Tabs';
-
-<Tabs>
-<TabPanel title="Quick Guide">
 ## How to Use the Ohm's Law Calculator
 The **Ohm's Law calculator** solves for any two of the four electrical quantities—**Voltage (V), Current (I), Resistance (R), and Power (P)**—and instantly computes the other two. Simply enter any two known values, and the tool applies the correct formulas (`V = I × R`, `P = V × I`, etc.) to give you accurate results. It also supports **series and parallel resistor combinations**, making it perfect for circuit design, troubleshooting, and education.
 
@@ -16,9 +12,7 @@ The **Ohm's Law calculator** solves for any two of the four electrical quantitie
 2.  For power calculations, confirm your load is **resistive** (e.g., not a motor or LED without a resistor).
 3.  Use **RMS values** for AC circuits with resistive loads.
 4.  Always **derate components**—choose resistors with at least double the calculated power rating.
-</TabPanel>
 
-<TabPanel title="Example">
 ## Step-by-Step Example
 You’re powering an LED from a 9V battery. The LED has a forward voltage of 2.2V and you want 15mA of current.
 
@@ -36,9 +30,7 @@ You’re powering an LED from a 9V battery. The LED has a forward voltage of 2.2
 **Step 4**: Choose a **1/4W (0.25W) resistor**—it’s safely above 0.102W and follows derating best practices.
 
 This same process works for any DC circuit analysis.
-</TabPanel>
 
-<TabPanel title="FAQ">
 ### What if I only know power and resistance?
 The calculator uses `I = √(P / R)` and `V = √(P × R)` to find current and voltage automatically.
 
@@ -59,5 +51,3 @@ The math is valid, but **never work on mains voltage without proper training and
 - Current: **Amperes (A)** – enter mA as 0.015 for 15mA
 - Resistance: **Ohms (Ω)**
 - Power: **Watts (W)**
-</TabPanel>
-</Tabs>

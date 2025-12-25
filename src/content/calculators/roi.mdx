@@ -1,7 +1,3 @@
-import { Tabs, TabPanel } from '@/components/ui/Tabs';
-
-<Tabs>
-<TabPanel title="Quick Guide">
 ## How to Use the ROI Calculator
 The **ROI calculator** helps you evaluate the profitability of any investment by computing **simple ROI, annualized ROI, and payback period** in seconds. Simply enter your total investment cost and expected gains (or annual cash flows), and the tool instantly quantifies your return. It also supports **NPV and IRR calculations** for complex, multi-year projects with uneven cash flows. This empowers you to compare marketing campaigns, equipment purchases, or business initiatives on a level playing field—ensuring every pound you spend delivers maximum value.
 
@@ -17,9 +13,7 @@ The **ROI calculator** helps you evaluate the profitability of any investment by
 3.  **Set a hurdle rate**: Compare your ROI to your minimum acceptable return (e.g., 10–15%).
 4.  **For long-term projects**, use annualized ROI or NPV—simple ROI ignores time value.
 5.  **Run multiple scenarios**: Test best/worst-case assumptions to gauge risk.
-</TabPanel>
 
-<TabPanel title="Example">
 ## Step-by-Step Example
 You’re considering a £18,000 software subscription that will save 10 hours/week of staff time (£50/hour).
 
@@ -35,9 +29,7 @@ You’re considering a £18,000 software subscription that will save 10 hours/we
 - **Payback Period**: 18000 / 26000 ≈ **0.69 years (8.3 months)**  
 
 With a hurdle rate of 20%, this is a **highly attractive investment**.
-</TabPanel>
 
-<TabPanel title="FAQ">
 ### How do I calculate ROI for a project with multiple years of cash flow?
 Use the **NPV/IRR mode**. Enter your initial investment as a negative cash flow (Year 0), then input each year’s net cash inflow. The calculator will compute NPV (using your hurdle rate) and IRR for a rigorous analysis.
 
@@ -69,5 +61,3 @@ The channel with the highest ROI deserves more budget.
 
 ### Does this account for taxes?
 Not automatically. For after-tax ROI, input **net cash flows** (after tax). For corporate projects, use pre-tax cash flows and a pre-tax hurdle rate for consistency.
-</TabPanel>
-</Tabs>
