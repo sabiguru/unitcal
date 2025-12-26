@@ -50,7 +50,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/calculators" className="text-slate-300 hover:text-white transition-colors">
-                  All Categories →
+                  All Calculators →
                 </Link>
               </li>
             </ul>
@@ -67,7 +67,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/calculators" className="text-slate-300 hover:text-white transition-colors">
-                  All Categories
+                  All Calculators
                 </Link>
               </li>
               <li>

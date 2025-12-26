@@ -25,7 +25,7 @@ export default function Home() {
   const [history, setHistory] = useState<string[]>([]);
   const [showCategoriesDropdown, setShowCategoriesDropdown] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('All Categories');
+  const [selectedCategory, setSelectedCategory] = useState('All Calculators');
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
 
   const toDecimal = (value: string | Decimal) => new Decimal(value || '0');
@@ -249,7 +249,7 @@ export default function Home() {
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-8 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                <option>All Categories</option>
+                <option>All Calculators</option>
                 {calculatorCategories.map((category) => (
                   <option key={category.slug} value={category.title}>
                     {category.title}
@@ -504,7 +504,7 @@ export default function Home() {
 
               <div className="grid gap-4 flex-grow">
                 {calculatorCategories
-                  .filter(category => selectedCategory === 'All Categories' || category.title === selectedCategory)
+                  .filter(category => selectedCategory === 'All Calculators' || category.title === selectedCategory)
                   .slice(0, 3)
                   .map((category, index) => (
                   <div key={index} className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 flex-grow">

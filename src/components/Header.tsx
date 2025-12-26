@@ -61,7 +61,7 @@ export default function Header() {
                       <Link href="/calculators" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors mb-2 border-b border-gray-100">
                         <span className="text-lg">📋</span>
                         <div>
-                          <div className="font-medium text-gray-900">All Categories</div>
+                          <div className="font-medium text-gray-900">All Calculators</div>
                           <div className="text-xs text-gray-500">Browse all calculator types</div>
                         </div>
                       </Link>
