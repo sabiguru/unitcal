@@ -11,7 +11,8 @@ import { getCategoryForCalculator } from '@/utils/calculatorCategoryMapping';
 import MDXContent from '@/components/MDXContent';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import { organizationSchema, generateCalculatorSchema, generateWebPageSchema } from '@/config/schemas';
-import ResetCalculatorButton from '@/components/ResetCalculatorButton';
+import CalculatorWithReset from '@/components/CalculatorWithReset';
+import { useState } from 'react';
 
 export function generateStaticParams() {
   return calculators.map((c) => {
@@ -114,13 +115,9 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
 
         <div className="grid grid-cols-12 gap-6">
           <main className="col-span-12 lg:col-span-8 space-y-6">
-            <div className="bg-white rounded-none sm:rounded-xl shadow-lg border-0 sm:border border-gray-200 overflow-hidden">
-              <div className="p-3 sm:p-6">
-                <Calc />
-              </div>
-            </div>
-
-            <ResetCalculatorButton />
+            <CalculatorWithReset>
+              <Calc />
+            </CalculatorWithReset>
 
             <EzoicAd placementId={EZOIC_PLACEMENTS.CALCULATOR_CONTENT} className="text-center" />
 
