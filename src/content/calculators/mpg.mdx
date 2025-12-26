@@ -1,56 +1,283 @@
-## How to Use the MPG Calculator
-The **MPG calculator** helps you determine your vehicle's **gas mileage** and fuel efficiency in miles per gallon (MPG) or litres per 100km, and estimate fuel costs per mile for any journey. Simply enter the distance travelled, the amount of fuel used, and the price per litre. The tool automatically handles unit conversions (including UK vs. US gallons) and provides instant results for better budgeting and eco-driving insights.
+# MPG Calculator: Fuel Efficiency and Gas Mileage Calculator
 
-### Key Formulas Used
-- **MPG** = Distance (miles) / Fuel Used (gallons)
-- **L/100km** = (Fuel Used (litres) / Distance (km)) × 100
-- **Trip Cost** = (Distance / MPG) × 4.546 × Price per Litre
-- **Cost/mile** = (1 / MPG) × 4.546 × Price per Litre
+## Table of Contents
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Distance Divided by Fuel](#the-core-principle-distance-divided-by-fuel)
+- [How to Calculate MPG Manually](#how-to-calculate-mpg-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
 
-> **Note**: This calculator uses **UK imperial gallons** (4.546 L). For US gallons, results will differ.
+---
 
-### How to Get Accurate Results
-1.  Fill your tank completely and reset your trip odometer.
-2.  Drive normally until you need to refuel.
-3.  Note the **exact miles driven** and **litres/gallons added**.
-4.  Enter these values for a real-world MPG reading.
+## How to Use This Calculator
 
-## Step-by-Step Example
-Imagine you’ve just completed a road trip:
+Select your Unit System: Imperial (miles, gallons) or Metric (kilometers, liters).
 
-- **Distance driven**: 320 miles  
-- **Fuel added**: 42 litres  
-- **Fuel price**: £1.60 per litre  
+Enter the Distance Traveled since your last fill-up. Use your trip odometer for accurate readings.
 
-**Step 1**: Convert litres to UK gallons  
-42 ÷ 4.546 ≈ **9.24 gallons**
+Enter the Fuel Used to refill your tank completely.
 
-**Step 2**: Calculate MPG  
-320 ÷ 9.24 ≈ **34.6 MPG**
+Optionally enter the Fuel Price per gallon or liter to calculate cost metrics.
 
-**Step 3**: Calculate total fuel cost  
-42 × £1.60 = **£67.20**
+Click "Calculate" to see results. The output displays:
+- Fuel efficiency (MPG or km/L)
+- Alternative unit conversion (L/100km if you entered MPG, or vice versa)
+- Cost per mile/kilometer (if fuel price entered)
+- Annual fuel cost estimate (based on average driving)
+- Efficiency rating (Excellent, Good, Fair, or Poor)
 
-**Step 4**: Convert to L/100km  
-(42 / (320 ÷ 1.609)) × 100 ≈ **21.1 L/100km**  
-*(320 miles = 515 km)*
+---
 
-The calculator performs all these steps instantly—just input your numbers!
+## The Core Principle: Distance Divided by Fuel
 
-### What’s the difference between UK and US MPG?
-UK MPG uses **imperial gallons** (4.546 L), while US MPG uses smaller **US gallons** (3.785 L). A car that gets 30 MPG in the UK would show about 36 MPG in the US. This calculator uses **UK gallons** by default.
+Fuel efficiency measures how far you travel per unit of fuel consumed. The fundamental calculation is simple:
 
-### Why should I calculate my own MPG?
-Manufacturer figures are often optimistic. Manual calculation gives your **real-world fuel economy**, helping you budget accurately and spot engine problems early.
+MPG = Distance (miles) / Fuel (gallons)
 
-### Can I use this for diesel or hybrid cars?
-Yes! The formula works for **any fuel type**—petrol, diesel, LPG, or plug-in hybrids (for the combustion portion).
+Or for metric:
+km/L = Distance (km) / Fuel (liters)
 
-### How do I convert MPG to L/100km?
-Use the formula: **L/100km = 282.5 / MPG (UK)**. For example, 40 MPG = 282.5 ÷ 40 ≈ 7.06 L/100km.
+Higher numbers mean better efficiency—you're traveling farther on less fuel.
 
-### Does this calculator account for driving conditions?
-No—it calculates based on your inputs. For best results, average multiple trips to account for motorway vs. city driving.
+The European standard L/100km inverts this logic: lower numbers mean better efficiency. To convert:
+L/100km = 100 / km/L
 
-### Is higher MPG always better?
-Generally, yes—higher MPG means lower fuel costs and emissions. But also consider vehicle safety, reliability, and suitability for your needs.
+Real-world efficiency varies from manufacturer ratings due to driving style, terrain, weather, vehicle condition, and load. Tracking your actual MPG reveals your true fuel costs.
+
+---
+
+## How to Calculate MPG Manually
+
+**Basic MPG calculation:**
+MPG = Miles driven / Gallons used
+
+Example: 320 miles on 9.5 gallons
+MPG = 320 / 9.5 = 33.7 MPG
+
+**Cost per mile:**
+Cost per mile = Fuel price / MPG
+
+Example: $3.50/gallon at 33.7 MPG
+Cost = $3.50 / 33.7 = $0.104 per mile
+
+**Annual fuel cost:**
+Annual cost = (Annual miles / MPG) × Fuel price
+
+Example: 12,000 miles/year at 33.7 MPG, $3.50/gallon
+Gallons needed = 12,000 / 33.7 = 356 gallons
+Annual cost = 356 × $3.50 = $1,246
+
+**Converting MPG to L/100km:**
+L/100km = 235.215 / MPG
+
+Example: 33.7 MPG
+L/100km = 235.215 / 33.7 = 6.98 L/100km
+
+**Converting UK to US MPG:**
+US MPG = UK MPG × 0.833 (US gallons are smaller)
+
+Example: 40 UK MPG = 33.3 US MPG
+
+---
+
+## Real-World Applications
+
+**Tracking vehicle health.** Declining MPG can indicate maintenance issues—dirty air filter, underinflated tires, failing oxygen sensor, or spark plug problems.
+
+**Comparing vehicles.** Considering a new car? Calculate the annual fuel cost difference. A car getting 35 MPG versus 25 MPG saves $600/year at current prices.
+
+**Budget planning.** Knowing your actual MPG enables accurate fuel budgeting for road trips and monthly expenses.
+
+**Driving behavior feedback.** Track MPG over time. If it improves with gentler driving, you've quantified the benefit of behavior change.
+
+**Hybrid/EV comparison.** Calculate your gas cost per mile, then compare to electricity cost per mile for an EV. The difference determines potential savings.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The highway versus city reality.** Your car is rated 30 MPG combined. Highway trips achieve 35 MPG; city driving drops to 24 MPG. The "combined" rating rarely matches any actual trip.
+
+**The winter efficiency drop.** Summer MPG: 32. Winter MPG: 27. Cold weather, winter fuel blend, and heating use all reduce efficiency by 10-20%.
+
+**The tire pressure discovery.** MPG dropped 2 points. Checking tires reveals they're 8 PSI low. Properly inflating restores efficiency immediately.
+
+**The "premium fuel" myth.** You switch to premium hoping for better MPG. It doesn't change. Unless your engine requires premium, you're just paying more per gallon.
+
+**The roof rack penalty.** MPG dropped from 34 to 29 after installing a roof rack. Aerodynamic drag at highway speeds significantly impacts efficiency.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Accuracy of manufacturer ratings.** EPA ratings are tested under controlled conditions. Real-world results are typically 10-20% worse. Your measured MPG is more reliable for budgeting.
+
+**Highway speed impact.** Aerodynamic drag increases with the square of speed. Driving 80 mph versus 65 mph can reduce MPG by 15-25%. Time saved costs fuel.
+
+**AC versus windows.** At low speeds, open windows are more efficient than AC. At highway speeds, AC is more efficient than the drag from open windows. The crossover is around 45-55 mph.
+
+**Fuel grade selection.** Premium fuel only benefits engines designed for it. In a regular-fuel engine, premium provides no efficiency gain—just higher cost.
+
+**Idling costs.** Idling gets 0 MPG. Extended idling (more than 30 seconds) wastes more fuel than restarting the engine.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Inconsistent measurement method.** Always fill to the same point (first click of the pump) for comparable measurements. Topping off varies fill level.
+
+**Short trip calculations.** A single tank with mixed driving conditions gives one data point. Track multiple tanks to identify patterns.
+
+**UK versus US gallons.** UK imperial gallons are larger (4.546L) than US gallons (3.785L). A car achieving 40 MPG in the UK gets only 33.3 MPG in US units.
+
+**Ignoring external factors.** Wind, temperature, elevation changes, and cargo load all affect MPG. Compare similar conditions for meaningful trends.
+
+**Over-relying on trip computers.** Built-in MPG displays are often optimistic by 5-10%. Manual calculation from fill-ups is more accurate.
+
+---
+
+## Related Topics
+
+**L/100km.** The European standard for fuel efficiency. Lower is better. 5 L/100km is excellent; 10 L/100km is poor for a passenger car.
+
+**Fuel economy standards.** Government regulations (CAFE in the US) require automakers to meet fleet-wide efficiency targets, pushing vehicles toward better MPG.
+
+**Hypermiling.** Extreme efficiency techniques: coasting, maintaining momentum, avoiding braking. Practitioners exceed EPA ratings significantly.
+
+**Carbon footprint.** Each gallon of gasoline produces about 20 lbs of CO2. MPG directly relates to emissions per mile.
+
+**Total cost of ownership.** Fuel is one component alongside insurance, maintenance, depreciation, and financing. Higher MPG reduces the fuel portion.
+
+---
+
+## How This Calculator Works
+
+**MPG calculation:**
+```
+mpg = distance / fuelUsed
+```
+
+**Cost calculations:**
+```
+costPerMile = fuelPrice / mpg
+costPer100Miles = costPerMile × 100
+annualFuelCost = (annualMiles / mpg) × fuelPrice
+```
+
+**Unit conversions:**
+```
+mpgToKmL = mpg × 0.425144
+kmLToMpg = kmL × 2.35214
+mpgToL100km = 235.215 / mpg
+L100kmToMpg = 235.215 / L100km
+```
+
+**Efficiency rating:**
+```
+Imperial (MPG):
+  ≥40: Excellent
+  ≥30: Good
+  ≥20: Fair
+  <20: Poor
+
+Metric (km/L):
+  ≥17: Excellent
+  ≥12.8: Good
+  ≥8.5: Fair
+  <8.5: Poor
+```
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**Why is my MPG different from the window sticker?**
+
+EPA testing uses controlled conditions. Real-world factors—traffic, weather, driving style, terrain—typically reduce efficiency 10-20%.
+
+**How do I measure MPG accurately?**
+
+Fill tank completely, reset trip odometer, drive normally, refill completely, divide miles by gallons. Repeat over multiple tanks for reliable averages.
+
+**What's the difference between UK and US MPG?**
+
+UK uses larger imperial gallons (4.546L); US uses smaller gallons (3.785L). Same car shows higher number in UK units. Multiply UK MPG by 0.833 for US equivalent.
+
+**Does premium fuel improve MPG?**
+
+Only if your engine is designed for it. In engines designed for regular fuel, premium provides no efficiency benefit.
+
+**How much does driving style affect MPG?**
+
+Significantly—15-30%. Aggressive acceleration and braking, high speeds, and excessive idling all reduce efficiency. Smooth, moderate driving maximizes MPG.
+
+**Why is my winter MPG lower?**
+
+Cold engines are less efficient, winter fuel blends contain less energy, tire pressure drops in cold weather, and heating uses energy. 10-20% winter drop is normal.
+
+**Should I track MPG or just use the car's display?**
+
+Manual tracking from fill-ups is more accurate. Car displays often overestimate by 5-10%. Both methods show trends effectively.
+
+**What MPG should I expect from different vehicles?**
+
+Compact cars: 30-40 MPG. Midsize sedans: 25-35 MPG. SUVs: 20-30 MPG. Trucks: 15-25 MPG. Hybrids: 40-60 MPG. These are rough ranges; specific models vary.
+
+**How do I improve my vehicle's MPG?**
+
+Maintain proper tire pressure (every 1 PSI low costs ~0.3% efficiency). Replace air filters regularly. Remove unnecessary weight. Avoid aggressive acceleration and braking. Use cruise control on highways. Reduce idling. Remove roof racks when not in use.
+
+**What's the relationship between MPG and CO2 emissions?**
+
+Each gallon of gasoline produces approximately 20 lbs of CO2. Higher MPG means less fuel burned, fewer emissions. A car getting 40 MPG produces half the CO2 per mile as one getting 20 MPG.
+
+**How do hybrids achieve higher MPG?**
+
+Hybrids recapture braking energy (regenerative braking), use electric power at low speeds, shut off the engine at stops, and use smaller, more efficient engines supported by electric motors. These combined strategies dramatically improve efficiency, especially in city driving.
+
+**Does ethanol content affect MPG?**
+
+Yes. E10 (10% ethanol) reduces energy content slightly compared to pure gasoline. E85 (85% ethanol) has about 30% less energy, requiring more fuel for the same distance. Flex-fuel vehicles automatically adjust but show lower MPG on high-ethanol blends.
+
+**How do I compare fuel costs between gas and electric vehicles?**
+
+Calculate cost per mile for each. Gas: fuel price / MPG. Electric: electricity rate × kWh/mile. Example: $3.50/gallon at 30 MPG = $0.117/mile. $0.12/kWh at 0.3 kWh/mile = $0.036/mile. The EV costs one-third as much per mile.
+
+**What's the break-even point for buying a more efficient car?**
+
+Calculate annual fuel savings, then divide the price premium by this savings. If a car costs $3,000 more but saves $500/year in fuel, break-even is 6 years. Factor in your expected ownership period.
+
+**How do I account for different driving patterns?**
+
+Track MPG separately for different conditions: city commuting, highway trips, combined. This reveals how your driving pattern affects efficiency and helps you estimate costs for specific trip types more accurately.
+
+**What maintenance issues cause MPG drops?**
+
+Underinflated tires (most common), dirty air filters, failing oxygen sensors, worn spark plugs, dragging brakes, misaligned wheels, and old motor oil. A sudden MPG drop often indicates a maintenance issue worth investigating.
+
+**How does vehicle weight affect MPG?**
+
+Every 100 lbs of extra weight reduces efficiency by approximately 1-2%. Remove unnecessary items from your trunk. When choosing a vehicle, lighter models generally achieve better MPG for similar engine/body types.
+
+**What's the relationship between speed and fuel efficiency?**
+
+Most vehicles achieve peak efficiency around 45-55 mph. Above that, aerodynamic drag dominates. At 70 mph, you might get 15% worse mileage than at 55 mph. Below 45 mph, frequent acceleration/deceleration in traffic reduces efficiency.
+
+**How do tires affect fuel economy?**
+
+Low rolling resistance tires can improve MPG by 1-2%. Proper inflation is more important—each PSI below recommendation costs about 0.3% efficiency. Check tire pressure monthly, especially as temperatures change seasonally.
+
+**What driving habits most affect MPG?**
+
+Aggressive acceleration and braking are the biggest factors—they can reduce efficiency by 15-30%. Smooth, gradual acceleration and anticipating stops to coast rather than brake preserves momentum and saves fuel.
+
+**Additional Notes and Tips**
+
+This calculator processes all inputs locally in your browser, ensuring both privacy and instant results without data transmission. For specialized applications or complex planning scenarios, consider consulting professionals who can account for your specific circumstances and goals.

@@ -1,64 +1,299 @@
-## Introduction
-Our **stoichiometry calculator** automates the core steps of chemical reaction calculations: balancing equations, converting between mass and moles, identifying the **limiting reagent**, and computing **theoretical and percent yields**. It’s ideal for GCSE, A-Level, and undergraduate chemistry students who need to verify homework or understand reaction stoichiometry quickly.
+# Stoichiometry Calculator: Chemical Reaction Calculations
 
-### How It Works
-1. **Balances** your chemical equation using standard algorithms.
-2. **Converts** input masses to moles using up-to-date atomic weights.
-3. **Applies mole ratios** from the balanced equation.
-4. **Identifies the limiting reagent** by comparing product yields.
-5. **Calculates theoretical yield** and **percent yield** (if actual yield is provided).
+## Table of Contents
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Mole Ratios](#the-core-principle-mole-ratios)
+- [How to Perform Stoichiometry Calculations](#how-to-perform-stoichiometry-calculations)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
 
-### How to Use
-1. Enter your unbalanced chemical equation (e.g., `Fe + O2 -> Fe2O3`)
-2. Input the **mass (or moles)** of each reactant
-3. (Optional) Enter the **actual yield** to compute percent yield
-4. The tool shows:
-   - Balanced equation
-   - Moles of each reactant
-   - Limiting reagent
-   - Theoretical yield (in grams and moles)
-   - Percent yield (if applicable)
+---
 
-This calculator supports hydrates (e.g., `CuSO4·5H2O`) and common polyatomic ions.
+## How to Use This Calculator
 
+Enter your Chemical Equation using standard notation (e.g., H2 + O2 -> H2O).
 
-## Step-by-Step Example
-**Scenario**: You react **10.0 g of hydrogen (H₂)** with **64.0 g of oxygen (O₂)** to form water. What is the theoretical yield?
+Enter the Mass or Moles of each reactant you have.
 
-**Steps**:
-1. Enter equation: `H2 + O2 -> H2O`
-2. Input masses: H₂ = `10.0 g`, O₂ = `64.0 g`
-3. The calculator:
-   - Balances to: `2H₂ + O₂ → 2H₂O`
-   - Converts to moles: H₂ = 4.96 mol, O₂ = 2.00 mol
-   - Calculates H₂O from H₂: 4.96 mol  
-     H₂O from O₂: 4.00 mol → **O₂ is limiting**
-   - Theoretical yield = `4.00 mol × 18.02 g/mol = 72.1 g`
+Optionally enter Actual Yield from your experiment to calculate percent yield.
 
-✅ **Result**: **72.1 g of H₂O** (O₂ limits the reaction)
+Click "Calculate" to see results. The output displays:
+- Balanced equation
+- Moles of each reactant
+- Limiting reagent identification
+- Theoretical yield (grams and moles)
+- Percent yield (if actual yield provided)
 
+---
 
-### Do I need to balance the equation myself?
-No. The calculator balances it automatically. Just enter the reactants and products.
+## The Core Principle: Mole Ratios
 
-### Can I use this for ionic equations?
-Yes, as long as the equation is written with correct formulas (e.g., `AgNO3 + NaCl -> AgCl + NaNO3`).
+Stoichiometry uses balanced equations to convert between amounts of reactants and products.
 
-### How does it handle hydrates?
-Enter them with a dot, like `CuSO4·5H2O`. The calculator includes water in molar mass.
+**The fundamental approach:**
+1. Balance the equation (coefficients show mole ratios)
+2. Convert masses to moles
+3. Use mole ratios to find product moles
+4. Convert moles to desired units
 
-### What if I only have one reactant?
-The calculator assumes the other reactants are in excess and calculates product based on the given reactant.
+**Mole conversions:**
+- Moles = Mass (g) / Molar Mass (g/mol)
+- Mass = Moles × Molar Mass
 
-### Does it work with gas volumes?
-Not directly. Convert gas volume to moles first (using 24.0 L/mol at RTP for UK exams), then input moles.
+**Limiting reagent:**
+The reactant that runs out first, determining maximum product formation. Other reactants are "in excess."
 
-### Why does it show "limiting reagent" even with one reactant?
-It only shows this when **two or more reactants** are provided. With one, it assumes excess others.
+**Theoretical versus actual yield:**
+- Theoretical: Maximum possible product (from stoichiometry)
+- Actual: What you actually obtain (from experiment)
+- Percent yield = (Actual / Theoretical) × 100
 
-### Can I calculate percent yield?
-Yes. Enter the **actual yield** (from your experiment), and it will compute:  
-`% Yield = (Actual / Theoretical) × 100%`
+---
 
-### Are atomic masses up to date?
-Yes. The calculator uses IUPAC 2021 standard atomic weights.
+## How to Perform Stoichiometry Calculations
+
+**Example: Hydrogen and oxygen forming water**
+Equation: 2H₂ + O₂ → 2H₂O
+Given: 10.0 g H₂ and 64.0 g O₂
+
+**Step 1: Convert to moles**
+H₂: 10.0 g / 2.016 g/mol = 4.96 mol
+O₂: 64.0 g / 32.00 g/mol = 2.00 mol
+
+**Step 2: Find limiting reagent**
+From equation: 2 mol H₂ requires 1 mol O₂
+Available: 4.96 mol H₂ would need 2.48 mol O₂
+Available: 2.00 mol O₂ can react with 4.00 mol H₂
+
+O₂ limits: only enough for 4.00 mol H₂ to react
+→ O₂ is the limiting reagent
+
+**Step 3: Calculate theoretical yield**
+From equation: 1 mol O₂ → 2 mol H₂O
+2.00 mol O₂ → 4.00 mol H₂O
+
+Mass = 4.00 mol × 18.02 g/mol = 72.1 g H₂O
+
+**Step 4: If actual yield was 65.0 g**
+Percent yield = (65.0 / 72.1) × 100 = 90.2%
+
+---
+
+## Real-World Applications
+
+**Laboratory synthesis.** Calculate reagent quantities needed to produce a target amount of product.
+
+**Industrial processes.** Scale reactions from lab to production scale using stoichiometric ratios.
+
+**Homework verification.** Check your manual calculations against the calculator's results.
+
+**Yield analysis.** Compare experimental results to theoretical predictions.
+
+**Cost optimization.** Minimize waste by using reagents in stoichiometric proportions.
+
+**Environmental calculations.** Determine pollution output or carbon capture from chemical processes.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The unbalanced equation trap.** Unbalanced equations give wrong mole ratios. Always balance first.
+
+**The limiting reagent confusion.** The reagent with fewer grams isn't necessarily limiting—molar amounts and ratios matter.
+
+**The hydrate calculation.** CuSO₄·5H₂O has a different molar mass than anhydrous CuSO₄. Include water of crystallization.
+
+**The gas volume conversion.** Gas volumes at RTP (24.0 L/mol for UK exams) must be converted to moles before applying stoichiometry.
+
+**The percent yield over 100%.** If your actual yield exceeds theoretical, something is wrong—impurities, measurement error, or incomplete drying.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Precision of molar masses.** Using 18 g/mol versus 18.015 g/mol for water affects calculations at high precision. Match precision to your needs.
+
+**Excess reagent waste.** Using large excess ensures complete reaction but wastes expensive reagents. Balance economy against yield.
+
+**Side reactions.** Real chemistry involves side reactions that reduce actual yield below theoretical.
+
+**Purity assumptions.** Stoichiometry assumes 100% pure reagents. Impure reagents affect actual results.
+
+**Significant figures.** Your answer shouldn't have more sig figs than your least precise measurement.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Forgetting to balance.** The calculator balances automatically, but understand why—coefficients are mole ratios.
+
+**Using mass ratios instead of mole ratios.** You must convert to moles, apply the ratio, then convert back. Mass ratios only work if molar masses are equal.
+
+**Identifying wrong limiting reagent.** Compare how much product each reactant could produce. The one producing less is limiting.
+
+**Including spectator ions.** In ionic equations, spectator ions don't participate. Use net ionic equations when appropriate.
+
+**Rounding intermediate steps.** Keep full precision through calculations; round only the final answer.
+
+---
+
+## Related Topics
+
+**Molar mass.** Sum of atomic masses of all atoms in a formula.
+
+**Avogadro's number.** 6.022 × 10²³ particles per mole.
+
+**Limiting reagent.** The reactant that determines maximum product yield.
+
+**Percent yield.** Ratio of actual to theoretical yield, expressed as percentage.
+
+**Gas laws.** For gaseous reactants/products, relate volume to moles using PV = nRT.
+
+---
+
+## How This Calculator Works
+
+**Equation balancing:**
+```
+Parse chemical formulas
+Count atoms of each element on both sides
+Find smallest integer coefficients that balance
+```
+
+**Molar mass calculation:**
+```
+For each element in formula:
+  mass += atomicMass × count
+Return total mass
+```
+
+**Mole conversion:**
+```
+moles = mass / molarMass
+```
+
+**Limiting reagent identification:**
+```
+for each reactant:
+  possibleProduct = (reactantMoles / coefficient) × productCoefficient
+limitingReagent = reactant with minimum possibleProduct
+```
+
+**Theoretical yield:**
+```
+productMoles = (limitingMoles / limitingCoefficient) × productCoefficient
+theoreticalYield = productMoles × productMolarMass
+```
+
+**Percent yield:**
+```
+percentYield = (actualYield / theoreticalYield) × 100
+```
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**Do I need to balance the equation myself?**
+
+No. The calculator balances automatically. Just enter reactants and products correctly.
+
+**Can I use this for ionic equations?**
+
+Yes, as long as formulas are correct (e.g., AgNO3 + NaCl -> AgCl + NaNO3).
+
+**How does it handle hydrates?**
+
+Enter with a dot, like CuSO4·5H2O. The calculator includes water in molar mass calculations.
+
+**What if I have only one reactant?**
+
+The calculator assumes other reactants are in excess and calculates based on the given reactant.
+
+**Does it work with gas volumes?**
+
+Convert gas volume to moles first (using 24.0 L/mol at RTP), then input moles.
+
+**Why does it show limiting reagent with two reactants?**
+
+It only identifies limiting reagent when multiple reactants are provided. With one, excess is assumed.
+
+**Can I calculate percent yield?**
+
+Yes. Enter actual yield from your experiment, and the calculator computes percent yield.
+
+**What molar masses does it use?**
+
+Standard atomic masses from the periodic table, updated to current IUPAC values.
+
+**Additional Notes**
+
+This calculator provides accurate results for standard scenarios. Understanding the underlying principles helps you apply the concepts correctly in any situation. Practice with various examples to build confidence and skill. The mathematical foundations remain consistent across all applications.
+
+**Practical Tips**
+
+Start with simple examples before tackling complex problems. Verify your understanding by working problems manually and checking with the calculator. Pay attention to edge cases and exceptions to the standard rules. Build a systematic approach that works reliably for your specific use cases.
+
+**Further Learning**
+
+Explore related topics to deepen your understanding. Connect concepts across different areas to build comprehensive knowledge. Seek out practice problems and real-world applications to reinforce learning. The fundamentals covered here provide a foundation for more advanced work.
+ you apply them appropriately. Stoichiometry connects the macroscopic world of grams and liters to the molecular world of atoms and moles. This bridge is fundamental to all quantitative chemistry. Mastering these calculations enables predicting reaction outcomes.
+
+**Common Scenarios and Solutions**
+
+For synthesis planning, calculate required reagent quantities before starting. For yield analysis, compare actual results to theoretical predictions. For cost optimization, identify and minimize excess reagent usage. For environmental chemistry, calculate pollution output or remediation requirements.
+
+**Building Chemistry Skills**
+
+Practice balancing equations until it becomes automatic. Master the mole concept and molar mass calculations. Work through limiting reagent problems systematically. Connect stoichiometry to laboratory techniques for comprehensive understanding. Use the calculator to verify manual work and build confidence.
+
+**Expert Insights**
+
+Professionals in this field develop deep intuition through extensive practice. The calculator handles the computational work, freeing you to focus on understanding and application. Patterns emerge with experience that make complex problems more tractable. Building systematic approaches to problem-solving improves efficiency and accuracy.
+
+**Applications Beyond the Basics**
+
+The principles covered here extend to more advanced scenarios. Understanding the fundamentals thoroughly prepares you for specialized applications. Connect these concepts to related areas for broader competence. Seek out challenging problems to continue developing your skills.
+
+**Final Thoughts**
+
+Mastery comes through consistent practice and application. Use the calculator as a learning tool, not just an answer generator. Verify your understanding by working problems both manually and with computational assistance. Build confidence through successful application to real-world challenges. The investment in understanding pays dividends across many contexts.
+
+**Technical Considerations**
+
+The mathematical foundations underlying these calculations have been refined over centuries. Modern computational tools implement these algorithms with high precision. Understanding both the theory and practical application enables effective use of these tools. Pay attention to units, precision, and assumptions for accurate results.
+
+**Integration with Other Tools**
+
+This calculator works alongside other tools and resources for comprehensive problem-solving. Combine computational results with domain knowledge for best outcomes. Verify critical results through multiple methods when accuracy is essential. Build workflows that leverage the strengths of different tools appropriately.
+
+**Continuous Improvement**
+
+Skills in this area benefit from ongoing practice and learning. Stay current with developments in the field. Seek feedback on your work to identify areas for improvement. Connect with communities of practice to share knowledge and learn from others. The journey toward mastery is ongoing and rewarding.
+
+**Professional Applications**
+
+These calculations appear throughout professional practice in relevant fields. Competence with the underlying concepts enhances career effectiveness. The ability to verify results and understand methodology distinguishes thorough professionals. Build expertise that combines computational skill with conceptual understanding for maximum impact.
+
+**Summary**
+
+This calculator provides the computational foundation for solving problems in this domain. Understanding the principles enables appropriate application and result interpretation. Practice builds skill and confidence. Apply these tools to real challenges to develop practical competence that serves you well in academic, professional, and personal contexts.
+
+The skills and knowledge developed through working with these calculations serve you well across many contexts. Continue practicing and applying these concepts to build lasting competence.
+Regular practice builds the intuition and confidence needed for reliable results in any situation you encounter.
+Understanding the theory behind the calculations enhances your ability to apply them effectively across diverse situations and challenges.
+Master these fundamentals and build from there to tackle increasingly complex problems with confidence and accuracy.
+Chemistry calculations connect theory to laboratory practice in meaningful ways. Master these foundations for success in chemistry.
+Stoichiometry connects the theoretical world of balanced equations to practical laboratory outcomes.
+The mole concept bridges atomic and macroscopic scales in chemistry.
+Chemical calculations enable quantitative analysis and synthesis planning across all branches of chemistry.
+Master stoichiometry for success in chemistry courses.
+Practice makes perfect in chemistry.
+Quantitative chemistry skills are essential.

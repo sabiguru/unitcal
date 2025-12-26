@@ -1,82 +1,285 @@
-Our **Morse code converter** translates text to International Morse code (and vice versa) using the official ITU standard. Whether you’re learning the code, sending a secret message, or identifying an aviation beacon, this tool provides accurate, properly spaced translations with optional audio playback. You can customize the speed in Words Per Minute (WPM) and choose between standard or Farnsworth timing to match your learning stage.
+# Morse Code Converter: Text to Morse and Back
 
-### How It Works
-The converter uses a precise lookup table for all letters (A–Z), numbers (0–9), and common punctuation. It applies strict spacing rules:
-- **No space** between dots/dashes in a character
-- **One space** between characters
-- **Forward slash (/)** between words
+## Table of Contents
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Encoding Information](#the-core-principle-encoding-information)
+- [How Morse Code Works](#how-morse-code-works)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
 
-For audio, it generates tones following exact ITU timing:
-- **Dit**: 1 unit
-- **Dah**: 3 units
-- **Character gap**: 3 units
-- **Word gap**: 7 units
+---
 
-### Key Features
-- **Text ↔ Morse**: Bidirectional conversion
-- **Audio Playback**: Adjustable speed (5–40 WPM)
-- **Farnsworth Mode**: Extended spacing for learners
-- **Prosign Support**: SOS, CQ, 73, and other abbreviations
-- **Copy/Paste**: Easy input and output handling
+## How to Use This Calculator
 
-### How to Use
-1. **For encoding**: Type your message in the top box. The Morse appears below with correct spacing.
-2. **For decoding**: Paste dots/dashes into the bottom box. Use `/` for word breaks.
-3. **For audio**: Click "Play" to hear the message. Adjust WPM to match your skill level.
-4. **For learning**: Use Farnsworth mode to build character recognition at high speeds.
+Select your Mode: Encode (text to Morse) or Decode (Morse to text).
 
-This tool is perfect for students, amateur radio operators, and anyone exploring this timeless communication system.
+**For encoding:**
+Enter your message in plain text. The calculator accepts letters A-Z (case insensitive), numbers 0-9, and common punctuation.
 
-### Step-by-Step Example
-**Scenario**: Sending "HELLO WORLD" in Morse.
+**For decoding:**
+Enter Morse code using dots (.) and dashes (-). Separate letters with spaces. Separate words with forward slash (/) or multiple spaces.
 
-**Inputs**:
-- Text: `HELLO WORLD`
+Click "Convert" to see results. The output displays:
+- The converted message
+- Character-by-character breakdown (for encoding)
+- Audio playback option (click "Play" to hear the Morse code)
+- Speed adjustment (Words Per Minute)
 
-**Conversion Process**:
-1. **H** = `....`  
-2. **E** = `.`  
-3. **L** = `.-..` (×2)  
-4. **O** = `---`  
-5. **Word break**: `/`  
-6. **W** = `.--`  
-7. **O** = `---`  
-8. **R** = `.-.`  
-9. **L** = `.-..`  
-10. **D** = `-..`
+---
 
-**Result**:  
-`.... . .-.. .-.. --- / .-- --- .-. .-.. -..`
+## The Core Principle: Encoding Information
 
-**Audio**: At 15 WPM, this plays as a smooth, rhythmic sequence—perfect for practice.
+Morse code represents each character as a unique sequence of short signals (dots/dits) and long signals (dashes/dahs). This binary-like encoding allows transmission over simple on/off channels—telegraph wires, radio, flashlights, or even tapping.
 
-**Pro Tip**: The space in "HELLO WORLD" becomes a `/`, creating the 7-unit word gap essential for readability.
+The system's elegance lies in its variable-length encoding. Common letters (E, T, A) have short codes; rare letters (Q, Z, J) have longer codes. This minimizes average transmission time—the same principle used in modern data compression.
 
-### What is International Morse Code?
-The **International Telecommunication Union (ITU)** standard used worldwide since 1865. It’s the only version you should learn—it includes standardized letters, numbers, and prosigns.
+International Morse Code (the standard since 1865) encodes:
+- 26 letters
+- 10 digits
+- Punctuation and procedural signals
 
-### How do I space Morse code correctly?
-- **Within a letter**: No spaces (e.g., `.-..` for L)
-- **Between letters**: One space (e.g., `.... .` for HE)
-- **Between words**: Slash `/` or seven-unit gap (e.g., `.... . / .-- ---` for HE WO)
+The timing structure is precise:
+- Dot: 1 time unit
+- Dash: 3 time units
+- Gap between elements of same letter: 1 unit
+- Gap between letters: 3 units
+- Gap between words: 7 units
 
-### Can I hear the Morse code?
-Yes! Click "Play" to hear your message. Adjust speed from 5 WPM (beginner) to 40 WPM (expert). Use **Farnsworth mode** to keep character speed high while extending spacing—ideal for learning.
+---
 
-### What’s the difference between American and International Morse?
-**American Morse** is obsolete, with different codes for numbers and some letters. **International Morse** is the modern global standard—this converter uses ITU exclusively.
+## How Morse Code Works
 
-### How fast should I practice?
-- **Beginner**: 5–10 WPM standard spacing
-- **Intermediate**: 10–15 WPM Farnsworth
-- **Advanced**: 20+ WPM standard spacing  
-Never sacrifice accuracy for speed—build clean habits first.
+**Letter encoding examples:**
+- E = . (shortest: 1 dot)
+- T = - (1 dash)
+- A = .- (dot dash)
+- N = -. (dash dot)
+- S = ... (3 dots)
+- O = --- (3 dashes)
+- SOS = ... --- ... (the famous distress signal)
 
-### Does this work for emergency signaling?
-Yes! The universal **SOS** (`··· --- ···`) requires no special equipment—tap it on pipes, blink it with a flashlight, or whistle it. This converter helps you practice the exact 3-dit / 3-dah / 3-dit rhythm.
+**Number encoding:**
+- 1 = .----
+- 2 = ..---
+- 5 = .....
+- 0 = -----
 
-### Can I decode real-world Morse?
-Absolutely. Aviation beacons (NDBs) transmit 2–3 letter IDs in Morse. Amateur radio operators use prosigns like `CQ` (`—·—· ——·—`) to call stations. This tool includes all standard abbreviations.
+Numbers follow a pattern: count of dots increases from 1 (one dot, four dashes) to 5 (five dots), then decreases.
 
-### Is Morse code hard to learn?
-Not if you use the right method. The **Farnsworth technique**—high character speed with extended spacing—builds recognition faster than slow, counted code. With 10 minutes of daily practice, you’ll decode basic messages in weeks.
+**Common prosigns:**
+- SOS = ...---... (distress, sent without gaps)
+- AR = .-.-. (end of message)
+- BT = -...- (break/separator)
+- SK = ...-.- (end of contact)
+
+**Timing at 20 WPM:**
+- Dot: 60 ms
+- Dash: 180 ms
+- Intra-character gap: 60 ms
+- Inter-character gap: 180 ms
+- Word gap: 420 ms
+
+---
+
+## Real-World Applications
+
+**Amateur radio.** Despite digital modes, Morse (CW) remains popular for ham radio. It penetrates noise better than voice and requires minimal equipment.
+
+**Aviation navigation.** VOR and NDB navigation beacons transmit their identifiers in Morse code. Pilots verify they're tuned to the correct station by listening.
+
+**Emergency signaling.** SOS can be signaled with any on-off method: flashlight, car horn, banging on pipes. Universal recognition saves lives.
+
+**Accessibility tools.** People with limited mobility can communicate using Morse with adaptive switches—two inputs (dot/dash) enable full communication.
+
+**Secret communication.** Blinking, tapping, or subtle hand movements can transmit messages when speech isn't possible. Historical use in prisoner-of-war situations.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The spacing ambiguity.** "EISH" and "HI" look similar if you don't mark character boundaries. E-I-S-H (. .. ... ....) versus H-I (.... ..). Proper spacing is critical.
+
+**The SOS misconception.** SOS isn't an acronym (not "Save Our Souls"). It was chosen because ...---... is distinctive and easy to remember/recognize.
+
+**The speed mismatch.** You can decode slow Morse but fast code sounds like random beeping. Farnsworth timing helps: characters at full speed, extra space between characters.
+
+**The prosign confusion.** AR (.-.-.) isn't A followed by R. It's a single prosign, transmitted without the normal inter-character gap.
+
+**The number tedium.** Numbers are 5 elements each, making numeric messages slow. This led to abbreviations: 73 means "best regards" rather than spelling out the phrase.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Learning method.** Memorizing dot-dash patterns is inefficient. Better to learn each letter's sound pattern directly (dit-dah for A, not "dot dash").
+
+**Copying versus sending.** Receiving Morse is usually harder than sending. Most learners can send before they can reliably copy.
+
+**Speed versus accuracy.** Pushing speed introduces errors. For beginners, slow and accurate beats fast and wrong.
+
+**Standard versus variations.** American Morse Code differs from International Morse Code. Most applications use International; know which you need.
+
+**Audio frequency choice.** Too low (below 400 Hz) and too high (above 1000 Hz) are harder to hear. 600-800 Hz is typical for comfortable listening.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Confusing similar codes.** D (-.. ) versus B (-...) versus U (..-). These are easily confused when receiving. Practice distinguishing them.
+
+**Wrong inter-character spacing.** Running letters together makes decoding impossible. "HI" without proper gaps sounds like "EEIE" or something unrecognizable.
+
+**Forgetting word spacing.** "/"-as-word-separator isn't transmitted in audio; the 7-unit gap is. When transcribing, "/" or spaces separate words.
+
+**Sending too fast for receiver.** Match your sending speed to the listener's ability. Asking "QRS?" requests slower speed.
+
+**Relying on visual patterns.** Morse is primarily an audio code. Learning by ear (the rhythm of dit-dahs) is more effective than memorizing dot-dash patterns.
+
+---
+
+## Related Topics
+
+**Q-codes.** Three-letter abbreviations starting with Q used in radio: QSL (confirmation of receipt), QRM (interference), QTH (location).
+
+**Phonetic alphabet.** NATO/ICAO alphabet (Alpha, Bravo, Charlie...) for spelling words clearly over radio. Different purpose but related communication need.
+
+**Prosigns.** Procedural signals with special meaning: AR (end of message), SK (end of contact), BK (break/invitation to transmit).
+
+**CW (Continuous Wave).** Radio term for Morse transmission. The carrier wave is keyed on and off to create the code.
+
+**Farnsworth timing.** Characters sent at full speed but with extended inter-character gaps. Helps learners recognize character sounds without slow-speed distortion.
+
+---
+
+## How This Calculator Works
+
+**Character lookup table:**
+```
+morseCode = {
+  'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.',
+  'F': '..-.', 'G': '--.', 'H': '....', 'I': '..', 'J': '.---',
+  'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---',
+  'P': '.--.', 'Q': '--.-', 'R': '.-.', 'S': '...', 'T': '-',
+  'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-', 'Y': '-.--',
+  'Z': '--..', '0': '-----', '1': '.----', '2': '..---', ...
+  ' ': '/'
+}
+```
+
+**Encoding:**
+```
+result = input.toUpperCase().split('')
+  .map(char => morseCode[char] || char)
+  .join(' ')
+```
+
+**Decoding:**
+```
+reverseMorse = inverted morseCode table
+result = input.split(' ')
+  .map(code => reverseMorse[code] || code)
+  .join('')
+```
+
+**Audio generation:**
+Using Web Audio API:
+```
+dotDuration = 100ms (at ~12 WPM)
+dashDuration = 3 × dotDuration
+frequency = 600 Hz
+```
+
+All processing happens locally in your browser.
+
+---
+
+## FAQs
+
+**What's the difference between dots/dashes and dits/dahs?**
+
+Written: dots (.) and dashes (-). Spoken/heard: dits and dahs. "Dit" is short; "dah" is long. "S" sounds like "dit-dit-dit."
+
+**How long does it take to learn Morse code?**
+
+Basic recognition: a few weeks of practice. Reliable copying at 15+ WPM: several months. Fluency comes with continued use.
+
+**Why is E just one dot?**
+
+E is the most common letter in English. Giving common letters short codes minimizes average transmission time—an early form of data compression.
+
+**Can I use Morse code in emergencies?**
+
+Yes. SOS (... --- ...) is universally recognized. Signal with flashlight, horn, tapping, or any on-off method.
+
+**What's the fastest Morse code speed?**
+
+Skilled operators copy 40+ WPM. Record speeds exceed 70 WPM. Most casual use is 10-20 WPM.
+
+**Does punctuation have Morse codes?**
+
+Yes. Period: .-.-.- Question mark: ..--.. Comma: --..-- Not all punctuation is standardized.
+
+**Why do aviation beacons use Morse?**
+
+Tradition, reliability, and simplicity. A pilot can verify beacon identity by listening, even with minimal equipment.
+
+**Is Morse code still used today?**
+
+Yes, primarily by amateur radio operators and for aviation navigation aids. It's no longer required for licensing but remains popular.
+
+**What's the advantage of Morse code over voice?**
+
+Morse penetrates noise better than voice, requires minimal equipment (a simple switch), uses narrow bandwidth, and can be detected at lower signal levels. A weak signal that's unintelligible in voice mode may be perfectly readable in Morse.
+
+**How is Morse code related to digital communication?**
+
+Morse is essentially binary encoding—signal on or off, varying in duration. It's a precursor to digital communication concepts. Modern digital modes use similar principles with more complex encoding schemes.
+
+**Can I learn Morse code from this tool?**
+
+The converter helps with practice and verification. For learning, combine with audio practice at gradually increasing speeds. Many apps and websites offer structured Morse learning programs.
+
+**What's the relationship between WPM and timing?**
+
+At 20 WPM, a dot is about 60 milliseconds. At 10 WPM, a dot is 120 milliseconds. The formula: dot duration (ms) = 1200 / WPM. All other timings scale proportionally.
+
+**What are Q-codes and how do they relate to Morse?**
+
+Q-codes are three-letter abbreviations (all starting with Q) used in radio communication to efficiently convey common messages. They were developed for Morse efficiency but are now used in voice communication too. Examples: QTH (location), QSL (confirmation), QRM (interference).
+
+**Can Morse code be sent with light?**
+
+Absolutely. Flashlights, car headlights, mirrors reflecting sunlight, or any controllable light source. Visual Morse was used historically for ship-to-ship and ship-to-shore communication before radio.
+
+**Is there a universal distress signal besides SOS?**
+
+SOS (... --- ...) is the primary distress signal. MAYDAY is the voice equivalent. Both have legal standing and should only be used in genuine emergencies. Misuse can result in penalties.
+
+**What's the difference between CW and other radio modes?**
+
+CW (Continuous Wave) is the technical term for Morse transmission. It uses narrow bandwidth (typically 150 Hz versus 2.4 kHz for SSB voice), penetrates noise better, and works at lower power levels. Many amateur operators prefer CW for weak-signal communication.
+
+**How has Morse code influenced modern technology?**
+
+The concept of encoding information as discrete symbols directly influenced digital communication. The variable-length encoding (common symbols shorter) presaged data compression algorithms. Touch-screen text entry for accessibility often uses Morse-inspired two-button input.
+
+**What equipment do I need to send Morse code?**
+
+Minimally: any on-off signaling device (flashlight, switch, buzzer). For radio: a CW-capable transceiver and key (straight key for beginners, paddle for higher speeds). Many learn with software-based practice before investing in equipment.
+
+**Is learning Morse code useful today?**
+
+For amateur radio: very useful. For emergencies: potentially lifesaving. For mental exercise: excellent memory and pattern recognition training. For practical daily use: limited. Learn it if you're interested in radio, history, or mental challenges.
+
+**How do professionals achieve high-speed Morse?**
+
+Practice, muscle memory, and different equipment. Experienced operators use paddles (iambic keyers) that automatically generate properly timed dots and dashes. At high speeds, operators recognize word patterns rather than individual letters.
+
+**What role did Morse code play in history?**
+
+Morse revolutionized communication, enabling instant long-distance messaging for the first time. It was crucial in wars, maritime safety (Titanic's distress calls), news reporting, and connecting continents via undersea cables. Its impact on society parallels the internet's today.

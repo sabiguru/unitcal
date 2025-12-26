@@ -1,72 +1,250 @@
-Our **equation solver** helps you find solutions to linear, quadratic, and systems of equations with clear, detailed steps. Whether you’re checking homework, studying for an exam, or solving real-world problems, this tool breaks down the solution process using methods like **factoring**, the **quadratic formula**, and **substitution**—so you understand not just the answer, but how to get there.
+# Equation Solver: Linear and Quadratic Equation Calculator
 
-### How It Works
-The solver uses standard algebraic techniques:
-- **Linear equations**: Isolates the variable using inverse operations.
-- **Quadratic equations**: Applies factoring, completing the square, or the quadratic formula based on the equation’s structure.
-- **Systems of equations**: Uses substitution or elimination to find the intersection point.
+## Table of Contents
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Algebraic Manipulation](#the-core-principle-algebraic-manipulation)
+- [How to Solve Equations Manually](#how-to-solve-equations-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
 
-For quadratics, it calculates the **discriminant** (`b² – 4ac`) to determine the number and type of solutions (real or complex).
+---
 
-### Key Features
-- **Step-by-step solutions**: See every algebraic step, not just the final answer.
-- **Multiple methods**: Choose your preferred solving technique or let the solver pick the most efficient one.
-- **Complex number support**: Handles equations with imaginary solutions.
-- **Fractional precision**: Keeps answers exact using fractions, not decimals.
-- **Verification**: Automatically checks solutions in the original equation.
+## How to Use This Calculator
 
-### How to Use
-1. Select your **equation type** (linear, quadratic, or system).
-2. Enter the **coefficients** (e.g., for `ax² + bx + c = 0`, input `a`, `b`, `c`).
-3. Click **Solve** to see the solution(s) and the step-by-step process.
-4. Use the result to verify your work or learn a new solving method.
+Select your equation type: Linear (equations like 2x + 3 = 7) or Quadratic (equations like x² + 2x - 3 = 0).
 
-This tool is ideal for students, teachers, and anyone needing to solve equations accurately and efficiently.
+For linear equations, enter the equation in standard form with "x" as the variable. Example: "2x + 5 = 11" or "3x - 4 = 2x + 7".
 
-### Step-by-Step Example
-**Scenario**: Solve the quadratic equation `2x² + 4x – 6 = 0`.
+For quadratic equations, enter in the form "ax² + bx + c = 0" or enter coefficients a, b, and c directly. Example: "x² + 5x + 6 = 0" or enter a=1, b=5, c=6.
 
-**Inputs**:
-- a = 2
-- b = 4
-- c = –6
+Click "Solve" to see results. The output displays:
+- The solution(s) for x
+- Step-by-step breakdown of the solution process
+- For quadratics: discriminant value and nature of roots (real and distinct, real and equal, or complex)
+- Verification by substituting solution back into original equation
 
-**Solution Process**:
-1. **Calculate discriminant**: `D = b² – 4ac = 16 – 4(2)(–6) = 16 + 48 = 64`
-2. **Apply quadratic formula**:  
-   `x = [–4 ± √64] / (2×2) = [–4 ± 8] / 4`
-3. **Find roots**:  
-   `x₁ = (–4 + 8)/4 = 1`  
-   `x₂ = (–4 – 8)/4 = –3`
+---
 
-**Result**: The solutions are **x = 1** and **x = –3**.  
-Both satisfy the original equation:  
-- `2(1)² + 4(1) – 6 = 0` ✓  
-- `2(–3)² + 4(–3) – 6 = 0` ✓
+## The Core Principle: Algebraic Manipulation
 
-### What types of equations can this solver handle?
-It solves **linear equations** (`ax + b = 0`), **quadratic equations** (`ax² + bx + c = 0`), and **systems of two linear equations**. It supports real and complex solutions.
+Solving equations means finding the value(s) of the variable that make the equation true. We do this by applying inverse operations to isolate the variable.
 
-### How does it choose a solving method?
-For quadratics, it first attempts **factoring**. If that fails, it uses the **quadratic formula**. For systems, it selects **substitution** or **elimination** based on coefficient simplicity.
+**Linear equations (ax + b = c):**
+One variable, one power (x¹). Always has exactly one solution. Solve by isolating x using inverse operations.
 
-### What is the discriminant and why does it matter?
-The **discriminant** (`b² – 4ac`) tells you how many real solutions a quadratic has:
-- **Positive**: Two real solutions
-- **Zero**: One real solution
-- **Negative**: Two complex solutions
+**Quadratic equations (ax² + bx + c = 0):**
+One variable, highest power is 2. Can have two solutions, one solution, or no real solutions (complex solutions). Solve by factoring, completing the square, or the quadratic formula.
 
-### Can it solve equations with fractions?
-Yes. Enter coefficients as fractions (e.g., `1/2`), and the solver will maintain exact fractional form throughout the solution.
+The discriminant (b² - 4ac) determines the nature of quadratic solutions:
+- Positive: two distinct real roots
+- Zero: one repeated real root
+- Negative: two complex conjugate roots
 
-### Why are there two solutions for a quadratic?
-A quadratic equation represents a parabola, which can cross the x-axis at **0, 1, or 2 points**. Each crossing point is a real solution.
+Understanding these principles enables solving a vast range of practical problems that reduce to these equation forms.
 
-### Does it show work for systems of equations?
-Yes. It displays every step of substitution or elimination, including how variables are isolated and back-substituted.
+---
 
-### Can I use this for homework?
-Absolutely. It’s designed to help you **learn**, not just get answers. The step-by-step breakdown teaches you the method so you can solve similar problems on your own.
+## How to Solve Equations Manually
 
-### What if my equation has no solution?
-The solver will indicate **“no real solution”** (for quadratics with negative discriminant) or **“no solution”** (for inconsistent systems like parallel lines).
+**Linear equation example: 3x + 7 = 22**
+
+Step 1: Subtract 7 from both sides
+3x = 22 - 7 = 15
+
+Step 2: Divide both sides by 3
+x = 15 / 3 = 5
+
+Verify: 3(5) + 7 = 15 + 7 = 22 ✓
+
+**Linear equation with variables on both sides: 5x - 3 = 2x + 9**
+
+Step 1: Subtract 2x from both sides
+3x - 3 = 9
+
+Step 2: Add 3 to both sides
+3x = 12
+
+Step 3: Divide by 3
+x = 4
+
+**Quadratic equation by factoring: x² + 5x + 6 = 0**
+
+Step 1: Find factors of 6 that add to 5
+2 × 3 = 6, and 2 + 3 = 5
+
+Step 2: Factor
+(x + 2)(x + 3) = 0
+
+Step 3: Set each factor to zero
+x + 2 = 0 → x = -2
+x + 3 = 0 → x = -3
+
+**Quadratic equation using the quadratic formula: 2x² + 4x - 6 = 0**
+
+Formula: x = (-b ± √(b² - 4ac)) / (2a)
+
+Where a = 2, b = 4, c = -6
+
+Step 1: Calculate discriminant
+D = 4² - 4(2)(-6) = 16 + 48 = 64
+
+Step 2: Apply formula
+x = (-4 ± √64) / (2 × 2) = (-4 ± 8) / 4
+
+Step 3: Find both solutions
+x = (-4 + 8) / 4 = 1
+x = (-4 - 8) / 4 = -3
+
+---
+
+## Real-World Applications
+
+**Financial break-even analysis.** Revenue = 50x (selling x units at $50). Costs = 1000 + 30x (fixed costs plus variable costs). Break-even: 50x = 1000 + 30x. Solve: x = 50 units.
+
+**Physics motion problems.** An object thrown upward has height h = -16t² + 64t + 5. When does it hit the ground? Solve -16t² + 64t + 5 = 0.
+
+**Area and dimension problems.** A rectangle has area 48 and length 2 more than width. If width = w: w(w + 2) = 48, or w² + 2w - 48 = 0. Solve to find w = 6.
+
+**Mixture problems.** Mix x liters of 30% solution with 20 liters of 50% solution to get 40% mixture. Equation: 0.30x + 0.50(20) = 0.40(x + 20). Solve for x.
+
+**Time and rate problems.** Two workers complete a job: one in 5 hours, one in 3 hours. Together: 1/5 + 1/3 = 1/t. Solve for t = 15/8 = 1.875 hours.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The no-solution case.** 2x + 3 = 2x + 5. Subtracting 2x gives 3 = 5, which is false. This equation has no solution—the lines are parallel.
+
+**The infinite solution case.** 2x + 4 = 2(x + 2). Expanding: 2x + 4 = 2x + 4. This is always true—any x works. The equation is an identity.
+
+**The negative discriminant.** x² + 2x + 5 = 0. Discriminant = 4 - 20 = -16 < 0. No real solutions—the parabola doesn't cross the x-axis. Complex solutions exist: x = -1 ± 2i.
+
+**The hidden quadratic.** An equation like √x = x - 2 isn't obviously quadratic. Squaring both sides: x = (x-2)² = x² - 4x + 4, or x² - 5x + 4 = 0. But check solutions—squaring can introduce extraneous roots.
+
+**The coefficient confusion.** In 2x² - x = 3, you must first write in standard form: 2x² - x - 3 = 0. Now a = 2, b = -1 (not 1), c = -3.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Factoring versus formula.** Factoring is faster when it works but requires recognizing factor patterns. The quadratic formula always works but involves more calculation. Learn both.
+
+**Exact versus decimal answers.** x = (-3 + √17)/2 is exact but hard to interpret. x ≈ 0.561 is easier to use but loses precision. Context determines which is better.
+
+**Checking solutions.** Algebraic manipulations can introduce errors. Always substitute your answer back into the original equation to verify.
+
+**Simplification choices.** Solving (x + 3)(x - 2) = 5 requires expanding first: x² + x - 6 = 5, so x² + x - 11 = 0. The original form isn't directly solvable.
+
+**When to use technology.** Simple equations build understanding; complex ones justify calculators. Know when manual solving teaches you something and when it's just tedious.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Sign errors.** The most common mistake. Moving terms across the equals sign changes their sign. 2x = 10 - 3x becomes 5x = 10 (adding 3x to both sides).
+
+**Forgetting both roots.** √64 = ±8, not just 8. Quadratics typically have two solutions—don't stop at the first one.
+
+**Distributing incorrectly.** 2(x + 3) = 2x + 6, not 2x + 3. Every term inside the parentheses gets multiplied.
+
+**Canceling incorrectly.** (x + 2)/2 ≠ x + 1 (can't cancel the 2s). Correct simplification: (x + 2)/2 = x/2 + 1.
+
+**Squaring both sides without checking.** If you square to eliminate a radical, you may introduce extraneous solutions. Always verify by substituting back into the original.
+
+---
+
+## Related Topics
+
+**Systems of equations.** Multiple equations with multiple variables. Solve using substitution or elimination. Example: 2x + y = 7 and x - y = 2.
+
+**Polynomial equations.** Higher-degree equations (cubic, quartic, etc.). May have multiple solutions. Often require numerical methods for exact solutions.
+
+**Inequalities.** Similar to equations but finding ranges. 2x + 3 > 7 gives x > 2. Remember: multiplying by negative reverses the inequality.
+
+**Absolute value equations.** |x - 3| = 5 means x - 3 = 5 or x - 3 = -5, giving x = 8 or x = -2. Two cases to consider.
+
+**Exponential and logarithmic equations.** Equations with x in exponents (2^x = 8) or in logarithms (log x = 2). Require different techniques.
+
+---
+
+## How This Calculator Works
+
+**Linear equation solver:**
+
+1. Parses the equation to identify left and right sides
+2. Extracts coefficient of x and constant term from each side
+3. Rearranges to ax = b form by moving terms
+4. Solves: x = b/a
+5. Generates step-by-step explanation
+
+**Quadratic equation solver:**
+
+1. Parses equation or accepts coefficients a, b, c
+2. Ensures standard form ax² + bx + c = 0
+3. Calculates discriminant D = b² - 4ac
+4. Determines solution method based on D:
+   - D > 0: two real solutions via quadratic formula
+   - D = 0: one real solution (repeated root)
+   - D < 0: two complex solutions
+5. Applies quadratic formula: x = (-b ± √D) / (2a)
+6. Simplifies radicals where possible
+7. Generates step-by-step explanation with verification
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**What's the difference between an equation and an expression?**
+
+An equation has an equals sign and can be solved for unknown values. An expression (like 2x + 3) has no equals sign—it can be simplified but not "solved."
+
+**Why does a quadratic have two solutions?**
+
+A quadratic equation represents a parabola. The solutions are where it crosses the x-axis. Since a parabola can cross at two points, one point, or not at all, quadratics can have two, one, or no real solutions.
+
+**What does a negative discriminant mean?**
+
+The discriminant (b² - 4ac) being negative means the parabola doesn't cross the x-axis—no real solutions exist. However, complex solutions (involving i = √-1) do exist.
+
+**When should I use the quadratic formula versus factoring?**
+
+Try factoring first for simple equations with integer coefficients. If factors aren't obvious within 30 seconds, use the quadratic formula—it always works.
+
+**How do I verify my solution?**
+
+Substitute your answer back into the original equation. Both sides should equal the same value. If they don't, you made an error somewhere.
+
+**What if my equation has no solution?**
+
+Some equations (like x + 1 = x + 2) have no solution—they're contradictions. This is a valid result, not an error.
+
+**Can this calculator solve systems of equations?**
+
+This calculator handles single equations. Systems of equations (multiple equations with multiple unknowns) require different methods like substitution or elimination.
+
+**What about equations with fractions?**
+
+Multiply both sides by the LCD (lowest common denominator) to clear fractions, then solve the resulting equation. Example: x/2 + x/3 = 5 becomes 3x + 2x = 30, so x = 6.
+
+**How do I solve equations with absolute values?**
+
+An equation like |x - 3| = 5 means either x - 3 = 5 or x - 3 = -5. Solve both cases: x = 8 or x = -2. Check both solutions in the original equation.
+
+**What if my equation has radicals?**
+
+Isolate the radical, then square both sides to eliminate it. But squaring can introduce extraneous solutions, so always verify answers in the original equation. Example: √x = x - 2 becomes x = (x-2)², which simplifies to x² - 5x + 4 = 0.
+
+**How do I solve systems of two equations?**
+
+Use substitution (solve one equation for a variable, substitute into the other) or elimination (add/subtract equations to eliminate a variable). The solution is where both equations are satisfied simultaneously.
+
+**When should I use the quadratic formula versus completing the square?**
+
+The quadratic formula always works and is usually faster. Completing the square is useful when you need vertex form, when deriving the formula, or when the leading coefficient is 1 and the linear coefficient is even.

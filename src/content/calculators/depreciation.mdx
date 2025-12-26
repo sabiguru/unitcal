@@ -1,73 +1,249 @@
-Our **depreciation calculator** helps you compute annual depreciation expense and book value using four standard methods: **straight-line**, **double declining balance (DDB)**, **sum-of-the-years’-digits (SYD)**, and **MACRS** (for US tax purposes). Whether you’re managing business accounts, studying accounting, or planning asset purchases, this tool provides a clear depreciation schedule to support financial reporting and tax compliance.
+# Depreciation Calculator: Asset Value Decline Calculator
 
-### How It Works
-The calculator applies industry-standard formulas based on your inputs:
-- **Straight-Line**: Even depreciation over asset life
-- **DDB**: Accelerated depreciation (double the straight-line rate)
-- **SYD**: Accelerated depreciation using remaining-life fractions
-- **MACRS**: US tax method with IRS-defined rates
+## Table of Contents
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Allocating Asset Cost Over Time](#the-core-principle-allocating-asset-cost-over-time)
+- [How to Calculate Depreciation Manually](#how-to-calculate-depreciation-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
 
-### Key Inputs
-- **Asset Cost**: Purchase price (including delivery and setup)
-- **Salvage Value**: Estimated resale value at end of life
-- **Useful Life**: Number of years the asset will be used
-- **Method**: Choose your depreciation approach
-- **Start Date**: For partial-year calculations
+---
 
-The tool instantly generates:
+## How to Use This Calculator
+
+Enter the Asset Cost—the original purchase price including delivery, installation, and setup costs that are capitalizable.
+
+Enter the Salvage Value—the estimated value of the asset at the end of its useful life. This is what you expect to sell or dispose of it for.
+
+Enter the Useful Life in years—how long you expect to use the asset before it's fully depreciated.
+
+Select your Depreciation Method. The calculator supports straight-line depreciation (even amounts each year), which is the most common method for financial reporting.
+
+Optionally enter the Current Year to see accumulated depreciation and book value at a specific point in the asset's life.
+
+Click "Calculate" to see results. The output displays:
 - Annual depreciation expense
-- End-of-year book value
-- Full depreciation schedule (exportable)
-- Visual chart of value decline
+- Accumulated depreciation (total depreciated so far)
+- Current book value (cost minus accumulated depreciation)
+- Annual and total depreciation rates as percentages
+- Estimated tax savings (at 25% assumed rate)
+- Year-by-year depreciation schedule showing each year's expense, accumulated total, and book value
 
-### How to Use
-1. Enter the **asset cost** and **salvage value**.
-2. Input the **useful life** in years.
-3. Select your preferred **depreciation method**.
-4. Click **Calculate** to see your schedule.
-5. Compare methods to understand tax and accounting impacts.
+---
 
-For tax purposes, consult a professional—UK businesses use **capital allowances**, while US businesses use **MACRS**.
+## The Core Principle: Allocating Asset Cost Over Time
 
-### Step-by-Step Example
-**Scenario**: A company buys a £20,000 machine with a £2,000 salvage value and 5-year life.
+Depreciation is an accounting method that spreads the cost of a long-term asset over its useful life. Rather than expensing the entire purchase price when bought, you recognize a portion each year, matching the expense with the revenue the asset helps generate.
 
-**Straight-Line Method**:  
-- Annual Depreciation: `(£20,000 – £2,000) ÷ 5 = **£3,600/year**`  
-- Book Value after Year 3: `£20,000 – (3 × £3,600) = **£9,200**`
+The depreciable amount is the asset's cost minus its salvage value. This is the total amount that will be expensed over the asset's life.
 
-**Double Declining Balance**:  
-- Rate: `2 ÷ 5 = 40%`  
-- Year 1: `40% × £20,000 = **£8,000**`  
-- Year 2: `40% × £12,000 = **£4,800**`  
-- Year 3: `40% × £7,200 = **£2,880**`  
-- Book Value after Year 3: **£4,320**
+Straight-line depreciation divides this amount equally across all years. A $50,000 machine with $5,000 salvage value over 10 years depreciates $4,500 per year (($50,000 - $5,000) ÷ 10).
 
-**Insight**: DDB provides larger early deductions, reducing taxable income faster.
+Depreciation is a non-cash expense—it reduces reported income and taxes without requiring cash outflow (beyond the initial purchase). This makes it valuable for tax planning and cash flow management.
 
-### What is straight-line depreciation?
-Straight-line depreciation spreads an asset’s cost evenly over its useful life. It’s the simplest method and most commonly used for financial reporting.
+Book value (cost minus accumulated depreciation) represents the asset's value on financial statements, not its market value. An asset might be fully depreciated but still valuable and in use.
 
-### What is double declining balance (DDB)?
-DDB is an accelerated method that applies double the straight-line rate to the asset’s declining book value each year. It’s ideal for assets that lose value quickly.
+---
 
-### Can I use this for UK tax purposes?
-No. The UK uses **capital allowances** (e.g., Annual Investment Allowance, Writing Down Allowances), not depreciation, for tax. This calculator is for **accounting/book purposes** or **US tax (MACRS)**.
+## How to Calculate Depreciation Manually
 
-### What is MACRS?
-MACRS (Modified Accelerated Cost Recovery System) is the US tax depreciation system. It uses predefined tables with asset classes (3-year, 5-year, etc.) and assumes a half-year convention.
+**Straight-line method (most common):**
 
-### How do I choose a depreciation method?
-- **Financial statements**: Straight-line for simplicity  
-- **Tax (US)**: MACRS (required)  
-- **Matching usage**: DDB or SYD for high early wear  
-- **Conservatism**: Accelerated methods reduce early profits
+Annual Depreciation = (Cost - Salvage Value) ÷ Useful Life
 
-### Does land depreciate?
-No. Land is not depreciable because it does not wear out or become obsolete. Only buildings and improvements on land are depreciated.
+Example: $50,000 machine, $5,000 salvage, 5-year life
+Annual Depreciation = ($50,000 - $5,000) ÷ 5 = $9,000/year
 
-### Can I change methods later?
-Yes, but only **prospectively** (for future years). You cannot restate prior years’ depreciation.
+Year-by-year schedule:
+- Year 1: $9,000 depreciation, $41,000 book value
+- Year 2: $9,000 depreciation, $32,000 book value
+- Year 3: $9,000 depreciation, $23,000 book value
+- Year 4: $9,000 depreciation, $14,000 book value
+- Year 5: $9,000 depreciation, $5,000 book value (equals salvage)
 
-### What is book value?
-Book value = Original cost – Accumulated depreciation. It’s the asset’s value on your balance sheet.
+**Depreciation rate:**
+
+Rate = (Annual Depreciation ÷ Cost) × 100
+
+Example: $9,000 ÷ $50,000 × 100 = 18% per year
+
+**Double declining balance (accelerated):**
+
+Rate = (2 ÷ Useful Life) × 100
+Year 1 Depreciation = Cost × Rate
+Year 2 Depreciation = (Cost - Year 1 Accumulated) × Rate
+
+**Sum-of-years'-digits (accelerated):**
+
+Sum = n(n+1)/2 where n = useful life
+Year 1 Rate = n ÷ Sum
+Year 2 Rate = (n-1) ÷ Sum
+
+---
+
+## Real-World Applications
+
+**Financial reporting.** Depreciation expense appears on income statements, reducing reported profit. Accumulated depreciation reduces asset values on balance sheets.
+
+**Tax deductions.** Depreciation reduces taxable income, lowering tax liability. The tax savings equal depreciation times the tax rate.
+
+**Asset management.** Tracking depreciation helps plan for asset replacement. When book value approaches salvage value, it's time to consider replacement.
+
+**Budgeting and pricing.** Businesses include depreciation when calculating product costs. Understanding true asset costs helps set profitable prices.
+
+**Investment analysis.** Depreciation affects cash flow projections and return on investment calculations. Higher depreciation means lower taxable income but the same actual cash flow.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The fully depreciated asset.** Your 10-year-old computer system is fully depreciated (book value equals salvage) but still working fine. It has no more depreciation expense, but remains a productive asset—your accounting doesn't reflect its ongoing value.
+
+**The technology obsolescence.** You bought equipment with a 7-year useful life, but technology advances made it obsolete in 3 years. The remaining book value must be written off, creating a large one-time expense.
+
+**The tax versus book difference.** For financial reporting, you use 10-year straight-line depreciation. For taxes, you use 5-year accelerated depreciation. You maintain two sets of depreciation schedules and track the temporary difference.
+
+**The partial-year purchase.** You bought equipment on October 1. Do you take a full year of depreciation or prorate for 3 months? Convention varies—some methods take half-year in the first and last years regardless of purchase date.
+
+**The salvage value estimation.** You estimated $5,000 salvage value but actually sold the asset for $8,000. The $3,000 difference is a gain on sale that increases taxable income in the year of sale.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Accelerated versus straight-line.** Accelerated methods (declining balance, sum-of-years'-digits) front-load depreciation, providing larger tax deductions early. Straight-line is simpler and spreads expense evenly. The total depreciation is the same; only timing differs.
+
+**Useful life estimation.** Longer useful life means lower annual depreciation but more years of expense. Shorter life means higher annual depreciation but fewer years. IRS guidelines provide ranges, but management has some discretion.
+
+**Salvage value impact.** Higher salvage value reduces depreciable amount, lowering annual expense. Zero salvage value maximizes depreciation but may not reflect reality if assets have resale value.
+
+**Tax versus financial reporting.** Companies often use different depreciation methods for tax returns versus financial statements. Tax depreciation optimizes cash flow; financial depreciation aims for accurate reporting.
+
+**Impairment versus depreciation.** If an asset loses value faster than depreciation (due to damage, obsolescence, or market changes), an impairment charge may be required—a separate concept from regular depreciation.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Forgetting salvage value.** Depreciation is calculated on cost minus salvage, not on cost alone. Including salvage value prevents over-depreciation.
+
+**Inconsistent methods.** Once you select a depreciation method for an asset, you generally must continue using it. Changing methods requires disclosure and may need restating prior periods.
+
+**Depreciating land.** Land doesn't depreciate—only buildings and improvements on land. When purchasing property, allocate the price between land (not depreciable) and buildings (depreciable).
+
+**Missing partial-year adjustments.** Assets purchased mid-year may require prorated depreciation for the first and last years. Check your accounting convention.
+
+**Ignoring component depreciation.** A building might last 40 years, but its HVAC system lasts 15 years. Component depreciation treats major components as separate assets with different lives.
+
+---
+
+## Related Topics
+
+**Capital allowances (UK).** The UK equivalent of depreciation for tax purposes, with specific rates set by HMRC rather than estimated useful lives.
+
+**MACRS (US).** The Modified Accelerated Cost Recovery System specifies depreciation methods and recovery periods for US tax purposes. Different from book depreciation.
+
+**Amortization.** Similar to depreciation but for intangible assets (patents, copyrights, goodwill). Same concept of spreading cost over useful life.
+
+**Depletion.** For natural resources (mines, oil wells, timber). Expense is based on units extracted rather than time elapsed.
+
+**Impairment.** When an asset's market value drops below book value, impairment charges reduce book value to fair value—a separate process from regular depreciation.
+
+---
+
+## How This Calculator Works
+
+The calculator implements straight-line depreciation:
+
+**Depreciable amount:**
+Depreciable = Cost - Salvage Value
+
+**Annual depreciation:**
+Annual = Depreciable ÷ Useful Life
+
+**Accumulated depreciation (for year n):**
+Accumulated = Annual × n
+
+**Book value (for year n):**
+Book Value = Cost - Accumulated
+
+**Depreciation rate:**
+Annual Rate = (Annual ÷ Cost) × 100
+Total Rate = (Accumulated ÷ Cost) × 100
+
+**Tax savings estimate:**
+Tax Savings = Annual × 0.25 (assumes 25% tax rate)
+
+**Depreciation schedule:**
+For each year from 1 to useful life, calculates that year's depreciation, accumulated total, and ending book value. Book value never goes below salvage value.
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**What's the difference between depreciation and amortization?**
+
+Depreciation applies to tangible assets (equipment, buildings, vehicles). Amortization applies to intangible assets (patents, software, goodwill). Both spread cost over useful life.
+
+**Can I depreciate a personal vehicle?**
+
+Only if used for business. The business-use percentage of the vehicle's cost can be depreciated. Personal-use vehicles are not depreciable for tax purposes.
+
+**What if the asset is worth more than book value?**
+
+Book value is an accounting concept, not market value. An asset can be fully depreciated but still valuable. If you sell for more than book value, the excess is a taxable gain.
+
+**How do I choose a useful life?**
+
+For tax purposes, IRS guidelines specify recovery periods by asset class. For financial reporting, estimate how long you'll actually use the asset productively.
+
+**What happens if I sell an asset before it's fully depreciated?**
+
+Compare sale price to book value. If sale price exceeds book value, you have a gain. If sale price is less, you have a loss. Both affect taxable income in the year of sale.
+
+**Is depreciation a cash expense?**
+
+No. Depreciation is a non-cash expense—it reduces reported income but doesn't require cash outflow. The cash was spent when the asset was purchased.
+
+**Can I change depreciation methods?**
+
+Generally, you must be consistent once a method is chosen. Changes require disclosure and may need justification. Tax authorities may question frequent changes.
+
+**What's the difference between tax depreciation and book depreciation?**
+
+Tax depreciation follows tax code rules (like MACRS in the US) to minimize taxes. Book depreciation follows accounting standards to accurately report financial position. Companies often maintain both.
+
+**How do accelerated methods differ from straight-line?**
+
+Accelerated methods (declining balance, sum-of-years'-digits) front-load depreciation, providing larger deductions early in the asset's life. Total depreciation is the same; only timing differs.
+
+**What assets cannot be depreciated?**
+
+Land never depreciates—only buildings and improvements on land. Inventory, which is sold rather than used over time, is expensed through cost of goods sold, not depreciation. Personal assets used solely for non-business purposes also cannot be depreciated.
+
+**How does partial-year depreciation work?**
+
+Assets purchased mid-year may require prorated depreciation. Some conventions take a half-year in the first year regardless of purchase date; others prorate based on the actual month of acquisition. Know your accounting policy.
+
+**What is bonus depreciation?**
+
+In some tax jurisdictions, businesses can immediately expense a percentage of qualifying asset costs rather than depreciating over time. This provides an immediate tax benefit but reduces future depreciation deductions.
+
+**How do I handle improvements to existing assets?**
+
+Improvements that extend useful life or add functionality are capitalized and depreciated separately. Repairs that maintain existing function are expensed immediately. The distinction matters for tax purposes.
+
+**What records should I keep for depreciation?**
+
+Maintain purchase documentation, useful life determination rationale, salvage value estimates, and annual depreciation schedules. These support tax filings and audits.
+
+**How does depreciation affect cash flow analysis?**
+
+Depreciation is a non-cash expense that reduces taxable income. Add it back to net income when calculating operating cash flow. This "depreciation tax shield" provides real cash benefits without cash outflow.

@@ -1,53 +1,307 @@
-## How to Use the Ohm's Law Calculator
-The **Ohm's Law calculator** solves for any two of the four electrical quantities—**Voltage (V), Current (I), Resistance (R), and Power (P)**—and instantly computes the other two. Simply enter any two known values, and the tool applies the correct formulas (`V = I × R`, `P = V × I`, etc.) to give you accurate results. It also supports **series and parallel resistor combinations**, making it perfect for circuit design, troubleshooting, and education.
+# Ohm's Law Calculator: Voltage, Current, Resistance, and Power
 
-### Core Formulas Used
-- **Ohm’s Law**: `V = I × R`
-- **Power**: `P = V × I = I² × R = V² / R`
-- **Series Resistors**: `R_total = R₁ + R₂ + …`
-- **Parallel Resistors**: `1/R_total = 1/R₁ + 1/R₂ + …`
+## Table of Contents
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Ohm's Law](#the-core-principle-ohms-law)
+- [How to Calculate Electrical Values Manually](#how-to-calculate-electrical-values-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
 
-### How to Get the Best Results
-1.  Ensure your circuit is **de-energised** before measuring resistance.
-2.  For power calculations, confirm your load is **resistive** (e.g., not a motor or LED without a resistor).
-3.  Use **RMS values** for AC circuits with resistive loads.
-4.  Always **derate components**—choose resistors with at least double the calculated power rating.
+---
 
-## Step-by-Step Example
-You’re powering an LED from a 9V battery. The LED has a forward voltage of 2.2V and you want 15mA of current.
+## How to Use This Calculator
 
-**Step 1**: Calculate voltage across the resistor  
-`9V - 2.2V = 6.8V`
+Enter any two of the four electrical values:
+- Voltage (V) in volts
+- Current (I) in amperes (use decimals for milliamps: 15mA = 0.015A)
+- Resistance (R) in ohms
+- Power (P) in watts
 
-**Step 2**: Enter known values into the calculator  
-- Voltage = 6.8V  
-- Current = 0.015A (15mA)
+Leave the unknown values blank or at zero.
 
-**Step 3**: The calculator returns:  
-- **Resistance** = 6.8 / 0.015 ≈ **453Ω** (use 470Ω standard value)  
-- **Power** = 6.8 × 0.015 = **0.102W**
+Click "Calculate" to see results. The calculator determines the missing values using Ohm's Law and power equations:
+- All four values displayed
+- The formulas used for each calculation
+- Verification that V = I × R and P = V × I
 
-**Step 4**: Choose a **1/4W (0.25W) resistor**—it’s safely above 0.102W and follows derating best practices.
+For resistor combinations, select series or parallel mode and enter individual resistor values.
 
-This same process works for any DC circuit analysis.
+---
 
-### What if I only know power and resistance?
-The calculator uses `I = √(P / R)` and `V = √(P × R)` to find current and voltage automatically.
+## The Core Principle: Ohm's Law
 
-### Can this handle AC circuits?
-For **resistive AC loads** (like heaters), yes—input RMS voltage and current. For inductive or capacitive loads (motors, transformers), results are approximate only.
+Ohm's Law describes the fundamental relationship between voltage, current, and resistance in electrical circuits:
 
-### Why does my resistor get hot?
-It’s dissipating power as heat. If the calculated power is near the resistor’s rating (e.g., 0.24W on a 0.25W resistor), it will run hot. Always **derate**—use a higher-rated resistor.
+**V = I × R**
 
-### How accurate are the resistor combination results?
-The calculator assumes ideal resistors. Real-world tolerances (±1%, ±5%) mean actual values may vary slightly.
+Voltage (V) is the electrical pressure pushing electrons through a circuit. Current (I) is the flow rate of electrons. Resistance (R) opposes that flow.
 
-### Is this suitable for high-voltage circuits?
-The math is valid, but **never work on mains voltage without proper training and safety equipment**. This tool is for low-voltage DC projects unless you’re a qualified electrician.
+This relationship means:
+- Higher voltage pushes more current through a given resistance
+- Higher resistance reduces current for a given voltage
+- Current equals voltage divided by resistance
 
-### What units should I use?
-- Voltage: **Volts (V)**
-- Current: **Amperes (A)** – enter mA as 0.015 for 15mA
-- Resistance: **Ohms (Ω)**
-- Power: **Watts (W)**
+Power extends these relationships:
+- **P = V × I** (power equals voltage times current)
+- **P = I²R** (power equals current squared times resistance)
+- **P = V²/R** (power equals voltage squared divided by resistance)
+
+These equations are the foundation of all circuit analysis, from LED circuits to power grids.
+
+---
+
+## How to Calculate Electrical Values Manually
+
+**Finding current from voltage and resistance:**
+I = V / R
+
+Example: 12V battery, 100Ω resistor
+I = 12 / 100 = 0.12A = 120mA
+
+**Finding resistance from voltage and current:**
+R = V / I
+
+Example: 9V across a component drawing 0.02A
+R = 9 / 0.02 = 450Ω
+
+**Finding voltage from current and resistance:**
+V = I × R
+
+Example: 0.05A through 220Ω
+V = 0.05 × 220 = 11V
+
+**Calculating power:**
+P = V × I = I²R = V²/R
+
+Example: 12V, 0.12A
+P = 12 × 0.12 = 1.44W
+
+**Series resistors:**
+R_total = R₁ + R₂ + R₃ + ...
+
+Example: 100Ω + 220Ω + 330Ω = 650Ω
+
+**Parallel resistors:**
+1/R_total = 1/R₁ + 1/R₂ + 1/R₃ + ...
+
+Example: 100Ω || 100Ω
+1/R_total = 1/100 + 1/100 = 2/100
+R_total = 50Ω
+
+---
+
+## Real-World Applications
+
+**LED current limiting.** An LED needs 20mA at 2V forward voltage. From a 5V supply:
+Resistor voltage = 5 - 2 = 3V
+R = 3 / 0.020 = 150Ω
+
+**Resistor power rating.** That 150Ω resistor dissipates:
+P = 0.020² × 150 = 0.06W
+A ¼W (0.25W) resistor provides adequate margin.
+
+**Wire sizing.** Long wire runs have resistance. Calculate voltage drop to ensure equipment receives adequate voltage.
+
+**Fuse selection.** Calculate maximum expected current for a circuit, add safety margin, and select appropriate fuse rating.
+
+**Battery drain estimation.** Device draws 0.5A from 12V battery. Power = 6W. A 12Ah battery provides approximately 24 hours of operation.
+
+**Motor starting current.** Motors draw high current at startup. Calculate to ensure power supply and wiring can handle the surge.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The hot resistor.** Your resistor gets uncomfortably hot. You calculated the resistance correctly but chose a ¼W resistor for a circuit dissipating 0.23W. Solution: use ½W or 1W resistor for adequate derating.
+
+**The dim LED.** You're running an LED from 12V with a 1kΩ resistor. Current = 10mA—too low for many LEDs. Solution: decrease resistance to increase current (330Ω for 30mA).
+
+**The voltage drop problem.** Your 12V power supply feeds equipment 50 feet away through thin wire. Equipment measures only 11V. Solution: use heavier gauge wire or higher supply voltage.
+
+**The parallel mystery.** Two 100Ω resistors in parallel create 50Ω, not 200Ω. Parallel resistance is always less than the smallest individual resistor.
+
+**The power supply limitation.** Your 12V supply is rated for 1A. Your circuit calculates to 1.2A. The supply may overheat, shut down, or fail. Solution: use adequately rated supply.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Resistor power derating.** A resistor rated for ½W should run at ¼W for longevity. Higher operating temperature reduces lifespan and can affect nearby components.
+
+**Standard resistor values.** Calculated 453Ω? That doesn't exist. Use 470Ω (next standard value up). Slight current reduction is usually acceptable.
+
+**Tolerance matters.** A 100Ω ±5% resistor could be 95-105Ω. In precision applications, use 1% or 0.1% tolerance.
+
+**Temperature effects.** Resistance changes with temperature. Carbon composition resistors vary more than metal film. Consider temperature coefficient for precision circuits.
+
+**AC versus DC.** Ohm's Law applies directly to DC and resistive AC loads. Inductive and capacitive loads require impedance calculations.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Unit confusion.** Milliamps (mA) versus amps (A). 1mA = 0.001A. Enter 15mA as 0.015A.
+
+**Forgetting power dissipation.** Calculating resistance without checking power rating leads to burned components. Always verify P = I²R is within component limits.
+
+**Ignoring internal resistance.** Batteries and power supplies have internal resistance. Under load, output voltage is lower than no-load voltage.
+
+**Using ideal values.** Real components have tolerance. A "100Ω" resistor might be 95-105Ω. Design with margins.
+
+**Measuring resistance in-circuit.** Other parallel paths affect readings. Measure components out of circuit for accurate values.
+
+---
+
+## Related Topics
+
+**Kirchhoff's Laws.** Conservation of charge (current into a node equals current out) and conservation of energy (voltages around a loop sum to zero).
+
+**Impedance.** The AC equivalent of resistance, including reactive effects from inductors and capacitors.
+
+**Power factor.** In AC circuits, the ratio of real power to apparent power. Resistive loads have power factor of 1.
+
+**Voltage dividers.** Two resistors in series create a voltage proportionally divided between them.
+
+**Current dividers.** Two resistors in parallel divide current inversely proportional to resistance.
+
+---
+
+## How This Calculator Works
+
+**Core relationship:**
+```
+V = I × R
+```
+
+**Derived equations:**
+```
+I = V / R
+R = V / I
+P = V × I = I² × R = V² / R
+```
+
+**Given two values, calculate others:**
+```
+if V and I known:
+  R = V / I
+  P = V × I
+if V and R known:
+  I = V / R
+  P = V² / R
+if I and R known:
+  V = I × R
+  P = I² × R
+if P and R known:
+  V = √(P × R)
+  I = √(P / R)
+if P and V known:
+  I = P / V
+  R = V² / P
+if P and I known:
+  V = P / I
+  R = P / I²
+```
+
+**Resistor combinations:**
+```
+Series: R_total = R₁ + R₂ + R₃ + ...
+Parallel: 1/R_total = 1/R₁ + 1/R₂ + 1/R₃ + ...
+```
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**What units should I use?**
+
+Voltage in volts (V), current in amperes (A), resistance in ohms (Ω), power in watts (W). Convert milliamps to amps (divide by 1000) before entering.
+
+**Can this handle AC circuits?**
+
+For purely resistive AC loads (heaters, incandescent bulbs), yes—use RMS values. For inductive or capacitive loads, these calculations are approximate.
+
+**What if I only know power and resistance?**
+
+The calculator uses derived formulas: V = √(P × R) and I = √(P / R).
+
+**Why does my resistor get hot?**
+
+It's dissipating power as heat. If power approaches the resistor's rating, it runs hot. Use a higher-wattage resistor or redesign the circuit.
+
+**How do I combine resistors?**
+
+Series: add values directly. Parallel: reciprocal of sum of reciprocals. Two equal resistors in parallel have half the value of one.
+
+**Is this suitable for high-voltage circuits?**
+
+The math is valid, but never work on mains voltage without proper training and safety equipment. This tool is primarily for low-voltage DC projects.
+
+**How accurate are the results?**
+
+Mathematically exact for ideal components. Real-world tolerances, temperature effects, and measurement accuracy affect actual circuit behavior.
+
+**What about variable resistors (potentiometers)?**
+
+Treat them as resistors with current value. The calculation shows behavior at that setting; adjust and recalculate for other positions.
+
+**How do I calculate power supply requirements?**
+
+Sum the current draw of all components in your circuit. Add 20-30% margin for safety. Verify the power supply can deliver that current at the required voltage.
+
+**What's the relationship between wire gauge and resistance?**
+
+Thinner wire has higher resistance per foot. For long runs or high current, calculate voltage drop: V_drop = I × R_wire. Use heavier gauge to reduce drop.
+
+**How do I size fuses and circuit breakers?**
+
+Calculate maximum expected current, add 25% margin, and select the next standard size up. The protection device should blow before wire overheats.
+
+**Why does AC power factor matter?**
+
+For inductive loads (motors, transformers), current and voltage are out of phase. Real power (watts) is less than apparent power (volt-amps). Power factor = watts / VA.
+
+**How do I measure resistance accurately?**
+
+Use a multimeter in resistance mode. Disconnect power, isolate the component from parallel paths, and check that your meter leads don't add significant resistance.
+
+**What about temperature effects on resistance?**
+
+Most conductors increase resistance with temperature. This can affect circuit behavior in hot environments or with components that heat during operation.
+
+**How do I handle mixed AC and DC circuits?**
+
+Analyze separately. DC components see only DC values. AC components see peak, RMS, or instantaneous values depending on the analysis. Ohm's Law applies to each independently.
+
+**What is a voltage divider and how do I calculate it?**
+
+Two resistors in series divide voltage proportionally: V_out = V_in × R2 / (R1 + R2). Useful for creating reference voltages or sensor interfaces.
+
+**How do I calculate current limiting for LEDs?**
+
+R = (V_supply - V_forward) / I_desired. A 5V supply with 2V LED at 20mA needs: (5-2)/0.020 = 150Ω. Use next higher standard value (180Ω).
+
+**What is Kirchhoff's Current Law?**
+
+Current entering any junction equals current leaving. This lets you analyze complex circuits by tracking current flow at every node.
+
+**What is Kirchhoff's Voltage Law?**
+
+Voltages around any closed loop sum to zero. This lets you write equations for complex circuits and solve for unknown values.
+
+**How do I calculate power loss in cables?**
+
+P_loss = I² × R_cable. For a 10A current through 0.5Ω cable resistance: P_loss = 100 × 0.5 = 50W. That's heat in your wires!
+
+**Additional Notes**
+
+Understanding Ohm's Law is fundamental to all electrical work. These calculations form the foundation for circuit design, troubleshooting, and component selection in every electronics project.
+Mastering these fundamentals enables you to tackle increasingly complex circuit analysis challenges with confidence.
+Safety should always be your first priority when working with electricity.
+Always double-check calculations before applying power.

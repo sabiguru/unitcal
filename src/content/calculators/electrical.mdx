@@ -1,81 +1,276 @@
-Our **electrical calculator** helps you solve for voltage, current, resistance, and power in DC circuits using **Ohm’s Law** and **power formulas**. Whether you’re designing a simple LED circuit, sizing a resistor, or troubleshooting a power supply, this tool provides instant, accurate results to ensure your projects are safe and efficient.
+# Electrical Calculator: Ohm's Law and Power Calculator
 
-### How It Works
-The calculator uses the core electrical formulas:
-- **Ohm’s Law**: `V = I × R`
-- **Power**: `P = V × I = I² × R = V² / R`
+## Table of Contents
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Ohm's Law and Power Relationships](#the-core-principle-ohms-law-and-power-relationships)
+- [How to Calculate Electrical Values Manually](#how-to-calculate-electrical-values-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
 
-For **series circuits**, it sums resistances. For **parallel circuits**, it calculates the reciprocal sum. You can also combine both in mixed networks.
+---
 
-### Key Inputs
-- **Circuit Type**: Select series, parallel, or mixed.
-- **Known Values**: Enter any two of voltage, current, resistance, or power.
-- **Resistor Values**: Add individual resistors for combination calculations.
-- **AC Mode**: For AC circuits, input power factor to calculate real/apparent power.
+## How to Use This Calculator
 
-The tool instantly shows:
-- Missing electrical values
-- Total resistance for combinations
-- Power dissipation per component
-- Safety warnings if components are overloaded
+Select your calculation type: Power (find power from voltage, current, or resistance), Energy (calculate energy consumption), Cost (estimate electricity costs), or Frequency (for AC circuit calculations like resonance and reactance).
 
-### How to Use
-1. Choose your **circuit type**.
-2. Enter **known values** (e.g., voltage and resistance).
-3. Click **Calculate** to solve for unknowns.
-4. For resistor networks, add values and see total resistance.
-5. Use the results to select appropriate components and ensure safe operation.
+For Power calculations, enter any two known values:
+- Voltage (V) in volts
+- Current (I) in amps
+- Resistance (R) in ohms
+- The calculator solves for the remaining values plus power
 
-Always verify calculations with a multimeter before powering your circuit.
+For Energy calculations, enter power and time to find energy consumption.
 
-### Step-by-Step Example
-**Scenario**: Powering an LED with a 9V battery.
+For Cost calculations, enter power and time to estimate electricity costs based on rate per kWh.
 
-**Inputs**:
-- Supply Voltage: 9V
-- LED Forward Voltage: 2.1V
-- Desired Current: 20mA (0.02A)
+For Frequency calculations, enter inductance and capacitance to find resonant frequency, or frequency and component values for reactance.
 
-**Calculation**:
-1. Voltage across resistor: `9V – 2.1V = 6.9V`
-2. Resistor value: `R = V / I = 6.9V / 0.02A = 345Ω`
-3. Power dissipation: `P = I² × R = (0.02)² × 345 = 0.138W`
+Click "Calculate" to see results. The output shows all calculated values, the formula used, and additional derived information like energy consumption over time.
 
-**Result**: Use a **345Ω resistor** (or nearest standard 330Ω or 360Ω) rated for **at least 0.25W**.
+---
 
-This ensures the LED operates safely without burning out.
+## The Core Principle: Ohm's Law and Power Relationships
 
-### What is Ohm’s Law?
-Ohm’s Law states that **voltage = current × resistance** (`V = I × R`). It defines the relationship between these three fundamental electrical quantities in resistive circuits.
+Electrical circuits obey fundamental relationships that allow calculating unknown values from known ones.
 
-### How do I calculate total resistance?
-- **Series**: Add all resistances: `R_total = R₁ + R₂ + ...`  
-- **Parallel**: Use `1/R_total = 1/R₁ + 1/R₂ + ...`  
-For two resistors in parallel: `R_total = (R₁ × R₂) / (R₁ + R₂)`
+**Ohm's Law:** V = I × R
+Voltage equals current times resistance. If you know any two, you can find the third.
 
-### What is the difference between real and apparent power?
-**Real power (W)** does useful work (e.g., heat, light). **Apparent power (VA)** is the product of voltage and current. In AC circuits with inductive/capacitive loads, they differ due to **power factor**.
+**Power equations:**
+- P = V × I (power = voltage × current)
+- P = I² × R (power = current squared × resistance)
+- P = V² / R (power = voltage squared / resistance)
 
-### Can I use this for AC circuits?
-Yes—for **resistive AC loads** (heaters, incandescent bulbs), DC formulas apply using RMS values. For **reactive loads** (motors, transformers), enable AC mode and input power factor.
+These equations are interchangeable—use whichever form matches your known values.
 
-### How do I choose a resistor wattage?
-Calculate power dissipation (`P = I² × R`) and select a resistor rated for **at least double** that value (e.g., 0.25W resistor for 0.1W load) for safety and longevity.
+**Energy:** E = P × t
+Energy equals power times time. A 100W bulb running for 10 hours uses 1,000 Wh (1 kWh).
 
-### Why is my calculation not matching my multimeter?
-Possible reasons:  
-- Component tolerances (±5% resistors)  
-- Battery internal resistance  
-- Temperature effects  
-- Measurement error  
-Always measure under actual operating conditions.
+For AC circuits, reactance and impedance replace simple resistance. Capacitors and inductors resist current flow in frequency-dependent ways, and power factor describes how much of the apparent power does useful work.
 
-### Is this calculator safe for mains voltage?
-No. This tool is for **low-voltage DC circuits** (e.g., batteries, USB power). **Never use it to design or troubleshoot mains AC circuits** without professional training and certification.
+---
 
-### What are common beginner mistakes?
-- Confusing mA with A (e.g., 20mA = 0.02A)  
-- Forgetting LED forward voltage  
-- Using undersized resistors  
-- Ignoring power dissipation  
-- Reversing polarity on polarised components
+## How to Calculate Electrical Values Manually
+
+**Finding power from voltage and current:**
+P = V × I
+
+Example: 12V battery powering a device drawing 2A
+P = 12 × 2 = 24 watts
+
+**Finding power from voltage and resistance:**
+P = V² / R
+
+Example: 120V across a 60Ω heating element
+P = 120² / 60 = 14,400 / 60 = 240 watts
+
+**Finding power from current and resistance:**
+P = I² × R
+
+Example: 3A through a 10Ω resistor
+P = 3² × 10 = 9 × 10 = 90 watts
+
+**Finding current from voltage and resistance (Ohm's Law):**
+I = V / R
+
+Example: 9V across a 1000Ω resistor
+I = 9 / 1000 = 0.009A = 9mA
+
+**Finding resistance for a desired current:**
+R = V / I
+
+Example: Need 20mA from a 5V supply
+R = 5 / 0.020 = 250Ω
+
+**Energy calculation:**
+E (kWh) = P (W) × t (hours) / 1000
+
+Example: 1500W space heater for 8 hours
+E = 1500 × 8 / 1000 = 12 kWh
+
+---
+
+## Real-World Applications
+
+**LED resistor calculation.** An LED needs a current-limiting resistor. With 5V supply, 2V LED forward voltage, and 20mA desired current: R = (5-2) / 0.020 = 150Ω.
+
+**Power supply sizing.** Your project draws 2A at 12V. That's 24W. Choose a power supply rated for at least 24W, preferably with 20-50% margin (30W or more).
+
+**Wire sizing.** Higher current requires thicker wire to avoid excessive heating. Calculate current, then consult wire gauge tables for safe ampacity.
+
+**Electricity cost estimation.** A 3000W dryer running 5 hours weekly: 3 × 5 × 52 weeks = 780 kWh/year. At $0.15/kWh, that's $117/year.
+
+**Fuse selection.** Calculate maximum expected current, add safety margin, select fuse. A circuit drawing 8A maximum should have a 10A fuse—close enough to protect, not so close it nuisance-trips.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The LED that burns out instantly.** You connected an LED directly to 5V without a resistor. LEDs have very low resistance when forward-biased—current skyrockets and the LED dies. Always use a current-limiting resistor.
+
+**The undersized power supply.** Your 5V/2A supply powers a project that draws 2.5A peak. The supply either shuts down, overheats, or produces unstable voltage. Always allow headroom.
+
+**The mysterious voltage drop.** Your 12V LED strip is dim at the far end. Long wire runs have resistance; current through that resistance drops voltage (V = IR). Use thicker wire or inject power at multiple points.
+
+**The blown fuse puzzle.** Your 15A circuit keeps blowing fuses. Add up all connected loads—you're probably exceeding 15A, especially when multiple devices start simultaneously.
+
+**The hot wire warning.** A wire gets noticeably warm during operation. This means significant power dissipation in the wire (P = I²R). Either reduce current, use thicker wire, or investigate—warm wires can become fire hazards.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Voltage versus current for power transmission.** P = V × I, so for the same power, higher voltage means lower current. Lower current means less I²R loss in wires. This is why power lines use high voltage.
+
+**Component power ratings.** A 1/4W resistor can dissipate 0.25W continuously without overheating. Exceed this and it fails. Always calculate power through components and select appropriate ratings.
+
+**Efficiency losses.** Real circuits aren't 100% efficient. A 50W amplifier might draw 75W from the wall. The difference (25W) becomes heat. Factor efficiency into power supply sizing.
+
+**Peak versus average current.** Motors draw several times their running current at startup. Size fuses and wiring for peak current, not just average.
+
+**AC versus DC calculations.** DC calculations are straightforward. AC adds phase relationships, power factor, and the distinction between real and apparent power. Same formulas, more complexity.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Confusing resistance and impedance.** Resistance is for DC or purely resistive AC loads. Impedance includes capacitive and inductive effects and varies with frequency. Use resistance for DC, impedance for AC.
+
+**Ignoring wire resistance.** Long wire runs have measurable resistance. A 100-foot run of 18 AWG wire is about 0.6Ω. At 10A, that drops 6V and dissipates 60W—significant for a 12V system.
+
+**Forgetting power ratings.** Calculating the right resistor value doesn't help if it can't handle the power. A 100Ω resistor at 10V dissipates 1W—a 1/4W resistor would overheat immediately.
+
+**Mixing up series and parallel formulas.** Series: add resistances, current is same everywhere, voltages divide. Parallel: voltages are same, currents add, resistances combine as reciprocals.
+
+**Overloading circuits.** Adding devices without calculating total current can overload circuits, trip breakers, or cause fires. Always know your circuit's capacity and what's drawing from it.
+
+---
+
+## Related Topics
+
+**Series and parallel circuits.** Components in series share current; voltage divides. Components in parallel share voltage; current divides. Total resistance differs in each configuration.
+
+**AC power factor.** In AC circuits with capacitors or inductors, current and voltage are out of phase. Power factor (0-1) measures how much of the apparent power does useful work.
+
+**Capacitive and inductive reactance.** Capacitors resist DC but pass AC (reactance decreases with frequency). Inductors pass DC but resist AC (reactance increases with frequency).
+
+**Three-phase power.** Industrial power uses three AC phases 120° apart. Total power is √3 times single-phase for the same voltage and current per phase.
+
+**Safety standards.** Electrical work must meet codes (NEC in the US, BS 7671 in the UK) that specify wire sizes, protection devices, and installation practices for safety.
+
+---
+
+## How This Calculator Works
+
+**Power calculations:**
+
+From V and I:
+```
+P = V × I
+R = V / I
+```
+
+From V and R:
+```
+P = V² / R
+I = V / R
+```
+
+From I and R:
+```
+P = I² × R
+V = I × R
+```
+
+**Energy calculation:**
+```
+E (Wh) = P × t (hours)
+E (kWh) = E (Wh) / 1000
+```
+
+**Cost calculation:**
+```
+Cost = E (kWh) × Rate ($/kWh)
+```
+
+**Resonant frequency (LC circuits):**
+```
+f = 1 / (2π√(LC))
+```
+
+**Inductive reactance:**
+```
+XL = 2πfL
+```
+
+**Capacitive reactance:**
+```
+XC = 1 / (2πfC)
+```
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**What's the difference between power and energy?**
+
+Power is the rate of energy use (watts). Energy is total use over time (watt-hours or kilowatt-hours). A 100W bulb uses 100W of power; running 10 hours, it consumes 1000Wh (1 kWh) of energy.
+
+**Why do I need Ohm's Law?**
+
+It's the fundamental relationship between voltage, current, and resistance. Any electrical calculation eventually uses Ohm's Law directly or through derived formulas.
+
+**What's the difference between AC and DC calculations?**
+
+DC calculations use simple resistance. AC calculations must account for reactance (from capacitors and inductors), impedance (total opposition to current), and phase relationships.
+
+**How do I calculate the resistor for an LED?**
+
+R = (Supply voltage - LED forward voltage) / Desired current. Example: (5V - 2V) / 0.020A = 150Ω. Then verify power: P = I²R = 0.020² × 150 = 0.06W, so a 1/8W resistor works.
+
+**Why does my wire get warm?**
+
+Current through wire resistance dissipates power as heat: P = I²R. Higher current or longer/thinner wire (more resistance) means more heat. Warm wires may need upgrading to thicker gauge.
+
+**What's power factor and why does it matter?**
+
+In AC circuits with inductors or capacitors, current and voltage peak at different times. Power factor (0-1) measures useful power as a fraction of apparent power. Low power factor means higher current for the same useful power.
+
+**How do I size a fuse or circuit breaker?**
+
+Calculate maximum expected current, add a safety margin (10-25%), and select the next standard size up. The fuse should blow before wires overheat but not trip during normal operation.
+
+**What causes voltage drop in long wire runs?**
+
+Wire has resistance. Current through that resistance drops voltage (V = IR). Long runs or thin wire have more resistance, more drop. Thicker wire or shorter runs reduce voltage drop.
+
+**What's the difference between watts and volt-amps?**
+
+For DC and purely resistive AC loads, they're the same. For AC loads with inductors or capacitors, volt-amps (VA) is the apparent power, while watts is the real power. The ratio is the power factor.
+
+**How do I calculate power for three-phase systems?**
+
+For balanced three-phase: P = √3 × V × I × power factor. The √3 (approximately 1.732) accounts for the phase relationships between the three voltages.
+
+**What's the relationship between horsepower and watts?**
+
+One horsepower equals approximately 746 watts. A 1 HP motor draws about 746W of mechanical power, but electrical input is higher due to motor efficiency (typically 80-95%).
+
+**How do I calculate battery capacity needs?**
+
+Battery capacity (Wh or Ah) = Power draw × Required runtime. A 50W device running for 4 hours needs 200Wh of battery capacity. Add 20-30% margin for inefficiency and battery longevity.
+
+**What safety margins should I use for electrical projects?**
+
+Use 80% of rated capacity as practical maximum. A 15A circuit should run no more than 12A continuously. This protects against overheating and provides margin for startup surges.
+
+**How does temperature affect electrical components?**
+
+Higher temperatures increase resistance in conductors and reduce capacity ratings. Many electrical ratings assume 25°C ambient. In hot environments, derate components or use larger sizes.

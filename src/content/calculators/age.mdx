@@ -1,64 +1,208 @@
-## What is an Age Calculator?
+# Age Calculator: Calculate Your Exact Age in Years, Months, and Days
 
-An **age calculator** is a simple yet powerful tool designed to compute the exact amount of time between two dates. While most often used to determine a person's age from their **date of birth** to the present day, it is equally effective for calculating the time until a future event, the duration between two historical dates, or verifying eligibility based on a specific age requirement. It provides a clear, broken-down result in years, months, and days, offering a precise measurement that simple subtraction cannot.
+## Table of Contents
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Date Arithmetic](#the-core-principle-date-arithmetic)
+- [How to Calculate Age Manually](#how-to-calculate-age-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
 
-## How Age Calculation Works
-
-Calculating an exact age is more complex than it seems because it must account for the irregularities of the Gregorian calendar. The algorithm used by this tool carefully handles:
-
-*   **Variable Month Lengths:** It knows exactly how many days are in each month.
-*   **Leap Years:** It correctly accounts for February 29th in leap years (those divisible by 4, but not by 100 unless also divisible by 400).
-*   **Sequential Logic:** It doesn't just subtract years; it calculates full years first, then the remaining months, and finally the remaining days to ensure absolute accuracy.
-
+---
 
 ## How to Use This Calculator
 
-Using the calculator is a straightforward process that delivers instant, precise results.
+The calculator offers two modes, selectable via tabs at the top: "Current Age" and "Age on Specific Date."
 
-1.  **Enter Your Birthdate:** Click on the "Date of Birth" field and select your birth date from the calendar picker. Using the picker avoids format confusion.
-2.  **(Optional) Set an "As of" Date:** By default, the calculator uses today's date. If you need to know your age on a specific past or future date (e.g., for an eligibility check), change this field accordingly.
-3.  **Click "Calculate":** Press the calculate button. The tool will process the dates instantly.
-4.  **Review Your Results:** The results will display your exact age in years, months, and days, as well as the total number of days you have been alive.
+In Current Age mode, you only enter your birth date. The calculator automatically uses today's date to compute your age right now.
 
-### Pro Tip
-For official purposes, always use the **YYYY-MM-DD** format (e.g., 1990-03-15) to prevent any ambiguity between day-month and month-day formats.
+In Age on Specific Date mode, two date fields appear. Enter your birth date in the first field and your target date in the second. This lets you find out how old you were (or will be) on any date—past or future.
 
+After entering dates, click "Calculate Age." The results display your age broken down into years, months, and days. Below that, you'll see additional statistics: Total Days, Total Weeks, Total Months, and Total Hours. A "Birthday Information" section shows what day of the week you were born on, when your next birthday is, and how many days until that birthday. If you've passed certain milestone ages (like 18, 21, 30), those appear in a "Milestones Reached" section. A "Next Milestone" box tells you which milestone birthday is coming up and how many days away it is.
 
-## A Step-by-Step Example
+The calculator also displays a "Life Stages" reference showing age ranges for Infant (0-1), Toddler (1-3), Child (3-13), Teenager (13-20), Young Adult (20-40), Adult (40-65), and Senior (65+).
 
-**Scenario:** What is the age of someone born on **August 10, 2010**, on **May 5, 2025**?
+---
 
-1.  **Input the Dates:**
-    *   **Date of Birth:** `2010-08-10`
-    *   **As of Date:** `2025-05-05`
+## The Core Principle: Date Arithmetic
 
-2.  **The Calculation Logic:**
-    *   The tool first calculates the provisional years: `2025 - 2010 = 15 years`.
-    *   It then checks if the birthday in 2025 has occurred. Since May (5) is before August (8), it has not. So, it adjusts the age down to **14 years**.
-    *   It then calculates the months from the last birthday (August 10, 2024) to the "as of" date (May 5, 2025). This is **8 months**.
-    *   Finally, it calculates the days, resulting in a final age of **14 years, 8 months, and 25 days**.
+Age calculation seems simple—subtract birth year from current year. But that gives you the wrong answer for roughly half the year, because it ignores whether you've had your birthday yet.
 
-3.  **Result:** The calculator will instantly display this accurate breakdown.
+Proper age calculation requires comparing not just years, but months and days. If today is October 15, 2024, and you were born March 20, 1990, you're 34 years old (your birthday passed). But if you were born November 5, 1990, you're still 33 (your birthday hasn't happened yet this year).
 
-### Try It Yourself
-*   Calculate your exact age today.
-*   Find out how many days old you are.
-*   Check how old you will be on your next birthday.
+The month and day components require additional logic. If your birth day is greater than today's day, you haven't completed the current month of age yet. If your birth month is greater than today's month (after accounting for the day), you haven't completed the current year of age yet.
 
+This creates cascading adjustments: days can borrow from months, months can borrow from years. The result is your precise age in years, months, and days—not an approximation.
 
-## Frequently Asked Questions
+---
 
-**Q: How is this calculator more accurate than just subtracting years?**
-A: Simple subtraction ignores whether your birthday has already occurred this year. This calculator performs a detailed calendar analysis, accounting for the exact day and month, as well as leap years, to give you a precise result in years, months, and days.
+## How to Calculate Age Manually
 
-**Q: Can I calculate my age on a specific date in the past or future?**
-A: Yes, absolutely. This is a key feature. By changing the "As of Date" from today to any other date, you can find out how old you were on a past date or how old you will be on a future date.
+**Step 1: Get the raw year difference.**
 
-**Q: How does the tool handle leap years?**
-A: It fully accounts for them. If your date range includes February 29th, it will be counted as a full day. This ensures complete accuracy for people born around this date.
+Current year minus birth year.
 
-**Q: What does the 'Total Days' result mean?**
-A: This is the total number of days that have elapsed from your birth date to the "As of Date." It's a single figure representing your age without being broken into years and months, which is useful for specific milestones or scientific calculations.
+Example: Born February 15, 1990. Today is October 20, 2024.
+2024 - 1990 = 34 years (preliminary)
 
-**Q: Can I use this to calculate the time between any two events?**
-A: Yes. While it's called an age calculator, it is effectively a general-purpose date duration calculator. You can input any two dates to find the time between them.
+**Step 2: Compare months.**
+
+Current month minus birth month.
+October (10) - February (2) = 8 months
+
+If this were negative, you'd subtract 1 from years and add 12 to months.
+
+**Step 3: Compare days.**
+
+Current day minus birth day.
+20 - 15 = 5 days
+
+If this were negative, you'd subtract 1 from months and add the number of days in the previous month.
+
+**Result:** 34 years, 8 months, 5 days.
+
+**Step 4: Calculate totals (optional).**
+
+Total days = (years × 365.25) + (months × 30.44) + days ≈ 12,665 days
+Total weeks = total days ÷ 7 ≈ 1,809 weeks
+Total months = (years × 12) + months = 416 months
+
+These totals are approximations because month and year lengths vary.
+
+**Step 5: Find next birthday.**
+
+Take your birth month and day, apply to the current year. If that date has passed, apply to next year. Count days between today and that date.
+
+---
+
+## Real-World Applications
+
+**Legal age verification.** Many rights and restrictions are tied to exact ages: voting at 18, drinking at 21 (in the US), Social Security at various ages. Determining whether someone has reached a threshold requires precise calculation, not just year comparison.
+
+**Insurance and actuarial work.** Insurance premiums often change at specific age thresholds. Policy effective dates need to align with actual birthdays, not approximations. Age-banding in healthcare and life insurance is legally significant.
+
+**HR and employment.** Mandatory retirement ages, pension eligibility, and age discrimination protections all require accurate age determination. Some jurisdictions count age differently for these purposes.
+
+**Medical dosing and development milestones.** Pediatric medication dosing often follows age brackets. Developmental assessments track whether children hit milestones at appropriate ages. Precision matters more for younger children where a few months represents significant development.
+
+**Event planning.** Milestone birthdays (quinceañeras, bar/bat mitzvahs, "golden birthdays") require knowing exact dates. Countdown functionality helps plan celebrations.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The February 29 problem.** People born on leap day (February 29) legally age on February 28 or March 1 in non-leap years, depending on jurisdiction. The calculator handles this by treating February 28 as the effective birthday in non-leap years.
+
+**The timezone birthday.** If you were born at 11:30 PM on December 31 in New York, but it was already January 1 in London, which date is your birthday? Legal documents usually show local time, but international comparisons get messy.
+
+**The "I'm X-and-a-half" convention.** Young children often report half-year ages. The calculator gives precise months, so you can determine if "seven and a half" is accurate or aspirational.
+
+**Historical date calculations.** Finding someone's age at a historical event (how old was your grandfather on D-Day?) requires the specific date mode. The calculator handles dates well into the past.
+
+**Future age planning.** "How old will I be when I retire in 2050?" requires forward calculation. The specific date mode handles future target dates.
+
+**The millennium baby mystery.** Were you born on December 31, 1999, or January 1, 2000? Your generation classification and various "millennium baby" distinctions depend on this one-day difference.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Month length variability.** When calculating "months" of age, the calculator must decide how to handle months of different lengths. February has 28 days (usually), July has 31. Going from January 31 to February 28—is that one month? The calculator uses a particular convention that may differ from your intuition.
+
+**Leap year handling.** Leap years add complexity beyond February 29 birthdays. The total days calculation uses 365.25 as an average, which is slightly wrong for any specific date range but correct over long periods.
+
+**Day-counting conventions.** Is your birthday "day 0" or "day 1" of your life? Different systems count differently. The calculator shows days lived, treating your birth date as the starting point (day 0 essentially).
+
+**Timezone assumptions.** The calculator uses your browser's timezone. If you were born in a different timezone and want precision to the hour, results may be slightly off.
+
+**Display versus precision.** The calculator shows Total Hours but doesn't ask for birth time. That hourly figure is an approximation based on midnight-to-midnight days. Some people find this misleading.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Using current age mode when you want a specific date.** If you want to know your age at a past or future date, you must switch to "Age on Specific Date" mode. Current Age mode always uses today.
+
+**Entering dates in wrong format.** The calculator uses a date picker, which prevents format errors. But if you're mentally converting from a different format (DD/MM/YYYY vs MM/DD/YYYY), ensure you're reading the picker correctly.
+
+**Confusing "years old" with "year of age."** If you're "in your 30th year," you're 29 years old. The calculator shows completed years (29), not the year you're currently living (30th).
+
+**Expecting precision with imprecise inputs.** If you don't know your exact birth date (common with older records or adoption situations), the calculator can't give you precise age. It will compute based on whatever date you enter.
+
+**Forgetting about the birthday calculation.** The "days until next birthday" assumes the same timezone and calendar system. If your birthday celebration is on a different date than your legal birthday, plan accordingly.
+
+---
+
+## Related Topics
+
+**Korean age system.** In traditional Korean age counting, you're 1 year old at birth and gain a year every New Year's Day, not on your birthday. A baby born on December 31 is 2 years old in Korean age on January 1—two days after birth.
+
+**Chinese zodiac years.** The Chinese zodiac runs on a lunar calendar, so your zodiac sign isn't determined by your Gregorian birth date alone. Someone born in late January might be the previous year's animal.
+
+**Gestational age versus chronological age.** Premature babies are often tracked by "adjusted age" (chronological age minus weeks premature) for developmental milestones. A baby born 8 weeks early who is chronologically 6 months old is developmentally compared to 4-month-olds.
+
+**Biological versus chronological age.** Aging research distinguishes between calendar age and biological age (how old your body "acts" based on various markers). The calculator gives chronological age only.
+
+**Half-birthdays.** Some people celebrate half-birthdays, exactly 6 months from their actual birthday. For people born on dates that don't exist 6 months away (August 31 → February 31), conventions vary.
+
+---
+
+## How This Calculator Works
+
+The calculator captures your birth date and target date (today by default for Current Age mode). It creates JavaScript Date objects for both dates.
+
+For the year/month/day breakdown:
+1. Calculate preliminary years: target year minus birth year
+2. Calculate preliminary months: target month minus birth month
+3. Calculate preliminary days: target day minus birth day
+4. Adjust: if days are negative, borrow from months (adding previous month's day count); if months are negative, borrow from years (adding 12)
+
+For total days, it subtracts the birth date timestamp from the target date timestamp, then divides by milliseconds per day (1000 × 60 × 60 × 24).
+
+Total weeks, months, and hours derive from total days through division or multiplication.
+
+The birthday calculation takes your birth month and day, applies them to the current year, and checks if that date has passed. If yes, it rolls forward to next year. The difference between today and that date gives days until next birthday.
+
+Day-of-week born uses the JavaScript Date object's `toLocaleDateString()` with weekday formatting.
+
+All processing happens client-side in your browser.
+
+---
+
+## FAQs
+
+**Why does the calculator show both "years, months, days" and "total days"?**
+
+They represent different ways of thinking about age. Years/months/days is how we commonly express age in conversation. Total days (and weeks, hours) provides a cumulative measure useful for comparisons or curiosity about large numbers.
+
+**Is the total days calculation exact?**
+
+Yes, for whole days. It calculates the actual number of days between your birth date and target date, not an approximation. However, partial days aren't counted—it treats both dates as midnight-to-midnight.
+
+**How does the calculator handle leap years?**
+
+Leap years are automatically accounted for in the day calculation because it uses actual calendar dates, not a fixed 365-day year. The Date object knows which years are leap years.
+
+**What happens if I enter February 29 as my birthday in a non-leap year?**
+
+The date picker may not allow selecting February 29 in a non-leap year. If you were born on February 29, select that date in the correct leap year (your actual birth year).
+
+**Why might my "total weeks" not equal "total days ÷ 7"?**
+
+It should, mathematically. If you see a discrepancy, it may be a rounding display issue. The calculator computes weeks by dividing total days by 7 and flooring to whole weeks.
+
+**Can I calculate age for someone who has passed away?**
+
+Yes. Use "Age on Specific Date" mode, enter their birth date and death date, and the calculator shows their age at death.
+
+**How are the milestone ages determined?**
+
+The calculator tracks standard milestone ages: 1, 5, 10, 13, 16, 18, 21, 25, 30, 40, 50, 65, 75, and 100. These represent common cultural and legal thresholds across many societies.
+
+**Does this work for historical dates?**
+
+Yes, the calculator handles dates going back many decades. Very old dates (before ~1900) may have edge cases with calendar reforms (Gregorian vs Julian), but for modern purposes, historical dates work fine.

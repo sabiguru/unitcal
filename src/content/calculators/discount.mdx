@@ -1,62 +1,252 @@
-## How to Use the Discount Calculator
-The **discount calculator** instantly computes **sale prices, savings amounts, and discount percentages** for any shopping or pricing scenario. Simply enter the original price and discount percentage to get your sale price and total savings. It also handles **multiple sequential discounts**, **VAT-inclusive pricing**, and **bulk deal comparisons**—making it perfect for shoppers hunting deals, e-commerce sellers setting promotions, or businesses negotiating bulk orders. No more mental math or spreadsheet errors—just clear, accurate results in seconds.
+# Discount Calculator: Sale Price and Savings Calculator
 
-### Key Formulas Used
-- **Sale Price**: `Original × (1 – Discount%)`
-- **Savings**: `Original – Sale Price`
-- **Multiple Discounts**: `Original × (1 – D₁) × (1 – D₂)`
-- **With VAT**: Apply discount pre-tax, then add 20% VAT (UK standard)
+## Table of Contents
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Percentage Reduction](#the-core-principle-percentage-reduction)
+- [How to Calculate Discounts Manually](#how-to-calculate-discounts-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
 
-### Best Practices for Accurate Results
-1.  **Enter pre-tax prices**—the calculator adds VAT after discounts (standard retail practice).
-2.  **For multiple discounts**, enter them in the order applied (e.g., sale discount first, then loyalty discount).
-3.  **Use exact percentages**—avoid rounding until the final result.
-4.  **For bulk deals**, calculate per-unit price to compare fairly with % discounts.
-5.  **Verify “was” prices**—retailers sometimes inflate originals to exaggerate savings.
+---
 
-## Step-by-Step Example
-You’re buying a laptop originally priced at **£800** with a **15% student discount**. VAT is 20%.
+## How to Use This Calculator
 
-**Step 1**: Enter original price = **£800**  
-**Step 2**: Enter discount = **15%**  
-**Step 3**: The calculator shows:  
-- **Discount Amount**: £800 × 0.15 = **£120**  
-- **Sale Price (excl. VAT)**: **£680**  
-- **Total with 20% VAT**: £680 × 1.20 = **£816**
+Select your calculation type: "Calculate from Percent" to find the sale price given a discount percentage, or "Calculate from Sale Price" to find what discount percentage was applied.
 
-**Alternative**: If the store offers **“20% off + extra 10% for members”**:  
-- Final Price = £800 × 0.80 × 0.90 = **£576** (excl. VAT)  
-- With VAT: **£691.20**  
-→ **Savings of £108.80** vs. single discount
+For calculating from percent:
+- Enter the Original Price—the regular or list price before any discount
+- Enter the Discount Percent—the percentage being taken off
 
-This tool turns complex pricing into simple, actionable numbers.
+For calculating from sale price:
+- Enter the Original Price
+- Enter the Sale Price—the discounted price you're paying
 
-### How do I calculate the discount percentage if I only know the original and sale price?
-Use the formula: `[(Original – Sale) ÷ Original] × 100`. The calculator does this automatically—just enter both prices.
+Click "Calculate" to see results. The output displays:
+- Discount Amount (how much you save in currency)
+- Sale Price (what you actually pay)
+- Total Savings
+- Discount Percentage (useful when calculating from sale price)
 
-### Can this handle “Buy 2, Get 1 Free” deals?
-Not directly—but you can calculate the effective discount:  
-- Total items = 3, Paid items = 2 → Discount = (1/3) × 100 ≈ **33.3%**  
-Enter 33.3% as the discount percentage to get the per-item sale price.
+A "Reset" button clears all fields for a new calculation.
 
-### Does this work for VAT-inclusive prices?
-Yes—but specify whether the original price includes VAT. The calculator assumes **pre-VAT pricing** (standard for discounts). If your input includes VAT, select the “VAT-inclusive” option to adjust correctly.
+---
 
-### Why is my total with two discounts not 30% off?
-Discounts are **multiplicative, not additive**. A 20% + 10% discount = 28% off:  
-`1 – (0.80 × 0.90) = 0.28`. The calculator shows the true combined discount.
+## The Core Principle: Percentage Reduction
 
-### Can I compare two different sale offers?
-Yes! Calculate the **final price per unit** for each:  
-- Offer A: 3 for £15 → £5/unit  
-- Offer B: 25% off £7 → £5.25/unit  
-The calculator helps you input these scenarios to see which saves more.
+A discount is a percentage reduction from an original price. When a store advertises "25% off," they're removing 25% of the original price.
 
-### Is this accurate for international sales tax?
-The calculator uses **20% VAT** by default (UK standard). For other regions, manually adjust the tax rate or calculate pre-tax.
+The key formula: Sale Price = Original Price × (1 - Discount%)
 
-### How do I find the original price from a sale price?
-Enter the sale price and discount percentage. The calculator reverses the formula: `Original = Sale ÷ (1 – Discount%)`.
+This can be rearranged:
+- Discount Amount = Original Price × Discount%
+- Discount% = (Original - Sale) ÷ Original × 100
 
-### What if the discount is a fixed amount (e.g., £20 off)?
-Select “Fixed Amount” mode. Enter the discount as a currency value instead of a percentage. The calculator will compute the effective % and final price.
+Understanding discounts helps consumers evaluate deals and businesses set promotional pricing. Not all discounts are equal—a 50% discount on an inflated price may cost more than a 20% discount on a fair price.
+
+Multiple discounts don't add together. A 20% discount followed by an additional 10% discount is not 30% total—it's 28% (you apply 20% first, then 10% to the reduced price).
+
+---
+
+## How to Calculate Discounts Manually
+
+**Finding the sale price:**
+
+Sale Price = Original Price × (1 - Discount ÷ 100)
+
+Example: £80 item with 25% discount
+Sale Price = £80 × (1 - 0.25) = £80 × 0.75 = £60
+
+**Finding the discount amount:**
+
+Discount Amount = Original Price × (Discount ÷ 100)
+
+Example: £80 item with 25% discount
+Discount Amount = £80 × 0.25 = £20
+
+**Finding the discount percentage:**
+
+Discount% = (Original - Sale) ÷ Original × 100
+
+Example: Originally £80, now £60
+Discount% = (£80 - £60) ÷ £80 × 100 = £20 ÷ £80 × 100 = 25%
+
+**Multiple sequential discounts:**
+
+Final Price = Original × (1 - Discount₁%) × (1 - Discount₂%)
+
+Example: £100 item with 20% off, then additional 10% off
+Final = £100 × 0.80 × 0.90 = £72 (not £70)
+
+**With VAT:**
+
+Apply discount first, then add VAT:
+Price with VAT = Sale Price × (1 + VAT%)
+
+Example: £60 sale price, 20% VAT
+Final = £60 × 1.20 = £72
+
+---
+
+## Real-World Applications
+
+**Shopping decisions.** Quickly calculate what you'll actually pay during sales. A "40% off" sign is meaningless without knowing the final price.
+
+**Comparing deals.** Is "£20 off" or "30% off" better? Depends on the original price. The calculator helps compare different discount structures.
+
+**Negotiation.** When negotiating prices, calculate what different percentage reductions mean in actual savings. "Can you do 15% instead of 10%?" translates to specific dollar amounts.
+
+**Retail pricing.** Businesses calculate sale prices that hit target margins. "We need to clear inventory at 40% off—what's our revenue per unit?"
+
+**Bulk purchasing.** Evaluate volume discounts: "10% off orders over $500" versus "15% off orders over $1000." Which is better for your order size?
+
+---
+
+## Scenarios People Actually Run Into
+
+**The stacked discount confusion.** The store offers 20% off, plus you have a 15% loyalty discount. You expect 35% off. But 20% + 15% sequentially = 32% effective discount. You save less than expected.
+
+**The inflated original price.** That "50% off" TV seems amazing until you research and find the "original price" was inflated. The sale price is actually the normal market price. Always compare to actual market prices, not just claimed originals.
+
+**The per-unit versus total discount.** "Buy 3, get 1 free" sounds like 33% off, but it's actually 25% off (you pay for 3, get 4, so discount = 1/4 = 25%).
+
+**The VAT timing question.** Is the discount applied before or after VAT? Standard practice is discount first, then VAT on the reduced amount. But some retailers apply VAT first, then discount—resulting in higher final prices.
+
+**The minimum purchase requirement.** "20% off orders over £100" means you need to spend at least £100 before discount. After 20% off, you pay £80. But if your order is £95, you get nothing—consider adding £5 more to trigger the discount.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Percentage versus absolute discounts.** "£20 off" is better than "20% off" if the item costs less than £100. Above £100, percentage wins. At exactly £100, they're equal.
+
+**Early purchase versus waiting for sales.** You could buy now at full price and have the item, or wait for a 30% sale. But waiting has costs: time without the item, risk it sells out, and the mental overhead of monitoring sales.
+
+**Quantity discounts and storage.** "Buy 10, save 40%" might be great savings per unit, but only if you'll actually use 10 before they expire or become obsolete. Unused inventory isn't a deal.
+
+**Coupons versus loyalty programs.** A 10% coupon gives immediate savings. A loyalty program might offer 5% back as points. The coupon is worth more today; the points are worth less (delayed, may expire, requires future purchases).
+
+**Price matching versus convenience.** Store A has 25% off. Store B (closer, more convenient) is full price but offers price matching. The hassle of price matching versus the convenience of paying full price is a real trade-off.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Adding sequential discounts.** 20% off + 10% off ≠ 30% off. Apply them sequentially: first discount reduces the price, second discount applies to the already-reduced price.
+
+**Ignoring the original price.** "70% off" is meaningless without knowing what you're saving from. Verify the original price is legitimate and reflects actual market value.
+
+**Forgetting taxes.** A £100 item at 20% off is £80, but with 20% VAT becomes £96. The "£100 item" might mean £100 including tax or excluding tax—big difference.
+
+**Misunderstanding "buy one get one."** BOGO 50% off means the second item is half price—effectively 25% off your total if items are equal price. BOGO free is 50% off your total.
+
+**Comparing discounts on different bases.** 30% off a £50 item (£15 savings) beats 40% off a £30 item (£12 savings) in absolute terms, even though 40% > 30%.
+
+---
+
+## Related Topics
+
+**Markup and margin.** The retailer's perspective: how much to add to cost to set price. Markup is percentage of cost; margin is percentage of selling price.
+
+**Compound discounts.** When multiple discounts apply, they compound (multiply) rather than add. This is the same math as compound interest, in reverse.
+
+**Price elasticity.** How much does demand change when price changes? A 10% discount might increase sales by 20% or by 5%—understanding elasticity helps businesses set optimal discount levels.
+
+**Loss leaders.** Selling items below cost to attract customers who'll buy profitable items. The "discount" is actually a marketing expense.
+
+**Dynamic pricing.** Prices that change based on demand, time, or customer. Your "20% off" might be someone else's full price.
+
+---
+
+## How This Calculator Works
+
+**From percentage to sale price:**
+
+```
+discountAmount = originalPrice × (discountPercent / 100)
+salePrice = originalPrice - discountAmount
+```
+
+**From sale price to percentage:**
+
+```
+discountAmount = originalPrice - salePrice
+discountPercentage = (discountAmount / originalPrice) × 100
+```
+
+**Validation:**
+
+The calculator validates inputs:
+- Original price must be positive
+- Discount percent must be 0-100
+- Sale price must be positive and less than or equal to original price
+
+**Currency formatting:**
+
+Results are formatted using Intl.NumberFormat for proper currency display with two decimal places.
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**How do I calculate the discount percentage if I only know original and sale price?**
+
+Divide the difference by the original price, then multiply by 100. Example: (£80 - £60) ÷ £80 × 100 = 25%.
+
+**Do sequential discounts add up?**
+
+No. A 20% discount followed by 10% more gives you 28% total, not 30%. Each discount applies to the already-reduced price.
+
+**Should discounts be applied before or after tax?**
+
+Standard practice is discount first, then tax on the discounted amount. This benefits consumers. Some jurisdictions may have specific rules.
+
+**What does "up to 50% off" mean?**
+
+Some items are 50% off, but most are probably discounted less. The maximum discount is 50%, not the typical discount. Be skeptical of "up to" claims.
+
+**How do I compare different discount offers?**
+
+Calculate the final price for each offer. "£20 off" versus "25% off" depends on the original price. Also consider: are there minimum purchase requirements? Exclusions?
+
+**What's a good discount to wait for?**
+
+Depends on the product. Electronics often see 20-30% off during sales. Fashion might hit 50-70% off season-end. Everyday items rarely exceed 10-15%. Know typical discount levels for what you're buying.
+
+**How do stores make money on deep discounts?**
+
+Loss leaders lose money but drive traffic. Clearance sales recover some value from unsold inventory. Bulk purchases get lower wholesale prices. And sometimes the "original price" was inflated.
+
+**Is "50% off the second item" the same as "25% off both"?**
+
+If items are the same price, yes—mathematically identical. If items are different prices, it depends which is "second." Always calculate the actual total.
+
+**How do I calculate the original price from a sale price and discount?**
+
+Original = Sale Price / (1 - Discount%). If something costs $60 after 25% off, the original was $60 / 0.75 = $80.
+
+**What's the difference between a discount and a rebate?**
+
+A discount reduces the purchase price immediately. A rebate requires you to pay full price and then submit for reimbursement later. Rebates have lower redemption rates, so they often cost companies less.
+
+**How do loyalty programs compare to straight discounts?**
+
+A 10% instant discount saves money now. A 10% loyalty reward requires a future purchase to redeem. The instant discount is worth more because money today is worth more than money tomorrow, and the loyalty reward may expire or go unused.
+
+**What is price anchoring and why does it matter?**
+
+Retailers set high "original prices" to make discounts seem larger. A $100 item "marked down" to $50 feels like a better deal than an everyday $50 item, even if they're identical. Always compare to actual market prices.
+
+**How do I evaluate bundle discounts?**
+
+Calculate the per-item price in the bundle versus buying items separately. Some bundles genuinely save money; others include items you don't want. Only count savings on items you'd actually purchase.
+
+**What's the psychology behind pricing ending in .99?**
+
+$19.99 feels significantly cheaper than $20.00 due to left-digit bias. When evaluating discounts, round up to see the true price. The savings from $24.99 to $19.99 is $5, not "from $25 to $20."

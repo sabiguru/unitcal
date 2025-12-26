@@ -6,7 +6,6 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { generateCalculatorBreadcrumbs } from '@/lib/breadcrumbs';
 import EzoicAd from '@/components/ads/EzoicAd';
 import { EZOIC_PLACEMENTS } from '@/config/ezoicPlacements';
-import CalculatorLearnCrosslink from '@/components/CalculatorLearnCrosslink';
 import { getRelatedCalculators } from '@/data/relatedCalculators';
 import { getCategoryForCalculator } from '@/utils/calculatorCategoryMapping';
 import MDXContent from '@/components/MDXContent';
@@ -121,8 +120,6 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
             </div>
 
             <EzoicAd placementId={EZOIC_PLACEMENTS.CALCULATOR_CONTENT} className="text-center" />
-
-            <CalculatorLearnCrosslink calculatorSlug={slug} calculatorTitle={meta.title} />
 
             {meta.mdx && <MDXContent slug={meta.mdx.replace('.mdx', '')} />}
           </main>

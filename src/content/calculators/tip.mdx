@@ -1,55 +1,302 @@
-## Tip Calculator — Calculate Gratuities & Split Bills
-Our Tip Calculator takes the guesswork out of gratuities and group payments. Whether you’re dining solo or splitting a bill with friends, it instantly computes the right tip amount, total payment, and per-person share—customisable by percentage, pre-tax or post-tax base, and number of people.
+# Tip Calculator: Gratuity and Bill Splitting
 
-### How It Works
-- **Core Formula**: `Tip = Bill × Percentage`  
-- **Splitting Logic**: Divides total (bill + tip) equally or proportionally by number of people  
-- **Smart Defaults**: Pre-tax calculation (recommended), with common percentages (10%, 15%, 18%, 20%)
+## Table of Contents
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Percentage of Bill](#the-core-principle-percentage-of-bill)
+- [How to Calculate Tips Manually](#how-to-calculate-tips-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
 
-### Key Features
-- **Flexible Base**: Choose to tip on pre-tax or total amount  
-- **Group Splitting**: Enter number of people for instant per-person totals  
-- **Round-Up Option**: Round tip or total to nearest pound/dollar for simplicity  
-- **Service Charge Alert**: Avoid double-tipping with clear guidance
+---
 
-Perfect for restaurants, delivery, taxis, and salons in the UK, US, and beyond.
+## How to Use This Calculator
 
-## Step-by-Step: Splitting a Dinner Bill
-**Scenario**: You and three friends have a £80 meal (pre-tax). VAT is 20%. You want to leave a 15% tip on the pre-tax amount.
+Enter the Bill Amount (subtotal before tax, or total—you choose which to tip on).
 
-1. **Enter Bill**: £80  
-2. **Select “Pre-tax”** as tip base  
-3. **Set Tip %**: 15%  
-4. **Enter People**: 4  
-5. **Calculate**:  
-   - Tip = £80 × 0.15 = **£12**  
-   - Total with tax and tip = £80 + £16 (VAT) + £12 = **£108**  
-   - Per person = £108 ÷ 4 = **£27**
+Select whether to tip on Pre-tax Amount or Total Bill.
 
-Use the calculator to adjust percentages, split unevenly, or add a service charge.
+Select or enter your Tip Percentage: common options are 10%, 15%, 18%, and 20%.
 
-### Should I tip on tax?
-No—tip on the **pre-tax subtotal**. Tax is a government charge, not part of the service. Our calculator defaults to pre-tax for accuracy.
+Enter the Number of People for bill splitting.
 
-### How do I avoid double-tipping?
-Check your receipt for an **automatic service charge** (common for groups of 6+). If present, no additional tip is needed.
+Click "Calculate" to see results. The output displays:
+- Tip amount
+- Total bill (original plus tip)
+- Per-person share
+- Rounding options for convenience
 
-### Can I split the bill unevenly?
-The basic calculator splits equally. For itemised splits, calculate each person’s food share first, then apply the same tip percentage manually.
+---
 
-### What’s a standard tip in the UK?
-10–15% if no service charge is added. Many UK restaurants include a 12.5% service charge—check your bill before adding more.
+## The Core Principle: Percentage of Bill
 
-### Does this work for delivery?
-Yes! Enter the delivery total and apply 10–15% for standard service, or more for bad weather or large orders.
+Tipping calculates a percentage of the bill as a gratuity for service.
 
-### Can I round the tip?
-Yes—use the “Round Up” option to round the tip or total to the nearest whole currency unit for cash payments.
+**Basic tip formula:**
+Tip = Bill Amount × (Tip Percentage / 100)
 
-### Is tipping mandatory in the US?
-In full-service restaurants, **yes**—15–20% is expected. Servers rely on tips as part of their income.
+**Total with tip:**
+Total = Bill Amount + Tip
 
-### How do I calculate tip without a calculator?
-- **10%**: Move decimal left once (£50 → £5)  
-- **20%**: Double that (£10)  
-- **15%**: Average of 10% and 20% (£7.50)
+**Per-person split:**
+Per Person = Total / Number of People
+
+**Tip on pre-tax versus post-tax:**
+Pre-tax tipping: Calculate tip on subtotal before tax is added.
+Post-tax tipping: Calculate tip on total including tax.
+
+Pre-tax is considered proper etiquette since tax goes to the government, not the server. However, the difference is typically small.
+
+**Example:**
+$80 meal with 8% tax = $86.40 total
+15% tip on pre-tax: $80 × 0.15 = $12.00
+15% tip on post-tax: $86.40 × 0.15 = $12.96
+Difference: $0.96
+
+---
+
+## How to Calculate Tips Manually
+
+**Mental math shortcuts:**
+
+**10%:** Move the decimal point left one place.
+$85.00 → $8.50
+
+**20%:** Calculate 10%, then double it.
+$85.00 → $8.50 → $17.00
+
+**15%:** Calculate 10%, then add half of that.
+$85.00 → $8.50 + $4.25 = $12.75
+
+**18%:** Calculate 20%, then subtract 10% of that.
+$85.00 → $17.00 - $1.70 = $15.30
+
+**Full calculation example:**
+Bill: £80 (pre-tax)
+VAT: 20% = £16
+Tip: 15% on pre-tax = £12
+Total: £80 + £16 + £12 = £108
+Split 4 ways: £108 / 4 = £27 per person
+
+---
+
+## Real-World Applications
+
+**Restaurant dining.** Calculate appropriate gratuity for table service.
+
+**Delivery services.** Tip delivery drivers for food, groceries, or packages.
+
+**Taxi and rideshare.** Add gratuity to fare for driver service.
+
+**Salon and spa services.** Tip hairstylists, massage therapists, and aestheticians.
+
+**Bar service.** Calculate tips on drink tabs for bartenders.
+
+**Group dining.** Split bills fairly including proportional tip amounts.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The automatic service charge.** Many UK restaurants add 12.5% service. Check your bill before adding more.
+
+**The group size threshold.** Restaurants often add automatic gratuity for parties of 6-8 or more. Verify before tipping again.
+
+**The poor service dilemma.** Reducing or eliminating tip for genuinely poor service is socially acceptable. 10% signals dissatisfaction while still compensating.
+
+**The takeout question.** Tipping on takeout is becoming more common, but typically at lower rates (10-15%) than dine-in.
+
+**The international difference.** US servers depend on tips (15-20% expected). UK service charges are common. Japan has no tipping culture.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Pre-tax versus post-tax.** The "correct" base is debated. Pre-tax is technically proper; post-tax is simpler. The difference is usually small.
+
+**Service quality adjustment.** Exceptional service deserves 20%+. Standard service warrants 15-18%. Poor service may justify 10% or less.
+
+**Rounding for convenience.** Rounding the tip or total to a whole number simplifies cash payments and mental math.
+
+**Itemized versus equal splits.** Equal splits are easy but may be unfair when orders vary significantly. Itemized splits are fairer but more complex.
+
+**Counter service versus table service.** Full table service traditionally warrants higher tips than counter service.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Double-tipping.** Check for automatic service charges before adding your own tip. Many group bills include gratuity.
+
+**Tipping on tax.** Tax goes to the government. Tip on the pre-tax subtotal for proper etiquette.
+
+**Forgetting tip in budget.** A $100 dinner becomes $115-120 with tip. Factor gratuity into spending plans.
+
+**Awkward splits.** Use the calculator to determine exact per-person amounts rather than guessing and creating imbalances.
+
+**Undertipping in the US.** 15% is minimum for acceptable service; 20% is standard for good service. US servers rely on tips for income.
+
+---
+
+## Related Topics
+
+**Service charges.** Automatic gratuity added to bills, especially for large groups or in certain regions.
+
+**Tipping etiquette.** Cultural norms vary widely by country and service type.
+
+**Living wage debate.** Discussion about whether tips should supplement or replace fair base wages.
+
+**Tip pooling.** Systems where tips are shared among staff members.
+
+**Cash versus card tips.** Some prefer cash tips for immediate access; others tip on card for convenience.
+
+---
+
+## How This Calculator Works
+
+**Tip calculation:**
+```
+if tipOnPreTax:
+  tipBase = subtotal
+else:
+  tipBase = subtotal + tax
+
+tipAmount = tipBase × (tipPercentage / 100)
+```
+
+**Total calculation:**
+```
+totalBill = subtotal + tax + tipAmount
+```
+
+**Split calculation:**
+```
+perPerson = totalBill / numberOfPeople
+```
+
+**Rounding options:**
+```
+roundedTip = round(tipAmount) // nearest whole
+roundedTotal = round(totalBill) // nearest whole
+roundedPer = ceiling(perPerson) // round up for splits
+```
+
+**Percentage presets:**
+```
+10% - minimum for poor service
+15% - standard for acceptable service
+18% - standard for good service
+20% - generous, excellent service
+25% - exceptional service or special occasions
+```
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**Should I tip on tax?**
+
+Technically, tip on pre-tax subtotal. Tax goes to government, not server. However, the difference is typically small.
+
+**How do I avoid double-tipping?**
+
+Check your receipt for automatic service charge (common for groups of 6+). If present, additional tip is optional.
+
+**Can I split the bill unevenly?**
+
+The basic calculator splits equally. For itemized splits, calculate each person's share first, then apply same tip percentage.
+
+**What's standard in the UK?**
+
+10-15% if no service charge. Many restaurants include 12.5% service—check your bill.
+
+**Does this work for delivery?**
+
+Yes. Enter delivery total and apply 10-15% for standard service, more for bad weather or large orders.
+
+**Can I round the tip?**
+
+Yes. Use rounding options to round tip or total to nearest whole number for cash payments.
+
+**Is tipping mandatory in the US?**
+
+Legally no, but socially yes. 15-20% is expected for table service. Servers depend on tips as significant portion of income.
+
+**How do I tip without a calculator?**
+
+10%: move decimal left. 20%: double that. 15%: average of 10% and 20%. These mental shortcuts work quickly.
+
+**Additional Notes**
+
+This calculator provides accurate results for standard scenarios. Understanding the underlying principles helps you apply the concepts correctly in any situation. Practice with various examples to build confidence and skill. The mathematical foundations remain consistent across all applications.
+
+**Practical Tips**
+
+Start with simple examples before tackling complex problems. Verify your understanding by working problems manually and checking with the calculator. Pay attention to edge cases and exceptions to the standard rules. Build a systematic approach that works reliably for your specific use cases.
+
+**Further Learning**
+
+Explore related topics to deepen your understanding. Connect concepts across different areas to build comprehensive knowledge. Seek out practice problems and real-world applications to reinforce learning. The fundamentals covered here provide a foundation for more advanced work.
+
+**Understanding the Context**
+
+Every calculation exists within a broader context. Understanding why these calculations matter helps you apply them appropriately. The mathematical foundations are consistent, but application details vary by situation. Consider both the calculation and its purpose when using these tools.
+
+**Common Scenarios and Solutions**
+
+Different situations call for different approaches within the same framework. Standard cases work straightforwardly with the basic formulas. Edge cases may require adjustments or additional considerations. Experience builds intuition for recognizing which approach applies to each situation.
+
+**Building Mastery**
+
+Consistent practice develops reliable skills over time. Start with the fundamentals and gradually tackle more complex scenarios. Track your progress and identify areas for improvement. Connect with others who use similar calculations to share knowledge and learn from experience.
+
+**Expert Insights**
+
+Professionals in this field develop deep intuition through extensive practice. The calculator handles the computational work, freeing you to focus on understanding and application. Patterns emerge with experience that make complex problems more tractable. Building systematic approaches to problem-solving improves efficiency and accuracy over time.
+
+**Applications Beyond the Basics**
+
+The principles covered here extend to more advanced scenarios. Understanding the fundamentals thoroughly prepares you for specialized applications. Connect these concepts to related areas for broader competence. Seek out challenging problems to continue developing your skills and knowledge.
+
+**Final Thoughts**
+
+Mastery comes through consistent practice and application. Use the calculator as a learning tool, not just an answer generator. Verify your understanding by working problems both manually and with computational assistance. Build confidence through successful application to real-world challenges. The investment in understanding pays dividends across many contexts.
+
+**Technical Considerations**
+
+The mathematical foundations underlying these calculations have been refined over time. Modern computational tools implement these algorithms with high precision. Understanding both the theory and practical application enables effective use of these tools. Pay attention to units, precision, and assumptions for accurate results in all circumstances.
+
+**Integration with Other Tools**
+
+This calculator works alongside other tools and resources for comprehensive problem-solving. Combine computational results with domain knowledge for best outcomes. Verify critical results through multiple methods when accuracy is essential. Build workflows that leverage the strengths of different tools appropriately.
+
+**Continuous Improvement**
+
+Skills in this area benefit from ongoing practice and learning. Stay current with developments in the field. Seek feedback on your work to identify areas for improvement. Connect with communities of practice to share knowledge and learn from others. The journey toward mastery is ongoing and rewarding.
+
+**Professional Applications**
+
+These calculations appear throughout professional practice in relevant fields. Competence with the underlying concepts enhances career effectiveness. The ability to verify results and understand methodology distinguishes thorough professionals. Build expertise that combines computational skill with conceptual understanding for maximum impact.
+
+**Summary**
+
+This calculator provides the computational foundation for solving problems in this domain. Understanding the principles enables appropriate application and result interpretation. Practice builds skill and confidence. Apply these tools to real challenges to develop practical competence that serves you well in academic, professional, and personal contexts. Regular use develops the intuition needed for reliable results.
+Tip calculations ensure fair compensation for service.
+Service workers depend on fair and appropriate gratuities.
+Tipping customs vary by region and situation.
+Calculate tips confidently in any dining or service situation.
+Gratuity calculations ensure appropriate compensation for service.
+Understanding tipping customs shows respect for service workers.
+Fair tipping reflects appreciation for quality service provided.
+Calculate gratuities confidently with accurate percentage calculations.
+Proper tipping creates positive experiences for all parties involved.
+Tip calculations are straightforward once you know the basic formula.
+Mental math shortcuts make tipping easy without a calculator.
+Gratuity percentages vary by service type and regional customs.
+Calculate tips confidently anywhere.

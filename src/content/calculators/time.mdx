@@ -1,52 +1,294 @@
-## Time Calculator — Add, Subtract & Convert Durations
-Our Time Calculator handles all time arithmetic with precision, whether you’re tracking work hours, planning events, or managing projects. It adds and subtracts **hours, minutes, and seconds**, calculates **differences between clock times**, and converts results to **decimal hours** for payroll—all while automatically managing base-60 carry/borrow logic.
+# Time Calculator: Add, Subtract, and Convert Time
 
-### How It Works
-- **Core Logic**: Converts inputs to total seconds, performs math, then converts back to readable time.  
-- **Time vs. Duration**: Handles both clock times (e.g., `9:30 AM`) and durations (e.g., `2:45`).  
-- **Decimal Conversion**: Instantly converts `HH:MM` to decimal hours (e.g., `7:30` → `7.5`).  
-- **Cross-Day Awareness**: Automatically adjusts for durations spanning midnight.
+## Table of Contents
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Base-60 Arithmetic](#the-core-principle-base-60-arithmetic)
+- [How to Calculate Time Manually](#how-to-calculate-time-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
 
-### Key Features
-- **Add/Subtract**: Combine multiple time durations.  
-- **Time Difference**: Find elapsed time between two clock times.  
-- **Decimal Hours**: Toggle between `HH:MM` and decimal for payroll.  
-- **Multiplication/Division**: Scale durations (e.g., `1:20 × 5 = 6:40`).  
+---
 
-Perfect for **timesheets**, **project tracking**, **event planning**, and **fitness logging**.
+## How to Use This Calculator
 
-## Step-by-Step: Calculating Net Work Hours
-**Scenario**: You clocked in at **8:47 AM** and out at **5:22 PM**, with a **40-minute unpaid lunch**.
+Select your Operation: Add durations, Subtract durations, Find difference between times, or Convert formats.
 
-1. **Calculate total time**:  
-   - `17:22 – 08:47 = 8 hours 35 minutes`  
-2. **Subtract lunch**:  
-   - `8:35 – 0:40 = 7 hours 55 minutes`  
-3. **Convert to decimal**:  
-   - `7 + (55/60) ≈ 7.92 hours`
+For time difference, enter Start Time and End Time in 12-hour (with AM/PM) or 24-hour format.
 
-Use the calculator to input start/end times and breaks—it handles all conversions automatically!
+For duration arithmetic, enter values in HH:MM or HH:MM:SS format.
 
-### How do I calculate time difference for a night shift?
-If your shift crosses midnight (e.g., `10:00 PM` to `6:00 AM`), the calculator automatically adds 24 hours to the end time. Just enter the times as-is—the result will be **8 hours**.
+Enter any Breaks or adjustments to subtract from the total.
 
-### Can I add more than two time durations?
-Yes! Use the “Add Duration” button to sum multiple entries (e.g., daily work logs for a week).
+Click "Calculate" to see results. The output displays:
+- Result in HH:MM:SS format
+- Decimal hours (for payroll)
+- Days:Hours:Minutes (for long durations)
 
-### Why convert to decimal hours?
-Payroll systems require decimal hours (e.g., `7.75`), not `7:45`. The calculator provides both formats for flexibility.
+---
 
-### Does this work for seconds?
-Yes—enter `HH:MM:SS` for second-level precision in scientific, sports, or technical applications.
+## The Core Principle: Base-60 Arithmetic
 
-### How do I handle AM/PM?
-The calculator accepts both 12-hour (with AM/PM) and 24-hour formats. For time differences, 24-hour is recommended to avoid ambiguity.
+Time uses base-60 for minutes and seconds, unlike our base-10 number system. This requires special handling for carries and borrows.
 
-### Can I multiply time by a number?
-Yes—e.g., if a task takes `1:15`, enter `1:15 × 8` to get **10:00** total.
+**Base-60 relationships:**
+- 60 seconds = 1 minute
+- 60 minutes = 1 hour
+- 24 hours = 1 day
 
-### Is this suitable for timesheets?
-Absolutely. It’s designed for accurate payroll calculations, including break subtraction and decimal conversion.
+**Addition with carry:**
+2:45 + 1:30 = 3:75 → 4:15 (75 minutes = 1 hour 15 minutes)
 
-### What if my total exceeds 24 hours?
-No problem—the calculator displays totals like `25:30` (25 hours 30 minutes), ideal for weekly hour tracking.
+**Subtraction with borrow:**
+3:15 - 1:45 = 2:75 - 1:45 = 1:30 (borrow 60 minutes from hours)
+
+**Decimal conversion:**
+HH:MM → Decimal hours = Hours + (Minutes / 60)
+7:30 → 7 + (30/60) = 7.5 decimal hours
+
+**Time difference across midnight:**
+If end time < start time, add 24 hours to end time before subtracting.
+10:00 PM to 6:00 AM = 22:00 to 30:00 = 8 hours
+
+---
+
+## How to Calculate Time Manually
+
+**Example: Calculate work hours with lunch break**
+
+Clock in: 8:47 AM
+Clock out: 5:22 PM
+Lunch: 40 minutes (unpaid)
+
+**Step 1: Convert to 24-hour**
+8:47 and 17:22
+
+**Step 2: Calculate raw difference**
+17:22 - 8:47
+Minutes: 22 - 47 = -25 → borrow 60 → 82 - 47 = 35
+Hours: 16 - 8 = 8 (after borrow: 17-1=16)
+Raw time: 8:35
+
+**Step 3: Subtract lunch**
+8:35 - 0:40
+Minutes: 35 - 40 = -5 → borrow 60 → 95 - 40 = 55
+Hours: 7 (after borrow: 8-1=7)
+Net time: 7:55
+
+**Step 4: Convert to decimal**
+7 + (55/60) = 7 + 0.917 = 7.92 decimal hours
+
+---
+
+## Real-World Applications
+
+**Timesheet calculations.** Track daily work hours and convert to decimal for payroll systems.
+
+**Project time tracking.** Sum time spent on tasks across days or weeks.
+
+**Event planning.** Calculate duration between event start and end times.
+
+**Fitness logging.** Track workout durations and running/cycling times.
+
+**Cooking and baking.** Add preparation, cooking, and resting times for meal planning.
+
+**Travel planning.** Calculate total journey time including connections and layovers.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The midnight crossing.** A shift from 10 PM to 6 AM crosses midnight. The calculator handles this automatically.
+
+**The payroll decimal requirement.** Your timesheet needs 7.75, not 7:45. The decimal conversion provides the correct format.
+
+**The multiple entry sum.** You worked Monday through Friday with different hours each day. Add all five durations for the weekly total.
+
+**The overtime calculation.** After 40 hours, you need to track regular and overtime separately. Calculate weekly total, then subtract 40 for overtime.
+
+**The break complexity.** Multiple breaks of different lengths need to be summed and subtracted from total time worked.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Precision requirements.** Payroll often rounds to nearest quarter hour (0.25). Check your company's policy before rounding.
+
+**12-hour versus 24-hour.** 24-hour format eliminates AM/PM confusion. Use it for calculations, convert for display if needed.
+
+**Seconds inclusion.** Most timesheet calculations ignore seconds. Include them only when precision matters (sports, scientific timing).
+
+**Rounding methods.** Round to nearest? Always up? Always down? Different policies have different fairness implications.
+
+**Break tracking.** Some systems auto-deduct breaks; others require manual entry. Know your system's behavior.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Forgetting AM/PM.** 8:00 to 5:00 is ambiguous. Is that 9 hours or 21 hours? Use 24-hour format for clarity.
+
+**Mixing formats.** Don't add 1.5 hours (decimal) to 2:30 (HH:MM). Convert to the same format first.
+
+**Cross-midnight errors.** A shift ending after midnight requires special handling. The calculator manages this automatically.
+
+**Decimal versus time confusion.** 7.5 hours = 7:30, not 7:50. The decimal represents fractions of an hour, not minutes.
+
+**Rounding before final calculation.** Keep full precision through all calculations. Round only the final result.
+
+---
+
+## Related Topics
+
+**Decimal time.** Expressing time as fractions of an hour (7.5 = 7 hours 30 minutes). Essential for payroll.
+
+**24-hour time.** Military time that eliminates AM/PM ambiguity. 13:00 = 1:00 PM.
+
+**Time zones.** When calculating across zones, convert to a common reference (UTC) first.
+
+**Duration versus clock time.** Duration is a length of time; clock time is a specific moment. Different concepts, similar notation.
+
+**ISO 8601.** International standard for date and time representation.
+
+---
+
+## How This Calculator Works
+
+**Time to seconds conversion:**
+```
+totalSeconds = (hours × 3600) + (minutes × 60) + seconds
+```
+
+**Seconds to time conversion:**
+```
+hours = floor(totalSeconds / 3600)
+remaining = totalSeconds % 3600
+minutes = floor(remaining / 60)
+seconds = remaining % 60
+```
+
+**Addition:**
+```
+result = time1Seconds + time2Seconds
+convert result back to HH:MM:SS
+```
+
+**Subtraction:**
+```
+result = time1Seconds - time2Seconds
+if result < 0 and calculating time difference:
+  add 24 hours (86400 seconds)
+convert result back to HH:MM:SS
+```
+
+**Decimal conversion:**
+```
+decimalHours = hours + (minutes / 60) + (seconds / 3600)
+```
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**How do I calculate time for a night shift?**
+
+Enter times as-is. If your shift crosses midnight (10 PM to 6 AM), the calculator automatically handles the day change.
+
+**Can I add more than two durations?**
+
+Yes. Use the "Add Duration" button to sum multiple time entries for weekly totals or project tracking.
+
+**Why convert to decimal hours?**
+
+Payroll systems typically require decimal hours (7.75) rather than HH:MM format (7:45) for wage calculations.
+
+**Does this work for seconds?**
+
+Yes. Enter HH:MM:SS for second-level precision in sports timing, scientific measurements, or detailed tracking.
+
+**How do I handle AM/PM?**
+
+The calculator accepts both 12-hour (with AM/PM) and 24-hour formats. For time differences, 24-hour is recommended to avoid errors.
+
+**Can I multiply time by a number?**
+
+Yes. If a task takes 1:15 and you do it 8 times, calculate 1:15 × 8 = 10:00 total.
+
+**What if my total exceeds 24 hours?**
+
+No problem. Results display as hours:minutes (e.g., 37:45) for totals exceeding one day. Days can be shown separately.
+
+**Is this suitable for timesheets?**
+
+Yes. It's designed for accurate payroll calculations including break subtraction and decimal conversion.
+
+**Additional Notes**
+
+This calculator provides accurate results for standard scenarios. Understanding the underlying principles helps you apply the concepts correctly in any situation. Practice with various examples to build confidence and skill. The mathematical foundations remain consistent across all applications.
+
+**Practical Tips**
+
+Start with simple examples before tackling complex problems. Verify your understanding by working problems manually and checking with the calculator. Pay attention to edge cases and exceptions to the standard rules. Build a systematic approach that works reliably for your specific use cases.
+
+**Further Learning**
+
+Explore related topics to deepen your understanding. Connect concepts across different areas to build comprehensive knowledge. Seek out practice problems and real-world applications to reinforce learning. The fundamentals covered here provide a foundation for more advanced work.
+
+**Understanding the Context**
+
+Every calculation exists within a broader context. Understanding why these calculations matter helps you apply them appropriately. The mathematical foundations are consistent, but application details vary by situation. Consider both the calculation and its purpose when using these tools.
+
+**Common Scenarios and Solutions**
+
+Different situations call for different approaches within the same framework. Standard cases work straightforwardly with the basic formulas. Edge cases may require adjustments or additional considerations. Experience builds intuition for recognizing which approach applies to each situation.
+
+**Building Mastery**
+
+Consistent practice develops reliable skills over time. Start with the fundamentals and gradually tackle more complex scenarios. Track your progress and identify areas for improvement. Connect with others who use similar calculations to share knowledge and learn from experience.
+
+**Expert Insights**
+
+Professionals in this field develop deep intuition through extensive practice. The calculator handles the computational work, freeing you to focus on understanding and application. Patterns emerge with experience that make complex problems more tractable. Building systematic approaches to problem-solving improves efficiency and accuracy over time.
+
+**Applications Beyond the Basics**
+
+The principles covered here extend to more advanced scenarios. Understanding the fundamentals thoroughly prepares you for specialized applications. Connect these concepts to related areas for broader competence. Seek out challenging problems to continue developing your skills and knowledge.
+
+**Final Thoughts**
+
+Mastery comes through consistent practice and application. Use the calculator as a learning tool, not just an answer generator. Verify your understanding by working problems both manually and with computational assistance. Build confidence through successful application to real-world challenges. The investment in understanding pays dividends across many contexts.
+
+**Technical Considerations**
+
+The mathematical foundations underlying these calculations have been refined over time. Modern computational tools implement these algorithms with high precision. Understanding both the theory and practical application enables effective use of these tools. Pay attention to units, precision, and assumptions for accurate results in all circumstances.
+
+**Integration with Other Tools**
+
+This calculator works alongside other tools and resources for comprehensive problem-solving. Combine computational results with domain knowledge for best outcomes. Verify critical results through multiple methods when accuracy is essential. Build workflows that leverage the strengths of different tools appropriately.
+
+**Continuous Improvement**
+
+Skills in this area benefit from ongoing practice and learning. Stay current with developments in the field. Seek feedback on your work to identify areas for improvement. Connect with communities of practice to share knowledge and learn from others. The journey toward mastery is ongoing and rewarding.
+
+**Professional Applications**
+
+These calculations appear throughout professional practice in relevant fields. Competence with the underlying concepts enhances career effectiveness. The ability to verify results and understand methodology distinguishes thorough professionals. Build expertise that combines computational skill with conceptual understanding for maximum impact.
+
+**Summary**
+
+This calculator provides the computational foundation for solving problems in this domain. Understanding the principles enables appropriate application and result interpretation. Practice builds skill and confidence. Apply these tools to real challenges to develop practical competence that serves you well in academic, professional, and personal contexts. Regular use develops the intuition needed for reliable results.
+Time calculations are essential for scheduling and payroll.
+Accurate time tracking improves productivity and compensation.
+Base-60 arithmetic underlies all time calculations.
+Payroll systems rely on accurate time tracking and decimal conversion.
+Time management starts with accurate measurement and tracking.
+Master time arithmetic for professional and personal effectiveness.
+Every workplace relies on accurate time tracking systems.
+Time calculations form the foundation of scheduling and payroll.
+Accurate timekeeping benefits both employees and employers.

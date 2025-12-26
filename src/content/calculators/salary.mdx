@@ -1,54 +1,298 @@
-## How to Use the Salary Calculator
-The **salary calculator** converts between hourly wages and yearly salaries, factors in overtime, bonuses, and commission, and breaks down your earnings by pay period (monthly, weekly, bi-weekly). Simply enter your base rate, working hours, and additional income, and the tool instantly shows your total gross compensation in all common formats. It’s perfect for evaluating job offers, planning a side hustle, or understanding your payslip—ensuring you never undervalue your work again.
+# Salary Calculator: Hourly to Annual Conversion
 
-### Key Formulas Used
-- **Hourly to Annual**: `Hourly × Hours/Week × 52`
-- **Overtime**: `Overtime Hours × Hourly × 1.5`
-- **Pay Periods**: Annual ÷ 12 (monthly), ÷ 26 (bi-weekly), ÷ 52 (weekly)
+## Table of Contents
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Time-Based Compensation](#the-core-principle-time-based-compensation)
+- [How to Calculate Salary Conversions Manually](#how-to-calculate-salary-conversions-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
 
-### Best Practices for Accurate Results
-1.  **Use your actual contracted hours**—not idealised full-time hours.
-2.  **Include all income sources**: bonuses, commission, tips.
-3.  **Specify pay frequency**—bi-weekly vs. semi-monthly changes your annual total.
-4.  **For UK users**, remember that employer pension contributions are part of your total compensation.
-5.  **Pair with a tax calculator** to estimate net (take-home) pay for budgeting.
+---
 
-## Step-by-Step Example
-You’re offered a job at **£24/hour** for **35 hours/week**, with **5 hours of overtime weekly**.
+## How to Use This Calculator
 
-**Step 1**: Enter hourly rate = £24, regular hours = 35  
-**Step 2**: Add overtime = 5 hours at 1.5× rate  
-**Step 3**: The calculator shows:  
-- **Regular Weekly Pay**: 35 × 24 = **£840**  
-- **Overtime Weekly Pay**: 5 × 36 = **£180**  
-- **Total Weekly**: **£1,020**  
-- **Annual Salary**: 1,020 × 52 = **£53,040**  
-- **Monthly (bi-weekly)**: £2,040  
+Enter your Base Rate—hourly wage or annual salary.
 
-This gives you a complete picture to compare with salaried offers.
+Select the Input Type: hourly rate or annual salary.
 
-### How do I account for unpaid leave?
-Reduce the “weeks per year” from 52 to your actual working weeks (e.g., 50 for 2 weeks unpaid holiday).
+Enter your Weekly Hours worked (standard is 40; adjust for part-time or extended hours).
 
-### Can this handle commission-based pay?
-Yes—enter your base salary plus average monthly commission. The calculator will annualise the total.
+Enter Overtime Hours per week if applicable.
 
-### What if my overtime rate is 2× instead of 1.5×?
-Adjust the overtime multiplier in the settings. Some roles (e.g., weekend work) pay double time.
+Select your Overtime Rate (1.5× is standard; 2× for some industries).
 
-### Is this accurate for UK tax calculations?
-The calculator shows **gross pay**. For net pay, use our [UK Tax Calculator](/calculator/tax) which includes income tax, National Insurance, and pension deductions.
+Enter any Additional Income: bonus, commission, tips.
 
-### How do I compare a salaried role to an hourly contract?
-Convert both to annual gross income using this tool. Then add employer benefits (pension, healthcare) to the salaried role for a fair comparison.
+Click "Calculate" to see results. The output displays:
+- Annual salary equivalent
+- Monthly, bi-weekly, and weekly breakdown
+- Hourly rate equivalent
+- Overtime contribution
+- Total compensation including bonuses
 
-### Does this include holiday pay?
-Yes—if you’re paid hourly, holiday pay is included in your regular rate under UK law. The annual calculation assumes 52 weeks of pay.
+---
 
-### Can I calculate my effective hourly rate from a salary?
-Yes—enter your annual salary and working hours. The tool will compute your hourly equivalent.
+## The Core Principle: Time-Based Compensation
 
-### What’s the difference between gross and net pay?
-- **Gross pay**: Your total earnings before deductions  
-- **Net pay**: Your take-home pay after tax, NI, and pension  
-This calculator shows gross; use a tax calculator for net.
+Salary calculations convert between time periods using standard work-year assumptions.
+
+**Hourly to annual:**
+Annual = Hourly Rate × Hours/Week × 52 weeks
+
+**Annual to hourly:**
+Hourly = Annual Salary / (Hours/Week × 52)
+
+**Standard assumptions:**
+- Full-time = 40 hours/week
+- Work year = 52 weeks (or 50 for unpaid leave)
+- 2,080 hours per year (40 × 52)
+
+**Overtime calculation:**
+Overtime Pay = Overtime Hours × Hourly Rate × Overtime Multiplier
+
+Standard overtime is 1.5× (time-and-a-half). Some industries use 2× (double-time) for weekends or holidays.
+
+---
+
+## How to Calculate Salary Conversions Manually
+
+**Hourly to annual example:**
+£24/hour, 35 hours/week, 5 hours overtime at 1.5×
+
+Regular weekly: £24 × 35 = £840
+Overtime weekly: £24 × 1.5 × 5 = £180
+Total weekly: £1,020
+Annual: £1,020 × 52 = £53,040
+
+**Annual to hourly example:**
+£45,000 salary, 37.5 hours/week
+
+Annual hours: 37.5 × 52 = 1,950
+Hourly: £45,000 / 1,950 = £23.08
+
+**Pay period conversions:**
+- Monthly: Annual / 12
+- Bi-weekly: Annual / 26
+- Weekly: Annual / 52
+- Daily (5-day week): Annual / 260
+
+£45,000 annual:
+Monthly: £3,750
+Bi-weekly: £1,731
+Weekly: £865
+Daily: £173
+
+---
+
+## Real-World Applications
+
+**Job offer comparison.** Convert salary offers to hourly equivalent to compare jobs with different hours requirements.
+
+**Contract versus permanent.** Compare contractor day rate to permanent salary, accounting for benefits and taxes.
+
+**Freelance rate setting.** Calculate the hourly rate needed to match your target annual income.
+
+**Overtime value assessment.** Understand the true value of overtime hours when deciding whether to accept extra shifts.
+
+**Part-time income planning.** Calculate annual income from part-time hours for budgeting purposes.
+
+**Raise calculation.** Convert a percentage raise to actual monthly or annual increase in pounds.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The true hourly rate revelation.** Your £45,000 salary requires 50 hours/week. True hourly: £45,000 / (50 × 52) = £17.31—lower than you thought.
+
+**The contractor comparison.** A £400/day contract versus £65,000 salary. Contract: £400 × 220 working days = £88,000 gross, but no pension, holiday pay, or benefits.
+
+**The overtime illusion.** 10 hours weekly overtime at 1.5× seems lucrative, but it's taxed at your marginal rate—actual value is lower.
+
+**The benefits gap.** Two offers: £50,000 with 5% pension match versus £53,000 with no pension. First is worth £52,500 minimum in total compensation.
+
+**The part-time trap.** Part-time at 20 hours/week doesn't mean half the annual salary—it's exactly half (or less, if benefits are reduced).
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Hours versus rate.** A higher hourly rate working fewer hours may earn less than a lower rate working more hours. Calculate annual totals.
+
+**Gross versus net.** Salary calculations show gross pay. Take-home pay depends on tax brackets, NI, pension deductions, and student loans.
+
+**Benefits valuation.** Pension contributions, healthcare, holiday pay, and sick leave have monetary value often worth 10-30% of base salary.
+
+**Unpaid time off.** If you take 2 weeks unpaid leave, use 50 weeks (not 52) for annual calculations.
+
+**Overtime sustainability.** Consistent overtime increases income but has lifestyle costs. Calculate the break-even point where more money isn't worth less time.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Using 2,000 instead of 2,080 hours.** 40 hours × 52 weeks = 2,080, not 2,000. The 80-hour difference affects calculations.
+
+**Ignoring benefits.** A £50,000 salary with 5% pension match is worth £52,500 minimum. Compare total compensation, not just base pay.
+
+**Forgetting tax progressivity.** Overtime and bonuses are taxed at your marginal rate, not your average rate. Net value is lower than gross.
+
+**Assuming consistent overtime.** Calculating annual income with 10 hours/week overtime assumes that overtime is available every week.
+
+**Not accounting for unpaid leave.** Contractors and hourly workers don't get paid for holidays. Factor in actual working weeks.
+
+---
+
+## Related Topics
+
+**Take-home pay.** Gross salary minus income tax, National Insurance, pension contributions, and other deductions.
+
+**Total compensation.** Base salary plus bonus, pension, benefits, stock options, and other employer-provided value.
+
+**Effective hourly rate.** True hourly rate accounting for all hours worked, including unpaid overtime.
+
+**Day rate.** Common for contractors—daily fee that must cover all employee costs (taxes, pension, holidays).
+
+**Pro-rata salary.** Part-time salary calculated as a proportion of full-time equivalent.
+
+---
+
+## How This Calculator Works
+
+**Hourly to annual:**
+```
+regularAnnual = hourlyRate × hoursPerWeek × 52
+overtimeAnnual = hourlyRate × overtimeMultiplier × overtimeHours × 52
+totalAnnual = regularAnnual + overtimeAnnual + bonus + commission
+```
+
+**Annual to hourly:**
+```
+hourlyRate = annualSalary / (hoursPerWeek × 52)
+```
+
+**Pay period conversion:**
+```
+monthly = annual / 12
+biWeekly = annual / 26
+weekly = annual / 52
+daily = annual / (daysPerWeek × 52)
+```
+
+**Effective hourly with overtime:**
+```
+totalHours = (regularHours + overtimeHours) × 52
+effectiveHourly = totalAnnual / totalHours
+```
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**How do I account for unpaid leave?**
+
+Reduce weeks per year from 52 to your actual working weeks (e.g., 50 for 2 weeks unpaid holiday).
+
+**Can this handle commission-based pay?**
+
+Yes—enter your base salary plus average monthly commission. The calculator annualizes the total.
+
+**What if my overtime rate is 2× instead of 1.5×?**
+
+Adjust the overtime multiplier in the settings. Some roles pay double-time for weekends or holidays.
+
+**Is this accurate for UK tax calculations?**
+
+The calculator shows gross pay only. For net pay, use a tax calculator that includes income tax, National Insurance, and pension.
+
+**How do I compare a salaried role to an hourly contract?**
+
+Convert both to annual gross income. Add employer benefits value (pension, holiday pay) to the salaried role for fair comparison.
+
+**Does this include holiday pay?**
+
+For hourly workers, UK law requires holiday pay in your hourly rate. The 52-week calculation assumes you're paid for holidays.
+
+**Can I calculate my effective hourly rate from salary?**
+
+Yes—enter your annual salary and actual hours worked (including unpaid overtime). The calculator shows your true hourly equivalent.
+
+**What's the difference between gross and net pay?**
+
+Gross is total earnings before deductions. Net is take-home pay after tax, NI, pension, and other deductions.
+
+**How do I negotiate salary using this calculator?**
+
+Know your market hourly rate. Convert offers to the same basis (annual or hourly) for comparison. Factor in benefits value for total compensation comparison.
+
+**What about employer National Insurance?**
+
+Employers pay NI on top of your salary. This is part of your "cost to employ" but doesn't affect your take-home pay directly.
+
+**How do bonuses affect my overall compensation?**
+
+Add expected annual bonus to base salary for total compensation. Note that bonuses are taxed at your marginal rate, potentially at a higher bracket.
+
+**What is a salary sacrifice scheme?**
+
+Exchanging part of your gross salary for benefits (pension, cycle to work, childcare vouchers) reduces taxable income, increasing your effective take-home pay.
+
+**How do I account for benefits when comparing jobs?**
+
+Assign values: pension match (% of salary), health insurance (monthly premium equivalent), holiday days (daily rate × extra days). Add to base salary for total compensation.
+
+**What's the difference between bi-weekly and semi-monthly pay?**
+
+Bi-weekly: every 2 weeks (26 paychecks/year). Semi-monthly: twice per month, same dates (24 paychecks/year). Bi-weekly means two months have 3 paychecks.
+
+**How do I calculate my effective tax rate?**
+
+Effective rate = total tax paid / gross income. This differs from marginal rate (rate on your last pound earned). Effective rate is always lower.
+
+**What is take-home pay versus gross pay?**
+
+Gross is before deductions; take-home (net) is what you actually receive after tax, NI, pension, student loans, and other deductions.
+
+**How do contractor rates compare to permanent salaries?**
+
+Contractors must cover their own benefits, holidays, and taxes. A rule of thumb: equivalent daily rate ≈ annual salary / 200 working days, plus 20-30% for benefits and overhead.
+
+**What about salary sacrifice schemes?**
+
+Trading gross salary for benefits (pension, childcare, cycle scheme) reduces taxable income and NI. Calculate net benefit considering what you give up and what you receive.
+
+**How do I calculate overtime value accurately?**
+
+Remember overtime is taxed at your marginal rate. £20/hour overtime at 40% marginal tax leaves only £12 take-home. Factor this into overtime decisions.
+
+**What's a good strategy for salary negotiations?**
+
+Research market rates, convert all offers to comparable annual totals, factor in benefits, and negotiate for total compensation rather than just base salary.
+
+**Additional Notes**
+
+Understanding your true compensation requires looking beyond the base salary number. Benefits, working conditions, growth opportunities, and work-life balance all have value. Convert everything to comparable terms—annual salary, hourly rate, or total compensation—to make informed decisions.
+
+When negotiating, know your market value and be prepared to discuss total compensation, not just salary. The best negotiations create value for both parties by understanding what matters most to each side.
+
+**Practical Tips for Career Success**
+
+Track your accomplishments throughout the year for performance reviews and negotiations. Research market rates using multiple sources. Consider the full compensation package, not just salary. Build relationships that create opportunities for advancement. Invest in skills that increase your market value. Remember that job satisfaction includes more than just compensation.
+
+**Understanding Your Worth**
+
+Your value in the job market depends on skills, experience, demand, and location. Rare skills command premium compensation. Industry matters—the same role pays differently across sectors. Geographic location affects both salaries and cost of living. Regularly assess your market value by researching comparable positions. Invest in skills that are both in demand and aligned with your interests.
+
+Understanding your compensation empowers better career decisions. Convert offers to comparable terms, factor in all benefits, and negotiate with confidence. Your time and skills have value—make sure you're getting fair compensation for what you contribute.
+Whether evaluating job offers or planning your budget, accurate salary conversion is essential. Use this calculator to understand exactly what your work is worth.
+Know your worth and negotiate from a position of knowledge. Accurate salary calculations are the foundation of informed career decisions.
+Understanding total compensation helps you make better career decisions at every stage.
+Know your value and negotiate accordingly for fair compensation.
+Fair pay for fair work is the foundation of career satisfaction.
+Understand your total compensation to make informed career choices.

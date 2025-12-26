@@ -1,76 +1,256 @@
-Our **capacitor calculator** helps you solve for capacitance, voltage, charge, energy, reactance, and time constants in both DC and AC circuits. Whether you’re designing a filter, sizing a decoupling capacitor, or calculating energy storage, this tool provides instant, accurate results using standard electrical formulas.
+# Capacitor Calculator: Capacitance, Reactance, and Energy Calculator
 
-### How It Works
-The calculator uses core capacitor equations:
-- **Charge**: `Q = C × V`
-- **Energy**: `E = ½ × C × V²`
-- **Reactance**: `Xc = 1 / (2πfC)`
-- **Time Constant**: `τ = R × C`
+## Table of Contents
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Energy Storage in Electric Fields](#the-core-principle-energy-storage-in-electric-fields)
+- [How to Calculate Capacitor Values Manually](#how-to-calculate-capacitor-values-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
 
-For **series/parallel networks**, it applies combination rules:
-- **Parallel**: `C_total = C₁ + C₂ + ...`
-- **Series**: `1/C_total = 1/C₁ + 1/C₂ + ...`
+---
 
-### Key Inputs
-- **Circuit Type**: Select DC (charge/energy) or AC (reactance).
-- **Known Values**: Enter any two of capacitance, voltage, frequency, resistance, or charge.
-- **Network**: Add multiple capacitors to calculate total capacitance.
+## How to Use This Calculator
 
-The tool instantly shows:
-- Missing electrical values
-- Total capacitance for combinations
-- Reactance at your frequency
-- Time constant for RC circuits
-- Energy storage capacity
+Select your calculation type from the options: Capacitance (from physical parameters), Reactance (AC circuit behavior), Energy (stored energy), Charging (time constant with resistance), Series (combined capacitance), or Parallel (combined capacitance).
 
-### How to Use
-1. Choose your **calculation type** (e.g., “Find Reactance”).
-2. Enter **known values** (e.g., capacitance and frequency).
-3. Click **Calculate** to solve for unknowns.
-4. For networks, add capacitor values and see total capacitance.
-5. Use results to select appropriate components and ensure circuit performance.
+For capacitance from physical parameters, enter plate area (mm²), plate distance (mm), and select or enter a dielectric constant. Common dielectric materials are listed with their constants: vacuum (1.0), air (1.0006), paper (3.7), glass (7.5), mica (6.0), ceramic (6.0), polyester (3.3), Teflon (2.1).
 
-Always verify calculations with a multimeter and consult component datasheets for real-world tolerances.
+For reactance calculations, enter capacitance (µF) and frequency (Hz). The calculator determines capacitive reactance (Xc) and impedance.
 
-### Step-by-Step Example
-**Scenario**: Design a high-pass filter with a **1 kHz** cutoff using a **10 kΩ** resistor.
+For energy storage, enter capacitance and voltage. The calculator shows stored energy in joules and charge in coulombs.
 
-**Inputs**:
-- Filter Type: High-pass
-- Cutoff Frequency: 1,000 Hz
-- Resistance: 10,000 Ω
+For charging time, enter capacitance, resistance, and voltage. Results show the RC time constant and times to reach 63%, 95%, and 99% charge.
 
-**Calculation**:
-- Formula: `C = 1 / (2π × f × R)`
-- `C = 1 / (2 × 3.1416 × 1000 × 10000) ≈ 15.9 nF`
+For series/parallel combinations, add capacitor values and the calculator computes total equivalent capacitance.
 
-**Result**: Use a **15 nF or 16 nF ceramic capacitor**. At 1 kHz, its reactance equals the resistor value (10 kΩ), creating the -3dB cutoff point.
+Click "Calculate" to see results. Output includes the calculated value, relevant formulas used, and practical interpretations.
 
-This ensures frequencies above 1 kHz pass with minimal attenuation, while lower frequencies are blocked.
+---
 
-### What is capacitive reactance?
-Capacitive reactance (`Xc`) is the opposition a capacitor offers to alternating current. It’s measured in ohms and calculated as `Xc = 1/(2πfC)`. Unlike resistance, it **decreases as frequency increases**.
+## The Core Principle: Energy Storage in Electric Fields
 
-### How do I calculate energy stored in a capacitor?
-Use `E = ½ × C × V²`, where `E` is energy in joules, `C` is capacitance in farads, and `V` is voltage. For example, a 1000 µF capacitor at 12V stores **0.072 J**.
+Capacitors store energy in an electric field between two conductive plates separated by an insulating material (dielectric). When voltage is applied, charge accumulates on the plates—positive on one side, negative on the other. This separation creates an electric field that stores energy.
 
-### What is an RC time constant?
-The **RC time constant** (`τ = R × C`) is the time for a capacitor to charge to 63.2% of the supply voltage through a resistor. It’s used in timing circuits, filters, and delay generators.
+Capacitance measures how much charge a capacitor can store per volt applied. The unit is farads (F), though practical capacitors are typically measured in microfarads (µF), nanofarads (nF), or picofarads (pF) because a farad is very large.
 
-### Can I calculate series and parallel capacitors?
-Yes. For **parallel**, add capacitances directly. For **series**, use `1/C_total = 1/C₁ + 1/C₂ + ...`. The calculator handles both automatically.
+Three factors determine capacitance: plate area (larger area holds more charge), plate separation (closer plates create stronger fields), and dielectric constant (materials between plates affect field strength). The formula is C = ε₀ × εᵣ × A / d, where ε₀ is the permittivity of free space, εᵣ is the dielectric constant, A is plate area, and d is separation distance.
 
-### Why does my capacitor calculation not match real-world behaviour?
-Real capacitors have **parasitic effects**: ESR (resistance), ESL (inductance), leakage current, and tolerance (±10–20%). Always derate voltage and check datasheets for frequency/temperature performance.
+In AC circuits, capacitors exhibit reactance—opposition to current flow that depends on frequency. Unlike resistance, reactance doesn't dissipate energy; it stores and releases it. Capacitive reactance decreases with frequency: capacitors pass high frequencies more easily than low frequencies.
 
-### What capacitor type should I use for high-frequency circuits?
-**Ceramic capacitors** (especially C0G/NP0) are ideal for high-frequency decoupling (>1 MHz). Avoid electrolytics—they have high ESR and inductance at high frequencies.
+---
 
-### How do I avoid capacitor failure?
-- **Never reverse polarity** on electrolytic/tantalum capacitors.  
-- **Derate voltage** by 30–50%.  
-- **Stay within ripple current limits** for power applications.  
-- **Avoid mechanical stress** on leads or body.
+## How to Calculate Capacitor Values Manually
 
-### Is this calculator safe for mains voltage circuits?
-No. This tool is for **low-voltage DC and signal-level AC circuits**. **Never design or troubleshoot mains-connected circuits** without professional training and safety certification.
+**Capacitance from physical dimensions:**
+
+C = ε₀ × εᵣ × A / d
+
+Where:
+- ε₀ = 8.854 × 10⁻¹² F/m (permittivity of free space)
+- εᵣ = dielectric constant (dimensionless)
+- A = plate area in m²
+- d = plate separation in m
+
+Example: Plates 100 mm² (0.0001 m²), 0.1 mm apart (0.0001 m), air dielectric (εᵣ = 1)
+C = 8.854 × 10⁻¹² × 1 × 0.0001 / 0.0001 = 8.854 pF
+
+**Capacitive reactance:**
+
+Xc = 1 / (2πfC)
+
+Example: 10 µF at 1000 Hz
+Xc = 1 / (2 × 3.14159 × 1000 × 10 × 10⁻⁶) = 15.9 ohms
+
+**Stored energy:**
+
+E = ½ × C × V²
+
+Example: 100 µF at 50V
+E = 0.5 × 100 × 10⁻⁶ × 50² = 0.125 joules
+
+**Charge:**
+
+Q = C × V
+
+Example: 100 µF at 50V
+Q = 100 × 10⁻⁶ × 50 = 0.005 coulombs = 5 mC
+
+**RC time constant:**
+
+τ = R × C
+
+Time to 63.2% charge: 1τ
+Time to 95% charge: 3τ
+Time to 99% charge: 5τ
+
+**Series capacitors:**
+
+1/C_total = 1/C₁ + 1/C₂ + 1/C₃ + ...
+
+**Parallel capacitors:**
+
+C_total = C₁ + C₂ + C₃ + ...
+
+---
+
+## Real-World Applications
+
+**Power supply filtering.** Capacitors smooth rectified AC to DC by storing charge during voltage peaks and releasing during valleys. Larger capacitance means smoother output with less ripple.
+
+**Signal coupling and decoupling.** Coupling capacitors pass AC signals while blocking DC bias between stages. Decoupling capacitors shunt high-frequency noise to ground, protecting sensitive circuits.
+
+**Timing circuits.** RC time constants determine delays, oscillation frequencies, and pulse widths. The 555 timer IC relies on capacitor charging and discharging for timing functions.
+
+**Energy storage.** Supercapacitors store substantial energy for applications like regenerative braking, backup power, and load leveling. They charge faster than batteries but store less total energy.
+
+**Motor starting.** Start capacitors provide phase shift in single-phase AC motors, creating rotating magnetic field for startup. Run capacitors maintain efficiency during operation.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The voltage rating trap.** You calculated 100 µF needed, found a cheap capacitor rated 100 µF at 16V. Your circuit runs at 25V. The capacitor fails, possibly spectacularly. Always use capacitors rated well above your circuit voltage.
+
+**The frequency-dependent behavior.** Your 10 µF capacitor works great as a power supply filter (60 Hz) but doesn't help with 10 MHz noise. At high frequencies, parasitic inductance makes capacitors behave differently. You need smaller capacitors for high-frequency filtering.
+
+**The ESR problem.** Your aluminum electrolytic capacitor has significant Equivalent Series Resistance (ESR). In high-current applications, ESR causes heating and power loss. Low-ESR capacitors cost more but perform better.
+
+**The polarity disaster.** You installed an electrolytic capacitor backwards. It may work briefly, then fail, potentially explosively. Electrolytic capacitors are polarized—positive lead must go to positive voltage.
+
+**The tolerance reality.** Your 100 µF capacitor actually measures 85 µF—within the -20%/+80% tolerance typical for electrolytics. Timing circuits need tighter tolerance (film or ceramic capacitors).
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Capacitor type selection.** Electrolytic: high capacitance, polarized, higher ESR, limited life. Ceramic: small, non-polarized, can have voltage-dependent capacitance. Film: stable, low ESR, larger size. Each type suits different applications.
+
+**Capacitance versus voltage rating.** Higher voltage ratings increase physical size and cost. Specify minimum safe voltage (typically 50% margin), not maximum available.
+
+**Frequency response.** Every capacitor has self-resonant frequency above which it becomes inductive. For RF applications, this matters enormously. A 1 µF capacitor might be useless above 1 MHz.
+
+**Temperature effects.** Capacitance changes with temperature. Ceramic capacitors with X7R or X5R dielectrics are reasonably stable; Z5U and Y5V drift significantly. Check datasheets for your operating temperature range.
+
+**Aging and lifespan.** Electrolytic capacitors degrade over time, especially at high temperatures. Budget for replacement in long-life equipment. Ceramic and film capacitors last essentially forever under proper conditions.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Confusing µF, nF, and pF.** 1 µF = 1000 nF = 1,000,000 pF. Using the wrong unit in calculations produces wildly wrong results. Always verify units before calculating.
+
+**Ignoring parasitic effects.** Real capacitors have inductance (ESL) and resistance (ESR) in addition to capacitance. At high frequencies or high currents, these parasitic elements dominate behavior.
+
+**Exceeding voltage ratings.** Voltage ratings are maximum—not recommended operating voltage. Derate by 50% or more for reliability. Exceeding ratings causes breakdown and failure.
+
+**Wrong polarity on electrolytics.** Electrolytic capacitors are polarized. The stripe or minus sign marks the negative terminal. Reversed polarity causes heating, venting, and potential explosion.
+
+**Parallel versus series confusion.** Parallel capacitors add (more capacitance). Series capacitors combine like parallel resistors (less total capacitance). The opposite of how resistors work.
+
+---
+
+## Related Topics
+
+**RC circuits.** Resistor-capacitor combinations create time-dependent behavior: charging curves, delays, filters. The time constant τ = RC determines how quickly voltage changes.
+
+**LC circuits.** Inductor-capacitor combinations create resonance—they oscillate at a natural frequency. Used in radio tuning, filters, and oscillators.
+
+**Filter design.** Capacitors with resistors or inductors create low-pass, high-pass, band-pass, and band-stop filters. Cutoff frequency depends on component values.
+
+**Power factor correction.** In AC systems, capacitors correct lagging power factor caused by inductive loads (motors, transformers). This reduces current draw and improves efficiency.
+
+**Supercapacitors.** Ultra-high capacitance devices (farads, not microfarads) that bridge the gap between capacitors and batteries. Used for short-term energy storage and backup power.
+
+---
+
+## How This Calculator Works
+
+The calculator implements standard capacitor formulas based on the selected calculation type.
+
+**Capacitance from dimensions:**
+C = (ε₀ × εᵣ × A) / d
+- Converts area from mm² to m² (÷ 1,000,000)
+- Converts distance from mm to m (÷ 1,000)
+- ε₀ = 8.854 × 10⁻¹² F/m
+
+**Reactance:**
+Xc = 1 / (2 × π × f × C)
+- Converts capacitance from µF to F (× 10⁻⁶)
+- Result in ohms
+
+**Energy:**
+E = 0.5 × C × V²
+- Converts capacitance from µF to F
+- Result in joules
+
+**Charge:**
+Q = C × V
+- Result in coulombs
+
+**Time constant:**
+τ = R × C
+- Resistance in ohms, capacitance in farads (converted from µF)
+- Result in seconds
+
+**Series combination:**
+1/C_total = Σ(1/Cᵢ)
+
+**Parallel combination:**
+C_total = Σ(Cᵢ)
+
+Dielectric constants for common materials are stored as reference values.
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**What capacitor value do I need for my application?**
+
+It depends on the application. Power supply filtering typically uses 100-10,000 µF. Decoupling uses 0.1 µF. Timing circuits calculate from the required time constant. Audio coupling ranges from 1-100 µF depending on frequency response needs.
+
+**Why does reactance decrease with frequency?**
+
+Capacitive reactance Xc = 1/(2πfC). As frequency increases, the denominator grows, reducing reactance. Physically, the capacitor charges and discharges faster at higher frequencies, opposing current less.
+
+**How much voltage margin should I allow?**
+
+At least 50%. If your circuit runs at 12V, use 25V rated capacitors minimum. For reliability-critical applications, use 100% margin (24V rated for 12V circuit).
+
+**What's ESR and why does it matter?**
+
+Equivalent Series Resistance is internal resistance that dissipates energy as heat. High ESR reduces filtering effectiveness and causes heating in high-current applications. Low-ESR capacitors cost more but perform better.
+
+**Can I put capacitors in series for higher voltage rating?**
+
+Yes, but total capacitance decreases and voltage may not divide equally without balancing resistors. It's usually better to buy appropriately rated capacitors.
+
+**Why do ceramic capacitors sometimes act weird?**
+
+Many ceramic capacitors (X5R, Y5V) have voltage-dependent capacitance—capacity drops significantly as applied voltage approaches rating. For stable capacitance, use C0G/NP0 type or significantly derate.
+
+**How long do capacitors last?**
+
+Ceramic and film capacitors last essentially forever under proper conditions. Electrolytics degrade over time, especially at high temperatures. Typical electrolytic life: 1,000-10,000 hours at maximum temperature; much longer at room temperature.
+
+**What's the difference between polarized and non-polarized capacitors?**
+
+Electrolytic capacitors are polarized—they have positive and negative terminals and must be connected correctly. Ceramic, film, and mica capacitors are non-polarized and can be connected either direction.
+
+**How do I read capacitor markings?**
+
+Large electrolytics print values directly (100µF, 25V). Small capacitors use codes: three-digit codes represent value in picofarads (104 = 10 × 10^4 pF = 100,000 pF = 0.1µF). Voltage ratings may be coded (1H = 50V in some systems).
+
+**What causes capacitors to fail?**
+
+Electrolytic capacitors fail from electrolyte evaporation (accelerated by heat), overvoltage, reverse polarity, or age. Ceramic capacitors can crack from mechanical stress or thermal shock. Film capacitors rarely fail but can be damaged by voltage spikes.
+
+**How do I test if a capacitor is good?**
+
+A multimeter with capacitance mode can measure value. For electrolytics, also check ESR (Equivalent Series Resistance)—elevated ESR indicates degradation. Visual inspection for bulging tops or leaked electrolyte indicates failed electrolytics.

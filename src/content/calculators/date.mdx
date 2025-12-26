@@ -1,69 +1,246 @@
-Our **date calculator** helps you add or subtract days from any date, or find the exact number of days between two dates—accounting for leap years, variable month lengths, and business days. Whether you’re planning a project, calculating a deadline, or tracking time until an event, this tool provides accurate, reliable results in seconds.
+# Date Calculator: Add, Subtract, and Find Days Between Dates
 
-### How It Works
-The calculator uses the **Julian Day Number (JDN)** system—a continuous count of days since a fixed historical point—to perform date arithmetic. This method automatically handles:
-- **Leap years** (e.g., 2024, 2028)
-- **Variable month lengths** (28–31 days)
-- **Century year rules** (1900 not a leap year; 2000 is)
+## Table of Contents
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Date Arithmetic](#the-core-principle-date-arithmetic)
+- [How to Calculate Dates Manually](#how-to-calculate-dates-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
 
-For **business days**, it excludes weekends and optional holidays you define.
+---
 
-### Key Features
-- **Add/Subtract Days**: Find a future or past date from a starting point.
-- **Days Between Dates**: Get the exact duration in days, weeks, or months.
-- **Business Days Mode**: Exclude weekends and custom holidays for work-related deadlines.
-- **Inclusive/Exclusive Options**: Choose whether to count the start/end date.
-- **Time Zone Awareness**: For precise timing, specify the event’s time zone.
+## How to Use This Calculator
 
-### How to Use
-1. **For duration**: Enter a **start date** and **end date** → see total days.
-2. **For future/past dates**: Enter a **start date** and **number of days to add/subtract**.
-3. Toggle **Business Days** if your calculation excludes weekends.
-4. Add **custom holidays** for accurate business-day counts.
-5. Click **Calculate** to see your result instantly.
+Select your calculation type from the options: Add (find a future date), Subtract (find a past date), or Difference (calculate days between two dates).
 
-Use this tool for legal deadlines, project planning, travel prep, or personal goal tracking.
+For Add or Subtract operations, enter a Start Date using the date picker. Then enter the time period to add or subtract using separate fields for Years, Months, and Days. You can use any combination—add 2 months and 15 days, or just 90 days.
 
-### Step-by-Step Example
-**Scenario**: You sign a contract on **Friday, 4 April 2025**, that gives you **10 calendar days** to respond.
+For Difference calculations, enter both a Start Date and End Date. The calculator determines the exact time between them.
 
-**Inputs**:
-- Start Date: 4 April 2025
-- Days to Add: 10
-- Mode: Calendar Days
+Click "Calculate" to see results. The output includes:
+- The resulting date (for add/subtract) or the duration (for difference)
+- Day of the week for the result date
+- Whether it falls on a weekend
+- Week number of the year
+- Day of the year (1-365)
+- Quarter of the year
+- Whether the year is a leap year
+- For difference: total days, weeks, business days, and weekend days
 
-**Calculation**:  
-- 4 April + 10 days = **14 April 2025 (Monday)**  
-- Includes weekend days (5–6 April)
+---
 
-**Another Example**:  
-A task starts **1 May 2025** and takes **15 business days** (excluding weekends and UK bank holidays).  
-- The calculator skips weekends and holidays like 5 May (Early May Bank Holiday).  
-- Result: **Completion date = 22 May 2025**
+## The Core Principle: Date Arithmetic
 
-### What’s the difference between calendar and business days?
-**Calendar days** include every day (weekends and holidays). **Business days** are Monday–Friday, excluding public holidays. A 10-calendar-day period is shorter in working time than 10 business days.
+Date calculations seem simple but involve surprising complexity. Months have different lengths (28-31 days), years have different lengths (365 or 366 days), and "one month from today" can mean different things depending on the starting date.
 
-### How does the calculator handle leap years?
-It uses the Gregorian calendar rule: a year is a leap year if divisible by 4, **except** century years not divisible by 400 (e.g., 2000 was a leap year; 1900 was not).
+The Julian Day Number system provides a solution—it counts days consecutively from a fixed historical point. Converting dates to Julian Day Numbers allows simple arithmetic: add days by adding to the number, subtract by subtracting. Converting back gives the result date.
 
-### Can I exclude holidays from business-day calculations?
-Yes. You can add custom holidays (e.g., company-specific or national holidays) to ensure accurate business-day counts.
+Business day calculations add another layer. They exclude weekends (Saturday and Sunday) and optionally holidays. A "10 business day" deadline means something very different from "10 days."
 
-### Why is the result different when I include the start date?
-This is about **inclusive vs. exclusive counting**. For example, from Monday to Wednesday:
-- **Exclusive**: 2 days (Tuesday, Wednesday)
-- **Inclusive**: 3 days (Monday, Tuesday, Wednesday)  
-Most legal and business contexts use **exclusive** counting.
+Calendar systems also matter. The Gregorian calendar (used worldwide today) has specific leap year rules: divisible by 4, except century years must be divisible by 400. So 2000 was a leap year, but 1900 was not.
 
-### Can I add months or years?
-Adding **days** is precise. Adding **months** is complex (e.g., 31 Jan + 1 month = ?). For accuracy, convert months to days (e.g., 30 or 31 days) or use a dedicated calendar tool.
+---
 
-### Is this calculator accurate for historical dates?
-Yes, for dates after 1582 (Gregorian calendar adoption). For earlier dates, the Julian calendar applies—but this tool assumes Gregorian rules.
+## How to Calculate Dates Manually
 
-### How do I calculate age?
-Use our dedicated [Age Calculator](/calculator/age) for precise age in years, months, and days. The date calculator gives total days, which you can convert manually.
+**Adding days to a date:**
 
-### Does time of day matter?
-For **day-based calculations**, no. For **hour/minute precision**, use our [Time Calculator](/calculator/time) or [Countdown Timer](/calculator/countdown-timer).
+1. Start with your date
+2. Add days, accounting for month lengths
+3. If you exceed the month's days, roll to the next month
+4. If you exceed December, roll to the next year
+
+Example: March 25, 2025 + 15 days
+March has 31 days. 25 + 15 = 40.
+40 - 31 = 9 (overflow into April)
+Result: April 9, 2025
+
+**Subtracting days:**
+
+Work backwards using the same logic.
+
+Example: April 5, 2025 - 10 days
+5 - 10 = -5 (need to borrow from March)
+March has 31 days. 31 - 5 = 26
+Result: March 26, 2025
+
+**Days between dates:**
+
+1. Convert both dates to day counts from a reference point
+2. Subtract the earlier from the later
+
+Example: Days from January 1 to March 15, 2025
+January: 31 days (1-31, so 31 days)
+February: 28 days (2025 not a leap year)
+March 1-15: 15 days
+Total: 31 + 28 + 15 - 1 = 73 days (subtract 1 because we don't count the start date)
+
+**Business days:**
+
+Count only Monday through Friday. For each week, that's 5 business days out of 7 calendar days.
+
+---
+
+## Real-World Applications
+
+**Contract deadlines.** Legal and business contracts often specify deadlines in calendar days or business days. "Payment due within 30 days" versus "30 business days" can differ by nearly two weeks.
+
+**Project planning.** Calculating milestones and delivery dates requires adding working days to start dates, accounting for weekends and holidays.
+
+**Age calculations.** Determining exact age in years, months, and days for legal, medical, or personal purposes requires precise date difference calculations.
+
+**Event countdown.** How many days until a wedding, retirement, or deadline? Date difference calculations provide the answer.
+
+**Statute of limitations.** Legal deadlines are often specified as days or years from an event. Accurate calculation can determine whether an action is still timely.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The month-end problem.** Adding one month to January 31 gives... what? February 31 doesn't exist. Most systems give February 28 (or 29 in leap years), but this creates asymmetry—subtracting one month gives January 28, not January 31.
+
+**The leap year surprise.** Your annual event falls on February 29, 2024. Adding one year gives February 28, 2025 (since 2025 isn't a leap year). This can affect recurring events scheduled for late February.
+
+**The business day holiday.** You calculated 10 business days from Monday and expected delivery on the following Friday. But there was a holiday that week—delivery is actually the following Monday.
+
+**The time zone crossing.** You need something done "by Friday." Your Friday evening is already Saturday morning for your overseas colleague. Date calculations should consider time zones for global coordination.
+
+**The inclusive versus exclusive count.** "7 days from today" could mean 7 days including today (arriving on day 6 from today's perspective) or 7 days after today. The difference matters for deadlines.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Calendar days versus business days.** Legal and financial contexts often specify one or the other. Using the wrong type can mean missing deadlines or expecting delivery too early.
+
+**Start date inclusion.** Does "30 days from March 1" end on March 30 or March 31? The answer depends on whether March 1 counts as day 0 or day 1.
+
+**Holiday definitions.** "Business days" excludes weekends, but which holidays? Federal holidays? State holidays? Company holidays? Different contexts require different holiday calendars.
+
+**Month arithmetic ambiguity.** "One month from January 30" has no clean answer. January 30 + 1 month could be February 28, March 1, or March 2 depending on the interpretation.
+
+**Time component handling.** Is "24 hours from now" the same as "tomorrow at this time"? What about daylight saving transitions? Pure date calculators ignore time; datetime calculators must handle it.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Confusing elapsed time with calendar time.** "Two weeks" is 14 days, but "two calendar weeks" might mean from this Monday to that Monday (which could be 13 or 15 days depending on interpretation).
+
+**Forgetting leap years.** February 29 exists only in leap years. Date calculations spanning February must account for whether the year is a leap year.
+
+**Miscounting business days.** If today is Monday and you need something in 5 business days, it's due next Monday—not Friday. Business days don't include the starting day.
+
+**Time zone date shifts.** A date-only calculation doesn't account for time zones. Something due "by December 31" in one zone is already January 1 in another.
+
+**Off-by-one errors.** The most common calculation error. Always clarify: does the count include the start date, the end date, both, or neither?
+
+---
+
+## Related Topics
+
+**ISO 8601 date format.** The international standard format YYYY-MM-DD eliminates ambiguity between American (MM/DD/YYYY) and European (DD/MM/YYYY) conventions.
+
+**Julian Day Number.** A continuous count of days since November 24, 4714 BC. Astronomers and programmers use it for unambiguous date arithmetic.
+
+**Leap year rules.** A year is a leap year if divisible by 4, except century years must be divisible by 400. This makes 2000 a leap year but 2100 not.
+
+**Unix timestamp.** Seconds since January 1, 1970 UTC. A common way to represent dates and times in computing, allowing simple arithmetic.
+
+**Week numbering.** ISO weeks start on Monday, with week 1 being the first week containing a Thursday. This can cause week 1 to begin in the previous year.
+
+---
+
+## How This Calculator Works
+
+**Add/Subtract operations:**
+
+The calculator creates a JavaScript Date object from the start date, then uses built-in methods to add years, months, and days:
+
+```
+result.setFullYear(result.getFullYear() + years)
+result.setMonth(result.getMonth() + months)
+result.setDate(result.getDate() + days)
+```
+
+JavaScript handles month overflow automatically—adding to a date in January that exceeds 31 rolls into February.
+
+**Difference calculations:**
+
+For total days:
+```
+diffDays = Math.ceil(|endDate - startDate| / (1000 × 60 × 60 × 24))
+```
+
+For exact years/months/days, the calculator computes each component separately, borrowing from larger units when needed.
+
+**Business days:**
+
+The calculator iterates through each day between start and end, counting only days where the day of week is 1-5 (Monday-Friday).
+
+**Additional outputs:**
+
+Week number, day of year, quarter, and leap year status are computed using standard date formulas.
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**What's the difference between calendar days and business days?**
+
+Calendar days include all days (weekends and holidays). Business days typically include only Monday through Friday, excluding weekends and sometimes holidays.
+
+**Does adding one month always work correctly?**
+
+Adding months to dates near month-end can produce unexpected results. Adding one month to January 31 gives February 28 or 29, not "February 31." This is a fundamental calendar ambiguity.
+
+**How do I calculate business days including holidays?**
+
+This calculator excludes weekends for business day counts. For holiday-aware calculations, you'd need to specify which holidays to exclude, which varies by country and organization.
+
+**Why do different calculators give different results?**
+
+Different tools may use different conventions: inclusive vs. exclusive date counting, different handling of month-end dates, or different definitions of "business days."
+
+**How accurate is the leap year calculation?**
+
+The calculator uses the standard Gregorian calendar leap year rule: divisible by 4, except century years must be divisible by 400. This is accurate for dates after 1582 when the Gregorian calendar was adopted.
+
+**Can I calculate dates far in the past or future?**
+
+JavaScript Date objects support dates from approximately 270,000 BC to 270,000 AD. Practical accuracy depends on calendar system—the Gregorian calendar wasn't used before 1582.
+
+**What time zone does the calculator use?**
+
+Date-only calculations use your browser's local time zone. For precise datetime calculations across time zones, you'd need a more specialized tool.
+
+**How do I count days including both start and end dates?**
+
+Add 1 to the difference result. If the calculator shows 7 days between Monday and the following Monday, that's 7 days elapsed; 8 days if you count both Mondays.
+
+**What about weeks and months in the difference?**
+
+Weeks are simply days divided by 7. Months are trickier because month lengths vary. The calculator computes "calendar months" by comparing month and year values, then adjusting for partial months.
+
+**How do I handle recurring dates?**
+
+For events that repeat (birthdays, anniversaries), calculate the difference to the next occurrence. If today is March 15 and the event is February 20, calculate days until February 20 next year.
+
+**Can I calculate workdays for project planning?**
+
+Yes—use business days mode. However, remember to account for holidays specific to your organization. The standard calculation excludes weekends only.
+
+**What's the difference between elapsed time and calendar time?**
+
+Elapsed time counts actual intervals (168 hours = 7 days). Calendar time uses date boundaries (Monday to following Monday = 1 week regardless of exact hours). Know which your deadline specifies.
+
+**How do deadline calculations work in legal contexts?**
+
+Legal deadlines often specify "within X days" with specific rules about inclusive/exclusive counting and holiday handling. Always verify the applicable rules—they vary by jurisdiction and context.

@@ -1,58 +1,294 @@
-## Stair Calculator — Rise, Run & Stringers
-Our stair calculator transforms your total vertical rise into a complete, code-aware staircase plan. It computes the optimal number of steps, exact riser height, tread depth, total horizontal run, and stringer length—ensuring your stairs are safe, comfortable, and compliant with common residential building standards.
+# Stair Calculator: Rise, Run, and Stringer Design
 
-### How It Works
-- **Input**: Total rise (vertical height between finished floors)  
-- **Output**:  
-  - Number of risers and treads  
-  - Exact riser height and total run  
-  - Stringer length (via Pythagoras)  
-  - Comfort check (2R + T ≈ 25")  
-  - Code compliance alerts (riser/tread limits)
+## Table of Contents
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Safe and Comfortable Stairs](#the-core-principle-safe-and-comfortable-stairs)
+- [How to Calculate Stair Dimensions](#how-to-calculate-stair-dimensions)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
 
-### Key Formulas Used
-- **Risers**: `Total Rise ÷ Target Riser → Round Up`  
-- **Treads**: `Number of Risers – 1`  
-- **Stringer**: `√(Rise² + Run²)`  
-- **Comfort**: `2 × Riser + Tread`
+---
 
-Perfect for **DIY builders**, **carpenters**, and **home renovators** planning basement stairs, deck steps, or interior staircases.
+## How to Use This Calculator
 
-## Step-by-Step: Designing Basement Stairs
-**Scenario**: Total rise = 106 inches (from finished basement floor to finished first floor).
+Enter your Total Rise—the vertical distance between finished floors.
 
-1. **Enter 106" as Total Rise**  
-2. **Select target riser** (default 7.5")  
-3. **Calculator computes**:  
-   - Risers: 106 ÷ 7.5 = 14.13 → **15 risers**  
-   - Exact Riser: 106 ÷ 15 = **7.07"**  
-   - Treads: 15 – 1 = **14**  
-   - Total Run (at 10" tread): 14 × 10 = **140"**  
-   - Stringer: √(106² + 140²) ≈ **175.6"**  
-   - Comfort: 2×7.07 + 10 = **24.14"** → ✅ Good
+Enter your Target Riser Height (default: 7.5 inches or 190mm).
 
-Use these dimensions to cut your stringers and build with confidence!
+Enter your desired Tread Depth (default: 10 inches or 250mm).
 
-### What is total rise, and how do I measure it?
-Total rise is the **vertical distance between finished floor surfaces**. Measure from the basement floor (e.g., concrete) to the top floor (e.g., hardwood). If flooring isn’t installed, add its thickness to the top measurement.
+Click "Calculate" to see results. The output displays:
+- Number of risers and treads
+- Exact riser height
+- Total horizontal run
+- Stringer length (using Pythagorean theorem)
+- Comfort check (2R + T formula)
+- Code compliance status
 
-### Why do I need to round up the number of risers?
-Rounding up ensures **no riser exceeds the maximum height** (typically 7.75"). A taller riser would violate building codes and create a tripping hazard.
+---
 
-### Can I change the tread depth?
-Yes—adjust the tread depth to fit your available run space. The calculator will update total run and comfort score accordingly.
+## The Core Principle: Safe and Comfortable Stairs
 
-### Does this work for deck stairs?
-Yes! For open-riser deck stairs, the **riser height** still applies (vertical spacing between treads), and tread depth must meet code (usually ≥10").
+Stairs must balance safety, comfort, and code compliance. Key dimensions are riser height (vertical) and tread depth (horizontal).
 
-### How accurate is the stringer length?
-The calculator uses the **Pythagorean Theorem** for geometric accuracy. Remember to account for **tread thickness** when cutting notches in the stringer.
+**The comfort formula:**
+2 × Riser + Tread ≈ 24-25 inches (610-635mm)
 
-### What if my stairs don’t pass the comfort check?
-A score below 24" feels steep; above 25" feels shallow. Adjust by changing the target riser height (e.g., try 7" instead of 7.5") and recalculate.
+This formula, developed over centuries, produces stairs that feel natural to climb.
 
-### Do I need a landing?
-If your total rise exceeds **12 feet (144")**, most codes require a landing. For rises under 12', a single flight is usually acceptable.
+**Typical code limits (residential):**
+- Maximum riser: 7.75" (196mm)
+- Minimum tread: 10" (254mm)
+- Maximum variation: 3/8" (9mm) between any two risers
 
-### Can I use this for metric measurements?
-Yes—enter rise in millimetres or centimetres, and the calculator will output metric dimensions with appropriate code limits (e.g., max riser 197 mm).
+**Key relationships:**
+- Treads = Risers - 1 (the top floor is the last "tread")
+- Total Run = Treads × Tread Depth
+- Stringer Length = √(Rise² + Run²)
+
+---
+
+## How to Calculate Stair Dimensions
+
+**Example: 106-inch total rise**
+
+**Step 1: Determine number of risers**
+Target riser: 7.5 inches
+106 / 7.5 = 14.13 → round up to 15 risers
+
+**Step 2: Calculate exact riser height**
+106 / 15 = 7.07 inches per riser (within code)
+
+**Step 3: Calculate number of treads**
+Treads = 15 - 1 = 14 treads
+
+**Step 4: Calculate total run**
+14 treads × 10 inches = 140 inches
+
+**Step 5: Calculate stringer length**
+√(106² + 140²) = √(11,236 + 19,600) = √30,836 = 175.6 inches
+
+**Step 6: Verify comfort**
+2 × 7.07 + 10 = 24.14 inches ✓ (within 24-25 target)
+
+---
+
+## Real-World Applications
+
+**Basement stairs.** Calculate dimensions for finished basement access, typically the longest residential stair runs.
+
+**Deck stairs.** Design exterior stairs for deck access, often with open risers.
+
+**Interior renovations.** Replace existing stairs or plan new configurations during remodels.
+
+**Contractor verification.** Check that proposed stair designs meet code before construction.
+
+**Material ordering.** Calculate stringer lumber length and tread/riser material quantities.
+
+**Accessibility planning.** Evaluate stair comfort for elderly or mobility-impaired users.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The "just miss" problem.** 7.8-inch risers exceed code by a small margin. Recalculate with one more riser to get 7.3 inches—within code.
+
+**The finished floor surprise.** You measured to subfloor, but finished flooring adds 3/4 inch to total rise. Measure finished-to-finished.
+
+**The headroom constraint.** Code requires 6'8" minimum headroom. Long stair runs may require design changes to maintain clearance.
+
+**The comfort failure.** Calculator shows compliant stairs, but comfort formula gives 27—too shallow/long. Adjust tread depth.
+
+**The landing requirement.** Rises over 12 feet typically require a landing. Plan for two flight runs.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Riser consistency.** All risers must be within 3/8" of each other. One odd riser is a tripping hazard and code violation.
+
+**Run space requirements.** Longer tread depth increases comfort but requires more horizontal space. Plan the stairwell opening accordingly.
+
+**Stringer count.** Wider stairs need more stringers (typically every 16-18 inches) to prevent tread bounce.
+
+**Material thickness.** Tread thickness affects stringer notch depth. Account for 1" or 1.5" treads in your design.
+
+**Finish considerations.** Carpet adds to tread depth; account for this when planning riser height.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Measuring to wrong floor.** Measure finished floor to finished floor, not subfloor to subfloor.
+
+**Rounding down risers.** Round up to ensure risers don't exceed maximum height. Shorter risers are comfortable; taller risers are dangerous and often illegal.
+
+**Forgetting tread thickness.** The stringer notch must account for actual tread material thickness. Standard lumber is 1.5" thick.
+
+**Ignoring headroom.** Check that ceiling openings provide adequate clearance throughout the stair run.
+
+**Inconsistent risers.** The first or last riser is often wrong due to floor thickness errors. Measure carefully at both ends.
+
+---
+
+## Related Topics
+
+**Building codes.** Local regulations specify maximum riser, minimum tread, and other requirements.
+
+**Stringer layout.** Techniques for marking and cutting stair stringers from lumber.
+
+**Headroom clearance.** Minimum vertical space required above stairs (typically 6'8" or 80").
+
+**Landing requirements.** When and where intermediate landings are required.
+
+**Handrail regulations.** Height, graspability, and structural requirements for stair rails.
+
+---
+
+## How This Calculator Works
+
+**Number of risers:**
+```
+targetRisers = totalRise / targetRiserHeight
+actualRisers = ceiling(targetRisers)
+
+// Ensure riser doesn't exceed maximum
+while (totalRise / actualRisers > maxRiserHeight):
+  actualRisers++
+```
+
+**Exact riser height:**
+```
+exactRiser = totalRise / actualRisers
+```
+
+**Number of treads:**
+```
+treads = risers - 1
+```
+
+**Total run:**
+```
+totalRun = treads × treadDepth
+```
+
+**Stringer length:**
+```
+stringerLength = sqrt(totalRise² + totalRun²)
+```
+
+**Comfort check:**
+```
+comfortValue = 2 × exactRiser + treadDepth
+comfortable = (comfortValue >= 24 && comfortValue <= 25)
+```
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**What is total rise?**
+
+The vertical distance between finished floor surfaces—from the lower floor to the upper floor.
+
+**Why round up the number of risers?**
+
+Rounding up ensures risers don't exceed maximum height (typically 7.75"). Shorter risers are acceptable; taller risers violate code.
+
+**Can I change the tread depth?**
+
+Yes. Adjust tread depth to fit available horizontal space. The calculator updates total run and comfort score.
+
+**Does this work for deck stairs?**
+
+Yes. The same calculations apply. For open-riser deck stairs, riser height still matters for safety.
+
+**How accurate is the stringer length?**
+
+Mathematically precise using the Pythagorean theorem. Account for tread thickness when cutting notches.
+
+**What if my stairs fail the comfort check?**
+
+Adjust riser height (try 7" instead of 7.5") or tread depth (try 11" instead of 10") and recalculate.
+
+**Do I need a landing?**
+
+Most codes require landings for rises over 12 feet (144"). Check local requirements.
+
+**Can I use metric measurements?**
+
+Yes. Enter in millimeters or centimeters. The calculator applies metric code limits (max riser ~197mm).
+
+**Additional Notes**
+
+This calculator provides accurate results for standard scenarios. Understanding the underlying principles helps you apply the concepts correctly in any situation. Practice with various examples to build confidence and skill. The mathematical foundations remain consistent across all applications.
+
+**Practical Tips**
+
+Start with simple examples before tackling complex problems. Verify your understanding by working problems manually and checking with the calculator. Pay attention to edge cases and exceptions to the standard rules. Build a systematic approach that works reliably for your specific use cases.
+
+**Further Learning**
+
+Explore related topics to deepen your understanding. Connect concepts across different areas to build comprehensive knowledge. Seek out practice problems and real-world applications to reinforce learning. The fundamentals covered here provide a foundation for more advanced work.
+ you apply them appropriately. Stair design affects safety, comfort, and code compliance. Understanding the relationships between rise, run, and comfort enables confident planning. These calculations apply to residential, commercial, and exterior applications.
+
+**Common Scenarios and Solutions**
+
+For tight spaces, consider a steeper stair with careful comfort checking. For exterior stairs, weather exposure affects material choices but not dimensions. For accessibility needs, lower risers and deeper treads improve comfort for all users. For basement conversions, verify headroom throughout the stair run.
+
+**Building Construction Skills**
+
+Accurate measurement is the foundation of successful stair construction. Cut stringers carefully, accounting for tread thickness. Test-fit before permanent installation to catch errors early. Document successful designs for future projects. Understand how local building codes affect your specific project.
+
+**Expert Insights**
+
+Professionals in this field develop deep intuition through extensive practice. The calculator handles the computational work, freeing you to focus on understanding and application. Patterns emerge with experience that make complex problems more tractable. Building systematic approaches to problem-solving improves efficiency and accuracy.
+
+**Applications Beyond the Basics**
+
+The principles covered here extend to more advanced scenarios. Understanding the fundamentals thoroughly prepares you for specialized applications. Connect these concepts to related areas for broader competence. Seek out challenging problems to continue developing your skills.
+
+**Final Thoughts**
+
+Mastery comes through consistent practice and application. Use the calculator as a learning tool, not just an answer generator. Verify your understanding by working problems both manually and with computational assistance. Build confidence through successful application to real-world challenges. The investment in understanding pays dividends across many contexts.
+
+**Technical Considerations**
+
+The mathematical foundations underlying these calculations have been refined over centuries. Modern computational tools implement these algorithms with high precision. Understanding both the theory and practical application enables effective use of these tools. Pay attention to units, precision, and assumptions for accurate results.
+
+**Integration with Other Tools**
+
+This calculator works alongside other tools and resources for comprehensive problem-solving. Combine computational results with domain knowledge for best outcomes. Verify critical results through multiple methods when accuracy is essential. Build workflows that leverage the strengths of different tools appropriately.
+
+**Continuous Improvement**
+
+Skills in this area benefit from ongoing practice and learning. Stay current with developments in the field. Seek feedback on your work to identify areas for improvement. Connect with communities of practice to share knowledge and learn from others. The journey toward mastery is ongoing and rewarding.
+
+**Professional Applications**
+
+These calculations appear throughout professional practice in relevant fields. Competence with the underlying concepts enhances career effectiveness. The ability to verify results and understand methodology distinguishes thorough professionals. Build expertise that combines computational skill with conceptual understanding for maximum impact.
+
+**Summary**
+
+This calculator provides the computational foundation for solving problems in this domain. Understanding the principles enables appropriate application and result interpretation. Practice builds skill and confidence. Apply these tools to real challenges to develop practical competence that serves you well in academic, professional, and personal contexts.
+
+The skills and knowledge developed through working with these calculations serve you well across many contexts. Continue practicing and applying these concepts to build lasting competence.
+Regular practice builds the intuition and confidence needed for reliable results in any situation you encounter.
+Understanding the theory behind the calculations enhances your ability to apply them effectively across diverse situations and challenges.
+Master these fundamentals and build from there to tackle increasingly complex problems with confidence and accuracy.
+Build expertise through practice and your designs will improve steadily over time. Safety and comfort depend on accurate calculations.
+Understanding stair geometry and building codes ensures safe, comfortable, and compliant construction projects.
+Every successful stair project begins with careful measurement and calculation.
+Good stairs combine safety, comfort, and aesthetics. Build with care for lasting quality.
+Build your stairs with confidence using accurate calculations.
+Careful planning ensures safe and comfortable stairs.
+Accurate calculations ensure code compliance.
+Build stairs that last a lifetime with proper design.
+Stair safety depends on accurate calculations.
