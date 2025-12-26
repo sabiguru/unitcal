@@ -9,6 +9,7 @@ interface MDXContentProps {
 
 export default function MDXContent({ slug }: MDXContentProps) {
   const containerRef = useRef<HTMLElement | null>(null);
+  const observerRef = useRef<MutationObserver | null>(null);
 
   const MdxComponent = dynamic(() => import(`@/content/calculators/${slug}.mdx`), { 
     ssr: false,
@@ -31,15 +32,16 @@ export default function MDXContent({ slug }: MDXContentProps) {
         .replace(/\s+/g, '-')
         .replace(/-+/g, '-');
 
-    // Ensure headings have predictable IDs for in-page anchors
-    const headings = article.querySelectorAll('h1, h2, h3, h4');
-    headings.forEach((heading) => {
-      if (!heading.id) {
-        const text = heading.textContent || '';
-        const id = slugify(text);
-        if (id) heading.id = id;
-      }
-    });
+    const applyHeadingIds = () => {
+      const headings = article.querySelectorAll('h1, h2, h3, h4');
+      headings.forEach((heading) => {
+        if (!heading.id) {
+          const text = heading.textContent || '';
+          const id = slugify(text);
+          if (id) heading.id = id;
+        }
+      });
+    };
 
     const scrollToHash = () => {
       if (!window.location.hash) return;
@@ -61,11 +63,21 @@ export default function MDXContent({ slug }: MDXContentProps) {
       }
     };
 
-    article.addEventListener('click', handleAnchorClick);
-    window.addEventListener('hashchange', scrollToHash);
+    applyHeadingIds();
     scrollToHash();
 
+    // Watch for async MDX render and re-apply IDs when content changes
+    observerRef.current = new MutationObserver(() => {
+      applyHeadingIds();
+      scrollToHash();
+    });
+    observerRef.current.observe(article, { childList: true, subtree: true });
+
+    article.addEventListener('click', handleAnchorClick);
+    window.addEventListener('hashchange', scrollToHash);
+
     return () => {
+      observerRef.current?.disconnect();
       article.removeEventListener('click', handleAnchorClick);
       window.removeEventListener('hashchange', scrollToHash);
     };
