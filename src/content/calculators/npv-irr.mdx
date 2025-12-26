@@ -178,7 +178,7 @@ repeat:
   npv = sum of [cashFlow[t] / (1 + rate)^t] - initialInvestment
   dnpv = derivative of npv with respect to rate
   rate = rate - npv / dnpv
-until |npv| < tolerance or max iterations reached
+until |npv| &lt; tolerance or max iterations reached
 ```
 
 **Profitability Index:**

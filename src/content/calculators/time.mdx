@@ -51,7 +51,7 @@ HH:MM → Decimal hours = Hours + (Minutes / 60)
 7:30 → 7 + (30/60) = 7.5 decimal hours
 
 **Time difference across midnight:**
-If end time < start time, add 24 hours to end time before subtracting.
+If end time &lt; start time, add 24 hours to end time before subtracting.
 10:00 PM to 6:00 AM = 22:00 to 30:00 = 8 hours
 
 ---
@@ -180,7 +180,7 @@ convert result back to HH:MM:SS
 **Subtraction:**
 ```
 result = time1Seconds - time2Seconds
-if result < 0 and calculating time difference:
+if result &lt; 0 and calculating time difference:
   add 24 hours (86400 seconds)
 convert result back to HH:MM:SS
 ```

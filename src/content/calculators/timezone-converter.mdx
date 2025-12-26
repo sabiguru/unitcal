@@ -180,7 +180,7 @@ targetOffset = getOffset(targetZone, date)
 utcTime = sourceTime - sourceOffset
 targetTime = utcTime + targetOffset
 
-if targetTime < 0:
+if targetTime &lt; 0:
   targetTime += 24 hours
   targetDate -= 1 day
 if targetTime >= 24:

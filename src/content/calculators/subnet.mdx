@@ -159,7 +159,7 @@ Total usable hosts: 32 - 2 = 30
 **Subnet mask from CIDR:**
 ```
 maskBits = prefixLength
-mask = (0xFFFFFFFF << (32 - maskBits)) & 0xFFFFFFFF
+mask = (0xFFFFFFFF &lt;&lt; (32 - maskBits)) & 0xFFFFFFFF
 
 // Convert to dotted decimal
 octet1 = (mask >> 24) & 0xFF

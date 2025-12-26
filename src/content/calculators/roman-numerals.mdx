@@ -190,7 +190,7 @@ total = 0
 prev = 0
 for each character from right to left:
   value = romanValues[character]
-  if value < prev:
+  if value &lt; prev:
     total -= value
   else:
     total += value
