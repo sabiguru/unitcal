@@ -3,12 +3,15 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import SearchCalculators from './search/SearchCalculators';
+import { useRef } from 'react';
 
 export default function Header() {
   const [showCategoriesDropdown, setShowCategoriesDropdown] = useState(false);
   const [showLearnDropdown, setShowLearnDropdown] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const categoriesRef = useRef<HTMLDivElement>(null);
+  const learnRef = useRef<HTMLDivElement>(null);
 
   // Close mobile menu when screen size changes
   useEffect(() => {
@@ -21,6 +24,26 @@ export default function Header() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+      const target = event.target as Node;
+      if (showCategoriesDropdown && categoriesRef.current && !categoriesRef.current.contains(target)) {
+        setShowCategoriesDropdown(false);
+      }
+      if (showLearnDropdown && learnRef.current && !learnRef.current.contains(target)) {
+        setShowLearnDropdown(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, [showCategoriesDropdown, showLearnDropdown]);
 
   return (
     <header id="site-header" className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50 overflow-visible">
@@ -44,9 +67,12 @@ export default function Header() {
           {/* Navigation */}
           <div className="flex items-center space-x-4">
             <nav className="hidden md:flex items-center space-x-6">
-              <div className="relative">
+              <div className="relative" ref={categoriesRef}>
                 <button
-                  onClick={() => setShowCategoriesDropdown(!showCategoriesDropdown)}
+                  onClick={() => {
+                    setShowCategoriesDropdown(!showCategoriesDropdown);
+                    setShowLearnDropdown(false);
+                  }}
                   className="flex items-center space-x-1 text-gray-700 hover:text-gray-900 transition-colors"
                 >
                   <span>Calculators</span>
@@ -119,9 +145,12 @@ export default function Header() {
                 )}
               </div>
 
-              <div className="relative">
+              <div className="relative" ref={learnRef}>
                 <button
-                  onClick={() => setShowLearnDropdown(!showLearnDropdown)}
+                  onClick={() => {
+                    setShowLearnDropdown(!showLearnDropdown);
+                    setShowCategoriesDropdown(false);
+                  }}
                   className="flex items-center space-x-1 text-gray-700 hover:text-gray-900 transition-colors"
                 >
                   <span>Learn</span>
