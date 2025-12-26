@@ -11,6 +11,7 @@ import { getCategoryForCalculator } from '@/utils/calculatorCategoryMapping';
 import MDXContent from '@/components/MDXContent';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import { organizationSchema, generateCalculatorSchema, generateWebPageSchema } from '@/config/schemas';
+import ResetCalculatorButton from '@/components/ResetCalculatorButton';
 
 export function generateStaticParams() {
   return calculators.map((c) => {
@@ -118,6 +119,8 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
                 <Calc />
               </div>
             </div>
+
+            <ResetCalculatorButton />
 
             <EzoicAd placementId={EZOIC_PLACEMENTS.CALCULATOR_CONTENT} className="text-center" />
 
