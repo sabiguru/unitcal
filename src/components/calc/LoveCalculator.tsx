@@ -180,7 +180,7 @@ export default function LoveCalculator() {
 
       <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-8">
 
-      <h2 className="text-xl font-semibold text-gray-900 mb-6">Enter Your Names</h2>
+      <h2 className="text-xl font-semibold text-gray-900 mb-6">Enter Names to Calculate Compatibility</h2>
       
       <div className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

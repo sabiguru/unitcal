@@ -69,7 +69,7 @@ export default function AlcoholDilutionCalculator() {
           <span className="text-white text-2xl">🍷</span>
         </div>
         <div className="flex-1">
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">Alcohol Dilution Calculator</h2>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Alcohol Dilution Calculator</h1>
           <p className="text-gray-600">Calculate alcohol dilution, fortification, and blending</p>
         </div>
       </div>

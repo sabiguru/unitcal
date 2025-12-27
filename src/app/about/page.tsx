@@ -6,7 +6,7 @@ import CalculatorCategoryGrid from '@/components/CalculatorCategoryGrid';
 
 export const metadata: Metadata = {
   title: 'About CalcFort - Free Online Calculator Tools',
-  description: 'Learn about CalcFort\'s mission to provide accurate, fast, and free online calculators for mathematics, finance, health, engineering, and everyday calculations.',
+  description: 'Discover CalcFort\'s mission to deliver fast, accurate, free calculators for math, finance, health, engineering, and everyday use.',
   alternates: {
     canonical: 'https://calcfort.com/about',
   },

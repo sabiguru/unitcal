@@ -51,7 +51,7 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
       "how to eat for muscle gain without getting bulky",
       "how to track body fat and muscle growth over time"
     ],
-    "metaTitle": "Strength Training for Everyone: Why Building Muscle Is Essential for Health and Longevity",
+    "metaTitle": "Strength Training for Everyone: Build Muscle for Health",
     "metaDescription": "Discover why building muscle is critical for metabolism, joint health, mobility, ageing, and disease prevention.",
     "lastResearched": "2025-11-01"
   },
@@ -71,7 +71,7 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
       "what is active recovery and how often should I do it",
       "8 week mobility and recovery routine for beginners"
     ],
-    "metaTitle": "Holistic Recovery & Mobility: Low-Impact Training, Breathwork, and Smarter Recovery for Long-Term Health",
+    "metaTitle": "Holistic Recovery & Mobility: Low-Impact Training Guide",
     "metaDescription": "Learn how mobility work, low-impact cardio, breathwork, and recovery tracking can prevent injury and improve long-term health.",
     "lastResearched": "2025-11-01"
   },
@@ -91,7 +91,7 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
       "how rising prices affect disposable income 2026",
       "UK household budget calculator for inflation"
     ],
-    "metaTitle": "Cost of Living 2026 — How to Measure Real Purchasing Power",
+    "metaTitle": "Cost of Living 2026: Measure Real Purchasing Power",
     "metaDescription": "Learn how to calculate your personal cost of living for 2026 using real inflation and spending weights.",
     "lastResearched": "2025-12-07"
   },
@@ -111,7 +111,7 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
       "space weather forecast tools for beginners",
       "understanding orbital dynamics for 2026 astronomy"
     ],
-    "metaTitle": "Space Discoveries 2026 — How New Astronomy Breakthroughs Impact Everyday Life",
+    "metaTitle": "Space Discoveries 2026 — Everyday Impact",
     "metaDescription": "Explore 2026’s biggest space discoveries and how they influence GPS, energy grids, and modern technology.",
     "lastResearched": "2025-12-07"
   },
@@ -131,7 +131,7 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
       "automated debt repayment strategies UK",
       "how to calculate financial health with AI"
     ],
-    "metaTitle": "AI and Finance 2026 — Automation, Investments, Debt & Budgeting Guide",
+    "metaTitle": "AI & Finance 2026: Automation, Investing, Budgeting",
     "metaDescription": "Learn how AI will transform personal finance in 2026 through automation, investing, and forecasting.",
     "lastResearched": "2025-12-07"
   },
@@ -194,7 +194,7 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
       "ai powered habit analysis for better health",
       "what ai health insights really mean for your everyday life"
     ],
-    "metaTitle": "How AI Detects Patterns in Your Daily Habits — And What That Means for Your Health",
+    "metaTitle": "How AI Tracks Your Daily Habits and Health Patterns",
     "metaDescription": "See how AI analyses daily habits to predict health trends in sleep, calories, fitness and stress.",
     "lastResearched": "2025-11-16"
   },
@@ -257,7 +257,7 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
       "AI assisted product development",
       "AI engineering tools to improve efficiency"
     ],
-    "metaTitle": "How Generative AI Tools Are Reshaping Engineering and Technology in 2026",
+    "metaTitle": "Generative AI in Engineering: What Changes in 2026",
     "metaDescription": "Explore how generative AI is transforming engineering design, simulation and manufacturing in 2026.",
     "lastResearched": "2025-11-08"
   },
@@ -278,7 +278,7 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
       "at home fitness for office professionals",
       "how to stay active working from home"
     ],
-    "metaTitle": "10 Quick Workouts You Can Do at Home for Busy Professionals",
+    "metaTitle": "10 Quick Home Workouts for Busy Professionals",
     "metaDescription": "Efficient home workouts for busy professionals and remote workers to improve energy, posture and focus.",
     "lastResearched": "2025-11-08"
   },
@@ -299,7 +299,7 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
       "understanding timing power and area tradeoffs",
       "tools used in physical design implementation"
     ],
-    "metaTitle": "From Concept to Silicon – A Practical Guide to Physical Design & Implementation for Engineers",
+    "metaTitle": "From Concept to Silicon: Practical Physical Design Guide",
     "metaDescription": "Learn how digital designs move from RTL to silicon through physical design, timing, power and area trade-offs.",
     "lastResearched": "2025-11-08"
   },
@@ -320,7 +320,7 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
       "financial benefits of remote work",
       "remote work technology trends 2026"
     ],
-    "metaTitle": "Remote Work & Virtual Teams in 2026 – What’s Changing and How to Stay Ahead",
+    "metaTitle": "Remote Work & Virtual Teams in 2026: How to Stay Ahead",
     "metaDescription": "Explore how remote work and virtual teams are evolving in 2026 and how to stay productive and competitive.",
     "lastResearched": "2025-11-08"
   },
@@ -392,4 +392,3 @@ export function getLearnSeo(slug: string): LearnSEO | null {
 export function getAvailableLearnSlugs(): string[] {
   return Object.keys(learnSeoBySlug);
 }
-

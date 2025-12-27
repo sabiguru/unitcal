@@ -115,6 +115,7 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
 
         <div className="grid grid-cols-12 gap-6">
           <main className="col-span-12 lg:col-span-8 space-y-6">
+            <h1 className="sr-only">{meta.title}</h1>
             <CalculatorWithReset>
               <Calc />
             </CalculatorWithReset>
@@ -129,7 +130,7 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
 
             {relatedCalculators && relatedCalculators.length > 0 && (
               <div className="bg-white rounded-xl border border-gray-200 shadow-md p-6">
-                <h2 className="text-xl font-bold text-slate-700 mb-4">Related Calculators</h2>
+                <h2 className="text-xl font-bold text-slate-700 mb-4">Related {meta.category} Calculators</h2>
                 <div className="space-y-3">
                   {relatedCalculators.map((calc) => (
                     <a

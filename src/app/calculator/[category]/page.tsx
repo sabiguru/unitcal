@@ -29,10 +29,16 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   const calculatorCount = category.calculators.length;
   const popularCalculators = category.calculators.filter(calc => calc.popular).slice(0, 3);
   const popularNames = popularCalculators.map(calc => calc.name).join(', ');
+  const shortDescription = category.slug === 'cooking'
+    ? 'Culinary calculators for chefs and bakers: Recipe Converter, Baking Calculator, Coffee Ratio Calculator. Four free tools.'
+    : `${category.description} Popular tools include ${popularNames}. ${calculatorCount} free calculators available.`;
+  const ogDescription = category.slug === 'cooking'
+    ? 'Free cooking calculators for recipe scaling, baking, and coffee ratios.'
+    : `Free ${category.title.toLowerCase()} calculators and tools. ${category.description}`;
   
   return {
-    title: `${category.title} | CalcFort`,
-    description: `${category.description} Popular tools include ${popularNames}. ${calculatorCount} free calculators available.`,
+    title: `${category.title} Calculators | CalcFort`,
+    description: shortDescription,
     keywords: [
       `${category.title.toLowerCase()} calculators`,
       `${category.title.toLowerCase()} tools`,
@@ -42,8 +48,8 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
       'CalcFort'
     ],
     openGraph: {
-      title: `${category.title} | CalcFort`,
-      description: `Free ${category.title.toLowerCase()} calculators and tools. ${category.description}`,
+      title: `${category.title} Calculators | CalcFort`,
+      description: ogDescription,
       url: `https://calcfort.com/calculator/${category.slug}`,
       siteName: 'CalcFort',
       images: [
@@ -60,8 +66,10 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${category.title} | CalcFort`,
-      description: `${calculatorCount} free ${category.title.toLowerCase()} calculators. ${category.description}`,
+      title: `${category.title} Calculators | CalcFort`,
+      description: category.slug === 'cooking'
+        ? 'Culinary calculators for recipes, baking, and coffee ratios.'
+        : `${calculatorCount} free ${category.title.toLowerCase()} calculators. ${category.description}`,
       images: [`/og-image.png`],
       creator: '@CalcFort',
       site: '@CalcFort',
