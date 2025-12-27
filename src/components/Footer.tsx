@@ -86,7 +86,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-policy" className="text-slate-300 hover:text-white transition-colors">
+                <Link href="/privacy" className="text-slate-300 hover:text-white transition-colors">
                   Privacy Policy
                 </Link>
               </li>

@@ -92,6 +92,8 @@ export default function CategoriesPage() {
                   <h1 className="text-3xl font-bold text-slate-700 mb-4">Browse All Calculator Categories</h1>
                   <p className="text-gray-600">Explore our complete collection of specialized calculator tools</p>
                 </div>
+
+                <h2 className="text-2xl font-bold text-slate-700 mb-4 text-center">Pick a Category to Get Started</h2>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {calculatorCategories.map((category, index) => (
