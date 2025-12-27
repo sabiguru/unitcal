@@ -115,7 +115,6 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
 
         <div className="grid grid-cols-12 gap-6">
           <main className="col-span-12 lg:col-span-8 space-y-6">
-            <h1 className="sr-only">{meta.title}</h1>
             <CalculatorWithReset>
               <Calc />
             </CalculatorWithReset>
