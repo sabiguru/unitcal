@@ -2,6 +2,8 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 
 export const metadata = {
+  title: 'Privacy Policy - Calculator Fort',
+  description: 'Privacy Policy for Calculator Fort - Learn how we collect, use, and protect your personal information.',
   alternates: {
     canonical: 'https://calcfort.com/privacy',
   },
@@ -192,8 +194,3 @@ export default function PrivacyPage() {
     </>
   );
 }
-
-export const metadata = {
-  title: 'Privacy Policy - Calculator Fort',
-  description: 'Privacy Policy for Calculator Fort - Learn how we collect, use, and protect your personal information.',
-};
