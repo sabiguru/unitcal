@@ -43,7 +43,7 @@ export function generateCategoryBreadcrumbs(categoryTitle: string): BreadcrumbIt
       href: '/'
     },
     {
-      label: 'Categories',
+      label: 'Calculators',
       href: '/calculators'
     },
     {
