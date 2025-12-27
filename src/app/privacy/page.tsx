@@ -1,6 +1,12 @@
 import Link from 'next/link';
 import Header from '@/components/Header';
 
+export const metadata = {
+  alternates: {
+    canonical: 'https://calcfort.com/privacy',
+  },
+};
+
 export default function PrivacyPage() {
   return (
     <>
