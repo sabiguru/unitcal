@@ -1,92 +1,305 @@
-# What Would You Weigh on Mars?
+# What Would You Weigh on Mars? Understanding Gravity Across the Solar System
 
-Stepping onto Mars, you'd instantly feel lighter — not because you've changed, but because **gravity** has. This guide explains the difference between **mass** and **weight**, why Mars's gravity is ~38% of Earth's, and how to convert your Earth weight to a Martian one accurately. Use this to make sense of the number you'll see in our tool — and what it means for real life on the Red Planet.
+import Image from 'next/image';
 
-> Try it now: **[Space Weight Calculator](/calculator/space/space-weight)** • Also see: **[Age on Mars Calculator](/calculator/space/age-on-mars)**
+<Image
+  src="/images/blog/weight-on-mars-astronaut-scale.webp"
+  alt="Astronaut checking weight on Mars"
+  width={1200}
+  height={630}
+  className="rounded-lg mb-6"
+/>
 
-## Weight vs Mass (The One-Liner You'll Remember)
-
-- **Mass**: how much "stuff" you're made of — it doesn't change with location
-- **Weight**: gravitational **force** on that mass — it depends on the planet
-
-On Earth, surface gravity is about **9.81 m/s²**. On Mars, it's **3.71 m/s²** — roughly **0.38× Earth**.
-
-That ratio lets you convert instantly:
-
-**`Weight on Mars = Weight on Earth × 0.38`**
-
-If you prefer working from mass:
-
-**`Weight (N) = Mass (kg) × g (m/s²)`**
-- Earth: `W = m × 9.81`
-- Mars: `W = m × 3.71`
-
-Our calculator uses the above ratio for a quick, intuitive number.
-
-## Why Mars Pulls Less
-
-Gravity at a planet's surface depends on **mass** and **radius**:
-
-**g = (G × M) / r^2**
-
-Where:
-- **G** = gravitational constant
-- **M** = planet's mass
-- **r** = planet's radius
-
-Mars has ~**11%** of Earth's mass and about **53%** of Earth's radius. Smaller radius concentrates gravity, but the much lower mass dominates, yielding ~**0.38 g_Earth**
-
-## What Lower Gravity Does to You
-
-- **Motion**: jumps feel springy; sprints have longer hang-time
-- **Bones/Muscles**: long-term deconditioning without countermeasures (think ISS lessons)
-- **Posture**: slight spinal decompression; you may stand a tad taller
-- **Daily life**: loads, tools, and safety standards must be rethought
-
-## Across the Solar System (Perspective)
-
-| World | Surface g (× Earth) | 70 kg on Earth → |
-|---|---:|---:|
-| Mercury | ~0.38 | ~26.6 kg (effective) |
-| Venus | ~0.91 | ~63.7 kg |
-| **Mars** | **~0.38** | **~26.6 kg** |
-| Jupiter | ~2.53 | ~177 kg |
-| Saturn | ~1.06 | ~74 kg |
-| Uranus | ~0.89 | ~62 kg |
-| Neptune | ~1.14 | ~80 kg |
-
-## Worked Examples
-
-**Example 1 — Quick Ratio**
-Ayo is **80 kg** on Earth. On Mars:
-`80 × 0.38 = 30.4 kg (effective weight equivalent)`
-
-**Example 2 — From Mass & g**
-Mass `m = 65 kg`.
-- Earth weight (N): `65 × 9.81 ≈ 637 N`
-- Mars weight (N): `65 × 3.71 ≈ 241 N`
-Ratio: `241 / 637 ≈ 0.378` → ~**38%**
-
-Try it yourself in the calculator above and compare with Jupiter or the Moon for fun.
-
-## Frequently Asked Questions
-
-### Is the calculator showing "mass" or "weight"?
-
-We present an **Earth-scale equivalent** (what a bathroom scale would read if it were calibrated like Earth's). If you need **force in newtons**, use the mass×g method described above.
-
-### Why do some tables show slightly different numbers?
-
-Different sources round gravity values differently. We use widely accepted standard values and clearly state assumptions.
-
-### Does clothing or gear change the reading?
-
-Yes — anything you carry adds to **mass**, which scales the weight number on any world.
+## Table of Contents
+- [The Difference Between Mass and Weight](#the-difference-between-mass-and-weight)
+- [Why Mars Has Weaker Gravity](#why-mars-has-weaker-gravity)
+- [Your Weight on Mars: The Simple Calculation](#your-weight-on-mars-the-simple-calculation)
+- [What Weaker Gravity Would Feel Like](#what-weaker-gravity-would-feel-like)
+- [Weight Across the Solar System](#weight-across-the-solar-system)
+- [The Health Effects of Different Gravity](#the-health-effects-of-different-gravity)
+- [Common Questions](#common-questions)
 
 ---
 
-**Related Articles:**
-- [Space Weight Calculator](/calculator/space/space-weight) - Compare your weight across all planets
-- [Age on Mars Calculator](/calculator/space/age-on-mars) - Calculate your exact age on the Red Planet
-- [Planetary Years Explained](/learn/space/planetary-years) - Understand orbital periods across planets
-- [Time on Mars Explained](/learn/space/time-on-mars) - Learn about Martian sols and seasons
+## The Difference Between Mass and Weight
+
+Before we calculate your Mars weight, let's clear up a common confusion.
+
+**Mass** and **weight** are not the same thing.
+
+**Mass** is how much stuff you're made of — the atoms in your body. It doesn't change based on where you are. You have the same mass on Earth, on Mars, on the Moon, or floating in space.
+
+**Weight** is the force that gravity exerts on your mass. It changes depending on where you are.
+
+Here's the simple version:
+- **Mass:** What you ARE
+- **Weight:** How hard gravity PULLS on what you are
+
+On Earth, we mix these up because we've always lived in Earth's gravity. When you step on a scale, it shows a number that represents both your mass and Earth's pull. We just call it "weight" and measure it in kilograms or pounds.
+
+But take that same body to Mars, and the scale shows a different number — not because you changed, but because gravity changed.
+
+---
+
+## Why Mars Has Weaker Gravity
+
+Mars pulls on you with about **38% of Earth's gravity**. If you weigh 100 kg on Earth, you'd weigh about 38 kg on Mars.
+
+Why the difference?
+
+### The Physics
+
+Surface gravity depends on two things:
+1. The planet's **mass** (how much stuff it's made of)
+2. The planet's **radius** (how big it is)
+
+The formula is:
+**g = (G × M) / r²**
+
+Where:
+- g = surface gravity
+- G = gravitational constant (universal)
+- M = planet's mass
+- r = planet's radius
+
+More mass = stronger gravity
+Larger radius = weaker gravity (you're farther from the center)
+
+### Mars vs Earth
+
+**Mars has about 11% of Earth's mass.**
+This alone would make gravity much weaker.
+
+**Mars has about 53% of Earth's radius.**
+Being smaller means you're closer to the center, which increases gravity somewhat.
+
+These two factors combine:
+- Less mass (gravity goes way down)
+- Smaller radius (gravity goes somewhat up)
+- Net result: about 38% of Earth's gravity
+
+The smaller radius partially compensates for the lower mass, but not enough to match Earth's gravity.
+
+---
+
+## Your Weight on Mars: The Simple Calculation
+
+Here's the easy formula:
+
+**Mars Weight = Earth Weight × 0.38**
+
+That's it. Multiply your Earth weight by 0.38.
+
+### Examples
+
+**Example 1: 70 kg on Earth**
+70 × 0.38 = **26.6 kg on Mars**
+
+**Example 2: 85 kg on Earth**
+85 × 0.38 = **32.3 kg on Mars**
+
+**Example 3: 55 kg on Earth**
+55 × 0.38 = **20.9 kg on Mars**
+
+### Using Force (For the More Technically Minded)
+
+If you want to work in proper physics units:
+
+On Earth:
+**Weight (Newtons) = Mass (kg) × 9.81 m/s²**
+
+On Mars:
+**Weight (Newtons) = Mass (kg) × 3.71 m/s²**
+
+**Example:** A person with mass 70 kg
+- Earth weight: 70 × 9.81 = 686.7 N
+- Mars weight: 70 × 3.71 = 259.7 N
+- Ratio: 259.7 / 686.7 = 0.378 (about 38%)
+
+Same answer, more precise method.
+
+Try it yourself with the [Space Weight Calculator](https://calcfort.com/calculator/space/space-weight).
+
+---
+
+## What Weaker Gravity Would Feel Like
+
+Numbers are one thing. But what would 38% gravity actually feel like?
+
+### Moving Around
+
+**Walking** would feel bouncy. Each step would push you higher off the ground. You'd have to learn to walk with a lower, more shuffling gait to stay stable.
+
+**Jumping** would be incredible. Your vertical leap would be about 2.6 times higher than on Earth. A typical jump that gets you 50 cm off the ground on Earth would lift you 130 cm on Mars.
+
+**Running** would be different. You could move faster with the same effort, but traction would be an issue. Your feet wouldn't grip the ground as firmly.
+
+**Lifting** objects would feel remarkably easy. That heavy box? Now it's light. But be careful — the object still has the same mass, so it takes the same force to start and stop its motion.
+
+### Sports Would Change
+
+Basketball players could dunk from further away. High jumpers could clear incredible heights. But ball sports would all behave differently — throws would travel farther on flatter arcs.
+
+### Everyday Annoyances
+
+**Pouring liquids** would be slower and more likely to splash weirdly.
+
+**Dropping things** would take longer to fall — more time to catch them, at least.
+
+**Furniture** designed for Earth weight might feel too stable, hard to move.
+
+**Exercise** would need weights 2.6 times heavier to provide the same resistance.
+
+---
+
+<Image
+  src="/images/blog/weight-across-solar-system-comparison.webp"
+  alt="Comparison of weight across the solar system"
+  width={1200}
+  height={630}
+  className="rounded-lg mb-6"
+/>
+
+## Weight Across the Solar System
+
+Mars isn't the only option. Here's how your weight changes across different worlds.
+
+### The Comparison Table
+
+| World | Surface Gravity (× Earth) | 70 kg Person Would Weigh |
+|-------|---------------------------|--------------------------|
+| Mercury | 0.38 | 26.6 kg |
+| Venus | 0.91 | 63.7 kg |
+| Earth | 1.00 | 70.0 kg |
+| Moon | 0.17 | 11.9 kg |
+| **Mars** | **0.38** | **26.6 kg** |
+| Jupiter* | 2.53 | 177.1 kg |
+| Saturn* | 1.06 | 74.2 kg |
+| Uranus* | 0.89 | 62.3 kg |
+| Neptune* | 1.14 | 79.8 kg |
+
+*Gas giants don't have solid surfaces, so these are theoretical values at the "surface" level where atmospheric pressure equals Earth's sea level.
+
+### The Extremes
+
+**Lightest:** The Moon at 17% Earth gravity. You'd weigh barely more than a sixth of your Earth weight.
+
+**Heaviest:** Jupiter at 253% Earth gravity. A 70 kg person would feel like they weighed 177 kg. Standing would be exhausting.
+
+**Mars ties with Mercury** — both have almost exactly 38% Earth gravity despite very different sizes and compositions.
+
+### Interesting Observations
+
+**Venus is close to Earth.** Despite being smaller, Venus is dense. You'd feel almost normal there (ignoring the crushing atmosphere, extreme heat, and acid clouds).
+
+**Saturn is surprisingly light.** Despite being huge, Saturn is mostly gas and has low density. Gravity at its "surface" is only slightly higher than Earth's.
+
+---
+
+## The Health Effects of Different Gravity
+
+Living in different gravity levels affects your body. We know this from astronaut research in microgravity (near-zero gravity on the space station).
+
+### What Happens in Low Gravity
+
+**Muscles weaken.** Without gravity to work against, muscles lose mass and strength. Astronauts lose 1-2% of muscle mass per month in space.
+
+**Bones lose density.** Bones are living tissue that respond to load. Without Earth gravity, bones shed calcium and become weaker. This is similar to osteoporosis.
+
+**Fluids shift.** On Earth, gravity pulls blood and fluids toward your feet. In low gravity, fluids distribute differently, causing puffy faces and potential vision problems.
+
+**Heart adapts.** The heart doesn't have to work as hard to pump blood upward. Over time, it can become less efficient.
+
+**Balance changes.** The inner ear, which helps with balance, takes time to adjust to different gravity.
+
+### Mars: The Middle Ground?
+
+Mars gravity (38%) is between zero gravity and Earth. We don't know exactly how bodies would adapt because no one has lived there.
+
+Likely effects:
+- Some muscle and bone loss, but less than in zero gravity
+- Need for regular exercise to maintain strength
+- Possible adaptation over years of living there
+- Children born on Mars might develop differently
+
+### Countermeasures
+
+Astronauts on the space station exercise 2+ hours daily to slow muscle and bone loss. Mars residents would probably need regular exercise routines too, possibly with extra resistance.
+
+Some scientists propose artificial gravity (rotating habitats) for long-term space living. This technology doesn't exist yet for practical use.
+
+---
+
+## Common Questions
+
+### Is the calculator showing mass or weight?
+
+Our [Space Weight Calculator](https://calcfort.com/calculator/space/space-weight) shows what a bathroom scale would read if calibrated for Earth — what we normally think of as "weight." This is technically the gravitational force converted to an equivalent mass number.
+
+If you need actual force in Newtons, multiply your mass in kg by the planet's surface gravity in m/s².
+
+### Would I feel the difference immediately?
+
+Yes. The moment you stood on Mars, you'd feel noticeably lighter. Walking would feel different. Your first steps would probably be awkward until your brain adjusted.
+
+### Why do some sources give slightly different numbers?
+
+Different sources round gravity values differently. Mars's surface gravity is approximately 3.71 m/s², but some sources use 3.72 or 3.7. The difference is tiny — within 1%.
+
+### Does altitude on Mars affect weight?
+
+Yes, slightly. Higher elevations are farther from Mars's center, so gravity is slightly weaker. The top of Olympus Mons (the tallest mountain in the solar system) would have noticeably lower gravity than the lowlands.
+
+### Would I be able to lift more on Mars?
+
+Yes. Objects weigh less, so you could lift things that would be too heavy on Earth. But the objects still have the same mass — they're just as hard to accelerate, slow down, or change direction. Momentum works the same way.
+
+### Could I jump over a house on Mars?
+
+Not quite. Your jumping ability would improve by a factor of about 2.6. If you can jump 50 cm high on Earth, you'd jump about 130 cm on Mars — impressive, but not house-clearing.
+
+With a spacesuit on (adding mass and reducing mobility), your actual jump height might not be much better than on Earth.
+
+### Does weight on Mars affect how fast you'd fall?
+
+Objects fall slower on Mars because gravity is weaker. A dropped object takes about 1.6 times longer to fall the same distance compared to Earth.
+
+---
+
+## Why This Matters
+
+Understanding gravity differences is more than trivia. It affects:
+
+**Mission planning.** Landing spacecraft, designing habitats, and planning human activities all depend on understanding Martian gravity.
+
+**Equipment design.** Tools, vehicles, and structures for Mars need to account for different weight and stress loads.
+
+**Human health.** Long-term Mars residents will need to manage the health effects of reduced gravity.
+
+**Future sports and recreation.** Martian Olympics would look very different from Earth competitions.
+
+**Agriculture.** Plant growth and water behavior are affected by gravity. Mars farming will have unique challenges.
+
+As humanity considers becoming a multi-planet species, understanding how gravity shapes daily life becomes increasingly relevant.
+
+---
+
+## Try It Yourself
+
+Calculate your weight on Mars and other planets:
+- [Space Weight Calculator](https://calcfort.com/calculator/space/space-weight) — Compare weights across the solar system
+
+Related space calculators:
+- [Age on Mars Calculator](https://calcfort.com/calculator/space/age-on-mars) — Your age in Mars years
+
+For the math:
+- [Scientific Calculator](https://calcfort.com/calculator/mathematics/scientific) — Calculate gravity and force
+
+---
+
+## Related Articles
+
+- [Space Weight Calculator](https://calcfort.com/calculator/space/space-weight) — Compare weights across all planets
+- [Age on Mars Calculator](https://calcfort.com/calculator/space/age-on-mars) — Your exact age on the Red Planet
+- [Planetary Years Explained](https://calcfort.com/learn/space/planetary-years) — Orbital periods across planets
+- [Time on Mars Explained](https://calcfort.com/learn/space/time-on-mars) — Sols, seasons, and Martian time
