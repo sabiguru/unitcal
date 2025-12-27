@@ -118,7 +118,7 @@ export default function AboutPage() {
 
         {/* Features Grid */}
         <div className="mb-20">
-          <h2 className="text-3xl font-bold text-slate-700 text-center mb-12">Why Choose Calculator Fort</h2>
+          <h3 className="text-2xl font-bold text-slate-700 text-center mb-12">Why Choose Calculator Fort</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 hover:shadow-xl transition-shadow duration-300">
@@ -137,7 +137,7 @@ export default function AboutPage() {
 
         {/* Team Section */}
         <div className="mb-20">
-          <h2 className="text-3xl font-bold text-slate-700 text-center mb-12">Our Team</h2>
+          <h3 className="text-2xl font-bold text-slate-700 text-center mb-12">Our Team</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 p-8 text-center">
@@ -154,7 +154,7 @@ export default function AboutPage() {
 
         {/* Stats Section */}
         <div className="bg-gradient-to-r from-slate-600 to-slate-700 rounded-2xl shadow-xl p-8 lg:p-12 text-white text-center mb-12">
-          <h2 className="text-3xl font-bold mb-8">Calculator Fort by the Numbers</h2>
+          <h3 className="text-2xl font-bold mb-8">Calculator Fort by the Numbers</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="text-4xl font-bold mb-2">80+</div>

@@ -498,7 +498,7 @@ export default function Home() {
           <div className="col-span-12 lg:col-span-4">
             <div className="h-full flex flex-col">
               <div className="mb-6">
-                <h2 className="text-xl font-bold text-slate-700 mb-2">Calculator Categories</h2>
+                <h3 className="text-xl font-bold text-slate-700 mb-2">Calculator Categories</h3>
                 <p className="text-gray-600 text-sm">Choose from our comprehensive collection of specialized calculators</p>
               </div>
 

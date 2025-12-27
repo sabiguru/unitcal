@@ -84,7 +84,7 @@ export default function CategoryPageClient({ category, breadcrumbs }: CategoryPa
 
             {/* All Calculators Grid */}
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">All {category.title} Calculators</h2>
+              <h3 className="text-xl font-bold text-gray-900 mb-6">All {category.title} Calculators</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {category.calculators.map((calculator, index) => (
                   <Link
@@ -134,7 +134,7 @@ export default function CategoryPageClient({ category, breadcrumbs }: CategoryPa
 
             {/* Literature Section */}
             <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">About {category.title}</h2>
+              <h3 className="text-xl font-bold text-gray-900 mb-6">About {category.title}</h3>
               
               <div className="prose prose-gray max-w-none">
                 <p className="text-gray-700 leading-relaxed mb-6">
