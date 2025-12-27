@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 export default function CategoriesPage() {
   const breadcrumbs = [
     { label: 'Home', href: '/' },
-    { label: 'Categories', current: true }
+    { label: 'Calculators', current: true }
   ];
 
   // Main categories page schema
