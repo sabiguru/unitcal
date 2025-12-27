@@ -31,7 +31,7 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
       "how to connect wearable data to calorie tracking",
       "is hrv accurate for training readiness"
     ],
-    "metaTitle": "Wearable Tech & Data-Driven Fitness: How to Use HRV, Sleep, and Recovery Data to Train Smarter",
+    "metaTitle": "Wearable Tech & Fitness: HRV, Sleep, Recovery",
     "metaDescription": "Learn how wearable fitness tech and recovery metrics like HRV, sleep score, and resting heart rate can improve performance, fat loss, and recovery.",
     "lastResearched": "2025-11-01"
   },
@@ -91,7 +91,7 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
       "how rising prices affect disposable income 2026",
       "UK household budget calculator for inflation"
     ],
-    "metaTitle": "Cost of Living 2026: Measure Real Purchasing Power",
+    "metaTitle": "Cost of Living 2026: Measure Your Purchasing Power",
     "metaDescription": "Learn how to calculate your personal cost of living for 2026 using real inflation and spending weights.",
     "lastResearched": "2025-12-07"
   },
@@ -131,7 +131,7 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
       "automated debt repayment strategies UK",
       "how to calculate financial health with AI"
     ],
-    "metaTitle": "AI & Finance 2026: Automation, Investing, Budgeting",
+    "metaTitle": "AI & Finance 2026: Automation, Investing",
     "metaDescription": "Learn how AI will transform personal finance in 2026 through automation, investing, and forecasting.",
     "lastResearched": "2025-12-07"
   },
@@ -152,7 +152,7 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
       "which ai tools are worth using in 2026",
       "ai tools that improve daily life and personal routines"
     ],
-    "metaTitle": "AI Tools Everyone Should Be Using in 2026 — And Why They Matter",
+    "metaTitle": "AI Tools to Use in 2026 — What Matters",
     "metaDescription": "Discover essential AI tools for productivity, finance and health in 2026 and how they fit into daily routines.",
     "lastResearched": "2025-11-16"
   },
@@ -173,7 +173,7 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
       "math concepts behind machine learning explained for beginners",
       "easy guide to understanding ai math without equations"
     ],
-    "metaTitle": "The Hidden Math Behind AI — A Simple Guide for Regular People",
+    "metaTitle": "Hidden Math Behind AI: Plain-English Guide",
     "metaDescription": "Learn the simple math behind AI, including linear algebra, probability and optimisation, without heavy equations.",
     "lastResearched": "2025-11-16"
   },
@@ -215,7 +215,7 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
       "how to use AI calculators for personal finance and health tracking",
       "AI calculators for everyday money health and energy decisions"
     ],
-    "metaTitle": "How AI Is Changing Everyday Calculations in Finance and Health",
+    "metaTitle": "How AI Changes Everyday Finance & Health Calculations",
     "metaDescription": "Learn how AI-powered calculators are transforming everyday decisions across finance, health and energy.",
     "lastResearched": "2025-11-16"
   },
@@ -236,7 +236,7 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
       "automated savings and investment setup",
       "how to use calculators to track financial goals"
     ],
-    "metaTitle": "The Ultimate Guide to Automating Your Personal Finances in 2025/26",
+    "metaTitle": "Automate Your Personal Finances for 2025/26",
     "metaDescription": "Learn how to automate income, savings and investments using modern finance tools and calculators.",
     "lastResearched": "2025-11-08"
   },

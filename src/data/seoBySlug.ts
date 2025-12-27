@@ -550,10 +550,30 @@ export const seoBySlug: Record<string, CalcSEO> =
       "compare depreciation methods straight line vs declining",
       "depreciation schedule calculator by year"
     ],
-    "metaTitle": "Depreciation Calculator — Straight-Line and Declining Methods",
+    "metaTitle": "Depreciation Calculator: Straight-Line & Declining",
     "metaDescription": "Calculate depreciation using straight-line or declining-balance methods. Get a clear depreciation schedule and annual breakdown.",
     "webAppSchema": seoSchemas["depreciation"]?.webApp,
     "faqSchema": seoSchemas["depreciation"]?.faq,
+  },
+
+  "password-generator": {
+    "primaryKeyword": "password generator",
+    "variants": [
+      "secure password generator",
+      "random password generator",
+      "strong password maker",
+      "password strength generator"
+    ],
+    "longTails": [
+      "generate strong random passwords online",
+      "create secure passwords with numbers and symbols",
+      "password generator for work and personal accounts",
+      "how to generate long secure passwords quickly"
+    ],
+    "metaTitle": "Password Generator | Create Secure Passwords",
+    "metaDescription": "Generate strong, random passwords with numbers, symbols, and mixed case to keep your accounts secure.",
+    "webAppSchema": seoSchemas["password-generator"]?.webApp,
+    "faqSchema": seoSchemas["password-generator"]?.faq,
   },
 
   "discount": {
