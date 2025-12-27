@@ -12,7 +12,7 @@ export default function MDXContent({ slug }: MDXContentProps) {
   const observerRef = useRef<MutationObserver | null>(null);
 
   const MdxComponent = dynamic(() => import(`@/content/calculators/${slug}.mdx`), { 
-    ssr: false,
+    ssr: true,
     loading: () => (
       <div className="animate-pulse bg-gray-200 h-32 rounded-lg flex items-center justify-center">
         <div className="text-gray-500">Loading content...</div>
