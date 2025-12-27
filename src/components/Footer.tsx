@@ -13,7 +13,7 @@ export default function Footer() {
               <div className="w-8 h-8 bg-gradient-to-r from-slate-600 to-slate-700 rounded-lg flex items-center justify-center shadow-md">
                 <span className="text-amber-200 font-bold text-sm">CF</span>
               </div>
-              <h2 className="text-xl font-bold">Calculator Fort</h2>
+              <h3 className="text-xl font-bold">Calculator Fort</h3>
             </Link>
             <p className="text-slate-300 text-sm mb-4 max-w-md">
               Your trusted source for fast, accurate online calculators and conversion tools. 

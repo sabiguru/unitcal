@@ -144,7 +144,7 @@ export default function ContactPage() {
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Send a Message to CalcFort</h2>
               
               {isSubmitted ? (
                 <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
