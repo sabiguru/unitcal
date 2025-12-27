@@ -1,6 +1,6 @@
-# From Idea to Computer Chip: How Physical Design Actually Works
-
 import Image from 'next/image';
+
+# From Idea to Computer Chip: How Physical Design Actually Works
 
 <Image
   src="/images/blog/concept-to-silicon-chip-design.webp"
@@ -111,6 +111,8 @@ Use the [Time Calculator](https://calcfort.com/calculator/mathematics/time) to u
 
 ---
 
+## Step 3: Planning the Layout (Floorplanning)
+
 <Image
   src="/images/blog/chip-floorplanning-layout-diagram.webp"
   alt="Chip floorplanning layout diagram"
@@ -118,8 +120,6 @@ Use the [Time Calculator](https://calcfort.com/calculator/mathematics/time) to u
   height={630}
   className="rounded-lg mb-6"
 />
-
-## Step 3: Planning the Layout (Floorplanning)
 
 Now you have a list of gates. But where do they go?
 
@@ -213,6 +213,8 @@ Modern chips might have millions of flip-flops. Getting the clock right is a hug
 
 ---
 
+## Step 6: Connecting Everything (Routing)
+
 <Image
   src="/images/blog/chip-routing-metal-layers.webp"
   alt="Chip routing metal layers visualization"
@@ -220,8 +222,6 @@ Modern chips might have millions of flip-flops. Getting the clock right is a hug
   height={630}
   className="rounded-lg mb-6"
 />
-
-## Step 6: Connecting Everything (Routing)
 
 Now all the gates are placed. The clock network is built. Time to connect everything else.
 
@@ -313,6 +313,8 @@ Manufacturing takes weeks. The factory builds thousands of chips on a single waf
 
 ---
 
+## The Three Things That Matter Most
+
 <Image
   src="/images/blog/speed-power-area-tradeoff-diagram.webp"
   alt="Speed power area tradeoff diagram for chip design"
@@ -320,8 +322,6 @@ Manufacturing takes weeks. The factory builds thousands of chips on a single waf
   height={630}
   className="rounded-lg mb-6"
 />
-
-## The Three Things That Matter Most
 
 Every decision in chip design comes back to three factors: timing, power, and area.
 
