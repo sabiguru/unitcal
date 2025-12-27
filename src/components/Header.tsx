@@ -1,15 +1,15 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import SearchCalculators from './search/SearchCalculators';
-import { useRef } from 'react';
 
 export default function Header() {
   const [showCategoriesDropdown, setShowCategoriesDropdown] = useState(false);
   const [showLearnDropdown, setShowLearnDropdown] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const headerRef = useRef<HTMLElement | null>(null);
   const categoriesRef = useRef<HTMLDivElement>(null);
   const learnRef = useRef<HTMLDivElement>(null);
 
@@ -27,26 +27,46 @@ export default function Header() {
 
   // Close dropdowns when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+    const handlePointerDown = (event: PointerEvent) => {
       const target = event.target as Node;
-      if (showCategoriesDropdown && categoriesRef.current && !categoriesRef.current.contains(target)) {
+      const headerEl = headerRef.current;
+      const clickInsideHeader = headerEl?.contains(target);
+      if (!clickInsideHeader) {
         setShowCategoriesDropdown(false);
-      }
-      if (showLearnDropdown && learnRef.current && !learnRef.current.contains(target)) {
         setShowLearnDropdown(false);
+        setShowUserMenu(false);
+      } else {
+        if (showCategoriesDropdown && categoriesRef.current && !categoriesRef.current.contains(target)) {
+          setShowCategoriesDropdown(false);
+        }
+        if (showLearnDropdown && learnRef.current && !learnRef.current.contains(target)) {
+          setShowLearnDropdown(false);
+        }
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('touchstart', handleClickOutside);
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setShowCategoriesDropdown(false);
+        setShowLearnDropdown(false);
+        setShowUserMenu(false);
+      }
+    };
+
+    document.addEventListener('pointerdown', handlePointerDown, true);
+    document.addEventListener('keydown', handleKeyDown);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('touchstart', handleClickOutside);
+      document.removeEventListener('pointerdown', handlePointerDown, true);
+      document.removeEventListener('keydown', handleKeyDown);
     };
   }, [showCategoriesDropdown, showLearnDropdown]);
 
   return (
-    <header id="site-header" className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50 overflow-visible">
+    <header
+      id="site-header"
+      ref={headerRef}
+      className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50 overflow-visible"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
