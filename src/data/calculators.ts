@@ -92,6 +92,18 @@ import HomeEnergyAuditCalculator from '@/components/calc/HomeEnergyAuditCalculat
 import TimeCalculator from '@/components/calc/TimeCalculator';
 import TimeZoneConverterCalculator from '@/components/calc/TimeZoneConverterCalculator';
 import CountdownTimerCalculator from '@/components/calc/CountdownTimerCalculator';
+import AveragePercentageCalculator from '@/components/calc/AveragePercentageCalculator';
+import FractionToPercentCalculator from '@/components/calc/FractionToPercentCalculator';
+import DecimalToPercentCalculator from '@/components/calc/DecimalToPercentCalculator';
+import DoublingTimeCalculator from '@/components/calc/DoublingTimeCalculator';
+import PercentageDifferenceCalculator from '@/components/calc/PercentageDifferenceCalculator';
+import PercentageOfPercentageCalculator from '@/components/calc/PercentageOfPercentageCalculator';
+import PercentagePointCalculator from '@/components/calc/PercentagePointCalculator';
+import PercentErrorCalculator from '@/components/calc/PercentErrorCalculator';
+import TimePercentageCalculator from '@/components/calc/TimePercentageCalculator';
+import PercentToGoalCalculator from '@/components/calc/PercentToGoalCalculator';
+import RelativeChangeCalculator from '@/components/calc/RelativeChangeCalculator';
+import SlopePercentageCalculator from '@/components/calc/SlopePercentageCalculator';
 
 export type CalcEntry = {
   slug: string;
@@ -823,6 +835,102 @@ const calculatorsBase: CalcEntry[] = [
     category: 'Mathematics & Basic Tools',
     component: CountdownTimerCalculator,
     mdx: 'countdown-timer.mdx'
+  },
+  {
+    slug: 'average-percentage',
+    title: 'Average Percentage Calculator',
+    description: 'Calculate the average of multiple percentage values',
+    category: 'Mathematics & Basic Tools',
+    component: AveragePercentageCalculator,
+    mdx: 'average-percentage.mdx'
+  },
+  {
+    slug: 'fraction-to-percent',
+    title: 'Fraction to Percent Calculator',
+    description: 'Convert any fraction to its percentage equivalent',
+    category: 'Mathematics & Basic Tools',
+    component: FractionToPercentCalculator,
+    mdx: 'fraction-to-percent.mdx'
+  },
+  {
+    slug: 'decimal-to-percent',
+    title: 'Decimal to Percent Converter',
+    description: 'Convert between decimal and percentage formats',
+    category: 'Mathematics & Basic Tools',
+    component: DecimalToPercentCalculator,
+    mdx: 'decimal-to-percent.mdx'
+  },
+  {
+    slug: 'doubling-time',
+    title: 'Doubling Time Calculator',
+    description: 'Calculate how long it takes for a value to double at a given growth rate',
+    category: 'Mathematics & Basic Tools',
+    component: DoublingTimeCalculator,
+    mdx: 'doubling-time.mdx'
+  },
+  {
+    slug: 'percentage-difference',
+    title: 'Percentage Difference Calculator',
+    description: 'Calculate the absolute percentage difference between two values',
+    category: 'Mathematics & Basic Tools',
+    component: PercentageDifferenceCalculator,
+    mdx: 'percentage-difference.mdx'
+  },
+  {
+    slug: 'percentage-of-percentage',
+    title: 'Percentage of a Percentage Calculator',
+    description: 'Calculate what percentage of a percentage equals',
+    category: 'Mathematics & Basic Tools',
+    component: PercentageOfPercentageCalculator,
+    mdx: 'percentage-of-percentage.mdx'
+  },
+  {
+    slug: 'percentage-point',
+    title: 'Percentage Point Calculator',
+    description: 'Calculate the difference in percentage points between values',
+    category: 'Mathematics & Basic Tools',
+    component: PercentagePointCalculator,
+    mdx: 'percentage-point.mdx'
+  },
+  {
+    slug: 'percent-error',
+    title: 'Percent Error Calculator',
+    description: 'Calculate the percent error between experimental and actual values',
+    category: 'Mathematics & Basic Tools',
+    component: PercentErrorCalculator,
+    mdx: 'percent-error.mdx'
+  },
+  {
+    slug: 'time-percentage',
+    title: 'Time Percentage Calculator',
+    description: 'Calculate what percentage of a time period has elapsed or remains',
+    category: 'Mathematics & Basic Tools',
+    component: TimePercentageCalculator,
+    mdx: 'time-percentage.mdx'
+  },
+  {
+    slug: 'percent-to-goal',
+    title: 'Percent to Goal Calculator',
+    description: 'Calculate percentage progress toward your goals',
+    category: 'Mathematics & Basic Tools',
+    component: PercentToGoalCalculator,
+    mdx: 'percent-to-goal.mdx'
+  },
+  {
+    slug: 'relative-change',
+    title: 'Relative Change Calculator',
+    description: 'Calculate the relative percentage change between values',
+    category: 'Mathematics & Basic Tools',
+    component: RelativeChangeCalculator,
+    mdx: 'relative-change.mdx'
+  },
+  {
+    slug: 'slope-percentage',
+    title: 'Slope Percentage Calculator',
+    description: 'Calculate slope, grade, or gradient as a percentage',
+    category: 'Mathematics & Basic Tools',
+    component: SlopePercentageCalculator,
+    mdx: 'slope-percentage.mdx'
   }
 ];
 

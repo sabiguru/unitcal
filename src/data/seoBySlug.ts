@@ -1856,6 +1856,234 @@ export const seoBySlug: Record<string, CalcSEO> =
     "faqSchema": seoSchemas["capacitance"]?.faq,
   },
 
+  "average-percentage": {
+    "primaryKeyword": "average percentage calculator",
+    "variants": [
+      "calculate average percentage",
+      "mean percentage calculator",
+      "average of percentages",
+      "percentage average calculator"
+    ],
+    "longTails": [
+      "how to calculate average of multiple percentages",
+      "average percentage calculator online",
+      "find mean of percentage values",
+      "calculate average test score percentage"
+    ],
+    "metaTitle": "Average Percentage Calculator — Find Mean of Percentages",
+    "metaDescription": "Calculate the average of multiple percentage values. Find the mean percentage for test scores, grades, or any percentage data set.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "fraction-to-percent": {
+    "primaryKeyword": "fraction to percent calculator",
+    "variants": [
+      "convert fraction to percentage",
+      "fraction to percentage converter",
+      "fraction as percentage",
+      "change fraction to percent"
+    ],
+    "longTails": [
+      "how to convert fraction to percentage online",
+      "fraction to percent conversion calculator",
+      "convert 3/4 to percentage",
+      "turn fraction into percent calculator"
+    ],
+    "metaTitle": "Fraction to Percent Calculator — Convert Fractions to %",
+    "metaDescription": "Convert any fraction to percentage instantly. Easy fraction to percent converter with step-by-step calculation and common conversion chart.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "decimal-to-percent": {
+    "primaryKeyword": "decimal to percent calculator",
+    "variants": [
+      "convert decimal to percentage",
+      "decimal to percentage converter",
+      "percent to decimal calculator",
+      "decimal percentage conversion"
+    ],
+    "longTails": [
+      "how to convert decimal to percentage online",
+      "convert 0.75 to percentage",
+      "decimal to percent conversion tool",
+      "change decimal to percent calculator"
+    ],
+    "metaTitle": "Decimal to Percent Converter — Convert Decimals & Percentages",
+    "metaDescription": "Convert between decimals and percentages instantly. Two-way conversion tool with examples and common decimal-percent equivalents.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "doubling-time": {
+    "primaryKeyword": "doubling time calculator",
+    "variants": [
+      "calculate doubling time",
+      "investment doubling calculator",
+      "rule of 72 calculator",
+      "growth doubling time"
+    ],
+    "longTails": [
+      "how long to double investment calculator",
+      "calculate doubling time for compound interest",
+      "population doubling time calculator",
+      "rule of 70 doubling calculator"
+    ],
+    "metaTitle": "Doubling Time Calculator — Investment & Growth Calculator",
+    "metaDescription": "Calculate how long it takes for your investment or value to double. Use compound growth formula or Rule of 72 for quick estimates.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "percentage-difference": {
+    "primaryKeyword": "percentage difference calculator",
+    "variants": [
+      "percent difference calculator",
+      "calculate percentage difference",
+      "difference between percentages",
+      "percentage variance calculator"
+    ],
+    "longTails": [
+      "how to calculate percentage difference between two numbers",
+      "percentage difference formula calculator",
+      "find percentage difference online",
+      "symmetric percentage difference calculator"
+    ],
+    "metaTitle": "Percentage Difference Calculator — Compare Two Values",
+    "metaDescription": "Calculate the percentage difference between two numbers. Symmetric comparison tool perfect for comparing prices, statistics, or measurements.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "percentage-of-percentage": {
+    "primaryKeyword": "percentage of percentage calculator",
+    "variants": [
+      "percent of percent calculator",
+      "percentage of a percentage",
+      "calculate percent of percent",
+      "stacked percentage calculator"
+    ],
+    "longTails": [
+      "how to calculate percentage of a percentage",
+      "20 percent of 50 percent calculator",
+      "stacked discount calculator percentage",
+      "calculate commission on percentage"
+    ],
+    "metaTitle": "Percentage of Percentage Calculator — Stacked % Calculator",
+    "metaDescription": "Calculate what percentage of a percentage equals. Perfect for stacked discounts, commission tiers, and compound percentage calculations.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "percentage-point": {
+    "primaryKeyword": "percentage point calculator",
+    "variants": [
+      "percent point calculator",
+      "percentage points vs percent",
+      "calculate percentage points",
+      "basis points calculator"
+    ],
+    "longTails": [
+      "difference between percentage points and percent",
+      "how to calculate percentage point change",
+      "percentage point difference calculator",
+      "convert percentage points to percent"
+    ],
+    "metaTitle": "Percentage Point Calculator — Points vs Percent Difference",
+    "metaDescription": "Calculate percentage point differences and understand the critical distinction from percentage change. Essential for finance and statistics.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "percent-error": {
+    "primaryKeyword": "percent error calculator",
+    "variants": [
+      "percentage error calculator",
+      "calculate percent error",
+      "experimental error calculator",
+      "measurement error percentage"
+    ],
+    "longTails": [
+      "how to calculate percent error in chemistry",
+      "percent error formula calculator",
+      "experimental vs actual percent error",
+      "calculate accuracy percentage error"
+    ],
+    "metaTitle": "Percent Error Calculator — Experimental Error Calculator",
+    "metaDescription": "Calculate percent error between experimental and actual values. Essential tool for science labs, quality control, and measurement accuracy.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "time-percentage": {
+    "primaryKeyword": "time percentage calculator",
+    "variants": [
+      "percentage of time calculator",
+      "time as percentage",
+      "elapsed time percentage",
+      "time fraction calculator"
+    ],
+    "longTails": [
+      "calculate percentage of time elapsed",
+      "how much time is left percentage",
+      "percentage of day calculator",
+      "time remaining percentage calculator"
+    ],
+    "metaTitle": "Time Percentage Calculator — Elapsed & Remaining Time %",
+    "metaDescription": "Calculate what percentage of a time period has elapsed or remains. Perfect for project tracking, billing, and time management.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "percent-to-goal": {
+    "primaryKeyword": "percent to goal calculator",
+    "variants": [
+      "percentage to goal calculator",
+      "goal progress percentage",
+      "target percentage calculator",
+      "completion percentage calculator"
+    ],
+    "longTails": [
+      "how to calculate percentage progress to goal",
+      "fundraising percentage calculator",
+      "goal achievement percentage tracker",
+      "percentage of target calculator"
+    ],
+    "metaTitle": "Percent to Goal Calculator — Track Progress Percentage",
+    "metaDescription": "Calculate your percentage progress toward any goal. Track fundraising, sales quotas, fitness targets, debt payoff, and more.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "relative-change": {
+    "primaryKeyword": "relative change calculator",
+    "variants": [
+      "percentage change calculator",
+      "relative percent change",
+      "calculate relative change",
+      "percentage increase decrease calculator"
+    ],
+    "longTails": [
+      "how to calculate relative percentage change",
+      "relative change formula calculator",
+      "percentage growth calculator",
+      "calculate percent increase or decrease"
+    ],
+    "metaTitle": "Relative Change Calculator — Percentage Change Calculator",
+    "metaDescription": "Calculate relative percentage change between two values. Shows both increase and decrease with absolute and relative changes.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "slope-percentage": {
+    "primaryKeyword": "slope percentage calculator",
+    "variants": [
+      "grade calculator slope",
+      "gradient percentage calculator",
+      "incline percentage calculator",
+      "slope to percent calculator"
+    ],
+    "longTails": [
+      "calculate slope as percentage",
+      "road grade percentage calculator",
+      "ADA ramp slope calculator percentage",
+      "roof pitch to percentage calculator"
+    ],
+    "metaTitle": "Slope Percentage Calculator — Grade & Gradient Calculator",
+    "metaDescription": "Calculate slope, grade, or gradient as a percentage. Essential for ADA compliance, road design, roofing, and hiking trail planning.",
+    "lastResearched": "2025-12-28"
+  },
+
 } as const;
 
 export type SlugSEO = keyof typeof seoBySlug;

@@ -24,8 +24,15 @@ export default function MDXContent({ slug }: MDXContentProps) {
     const article = containerRef.current;
     if (!article) return;
 
+    const normalizeHeadingText = (text: string) => {
+      // Many calculator headings append " - Title" or " — Title"; strip the suffix for stable anchors
+      if (text.includes('—')) return text.split('—')[0].trim();
+      if (text.includes(' - ')) return text.split(' - ')[0].trim();
+      return text;
+    };
+
     const slugify = (text: string) =>
-      text
+      normalizeHeadingText(text)
         .toLowerCase()
         .trim()
         .replace(/[^a-z0-9\s-]/g, '')

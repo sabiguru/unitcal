@@ -52,7 +52,19 @@ export const calculatorCategories: CategoryData[] = [
       { name: 'Significant Figures Calculator', description: 'Count, round, and calculate with significant figures', link: '/calculator/mathematics/significant-figures' },
       { name: 'Soroban Abacus Calculator', description: 'Master the Japanese soroban abacus with 1:4 bead configuration', link: '/calculator/mathematics/soroban-abacus' },
       { name: 'Suanpan Abacus Calculator', description: 'Learn the Chinese suanpan abacus with 2:5 bead configuration', link: '/calculator/mathematics/suanpan-abacus' },
-      { name: 'Western Abacus Calculator', description: 'Practice with the Western classroom abacus with counting beads', link: '/calculator/mathematics/western-abacus' }
+      { name: 'Western Abacus Calculator', description: 'Practice with the Western classroom abacus with counting beads', link: '/calculator/mathematics/western-abacus' },
+      { name: 'Average Percentage Calculator', description: 'Calculate the average of multiple percentage values', link: '/calculator/mathematics/average-percentage' },
+      { name: 'Fraction to Percent Calculator', description: 'Convert any fraction to its percentage equivalent', link: '/calculator/mathematics/fraction-to-percent' },
+      { name: 'Decimal to Percent Converter', description: 'Convert between decimal and percentage formats', link: '/calculator/mathematics/decimal-to-percent' },
+      { name: 'Doubling Time Calculator', description: 'Calculate how long it takes for a value to double at a given growth rate', link: '/calculator/mathematics/doubling-time' },
+      { name: 'Percentage Difference Calculator', description: 'Calculate the absolute percentage difference between two values', link: '/calculator/mathematics/percentage-difference' },
+      { name: 'Percentage of a Percentage Calculator', description: 'Calculate what percentage of a percentage equals', link: '/calculator/mathematics/percentage-of-percentage' },
+      { name: 'Percentage Point Calculator', description: 'Calculate the difference in percentage points between values', link: '/calculator/mathematics/percentage-point' },
+      { name: 'Percent Error Calculator', description: 'Calculate the percent error between experimental and actual values', link: '/calculator/mathematics/percent-error' },
+      { name: 'Time Percentage Calculator', description: 'Calculate what percentage of a time period has elapsed or remains', link: '/calculator/mathematics/time-percentage' },
+      { name: 'Percent to Goal Calculator', description: 'Calculate percentage progress toward your goals', link: '/calculator/mathematics/percent-to-goal' },
+      { name: 'Relative Change Calculator', description: 'Calculate the relative percentage change between values', link: '/calculator/mathematics/relative-change' },
+      { name: 'Slope Percentage Calculator', description: 'Calculate slope, grade, or gradient as a percentage', link: '/calculator/mathematics/slope-percentage' }
     ]
   },
   {

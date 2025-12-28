@@ -1,0 +1,248 @@
+## Doubling Time Calculator: Calculate Growth Doubling Periods
+
+## Table of Contents - Doubling Time
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Understanding Doubling Time](#understanding-doubling-time)
+- [How to Calculate Doubling Time Manually](#how-to-calculate-doubling-time-manually)
+- [Real-World Applications](#real-world-applications)
+- [Common Scenarios and Mistakes](#common-scenarios-and-mistakes)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Doubling Time
+
+Enter the growth rate (as a percentage) in the input field.
+
+Select whether you're working with:
+- Simple interest/linear growth
+- Compound interest/exponential growth
+
+Click "Calculate" to see results. The output displays:
+- The doubling time in appropriate units
+- The formula used
+- Step-by-step calculation explanation
+- Visual representation of the growth curve
+
+---
+
+## Understanding Doubling Time
+
+Doubling time is the period required for a quantity to double in size or value at a constant growth rate. This concept applies to populations, investments, economic indicators, and any exponentially growing system.
+
+**The fundamental principle:**
+At constant growth rates, quantities double predictably. The time it takes depends on the growth rate and whether growth is linear or exponential.
+
+**Two types of growth:**
+- **Linear (Simple):** Fixed amount added each period. Doubling time = 100 / growth rate
+- **Exponential (Compound):** Fixed percentage added each period. Doubling time = ln(2) / ln(1 + r)
+
+**The Rule of 72:**
+A quick approximation for compound growth: Doubling time ≈ 72 / growth rate (as percentage)
+
+This works well for growth rates between 6% and 10%, with decreasing accuracy outside this range.
+
+**Why it matters:**
+Understanding doubling time helps visualize long-term growth implications. A seemingly small difference in growth rates creates vastly different outcomes over time.
+
+---
+
+## How to Calculate Doubling Time Manually
+
+**For compound (exponential) growth:**
+Doubling time = ln(2) / ln(1 + r)
+Or approximately: 72 / growth rate (%)
+
+Example: 8% annual growth
+Exact: ln(2) / ln(1.08) = 0.693147 / 0.076961 ≈ 9.01 years
+Rule of 72: 72 / 8 = 9 years
+
+**For simple (linear) growth:**
+Doubling time = 100 / growth rate (%)
+
+Example: 5% simple interest
+Doubling time = 100 / 5 = 20 years
+
+**Precise Rule of 72 adjustment:**
+For better accuracy, use:
+- Rule of 69.3 for continuous compounding
+- Rule of 70 for growth rates near 2-3%
+- Rule of 72 for growth rates near 6-10%
+
+**Reverse calculation (finding growth rate from doubling time):**
+Growth rate = 72 / doubling time (approximate)
+Or exact: r = 2^(1/t) - 1
+
+Example: Doubles in 10 years
+Approximate: 72 / 10 = 7.2%
+Exact: 2^(1/10) - 1 = 0.0718 = 7.18%
+
+**Tripling and quadrupling time:**
+Tripling time ≈ 110 / growth rate
+Quadrupling time ≈ 144 / growth rate (or 2 × doubling time for exponential growth)
+
+---
+
+## Real-World Applications
+
+**Investment planning.** £10,000 invested at 6% annual return. Doubling time = 72 / 6 = 12 years. In 12 years: £20,000. In 24 years: £40,000. In 36 years: £80,000.
+
+**Population growth.** A city growing at 3% annually will double in approximately 72 / 3 = 24 years. Current population 500,000 becomes 1,000,000 in 24 years.
+
+**Inflation impact.** At 4% inflation, prices double in 72 / 4 = 18 years. A £5 coffee today costs £10 in 18 years if inflation holds steady.
+
+**Business revenue.** Startup growing at 15% monthly. Revenue doubles in 72 / 15 ≈ 5 months. £10,000/month becomes £20,000 in 5 months, £40,000 in 10 months.
+
+**Debt accumulation.** Credit card balance at 18% APR (1.5% monthly) doubles in 72 / 18 = 4 years if unpaid. £1,000 becomes £2,000 in 4 years.
+
+**Technology adoption.** User base growing at 25% quarterly. Doubles in 72 / 25 ≈ 3 quarters. 100,000 users become 200,000 in 9 months.
+
+**Energy consumption.** National energy demand growing 2.5% annually doubles in 72 / 2.5 = 28.8 years. Crucial for infrastructure planning.
+
+---
+
+## Common Scenarios and Mistakes
+
+**Confusing simple and compound growth.** Most real-world growth is compound, not simple. Using linear formulas for compound growth severely underestimates doubling time.
+
+**Assuming constant growth rates.** The calculation assumes steady rates. Real growth fluctuates. A 10% average over varying rates differs from constant 10%.
+
+**Ignoring compounding frequency.** 12% annual compounded monthly doubles faster than 12% compounded annually. Frequency matters.
+
+**Extrapolating indefinitely.** Doubling time assumes unlimited growth. Real systems have constraints—markets saturate, resources deplete, populations stabilize.
+
+**Misapplying the Rule of 72.** Works well for 6-10% rates. At 1% or 50%, accuracy suffers. For very high or low rates, use the exact logarithmic formula.
+
+**Forgetting about negative growth.** For decline (negative rates), calculate "halving time" instead. -3% growth means halving in 72 / 3 = 24 years.
+
+**Not adjusting for fees or taxes.** A 7% gross return with 1.5% fees nets 5.5%. Use net rate for realistic doubling time: 72 / 5.5 ≈ 13 years, not 10.3.
+
+---
+
+## Related Topics
+
+**Compound Annual Growth Rate (CAGR).** The constant rate that would grow an investment from start to end value over a period. Related to doubling time by reverse calculation.
+
+**Exponential growth and decay.** Doubling time is the positive case; half-life is the negative case. Same mathematical principles apply.
+
+**Rule of 72 and variants.** Rules of 69.3, 70, and 72 provide quick mental math for doubling time under different scenarios.
+
+**Present value and future value.** Doubling time helps estimate future value timelines for investments and liabilities.
+
+**Population dynamics.** Birth rates, death rates, and migration patterns determine population doubling time.
+
+Explore more at [Compound Interest Calculator](/calculator/mathematics/compound-interest) and [Percentage Calculator](/calculator/mathematics/percentage).
+
+---
+
+## How This Calculator Works
+
+**For compound growth:**
+```
+doublingTime = ln(2) / ln(1 + growthRate / 100)
+```
+Where ln is the natural logarithm.
+
+**For simple growth:**
+```
+doublingTime = 100 / growthRate
+```
+
+**Rule of 72 approximation:**
+```
+doublingTime ≈ 72 / growthRate (as percentage)
+```
+
+**Validation:**
+The calculator verifies:
+- Growth rate is positive (negative rates calculate halving time)
+- Results are within reasonable bounds
+- Appropriate formula selected based on growth type
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**What is the Rule of 72?**
+
+A mental math shortcut: Doubling time ≈ 72 / annual growth rate (as percentage). For 6% growth, doubling time ≈ 72 / 6 = 12 years. Surprisingly accurate for rates between 6-10%.
+
+**Why does the Rule of 72 work?**
+
+It approximates the natural logarithm formula. The number 72 has many divisors (1,2,3,4,6,8,9,12...), making mental division easy. The mathematically precise number is 69.3, but 72 is more convenient.
+
+**When should I use the exact formula instead of the Rule of 72?**
+
+For growth rates below 3% or above 15%, accuracy degrades. Use the exact formula: ln(2) / ln(1 + r). For financial planning and scientific work, prefer exact calculations.
+
+**How do I calculate doubling time for monthly compounding?**
+
+Convert annual rate to monthly rate (divide by 12), then calculate. Or use annual rate with annual compounding for approximation. For precision, account for actual compounding frequency.
+
+**What's the difference between doubling time and half-life?**
+
+Same concept, opposite direction. Doubling time for growth (positive rates), half-life for decay (negative rates, radioactive decay, depreciation). Calculation method identical.
+
+**Can doubling time apply to debt?**
+
+Yes. Unpaid debt with interest doubles over time. Credit card at 18% APR doubles in 72 / 18 = 4 years. Illustrates the danger of carrying balances.
+
+**How does inflation affect doubling time for investments?**
+
+Adjust for inflation by using real return (nominal return - inflation rate). 8% return with 3% inflation = 5% real return, doubling in 72 / 5 ≈ 14.4 years in purchasing power.
+
+**What if growth rate varies over time?**
+
+Use average growth rate, but understand this is approximate. If growth rates fluctuate significantly, year-by-year calculation is more accurate than doubling time formulas.
+
+**How do I calculate tripling or quadrupling time?**
+
+Tripling time ≈ 110 / growth rate. Quadrupling time = 2 × doubling time (for exponential growth) or ≈ 144 / growth rate. Use ln(3)/ln(1+r) and ln(4)/ln(1+r) for exact values.
+
+**Does doubling time work for any exponential growth?**
+
+Yes—populations, bacteria, viral spread, technology adoption, compound interest. Any system growing at a constant percentage rate has a predictable doubling time.
+
+**How does compounding frequency affect doubling time?**
+
+More frequent compounding shortens doubling time. 12% compounded monthly doubles faster than 12% compounded annually. The effect increases with higher rates.
+
+**What's the relationship between doubling time and exponential functions?**
+
+Doubling time derives from solving 2 = (1 + r)^t for t. This connects directly to exponential function fundamentals: growth factor, base, and time period.
+
+**Can I use doubling time for negative numbers?**
+
+For negative growth rates, you're calculating "halving time"—how long until a value drops to half. Same formulas, opposite interpretation. Example: -5% growth halves in 72/5 ≈ 14 years.
+
+**How accurate is the Rule of 70 versus Rule of 72?**
+
+Rule of 70 is more accurate for low growth rates (1-5%). Rule of 72 is more accurate for moderate rates (6-10%). Rule of 69.3 is mathematically exact for continuous compounding.
+
+**What's the practical difference between simple and compound growth doubling times?**
+
+At 10% growth, simple doubles in 10 years, compound in 7.3 years. The gap widens with higher rates and longer timeframes. Real-world growth is almost always compound.
+
+**How do taxes impact investment doubling time?**
+
+Calculate using after-tax returns. If taxed at 20% on 8% returns, net return = 6.4%. Doubling time = 72 / 6.4 ≈ 11.25 years versus 9 years pre-tax.
+
+**What is continuous compounding and how does it affect doubling time?**
+
+Continuous compounding compounds infinitely frequently. Doubling time = ln(2) / r = 69.3 / r%. Slightly faster than annual compounding. Used in theoretical models.
+
+**How does doubling time help with retirement planning?**
+
+Visualizes long-term growth. Starting at 25 with £10,000 at 7% return: doubles by 35 (£20K), 45 (£40K), 55 (£80K), 65 (£160K). Shows power of early investing.
+
+**Can doubling time predict stock market performance?**
+
+Only if you assume constant returns, which markets never provide. Historical average (7-10% real returns) suggests doubling every 7-10 years, but actual paths vary wildly year-to-year.
+
+**How do economic indicators use doubling time?**
+
+GDP doubling time indicates economic development speed. A 7% GDP growth doubles the economy in ~10 years. China's rapid growth (8-10%) doubled its economy repeatedly in recent decades.
