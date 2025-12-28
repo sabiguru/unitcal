@@ -24,8 +24,8 @@ const slugify = (s: string) =>
 const tokenize = (s: string) =>
   s.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
 
-const makeKeywords = (name: string, category: string): string[] => {
-  const base = `${name} ${category}`;
+const makeKeywords = (name: string, category: string, path?: string): string[] => {
+  const base = `${name} ${category} ${path ?? ''}`;
   return Array.from(new Set(tokenize(base)));
 };
 
@@ -108,7 +108,7 @@ export const flattenCalculators = (categories: CategoryData[]): FlatCalculator[]
         name,
         category: cat.title,
         path,
-        keywords: makeKeywords(name, cat.title),
+        keywords: makeKeywords(name, cat.title, path),
       });
     }
   }
