@@ -1,1 +1,453 @@
-## System of Equations Calculator
+## System of Equations Calculator: Solve Multiple Equations Simultaneously
+
+## Table of Contents - System of Equations
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Understanding Systems of Equations](#understanding-systems-of-equations)
+- [How to Solve Systems Manually](#how-to-solve-systems-manually)
+- [Real-World Applications](#real-world-applications)
+- [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - System of Equations
+
+Enter your system of equations with two or more variables. For example, 2x + 3y = 12 and x - y = 1, or input three equations with three unknowns like x + y + z = 6, 2x - y + 3z = 14, and x + 2y - z = 2.
+
+Click "Solve" to see the solution using multiple methods. The calculator shows substitution, elimination, or matrix approaches, displaying step-by-step work for each.
+
+The results show the values of all variables, verification by substitution into original equations, and identification of special cases like no solution or infinite solutions.
+
+---
+
+## Understanding Systems of Equations
+
+A system of equations is a collection of two or more equations with the same variables. The solution is the set of values that satisfies all equations simultaneously.
+
+**The fundamental question:**
+
+What values make all the equations true at the same time? For two equations with two variables, you're looking for the point where the lines intersect on a graph.
+
+**Types of systems:**
+
+Consistent systems have at least one solution. Inconsistent systems have no solution (parallel lines that never meet). Dependent systems have infinitely many solutions (same line written differently).
+
+**Why multiple equations:**
+
+One equation with two variables has infinitely many solutions. Each equation adds a constraint. With the right number of equations, you narrow down to a single solution point.
+
+**Solution methods:**
+
+Graphing shows solutions visually but isn't precise. Substitution solves one equation for a variable and substitutes into others. Elimination adds or subtracts equations to cancel variables. Matrices use linear algebra for larger systems.
+
+**The relationship between equations and variables:**
+
+Generally, you need as many independent equations as you have variables. Two variables need two equations, three variables need three equations. Fewer equations mean infinite solutions, more equations might be inconsistent.
+
+**Special cases:**
+
+Parallel lines never intersect (no solution). Identical lines overlap completely (infinite solutions). Lines that intersect at a single point give one solution.
+
+---
+
+## How to Solve Systems Manually
+
+Let me show you different methods for solving systems with detailed examples.
+
+**Example 1: Substitution method with two equations**
+
+Solve:
+y = 2x + 1
+3x + y = 11
+
+Step 1: First equation already has y isolated
+y = 2x + 1
+
+Step 2: Substitute into second equation
+3x + (2x + 1) = 11
+
+Step 3: Solve for x
+5x + 1 = 11
+5x = 10
+x = 2
+
+Step 4: Back-substitute to find y
+y = 2(2) + 1 = 5
+
+Solution: x = 2, y = 5
+
+Verification:
+First: y = 2(2) + 1 = 5 ✓
+Second: 3(2) + 5 = 11 ✓
+
+**Example 2: Elimination method**
+
+Solve:
+2x + 3y = 12
+3x - 2y = 5
+
+Step 1: Multiply equations to make coefficients opposites
+Multiply first by 2: 4x + 6y = 24
+Multiply second by 3: 9x - 6y = 15
+
+Step 2: Add equations to eliminate y
+4x + 6y = 24
+9x - 6y = 15
+-----------
+13x = 39
+
+Step 3: Solve for x
+x = 3
+
+Step 4: Substitute back into original first equation
+2(3) + 3y = 12
+6 + 3y = 12
+3y = 6
+y = 2
+
+Solution: x = 3, y = 2
+
+**Example 3: Three equations, three variables**
+
+Solve:
+x + y + z = 6
+2x - y + 3z = 14
+x + 2y - z = 2
+
+Step 1: Eliminate x from equations 2 and 3
+Multiply equation 1 by -2: -2x - 2y - 2z = -12
+Add to equation 2: -3y + z = 2 ... (equation A)
+
+Multiply equation 1 by -1: -x - y - z = -6
+Add to equation 3: y - 2z = -4 ... (equation B)
+
+Step 2: Now solve the 2x2 system with equations A and B
+-3y + z = 2
+y - 2z = -4
+
+Multiply equation B by 3: 3y - 6z = -12
+Add to equation A: -5z = -10
+z = 2
+
+Step 3: Back-substitute to find y
+y - 2(2) = -4
+y - 4 = -4
+y = 0
+
+Step 4: Back-substitute to find x
+x + 0 + 2 = 6
+x = 4
+
+Solution: x = 4, y = 0, z = 2
+
+**Example 4: No solution (inconsistent)**
+
+Solve:
+2x + y = 5
+2x + y = 8
+
+Step 1: Subtract second from first
+0 = -3
+
+This is false, so there's no solution. The lines are parallel.
+
+**Example 5: Infinite solutions (dependent)**
+
+Solve:
+2x + 4y = 8
+x + 2y = 4
+
+Step 1: Notice second equation is first divided by 2
+These represent the same line.
+
+Solution: Infinite solutions. Any point on the line x + 2y = 4 works.
+Can write as: y = (4 - x)/2 or x = 4 - 2y
+
+**Example 6: Using matrices (optional advanced method)**
+
+Solve:
+x + 2y = 5
+3x - y = 4
+
+Write as matrix: [1  2 | 5]
+                [3 -1 | 4]
+
+Row reduce to: [1  0 | 13/7]
+               [0  1 | 11/7]
+
+Solution: x = 13/7, y = 11/7
+
+**Example 7: Word problem converting to system**
+
+The sum of two numbers is 25. Their difference is 7. Find the numbers.
+
+Let x = first number, y = second number
+
+Equation 1: x + y = 25
+Equation 2: x - y = 7
+
+Add equations: 2x = 32, so x = 16
+Substitute: 16 + y = 25, so y = 9
+
+The numbers are 16 and 9.
+
+---
+
+## Real-World Applications
+
+**Business break-even analysis:**
+
+Revenue equations and cost equations create a system. Solving finds the break-even point where profit equals zero, helping businesses plan production levels.
+
+**Mixture problems:**
+
+Combining solutions of different concentrations, mixing nuts at different prices, or blending fuels requires systems of equations to find the right amounts.
+
+**Investment allocation:**
+
+Dividing money between accounts with different interest rates to achieve a target total and target return creates a system to solve.
+
+**Traffic flow analysis:**
+
+Engineers model traffic at intersections using systems of equations, where flows into and out of each junction must balance.
+
+**Electrical circuits:**
+
+Kirchhoff's laws create systems of equations for current and voltage. Circuit analysis relies heavily on solving these systems.
+
+**Chemistry stoichiometry:**
+
+Balancing chemical equations and finding reaction quantities involves systems where atoms must be conserved across equations.
+
+**Economics supply and demand:**
+
+Market equilibrium occurs where supply equals demand. These are typically systems of equations solved to find equilibrium price and quantity.
+
+**GPS positioning:**
+
+Your phone solves systems of equations using signals from multiple satellites to determine your exact location in three-dimensional space.
+
+---
+
+## Common Mistakes and How to Avoid Them
+
+**Mistake 1: Arithmetic errors when combining equations**
+
+Wrong: Adding 2x + 3y = 12 and -2x + y = 4 to get 4y = 8
+
+Right: 2x + (-2x) = 0, 3y + y = 4y, 12 + 4 = 16, so 4y = 16
+
+Why it happens: Rushing through addition. Line up terms carefully and add column by column.
+
+**Mistake 2: Forgetting to multiply all terms**
+
+Wrong: To eliminate x in 2x + 3y = 12, multiplying only the x term by a factor
+
+Right: Multiply every term in the equation by the same factor, including the constant on the right.
+
+Why it happens: Not treating the equation as a complete unit. Every term must be multiplied.
+
+**Mistake 3: Sign errors during substitution**
+
+Wrong: Substituting y = x - 3 into 2x - y = 7 as 2x - x - 3 = 7
+
+Right: 2x - (x - 3) = 7, which becomes 2x - x + 3 = 7
+
+Why it happens: Not using parentheses. Always put substituted expressions in parentheses.
+
+**Mistake 4: Solving for the wrong variable**
+
+Wrong: In elimination, solving for y when you meant to solve for x
+
+Right: Keep track of which variable you're solving for at each step. Label your work clearly.
+
+Why it happens: Losing focus mid-problem. Write down what you're doing at each step.
+
+**Mistake 5: Not checking the solution**
+
+Wrong: Finding x = 3, y = 2 and moving on without verification
+
+Right: Plug both values into both original equations to confirm they work.
+
+Why it happens: Overconfidence. Always verify, especially on tests.
+
+**Mistake 6: Misidentifying special cases**
+
+Wrong: Getting 0 = 0 and thinking there's no solution
+
+Right: 0 = 0 is always true, meaning infinite solutions (dependent system).
+
+Why it happens: Confusing the two special cases. False statement = no solution. True statement = infinite solutions.
+
+**Mistake 7: Mixing up elimination directions**
+
+Wrong: Multiplying to make coefficients the same when you should make them opposites
+
+Right: To eliminate by addition, make coefficients opposites. To eliminate by subtraction, make them the same.
+
+Why it happens: Not planning the elimination strategy first. Decide add or subtract, then adjust coefficients accordingly.
+
+---
+
+## Related Topics
+
+- [Substitution Method Calculator](/calculator/mathematics/substitution-method) - Specific technique
+- [Elimination Method Calculator](/calculator/mathematics/elimination-method) - Alternative technique
+- [Matrix Calculator](/calculator/mathematics/matrix) - For larger systems
+- [Graphing Calculator](/calculator/mathematics/graphing) - Visual solution
+- [Linear Equations Calculator](/calculator/mathematics/linear-equations) - Single equations
+
+---
+
+## How This Calculator Works
+
+**Step 1: Parse equations**
+```
+Extract coefficients for each variable
+Identify constants on right side
+Count number of equations and variables
+Verify format
+```
+
+**Step 2: Determine solution method**
+```
+If 2x2 system: use substitution or elimination
+If 3x3 or larger: use matrix methods
+If one equation already isolated: prefer substitution
+```
+
+**Step 3: Apply selected method**
+```
+For substitution:
+  Solve one equation for one variable
+  Substitute into others
+  Solve reduced system
+  Back-substitute
+
+For elimination:
+  Choose variable to eliminate
+  Multiply equations to align coefficients
+  Add/subtract to eliminate
+  Solve reduced system
+  Back-substitute
+
+For matrices:
+  Form augmented matrix
+  Row reduce to echelon form
+  Back-substitute
+```
+
+**Step 4: Check for special cases**
+```
+If contradiction (like 0 = 5): no solution
+If identity (like 0 = 0): infinite solutions
+Otherwise: unique solution
+```
+
+**Step 5: Solve for all variables**
+```
+Use back-substitution
+Calculate each variable value
+Simplify fractions if needed
+```
+
+**Step 6: Verify solution**
+```
+Substitute all values into all original equations
+Confirm each equation balances
+```
+
+**Step 7: Display results**
+```
+Show solution as ordered pair/triple/tuple
+Display step-by-step work
+Provide verification
+Explain special cases if applicable
+```
+
+---
+
+## FAQs
+
+**What is a system of equations?**
+
+Two or more equations with the same variables that must all be satisfied simultaneously. The solution is the set of values that makes every equation true.
+
+**How many solutions can a system have?**
+
+Three possibilities: exactly one solution (lines intersect at a point), no solution (parallel lines), or infinitely many solutions (same line).
+
+**How do I know which method to use?**
+
+If a variable is already isolated, use substitution. If coefficients align nicely for elimination, use that. For three or more equations, matrices are often most efficient.
+
+**What does it mean when I get 0 = 5?**
+
+This is a false statement indicating no solution. The system is inconsistent, meaning the lines are parallel and never intersect.
+
+**What does it mean when I get 0 = 0?**
+
+This is a true statement indicating infinite solutions. The equations represent the same line, so every point on that line is a solution.
+
+**Can a system have two solutions?**
+
+Not for linear equations. Linear systems have zero, one, or infinitely many solutions. Two or three specific solutions only happen with nonlinear systems.
+
+**Do I need the same number of equations as variables?**
+
+Typically yes for a unique solution. Fewer equations than variables usually gives infinite solutions. More equations than variables might be inconsistent.
+
+**How do I verify my answer?**
+
+Substitute your values into every original equation. If all equations balance, your solution is correct.
+
+**What if I get different answers with different methods?**
+
+You made an error. When done correctly, all valid methods give the same answer. Recheck your algebra carefully.
+
+**Can I solve systems with more than three variables?**
+
+Yes, but it gets tedious by hand. Use matrix methods or calculator/computer software for systems with four or more variables.
+
+**What's an augmented matrix?**
+
+A matrix representation of a system, with coefficients on the left and constants on the right, separated by a line. Makes systematic solving easier for large systems.
+
+**Why does elimination work?**
+
+Adding or subtracting equations preserves equality. If both equations are true, their sum or difference is also true, and this new equation has fewer variables.
+
+**Can I use elimination on all systems?**
+
+Yes, elimination works universally. Substitution does too, though it might be messier with certain coefficient combinations.
+
+**What if variables cancel but constants don't match?**
+
+That's the no-solution case. You get something like 0 = 7, which is impossible.
+
+**What if everything cancels including constants?**
+
+That's the infinite-solutions case. You get 0 = 0, which is always true, indicating dependent equations.
+
+**How do I write infinite solutions?**
+
+Express one variable in terms of the other(s). For x + 2y = 4 with infinite solutions, write y = (4 - x)/2 or use parameter form.
+
+**What's the difference between inconsistent and dependent?**
+
+Inconsistent means no solution (parallel lines). Dependent means infinite solutions (same line).
+
+**Can systems have negative solutions?**
+
+Yes, solutions can be negative, positive, zero, fractions, or irrational numbers. No restriction on the type of numbers.
+
+**How are systems used in real life?**
+
+Business (break-even), chemistry (stoichiometry), physics (forces), engineering (circuits), economics (equilibrium), and countless other applications.
+
+**What if my solution has fractions?**
+
+That's fine. Not all systems have integer solutions. Keep fractions in simplified form or convert to decimals if appropriate.
+
