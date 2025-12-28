@@ -1,1 +1,473 @@
-## Gamma Function Calculator
+## Gamma Function Calculator: Extend Factorials to All Numbers
+
+## Table of Contents - Gamma Function
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Understanding the Gamma Function](#understanding-the-gamma-function)
+- [How to Calculate the Gamma Function](#how-to-calculate-the-gamma-function)
+- [Real-World Applications](#real-world-applications)
+- [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Gamma Function
+
+Enter a value for x to calculate Γ(x), the gamma function. You can input positive numbers like 1, 5, 0.5, or 3.7.
+
+Click "Calculate" to see Γ(x), related factorial values, and logarithmic gamma. The calculator shows exact values for integers and accurate approximations for other inputs.
+
+The results display the gamma function value, factorial equivalents where applicable, and connections to combinatorics and probability.
+
+---
+
+## Understanding the Gamma Function
+
+The gamma function, denoted Γ(x), extends the factorial function to all complex numbers except negative integers. For positive integers, Γ(n) = (n-1)!
+
+**The key relationship:**
+
+Γ(n) = (n - 1)! for positive integers n
+
+So Γ(5) = 4! = 24, Γ(3) = 2! = 2, Γ(1) = 0! = 1
+
+**The integral definition:**
+
+For x greater than 0:
+Γ(x) = integral from 0 to ∞ of t^(x-1) × e^(-t) dt
+
+This integral converges for all positive real x and extends factorials to non-integers.
+
+**Why it's shifted:**
+
+The shift by 1 (Γ(n) = (n-1)! rather than n!) comes from the integral definition and makes certain formulas cleaner. It's a historical convention.
+
+**Special values:**
+
+Γ(1) = 1
+Γ(1/2) = sqrt(π)
+Γ(2) = 1
+Γ(3) = 2
+Γ(4) = 6
+
+**Recurrence relation:**
+
+Γ(x + 1) = x × Γ(x)
+
+This fundamental property allows computing Γ for larger values from smaller ones. It mirrors n! = n × (n-1)! for factorials.
+
+**Half-integer values:**
+
+Γ(n + 1/2) = (2n)! × sqrt(π) / (4^n × n!)
+
+These appear frequently in probability and statistics.
+
+**Connection to other functions:**
+
+The beta function B(x,y) = Γ(x)Γ(y) / Γ(x+y)
+The digamma function ψ(x) = d/dx[ln(Γ(x))]
+Stirling's approximation: Γ(x+1) ≈ sqrt(2πx)(x/e)^x for large x
+
+---
+
+## How to Calculate the Gamma Function
+
+Calculating Γ(x) depends on whether x is an integer, half-integer, or general value.
+
+**Example 1: Integer argument**
+
+Calculate Γ(5)
+
+Step 1: Use factorial relationship
+Γ(n) = (n - 1)!
+
+Step 2: Calculate
+Γ(5) = 4!
+Γ(5) = 4 × 3 × 2 × 1
+Γ(5) = 24
+
+**Example 2: Γ(1/2)**
+
+Calculate Γ(1/2)
+
+Step 1: This is a known special value
+Γ(1/2) = sqrt(π)
+
+Step 2: Approximate
+Γ(1/2) ≈ 1.7725
+
+This value appears in the normalization of the Gaussian distribution.
+
+**Example 3: Using recurrence**
+
+Calculate Γ(6) using Γ(5)
+
+Step 1: Apply recurrence
+Γ(x + 1) = x × Γ(x)
+
+Step 2: Substitute
+Γ(6) = 5 × Γ(5)
+
+Step 3: We know Γ(5) = 24
+Γ(6) = 5 × 24 = 120
+
+Which equals 5! ✓
+
+**Example 4: Half-integer**
+
+Calculate Γ(3/2)
+
+Step 1: Use recurrence from Γ(1/2)
+Γ(3/2) = (1/2) × Γ(1/2)
+
+Step 2: Substitute
+Γ(3/2) = (1/2) × sqrt(π)
+Γ(3/2) = sqrt(π)/2
+Γ(3/2) ≈ 0.8862
+
+**Example 5: Γ(5/2)**
+
+Calculate Γ(5/2)
+
+Step 1: Use recurrence
+Γ(5/2) = (3/2) × Γ(3/2)
+
+Step 2: We know Γ(3/2) = sqrt(π)/2
+Γ(5/2) = (3/2) × (sqrt(π)/2)
+Γ(5/2) = (3sqrt(π))/4
+Γ(5/2) ≈ 1.3293
+
+**Example 6: General value using Stirling**
+
+Approximate Γ(10) using Stirling's formula
+
+Step 1: Stirling's approximation
+Γ(x+1) ≈ sqrt(2πx) × (x/e)^x
+
+Step 2: For x = 9
+Γ(10) ≈ sqrt(2π×9) × (9/e)^9
+≈ sqrt(18π) × (9/2.71828)^9
+≈ 7.52 × 3.3123^9
+≈ 362,000
+
+Step 3: Compare to exact
+Γ(10) = 9! = 362,880
+
+Very close!
+
+**Example 7: Reflection formula**
+
+If Γ(1/3) ≈ 2.6789, find Γ(2/3)
+
+Step 1: Use reflection formula
+Γ(x) × Γ(1-x) = π / sin(πx)
+
+Step 2: For x = 1/3
+Γ(1/3) × Γ(2/3) = π / sin(π/3)
+Γ(1/3) × Γ(2/3) = π / (sqrt(3)/2)
+Γ(1/3) × Γ(2/3) = 2π/sqrt(3)
+
+Step 3: Solve for Γ(2/3)
+Γ(2/3) = 2π / (sqrt(3) × Γ(1/3))
+Γ(2/3) ≈ 2π / (1.732 × 2.6789)
+Γ(2/3) ≈ 1.3541
+
+**Example 8: Log gamma**
+
+Why use ln(Γ(x))?
+
+For large x, Γ(x) grows extremely fast. Γ(100) is about 10^155.
+
+Step 1: Working in log space
+ln(Γ(x)) stays manageable
+
+Step 2: Properties
+ln(Γ(x+1)) = ln(x) + ln(Γ(x))
+
+This is more numerically stable for computation.
+
+**Example 9: Binomial coefficients**
+
+Express C(n, k) using gamma
+
+Step 1: Binomial coefficient
+C(n, k) = n! / (k!(n-k)!)
+
+Step 2: Convert to gamma
+C(n, k) = Γ(n+1) / (Γ(k+1) × Γ(n-k+1))
+
+This generalizes binomial coefficients to non-integer values.
+
+**Example 10: Derivative**
+
+Find d/dx[Γ(x)] at x = 2
+
+Step 1: Use digamma function
+d/dx[Γ(x)] = Γ(x) × ψ(x)
+
+Where ψ(x) is the digamma function.
+
+Step 2: At x = 2
+Γ(2) = 1
+ψ(2) = 1 - γ where γ ≈ 0.5772 (Euler-Mascheroni constant)
+ψ(2) ≈ 0.4228
+
+Step 3: Derivative
+d/dx[Γ(x)]|_(x=2) ≈ 1 × 0.4228 ≈ 0.4228
+
+---
+
+## Real-World Applications
+
+**Probability distributions:**
+
+The gamma distribution (different from gamma function!) and chi-squared distribution use Γ in their probability density functions.
+
+**Combinatorics:**
+
+Generalizing binomial coefficients to real numbers requires the gamma function, extending counting to continuous cases.
+
+**Physics: quantum mechanics:**
+
+Solutions to the Schrödinger equation for certain potentials involve gamma functions in the energy eigenstates.
+
+**Statistics: t-distribution:**
+
+The Student's t-distribution, used extensively in hypothesis testing, has a normalizing constant involving Γ.
+
+**Beta and beta-prime distributions:**
+
+These probability distributions are defined using ratios of gamma functions.
+
+**String theory:**
+
+Veneziano amplitude and string scattering amplitudes are expressed using gamma functions.
+
+**Number theory:**
+
+The Riemann zeta function can be expressed using gamma functions, connecting to prime number distribution.
+
+**Factorial generalization:**
+
+Any time you need "fractional factorials" for interpolation or generalized formulas, gamma functions provide the answer.
+
+---
+
+## Common Mistakes and How to Avoid Them
+
+**Mistake 1: Confusing Γ(n) with n!**
+
+Wrong: Γ(5) = 5!
+
+Right: Γ(5) = 4! = 24. The gamma function is Γ(n) = (n-1)!
+
+Why it happens: Not remembering the shift. Γ is shifted by 1 from the factorial.
+
+**Mistake 2: Negative integers**
+
+Wrong: Trying to calculate Γ(-2)
+
+Right: Γ(x) is undefined for x = 0, -1, -2, -3, ... (has poles there)
+
+Why it happens: Not knowing the domain. Gamma is not defined at non-positive integers.
+
+**Mistake 3: Forgetting Γ(1/2)**
+
+Wrong: Trying to compute Γ(1/2) from scratch every time
+
+Right: Memorize Γ(1/2) = sqrt(π) ≈ 1.7725. It's a fundamental value.
+
+Why it happens: Not knowing special values. This one appears constantly.
+
+**Mistake 4: Recurrence direction**
+
+Wrong: Γ(x) = (x+1) × Γ(x+1)
+
+Right: Γ(x+1) = x × Γ(x), or equivalently Γ(x) = Γ(x+1)/x
+
+Why it happens: Mixing up the recurrence formula direction.
+
+**Mistake 5: Stirling for small x**
+
+Wrong: Using Stirling's approximation for Γ(2)
+
+Right: Stirling works for large x (say, x is greater than 10). For small x, use exact values or other methods.
+
+Why it happens: Applying approximations outside their valid range.
+
+**Mistake 6: Log gamma arithmetic**
+
+Wrong: ln(Γ(x+y)) = ln(Γ(x)) + ln(Γ(y))
+
+Right: Gamma function is NOT multiplicative. ln(Γ(x+1)) = ln(x) + ln(Γ(x)) is the recurrence.
+
+Why it happens: Confusing with logarithm properties.
+
+**Mistake 7: Numerical overflow**
+
+Wrong: Computing Γ(200) directly
+
+Right: Use ln(Γ(200)) for large arguments to avoid overflow. Γ grows faster than exponentially.
+
+Why it happens: Not anticipating how fast gamma grows. Always use log-gamma for large arguments.
+
+---
+
+## Related Topics
+
+- [Factorial Calculator](/calculator/mathematics/factorial) - Integer case of gamma
+- [Binomial Coefficient Calculator](/calculator/mathematics/binomial-coefficient) - Uses gamma for generalization
+- [Beta Function Calculator](/calculator/mathematics/beta-function) - Related special function
+- [Stirling's Approximation Calculator](/calculator/mathematics/stirling-approximation) - Large argument approximation
+- [Combinatorics Calculator](/calculator/mathematics/combinatorics) - Applications
+
+---
+
+## How This Calculator Works
+
+**Step 1: Input validation**
+```
+Accept real number x
+Check if x is a non-positive integer (undefined)
+Determine computation strategy based on x
+```
+
+**Step 2: Choose method**
+```
+If x is positive integer: use Γ(n) = (n-1)!
+If x is half-integer: use exact formulas with sqrt(π)
+If x is greater than 20: use Stirling's approximation
+Otherwise: use series or numerical integration
+```
+
+**Step 3: Compute Γ(x)**
+```
+For positive integer n:
+  Γ(n) = (n-1)!
+
+For half-integer n + 1/2:
+  Use formula: Γ(n + 1/2) = (2n)! sqrt(π) / (4^n n!)
+
+For general x using Lanczos approximation:
+  Γ(x+1) = sqrt(2π) × (x + g + 0.5)^(x+0.5) × e^-(x+g+0.5) × A(x)
+  Where A(x) is a series approximation
+
+For large x (Stirling):
+  ln(Γ(x)) ≈ (x - 0.5)ln(x) - x + 0.5×ln(2π)
+```
+
+**Step 4: Calculate related values**
+```
+If x is integer: also show (x-1)!
+Compute ln(Γ(x)) for numerical stability
+Calculate digamma ψ(x) if requested
+```
+
+**Step 5: Handle special values**
+```
+Γ(1) = 1
+Γ(1/2) = sqrt(π)
+Γ(2) = 1
+Display these exactly
+```
+
+**Step 6: Format output**
+```
+Show Γ(x) in decimal form
+Show exact form if available (like 4!)
+Display ln(Γ(x))
+Note method used
+```
+
+**Step 7: Additional information**
+```
+Show related factorial if applicable
+Display connections to probability distributions
+Graph Γ(x) near the input value
+```
+
+---
+
+## FAQs
+
+**What is the gamma function?**
+
+A function that extends factorials to all complex numbers: Γ(n) = (n-1)! for positive integers n.
+
+**Why does Γ(n) = (n-1)! and not n!?**
+
+Historical convention from the integral definition. The shift makes certain formulas cleaner.
+
+**What is Γ(5)?**
+
+Γ(5) = 4! = 24.
+
+**What is Γ(1/2)?**
+
+Γ(1/2) = sqrt(π) ≈ 1.7725, a fundamental value used throughout mathematics.
+
+**Can I compute Γ(-3)?**
+
+No, gamma is undefined at 0 and negative integers (has poles at these points).
+
+**How do I calculate Γ(10)?**
+
+Γ(10) = 9! = 362,880.
+
+**What's the recurrence relation?**
+
+Γ(x+1) = x × Γ(x), which mirrors n! = n × (n-1)!
+
+**Is there a closed form for Γ(x)?**
+
+For integers and half-integers, yes. For general x, no elementary closed form exists.
+
+**What's Stirling's approximation?**
+
+For large x: ln(Γ(x)) ≈ (x-0.5)ln(x) - x + 0.5ln(2π), very accurate for x is greater than 10.
+
+**How does gamma relate to factorials?**
+
+Γ(n) = (n-1)! for positive integers. Gamma smoothly extends factorial to all reals.
+
+**What's the derivative of Γ(x)?**
+
+d/dx[Γ(x)] = Γ(x) × ψ(x), where ψ is the digamma function.
+
+**What is the beta function?**
+
+B(x,y) = Γ(x)Γ(y)/Γ(x+y), useful in probability and integrals.
+
+**Why is Γ(1) = 1?**
+
+Because Γ(1) = 0! = 1 by definition.
+
+**Can gamma have complex arguments?**
+
+Yes, Γ extends to complex numbers except at non-positive integers.
+
+**What's log-gamma?**
+
+ln(Γ(x)), computed to avoid numerical overflow since Γ grows extremely fast.
+
+**How fast does Γ(x) grow?**
+
+Faster than exponentially. Γ(100) is approximately 10^155.
+
+**What's the reflection formula?**
+
+Γ(x) × Γ(1-x) = π/sin(πx), relating values on opposite sides of 1/2.
+
+**How do I compute Γ(3.7)?**
+
+Use numerical methods like Lanczos approximation or Stirling's formula, depending on size.
+
+**What are half-integer gamma values used for?**
+
+Normal distribution, chi-squared distribution, and many integrals involving powers of x and e^(-x²).
+
+**Is there software for computing gamma?**
+
+Yes, all major mathematical software (MATLAB, Python's math.gamma, R, Mathematica) have gamma functions built in.
+

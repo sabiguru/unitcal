@@ -1,1 +1,434 @@
-## Subset Calculator
+## Subset Calculator: Check Set Containment Relationships
+
+## Table of Contents - Subset
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Understanding Subsets](#understanding-subsets)
+- [How to Determine Subsets Manually](#how-to-determine-subsets-manually)
+- [Real-World Applications](#real-world-applications)
+- [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Subset
+
+Enter two sets using curly braces and commas. For example, `{1, 2, 3}` and `{1, 2, 3, 4, 5}`, or `{a, b}` and `{a, b, c, d}`.
+
+Click "Check" to see if one set is a subset of the other. The calculator determines if set A is a subset of set B, if B is a subset of A, or if neither relationship exists.
+
+The results show subset relationships, proper subset distinctions, and visual representations of how the sets relate to each other.
+
+---
+
+## Understanding Subsets
+
+A subset is a set whose elements all belong to another set. If every element of set A is also in set B, then A is a subset of B, written A ⊆ B.
+
+**The basic concept:**
+
+Think of subsets like nested containers. If you can fit all items from container A into container B (because B already contains all those items), then A is a subset of B.
+
+**Proper versus improper subsets:**
+
+A proper subset is a subset that isn't equal to the original set. If A ⊆ B but A ≠ B, then A is a proper subset of B, written A ⊂ B. An improper subset is a set that's a subset of itself (every set is a subset of itself).
+
+**The empty set:**
+
+The empty set ∅ is a subset of every set. It contains no elements, so there are no elements that fail to be in any other set. This makes ∅ a subset of everything.
+
+**Equal sets:**
+
+If A ⊆ B and B ⊆ A, then A = B. Two sets are equal when they contain exactly the same elements.
+
+**Why subsets matter:**
+
+Subset relationships organize information hierarchically. Categories, classifications, inheritance structures, and logical implications all use subset concepts.
+
+**Visual understanding:**
+
+In Venn diagrams, if circle A is completely inside circle B, then A is a subset of B. If the circles overlap but neither contains the other, neither is a subset.
+
+---
+
+## How to Determine Subsets Manually
+
+Let me show you how to check subset relationships step by step.
+
+**Example 1: Simple subset**
+
+Set A = `{1, 2, 3}`
+Set B = `{1, 2, 3, 4, 5}`
+
+Is A ⊆ B?
+
+Step 1: Check each element of A
+- Is 1 in B? Yes ✓
+- Is 2 in B? Yes ✓
+- Is 3 in B? Yes ✓
+
+Step 2: Conclusion
+All elements of A are in B, so A ⊆ B.
+
+Is this a proper subset?
+A ≠ B (A has 3 elements, B has 5), so A ⊂ B (proper subset).
+
+**Example 2: Not a subset**
+
+Set A = `{1, 2, 5, 7}`
+Set B = `{1, 2, 3, 4}`
+
+Is A ⊆ B?
+
+Step 1: Check elements
+- Is 1 in B? Yes ✓
+- Is 2 in B? Yes ✓
+- Is 5 in B? No ✗
+- Is 7 in B? No ✗
+
+Step 2: Conclusion
+Not all elements of A are in B, so A is NOT a subset of B.
+
+**Example 3: Equal sets**
+
+Set A = `{a, b, c}`
+Set B = `{c, a, b}`
+
+Is A ⊆ B?
+
+Step 1: Check all elements
+- Is a in B? Yes ✓
+- Is b in B? Yes ✓
+- Is c in B? Yes ✓
+
+Step 2: Check reverse
+- Is c in A? Yes ✓
+- Is a in A? Yes ✓
+- Is b in A? Yes ✓
+
+Step 3: Conclusion
+A ⊆ B and B ⊆ A, therefore A = B.
+This is an improper subset (not a proper subset).
+
+**Example 4: Empty set**
+
+Set A = `{ }` (empty set)
+Set B = `{1, 2, 3}`
+
+Is A ⊆ B?
+
+Step 1: Check elements of A
+A has no elements to check.
+
+Step 2: Conclusion
+By definition, the empty set is a subset of every set.
+∅ ⊆ B is always true.
+
+**Example 5: Reverse check**
+
+Set A = `{1, 2, 3, 4, 5}`
+Set B = `{2, 4}`
+
+Is A ⊆ B? No (A has elements not in B)
+Is B ⊆ A?
+
+Check:
+- Is 2 in A? Yes ✓
+- Is 4 in A? Yes ✓
+
+Yes, B ⊆ A.
+
+**Example 6: Disjoint sets**
+
+Set A = `{1, 2, 3}`
+Set B = `{4, 5, 6}`
+
+Is A ⊆ B?
+
+Step 1: Check elements
+- Is 1 in B? No ✗
+
+Step 2: Conclusion
+A is not a subset of B.
+B is not a subset of A.
+These are disjoint sets (no common elements).
+
+**Example 7: Single element**
+
+Set A = `{5}`
+Set B = `{3, 5, 7}`
+
+Is A ⊆ B?
+
+Check:
+- Is 5 in B? Yes ✓
+
+Conclusion: A ⊆ B (and A ⊂ B since A ≠ B)
+
+**Example 8: Counting subsets**
+
+Set A = `{1, 2}`
+
+How many subsets does A have?
+
+Step 1: List all subsets
+- `{ }` (empty set)
+- `{1}`
+- `{2}`
+- `{1, 2}`
+
+Step 2: Count
+A has 4 subsets total.
+
+Formula: A set with n elements has 2^n subsets.
+A has 2 elements, so 2² = 4 subsets.
+
+---
+
+## Real-World Applications
+
+**Database queries:**
+
+Finding records that match specific criteria is finding a subset. "All customers who bought product A" is a subset of "all customers."
+
+**Organizational hierarchies:**
+
+Departments are subsets of companies. Teams are subsets of departments. The subset relationship models organizational structure.
+
+**Biology classification:**
+
+Species are subsets of genera. Genera are subsets of families. The entire taxonomic hierarchy uses subset relationships.
+
+**Permission systems:**
+
+User permissions in software often work as subsets. "Read-only users" are a subset of "all users." "Admins" are a subset of "all users" with additional privileges.
+
+**Geographic regions:**
+
+Cities are subsets of states. States are subsets of countries. ZIP codes are subsets of cities. Nested geographic boundaries use subset logic.
+
+**Course prerequisites:**
+
+Students who took Calculus II are a subset of students who took Calculus I (assuming the prerequisite was enforced). Academic requirements create subset relationships.
+
+**Market segmentation:**
+
+"Premium customers" are a subset of "all customers." "Customers in California" are a subset of "customers in the USA." Marketing uses subsets to target groups.
+
+---
+
+## Common Mistakes and How to Avoid Them
+
+**Mistake 1: Confusing subset with proper subset**
+
+Wrong: Thinking `{1, 2}` ⊂ `{1, 2}`
+
+Right: `{1, 2}` ⊆ `{1, 2}` (subset), but NOT `{1, 2}` ⊂ `{1, 2}` (proper subset).
+
+Why it happens: Not understanding that a set is always a subset of itself, but never a proper subset of itself.
+
+**Mistake 2: Forgetting the empty set is a subset**
+
+Wrong: Saying ∅ is not a subset of `{1, 2, 3}`
+
+Right: ∅ ⊆ A for any set A. The empty set is a subset of every set.
+
+Why it happens: Thinking you need to find common elements. But with zero elements, there are no counterexamples.
+
+**Mistake 3: Checking only some elements**
+
+Wrong: Checking that 1 and 2 are in B, concluding A ⊆ B, without checking all elements of A
+
+Right: Must verify every single element of A is in B.
+
+Why it happens: Stopping too early. You need to check all elements, not just a few.
+
+**Mistake 4: Thinking overlap means subset**
+
+Wrong: `{1, 2, 3}` and `{2, 3, 4}` overlap, so one is a subset of the other
+
+Right: Neither is a subset of the other. Having common elements doesn't make one a subset.
+
+Why it happens: Confusing intersection with subset. Subset requires ALL elements to be contained.
+
+**Mistake 5: Order matters**
+
+Wrong: Thinking `{1, 2, 3}` and `{3, 2, 1}` are different sets
+
+Right: Order doesn't matter in sets. These are the same set, so each is a subset of the other (they're equal).
+
+Why it happens: Treating sets like ordered lists. Sets don't have order.
+
+**Mistake 6: Repeating elements changes things**
+
+Wrong: Thinking `{1, 1, 2}` is different from `{1, 2}`
+
+Right: Sets don't have duplicate elements. `{1, 1, 2}` = `{1, 2}`.
+
+Why it happens: Not understanding that sets contain unique elements only.
+
+**Mistake 7: Symbol confusion**
+
+Wrong: Using ⊂ when you mean ∈
+
+Right: ⊂ is for subset relationships between sets. ∈ is for element membership. 1 ∈ `{1, 2}`, not 1 ⊂ `{1, 2}`.
+
+Why it happens: Not distinguishing between "is an element of" and "is a subset of."
+
+---
+
+## Related Topics
+
+- [Power Set Calculator](/calculator/mathematics/power-set) - Find all subsets
+- [Set Operations Calculator](/calculator/mathematics/set-operations) - Union, intersection, difference
+- [Venn Diagram Calculator](/calculator/mathematics/venn-diagram) - Visualize relationships
+- [Set Cardinality Calculator](/calculator/mathematics/set-cardinality) - Count elements
+- [Proper Subset Calculator](/calculator/mathematics/proper-subset) - Check strict containment
+
+---
+
+## How This Calculator Works
+
+**Step 1: Parse both sets**
+```
+Extract elements from set A
+Extract elements from set B
+Remove duplicates in each set
+Normalize representation
+```
+
+**Step 2: Check A ⊆ B**
+```
+For each element in A:
+  If element not in B:
+    Return false (not a subset)
+Return true (is a subset)
+```
+
+**Step 3: Check B ⊆ A**
+```
+For each element in B:
+  If element not in A:
+    Return false
+Return true
+```
+
+**Step 4: Determine relationship**
+```
+If A ⊆ B and B ⊆ A:
+  Sets are equal
+Else if A ⊆ B:
+  A is proper subset of B
+Else if B ⊆ A:
+  B is proper subset of A
+Else:
+  Neither is subset of the other
+```
+
+**Step 5: Count elements**
+```
+Calculate |A| (cardinality of A)
+Calculate |B| (cardinality of B)
+If A ⊆ B, verify |A| ≤ |B|
+```
+
+**Step 6: Generate visual**
+```
+Create Venn diagram
+Show containment relationships
+Highlight subset relationships
+```
+
+**Step 7: Display results**
+```
+Show subset status (yes/no)
+Indicate if proper or improper
+List elements in each set
+Provide set comparison details
+```
+
+---
+
+## FAQs
+
+**What is a subset?**
+
+A set A is a subset of set B if every element of A is also in B. Written as A ⊆ B.
+
+**What's the difference between ⊆ and ⊂?**
+
+⊆ means "subset or equal to" (includes the case where sets are equal). ⊂ means "proper subset" (A must be a subset AND not equal to B).
+
+**Is every set a subset of itself?**
+
+Yes, every set A satisfies A ⊆ A. This is called an improper subset.
+
+**Is the empty set a subset of every set?**
+
+Yes, ∅ ⊆ A for any set A. The empty set is a subset of all sets.
+
+**How do I prove A is not a subset of B?**
+
+Find just one element in A that's not in B. That single counterexample proves A is not a subset of B.
+
+**Can two sets both be subsets of each other?**
+
+Yes, if and only if they're equal. A ⊆ B and B ⊆ A means A = B.
+
+**How many subsets does a set with n elements have?**
+
+2^n subsets total, including the empty set and the set itself.
+
+**What's a proper subset?**
+
+A subset that's not equal to the original set. `{1, 2}` is a proper subset of `{1, 2, 3}`, but `{1, 2}` is not a proper subset of `{1, 2}`.
+
+**Is `{1}` ⊆ `{1, 2, 3}`?**
+
+Yes, the single element 1 is in `{1, 2, 3}`, so `{1}` ⊆ `{1, 2, 3}`.
+
+**Is 1 ⊆ `{1, 2, 3}`?**
+
+No. 1 is an element, not a set. The correct notation is 1 ∈ `{1, 2, 3}`.
+
+**Can infinite sets have subsets?**
+
+Yes, infinite sets can have both finite and infinite subsets.
+
+**What if sets have no common elements?**
+
+Then neither is a subset of the other (unless one is the empty set).
+
+**How do I check if A ⊆ B?**
+
+Verify that every element of A is also in B. If any element of A is not in B, then A is not a subset of B.
+
+**What's the difference between subset and element?**
+
+`{1}` ⊆ `{1, 2}` (subset relationship). 1 ∈ `{1, 2}` (element relationship). Sets contain elements; sets can be subsets of other sets.
+
+**Can a set be a subset of the empty set?**
+
+Only the empty set itself. ∅ ⊆ ∅ is true, but any non-empty set is not a subset of ∅.
+
+**What does it mean if A is not a subset of B?**
+
+At least one element of A is not in B.
+
+**Is `{a, b}` ⊆ `{b, a, c}`?**
+
+Yes, both a and b are in the second set. Order doesn't matter.
+
+**How does subset relate to implication?**
+
+In logic, A ⊆ B corresponds to "if x ∈ A, then x ∈ B." Subset is like logical implication.
+
+**What's the relationship between subset and cardinality?**
+
+If A ⊆ B, then |A| ≤ |B|. A subset can't have more elements than its superset.
+
+**Can I have a subset of a subset?**
+
+Yes, subset relationships are transitive. If A ⊆ B and B ⊆ C, then A ⊆ C.
+

@@ -1,1 +1,485 @@
-## Power Set Calculator
+## Power Set Calculator: Find All Subsets of a Set
+
+## Table of Contents - Power Set
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Understanding Power Sets](#understanding-power-sets)
+- [How to Find Power Sets Manually](#how-to-find-power-sets-manually)
+- [Real-World Applications](#real-world-applications)
+- [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Power Set
+
+Enter a set using curly braces and commas. For example, `{1, 2, 3}` or `{a, b, c, d}`. You can use numbers, letters, or any distinct elements.
+
+Click "Calculate" to see all possible subsets. The calculator lists every subset from the empty set to the complete set itself, organized for clarity.
+
+The results show the total number of subsets (which equals 2 to the power of the number of elements), all individual subsets listed systematically, and verification that the count matches the formula.
+
+---
+
+## Understanding Power Sets
+
+The power set of a set is the collection of all possible subsets of that set, including the empty set and the set itself. It's called the "power" set because the number of subsets relates to powers of 2.
+
+**The fundamental concept:**
+
+If you have a set with n elements, its power set contains exactly 2^n subsets. This exponential relationship means power sets grow extremely fast as the original set gets larger.
+
+**Why every subset is included:**
+
+The power set is comprehensive. It includes the empty set (the subset with no elements), all single-element subsets, all two-element subsets, and so on, up to and including the original set itself.
+
+**The counting principle:**
+
+For each element in the original set, you have two choices when forming a subset: include it or don't include it. With n elements, you make n independent binary choices, giving 2 × 2 × 2 × ... × 2 (n times) = 2^n possibilities.
+
+**Notation:**
+
+The power set of A is written as P(A) or 2^A. Both notations emphasize the relationship to powers of 2.
+
+**Empty set special case:**
+
+The power set of the empty set is not empty. It contains one element: the empty set itself. P(∅) = `{∅}`. The empty set has 2^0 = 1 subset.
+
+**Cardinality:**
+
+If |A| = n (meaning A has n elements), then |P(A)| = 2^n (meaning the power set has 2^n elements). The power set is always strictly larger than the original set when the original has at least one element.
+
+**Elements versus subsets:**
+
+Don't confuse elements of a set with elements of its power set. If A = `{1, 2}`, then 1 is an element of A, but `{1}` is an element of P(A). Elements of power sets are themselves sets.
+
+---
+
+## How to Find Power Sets Manually
+
+Let me show you how to systematically generate all subsets.
+
+**Example 1: Single element set**
+
+Find P(`{a}`)
+
+Step 1: Count elements
+The set has 1 element.
+
+Step 2: Calculate expected subset count
+2^1 = 2 subsets
+
+Step 3: List all subsets systematically
+- Empty set: `{ }`
+- Include a: `{a}`
+
+Step 4: Final power set
+P(`{a}`) = { `{ }`, `{a}` }
+
+Verification: 2 subsets as expected.
+
+**Example 2: Two element set**
+
+Find P(`{1, 2}`)
+
+Step 1: Count elements
+2 elements
+
+Step 2: Expected count
+2^2 = 4 subsets
+
+Step 3: List by size
+- Size 0 (empty): `{ }`
+- Size 1 (one element): `{1}`, `{2}`
+- Size 2 (both elements): `{1, 2}`
+
+Step 4: Power set
+P(`{1, 2}`) = { `{ }`, `{1}`, `{2}`, `{1, 2}` }
+
+Verification: 4 subsets ✓
+
+**Example 3: Three element set**
+
+Find P(`{a, b, c}`)
+
+Step 1: Count
+3 elements
+
+Step 2: Expected
+2^3 = 8 subsets
+
+Step 3: Organize by subset size
+- Size 0: `{ }`
+- Size 1: `{a}`, `{b}`, `{c}`
+- Size 2: `{a, b}`, `{a, c}`, `{b, c}`
+- Size 3: `{a, b, c}`
+
+Step 4: Complete power set
+P(`{a, b, c}`) = { `{ }`, `{a}`, `{b}`, `{c}`, `{a, b}`, `{a, c}`, `{b, c}`, `{a, b, c}` }
+
+Count: 1 + 3 + 3 + 1 = 8 ✓
+
+**Example 4: Binary choice method**
+
+Find P(`{x, y}`) using the choice method
+
+For each element, decide: include or exclude
+
+Element x: include or exclude (2 choices)
+Element y: include or exclude (2 choices)
+Total: 2 × 2 = 4 combinations
+
+List all combinations:
+- Exclude x, exclude y: `{ }`
+- Include x, exclude y: `{x}`
+- Exclude x, include y: `{y}`
+- Include x, include y: `{x, y}`
+
+P(`{x, y}`) = { `{ }`, `{x}`, `{y}`, `{x, y}` }
+
+**Example 5: Four element set**
+
+Find P(`{1, 2, 3, 4}`)
+
+Expected: 2^4 = 16 subsets
+
+Organized listing:
+- Size 0 (1 subset): `{ }`
+- Size 1 (4 subsets): `{1}`, `{2}`, `{3}`, `{4}`
+- Size 2 (6 subsets): `{1,2}`, `{1,3}`, `{1,4}`, `{2,3}`, `{2,4}`, `{3,4}`
+- Size 3 (4 subsets): `{1,2,3}`, `{1,2,4}`, `{1,3,4}`, `{2,3,4}`
+- Size 4 (1 subset): `{1,2,3,4}`
+
+Total: 1 + 4 + 6 + 4 + 1 = 16 ✓
+
+Notice the pattern: counts form row 4 of Pascal's triangle.
+
+**Example 6: Empty set**
+
+Find P(∅)
+
+Step 1: Count elements
+0 elements
+
+Step 2: Expected subsets
+2^0 = 1
+
+Step 3: What subset exists?
+Only the empty set itself
+
+Step 4: Power set
+P(∅) = `{ ∅ }`
+
+This contains one element (which is the empty set).
+
+**Example 7: Using binary representation**
+
+Find P(`{a, b, c}`) using binary
+
+Assign positions: a=bit 2, b=bit 1, c=bit 0
+
+Count from 0 to 2^3 - 1 = 7 in binary:
+- 000: `{ }` (include nothing)
+- 001: `{c}`
+- 010: `{b}`
+- 011: `{b, c}`
+- 100: `{a}`
+- 101: `{a, c}`
+- 110: `{a, b}`
+- 111: `{a, b, c}`
+
+This systematic method ensures you don't miss any subsets.
+
+**Example 8: Subset count by size**
+
+For set with 4 elements, how many subsets of each size?
+
+Formula: C(n, k) = n! / (k!(n-k)!)
+
+- Size 0: C(4,0) = 1
+- Size 1: C(4,1) = 4
+- Size 2: C(4,2) = 6
+- Size 3: C(4,3) = 4
+- Size 4: C(4,4) = 1
+
+Sum: 1 + 4 + 6 + 4 + 1 = 16 = 2^4 ✓
+
+**Example 9: Proper subsets**
+
+How many proper subsets does `{1, 2, 3}` have?
+
+Proper subsets exclude the set itself.
+
+Total subsets: 2^3 = 8
+Minus the full set: 8 - 1 = 7
+
+The 7 proper subsets: `{ }`, `{1}`, `{2}`, `{3}`, `{1,2}`, `{1,3}`, `{2,3}`
+
+**Example 10: Power set of power set**
+
+Find P(P(`{a}`))
+
+Step 1: First find P(`{a}`)
+P(`{a}`) = { `{ }`, `{a}` }
+
+Step 2: This set has 2 elements
+Expected: 2^2 = 4 subsets
+
+Step 3: List subsets of P(`{a}`)
+- `{ }`
+- {`{ }`}
+- {`{a}`}
+- {`{ }`, `{a}`}
+
+So P(P(`{a}`)) has 4 elements, each of which is a set of sets.
+
+---
+
+## Real-World Applications
+
+**Database query results:**
+
+When querying with optional filters, each filter can be on or off. The set of all possible query configurations is the power set of available filters.
+
+**Feature combinations:**
+
+A product with n optional features has 2^n possible configurations (every combination of features you might include). The power set represents all possible product variants.
+
+**Subset selection problems:**
+
+Choosing which items to include in a knapsack, which tasks to complete, or which team members to assign creates power set scenarios where you evaluate all possible selections.
+
+**Boolean logic circuits:**
+
+With n binary inputs, a circuit can respond to 2^n different input combinations. The truth table rows correspond to the power set of input variables.
+
+**Phylogenetic trees in biology:**
+
+When analyzing which species share certain traits, researchers examine all possible groupings. The power set of species represents all possible evolutionary relationships to test.
+
+**Testing combinations:**
+
+Software testing with n independent features requires testing all 2^n combinations to ensure no interaction bugs exist. Each combination is an element of the power set.
+
+**Committee formation:**
+
+If you have n people and want to list all possible committees (of any size, including empty or everyone), you're generating the power set of the people.
+
+**Investment portfolio possibilities:**
+
+With n available assets, you can form 2^n different portfolios by choosing which assets to include. Portfolio analysis often involves evaluating many combinations from this power set.
+
+---
+
+## Common Mistakes and How to Avoid Them
+
+**Mistake 1: Forgetting the empty set**
+
+Wrong: P(`{1, 2}`) = {`{1}`, `{2}`, `{1, 2}`}, listing only 3 subsets
+
+Right: P(`{1, 2}`) = {`{ }`, `{1}`, `{2}`, `{1, 2}`}, the empty set is always included.
+
+Why it happens: Not recognizing that the empty set is a subset of every set. Always count it.
+
+**Mistake 2: Forgetting the full set**
+
+Wrong: Excluding `{1, 2, 3}` from P(`{1, 2, 3}`)
+
+Right: Every set is a subset of itself. Always include the full set in the power set.
+
+Why it happens: Thinking "subsets" means "smaller than." But a set is its own subset (improper subset).
+
+**Mistake 3: Wrong cardinality**
+
+Wrong: Thinking a set with 5 elements has 10 subsets
+
+Right: 2^5 = 32 subsets. It's exponential, not linear.
+
+Why it happens: Not applying the 2^n formula. The count grows much faster than you might guess.
+
+**Mistake 4: Duplicates in listing**
+
+Wrong: Including both `{1, 2}` and `{2, 1}` as separate subsets
+
+Right: `{1, 2}` = `{2, 1}` in set theory. Order doesn't matter. List each subset once.
+
+Why it happens: Treating sets like ordered sequences. Sets have no order.
+
+**Mistake 5: Confusing elements and subsets**
+
+Wrong: Saying 1 is in P(`{1, 2}`)
+
+Right: `{1}` is in P(`{1, 2}`). The elements of a power set are sets themselves, not individual items.
+
+Why it happens: Not maintaining the distinction. Elements of P(A) are subsets of A.
+
+**Mistake 6: Missing combinations**
+
+Wrong: For `{a, b, c}`, forgetting `{a, c}` while listing
+
+Right: Use a systematic method (binary, or organize by size) to ensure completeness.
+
+Why it happens: Random listing. Always be systematic.
+
+**Mistake 7: P(∅) equals ∅**
+
+Wrong: Thinking the power set of the empty set is empty
+
+Right: P(∅) = `{∅}`, which contains one element.
+
+Why it happens: Confusing "empty set" with "set containing empty set." P(∅) has one element: the empty set itself.
+
+---
+
+## Related Topics
+
+- [Subset Calculator](/calculator/mathematics/subset) - Check subset relationships
+- [Combinations Calculator](/calculator/mathematics/combinations) - Count subsets of specific size
+- [Set Operations Calculator](/calculator/mathematics/set-operations) - Union, intersection, difference
+- [Set Cardinality Calculator](/calculator/mathematics/set-cardinality) - Count elements
+- [Binomial Coefficient Calculator](/calculator/mathematics/binomial-coefficient) - Related counting
+
+---
+
+## How This Calculator Works
+
+**Step 1: Parse input set**
+```
+Extract all elements from input
+Remove duplicates
+Count number of elements (n)
+```
+
+**Step 2: Calculate expected size**
+```
+Compute 2^n
+This is the number of subsets to generate
+Verify n is manageable (warn if n is greater than 20)
+```
+
+**Step 3: Generate all subsets**
+```
+Method: Binary representation
+For i from 0 to 2^n - 1:
+  Convert i to binary
+  For each bit position:
+    If bit is 1: include corresponding element
+    If bit is 0: exclude element
+  Add resulting subset to power set
+```
+
+**Step 4: Organize output**
+```
+Group subsets by size (cardinality)
+Sort within each size group
+Display empty set first
+Display full set last
+```
+
+**Step 5: Verify count**
+```
+Count total subsets generated
+Confirm equals 2^n
+Display count by size (matches binomial coefficients)
+```
+
+**Step 6: Format display**
+```
+Show each subset in set notation `{ }`
+Use clear separators
+Indicate size of each subset
+Provide total count
+```
+
+**Step 7: Additional information**
+```
+Show proper subsets (all except full set)
+Calculate number of subsets of each size
+Verify sum matches 2^n
+```
+
+---
+
+## FAQs
+
+**What is a power set?**
+
+The set of all possible subsets of a given set, including the empty set and the set itself.
+
+**How many elements does a power set have?**
+
+If the original set has n elements, the power set has 2^n elements.
+
+**Why is it called the power set?**
+
+Because the number of subsets is 2 to the power of n, where n is the number of elements in the original set.
+
+**Is the empty set in every power set?**
+
+Yes, the empty set is a subset of every set, so it's always an element of every power set.
+
+**Is the set itself in its power set?**
+
+Yes, every set is a subset of itself, so the full set is always in its own power set.
+
+**What is P(∅)?**
+
+The power set of the empty set is `{∅}`, a set containing one element (the empty set).
+
+**Can a power set be empty?**
+
+No, even P(∅) contains one element. Every power set has at least one element.
+
+**How big is P(`{1, 2, 3, 4, 5}`)?**
+
+It has 2^5 = 32 elements (subsets).
+
+**What's the difference between ∈ and ⊆ in power sets?**
+
+If A = `{1, 2}`, then `{1}` ⊆ A (subset relationship) and `{1}` ∈ P(A) (element of power set).
+
+**Are elements of a power set always sets?**
+
+Yes, the power set contains sets as its elements, not individual items from the original set.
+
+**How many proper subsets does a set have?**
+
+If the set has n elements, it has 2^n - 1 proper subsets (all subsets except itself).
+
+**What's the cardinality of P(P(`{a}`))?**
+
+P(`{a}`) has 2^1 = 2 elements, so P(P(`{a}`)) has 2^2 = 4 elements.
+
+**How do you list all subsets systematically?**
+
+Organize by size (0 elements, 1 element, 2 elements, etc.) or use binary counting method.
+
+**Can infinite sets have power sets?**
+
+Yes, but infinite power sets are studied in advanced set theory. The power set of an infinite set is "larger" than the original.
+
+**What's the relationship to Pascal's triangle?**
+
+The counts of subsets by size form a row of Pascal's triangle. For n=4: 1, 4, 6, 4, 1.
+
+**Why does the binary method work?**
+
+Each element is either in or out of a subset (binary choice). Binary numbers naturally represent all possible combinations of these choices.
+
+**Is `{a}` the same as {`{a}`}?**
+
+No. `{a}` is a set containing one element (a). {`{a}`} is a set containing one element (which is the set `{a}`).
+
+**How many subsets of size k does an n-element set have?**
+
+C(n, k) = n! / (k!(n-k)!), the binomial coefficient "n choose k."
+
+**Does order matter when listing the power set?**
+
+No, the power set itself is a set, so order doesn't matter. But organizing systematically helps verification.
+
+**What's larger: a set or its power set?**
+
+The power set is always larger (has more cardinality) except when the original set is empty. For n is greater than or equal to 1, 2^n is greater than n.
+
