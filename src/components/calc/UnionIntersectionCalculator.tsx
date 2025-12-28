@@ -77,6 +77,8 @@ export default function UnionIntersectionCalculator() {
         output += `${operationName} (A ${operationSymbol} B):\n`;
         output += 'Elements in A or B but not in both\n\n';
         break;
+      default:
+        resultSet = new Set<string>();
     }
 
     if (resultSet.size === 0) {
