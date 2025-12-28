@@ -5,7 +5,10 @@ export const CALCULATOR_CATEGORY_MAPPING: Record<string, string[]> = {
   'mathematics': [
     'basic', 'scientific', 'graphing', 'fraction', 'percentage', 'ratio', 'prime', 'matrix',
     'equation-solver', 'age', 'date', 'tip', 'time', 'significant-figures', 'speed',
-    'binary-converter', 'suanpan-abacus', 'soroban-abacus', 'western-abacus'
+    'binary-converter', 'suanpan-abacus', 'soroban-abacus', 'western-abacus',
+    'average-percentage', 'fraction-to-percent', 'decimal-to-percent', 'percentage-difference',
+    'percentage-of-percentage', 'percentage-point', 'percent-error', 'time-percentage',
+    'percent-to-goal', 'relative-change', 'slope-percentage', 'doubling-time'
   ],
   'health': [
     'bmi', 'bmr', 'bodyfat', 'calorie', 'protein', 'heartrate', 'fitness', 'sleep', 'water'
