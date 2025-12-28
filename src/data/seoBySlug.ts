@@ -2084,6 +2084,804 @@ export const seoBySlug: Record<string, CalcSEO> =
     "lastResearched": "2025-12-28"
   },
 
+  "absolute-value-equation": {
+    "primaryKeyword": "absolute value equation solver",
+    "variants": [
+      "solve absolute value equations",
+      "absolute value calculator",
+      "absolute value equation calculator",
+      "how to solve absolute value equations"
+    ],
+    "longTails": [
+      "solve absolute value equations step by step",
+      "absolute value equation solver with solutions",
+      "how to solve equations with absolute value",
+      "absolute value equation calculator online"
+    ],
+    "metaTitle": "Absolute Value Equation Solver — Step-by-Step Solutions",
+    "metaDescription": "Solve absolute value equations instantly. Get step-by-step solutions and understand how to handle both positive and negative cases.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "absolute-value-inequalities": {
+    "primaryKeyword": "absolute value inequalities solver",
+    "variants": [
+      "solve absolute value inequalities",
+      "absolute value inequality calculator",
+      "absolute value inequality solver",
+      "inequalities with absolute value"
+    ],
+    "longTails": [
+      "solve absolute value inequalities step by step",
+      "how to solve inequalities with absolute value",
+      "absolute value inequality calculator online",
+      "graph absolute value inequalities solution"
+    ],
+    "metaTitle": "Absolute Value Inequalities Solver — Solutions & Graphs",
+    "metaDescription": "Solve absolute value inequalities with step-by-step solutions. Understand compound inequalities and graph the solution sets.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "adding-subtracting-polynomials": {
+    "primaryKeyword": "adding and subtracting polynomials calculator",
+    "variants": [
+      "polynomial addition calculator",
+      "polynomial subtraction calculator",
+      "add polynomials calculator",
+      "subtract polynomials calculator"
+    ],
+    "longTails": [
+      "how to add and subtract polynomials",
+      "adding polynomials calculator with steps",
+      "combine like terms polynomial calculator",
+      "polynomial addition and subtraction solver"
+    ],
+    "metaTitle": "Adding & Subtracting Polynomials — Combine Like Terms",
+    "metaDescription": "Add and subtract polynomials easily. Combine like terms automatically with step-by-step explanations for algebra homework.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "bessel-function": {
+    "primaryKeyword": "Bessel function calculator",
+    "variants": [
+      "Bessel function of first kind",
+      "Bessel function of second kind",
+      "modified Bessel function calculator",
+      "Bessel equation solver"
+    ],
+    "longTails": [
+      "calculate Bessel function values online",
+      "Bessel function calculator J and Y",
+      "modified Bessel function I and K calculator",
+      "evaluate Bessel functions numerically"
+    ],
+    "metaTitle": "Bessel Function Calculator — J, Y, I & K Functions",
+    "metaDescription": "Calculate Bessel functions of the first and second kind. Evaluate J, Y, I, and K Bessel functions for physics and engineering applications.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "binomial-coefficient": {
+    "primaryKeyword": "binomial coefficient calculator",
+    "variants": [
+      "n choose k calculator",
+      "combination calculator",
+      "binomial formula calculator",
+      "Pascal's triangle calculator"
+    ],
+    "longTails": [
+      "calculate binomial coefficient n choose k",
+      "binomial coefficient calculator online",
+      "combinations formula calculator",
+      "how to calculate binomial coefficients"
+    ],
+    "metaTitle": "Binomial Coefficient Calculator — n Choose k",
+    "metaDescription": "Calculate binomial coefficients (n choose k) instantly. Find combinations for probability, statistics, and Pascal's triangle expansions.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "box-method": {
+    "primaryKeyword": "box method calculator",
+    "variants": [
+      "box method multiplication",
+      "area model calculator",
+      "box method for factoring",
+      "rectangle method calculator"
+    ],
+    "longTails": [
+      "box method for multiplying polynomials",
+      "area model multiplication calculator",
+      "factor trinomials using box method",
+      "box method algebra calculator"
+    ],
+    "metaTitle": "Box Method Calculator — Area Model for Multiplication",
+    "metaDescription": "Use the box method (area model) to multiply polynomials and factor trinomials. Visual algebra tool for step-by-step learning.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "completing-square": {
+    "primaryKeyword": "completing the square calculator",
+    "variants": [
+      "complete the square calculator",
+      "completing square method",
+      "quadratic completing square",
+      "vertex form calculator"
+    ],
+    "longTails": [
+      "completing the square calculator step by step",
+      "how to complete the square quadratic",
+      "convert quadratic to vertex form calculator",
+      "completing square calculator online"
+    ],
+    "metaTitle": "Completing the Square Calculator — Quadratic to Vertex Form",
+    "metaDescription": "Complete the square for any quadratic equation. Convert to vertex form with step-by-step working for algebra and calculus.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "complex-conjugate": {
+    "primaryKeyword": "complex conjugate calculator",
+    "variants": [
+      "conjugate of complex number",
+      "complex number conjugate",
+      "find complex conjugate",
+      "conjugate calculator"
+    ],
+    "longTails": [
+      "calculate complex conjugate online",
+      "how to find conjugate of complex number",
+      "complex conjugate calculator with steps",
+      "multiply by complex conjugate calculator"
+    ],
+    "metaTitle": "Complex Conjugate Calculator — Find Conjugates Instantly",
+    "metaDescription": "Find the complex conjugate of any complex number. Useful for simplifying complex fractions and solving equations.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "complex-number": {
+    "primaryKeyword": "complex number calculator",
+    "variants": [
+      "complex number operations",
+      "add complex numbers calculator",
+      "multiply complex numbers",
+      "complex arithmetic calculator"
+    ],
+    "longTails": [
+      "complex number calculator add subtract multiply divide",
+      "complex number operations calculator online",
+      "calculate with imaginary numbers",
+      "complex number polar form calculator"
+    ],
+    "metaTitle": "Complex Number Calculator — Add, Multiply & Convert",
+    "metaDescription": "Perform operations with complex numbers: addition, subtraction, multiplication, division. Convert between rectangular and polar forms.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "complex-root": {
+    "primaryKeyword": "complex root calculator",
+    "variants": [
+      "complex roots of polynomial",
+      "find complex roots calculator",
+      "imaginary roots calculator",
+      "complex zeros calculator"
+    ],
+    "longTails": [
+      "find complex roots of polynomial online",
+      "calculate complex roots and zeros",
+      "polynomial complex roots calculator",
+      "how to find imaginary roots calculator"
+    ],
+    "metaTitle": "Complex Root Calculator — Find Complex & Imaginary Roots",
+    "metaDescription": "Find complex and imaginary roots of polynomials. Solve equations with complex solutions using the quadratic formula and beyond.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "cubic-equation": {
+    "primaryKeyword": "cubic equation solver",
+    "variants": [
+      "solve cubic equations",
+      "cubic formula calculator",
+      "third degree equation solver",
+      "cubic root calculator"
+    ],
+    "longTails": [
+      "solve cubic equations step by step",
+      "cubic equation calculator online",
+      "find roots of cubic polynomial",
+      "cubic formula solver with steps"
+    ],
+    "metaTitle": "Cubic Equation Solver — Solve Third-Degree Polynomials",
+    "metaDescription": "Solve cubic equations and find all three roots. Uses cubic formula and factoring for real and complex solutions.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "descartes-rule-signs": {
+    "primaryKeyword": "Descartes rule of signs calculator",
+    "variants": [
+      "Descartes rule calculator",
+      "positive and negative roots calculator",
+      "sign changes calculator polynomial",
+      "Descartes theorem calculator"
+    ],
+    "longTails": [
+      "use Descartes rule of signs online",
+      "find possible positive and negative roots",
+      "Descartes rule of signs step by step",
+      "count sign changes in polynomial"
+    ],
+    "metaTitle": "Descartes' Rule of Signs Calculator — Positive & Negative Roots",
+    "metaDescription": "Apply Descartes' Rule of Signs to determine the number of positive and negative real roots of a polynomial equation.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "diamond-problem": {
+    "primaryKeyword": "diamond problem solver",
+    "variants": [
+      "diamond method calculator",
+      "diamond factoring calculator",
+      "diamond problem factoring",
+      "algebra diamond calculator"
+    ],
+    "longTails": [
+      "solve diamond problems for factoring",
+      "diamond method trinomial factoring calculator",
+      "find two numbers that multiply and add",
+      "diamond problem algebra solver"
+    ],
+    "metaTitle": "Diamond Problem Solver — Factoring Trinomials Helper",
+    "metaDescription": "Solve diamond problems to factor trinomials. Find two numbers that multiply to one value and add to another.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "direct-variation": {
+    "primaryKeyword": "direct variation calculator",
+    "variants": [
+      "direct proportion calculator",
+      "y equals kx calculator",
+      "constant of variation calculator",
+      "direct relationship calculator"
+    ],
+    "longTails": [
+      "calculate direct variation constant k",
+      "direct variation equation solver",
+      "find y when x varies directly",
+      "direct proportion formula calculator"
+    ],
+    "metaTitle": "Direct Variation Calculator — y = kx Solver",
+    "metaDescription": "Solve direct variation problems and find the constant of proportionality k. Calculate y when x varies directly.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "discriminant": {
+    "primaryKeyword": "discriminant calculator",
+    "variants": [
+      "quadratic discriminant calculator",
+      "discriminant formula calculator",
+      "b squared minus 4ac calculator",
+      "nature of roots calculator"
+    ],
+    "longTails": [
+      "calculate discriminant of quadratic equation",
+      "discriminant calculator b2 minus 4ac",
+      "determine nature of roots from discriminant",
+      "discriminant formula step by step"
+    ],
+    "metaTitle": "Discriminant Calculator — Nature of Quadratic Roots",
+    "metaDescription": "Calculate the discriminant (b² - 4ac) and determine the nature of roots: real, imaginary, or repeated solutions.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "elimination-method": {
+    "primaryKeyword": "elimination method calculator",
+    "variants": [
+      "solve by elimination calculator",
+      "linear system elimination",
+      "elimination calculator system of equations",
+      "addition method calculator"
+    ],
+    "longTails": [
+      "solve system of equations by elimination",
+      "elimination method step by step calculator",
+      "linear equations elimination solver",
+      "how to use elimination method calculator"
+    ],
+    "metaTitle": "Elimination Method Calculator — Solve Systems of Equations",
+    "metaDescription": "Solve systems of linear equations using the elimination method. Step-by-step solutions for two and three variable systems.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "error-function": {
+    "primaryKeyword": "error function calculator",
+    "variants": [
+      "erf calculator",
+      "Gauss error function",
+      "complementary error function",
+      "erfc calculator"
+    ],
+    "longTails": [
+      "calculate error function erf online",
+      "error function calculator statistics",
+      "complementary error function erfc calculator",
+      "Gaussian error function values"
+    ],
+    "metaTitle": "Error Function Calculator — erf & erfc Calculator",
+    "metaDescription": "Calculate the error function (erf) and complementary error function (erfc). Essential for statistics, probability, and physics.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "factoring-trinomials": {
+    "primaryKeyword": "factoring trinomials calculator",
+    "variants": [
+      "factor trinomial calculator",
+      "trinomial factoring calculator",
+      "factor ax2 bx c calculator",
+      "trinomial factorization calculator"
+    ],
+    "longTails": [
+      "factor trinomials step by step calculator",
+      "how to factor trinomials calculator",
+      "factoring trinomials with leading coefficient",
+      "trinomial factoring calculator online"
+    ],
+    "metaTitle": "Factoring Trinomials Calculator — Factor ax² + bx + c",
+    "metaDescription": "Factor trinomials quickly with step-by-step solutions. Handles all forms including trinomials with leading coefficients.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "foil": {
+    "primaryKeyword": "FOIL method calculator",
+    "variants": [
+      "FOIL calculator",
+      "multiply binomials FOIL",
+      "FOIL method online",
+      "binomial multiplication calculator"
+    ],
+    "longTails": [
+      "FOIL method calculator step by step",
+      "multiply two binomials using FOIL",
+      "FOIL calculator online with steps",
+      "how to use FOIL method calculator"
+    ],
+    "metaTitle": "FOIL Method Calculator — Multiply Binomials Instantly",
+    "metaDescription": "Multiply binomials using the FOIL method (First, Outer, Inner, Last). Get step-by-step solutions for algebra homework.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "gamma-function": {
+    "primaryKeyword": "gamma function calculator",
+    "variants": [
+      "gamma calculator",
+      "factorial calculator",
+      "incomplete gamma function",
+      "gamma function values"
+    ],
+    "longTails": [
+      "calculate gamma function online",
+      "gamma function calculator for non integers",
+      "incomplete gamma function calculator",
+      "generalized factorial calculator"
+    ],
+    "metaTitle": "Gamma Function Calculator — Γ(n) & Factorial Extension",
+    "metaDescription": "Calculate the gamma function for any real number. Extends factorials to non-integers for advanced mathematics and statistics.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "generic-rectangle": {
+    "primaryKeyword": "generic rectangle calculator",
+    "variants": [
+      "area model calculator",
+      "generic rectangle method",
+      "box method algebra",
+      "rectangle model multiplication"
+    ],
+    "longTails": [
+      "generic rectangle method for polynomials",
+      "area model multiplication calculator",
+      "generic rectangle factoring calculator",
+      "how to use generic rectangle method"
+    ],
+    "metaTitle": "Generic Rectangle Calculator — Area Model for Algebra",
+    "metaDescription": "Use the generic rectangle (area model) method to multiply and factor polynomials. Visual approach for algebra students.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "graphing-inequalities-number-line": {
+    "primaryKeyword": "graphing inequalities on number line calculator",
+    "variants": [
+      "number line inequality grapher",
+      "plot inequalities number line",
+      "inequality number line tool",
+      "graph linear inequalities number line"
+    ],
+    "longTails": [
+      "graph inequalities on number line online",
+      "how to graph inequalities on number line",
+      "number line inequality calculator with graph",
+      "plot compound inequalities number line"
+    ],
+    "metaTitle": "Graph Inequalities on Number Line — Visual Inequality Tool",
+    "metaDescription": "Graph linear and compound inequalities on a number line. Visual representation with open and closed circles for algebra.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "graphing-quadratic-inequalities": {
+    "primaryKeyword": "graphing quadratic inequalities calculator",
+    "variants": [
+      "quadratic inequality grapher",
+      "graph parabola inequality",
+      "quadratic inequality plotter",
+      "solve quadratic inequalities graphically"
+    ],
+    "longTails": [
+      "graph quadratic inequalities step by step",
+      "how to graph quadratic inequalities calculator",
+      "quadratic inequality calculator with graph",
+      "solve and graph parabola inequalities"
+    ],
+    "metaTitle": "Graphing Quadratic Inequalities — Parabola Inequality Solver",
+    "metaDescription": "Graph quadratic inequalities and find solution regions. Visual parabola plotter with shaded regions for algebra and precalculus.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "hyperbolic-functions": {
+    "primaryKeyword": "hyperbolic functions calculator",
+    "variants": [
+      "sinh cosh tanh calculator",
+      "hyperbolic trig calculator",
+      "inverse hyperbolic calculator",
+      "hyperbolic function values"
+    ],
+    "longTails": [
+      "calculate sinh cosh tanh online",
+      "hyperbolic functions calculator step by step",
+      "inverse hyperbolic functions calculator",
+      "evaluate hyperbolic trigonometric functions"
+    ],
+    "metaTitle": "Hyperbolic Functions Calculator — sinh, cosh, tanh & More",
+    "metaDescription": "Calculate hyperbolic functions and their inverses: sinh, cosh, tanh, csch, sech, coth. Essential for calculus and engineering.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "inequality-interval-notation": {
+    "primaryKeyword": "inequality to interval notation converter",
+    "variants": [
+      "convert inequality to interval notation",
+      "interval notation calculator",
+      "inequality notation converter",
+      "write interval notation calculator"
+    ],
+    "longTails": [
+      "convert inequalities to interval notation online",
+      "how to write interval notation from inequality",
+      "inequality interval notation calculator",
+      "interval notation converter with brackets"
+    ],
+    "metaTitle": "Inequality to Interval Notation Converter — Easy Conversion",
+    "metaDescription": "Convert inequalities to interval notation instantly. Learn when to use brackets and parentheses for algebra solutions.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "interval-notation": {
+    "primaryKeyword": "interval notation calculator",
+    "variants": [
+      "interval notation converter",
+      "set builder to interval notation",
+      "graph interval notation",
+      "interval notation tool"
+    ],
+    "longTails": [
+      "write interval notation from inequality",
+      "interval notation calculator with number line",
+      "convert set notation to interval notation",
+      "how to use interval notation calculator"
+    ],
+    "metaTitle": "Interval Notation Calculator — Convert & Graph Intervals",
+    "metaDescription": "Work with interval notation: convert from inequalities, graph on number line, and switch between notation forms.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "inverse-variation": {
+    "primaryKeyword": "inverse variation calculator",
+    "variants": [
+      "inverse proportion calculator",
+      "y equals k over x calculator",
+      "indirect variation calculator",
+      "inverse relationship calculator"
+    ],
+    "longTails": [
+      "calculate inverse variation constant k",
+      "inverse variation equation solver",
+      "find y when x varies inversely",
+      "inverse proportion formula calculator"
+    ],
+    "metaTitle": "Inverse Variation Calculator — y = k/x Solver",
+    "metaDescription": "Solve inverse variation problems and find the constant k. Calculate y when x varies inversely for algebra and physics.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "multiplying-binomials": {
+    "primaryKeyword": "multiplying binomials calculator",
+    "variants": [
+      "binomial multiplication calculator",
+      "multiply two binomials",
+      "binomial product calculator",
+      "expand binomials calculator"
+    ],
+    "longTails": [
+      "multiply binomials calculator step by step",
+      "how to multiply two binomials",
+      "binomial multiplication FOIL calculator",
+      "expand product of binomials online"
+    ],
+    "metaTitle": "Multiplying Binomials Calculator — FOIL & Expansion",
+    "metaDescription": "Multiply binomials using FOIL or distributive property. Get expanded form with step-by-step solutions for algebra.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "multiplying-polynomials": {
+    "primaryKeyword": "multiplying polynomials calculator",
+    "variants": [
+      "polynomial multiplication calculator",
+      "multiply polynomials calculator",
+      "polynomial product calculator",
+      "expand polynomials calculator"
+    ],
+    "longTails": [
+      "multiply polynomials calculator step by step",
+      "how to multiply polynomials online",
+      "polynomial multiplication with steps",
+      "expand and simplify polynomials calculator"
+    ],
+    "metaTitle": "Multiplying Polynomials Calculator — Expand & Simplify",
+    "metaDescription": "Multiply polynomials of any degree. Automatic expansion, combining like terms, and step-by-step solutions.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "partial-fraction-decomposition": {
+    "primaryKeyword": "partial fraction decomposition calculator",
+    "variants": [
+      "partial fractions calculator",
+      "decompose rational function",
+      "partial fraction expansion",
+      "integrate using partial fractions"
+    ],
+    "longTails": [
+      "partial fraction decomposition step by step",
+      "how to decompose rational expressions",
+      "partial fractions calculator online",
+      "integrate rational functions using partial fractions"
+    ],
+    "metaTitle": "Partial Fraction Decomposition Calculator — Rational Functions",
+    "metaDescription": "Decompose rational expressions into partial fractions. Essential for integration and solving complex rational equations.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "perfect-square-trinomial": {
+    "primaryKeyword": "perfect square trinomial calculator",
+    "variants": [
+      "perfect square calculator",
+      "is it a perfect square trinomial",
+      "factor perfect square trinomial",
+      "perfect square checker"
+    ],
+    "longTails": [
+      "check if trinomial is perfect square",
+      "perfect square trinomial calculator with steps",
+      "how to factor perfect square trinomials",
+      "recognize perfect square trinomial pattern"
+    ],
+    "metaTitle": "Perfect Square Trinomial Calculator — Check & Factor",
+    "metaDescription": "Identify and factor perfect square trinomials. Check if a trinomial is a perfect square and see the factored form.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "polynomial-division": {
+    "primaryKeyword": "polynomial division calculator",
+    "variants": [
+      "long division polynomials calculator",
+      "divide polynomials calculator",
+      "polynomial division with remainder",
+      "polynomial long division solver"
+    ],
+    "longTails": [
+      "polynomial long division calculator step by step",
+      "divide polynomials online calculator",
+      "polynomial division with remainder calculator",
+      "how to divide polynomials long division"
+    ],
+    "metaTitle": "Polynomial Division Calculator — Long Division & Remainder",
+    "metaDescription": "Divide polynomials using long division. Get quotient and remainder with complete step-by-step working.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "power-set": {
+    "primaryKeyword": "power set calculator",
+    "variants": [
+      "power set generator",
+      "all subsets calculator",
+      "power set of a set",
+      "subset generator"
+    ],
+    "longTails": [
+      "generate power set of a set online",
+      "calculate all subsets of a set",
+      "power set calculator with cardinality",
+      "how many subsets does a set have"
+    ],
+    "metaTitle": "Power Set Calculator — Generate All Subsets",
+    "metaDescription": "Generate the power set of any set. Find all possible subsets including the empty set and calculate cardinality.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "quadratic-formula": {
+    "primaryKeyword": "quadratic formula calculator",
+    "variants": [
+      "quadratic equation solver",
+      "solve using quadratic formula",
+      "quadratic calculator",
+      "ax2 bx c solver"
+    ],
+    "longTails": [
+      "quadratic formula calculator step by step",
+      "solve quadratic equations using formula",
+      "quadratic formula solver with discriminant",
+      "how to use quadratic formula calculator"
+    ],
+    "metaTitle": "Quadratic Formula Calculator — Solve ax² + bx + c = 0",
+    "metaDescription": "Solve quadratic equations using the quadratic formula. Shows discriminant, real and complex roots with full step-by-step solutions.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "quaternion": {
+    "primaryKeyword": "quaternion calculator",
+    "variants": [
+      "quaternion multiplication calculator",
+      "quaternion operations",
+      "quaternion rotation calculator",
+      "quaternion algebra calculator"
+    ],
+    "longTails": [
+      "calculate quaternion multiplication online",
+      "quaternion calculator for 3D rotations",
+      "quaternion addition subtraction multiplication",
+      "convert quaternion to rotation matrix"
+    ],
+    "metaTitle": "Quaternion Calculator — Multiply, Rotate & Convert",
+    "metaDescription": "Perform quaternion operations: multiplication, addition, conjugate, norm. Essential for 3D graphics and rotation calculations.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "rational-zeros": {
+    "primaryKeyword": "rational zeros theorem calculator",
+    "variants": [
+      "rational root theorem calculator",
+      "rational zeros calculator",
+      "find rational roots calculator",
+      "p over q calculator"
+    ],
+    "longTails": [
+      "rational zeros theorem step by step",
+      "find possible rational roots calculator",
+      "rational root theorem online calculator",
+      "how to use rational zeros theorem"
+    ],
+    "metaTitle": "Rational Zeros Theorem Calculator — Find Possible Roots",
+    "metaDescription": "Use the Rational Zeros Theorem to find all possible rational roots (p/q) of a polynomial equation.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "square-binomial": {
+    "primaryKeyword": "square binomial calculator",
+    "variants": [
+      "binomial squared calculator",
+      "expand binomial squared",
+      "a plus b squared calculator",
+      "binomial squaring formula"
+    ],
+    "longTails": [
+      "square a binomial calculator online",
+      "expand (a + b)² calculator",
+      "binomial squared formula calculator",
+      "how to square binomials step by step"
+    ],
+    "metaTitle": "Square Binomial Calculator — Expand (a + b)² and (a - b)²",
+    "metaDescription": "Square binomials instantly using the formulas (a + b)² and (a - b)². Get expanded form with step-by-step solutions.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "subset": {
+    "primaryKeyword": "subset calculator",
+    "variants": [
+      "check if subset calculator",
+      "proper subset calculator",
+      "subset checker",
+      "subset relationship calculator"
+    ],
+    "longTails": [
+      "check if set is subset of another",
+      "proper subset calculator online",
+      "how to check subset relationship",
+      "subset and proper subset checker"
+    ],
+    "metaTitle": "Subset Calculator — Check Subset Relationships",
+    "metaDescription": "Check if one set is a subset or proper subset of another. Verify subset relationships for set theory and discrete math.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "substitution-method": {
+    "primaryKeyword": "substitution method calculator",
+    "variants": [
+      "solve by substitution calculator",
+      "substitution calculator system equations",
+      "linear system substitution solver",
+      "substitution method solver"
+    ],
+    "longTails": [
+      "solve system of equations by substitution",
+      "substitution method calculator step by step",
+      "linear equations substitution calculator",
+      "how to use substitution method calculator"
+    ],
+    "metaTitle": "Substitution Method Calculator — Solve Systems of Equations",
+    "metaDescription": "Solve systems of linear equations using substitution. Step-by-step solutions for two and three variable systems.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "synthetic-division": {
+    "primaryKeyword": "synthetic division calculator",
+    "variants": [
+      "synthetic division solver",
+      "polynomial synthetic division",
+      "divide polynomials synthetic division",
+      "synthetic division with steps"
+    ],
+    "longTails": [
+      "synthetic division calculator step by step",
+      "how to use synthetic division calculator",
+      "polynomial division using synthetic division",
+      "synthetic division with remainder calculator"
+    ],
+    "metaTitle": "Synthetic Division Calculator — Fast Polynomial Division",
+    "metaDescription": "Divide polynomials quickly using synthetic division. Get quotient and remainder with complete step-by-step working.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "system-equations": {
+    "primaryKeyword": "system of equations calculator",
+    "variants": [
+      "solve system of equations",
+      "linear system calculator",
+      "simultaneous equations solver",
+      "multiple equations calculator"
+    ],
+    "longTails": [
+      "solve system of linear equations online",
+      "system of equations calculator 2 variables",
+      "simultaneous equations solver with steps",
+      "solve three equation system calculator"
+    ],
+    "metaTitle": "System of Equations Calculator — Solve Linear Systems",
+    "metaDescription": "Solve systems of linear equations with 2 or 3 variables. Uses substitution, elimination, or matrix methods with full solutions.",
+    "lastResearched": "2025-12-28"
+  },
+
+  "union-intersection": {
+    "primaryKeyword": "union and intersection calculator",
+    "variants": [
+      "set union calculator",
+      "set intersection calculator",
+      "union intersection difference calculator",
+      "set operations calculator"
+    ],
+    "longTails": [
+      "calculate union and intersection of sets",
+      "set theory calculator union intersection",
+      "find union intersection and difference online",
+      "Venn diagram set operations calculator"
+    ],
+    "metaTitle": "Union & Intersection Calculator — Set Operations Tool",
+    "metaDescription": "Calculate union, intersection, difference and complement of sets. Complete set operations for discrete math and set theory.",
+    "lastResearched": "2025-12-28"
+  },
+
 } as const;
 
 export type SlugSEO = keyof typeof seoBySlug;

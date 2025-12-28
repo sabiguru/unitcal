@@ -8,7 +8,18 @@ export const CALCULATOR_CATEGORY_MAPPING: Record<string, string[]> = {
     'binary-converter', 'suanpan-abacus', 'soroban-abacus', 'western-abacus',
     'average-percentage', 'fraction-to-percent', 'decimal-to-percent', 'percentage-difference',
     'percentage-of-percentage', 'percentage-point', 'percent-error', 'time-percentage',
-    'percent-to-goal', 'relative-change', 'slope-percentage', 'doubling-time'
+    'percent-to-goal', 'relative-change', 'slope-percentage', 'doubling-time',
+    'absolute-value-equation', 'absolute-value-inequalities', 'adding-subtracting-polynomials',
+    'bessel-function', 'binomial-coefficient', 'box-method', 'completing-square',
+    'complex-conjugate', 'complex-number', 'complex-root', 'cubic-equation',
+    'descartes-rule-signs', 'diamond-problem', 'direct-variation', 'discriminant',
+    'elimination-method', 'error-function', 'factoring-trinomials', 'foil',
+    'gamma-function', 'generic-rectangle', 'graphing-inequalities-number-line',
+    'graphing-quadratic-inequalities', 'hyperbolic-functions', 'inequality-interval-notation',
+    'interval-notation', 'inverse-variation', 'multiplying-binomials', 'multiplying-polynomials',
+    'partial-fraction-decomposition', 'perfect-square-trinomial', 'polynomial-division',
+    'power-set', 'quadratic-formula', 'quaternion', 'rational-zeros', 'square-binomial',
+    'subset', 'substitution-method', 'synthetic-division', 'system-equations', 'union-intersection'
   ],
   'health': [
     'bmi', 'bmr', 'bodyfat', 'calorie', 'protein', 'heartrate', 'fitness', 'sleep', 'water'

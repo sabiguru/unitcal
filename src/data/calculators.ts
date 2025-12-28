@@ -104,6 +104,48 @@ import TimePercentageCalculator from '@/components/calc/TimePercentageCalculator
 import PercentToGoalCalculator from '@/components/calc/PercentToGoalCalculator';
 import RelativeChangeCalculator from '@/components/calc/RelativeChangeCalculator';
 import SlopePercentageCalculator from '@/components/calc/SlopePercentageCalculator';
+import AbsoluteValueEquationCalculator from '@/components/calc/AbsoluteValueEquationCalculator';
+import AbsoluteValueInequalitiesCalculator from '@/components/calc/AbsoluteValueInequalitiesCalculator';
+import AddingSubtractingPolynomialsCalculator from '@/components/calc/AddingSubtractingPolynomialsCalculator';
+import BesselFunctionCalculator from '@/components/calc/BesselFunctionCalculator';
+import BinomialCoefficientCalculator from '@/components/calc/BinomialCoefficientCalculator';
+import BoxMethodCalculator from '@/components/calc/BoxMethodCalculator';
+import CompletingSquareCalculator from '@/components/calc/CompletingSquareCalculator';
+import ComplexConjugateCalculator from '@/components/calc/ComplexConjugateCalculator';
+import ComplexNumberCalculator from '@/components/calc/ComplexNumberCalculator';
+import ComplexRootCalculator from '@/components/calc/ComplexRootCalculator';
+import CubicEquationCalculator from '@/components/calc/CubicEquationCalculator';
+import DescartesRuleSignsCalculator from '@/components/calc/DescartesRuleSignsCalculator';
+import DiamondProblemCalculator from '@/components/calc/DiamondProblemCalculator';
+import DirectVariationCalculator from '@/components/calc/DirectVariationCalculator';
+import DiscriminantCalculator from '@/components/calc/DiscriminantCalculator';
+import EliminationMethodCalculator from '@/components/calc/EliminationMethodCalculator';
+import ErrorFunctionCalculator from '@/components/calc/ErrorFunctionCalculator';
+import FactoringTrinomialsCalculator from '@/components/calc/FactoringTrinomialsCalculator';
+import FOILCalculator from '@/components/calc/FOILCalculator';
+import GammaFunctionCalculator from '@/components/calc/GammaFunctionCalculator';
+import GenericRectangleCalculator from '@/components/calc/GenericRectangleCalculator';
+import GraphingInequalitiesNumberLineCalculator from '@/components/calc/GraphingInequalitiesNumberLineCalculator';
+import GraphingQuadraticInequalitiesCalculator from '@/components/calc/GraphingQuadraticInequalitiesCalculator';
+import HyperbolicFunctionsCalculator from '@/components/calc/HyperbolicFunctionsCalculator';
+import InequalityIntervalNotationCalculator from '@/components/calc/InequalityIntervalNotationCalculator';
+import IntervalNotationCalculator from '@/components/calc/IntervalNotationCalculator';
+import InverseVariationCalculator from '@/components/calc/InverseVariationCalculator';
+import MultiplyingBinomialsCalculator from '@/components/calc/MultiplyingBinomialsCalculator';
+import MultiplyingPolynomialsCalculator from '@/components/calc/MultiplyingPolynomialsCalculator';
+import PartialFractionDecompositionCalculator from '@/components/calc/PartialFractionDecompositionCalculator';
+import PerfectSquareTrinomialCalculator from '@/components/calc/PerfectSquareTrinomialCalculator';
+import PolynomialDivisionCalculator from '@/components/calc/PolynomialDivisionCalculator';
+import PowerSetCalculator from '@/components/calc/PowerSetCalculator';
+import QuadraticFormulaCalculator from '@/components/calc/QuadraticFormulaCalculator';
+import QuaternionCalculator from '@/components/calc/QuaternionCalculator';
+import RationalZerosCalculator from '@/components/calc/RationalZerosCalculator';
+import SquareBinomialCalculator from '@/components/calc/SquareBinomialCalculator';
+import SubsetCalculator from '@/components/calc/SubsetCalculator';
+import SubstitutionMethodCalculator from '@/components/calc/SubstitutionMethodCalculator';
+import SyntheticDivisionCalculator from '@/components/calc/SyntheticDivisionCalculator';
+import SystemEquationsCalculator from '@/components/calc/SystemEquationsCalculator';
+import UnionIntersectionCalculator from '@/components/calc/UnionIntersectionCalculator';
 
 export type CalcEntry = {
   slug: string;
@@ -931,6 +973,342 @@ const calculatorsBase: CalcEntry[] = [
     category: 'Mathematics & Basic Tools',
     component: SlopePercentageCalculator,
     mdx: 'slope-percentage.mdx'
+  },
+  {
+    slug: 'absolute-value-equation',
+    title: 'Absolute Value Equation Calculator',
+    description: 'Solve absolute value equations',
+    category: 'Mathematics & Basic Tools',
+    component: AbsoluteValueEquationCalculator,
+    mdx: 'absolute-value-equation.mdx'
+  },
+  {
+    slug: 'absolute-value-inequalities',
+    title: 'Absolute Value Inequalities Calculator',
+    description: 'Solve absolute value inequalities',
+    category: 'Mathematics & Basic Tools',
+    component: AbsoluteValueInequalitiesCalculator,
+    mdx: 'absolute-value-inequalities.mdx'
+  },
+  {
+    slug: 'adding-subtracting-polynomials',
+    title: 'Adding and Subtracting Polynomials Calculator',
+    description: 'Add and subtract polynomial expressions',
+    category: 'Mathematics & Basic Tools',
+    component: AddingSubtractingPolynomialsCalculator,
+    mdx: 'adding-subtracting-polynomials.mdx'
+  },
+  {
+    slug: 'bessel-function',
+    title: 'Bessel Function Calculator',
+    description: 'Calculate Bessel functions of the first and second kind',
+    category: 'Mathematics & Basic Tools',
+    component: BesselFunctionCalculator,
+    mdx: 'bessel-function.mdx'
+  },
+  {
+    slug: 'binomial-coefficient',
+    title: 'Binomial Coefficient Calculator',
+    description: 'Calculate binomial coefficients and combinations',
+    category: 'Mathematics & Basic Tools',
+    component: BinomialCoefficientCalculator,
+    mdx: 'binomial-coefficient.mdx'
+  },
+  {
+    slug: 'box-method',
+    title: 'Box Method Calculator',
+    description: 'Multiply polynomials using the box method',
+    category: 'Mathematics & Basic Tools',
+    component: BoxMethodCalculator,
+    mdx: 'box-method.mdx'
+  },
+  {
+    slug: 'completing-square',
+    title: 'Completing the Square Calculator',
+    description: 'Complete the square for quadratic equations',
+    category: 'Mathematics & Basic Tools',
+    component: CompletingSquareCalculator,
+    mdx: 'completing-square.mdx'
+  },
+  {
+    slug: 'complex-conjugate',
+    title: 'Complex Conjugate Calculator',
+    description: 'Find the conjugate of complex numbers',
+    category: 'Mathematics & Basic Tools',
+    component: ComplexConjugateCalculator,
+    mdx: 'complex-conjugate.mdx'
+  },
+  {
+    slug: 'complex-number',
+    title: 'Complex Number Calculator',
+    description: 'Perform operations with complex numbers',
+    category: 'Mathematics & Basic Tools',
+    component: ComplexNumberCalculator,
+    mdx: 'complex-number.mdx'
+  },
+  {
+    slug: 'complex-root',
+    title: 'Complex Root Calculator',
+    description: 'Find complex roots of equations',
+    category: 'Mathematics & Basic Tools',
+    component: ComplexRootCalculator,
+    mdx: 'complex-root.mdx'
+  },
+  {
+    slug: 'cubic-equation',
+    title: 'Cubic Equation Calculator',
+    description: 'Solve cubic equations',
+    category: 'Mathematics & Basic Tools',
+    component: CubicEquationCalculator,
+    mdx: 'cubic-equation.mdx'
+  },
+  {
+    slug: 'descartes-rule-signs',
+    title: 'Descartes\' Rule of Signs Calculator',
+    description: 'Determine possible positive and negative real roots',
+    category: 'Mathematics & Basic Tools',
+    component: DescartesRuleSignsCalculator,
+    mdx: 'descartes-rule-signs.mdx'
+  },
+  {
+    slug: 'diamond-problem',
+    title: 'Diamond Problem Calculator',
+    description: 'Find two numbers that multiply and add to given values',
+    category: 'Mathematics & Basic Tools',
+    component: DiamondProblemCalculator,
+    mdx: 'diamond-problem.mdx'
+  },
+  {
+    slug: 'direct-variation',
+    title: 'Direct Variation Calculator',
+    description: 'Solve direct variation problems',
+    category: 'Mathematics & Basic Tools',
+    component: DirectVariationCalculator,
+    mdx: 'direct-variation.mdx'
+  },
+  {
+    slug: 'discriminant',
+    title: 'Discriminant Calculator',
+    description: 'Calculate the discriminant of quadratic equations',
+    category: 'Mathematics & Basic Tools',
+    component: DiscriminantCalculator,
+    mdx: 'discriminant.mdx'
+  },
+  {
+    slug: 'elimination-method',
+    title: 'Elimination Method Calculator',
+    description: 'Solve systems of equations using elimination',
+    category: 'Mathematics & Basic Tools',
+    component: EliminationMethodCalculator,
+    mdx: 'elimination-method.mdx'
+  },
+  {
+    slug: 'error-function',
+    title: 'Error Function Calculator',
+    description: 'Calculate the error function and complementary error function',
+    category: 'Mathematics & Basic Tools',
+    component: ErrorFunctionCalculator,
+    mdx: 'error-function.mdx'
+  },
+  {
+    slug: 'factoring-trinomials',
+    title: 'Factoring Trinomials Calculator',
+    description: 'Factor trinomial expressions',
+    category: 'Mathematics & Basic Tools',
+    component: FactoringTrinomialsCalculator,
+    mdx: 'factoring-trinomials.mdx'
+  },
+  {
+    slug: 'foil',
+    title: 'FOIL Calculator',
+    description: 'Multiply binomials using the FOIL method',
+    category: 'Mathematics & Basic Tools',
+    component: FOILCalculator,
+    mdx: 'foil.mdx'
+  },
+  {
+    slug: 'gamma-function',
+    title: 'Gamma Function Calculator',
+    description: 'Calculate the gamma function',
+    category: 'Mathematics & Basic Tools',
+    component: GammaFunctionCalculator,
+    mdx: 'gamma-function.mdx'
+  },
+  {
+    slug: 'generic-rectangle',
+    title: 'Generic Rectangle Calculator',
+    description: 'Use the area model for polynomial multiplication',
+    category: 'Mathematics & Basic Tools',
+    component: GenericRectangleCalculator,
+    mdx: 'generic-rectangle.mdx'
+  },
+  {
+    slug: 'graphing-inequalities-number-line',
+    title: 'Graphing Inequalities on a Number Line Calculator',
+    description: 'Graph inequalities on a number line',
+    category: 'Mathematics & Basic Tools',
+    component: GraphingInequalitiesNumberLineCalculator,
+    mdx: 'graphing-inequalities-number-line.mdx'
+  },
+  {
+    slug: 'graphing-quadratic-inequalities',
+    title: 'Graphing Quadratic Inequalities Calculator',
+    description: 'Solve and graph quadratic inequalities',
+    category: 'Mathematics & Basic Tools',
+    component: GraphingQuadraticInequalitiesCalculator,
+    mdx: 'graphing-quadratic-inequalities.mdx'
+  },
+  {
+    slug: 'hyperbolic-functions',
+    title: 'Hyperbolic Functions Calculator',
+    description: 'Calculate hyperbolic sine, cosine, and tangent',
+    category: 'Mathematics & Basic Tools',
+    component: HyperbolicFunctionsCalculator,
+    mdx: 'hyperbolic-functions.mdx'
+  },
+  {
+    slug: 'inequality-interval-notation',
+    title: 'Inequality to Interval Notation Calculator',
+    description: 'Convert inequalities to interval notation',
+    category: 'Mathematics & Basic Tools',
+    component: InequalityIntervalNotationCalculator,
+    mdx: 'inequality-interval-notation.mdx'
+  },
+  {
+    slug: 'interval-notation',
+    title: 'Interval Notation Calculator',
+    description: 'Work with interval notation',
+    category: 'Mathematics & Basic Tools',
+    component: IntervalNotationCalculator,
+    mdx: 'interval-notation.mdx'
+  },
+  {
+    slug: 'inverse-variation',
+    title: 'Inverse Variation Calculator',
+    description: 'Solve inverse variation problems',
+    category: 'Mathematics & Basic Tools',
+    component: InverseVariationCalculator,
+    mdx: 'inverse-variation.mdx'
+  },
+  {
+    slug: 'multiplying-binomials',
+    title: 'Multiplying Binomials Calculator',
+    description: 'Multiply binomial expressions',
+    category: 'Mathematics & Basic Tools',
+    component: MultiplyingBinomialsCalculator,
+    mdx: 'multiplying-binomials.mdx'
+  },
+  {
+    slug: 'multiplying-polynomials',
+    title: 'Multiplying Polynomials Calculator',
+    description: 'Multiply polynomial expressions',
+    category: 'Mathematics & Basic Tools',
+    component: MultiplyingPolynomialsCalculator,
+    mdx: 'multiplying-polynomials.mdx'
+  },
+  {
+    slug: 'partial-fraction-decomposition',
+    title: 'Partial Fraction Decomposition Calculator',
+    description: 'Decompose rational functions into partial fractions',
+    category: 'Mathematics & Basic Tools',
+    component: PartialFractionDecompositionCalculator,
+    mdx: 'partial-fraction-decomposition.mdx'
+  },
+  {
+    slug: 'perfect-square-trinomial',
+    title: 'Perfect Square Trinomial Calculator',
+    description: 'Identify and create perfect square trinomials',
+    category: 'Mathematics & Basic Tools',
+    component: PerfectSquareTrinomialCalculator,
+    mdx: 'perfect-square-trinomial.mdx'
+  },
+  {
+    slug: 'polynomial-division',
+    title: 'Polynomial Division Calculator',
+    description: 'Divide polynomials using long division',
+    category: 'Mathematics & Basic Tools',
+    component: PolynomialDivisionCalculator,
+    mdx: 'polynomial-division.mdx'
+  },
+  {
+    slug: 'power-set',
+    title: 'Power Set Calculator',
+    description: 'Generate the power set of a given set',
+    category: 'Mathematics & Basic Tools',
+    component: PowerSetCalculator,
+    mdx: 'power-set.mdx'
+  },
+  {
+    slug: 'quadratic-formula',
+    title: 'Quadratic Formula Calculator',
+    description: 'Solve quadratic equations using the quadratic formula',
+    category: 'Mathematics & Basic Tools',
+    component: QuadraticFormulaCalculator,
+    mdx: 'quadratic-formula.mdx'
+  },
+  {
+    slug: 'quaternion',
+    title: 'Quaternion Calculator',
+    description: 'Perform operations with quaternions',
+    category: 'Mathematics & Basic Tools',
+    component: QuaternionCalculator,
+    mdx: 'quaternion.mdx'
+  },
+  {
+    slug: 'rational-zeros',
+    title: 'Rational Zeros Calculator',
+    description: 'Find possible rational zeros using the rational root theorem',
+    category: 'Mathematics & Basic Tools',
+    component: RationalZerosCalculator,
+    mdx: 'rational-zeros.mdx'
+  },
+  {
+    slug: 'square-binomial',
+    title: 'Square of a Binomial Calculator',
+    description: 'Calculate the square of binomial expressions',
+    category: 'Mathematics & Basic Tools',
+    component: SquareBinomialCalculator,
+    mdx: 'square-binomial.mdx'
+  },
+  {
+    slug: 'subset',
+    title: 'Subset Calculator',
+    description: 'Check subset relationships between sets',
+    category: 'Mathematics & Basic Tools',
+    component: SubsetCalculator,
+    mdx: 'subset.mdx'
+  },
+  {
+    slug: 'substitution-method',
+    title: 'Substitution Method Calculator',
+    description: 'Solve systems of equations using substitution',
+    category: 'Mathematics & Basic Tools',
+    component: SubstitutionMethodCalculator,
+    mdx: 'substitution-method.mdx'
+  },
+  {
+    slug: 'synthetic-division',
+    title: 'Synthetic Division Calculator',
+    description: 'Divide polynomials using synthetic division',
+    category: 'Mathematics & Basic Tools',
+    component: SyntheticDivisionCalculator,
+    mdx: 'synthetic-division.mdx'
+  },
+  {
+    slug: 'system-equations',
+    title: 'System of Equations Calculator',
+    description: 'Solve systems of linear equations',
+    category: 'Mathematics & Basic Tools',
+    component: SystemEquationsCalculator,
+    mdx: 'system-equations.mdx'
+  },
+  {
+    slug: 'union-intersection',
+    title: 'Union and Intersection Calculator',
+    description: 'Calculate set union and intersection operations',
+    category: 'Mathematics & Basic Tools',
+    component: UnionIntersectionCalculator,
+    mdx: 'union-intersection.mdx'
   }
 ];
 
