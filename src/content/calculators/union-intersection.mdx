@@ -210,17 +210,17 @@ Determining which genes are expressed in multiple cell types uses intersection. 
 
 **Mistake 1: Counting elements twice in union**
 
-Wrong: A = {1, 2, 3}, B = {2, 3, 4}, so A ∪ B = {1, 2, 2, 3, 3, 4}
+Wrong: A = `{1, 2, 3}`, B = `{2, 3, 4}`, so A ∪ B = `{1, 2, 2, 3, 3, 4}`
 
-Right: A ∪ B = {1, 2, 3, 4}. Sets don't have duplicates. Each element appears once.
+Right: A ∪ B = `{1, 2, 3, 4}`. Sets don't have duplicates. Each element appears once.
 
 Why it happens: Thinking of union as simple concatenation. Remember: sets contain distinct elements.
 
 **Mistake 2: Including elements in intersection that aren't in both sets**
 
-Wrong: A = {1, 2, 3}, B = {3, 4, 5}, so A ∩ B = {1, 2, 3, 4, 5}
+Wrong: A = `{1, 2, 3}`, B = `{3, 4, 5}`, so A ∩ B = `{1, 2, 3, 4, 5}`
 
-Right: A ∩ B = {3}. Only 3 appears in both sets.
+Right: A ∩ B = `{3}`. Only 3 appears in both sets.
 
 Why it happens: Confusing intersection with union. Intersection is much more restrictive.
 
@@ -376,7 +376,7 @@ Work left to right: (A ∪ B) ∪ C. First find A ∪ B, then union that result 
 
 **Can elements repeat in a set?**
 
-No, sets contain unique elements. {1, 2, 2, 3} is the same as {1, 2, 3}.
+No, sets contain unique elements. `{1, 2, 2, 3}` is the same as `{1, 2, 3}`.
 
 **How do I know how many elements are in the union?**
 
@@ -408,7 +408,7 @@ Yes, the definitions extend to infinite sets. For example, the union of all even
 
 **What if sets contain different types of elements?**
 
-You can't usually compare different types meaningfully. {1, 2, 3} and {a, b, c} are disjoint because integers and letters are different.
+You can't usually compare different types meaningfully. `{1, 2, 3}` and `{a, b, c}` are disjoint because integers and letters are different.
 
 **How do intervals work with these operations?**
 
