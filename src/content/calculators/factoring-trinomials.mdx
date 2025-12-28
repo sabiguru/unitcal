@@ -1,1 +1,363 @@
-## Factoring Trinomials Calculator
+## Factoring Trinomials Calculator: Break Down Quadratics
+
+## Table of Contents - Factoring Trinomials
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Reversing FOIL](#the-core-principle-reversing-foil)
+- [How to Factor Trinomials Manually](#how-to-factor-trinomials-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Factoring Trinomials
+
+Enter the coefficients of your trinomial in standard form: ax² + bx + c
+
+Input fields:
+- **a coefficient** — The number in front of x² (typically 1 for simple factoring)
+- **b coefficient** — The number in front of x
+- **c coefficient** — The constant term
+
+Click "Calculate" to see results. The output displays:
+- The factored form as a product of two binomials
+- Step-by-step factoring process
+- Check by expanding back to original trinomial
+- Whether the trinomial is factorable over integers
+
+---
+
+## The Core Principle: Reversing FOIL
+
+Factoring trinomials is like solving a puzzle. You're given the expanded form ax² + bx + c and need to find the two binomials that multiply to give it. It's FOIL in reverse.
+
+**The fundamental goal:**
+
+Transform ax² + bx + c into (px + m)(qx + n) where the multiplication gives you back the original trinomial.
+
+**The key relationships:**
+
+When you multiply (px + m)(qx + n) using FOIL:
+- First gives: pq x² (this must equal a)
+- Outer + Inner gives: (pn + qm)x (this must equal b)
+- Last gives: mn (this must equal c)
+
+So you need to find numbers where:
+- p × q = a
+- m × n = c
+- pn + qm = b
+
+**The simple case when a = 1:**
+
+For x² + bx + c, you need two numbers that multiply to c and add to b.
+
+Example: Factor x² + 7x + 12
+- Find two numbers that multiply to 12 and add to 7
+- Those numbers are 3 and 4 (because 3 × 4 = 12 and 3 + 4 = 7)
+- Answer: (x + 3)(x + 4)
+
+**Why this matters:**
+
+Factoring reveals the roots of equations, simplifies rational expressions, and solves real-world problems. It's one of the most useful algebra skills you'll develop.
+
+---
+
+## How to Factor Trinomials Manually
+
+**Simple factoring when a = 1:**
+
+Factor x² + 8x + 15
+
+Step 1: Need two numbers that multiply to 15
+Step 2: And add to 8
+Step 3: List factor pairs of 15: (1,15), (3,5)
+Step 4: Which pair adds to 8? 3 + 5 = 8 ✓
+Step 5: Write factors: (x + 3)(x + 5)
+Check: (x + 3)(x + 5) = x² + 5x + 3x + 15 = x² + 8x + 15 ✓
+
+**Factoring with negative constant:**
+
+Factor x² + 2x - 15
+
+Step 1: Need two numbers that multiply to -15
+Step 2: And add to 2
+Step 3: Factor pairs of -15: (1,-15), (-1,15), (3,-5), (-3,5)
+Step 4: Which pair adds to 2? 5 + (-3) = 2 ✓
+Step 5: Write factors: (x + 5)(x - 3)
+Check: (x + 5)(x - 3) = x² - 3x + 5x - 15 = x² + 2x - 15 ✓
+
+**Factoring with negative middle term:**
+
+Factor x² - 10x + 21
+
+Step 1: Need two numbers that multiply to 21
+Step 2: And add to -10
+Step 3: Since product is positive and sum is negative, both numbers are negative
+Step 4: Factor pairs: (-1,-21), (-3,-7)
+Step 5: Which adds to -10? -3 + (-7) = -10 ✓
+Step 6: Write factors: (x - 3)(x - 7)
+Check: (x - 3)(x - 7) = x² - 7x - 3x + 21 = x² - 10x + 21 ✓
+
+**Factoring when a is not 1 (leading coefficient method):**
+
+Factor 2x² + 7x + 3
+
+Step 1: Multiply a and c: 2 × 3 = 6
+Step 2: Find two numbers that multiply to 6 and add to 7
+Step 3: Factor pairs of 6: (1,6), (2,3)
+Step 4: Which adds to 7? 1 + 6 = 7 ✓
+Step 5: Rewrite middle term: 2x² + 1x + 6x + 3
+Step 6: Group: (2x² + 1x) + (6x + 3)
+Step 7: Factor out GCF from each group: x(2x + 1) + 3(2x + 1)
+Step 8: Factor out common binomial: (2x + 1)(x + 3)
+Check: (2x + 1)(x + 3) = 2x² + 6x + x + 3 = 2x² + 7x + 3 ✓
+
+**Factoring with larger leading coefficient:**
+
+Factor 6x² + 11x + 3
+
+Step 1: Multiply a and c: 6 × 3 = 18
+Step 2: Find two numbers that multiply to 18 and add to 11
+Step 3: Factor pairs: (1,18), (2,9), (3,6)
+Step 4: Which adds to 11? 2 + 9 = 11 ✓
+Step 5: Rewrite: 6x² + 2x + 9x + 3
+Step 6: Group: (6x² + 2x) + (9x + 3)
+Step 7: Factor GCF: 2x(3x + 1) + 3(3x + 1)
+Step 8: Factor common binomial: (3x + 1)(2x + 3)
+
+**Trial and error method:**
+
+Factor 3x² - 10x + 8
+
+Factors of 3x²: 3x and x
+Factors of 8: (1,8), (2,4)
+Try (3x - 1)(x - 8): gives 3x² - 24x - x + 8 = 3x² - 25x + 8 ✗
+Try (3x - 2)(x - 4): gives 3x² - 12x - 2x + 8 = 3x² - 14x + 8 ✗
+Try (3x - 4)(x - 2): gives 3x² - 6x - 4x + 8 = 3x² - 10x + 8 ✓
+
+Answer: (3x - 4)(x - 2)
+
+---
+
+## Real-World Applications
+
+**Projectile motion physics.** The equation h = -16t² + 48t factors to h = -16t(t - 3), revealing the object hits the ground at t = 0 and t = 3 seconds.
+
+**Area problems in geometry.** If a rectangle's area is x² + 9x + 20 and you know one dimension is (x + 4), factoring shows the other dimension is (x + 5).
+
+**Business profit maximization.** Profit equation P = -x² + 50x - 600 factors to P = -(x - 20)(x - 30), showing break-even points at 20 and 30 units.
+
+**Engineering stress calculations.** Quadratic equations describing material stress factor to reveal critical load points where failure might occur.
+
+**Architecture and construction.** Determining dimensions when given area constraints often requires factoring quadratic expressions to find length and width.
+
+**Computer graphics.** Collision detection algorithms use factored quadratics to determine intersection points efficiently.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The sign combination confusion.** For x² - 5x + 6, you need negative numbers that multiply to positive 6. Both must be negative: -2 and -3. Some try mixing positive and negative incorrectly.
+
+**Forgetting to check all factor pairs.** For x² + 12x + 20, you quickly find 2 and 10 work (multiply to 20, add to 12). But you might miss 4 and 5 if you don't systematically list all pairs.
+
+**The unfactorable disappointment.** You try to factor x² + 5x + 3 and can't find integers that work. That's because it's not factorable over integers (discriminant isn't a perfect square).
+
+**The greatest common factor oversight.** Given 3x² + 12x + 9, you might factor as (3x + 3)(x + 3). But first factor out GCF of 3: 3(x² + 4x + 3) = 3(x + 1)(x + 3).
+
+**Negative leading coefficient panic.** For -x² + 7x - 12, factor out -1 first: -(x² - 7x + 12) = -(x - 3)(x - 4). Much easier than working with negative a.
+
+**The grouping method confusion.** When splitting the middle term, you forget to keep the same binomial in both groups. You need matching binomials to factor out.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**AC method versus trial and error.** For small coefficients, trial and error is faster. For 6x² + 19x + 10, the AC method (multiply 6 × 10 = 60, find factors that add to 19) is more systematic.
+
+**Factoring by grouping versus the formula.** Both work. Grouping builds algebraic intuition; the quadratic formula always works but teaches less about number relationships.
+
+**When to give up and use quadratic formula.** If you've tried several factor combinations and none work, check the discriminant. If it's not a perfect square, use the formula instead.
+
+**Common factor extraction timing.** Always look for GCF first. Factoring 4x² + 20x + 24 is easier as 4(x² + 5x + 6) = 4(x + 2)(x + 3) than trying to factor the larger numbers directly.
+
+**Sign pattern recognition.** Knowing the signs tells you a lot: positive c and positive b means both factors positive; positive c and negative b means both factors negative; negative c means one positive, one negative.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Mixing up sum and product.** For x² + bx + c, you need numbers that multiply to c and add to b, not the other way around.
+
+**Sign errors with subtraction.** In (x - 3)(x - 4), when you expand, you get x² - 7x + 12. The middle term is negative (sum of -3 and -4), not positive.
+
+**Incomplete factoring.** Factoring 2x² + 6x + 4 as (2x + 4)(x + 1) is wrong. First factor out 2: 2(x² + 3x + 2) = 2(x + 1)(x + 2).
+
+**Wrong grouping terms.** When using grouping method, if your groups don't produce the same binomial, you split the middle term incorrectly. Try different factor pairs.
+
+**Not verifying by expansion.** Always multiply your factors back to check. If you don't get the original trinomial, you made an error.
+
+**Forgetting prime trinomials exist.** Not every trinomial factors over integers. x² + 2x + 2 is prime (can't be factored with integer coefficients).
+
+**Switching factors incorrectly.** (2x + 3)(x + 5) ≠ (x + 3)(2x + 5). The position of coefficients matters.
+
+---
+
+## Related Topics
+
+**FOIL method.** The forward direction of factoring. Understanding FOIL makes factoring intuitive.
+
+**Quadratic formula.** When factoring doesn't work (non-integer roots), the quadratic formula finds all solutions.
+
+**Difference of squares.** Special factoring pattern: a² - b² = (a + b)(a - b).
+
+**Perfect square trinomials.** Recognize a² + 2ab + b² = (a + b)² to factor instantly.
+
+**Sum and difference of cubes.** Extends factoring to cubic expressions using special formulas.
+
+**Rational expressions.** Factoring trinomials simplifies algebraic fractions by canceling common factors.
+
+**Solving quadratic equations.** Once factored to (x + m)(x + n) = 0, solutions are x = -m and x = -n.
+
+---
+
+## How This Calculator Works
+
+**Input processing:**
+```
+Read coefficients a, b, c
+Check if a = 0 (not quadratic if so)
+Identify sign patterns
+```
+
+**Factorability check:**
+```
+Calculate discriminant: b² - 4ac
+If discriminant < 0: no real factors
+If discriminant is not perfect square: no integer factors
+```
+
+**Factoring algorithm (when a = 1):**
+```
+Find factor pairs of c
+For each pair (m, n):
+    If m + n = b:
+        Factors are (x + m)(x + n)
+        Return result
+```
+
+**Factoring algorithm (when a ≠ 1):**
+```
+Calculate product ac
+Find factor pairs of ac that add to b
+Split middle term using those factors
+Factor by grouping
+Return binomial factors
+```
+
+**Verification:**
+```
+Multiply found factors using FOIL
+Compare to original trinomial
+Display step-by-step work
+```
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**What's the difference between factoring and expanding?**
+
+Factoring takes ax² + bx + c and writes it as a product of binomials. Expanding (FOIL) does the opposite—takes binomials and multiplies them into a trinomial.
+
+**How do I know if a trinomial is factorable?**
+
+Check if the discriminant b² - 4ac is a perfect square. If it is, the trinomial factors over integers. If not, you need the quadratic formula for real roots.
+
+**What if the leading coefficient isn't 1?**
+
+Use the AC method (multiply a and c, find factors that add to b, split middle term, factor by grouping) or trial and error with factor combinations.
+
+**Why do the middle terms add up?**
+
+When you FOIL (x + m)(x + n), you get x² + nx + mx + mn. The middle terms nx and mx combine to (m + n)x. That's why you look for numbers that add to b.
+
+**What if I can't find factors?**
+
+The trinomial might be prime (not factorable over integers). Check the discriminant. Use the quadratic formula to find irrational or complex roots.
+
+**Should I always check for GCF first?**
+
+Yes. Factoring out the greatest common factor first makes numbers smaller and factoring easier. Always do this as a first step.
+
+**What does it mean for a trinomial to be prime?**
+
+A prime trinomial can't be factored into binomials with integer coefficients. Like prime numbers, it's irreducible in that number system.
+
+**How do negative signs affect factoring?**
+
+If c is positive and b is negative, both factors are negative. If c is negative, one factor is positive and one is negative (the larger absolute value matches the sign of b).
+
+**Can I factor trinomials with fractions?**
+
+Technically yes, but it's messy. Clear denominators first by multiplying through by the LCD, then factor.
+
+**What's factoring by grouping?**
+
+When a ≠ 1, you split the middle term into two terms, group pairs, factor out GCF from each group, then factor out the common binomial.
+
+**How do I check my factoring?**
+
+Multiply the factors back using FOIL or distribution. If you get the original trinomial, your factoring is correct.
+
+**Why does the AC method work?**
+
+It systematically finds how to split the middle term so that grouping will produce a common binomial factor.
+
+**Can trinomials have three different factors?**
+
+Not for quadratic trinomials. They factor into at most two binomial factors (plus any GCF you factored out first).
+
+**What if the constant term is large?**
+
+More factor pairs to check, but the process is the same. List all pairs systematically and test which adds to b.
+
+**How does factoring help solve equations?**
+
+Once factored to (x + m)(x + n) = 0, you can use the zero product property: if the product is zero, at least one factor is zero. So x = -m or x = -n.
+
+**What's the relationship between factors and roots?**
+
+If (x - r) is a factor, then r is a root (solution). The roots are the negatives of the constant terms when factors are written as (x - r).
+
+**Can I factor trinomials with variables in all three terms?**
+
+If there's a common variable factor, factor it out first. Then factor the remaining trinomial.
+
+**What if both factors are the same?**
+
+You have a perfect square trinomial: (x + a)² = x² + 2ax + a². This happens when the discriminant equals zero.
+
+**How do I factor ax² + bxy + cy²?**
+
+Similar process, but factors will contain both variables: find numbers that multiply to ac and add to b, using x and y in the factors.
+
+**What's the fastest method?**
+
+For a = 1, finding two numbers (multiply to c, add to b) is fastest. For a ≠ 1, AC method is systematic. With practice, trial and error becomes very quick.
+
+**Additional Notes**
+
+Factoring trinomials is a fundamental algebra skill that appears constantly in higher mathematics. It's the key to solving quadratic equations, simplifying expressions, and understanding mathematical relationships.
+
+The beauty of factoring is in the number relationships. When you factor x² + 7x + 12 into (x + 3)(x + 4), you're discovering that 3 and 4 have a special relationship: they multiply to 12 and add to 7. This kind of number sense is valuable far beyond algebra.
+
+Practice builds pattern recognition. After factoring many trinomials, you start seeing the structure immediately. You glance at x² - 5x + 6 and think "negative 2 and negative 3" without conscious effort.
+
+Understanding both directions—factoring and expanding—creates deep comprehension. When you can move fluidly between (x + 3)(x + 4) and x² + 7x + 12, you truly understand the algebra. This bidirectional thinking is essential for advanced mathematics.

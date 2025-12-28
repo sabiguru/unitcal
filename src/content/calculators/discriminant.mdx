@@ -1,1 +1,335 @@
-## Discriminant Calculator
+## Discriminant Calculator: Understanding Quadratic Equation Roots
+
+## Table of Contents - Discriminant
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: What the Discriminant Reveals](#the-core-principle-what-the-discriminant-reveals)
+- [How to Calculate the Discriminant Manually](#how-to-calculate-the-discriminant-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Discriminant
+
+Enter the coefficients from your quadratic equation in standard form: ax² + bx + c = 0
+
+Input fields:
+- **a coefficient** — The number in front of x² (cannot be zero)
+- **b coefficient** — The number in front of x
+- **c coefficient** — The constant term
+
+Click "Calculate" to see results. The output displays:
+- The discriminant value (b² - 4ac)
+- The type of roots (two real, one real, or complex)
+- Detailed interpretation of what the discriminant means
+- Whether roots are rational or irrational (when real)
+
+---
+
+## The Core Principle: What the Discriminant Reveals
+
+The discriminant is like a crystal ball for quadratic equations. Before you even solve the equation, it tells you exactly what kind of solutions you'll get. Think of it as looking ahead to see if you'll get nice, friendly answers or complicated ones.
+
+**The fundamental formula:**
+Discriminant = b² - 4ac
+
+This simple calculation, derived from the quadratic formula's square root part, reveals everything about your solutions.
+
+**The three possibilities:**
+
+When the discriminant is **positive** (greater than zero):
+- You get two different real number solutions
+- The parabola crosses the x-axis at two points
+- Example: x² - 5x + 6 = 0 has discriminant 1, giving solutions x = 2 and x = 3
+
+When the discriminant is **zero** (exactly zero):
+- You get one repeated real solution (technically two identical ones)
+- The parabola just touches the x-axis at one point (the vertex)
+- Example: x² - 4x + 4 = 0 has discriminant 0, giving solution x = 2 (twice)
+
+When the discriminant is **negative** (less than zero):
+- You get two complex conjugate solutions (involving the imaginary unit i)
+- The parabola doesn't touch the x-axis at all
+- Example: x² + 2x + 5 = 0 has discriminant -16, giving complex solutions
+
+**Why this matters:** The discriminant saves time. If you're looking for real solutions and the discriminant is negative, you immediately know there aren't any. No need to complete the calculation.
+
+**Perfect squares reveal rational roots:** When the discriminant is a perfect square (1, 4, 9, 16, 25, etc.), your solutions will be rational numbers that you can write as fractions. This means factoring might work.
+
+---
+
+## How to Calculate the Discriminant Manually
+
+**Step-by-step process:**
+
+1. **Identify your coefficients** from ax² + bx + c = 0
+   - Write down a, b, and c clearly
+   - Be careful with negative signs
+
+2. **Square the b value**
+   - Calculate b × b
+   - Remember: negative times negative gives positive
+
+3. **Calculate 4ac**
+   - Multiply 4 × a × c
+   - Watch for negative values
+
+4. **Subtract to get discriminant**
+   - Discriminant = b² - 4ac
+
+**Example 1: Two real solutions**
+Equation: 2x² + 5x - 3 = 0
+- a = 2, b = 5, c = -3
+- b² = 5² = 25
+- 4ac = 4 × 2 × (-3) = -24
+- Discriminant = 25 - (-24) = 25 + 24 = 49
+
+Since 49 is positive and a perfect square, we get two rational solutions.
+
+**Example 2: One repeated solution**
+Equation: x² - 6x + 9 = 0
+- a = 1, b = -6, c = 9
+- b² = (-6)² = 36
+- 4ac = 4 × 1 × 9 = 36
+- Discriminant = 36 - 36 = 0
+
+Zero discriminant means one repeated real solution (x = 3).
+
+**Example 3: Complex solutions**
+Equation: x² + 4x + 13 = 0
+- a = 1, b = 4, c = 13
+- b² = 4² = 16
+- 4ac = 4 × 1 × 13 = 52
+- Discriminant = 16 - 52 = -36
+
+Negative discriminant means two complex solutions.
+
+**Example 4: Irrational solutions**
+Equation: x² - 4x + 1 = 0
+- a = 1, b = -4, c = 1
+- b² = (-4)² = 16
+- 4ac = 4 × 1 × 1 = 4
+- Discriminant = 16 - 4 = 12
+
+Positive but not a perfect square means two irrational solutions involving square roots.
+
+---
+
+## Real-World Applications
+
+**Physics projectile motion.** When will a thrown ball hit the ground? The height equation h = -16t² + v₀t + h₀ is quadratic. The discriminant tells you if the ball reaches that height (positive), just grazes it (zero), or never gets there (negative).
+
+**Engineering and design.** Bridge arch equations are often parabolic. The discriminant determines whether a support beam at a certain height intersects the arch at two points, one point, or not at all.
+
+**Business break-even analysis.** Profit equations P = ax² + bx + c show whether you'll break even (discriminant = 0), have two break-even points with profit in between (positive), or always lose money (negative).
+
+**Electronics signal processing.** Finding resonant frequencies involves solving quadratic equations. The discriminant reveals whether you'll get real frequency solutions or need to account for complex impedance.
+
+**Architecture and construction.** Parabolic roof designs require knowing if support columns at specific positions will intersect the roof curve. The discriminant provides this answer before any construction begins.
+
+**Computer graphics.** Ray tracing for 3D rendering uses discriminants to determine if a light ray hits a spherical object (positive), is tangent to it (zero), or misses entirely (negative).
+
+---
+
+## Scenarios People Actually Run Into
+
+**The sign confusion disaster.** You have x² - 3x - 10 = 0 and calculate b² - 4ac = 9 - 4(1)(-10) = 9 - (-40). That's 9 + 40 = 49, not 9 - 40 = -31. Watch those double negatives.
+
+**The coefficient misidentification.** In 3 - 2x + x², you might rush and think a = 1, b = -2, c = 3. But standard form is ax² + bx + c, so you need to rewrite as x² - 2x + 3. Same a and b, but now you're organized.
+
+**The missing leading coefficient.** Given x² + 5x + 6, someone forgets that a = 1 (not 0). This matters because 4ac = 4(1)(6) = 24, not 0.
+
+**The perfect square trap.** You get discriminant = 12 and think "not a perfect square, so I can't solve this." Wrong. You can solve it. The discriminant being 12 just means your answers involve √12 = 2√3, giving irrational (but real) solutions.
+
+**The zero discriminant overlooked.** When you get discriminant = 0, you might try to find two different solutions. There's only one unique solution (though the quadratic formula gives it twice). The parabola vertex sits exactly on the x-axis.
+
+**The complex number avoidance.** In a pure math course, negative discriminants give complex solutions. In an applied physics problem asking "when does the ball hit the ground," negative discriminant means "never." Same math, different interpretation.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Perfect square versus decimal approximation.** Discriminant = 48 can be left as √48 = 4√3 (exact) or approximated as 6.928 (useful for practical calculations). Choose based on whether you need precision or practicality.
+
+**Factoring versus quadratic formula.** If discriminant is a perfect square, factoring might be easier. But if it's something like 169 (which is 13²), the quadratic formula might still be faster unless you recognize 13² immediately.
+
+**Real-world context matters.** In physics, time cannot be negative, so even when discriminant gives two positive mathematical solutions, only one might be physically meaningful. Always interpret in context.
+
+**Coefficient form affects difficulty.** The equation 4x² - 4x + 1 = 0 has discriminant 16 - 16 = 0. But if you first divide by 4 to get x² - x + 0.25 = 0, you work with 1 - 1 = 0, which is simpler arithmetic.
+
+**Tolerance in engineering.** A discriminant of 0.0001 is technically positive, giving two very close real roots. But in manufacturing, this might be treated as zero, meaning one solution for practical purposes.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Forgetting to square b.** Writing b - 4ac instead of b² - 4ac gives completely wrong results. Always check: does your first term look like b squared?
+
+**Sign errors in subtraction.** The formula is b² minus 4ac, not plus. If c is negative, you're subtracting a negative, which becomes addition.
+
+**Misidentifying coefficients from non-standard form.** Always rearrange to ax² + bx + c = 0 first. In 5 + 2x² - 3x = 0, rewrite as 2x² - 3x + 5 = 0 before identifying a = 2, b = -3, c = 5.
+
+**Arithmetic errors with negatives.** When b = -4, then b² = 16 (positive), not -16. Negative squared is always positive.
+
+**Interpreting zero incorrectly.** Discriminant = 0 doesn't mean "no solutions." It means one repeated real solution.
+
+**Assuming positive means rational.** Positive discriminant means two real solutions, but they're only rational if the discriminant is a perfect square.
+
+**Wrong order of operations.** Calculate b² first, then 4ac, then subtract. Don't do 4 × a × c × b² or other scrambled orders.
+
+---
+
+## Related Topics
+
+**The quadratic formula.** The discriminant appears under the square root: x = (-b ± √(b² - 4ac)) / 2a. Understanding it helps you understand the formula's behavior.
+
+**Completing the square.** An alternative method for solving quadratics that reveals why the discriminant formula works.
+
+**Parabola graphing.** The discriminant tells you how many x-intercepts the parabola has without graphing.
+
+**Vieta's formulas.** These relate the sum and product of roots to coefficients, providing another way to understand quadratic equations.
+
+**Factoring quadratics.** When discriminant is a perfect square, the quadratic factors nicely over the rationals.
+
+**Complex numbers.** Negative discriminants require understanding i = √(-1) and how to work with complex conjugates.
+
+**Polynomial discriminants.** Higher-degree polynomials (cubic, quartic) have more complex discriminants that reveal information about their roots.
+
+---
+
+## How This Calculator Works
+
+**Input validation:**
+```
+Verify a ≠ 0 (else not a quadratic equation)
+Accept b and c as any real numbers
+```
+
+**Discriminant calculation:**
+```
+discriminant = b × b - 4 × a × c
+```
+
+**Root type determination:**
+```
+if discriminant > 0:
+    result = "Two distinct real roots"
+    if discriminant is perfect square:
+        detail = "Roots are rational"
+    else:
+        detail = "Roots are irrational"
+else if discriminant = 0:
+    result = "One repeated real root"
+else:
+    result = "Two complex conjugate roots"
+```
+
+**Additional information:**
+```
+Display discriminant value
+Show interpretation for graphing (number of x-intercepts)
+Indicate whether factoring is viable
+```
+
+All calculations happen instantly in your browser with no data sent to servers.
+
+---
+
+## FAQs
+
+**What does the discriminant actually tell me?**
+
+The discriminant reveals how many real solutions your quadratic equation has and what type they are. Positive gives two different real solutions, zero gives one repeated solution, and negative gives two complex (imaginary) solutions.
+
+**Why is it called the discriminant?**
+
+It "discriminates" between different types of solutions, distinguishing whether you get real or complex roots.
+
+**Can the discriminant be negative?**
+
+Yes. Negative discriminants indicate the parabola doesn't cross the x-axis and the solutions involve imaginary numbers.
+
+**What if my a value is zero?**
+
+Then you don't have a quadratic equation—you have a linear equation (bx + c = 0). The discriminant formula doesn't apply.
+
+**Is a bigger discriminant better?**
+
+Not better or worse, just different. A larger positive discriminant means your two real solutions are farther apart. A small positive discriminant means they're close together.
+
+**How do I know if the discriminant is a perfect square?**
+
+Take the square root. If you get a whole number (like √49 = 7), it's a perfect square. If you get a decimal or need to simplify radicals (like √50 = 5√2), it's not.
+
+**What does it mean when discriminant equals zero?**
+
+The parabola's vertex sits exactly on the x-axis. You get one solution that appears twice in the quadratic formula (both + and - give the same answer).
+
+**Can I use the discriminant for non-quadratic equations?**
+
+No. The formula b² - 4ac specifically applies to quadratic equations (degree 2). Higher-degree polynomials have different discriminant formulas.
+
+**Do I need to simplify the discriminant?**
+
+Not necessarily. The discriminant value itself (like 48 or -16) tells you what you need. You only simplify square roots when actually solving for x.
+
+**What's the connection between discriminant and factoring?**
+
+If the discriminant is a perfect square, the quadratic factors nicely into rational factors. If not, factoring over the rationals won't work.
+
+**Why do we care about b² - 4ac specifically?**
+
+It comes from the quadratic formula. The expression under the square root determines what kind of solutions you get.
+
+**Can all quadratics be factored?**
+
+Over the real numbers, only those with non-negative discriminants. Over the complex numbers, all quadratics factor (fundamental theorem of algebra).
+
+**What if my equation isn't in standard form?**
+
+Rearrange it to ax² + bx + c = 0 first. Collect all terms on one side and identify coefficients carefully.
+
+**How does the discriminant relate to the graph?**
+
+Positive discriminant = parabola crosses x-axis twice
+Zero discriminant = parabola touches x-axis once (at vertex)
+Negative discriminant = parabola doesn't touch x-axis
+
+**What's a repeated root?**
+
+When discriminant = 0, both solutions from the quadratic formula are the same number. This is called a repeated, double, or multiplicity-2 root.
+
+**Can the discriminant help me factor faster?**
+
+Yes. If it's not a perfect square, don't waste time trying to factor. Use the quadratic formula instead.
+
+**What if I get a very large discriminant?**
+
+That just means your two real solutions are far apart on the number line. The calculations work the same way.
+
+**How do complex roots appear in pairs?**
+
+When discriminant is negative, you always get conjugate pairs: a + bi and a - bi. They're reflections across the real axis.
+
+**What's the minimum value for the discriminant?**
+
+There's no minimum. Discriminant can be any real number: large positive, small positive, zero, small negative, or large negative.
+
+**Does the sign of a matter for the discriminant?**
+
+The sign of a affects the parabola's direction (opening up or down) but doesn't change the discriminant calculation itself. Both appear in the formula.
+
+**Additional Notes**
+
+The discriminant is one of the most efficient tools in algebra. With a single calculation, you know exactly what to expect when solving a quadratic equation. This saves enormous amounts of time and helps you choose the best solution method.
+
+In applied mathematics, the discriminant often answers "yes or no" questions: Will the projectile reach that height? Does the design have real solutions? Can this system achieve equilibrium? These practical interpretations matter more than the pure calculation.
+
+Understanding discriminants builds intuition for how equations and graphs connect. When you can look at ax² + bx + c and predict how the parabola behaves just from the coefficients, you're thinking like a mathematician.
+
+Practice with different equations to recognize patterns. Notice how changing coefficients affects the discriminant. This hands-on experience develops mathematical insight that goes far beyond memorizing formulas.
