@@ -1,0 +1,464 @@
+## Descartes' Rule of Signs Calculator: Predict Positive and Negative Roots
+
+## Table of Contents - Descartes' Rule of Signs
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Understanding Descartes' Rule of Signs](#understanding-descartes-rule-of-signs)
+- [How to Apply the Rule Manually](#how-to-apply-the-rule-manually)
+- [Real-World Applications](#real-world-applications)
+- [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Descartes' Rule of Signs
+
+Enter your polynomial in standard form, listing all terms from highest to lowest power. For example, x³ - 4x² + 5x - 2 or 2x⁴ + 3x³ - x² + 7x - 4.
+
+Click "Analyze" to see how many positive and negative real roots are possible. The calculator counts sign changes and tells you the possible numbers of positive roots, negative roots, and complex roots.
+
+The results show you all possibilities, explain where the sign changes occur, and help you understand what to expect when solving the polynomial.
+
+---
+
+## Understanding Descartes' Rule of Signs
+
+Descartes' Rule of Signs is a technique that predicts how many positive and negative real roots a polynomial equation has by looking at sign changes in the coefficients. It doesn't tell you what the roots are, but it tells you how many to expect.
+
+**The basic principle:**
+
+Count how many times the signs of consecutive coefficients change in the polynomial. The number of positive real roots is either equal to the number of sign changes or less than that by an even number.
+
+**Why this works:**
+
+The mathematical proof involves complex analysis, but the intuitive idea is that each sign change in coefficients creates an opportunity for the polynomial to cross the x-axis in the positive direction. Not every opportunity results in a crossing (sometimes the polynomial curves back), but crossings only happen at sign changes.
+
+**The "or less by an even number" part:**
+
+If you count 3 sign changes, you could have 3 positive roots or 1 positive root (3 minus 2). If you count 4 sign changes, you could have 4, 2, or 0 positive roots. The difference is always an even number because complex roots come in pairs.
+
+**For negative roots:**
+
+Replace x with -x in your polynomial, simplify, then count sign changes in that new polynomial. The number of negative real roots follows the same pattern.
+
+**What about complex roots?**
+
+The total number of roots equals the polynomial's degree. Subtract the real roots (positive plus negative) from the degree to find how many complex roots exist. Complex roots always come in conjugate pairs.
+
+**The power of the rule:**
+
+You can quickly determine possible root distributions without solving anything. This helps you know what to look for and whether your calculated answers make sense.
+
+---
+
+## How to Apply the Rule Manually
+
+Let me walk you through this with clear examples that show different scenarios.
+
+**Example 1: Simple polynomial**
+
+Analyze: x³ - 4x² + 5x - 2
+
+Step 1: Write out the polynomial in standard form
+x³ - 4x² + 5x - 2
+
+Step 2: Look at the signs of coefficients
++ (for x³)
+- (for x²)
++ (for x)
+- (for constant)
+
+Step 3: Count sign changes
++ to - (first change)
+- to + (second change)
++ to - (third change)
+
+Total: 3 sign changes
+
+Step 4: Determine possible positive roots
+3 sign changes means 3 or 1 positive real roots (3 minus 2 = 1)
+
+Step 5: Check for negative roots by substituting -x
+(-x)³ - 4(-x)² + 5(-x) - 2
+= -x³ - 4x² - 5x - 2
+
+Step 6: Count sign changes in f(-x)
+All negative coefficients: -, -, -, -
+No sign changes
+
+Conclusion: 0 negative real roots
+
+Step 7: Summary
+Positive roots: 3 or 1
+Negative roots: 0
+Complex roots: Since degree is 3, if there's 1 positive root, there are 2 complex roots. If 3 positive roots, there are 0 complex roots.
+
+**Example 2: Polynomial with missing terms**
+
+Analyze: x⁴ - 5x² + 4
+
+Step 1: Write with all powers (use 0 for missing terms)
+x⁴ + 0x³ - 5x² + 0x + 4
+
+Step 2: Look at signs
++ - + 4
+
+Step 3: Count sign changes for positive roots
++ to - (first change)
+- to + (second change)
+
+Total: 2 sign changes
+Possible positive roots: 2 or 0
+
+Step 4: Substitute -x
+(-x)⁴ - 5(-x)² + 4
+= x⁴ - 5x² + 4
+
+Step 5: Count sign changes for negative roots
+Same as original: 2 sign changes
+Possible negative roots: 2 or 0
+
+Step 6: Summary
+Degree is 4, so 4 roots total
+Positive roots: 2 or 0
+Negative roots: 2 or 0
+Possible distributions:
+- 2 positive, 2 negative, 0 complex
+- 2 positive, 0 negative, 2 complex
+- 0 positive, 2 negative, 2 complex
+- 0 positive, 0 negative, 4 complex
+
+**Example 3: Higher degree polynomial**
+
+Analyze: x⁵ - 3x⁴ + 2x³ + x² - 5x + 6
+
+Step 1: Identify signs
++ - + + - +
+
+Step 2: Count sign changes
++ to - (change 1)
+- to + (change 2)
++ to + (no change)
++ to - (change 3)
+- to + (change 4)
+
+Total: 4 sign changes
+Possible positive roots: 4, 2, or 0
+
+Step 3: Find f(-x)
+-x⁵ - 3x⁴ - 2x³ + x² + 5x + 6
+
+Step 4: Signs for f(-x)
+- - - + + +
+
+Step 5: Count sign changes
+- to - (no change)
+- to + (change 1)
++ to + (no change)
+
+Total: 1 sign change
+Negative roots: exactly 1
+
+Step 6: Summary
+Degree 5 means 5 roots total
+Positive roots: 4, 2, or 0
+Negative roots: 1
+Complex roots: fill the remainder
+
+Possible distributions:
+- 4 positive, 1 negative, 0 complex
+- 2 positive, 1 negative, 2 complex
+- 0 positive, 1 negative, 4 complex
+
+**Example 4: All positive coefficients**
+
+Analyze: x³ + 2x² + 3x + 4
+
+Step 1: All signs are positive
++ + + +
+
+Step 2: Count sign changes
+No changes at all
+
+Positive roots: 0
+
+Step 3: Find f(-x)
+-x³ + 2x² - 3x + 4
+
+Step 4: Count sign changes in f(-x)
+- + - +
+Three sign changes
+
+Negative roots: 3 or 1
+
+Step 5: Summary
+No positive roots
+3 or 1 negative roots
+Complex roots make up the difference
+
+**Example 5: Checking against known factors**
+
+Analyze: x³ - 7x + 6, which factors as (x - 1)(x - 2)(x + 3)
+
+We know the roots are 1, 2, -3 (two positive, one negative).
+
+Step 1: Count sign changes in x³ - 7x + 6
+Signs: + - +
+Changes: 2
+
+Descartes predicts: 2 or 0 positive roots ✓ (We have 2)
+
+Step 2: Find f(-x) = -x³ + 7x + 6
+Signs: - + +
+Changes: 1
+
+Descartes predicts: 1 negative root ✓ (We have -3)
+
+The rule works!
+
+**Key observation:**
+
+The rule gives you possibilities, not certainties. But when combined with other information (like the Rational Root Theorem), it narrows down what you're looking for significantly.
+
+---
+
+## Real-World Applications
+
+**Preliminary analysis before solving:**
+
+Before attempting to solve a complicated polynomial, Descartes' Rule tells you what kind of roots to expect. This saves time by indicating whether to look for real roots or expect complex solutions.
+
+**Verifying solutions:**
+
+After solving, you can check if your answer distribution matches what Descartes' Rule predicted. If you found 4 positive roots but the rule says maximum 2, you made an error.
+
+**Engineering feasibility studies:**
+
+When modeling physical systems with polynomials, negative values might be non-physical. Descartes' Rule quickly tells you if positive solutions exist before investing effort in solving.
+
+**Economics break-even analysis:**
+
+In business models where certain variables must be positive (you can't produce negative quantities), the rule helps determine if profitable solutions exist.
+
+**Chemistry equilibrium problems:**
+
+Chemical concentrations must be positive. Descartes' Rule indicates whether equilibrium equations have physically meaningful solutions.
+
+**Control system stability:**
+
+In control theory, the location of poles (roots of characteristic equations) determines stability. The rule provides quick insight into how many poles lie in different regions.
+
+**Optimization preliminary checks:**
+
+When optimization problems reduce to polynomial equations, Descartes' Rule indicates whether the problem has real solutions before attempting numerical methods.
+
+---
+
+## Common Mistakes and How to Avoid Them
+
+**Mistake 1: Forgetting to include zero coefficients**
+
+Wrong: For x⁴ - 5x² + 4, only counting signs of written terms
+
+Right: Rewrite as x⁴ + 0x³ - 5x² + 0x + 4 and include the signs of zero terms (treated as positive).
+
+Why it happens: We skip terms with zero coefficients when writing polynomials, but for sign counting, they matter because they maintain the sequence.
+
+**Mistake 2: Counting each sign independently instead of changes**
+
+Wrong: Counting three positive signs and two negative signs
+
+Right: Count transitions from + to - or - to +. The number of each sign doesn't matter, only the changes between consecutive terms.
+
+Why it happens: Misunderstanding what "sign changes" means. It's about consecutive terms switching signs.
+
+**Mistake 3: Forgetting the "even number" part**
+
+Wrong: Saying 5 sign changes means 5, 4, 3, 2, 1, or 0 positive roots
+
+Right: 5 sign changes means 5, 3, or 1 positive roots. You subtract by 2 each time, not by 1.
+
+Why it happens: Not remembering that complex roots come in pairs, so the reduction is always by an even number.
+
+**Mistake 4: Errors when substituting -x**
+
+Wrong: For x³ - 2x, writing f(-x) = -x³ - 2x
+
+Right: f(-x) = (-x)³ - 2(-x) = -x³ + 2x. Be careful with signs when odd and even powers interact.
+
+Why it happens: Sign errors when substituting negative values. Remember (-x)³ = -x³ but (-x)² = +x².
+
+**Mistake 5: Not accounting for all roots**
+
+Wrong: Finding 2 positive roots and 1 negative root for a degree 5 polynomial and thinking you're done
+
+Right: Degree 5 means 5 total roots. If you have 3 real roots, the other 2 must be complex conjugates.
+
+Why it happens: Forgetting that the polynomial degree determines total root count. Real plus complex always equals degree.
+
+**Mistake 6: Misinterpreting "or" as "and"**
+
+Wrong: Thinking a polynomial has 3 AND 1 positive roots simultaneously
+
+Right: It has either 3 OR 1 positive roots. These are different possibilities, not concurrent facts.
+
+Why it happens: Misreading the rule's statement. The rule gives possible counts, not certain counts.
+
+**Mistake 7: Applying the rule to factored form**
+
+Wrong: Counting sign changes in (x - 2)(x + 3)(x - 5)
+
+Right: First expand to standard form, then count signs. The rule only works on expanded polynomials.
+
+Why it happens: Trying to take a shortcut. Descartes' Rule requires standard polynomial form.
+
+---
+
+## Related Topics
+
+- [Rational Zeros Calculator](/calculator/mathematics/rational-zeros) - Find actual rational roots
+- [Cubic Equation Calculator](/calculator/mathematics/cubic-equation) - Solve third-degree equations
+- [Synthetic Division Calculator](/calculator/mathematics/synthetic-division) - Factor out known roots
+- [Complex Root Calculator](/calculator/mathematics/complex-root) - Find complex solutions
+
+---
+
+## How This Calculator Works
+
+**Step 1: Parse the polynomial**
+```
+Extract all coefficients in order
+Include zero coefficients for missing powers
+Determine polynomial degree
+```
+
+**Step 2: Count positive root possibilities**
+```
+Scan through coefficient list
+Compare each coefficient's sign to the next
+Increment counter when signs differ
+```
+
+**Step 3: Create f(-x)**
+```
+For each term ax^n:
+  If n is odd: coefficient becomes -a
+  If n is even: coefficient stays a
+Result is the polynomial with x replaced by -x
+```
+
+**Step 4: Count negative root possibilities**
+```
+Scan through f(-x) coefficients
+Count sign changes
+This gives possible negative roots
+```
+
+**Step 5: Calculate possible distributions**
+```
+For positive_changes:
+  positive_roots can be positive_changes, changes-2, changes-4, etc.
+For negative_changes:
+  negative_roots can be negative_changes, changes-2, changes-4, etc.
+```
+
+**Step 6: Determine complex root counts**
+```
+For each real root distribution:
+  complex_roots = degree - positive - negative
+  Verify complex_roots is even (must come in pairs)
+  Add to possibilities list
+```
+
+**Step 7: Display results**
+```
+Show all possible distributions
+Highlight sign change locations
+Explain reasoning for each possibility
+Provide degree and total root count
+```
+
+---
+
+## FAQs
+
+**What is Descartes' Rule of Signs?**
+
+A method to determine the possible number of positive and negative real roots of a polynomial by counting how many times the signs of consecutive coefficients change.
+
+**Does it tell me what the roots are?**
+
+No, it only tells you how many positive and negative real roots are possible. You still need other methods to find the actual root values.
+
+**What's a "sign change"?**
+
+When consecutive coefficients have opposite signs. Going from +3 to -5 is a sign change. Going from +3 to +7 is not.
+
+**Why do I subtract by even numbers?**
+
+Because complex roots always come in conjugate pairs. If you have fewer real roots than sign changes suggest, the missing roots are complex and come two at a time.
+
+**What if I have zero coefficients?**
+
+Include them in your sequence. Treat 0 as positive or use the sign of the previous non-zero coefficient. For x³ + 5, write it as x³ + 0x² + 0x + 5.
+
+**How do I find the number of negative roots?**
+
+Substitute -x for x throughout the polynomial, simplify, then count sign changes in that new polynomial.
+
+**Can the rule be wrong?**
+
+The rule itself is never wrong if applied correctly, but it gives possibilities, not certainties. It tells you the maximum possible and works down by 2.
+
+**What if there are no sign changes?**
+
+Zero sign changes means zero positive roots (or zero negative roots if you're checking f(-x)). The polynomial has no roots in that direction.
+
+**Does this work for all polynomials?**
+
+Yes, for any polynomial with real coefficients. It doesn't require the polynomial to be in any special form, just standard descending power order.
+
+**What if all coefficients are positive?**
+
+No sign changes means no positive roots. All real roots (if any) must be negative. Check f(-x) to see how many negative roots are possible.
+
+**Can I use this for complex coefficients?**
+
+No, Descartes' Rule assumes real coefficients. With complex coefficients, the concept of "positive" and "negative" roots becomes unclear.
+
+**How does this help me solve the polynomial?**
+
+It narrows down what you're looking for. If you know there's exactly 1 positive root, you can stop looking after finding it. It also helps verify your solutions.
+
+**What if my polynomial has repeated roots?**
+
+Repeated roots are counted according to their multiplicity. A root with multiplicity 2 counts as two roots for Descartes' Rule purposes.
+
+**Why is it called Descartes' Rule?**
+
+Named after René Descartes, the 17th-century French mathematician and philosopher who discovered this relationship between coefficient signs and root locations.
+
+**Does the degree of the polynomial matter?**
+
+The degree tells you how many total roots exist. Descartes' Rule helps you figure out how many are positive, negative, and complex.
+
+**Can a polynomial have all complex roots?**
+
+Only if it has even degree. Odd-degree polynomials must have at least one real root because they must cross the x-axis.
+
+**What's the relationship to the Rational Root Theorem?**
+
+They complement each other. Descartes' Rule tells you how many roots to expect in different categories, while the Rational Root Theorem gives you specific values to test.
+
+**How precise are the predictions?**
+
+Very precise for the maximum possible. The actual number is that maximum or lower by an even number. Combined with the polynomial degree, this narrows possibilities significantly.
+
+**Can I count from highest to lowest power or lowest to highest?**
+
+Always count in standard form (highest to lowest power). Counting the other direction will give incorrect results.
+
+**What if I get different numbers for positive and negative?**
+
+That's common and expected. Different polynomials have different distributions of positive versus negative roots. The rule captures this asymmetry.

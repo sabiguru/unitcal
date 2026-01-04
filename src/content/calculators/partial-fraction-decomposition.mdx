@@ -1,0 +1,339 @@
+## Partial Fraction Decomposition Calculator: Breaking Rational Functions Apart
+
+## Table of Contents - Partial Fraction Decomposition
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [What Is Partial Fraction Decomposition?](#what-is-partial-fraction-decomposition)
+- [How to Perform Partial Fraction Decomposition Manually](#how-to-perform-partial-fraction-decomposition-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Partial Fraction Decomposition
+
+Enter the numerator polynomial in the first input field using standard notation like "2x + 3" or "x² - 5".
+
+Enter the denominator polynomial in the second input field. Make sure it's factored if the calculator requires factored form, or the calculator will factor it for you.
+
+Click "Calculate" to see the decomposition. The output shows:
+- Individual partial fractions separated
+- Constants A, B, C, etc. calculated
+- The complete decomposition as a sum
+- Verification that the sum equals the original fraction
+
+For proper fractions only—numerator degree must be less than denominator degree. If improper, perform polynomial division first.
+
+---
+
+## What Is Partial Fraction Decomposition?
+
+Imagine you have a complicated fraction like 5x / [(x + 2)(x - 3)]. Partial fraction decomposition breaks this into simpler pieces: A/(x + 2) + B/(x - 3). It's like reverse addition of fractions.
+
+When you add fractions, you find a common denominator and combine. Decomposition reverses this: you start with the combined form and split it back into separate fractions with simpler denominators.
+
+**Why this matters:** Integration in calculus becomes much easier with simpler fractions. Inverse Laplace transforms in engineering require this technique. Solving differential equations often needs fractions broken apart.
+
+The key insight is that every rational function—a polynomial divided by a polynomial—can be expressed as a sum of simpler fractions whose denominators are factors of the original denominator.
+
+Understanding partial fractions gives you a powerful tool for simplifying complex rational expressions and solving problems that would otherwise be nearly impossible.
+
+---
+
+## How to Perform Partial Fraction Decomposition Manually
+
+**Step 1: Check if the fraction is proper.**
+
+A proper fraction has numerator degree less than denominator degree. If not, use polynomial division first.
+
+Example: (x³ + 2) / (x² - 1) is improper. Divide to get x + (x + 2)/(x² - 1), then decompose the remainder fraction.
+
+**Step 2: Factor the denominator completely.**
+
+Factor into linear factors (x + a) and irreducible quadratic factors (x² + bx + c that can't be factored further).
+
+Example: x³ - x = x(x - 1)(x + 1)
+
+**Step 3: Set up the decomposition form.**
+
+For each distinct linear factor (x - a), write A/(x - a).
+For repeated linear factors (x - a)ⁿ, write A₁/(x - a) + A₂/(x - a)² + ... + Aₙ/(x - a)ⁿ.
+For each irreducible quadratic (x² + bx + c), write (Ax + B)/(x² + bx + c).
+
+Example: 5x / [(x + 2)(x - 3)] becomes A/(x + 2) + B/(x - 3)
+
+**Step 4: Multiply both sides by the common denominator.**
+
+This eliminates all fractions, giving you a polynomial equation.
+
+Example: 5x = A(x - 3) + B(x + 2)
+
+**Step 5: Solve for the constants.**
+
+Method A (substitution): Substitute values of x that make factors zero.
+
+When x = 3: 5(3) = A(0) + B(5), so 15 = 5B, thus B = 3
+When x = -2: 5(-2) = A(-5) + B(0), so -10 = -5A, thus A = 2
+
+Method B (comparing coefficients): Expand and match coefficients of like powers.
+
+5x = A(x - 3) + B(x + 2) = Ax - 3A + Bx + 2B = (A + B)x + (-3A + 2B)
+
+Coefficients of x: 5 = A + B
+Constants: 0 = -3A + 2B
+
+Solve this system to get A = 2, B = 3.
+
+**Step 6: Write the final decomposition.**
+
+5x / [(x + 2)(x - 3)] = 2/(x + 2) + 3/(x - 3)
+
+**Example with repeated factors:**
+
+(3x + 5) / [(x - 1)²] = A/(x - 1) + B/(x - 1)²
+
+Multiply by (x - 1)²: 3x + 5 = A(x - 1) + B
+
+When x = 1: 3(1) + 5 = A(0) + B, so B = 8
+
+Expand: 3x + 5 = Ax - A + B
+Coefficient of x: 3 = A
+Constants: 5 = -A + B, which gives 5 = -3 + 8 = 5 (checks out)
+
+Result: (3x + 5) / [(x - 1)²] = 3/(x - 1) + 8/(x - 1)²
+
+**Example with irreducible quadratic:**
+
+(2x² + 3x + 4) / [(x + 1)(x² + 1)] = A/(x + 1) + (Bx + C)/(x² + 1)
+
+Multiply by (x + 1)(x² + 1): 2x² + 3x + 4 = A(x² + 1) + (Bx + C)(x + 1)
+
+When x = -1: 2(1) - 3 + 4 = A(2) + 0, so 3 = 2A, thus A = 3/2
+
+Expand right side: A(x² + 1) + (Bx + C)(x + 1) = Ax² + A + Bx² + Bx + Cx + C
+
+Collect: (A + B)x² + (B + C)x + (A + C)
+
+Match coefficients:
+x²: 2 = A + B, so 2 = 3/2 + B, thus B = 1/2
+x: 3 = B + C, so 3 = 1/2 + C, thus C = 5/2
+Constant: 4 = A + C = 3/2 + 5/2 = 4 (checks)
+
+Result: (2x² + 3x + 4) / [(x + 1)(x² + 1)] = (3/2)/(x + 1) + (x/2 + 5/2)/(x² + 1)
+
+---
+
+## Real-World Applications
+
+**Calculus integration.** The integral of 1/[(x - 1)(x + 2)] is difficult directly, but decomposing to A/(x - 1) + B/(x + 2) allows integration as A·ln|x - 1| + B·ln|x + 2| + C.
+
+**Laplace transforms.** Converting from s-domain back to time-domain in control systems and signal processing requires partial fractions. Transform F(s) = 1/[(s + 1)(s + 3)] into simpler terms for inverse transformation.
+
+**Electrical circuit analysis.** Transfer functions in frequency domain are rational functions. Decomposition helps analyze circuit behavior at different frequencies.
+
+**Differential equations.** Solving linear differential equations with the Laplace transform method relies on partial fraction decomposition to convert solutions back to the time domain.
+
+**Control theory.** System responses, stability analysis, and filter design all use partial fractions to understand how systems behave over time.
+
+**Signal processing.** Digital filters and frequency analysis break complex transfer functions into manageable pieces using this technique.
+
+---
+
+## Scenarios People Actually Run Into
+
+**Integrating a complicated rational function.** Your calculus homework has ∫(3x + 7)/[(x + 1)(x - 2)]dx. Direct integration is messy. Decompose first: 2/(x + 1) + 1/(x - 2). Now integrate each term separately.
+
+**Converting inverse Laplace transforms.** You solved a differential equation and got F(s) = (s + 5)/[s(s + 2)(s + 4)] in s-domain. To get back to time, decompose into A/s + B/(s + 2) + C/(s + 4), then inverse transform each piece.
+
+**Simplifying complex rational expressions.** You're combining multiple system components and end up with a messy rational function. Decomposing reveals the contribution of each component separately.
+
+**Verifying algebra results.** Someone gives you 1/(x² - 1) = 1/[2(x - 1)] - 1/[2(x + 1)]. Decompose yourself to verify: x² - 1 = (x - 1)(x + 1), set up A/(x - 1) + B/(x + 1), solve to confirm A = 1/2, B = -1/2.
+
+**Analyzing frequency responses.** Your electrical circuit has output/input ratio of 10/[(s + 1)(s² + 2s + 2)]. Decompose to understand behavior at different frequencies.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Factoring the denominator fully.** Some people stop at partial factorization. Factor completely into linear and irreducible quadratic factors, or the decomposition will be incomplete.
+
+**Choosing substitution versus coefficient matching.** Substitution is faster when factors let you choose x values that zero out terms. Coefficient matching is systematic but creates more equations to solve. Use substitution when possible.
+
+**Handling improper fractions.** If numerator degree is greater than or equal to denominator degree, polynomial division must come first. Skipping this makes the decomposition wrong.
+
+**Repeated factor complexity.** (x - a)³ requires three terms: A/(x - a) + B/(x - a)² + C/(x - a)³. People sometimes forget to include all powers up to the multiplicity.
+
+**Irreducible quadratics.** These need numerators of the form Ax + B, not just constants. Missing the linear term makes the system unsolvable.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Using wrong numerator for irreducible quadratics.** Writing A/(x² + 1) instead of (Ax + B)/(x² + 1). Irreducible quadratics always get linear numerators. Fix: check the degree—linear factors get constants, quadratics get linear numerators.
+
+**Not factoring the denominator completely.** Decomposing 1/(x² - 4) as A/(x² - 4) doesn't work. Factor to (x - 2)(x + 2) first, then decompose as A/(x - 2) + B/(x + 2).
+
+**Forgetting terms for repeated factors.** For (x + 1)², writing only A/(x + 1) misses B/(x + 1)². Include all powers from 1 to the multiplicity.
+
+**Making arithmetic errors when solving.** Substituting x = 2 but calculating wrong values leads to wrong constants. Double-check arithmetic at each substitution.
+
+**Setting up improper equation structure.** If you write A(x + 2) + B(x - 3) but don't multiply correctly, you'll get wrong coefficients. Expand carefully and verify by plugging values back in.
+
+**Skipping the verification step.** Always add your partial fractions back together and verify they equal the original. Catches errors immediately.
+
+---
+
+## Related Topics
+
+**Polynomial division.** Required first step when dealing with improper fractions before decomposition.
+
+**Factoring polynomials.** Essential skill for decomposition—you must factor the denominator completely.
+
+**Systems of linear equations.** Solving for constants A, B, C often creates systems that need solving.
+
+**Integration techniques.** Partial fractions make otherwise difficult integrals manageable.
+
+**Laplace transforms.** Both forward and inverse transforms rely heavily on partial fraction decomposition.
+
+**Complex numbers.** Some denominators factor into complex linear factors, extending the decomposition technique.
+
+---
+
+## How This Calculator Works
+
+**Input parsing:**
+```
+Numerator: Parse as polynomial with coefficients
+Denominator: Parse and factor into linear and quadratic factors
+```
+
+**Factorization algorithm:**
+```
+Find roots of denominator (real and complex)
+Group into linear factors (x - r) for real roots
+Group complex conjugate pairs into irreducible quadratics
+Identify multiplicities for repeated factors
+```
+
+**Setup decomposition form:**
+```
+For each distinct linear factor: add A/(x - r) term
+For repeated linear factor of multiplicity n: add n terms
+For each irreducible quadratic: add (Ax + B)/(quadratic) term
+```
+
+**Solve for constants:**
+```
+Multiply equation by common denominator
+Use strategic substitution method when possible
+Fall back to coefficient matching otherwise
+Solve resulting linear system
+```
+
+**Output:**
+```
+Display decomposition with calculated constants
+Show verification that sum equals original
+```
+
+---
+
+## FAQs
+
+**What is partial fraction decomposition?**
+
+Breaking a complicated rational function into a sum of simpler fractions. Like reverse-engineering the process of adding fractions together.
+
+**When do I need this technique?**
+
+Primarily in calculus for integration, and in engineering for inverse Laplace transforms. Also useful for simplifying complex rational expressions.
+
+**What is a proper fraction in this context?**
+
+A rational function where the numerator's degree is less than the denominator's degree. Example: x/(x² + 1) is proper, but x²/(x + 1) is not.
+
+**What do I do with improper fractions?**
+
+Perform polynomial long division first. The quotient stays separate, and you decompose only the remainder fraction.
+
+**How do I know what form to use?**
+
+Depends on denominator factors. Linear factors get constant numerators. Irreducible quadratics get linear numerators. Repeated factors need multiple terms.
+
+**What are irreducible quadratic factors?**
+
+Quadratics that can't be factored into real linear factors, like x² + 1 or x² + x + 1. Their discriminant is negative.
+
+**Why do repeated factors need multiple terms?**
+
+To match all possible partial fraction forms. (x - 2)³ could contribute to each of A/(x - 2), B/(x - 2)², and C/(x - 2)³.
+
+**Can I use this for any rational function?**
+
+Yes, as long as you can factor the denominator. Some high-degree polynomials are hard to factor by hand, though.
+
+**What's the substitution method?**
+
+Choosing x values that make certain factors zero, simplifying the equation to solve for one constant at a time. Fast and effective.
+
+**What's the coefficient matching method?**
+
+Expanding both sides and matching coefficients of like powers of x. Creates a system of equations. More work but always systematic.
+
+**How do I verify my answer?**
+
+Add the partial fractions back together using common denominator. If you get the original fraction, your decomposition is correct.
+
+**What if I get fractions for the constants?**
+
+Totally fine. A = 3/2 or B = -5/4 are valid results. Don't round—keep exact fractions.
+
+**Can the numerator be higher degree than denominator?**
+
+Not for direct decomposition. If it is, it's called improper—do polynomial division first, then decompose the remainder.
+
+**What about complex denominators?**
+
+If the denominator has complex factors, you can still decompose, but you'll work with complex numbers. Often kept as irreducible quadratics instead.
+
+**How do I handle three or more factors?**
+
+Same process, more terms. (x + 1)(x - 2)(x + 3) gives A/(x + 1) + B/(x - 2) + C/(x + 3). Set up and solve.
+
+**What if two factors are identical?**
+
+That's a repeated factor. Handle with multiple terms: (x - 1)² gives A/(x - 1) + B/(x - 1)².
+
+**Can I decompose without factoring?**
+
+No. The whole technique depends on knowing the factors. Factor first, always.
+
+**Why learn this if calculators can do it?**
+
+Understanding the process helps you recognize when to use it, verify results, and handle variations that calculators might not support directly.
+
+**What's the connection to integration?**
+
+Integrals of rational functions often can't be done directly. Partial fractions break them into integrals of 1/(x - a) form, which integrate to logarithms.
+
+**Can I decompose multivariable rational functions?**
+
+The standard technique works for one variable. Multivariate requires more advanced methods from multivariable calculus.
+
+**Additional Notes**
+
+Partial fraction decomposition is a reverse-engineering technique. You're undoing the process of adding fractions, which makes seemingly impossible problems manageable.
+
+The technique is algorithmic: factor, set up form, solve for constants, verify. Follow the steps methodically and you'll succeed every time.
+
+Practice factoring first. If you struggle with factoring polynomials, partial fraction decomposition will be harder. Build that foundation skill.
+
+Integration applications make this essential for calculus. Every time you see an integral with a factored denominator, think partial fractions.
+
+In engineering, this technique bridges frequency domain and time domain. Understanding it deeply helps with control systems, signal processing, and circuit analysis.
+
+Always verify your result. Adding the pieces back together takes seconds and confirms you didn't make algebraic errors along the way.

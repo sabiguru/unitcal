@@ -1,0 +1,309 @@
+## Resistor Calculator: Color Codes, Combinations, and Power
+
+## Table of Contents - Resistor
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Color Band Encoding](#the-core-principle-color-band-encoding)
+- [How to Read and Calculate Resistor Values](#how-to-read-and-calculate-resistor-values)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Resistor
+Select your Calculation Mode:
+- Decode Color Bands — Enter colors to find resistance value
+- Encode Value — Enter resistance to find color bands
+- Series/Parallel Combinations — Calculate combined resistance
+- Power Dissipation — Calculate power from voltage and current
+
+For color decoding, select each band color from the dropdown menus (4-band, 5-band, or 6-band).
+
+For combinations, enter individual resistor values and select series or parallel.
+
+For power calculation, enter any two of: voltage, current, resistance.
+
+Click "Calculate" to see results with detailed explanations.
+
+---
+
+## The Core Principle: Color Band Encoding
+
+Resistors use colored bands to encode their value, tolerance, and sometimes temperature coefficient.
+
+**Color code values:**
+- Black = 0
+- Brown = 1
+- Red = 2
+- Orange = 3
+- Yellow = 4
+- Green = 5
+- Blue = 6
+- Violet = 7
+- Grey = 8
+- White = 9
+
+**Multiplier bands:**
+- Black = ×1
+- Brown = ×10
+- Red = ×100
+- Orange = ×1,000
+- Yellow = ×10,000
+- Green = ×100,000
+- Blue = ×1,000,000
+- Gold = ×0.1
+- Silver = ×0.01
+
+**Tolerance bands:**
+- Brown = ±1%
+- Red = ±2%
+- Gold = ±5%
+- Silver = ±10%
+
+---
+
+## How to Read and Calculate Resistor Values
+
+**4-band resistor example:**
+Brown, Black, Red, Gold
+
+Band 1 (Brown) = 1
+Band 2 (Black) = 0
+Band 3 (Red) = ×100
+Band 4 (Gold) = ±5%
+
+Value = 10 × 100 = 1,000Ω (1kΩ) ±5%
+
+**5-band resistor example:**
+Brown, Black, Black, Brown, Brown
+
+Band 1 (Brown) = 1
+Band 2 (Black) = 0
+Band 3 (Black) = 0
+Band 4 (Brown) = ×10
+Band 5 (Brown) = ±1%
+
+Value = 100 × 10 = 1,000Ω (1kΩ) ±1%
+
+**Series combination:**
+R_total = R₁ + R₂ + R₃
+
+100Ω + 220Ω + 330Ω = 650Ω
+
+**Parallel combination:**
+1/R_total = 1/R₁ + 1/R₂
+
+For two resistors: R_total = (R₁ × R₂) / (R₁ + R₂)
+
+100Ω || 100Ω = 10,000 / 200 = 50Ω
+
+---
+
+## Real-World Applications
+
+**LED current limiting.** Calculate the resistor needed to limit current through an LED at a given supply voltage.
+
+**Voltage dividers.** Create specific voltages using two resistors in series, useful for sensor interfaces and references.
+
+**Creating non-standard values.** Combine standard values in series or parallel to achieve needed resistance.
+
+**Power rating selection.** Calculate power dissipation to select appropriate wattage resistor.
+
+**Unknown resistor identification.** Decode faded or unfamiliar color bands to determine value.
+
+**Circuit repair.** Identify failed resistors by their color code for accurate replacement.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The orientation confusion.** Which end is band 1? The tolerance band (gold/silver) is always last. Orient with tolerance on the right.
+
+**The 4-band versus 5-band question.** 4-band has wider spacing between band 3 and tolerance. 5-band has even spacing throughout.
+
+**The faded bands problem.** Old resistors have faded colors. When in doubt, measure with a multimeter.
+
+**The non-standard value need.** You need 750Ω but only have standard values. 680Ω + 68Ω in series = 748Ω (close enough for most applications).
+
+**The overheating resistor.** Calculated 0.24W but used a 0.25W resistor. It runs hot. Always derate—use at least 2× calculated power.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Power derating.** A 0.25W resistor should be used at 0.125W or less for reliability. Heat degrades components.
+
+**Tolerance impact.** A 1kΩ ±10% resistor could be 900Ω to 1,100Ω. For precision circuits, use 1% tolerance.
+
+**Carbon versus metal film.** Carbon composition is cheaper but noisier and less stable. Metal film is precise and low-noise.
+
+**Standard values only.** Resistors come in E12, E24, E48, E96 series. Not every value exists—design around available values.
+
+**Temperature coefficient.** Resistance changes with temperature. Critical applications need low-tempco resistors.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Reading bands backwards.** If the decoded value doesn't match expected, try reading from the other end.
+
+**Confusing similar colors.** Brown/red/orange and blue/violet/grey are commonly confused. Good lighting helps.
+
+**Ignoring tolerance.** A circuit that barely works with nominal values may fail when components are at tolerance extremes.
+
+**Calculating parallel wrong.** 100Ω || 100Ω = 50Ω, not 200Ω. Parallel resistance is always less than the smallest individual resistor.
+
+**Underrating power.** If your resistor smokes, it was overloaded. Recalculate power and upgrade the rating.
+
+---
+
+## Related Topics
+
+**Ohm's Law.** V = IR relates voltage, current, and resistance. Foundation of all resistor calculations.
+
+**Voltage dividers.** Two resistors creating a proportional output voltage: Vout = Vin × R2 / (R1 + R2).
+
+**SMD resistor codes.** Surface mount resistors use numeric codes (e.g., "103" = 10 × 10³ = 10kΩ).
+
+**Potentiometers.** Variable resistors that allow continuous adjustment within a range.
+
+**Thermistors.** Resistors with resistance that changes predictably with temperature, used for temperature sensing.
+
+---
+
+## How This Calculator Works
+
+**Color to value:**
+```
+value = (digit1 × 10 + digit2) × multiplier
+tolerance = toleranceBand percentage
+```
+
+**5-band variation:**
+```
+value = (digit1 × 100 + digit2 × 10 + digit3) × multiplier
+```
+
+**Series combination:**
+```
+R_total = R₁ + R₂ + R₃ + ...
+```
+
+**Parallel combination:**
+```
+1/R_total = 1/R₁ + 1/R₂ + 1/R₃ + ...
+R_total = 1 / (1/R₁ + 1/R₂ + ...)
+```
+
+**Power dissipation:**
+```
+P = V²/R = I²×R = V×I
+```
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**How do I know if it's a 4-band or 5-band resistor?**
+
+4-band has wider spacing between the multiplier and tolerance bands. 5-band has evenly spaced bands. The tolerance band is usually gold, silver, or brown.
+
+**Can this calculator handle 6-band resistors?**
+
+It decodes all 6 bands. The 6th band indicates temperature coefficient (how much resistance changes per degree).
+
+**Why does my resistor get hot?**
+
+It's dissipating power as heat. If hot to touch, it's likely near or exceeding its rating. Upgrade to a higher wattage resistor.
+
+**What if I don't know voltage or current?**
+
+Use Ohm's Law. If you know any two of V, I, R, you can calculate the third. Measure with a multimeter if needed.
+
+**Is the parallel formula accurate for many resistors?**
+
+Yes—the calculator uses the full reciprocal sum for any number of resistors. The two-resistor shortcut is just convenient.
+
+**Can I use this for SMD resistors?**
+
+No—SMD uses numeric codes, not color bands. A "103" SMD resistor is 10 × 10³ = 10kΩ.
+
+**How accurate is color decoding?**
+
+Follows the standard EIA color code exactly. Faded or ambiguous bands are the main error source—verify critical resistors with a multimeter.
+
+**What's the difference between carbon and metal film?**
+
+Carbon film is cheaper but noisier with wider tolerance. Metal film is precise, stable, and low-noise—preferred for most applications.
+
+**How do I calculate the right resistor for an LED?**
+
+Use Ohm's Law: R = (V_supply - V_forward) / I_desired. Check the LED datasheet for forward voltage and recommended current. Use the next higher standard resistor value.
+
+**What are standard resistor values?**
+
+Resistors come in standard series: E12 (12 values per decade), E24 (24 values), E48, E96. Common E12 values: 10, 12, 15, 18, 22, 27, 33, 39, 47, 56, 68, 82.
+
+**How do I read SMD resistor codes?**
+
+SMD uses numeric codes: "103" = 10 × 10³ = 10kΩ. First two digits are significant; third is the multiplier. "R" indicates decimal: "4R7" = 4.7Ω.
+
+**What's the temperature coefficient (6th band)?**
+
+The 6th band on precision resistors indicates how much resistance changes per degree Celsius. Brown = 100 ppm/°C, red = 50 ppm/°C.
+
+**How do I combine resistors for non-standard values?**
+
+Use series for higher values (two 470Ω in series = 940Ω). Use parallel for lower values (two 470Ω in parallel = 235Ω). Combine methods for precise targets.
+
+**What causes resistors to fail?**
+
+Overheating (exceeding power rating), voltage spikes, physical damage, and age/environmental exposure. Always derate power and protect against transients.
+
+**How do I calculate voltage drop across a resistor?**
+
+V = I × R. If 100mA flows through a 47Ω resistor: V = 0.1 × 47 = 4.7V dropped across the resistor.
+
+**What is a pull-up or pull-down resistor?**
+
+Resistors that ensure a defined logic state when a switch or input is inactive. Pull-up connects to positive supply; pull-down connects to ground. Typical values: 1kΩ to 10kΩ.
+
+**How do I measure resistance in a circuit?**
+
+Disconnect power, isolate the component from parallel paths, set multimeter to resistance mode, and measure. In-circuit measurements can be affected by other components.
+
+**What's a precision resistor?**
+
+Resistors with very tight tolerance (0.1%, 0.01%) and low temperature coefficient. Used in measurement circuits, references, and precision analog applications.
+
+**How do I select resistors for audio circuits?**
+
+Use metal film for low noise. Match tolerance for balanced circuits. Consider 1% or better tolerance for critical filter and gain-setting applications.
+
+**Additional Notes**
+
+Resistors are fundamental components in every electronic circuit. Understanding color codes, power ratings, and combination calculations enables you to design, build, and troubleshoot circuits effectively. Always verify critical resistors with a multimeter, and remember that power derating is essential for reliable long-term operation.
+
+Building a collection of common values (10Ω to 1MΩ in the E12 or E24 series) enables most projects. Metal film resistors offer better precision and stability than carbon for most applications.
+
+**Practical Tips for Success**
+
+Label your resistor storage by value for easy retrieval. Use good lighting when reading color bands—LED light is better than incandescent. Test components before installation in critical circuits. For prototyping, adjustable resistors (potentiometers) allow fine-tuning. Document your designs so you can rebuild or repair them later.
+
+**Understanding Circuit Context**
+
+Resistors behave differently in different circuits. In voltage dividers, tolerance affects output accuracy. In current limiting, power dissipation is the primary concern. In timing circuits, stability matters most. In audio, noise characteristics are important. Consider what role the resistor plays when selecting type and specifications. The cheapest component isn't always the best choice for your application.
+
+Resistors may seem simple, but proper selection and application are essential for reliable circuits. Master the basics—color codes, power ratings, combinations—and you'll have the foundation for any electronics project. Always verify, always derate, and always consider the circuit context.
+Electronics projects succeed when every component is properly selected. Use this calculator to identify, combine, and specify resistors for your circuits.
+Take time to understand resistor specifications and your circuit requirements. The right component selection prevents problems and ensures reliable operation.
+Quality components and careful selection make all the difference in electronics projects.
+Proper component selection is the foundation of reliable electronics.
+Good components make good circuits work reliably.
+The right resistor in the right circuit ensures reliable, long-lasting operation.

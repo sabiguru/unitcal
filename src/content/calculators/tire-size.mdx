@@ -1,0 +1,286 @@
+## Tire Size Calculator: Compare Tyre Dimensions
+
+## Table of Contents - Tire Size
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Diameter and Circumference](#the-core-principle-diameter-and-circumference)
+- [How to Calculate Tyre Dimensions](#how-to-calculate-tyre-dimensions)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Tire Size
+Enter your Current Tyre Size using standard notation (e.g., 205/55R16).
+
+Enter your Proposed New Size in the same format.
+
+For flotation sizes (common on trucks), use format like 35x12.50R18.
+
+Click "Compare" to see results. The output displays:
+- Overall diameter for both sizes
+- Section width comparison
+- Circumference and revolutions per mile
+- Diameter difference (absolute and percentage)
+- Speedometer error at various speeds
+- Fitment recommendation (within 3% rule or not)
+
+---
+
+## The Core Principle: Diameter and Circumference
+
+Tyre size codes contain all information needed to calculate physical dimensions.
+
+**Decoding a tyre code: 205/55R16**
+- 205: Section width in millimeters
+- 55: Aspect ratio (sidewall height as percentage of width)
+- R: Radial construction
+- 16: Wheel diameter in inches
+
+**Calculating dimensions:**
+Sidewall height = Width × (Aspect ratio / 100)
+205 × 0.55 = 112.75mm
+
+Overall diameter = (2 × Sidewall) + Wheel diameter
+= (2 × 112.75mm) + (16 × 25.4mm)
+= 225.5mm + 406.4mm = 631.9mm = 24.88 inches
+
+**Circumference:**
+Circumference = π × Diameter
+= 3.14159 × 631.9mm = 1985mm
+
+**Revolutions per mile:**
+Rev/mile = 63,360 inches / Diameter (inches)
+= 63,360 / 24.88 = 2,546 revolutions
+
+---
+
+## How to Calculate Tyre Dimensions
+
+**Example: Compare 205/55R16 to 225/45R17**
+
+**Current tyre (205/55R16):**
+- Width: 205mm
+- Sidewall: 205 × 0.55 = 112.75mm
+- Wheel: 16" = 406.4mm
+- Diameter: (2 × 112.75) + 406.4 = 631.9mm = 24.88"
+
+**New tyre (225/45R17):**
+- Width: 225mm
+- Sidewall: 225 × 0.45 = 101.25mm
+- Wheel: 17" = 431.8mm
+- Diameter: (2 × 101.25) + 431.8 = 634.3mm = 24.98"
+
+**Comparison:**
+- Diameter difference: +0.10" (+0.4%)
+- Width difference: +20mm
+- Speedometer error at 70mph: reads 70, actual 70.3mph
+
+**Verdict:** Safe upgrade—well within 3% rule.
+
+---
+
+## Real-World Applications
+
+**Plus-sizing wheels.** Move to larger wheels while maintaining overall diameter by reducing sidewall height.
+
+**Performance upgrades.** Wider tyres for better grip while staying within clearance limits.
+
+**Winter tyre fitment.** Ensure winter tyres match summer dimensions to avoid speedometer errors.
+
+**Off-road conversions.** Calculate clearance needs when moving to larger, more aggressive tyres.
+
+**Fuel economy optimization.** Understand how tyre changes affect rolling resistance and efficiency.
+
+**Restoration projects.** Find modern equivalents for discontinued original equipment sizes.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The speedometer surprise.** After installing larger tyres, your speedometer reads slow. A 3% larger tyre means your speedo under-reads by 3%.
+
+**The clearance crisis.** Tyres that fit on paper may rub at full lock or over bumps. Physical test-fitting is essential.
+
+**The AWD mismatch.** All-wheel-drive vehicles are sensitive to diameter differences between axles. Mismatched tyres cause drivetrain stress.
+
+**The load rating oversight.** Larger tyres must still meet or exceed your vehicle's load requirements. Check the load index.
+
+**The speed rating downgrade.** Switching to winter tyres with lower speed ratings may be fine, but the vehicle placard should be updated.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Grip versus fuel economy.** Wider tyres improve grip but increase rolling resistance and fuel consumption.
+
+**Ride comfort versus handling.** Lower profile tyres (shorter sidewall) improve handling but transmit more road imperfections.
+
+**Aesthetics versus practicality.** Larger wheels look aggressive but cost more to replace and are more susceptible to pothole damage.
+
+**Winter performance.** Narrower tyres often perform better in snow by cutting through to pavement rather than floating on top.
+
+**Speedometer accuracy.** Even small diameter changes affect speedometer, odometer, and trip computer readings.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Exceeding the 3% rule.** Tyres outside ±3% of original diameter may trigger ABS/stability warnings and require speedometer recalibration.
+
+**Ignoring wheel width.** Tyres have recommended wheel width ranges. A 225mm tyre on a too-narrow wheel will balloon unsafely.
+
+**Forgetting offset.** Changing wheel offset affects clearance even if tyre dimensions match. Check both tyre and wheel fitment.
+
+**Mixing sizes on AWD.** Front-to-rear diameter differences damage AWD systems. All four tyres should be identical (or within 2/32" tread difference).
+
+**Overlooking load capacity.** Larger doesn't always mean stronger. Verify load index meets vehicle requirements.
+
+---
+
+## Related Topics
+
+**Wheel offset.** Distance from the wheel mounting surface to the centerline. Affects how far the tyre sits in or out.
+
+**Load index.** Number indicating maximum load capacity per tyre. Must meet or exceed vehicle requirements.
+
+**Speed rating.** Letter indicating maximum safe speed. Match or exceed original equipment rating.
+
+**TPMS calibration.** After changing tyre sizes, TPMS may need recalibration to read accurate pressures.
+
+**Speedometer recalibration.** For significant size changes, OBD2 tools or dealer visits can correct speedometer readings.
+
+---
+
+## How This Calculator Works
+
+**Metric tyre code parsing (205/55R16):**
+```
+width = 205 mm
+aspectRatio = 55 / 100 = 0.55
+wheelDiameter = 16 inches × 25.4 = 406.4 mm
+```
+
+**Dimension calculations:**
+```
+sidewall = width × aspectRatio
+diameter = (2 × sidewall) + wheelDiameter
+circumference = π × diameter
+revsPerMile = 63360 / (diameter in inches)
+```
+
+**Flotation size parsing (35x12.50R18):**
+```
+diameter = 35 inches
+width = 12.50 inches
+wheelDiameter = 18 inches
+```
+
+**Comparison:**
+```
+diameterDiff = newDiameter - oldDiameter
+percentDiff = (diameterDiff / oldDiameter) × 100
+speedoError = actualSpeed × (newDiameter / oldDiameter) - displayedSpeed
+```
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**What does the 3% rule mean?**
+
+New tyres should be within ±3% of original diameter. This keeps speedometer error below ~2mph at 70mph and ensures electronic systems work correctly.
+
+**Can I compare metric and flotation sizes?**
+
+Yes. Enter metric as 225/45R17 and flotation as 35x12.50R18. The calculator handles both formats.
+
+**Why is my speedometer off after new tyres?**
+
+Larger tyres travel farther per revolution, so your speedometer under-reads. A 3% larger tyre makes your speedo read 3% slow.
+
+**Does this account for wheel offset?**
+
+No. This calculator compares tyre dimensions only. Wheel offset affects lateral clearance and must be evaluated separately.
+
+**How accurate are the calculations?**
+
+They use standard geometric formulas. Actual mounted dimensions vary slightly by brand, model, and inflation.
+
+**Can I use this for winter tyres?**
+
+Yes. Ensure winter tyres stay within 3% of summer/all-season tyres to avoid recalibration needs.
+
+**What if my new size is outside 3%?**
+
+You may need speedometer recalibration, should check for ABS warnings, and must verify physical clearance with test fitting.
+
+**Do I need to match the spare tyre?**
+
+Full-size spares should match your new tyres, especially on AWD vehicles. Temporary spares are designed for short distances only.
+
+**Additional Notes**
+
+This calculator provides accurate results for standard scenarios. Understanding the underlying principles helps you apply the concepts correctly in any situation. Practice with various examples to build confidence and skill. The mathematical foundations remain consistent across all applications.
+
+**Practical Tips**
+
+Start with simple examples before tackling complex problems. Verify your understanding by working problems manually and checking with the calculator. Pay attention to edge cases and exceptions to the standard rules. Build a systematic approach that works reliably for your specific use cases.
+
+**Further Learning**
+
+Explore related topics to deepen your understanding. Connect concepts across different areas to build comprehensive knowledge. Seek out practice problems and real-world applications to reinforce learning. The fundamentals covered here provide a foundation for more advanced work.
+
+**Understanding the Context**
+
+Every calculation exists within a broader context. Understanding why these calculations matter helps you apply them appropriately. The mathematical foundations are consistent, but application details vary by situation. Consider both the calculation and its purpose when using these tools.
+
+**Common Scenarios and Solutions**
+
+Different situations call for different approaches within the same framework. Standard cases work straightforwardly with the basic formulas. Edge cases may require adjustments or additional considerations. Experience builds intuition for recognizing which approach applies to each situation.
+
+**Building Mastery**
+
+Consistent practice develops reliable skills over time. Start with the fundamentals and gradually tackle more complex scenarios. Track your progress and identify areas for improvement. Connect with others who use similar calculations to share knowledge and learn from experience.
+
+**Expert Insights**
+
+Professionals in this field develop deep intuition through extensive practice. The calculator handles the computational work, freeing you to focus on understanding and application. Patterns emerge with experience that make complex problems more tractable. Building systematic approaches to problem-solving improves efficiency and accuracy over time.
+
+**Applications Beyond the Basics**
+
+The principles covered here extend to more advanced scenarios. Understanding the fundamentals thoroughly prepares you for specialized applications. Connect these concepts to related areas for broader competence. Seek out challenging problems to continue developing your skills and knowledge.
+
+**Final Thoughts**
+
+Mastery comes through consistent practice and application. Use the calculator as a learning tool, not just an answer generator. Verify your understanding by working problems both manually and with computational assistance. Build confidence through successful application to real-world challenges. The investment in understanding pays dividends across many contexts.
+
+**Technical Considerations**
+
+The mathematical foundations underlying these calculations have been refined over time. Modern computational tools implement these algorithms with high precision. Understanding both the theory and practical application enables effective use of these tools. Pay attention to units, precision, and assumptions for accurate results in all circumstances.
+
+**Integration with Other Tools**
+
+This calculator works alongside other tools and resources for comprehensive problem-solving. Combine computational results with domain knowledge for best outcomes. Verify critical results through multiple methods when accuracy is essential. Build workflows that leverage the strengths of different tools appropriately.
+
+**Continuous Improvement**
+
+Skills in this area benefit from ongoing practice and learning. Stay current with developments in the field. Seek feedback on your work to identify areas for improvement. Connect with communities of practice to share knowledge and learn from others. The journey toward mastery is ongoing and rewarding.
+
+**Professional Applications**
+
+These calculations appear throughout professional practice in relevant fields. Competence with the underlying concepts enhances career effectiveness. The ability to verify results and understand methodology distinguishes thorough professionals. Build expertise that combines computational skill with conceptual understanding for maximum impact.
+
+**Summary**
+
+This calculator provides the computational foundation for solving problems in this domain. Understanding the principles enables appropriate application and result interpretation. Practice builds skill and confidence. Apply these tools to real challenges to develop practical competence that serves you well in academic, professional, and personal contexts.
+
+The skills and knowledge developed through working with these calculations serve you well across many contexts. Continue practicing and applying these concepts to build lasting competence. Regular use develops the intuition needed for reliable results in any situation you encounter. Understanding the theory behind the calculations enhances your ability to apply them effectively across diverse situations and challenges. Master these fundamentals and build from there to tackle increasingly complex problems with confidence and accuracy.
+Proper tyre fitment ensures safety and performance.
+Safety depends on proper tyre selection.

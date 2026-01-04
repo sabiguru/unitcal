@@ -1,0 +1,270 @@
+## Graphing Calculator: Plot and Analyze Mathematical Functions
+
+## Table of Contents - Graphing
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Visualizing Functions](#the-core-principle-visualizing-functions)
+- [How Functions Translate to Graphs](#how-functions-translate-to-graphs)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Graphing
+Enter your equation in standard mathematical notation. Use "x" as the variable. Supported operations:
+- Basic: +, -, *, / (or ×, ÷)
+- Powers: ^ (e.g., x^2 for x squared)
+- Roots: sqrt(x) for square root
+- Trigonometric: sin(x), cos(x), tan(x)
+- Logarithmic: log(x) for log base 10, ln(x) for natural log
+- Constants: pi, e
+
+Set the viewing window using the X Min, X Max, Y Min, and Y Max fields. The default window is -10 to 10 for both axes.
+
+Click "Graph" to plot the function on the coordinate plane.
+
+Features include:
+- Interactive canvas for panning and zooming
+- Grid lines with labeled axes
+- Multiple functions (up to 5) with different colors
+- Tracing to see coordinates at any point
+- Finding intercepts, maxima, and minima
+
+A "Clear" button removes all plotted functions.
+
+---
+
+## The Core Principle: Visualizing Functions
+
+A function maps each input (x) to exactly one output (y). Graphing plots these input-output pairs as points (x, y) on a coordinate plane, revealing the function's behavior visually.
+
+The graph shows:
+- **Shape:** Linear functions are straight lines; quadratics are parabolas; sine waves oscillate
+- **Intercepts:** Where the graph crosses the x-axis (roots) and y-axis
+- **Slope/rate of change:** Steeper curves indicate faster change
+- **Extrema:** Maximum and minimum points
+- **Asymptotes:** Lines the graph approaches but never reaches
+- **Domain issues:** Gaps where the function is undefined
+
+Visualizing functions builds intuition that algebraic manipulation alone can't provide. Seeing x² versus x³ reveals their fundamentally different behaviors more clearly than any equation.
+
+---
+
+## How Functions Translate to Graphs
+
+**Linear functions (y = mx + b):**
+Straight lines. m is the slope (steepness), b is the y-intercept (where it crosses y-axis).
+- y = 2x + 1: rises 2 units for every 1 unit right, crosses y-axis at 1
+
+**Quadratic functions (y = ax² + bx + c):**
+Parabolas. a determines direction (positive opens up, negative opens down) and width.
+- y = x²: U-shaped, vertex at origin
+- y = -x² + 4: opens downward, vertex at (0, 4)
+
+**Polynomial functions:**
+Smooth curves with multiple bumps. Degree determines maximum number of turns.
+- y = x³ - x: cubic with one "S" bend
+
+**Trigonometric functions:**
+Periodic waves. sin(x) and cos(x) oscillate between -1 and 1 with period 2π.
+- y = sin(x): starts at origin, peaks at π/2
+
+**Exponential functions:**
+Rapid growth or decay. y = e^x grows faster than any polynomial.
+- y = 2^x: doubles for each unit increase in x
+
+**Logarithmic functions:**
+Inverse of exponentials. Slow growth, undefined for x ≤ 0.
+- y = log(x): passes through (1, 0), (10, 1), (100, 2)
+
+---
+
+## Real-World Applications
+
+**Physics modeling.** Projectile motion follows a parabola: h = -16t² + v₀t + h₀. Graphing shows maximum height and time of flight.
+
+**Economics analysis.** Supply and demand curves intersect at equilibrium price. Graphing both reveals the equilibrium point visually.
+
+**Engineering design.** Signal processing uses sine waves and their combinations. Graphing helps visualize frequency components.
+
+**Data fitting.** Plotting data points and fitting curves (linear, exponential, polynomial) reveals relationships and enables prediction.
+
+**Teaching and learning.** Seeing how changing parameters affects graphs builds intuition. Move the "a" in y = ax² and watch the parabola widen or narrow.
+
+---
+
+## Scenarios People Actually Run Into
+
+**Finding intersection points.** You need to solve x² = 2x + 3. Graph both y = x² and y = 2x + 3; intersection points are solutions. Visually: x ≈ -1 and x ≈ 3.
+
+**Understanding asymptotic behavior.** Graph y = 1/x to see how it approaches but never touches the x and y axes. The visual makes the algebraic concept concrete.
+
+**Identifying function type.** Given data points, does this fit a line, parabola, or exponential? Graphing reveals the pattern visually before you attempt fitting.
+
+**Debugging equations.** Your physics formula gives unexpected results. Graphing it reveals a sign error—the parabola opens the wrong way.
+
+**Exploring transformations.** How does y = sin(2x) differ from y = sin(x)? Graph both: the 2x compresses horizontally, doubling the frequency.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Window selection.** The default -10 to 10 window hides behavior outside that range. y = x³ - 100x looks boring until you widen to see its full behavior.
+
+**Resolution versus speed.** More plotted points create smoother curves but slow rendering. For exploration, lower resolution is fine; for publication, use high resolution.
+
+**Multiple functions readability.** Two functions are easy to compare. Five functions with similar shapes become confusing. Be selective.
+
+**Accuracy at intersections.** Graphs show approximate intersections. For precise values, use algebraic methods or the calculator's root-finding features.
+
+**Scale distortion.** Unequal x and y scales distort shapes. A circle looks like an ellipse if scales don't match. Check scale when shape matters.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Syntax errors.** Writing "2x" instead of "2*x" or using parentheses incorrectly. Most graphing tools require explicit multiplication.
+
+**Wrong domain view.** Graphing y = log(x) with x from -10 to 10 shows nothing for negative x (log is undefined). Adjust x range to positive values.
+
+**Missing detail.** y = sin(100x) oscillates rapidly. In a wide window, it looks like a solid band. Zoom in to see individual waves.
+
+**Forgetting order of operations.** sin(x)^2 and sin(x^2) are very different functions. Use parentheses to clarify intent.
+
+**Confusing similar functions.** y = 2^x (exponential) looks superficially like y = x^2 (quadratic) for small positive x. Extend the window to see their different behaviors.
+
+---
+
+## Related Topics
+
+**Derivatives and tangent lines.** The derivative gives the slope at any point. Graphing f(x) and its derivative f'(x) together shows rate of change.
+
+**Integrals and area.** The integral represents area under the curve. Visualization helps understand accumulation concepts.
+
+**Parametric equations.** Plotting x(t) and y(t) as t varies. Creates curves not expressible as y = f(x), like circles and spirals.
+
+**Polar coordinates.** Plotting r(θ) where radius varies with angle. Creates roses, spirals, and other patterns.
+
+**3D graphing.** Plotting z = f(x, y) as surfaces. Extends 2D graphing to visualize functions of two variables.
+
+---
+
+## How This Calculator Works
+
+**Function parsing:**
+The calculator converts mathematical notation to JavaScript:
+```
+x^2 → Math.pow(x, 2) or x**2
+sin(x) → Math.sin(x)
+sqrt(x) → Math.sqrt(x)
+log(x) → Math.log10(x)
+ln(x) → Math.log(x)
+pi → Math.PI
+e → Math.E
+```
+
+**Point generation:**
+For the visible x range, calculate y at many x values:
+```
+for (x = xMin; x &lt;= xMax; x += step) {
+  y = evaluate(expression, x)
+  if (isFinite(y)) plot(x, y)
+}
+```
+
+Step size determines resolution (typically 1000+ points for smooth curves).
+
+**Coordinate transformation:**
+Screen coordinates differ from graph coordinates:
+```
+screenX = (graphX - xMin) × width / (xMax - xMin)
+screenY = height - (graphY - yMin) × height / (yMax - yMin)
+```
+
+**Grid and axes:**
+Draw grid lines at integer intervals, with axes highlighted at x=0 and y=0.
+
+**Multiple functions:**
+Each function is plotted in a different color, evaluated and drawn independently.
+
+All calculations happen locally in your browser using the HTML5 Canvas element.
+
+---
+
+## FAQs
+
+**What functions can I graph?**
+
+Polynomials, trigonometric functions (sin, cos, tan), exponential functions, logarithms, square roots, and combinations of these using standard operations.
+
+**How do I graph multiple functions?**
+
+Enter each function separately. The calculator assigns different colors to each function for distinction.
+
+**Why is my function not displaying?**
+
+Check for syntax errors, ensure the function is defined in your viewing window, and verify there are no division by zero or other undefined operations in that range.
+
+**How do I find where functions intersect?**
+
+Graph both functions. Visually identify intersection points. For precise values, use the tracing feature or algebraically solve f(x) = g(x).
+
+**Can I save my graph?**
+
+Many web-based graphing calculators allow exporting the canvas as an image. Look for a "download" or "save" option.
+
+**How do I graph implicit functions like x² + y² = 1?**
+
+This calculator handles explicit functions y = f(x). For implicit functions, solve for y first: y = ±√(1 - x²) and graph both branches.
+
+**Why does my circle look like an ellipse?**
+
+Unequal x and y scales distort shapes. Ensure xMax - xMin equals yMax - yMin for equal scaling, or use square aspect ratio.
+
+**How do I input absolute value?**
+
+Use abs(x) for absolute value, |x| may not be recognized. For piecewise functions, some calculators require special syntax.
+
+**What does it mean when a graph has asymptotes?**
+
+Asymptotes are lines the graph approaches but never touches. Vertical asymptotes occur where the function is undefined (like x = 0 for 1/x). Horizontal asymptotes show behavior as x approaches infinity.
+
+**How do I graph transformations of functions?**
+
+For y = f(x - h) + k, the graph shifts h units right and k units up. For y = a × f(x), the graph stretches vertically by factor a. These patterns apply to any function.
+
+**Can I graph inequalities?**
+
+Basic graphing calculators show functions, not shaded regions. To visualize y > x², graph y = x² and mentally shade above it. Some advanced tools support inequality shading.
+
+**How do I find the derivative or integral graphically?**
+
+Graph the function, then use analysis tools. The derivative at a point is the slope of the tangent line. The integral over an interval is the area between the curve and x-axis.
+
+**What's the difference between continuous and discrete graphs?**
+
+Continuous functions can be drawn without lifting your pen—smooth curves. Discrete functions have individual points (like sequences). Most graphing calculators handle continuous functions; discrete plots need special modes.
+
+**How do I visualize systems of equations?**
+
+Graph both equations. Intersection points are solutions. For 2D linear systems, two lines intersect at one point (unique solution), are parallel (no solution), or are identical (infinite solutions).
+
+**What causes "jumps" or "holes" in graphs?**
+
+Jumps occur at discontinuities where the function has different left and right limits. Holes occur where the function is undefined at a single point (like (x²-1)/(x-1) at x=1). The calculator may or may not display these correctly.
+
+**How do I use graphing to check my algebra?**
+
+Graph both sides of an equation separately. The x-coordinates where the graphs intersect are solutions. If your algebraic solution doesn't match intersection points, you've made an error somewhere.
+
+**What is the relationship between a function and its inverse graphically?**
+
+A function and its inverse are reflections of each other across the line y = x. If (a, b) is on the original function, (b, a) is on the inverse. Graph both to visualize this symmetry.
+
+**How do I interpret asymptotic behavior?**
+
+Vertical asymptotes show where the function is undefined (values to avoid). Horizontal asymptotes show the function's limiting behavior as x approaches infinity. Oblique asymptotes indicate the function approaches a line (not horizontal) at extreme x values.

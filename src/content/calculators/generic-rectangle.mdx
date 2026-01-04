@@ -1,0 +1,516 @@
+## Generic Rectangle Calculator: Visualize Multiplication Using Area Models
+
+## Table of Contents - Generic Rectangle
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Understanding the Generic Rectangle Method](#understanding-the-generic-rectangle-method)
+- [How to Use Generic Rectangles Manually](#how-to-use-generic-rectangles-manually)
+- [Real-World Applications](#real-world-applications)
+- [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Generic Rectangle
+
+Enter two expressions you want to multiply. For example, (2x + 3)(x + 5) or (3a - 2)(4a + 1). The expressions can be binomials, trinomials, or polynomials.
+
+Click "Calculate" to see the area model visualization. The calculator draws a rectangle divided into sections, with each section representing a product of terms.
+
+The results show the rectangle diagram, all individual area calculations, the sum of areas, and the final simplified polynomial.
+
+---
+
+## Understanding the Generic Rectangle Method
+
+The generic rectangle (also called the area model or box method) is a visual approach to multiplying polynomials. You draw a rectangle and divide it into cells based on the terms you're multiplying.
+
+**The fundamental idea:**
+
+When you multiply (a + b)(c + d), you're finding the area of a rectangle with dimensions (a + b) by (c + d). Breaking the rectangle into smaller pieces makes the multiplication visible and understandable.
+
+**Why it works:**
+
+Area is multiplicative. The total area of the big rectangle equals the sum of the areas of the smaller rectangles inside. This geometric interpretation makes abstract algebra concrete.
+
+**Visual organization:**
+
+Place one expression along the top edge and the other along the left edge. Draw lines to create a grid. Each cell's area is the product of its row header and column header. Add all cells to get the final answer.
+
+**Connection to FOIL:**
+
+For binomials, the generic rectangle has four cells, corresponding exactly to First, Outer, Inner, Last. The rectangle makes it clear why FOIL works and extends naturally to larger polynomials.
+
+**Advantage over FOIL:**
+
+FOIL only works for two binomials. The generic rectangle works for any polynomial multiplication: trinomial times binomial, trinomial times trinomial, or any combination.
+
+**Mental visualization:**
+
+Once you understand the rectangle model, you can visualize it mentally even without drawing. This helps you keep track of all the products you need to calculate.
+
+**Why teachers love it:**
+
+It reduces errors. Students can see if they've found all products (did I fill every cell?). It organizes work clearly. It builds geometric intuition about algebraic operations.
+
+---
+
+## How to Use Generic Rectangles Manually
+
+Let me show you how to multiply using the area model step by step.
+
+**Example 1: Basic binomial multiplication**
+
+Multiply (x + 3)(x + 5)
+
+Step 1: Draw a rectangle and divide it into a 2×2 grid
+
+```
+        x      5
+   _______________
+x  |  x²     5x
+   |
+3  |  3x     15
+```
+
+Step 2: Fill each cell with the product
+- Top-left: x × x = x²
+- Top-right: x × 5 = 5x
+- Bottom-left: 3 × x = 3x
+- Bottom-right: 3 × 5 = 15
+
+Step 3: Add all cells
+x² + 5x + 3x + 15
+
+Step 4: Combine like terms
+x² + 8x + 15
+
+**Example 2: With coefficients**
+
+Multiply (2x + 3)(x - 4)
+
+Step 1: Set up rectangle
+
+```
+        x      -4
+   _______________
+2x |  2x²    -8x
+   |
+3  |  3x     -12
+```
+
+Step 2: Calculate each area
+- 2x × x = 2x²
+- 2x × (-4) = -8x
+- 3 × x = 3x
+- 3 × (-4) = -12
+
+Step 3: Sum all areas
+2x² - 8x + 3x - 12
+
+Step 4: Simplify
+2x² - 5x - 12
+
+**Example 3: Trinomial times binomial**
+
+Multiply (x² + 2x + 1)(x + 3)
+
+Step 1: Create a 3×2 grid (3 terms × 2 terms)
+
+```
+         x       3
+   __________________
+x² |    x³      3x²
+   |
+2x |    2x²     6x
+   |
+1  |    x       3
+```
+
+Step 2: Fill cells
+- x² × x = x³
+- x² × 3 = 3x²
+- 2x × x = 2x²
+- 2x × 3 = 6x
+- 1 × x = x
+- 1 × 3 = 3
+
+Step 3: Add all six cells
+x³ + 3x² + 2x² + 6x + x + 3
+
+Step 4: Combine like terms
+x³ + 5x² + 7x + 3
+
+**Example 4: Both negative**
+
+Multiply (x - 2)(x - 5)
+
+```
+        x      -5
+   _______________
+x  |  x²     -5x
+   |
+-2 |  -2x    10
+```
+
+Areas:
+- x × x = x²
+- x × (-5) = -5x
+- (-2) × x = -2x
+- (-2) × (-5) = 10
+
+Sum: x² - 5x - 2x + 10
+Simplified: x² - 7x + 10
+
+**Example 5: Difference of squares**
+
+Multiply (x + 4)(x - 4)
+
+```
+        x      -4
+   _______________
+x  |  x²     -4x
+   |
+4  |  4x     -16
+```
+
+Sum: x² - 4x + 4x - 16
+Notice: -4x + 4x = 0
+Result: x² - 16
+
+The rectangle shows why middle terms cancel!
+
+**Example 6: Larger coefficients**
+
+Multiply (3x + 2)(5x - 1)
+
+```
+         5x     -1
+   _______________
+3x |    15x²   -3x
+   |
+2  |    10x    -2
+```
+
+Sum: 15x² - 3x + 10x - 2
+Simplified: 15x² + 7x - 2
+
+**Example 7: Three by three**
+
+Multiply (a + b + c)(x + y + z)
+
+```
+         x       y       z
+   ____________________________
+a  |    ax      ay      az
+   |
+b  |    bx      by      bz
+   |
+c  |    cx      cy      cz
+```
+
+Sum: ax + ay + az + bx + by + bz + cx + cy + cz
+
+This shows how the 3×3 = 9 products are organized.
+
+**Example 8: Perfect square**
+
+Multiply (x + 3)²  which is (x + 3)(x + 3)
+
+```
+        x      3
+   _______________
+x  |  x²     3x
+   |
+3  |  3x     9
+```
+
+Sum: x² + 3x + 3x + 9
+Result: x² + 6x + 9
+
+The rectangle makes the pattern visible: first² + 2(first)(last) + last²
+
+**Example 9: With fractions**
+
+Multiply (x + 1/2)(x - 1/3)
+
+```
+         x        -1/3
+   _______________________
+x  |    x²       -x/3
+   |
+1/2|    x/2      -1/6
+```
+
+Sum: x² - x/3 + x/2 - 1/6
+
+Find common denominator for x terms:
+-x/3 + x/2 = -2x/6 + 3x/6 = x/6
+
+Result: x² + x/6 - 1/6
+
+**Example 10: Four-term polynomial**
+
+Multiply (x + 1)(x³ + 2x² + 3x + 4)
+
+```
+          x³      2x²     3x      4
+   _______________________________________
+x  |     x⁴      2x³     3x²     4x
+   |
+1  |     x³      2x²     3x      4
+```
+
+Sum all 8 cells:
+x⁴ + 2x³ + 3x² + 4x + x³ + 2x² + 3x + 4
+
+Combine:
+x⁴ + 3x³ + 5x² + 7x + 4
+
+---
+
+## Real-World Applications
+
+**Teaching multiplication conceptually:**
+
+Elementary students learn multiplication as area. "3 times 4 is the area of a 3 by 4 rectangle." The generic rectangle extends this to algebra, maintaining the visual connection.
+
+**Polynomial expansion in engineering:**
+
+Transfer functions and system responses often need polynomial multiplication. The rectangle method organizes complex expansions clearly.
+
+**Area calculations with variable dimensions:**
+
+Garden design with adjustable borders: (length + border)(width + border) gives total area including the border sections. The rectangle shows each component.
+
+**Financial modeling:**
+
+Revenue calculations like (price + markup)(quantity + additional) expand to show each revenue component separately in the rectangle cells.
+
+**Probability expansions:**
+
+When probabilities are expressed as polynomials, multiplication using rectangles helps track all possible outcome combinations.
+
+**Pattern recognition:**
+
+The rectangle makes algebraic patterns visible. Students can see why (a+b)² always has a certain structure by examining the rectangle's symmetry.
+
+**Error checking:**
+
+The visual layout makes it obvious if you missed a term. Empty cells in your mental or drawn rectangle indicate missing products.
+
+---
+
+## Common Mistakes and How to Avoid Them
+
+**Mistake 1: Forgetting a cell**
+
+Wrong: For (x + 2)(x + 3), calculating only x² and 6, skipping the middle terms
+
+Right: Every cell must be filled. A 2×2 grid has 4 cells, not 2.
+
+Why it happens: Not completing the rectangle. Draw all cells and fill each one.
+
+**Mistake 2: Sign errors**
+
+Wrong: (x - 3)(x + 2) with bottom-right cell as -6 instead of -6... wait, that's right. Let me fix:
+
+Wrong: Putting 3 instead of -3 on the edge, then getting wrong products
+
+Right: Put the negative sign with the term on the edge: -3, not 3. Then multiply carefully.
+
+Why it happens: Dropping negative signs. Always include signs as part of edge labels.
+
+**Mistake 3: Not combining like terms**
+
+Wrong: Leaving answer as x² + 2x + 3x + 6
+
+Right: Combine: x² + 5x + 6
+
+Why it happens: Stopping after adding cells. Always combine at the end.
+
+**Mistake 4: Wrong cell product**
+
+Wrong: 2x times 3x equals 5x
+
+Right: 2x times 3x equals 6x² (multiply coefficients, multiply variables)
+
+Why it happens: Adding instead of multiplying. Each cell is a product, not a sum.
+
+**Mistake 5: Misaligned terms**
+
+Wrong: Putting x² in the row and x in the column but misaligning the cell
+
+Right: Each cell is exactly at the intersection of its row label and column label
+
+Why it happens: Sloppy drawing. Use a ruler or be careful with alignment.
+
+**Mistake 6: Order confusion**
+
+Wrong: Thinking the order of factors matters for which goes on top versus side
+
+Right: Multiplication commutes, so (a+b)(c+d) = (c+d)(a+b). Either orientation works.
+
+Why it happens: Overthinking. Pick whichever orientation feels comfortable.
+
+**Mistake 7: Incomplete grid for polynomials**
+
+Wrong: Using 2×2 grid for (x² + x + 1)(x + 2)
+
+Right: First has 3 terms, second has 2, so use 3×2 = 6 cells
+
+Why it happens: Not counting terms. Grid dimensions = number of terms in each factor.
+
+---
+
+## Related Topics
+
+- [Box Method Calculator](/calculator/mathematics/box-method) - Same method, alternative name
+- [FOIL Method Calculator](/calculator/mathematics/foil) - Related technique for binomials
+- [Multiplying Binomials Calculator](/calculator/mathematics/multiplying-binomials) - Specific case
+
+---
+
+## How This Calculator Works
+
+**Step 1: Parse input expressions**
+```
+Extract terms from first polynomial
+Extract terms from second polynomial
+Identify coefficients and variables
+Count number of terms in each
+```
+
+**Step 2: Create grid structure**
+```
+Determine grid dimensions: m × n
+m = number of terms in first expression
+n = number of terms in second expression
+Initialize empty grid
+```
+
+**Step 3: Label edges**
+```
+Place first expression terms along left edge (rows)
+Place second expression terms along top edge (columns)
+Include signs with each term
+```
+
+**Step 4: Fill cells**
+```
+For each row i:
+  For each column j:
+    Multiply row label by column label
+    Store product in cell (i,j)
+    Handle signs correctly
+    Multiply coefficients and variables separately
+```
+
+**Step 5: Visualize**
+```
+Draw rectangle with grid
+Label all edges
+Show product in each cell
+Use clear formatting
+```
+
+**Step 6: Sum all cells**
+```
+Collect all cell values
+Add them together
+Keep track of signs
+```
+
+**Step 7: Simplify**
+```
+Identify like terms (same variable and exponent)
+Combine coefficients of like terms
+Arrange in standard form (descending powers)
+Display final result
+```
+
+---
+
+## FAQs
+
+**What is a generic rectangle?**
+
+A visual method for multiplying polynomials by representing the multiplication as finding the area of a rectangle divided into smaller sections.
+
+**Is this the same as the box method?**
+
+Yes, generic rectangle and box method are two names for the same technique.
+
+**How is this different from FOIL?**
+
+FOIL only works for two binomials. Generic rectangles work for any polynomial multiplication, including trinomials and larger.
+
+**Do I always get a rectangle?**
+
+Yes, though it might be a grid of different dimensions. A 2×2 for binomials, 3×2 for trinomial times binomial, etc.
+
+**How many cells will I have?**
+
+Number of cells = (terms in first) × (terms in second). For (x + 2)(x + 3), that's 2 × 2 = 4 cells.
+
+**Can I put either expression on top?**
+
+Yes, multiplication is commutative. You can arrange them either way and get the same answer.
+
+**What if I have negative terms?**
+
+Include the negative sign as part of the edge label, then multiply normally. Negative times positive gives negative, negative times negative gives positive.
+
+**Does this work for numbers too?**
+
+Yes! You can use it for 23 × 45 by writing as (20 + 3)(40 + 5). It's actually how some mental math tricks work.
+
+**Why use this instead of distributing?**
+
+The rectangle organizes your work and makes it easy to see if you've missed any products. It's especially helpful for larger polynomials.
+
+**How do I handle exponents?**
+
+Multiply variables by adding exponents: x² times x³ = x⁵. Put this in the appropriate cell.
+
+**What if terms have different variables?**
+
+Multiply them: x times y = xy. The cell would contain xy.
+
+**Can I use this for three factors?**
+
+You'd need to do it in two steps: first multiply two factors, then multiply that result by the third factor.
+
+**Is this faster than other methods?**
+
+Not necessarily faster, but more organized and visual. It reduces errors and works universally.
+
+**Do I have to draw the rectangle?**
+
+For learning, yes. Once proficient, you can visualize it mentally and just calculate the cells.
+
+**What's the biggest polynomial this works for?**
+
+Theoretically unlimited. Practically, very large polynomials get tedious with any manual method.
+
+**How does this help with factoring?**
+
+Factoring is the reverse: you have the cell contents and need to find the edge labels. The rectangle model helps visualize this reverse process.
+
+**Can fractions go in cells?**
+
+Yes, multiply fractions normally: (1/2)x times (1/3)y = (1/6)xy.
+
+**Why is it called "generic"?**
+
+Because it's a general method that works for any polynomial multiplication, not restricted to specific cases.
+
+**Does this work in higher dimensions?**
+
+The rectangle is 2D, but the principle extends to 3D boxes for three-factor multiplication, though that's rarely drawn.
+
+**Should I always use this method?**
+
+Use whichever method you're comfortable with. The rectangle is great for learning and for complex polynomials, but experienced users might prefer other methods for simple cases.
+

@@ -1,0 +1,460 @@
+## Synthetic Division Calculator: Divide Polynomials Quickly
+
+## Table of Contents - Synthetic Division
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Understanding Synthetic Division](#understanding-synthetic-division)
+- [How to Perform Synthetic Division Manually](#how-to-perform-synthetic-division-manually)
+- [Real-World Applications](#real-world-applications)
+- [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Synthetic Division
+
+Enter the polynomial you want to divide (dividend) and the divisor in the form (x - c). For example, to divide x³ - 6x² + 11x - 6 by (x - 2), enter the coefficients 1, -6, 11, -6 and the value c = 2.
+
+Click "Calculate" to see the synthetic division setup and process. The calculator shows the step-by-step work, displays the quotient and remainder, and verifies the result.
+
+The results show the complete division layout, the quotient polynomial, the remainder value, and confirmation that dividend = (divisor)(quotient) + remainder.
+
+---
+
+## Understanding Synthetic Division
+
+Synthetic division is a shorthand method for dividing a polynomial by a linear factor of the form (x - c). It's faster and more compact than long division, using only the coefficients instead of writing out full expressions with variables.
+
+**Why it's called "synthetic":**
+
+The method synthesizes (builds up) the quotient and remainder through a streamlined process that mimics long division but removes the variables and most of the writing. It's polynomial division with all the unnecessary parts stripped away.
+
+**When to use it:**
+
+Synthetic division only works when dividing by a linear factor (x - c). If your divisor is x - 3, x + 5, or x, you can use synthetic division. If your divisor is x² + 1 or 2x - 1 with a leading coefficient other than 1, you need regular long division.
+
+**The basic setup:**
+
+Write the value c (from x - c) outside a division symbol, list all the coefficients of the polynomial in descending power order, bring down the first coefficient, then multiply and add repeatedly until done.
+
+**What it gives you:**
+
+The bottom row contains the coefficients of the quotient followed by the remainder as the last number. The degree of the quotient is one less than the dividend's degree.
+
+**The Remainder Theorem connection:**
+
+The remainder when dividing f(x) by (x - c) equals f(c). So synthetic division also evaluates the polynomial at x = c. If the remainder is zero, then c is a root of the polynomial.
+
+**Speed advantage:**
+
+Synthetic division is much faster than long division once you get the hang of it. For finding roots using the Rational Root Theorem and factoring polynomials, this speed makes a huge difference.
+
+---
+
+## How to Perform Synthetic Division Manually
+
+Let me walk through synthetic division with detailed examples.
+
+**Example 1: Basic division**
+
+Divide x³ - 6x² + 11x - 6 by (x - 2)
+
+Step 1: Set up
+```
+2 |  1  -6  11  -6
+  |
+  |
+```
+The 2 comes from x - 2 = 0, so x = 2.
+The coefficients are 1, -6, 11, -6.
+
+Step 2: Bring down the first coefficient
+```
+2 |  1  -6  11  -6
+  |
+  |  1
+```
+
+Step 3: Multiply by 2, write under the next coefficient
+```
+2 |  1  -6  11  -6
+  |      2
+  |  1
+```
+
+Step 4: Add the column
+```
+2 |  1  -6  11  -6
+  |      2
+  |  1  -4
+```
+
+Step 5: Repeat - multiply -4 by 2
+```
+2 |  1  -6  11  -6
+  |      2  -8
+  |  1  -4
+```
+
+Step 6: Add
+```
+2 |  1  -6  11  -6
+  |      2  -8
+  |  1  -4   3
+```
+
+Step 7: Repeat - multiply 3 by 2
+```
+2 |  1  -6  11  -6
+  |      2  -8   6
+  |  1  -4   3
+```
+
+Step 8: Add
+```
+2 |  1  -6  11  -6
+  |      2  -8   6
+  |  1  -4   3   0
+```
+
+Step 9: Read the answer
+Bottom row: 1, -4, 3, 0
+Quotient: x² - 4x + 3
+Remainder: 0
+
+Since remainder is 0, (x - 2) is a factor!
+x³ - 6x² + 11x - 6 = (x - 2)(x² - 4x + 3)
+
+**Example 2: Non-zero remainder**
+
+Divide x³ + 4x² - 5x + 1 by (x + 3)
+
+Step 1: Note that x + 3 = x - (-3), so use c = -3
+
+Step 2: Setup and work through
+```
+-3 |  1   4  -5   1
+   |     -3  -3  24
+   |  1   1  -8  25
+```
+
+Quotient: x² + x - 8
+Remainder: 25
+
+Result: (x³ + 4x² - 5x + 1) = (x + 3)(x² + x - 8) + 25
+
+**Example 3: Missing term (zero coefficient)**
+
+Divide x³ + 2x - 5 by (x - 1)
+
+Step 1: Write with zero for missing x² term
+Coefficients: 1, 0, 2, -5
+
+```
+1 |  1   0   2  -5
+  |      1   1   3
+  |  1   1   3  -2
+```
+
+Quotient: x² + x + 3
+Remainder: -2
+
+**Example 4: Dividing by (x + c) where c is positive**
+
+Divide 2x³ - x² + 3 by (x + 2)
+
+Step 1: x + 2 = x - (-2), so c = -2
+Coefficients: 2, -1, 0, 3 (zero for missing x term)
+
+```
+-2 |  2  -1   0   3
+   |     -4  10 -20
+   |  2  -5  10 -17
+```
+
+Quotient: 2x² - 5x + 10
+Remainder: -17
+
+**Example 5: Using synthetic division to evaluate**
+
+Find f(3) for f(x) = x⁴ - 5x² + 7x - 2
+
+Use synthetic division with c = 3:
+
+```
+3 |  1   0  -5   7  -2
+  |      3   9  12  57
+  |  1   3   4  19  55
+```
+
+The remainder is 55, so f(3) = 55.
+
+**Example 6: Finding if a value is a root**
+
+Is x = 2 a root of x³ - 3x² + x - 2?
+
+```
+2 |  1  -3   1  -2
+  |      2  -2  -2
+  |  1  -1  -1  -4
+```
+
+Remainder is -4 (not zero), so x = 2 is NOT a root.
+
+**Example 7: Dividing by x (which is x - 0)**
+
+Divide x³ + 5x² - 3x + 7 by x
+
+Use c = 0:
+
+```
+0 |  1   5  -3   7
+  |      0   0   0
+  |  1   5  -3   7
+```
+
+Quotient: x² + 5x - 3
+Remainder: 7
+
+(This is equivalent to just removing the constant term for the quotient)
+
+---
+
+## Real-World Applications
+
+**Finding polynomial roots:**
+
+When using the Rational Root Theorem, synthetic division quickly tests candidates. If the remainder is zero, you've found a root and can factor the polynomial.
+
+**Factoring higher-degree polynomials:**
+
+After finding one root via synthetic division, the quotient is a lower-degree polynomial. Repeat the process to find all roots and factors.
+
+**Evaluating polynomials:**
+
+The Remainder Theorem says the remainder equals f(c). Synthetic division is an efficient way to evaluate polynomials at specific values, especially for high degrees.
+
+**Simplifying rational expressions:**
+
+When simplifying expressions like (x³ - 6x² + 11x - 6)/(x - 2), synthetic division quickly gives the simplified form.
+
+**Solving equations:**
+
+Polynomial equations can be solved by finding roots. Synthetic division is a key tool in this process.
+
+**Cryptography algorithms:**
+
+Some encryption methods use polynomial division in finite fields. Synthetic division principles apply in these calculations.
+
+**Error correction codes:**
+
+Digital communication systems use polynomial division for detecting and correcting transmission errors.
+
+---
+
+## Common Mistakes and How to Avoid Them
+
+**Mistake 1: Wrong sign for c**
+
+Wrong: For (x + 3), using c = 3
+
+Right: For (x + 3), write it as (x - (-3)), so c = -3. The sign flips.
+
+Why it happens: Not rewriting in (x - c) form first. Always identify c from x - c = 0.
+
+**Mistake 2: Forgetting zero coefficients**
+
+Wrong: For x³ + 5x - 2, using coefficients 1, 5, -2
+
+Right: Include zero for missing x²: use 1, 0, 5, -2. Every power from highest to zero must be represented.
+
+Why it happens: Only writing visible terms. Synthetic division needs all powers.
+
+**Mistake 3: Arithmetic errors**
+
+Wrong: Multiplying 3 × -4 = 12
+
+Right: 3 × -4 = -12. Sign errors are common.
+
+Why it happens: Rushing. Double-check multiplication and addition, especially with negatives.
+
+**Mistake 4: Misreading the quotient**
+
+Wrong: For bottom row 1, -4, 3, 0, writing quotient as x³ - 4x² + 3x
+
+Right: The degree drops by one. It's x² - 4x + 3. The last number is the remainder.
+
+Why it happens: Not remembering the degree decreases. Start quotient with one power less than the dividend.
+
+**Mistake 5: Using synthetic division for wrong divisors**
+
+Wrong: Trying synthetic division for (x² - 1) or (2x - 3)
+
+Right: Synthetic division only works for (x - c) where the x coefficient is 1. Use long division for other cases.
+
+Why it happens: Thinking synthetic division is universal. It's only for linear factors with leading coefficient 1.
+
+**Mistake 6: Adding instead of multiplying**
+
+Wrong: Bringing down 1, then adding c instead of multiplying
+
+Right: Multiply the most recent bottom number by c, write it in the next column, then add.
+
+Why it happens: Confusing the steps. It's multiply-down, add-down, repeat.
+
+**Mistake 7: Not verifying**
+
+Wrong: Accepting the answer without checking
+
+Right: Multiply (divisor)(quotient) + remainder and verify it equals the original dividend.
+
+Why it happens: Overconfidence. Verification catches errors.
+
+---
+
+## Related Topics
+
+- [Polynomial Long Division Calculator](/calculator/mathematics/polynomial-division) - For non-linear divisors
+- [Rational Root Theorem Calculator](/calculator/mathematics/rational-zeros) - Finding roots to test
+- [Polynomial Calculator](/calculator/mathematics/equation-solver) - General polynomial operations
+
+---
+
+## How This Calculator Works
+
+**Step 1: Parse inputs**
+```
+Extract polynomial coefficients
+Include zeros for missing powers
+Identify c from divisor (x - c)
+```
+
+**Step 2: Setup array**
+```
+Create top row with coefficients
+Initialize bottom row
+Place c outside
+```
+
+**Step 3: Bring down first coefficient**
+```
+Copy first coefficient to bottom row
+This starts the process
+```
+
+**Step 4: Multiply and add loop**
+```
+For each remaining coefficient:
+  Multiply last bottom number by c
+  Write product in middle row
+  Add column to get new bottom number
+  Repeat
+```
+
+**Step 5: Extract results**
+```
+Bottom row (except last) = quotient coefficients
+Last bottom number = remainder
+Construct quotient polynomial
+```
+
+**Step 6: Verify**
+```
+Calculate (divisor)(quotient) + remainder
+Compare with original dividend
+Confirm they match
+```
+
+**Step 7: Display**
+```
+Show synthetic division layout
+Display quotient polynomial
+Show remainder
+Provide verification
+Interpret remainder (root if zero)
+```
+
+---
+
+## FAQs
+
+**What is synthetic division?**
+
+A streamlined method for dividing polynomials by linear factors (x - c), using only coefficients instead of full polynomial long division.
+
+**When can I use synthetic division?**
+
+Only when dividing by a linear factor of the form (x - c), where the coefficient of x is 1. For other divisors, use polynomial long division.
+
+**How do I know what value to use for c?**
+
+From (x - c), solve x - c = 0 to get x = c. For (x - 3), use c = 3. For (x + 5), write as (x - (-5)), so c = -5.
+
+**What if my polynomial is missing powers?**
+
+Include zeros for missing terms. For x³ + 5x - 2, use coefficients 1, 0, 5, -2 (zero for the missing x² term).
+
+**What does a zero remainder mean?**
+
+Zero remainder means (x - c) is a factor of the polynomial, and c is a root. The polynomial divides evenly.
+
+**Can I use this to evaluate polynomials?**
+
+Yes! The remainder equals f(c) by the Remainder Theorem. Synthetic division at c evaluates the polynomial.
+
+**What's the relationship between quotient and dividend degree?**
+
+The quotient's degree is always one less than the dividend's degree. Cubic divided by linear gives quadratic.
+
+**How is this different from long division?**
+
+Synthetic division is faster and uses less space, but only works for linear divisors (x - c). Long division works for any divisor.
+
+**Can the quotient have fractions?**
+
+If the original coefficients are integers and you're dividing by (x - c) with integer c, the quotient coefficients will be integers (though the remainder might be non-zero).
+
+**What if I make a mistake?**
+
+Verify your answer: multiply (x - c) by the quotient, add the remainder, and check if you get the original polynomial. If not, redo the work.
+
+**Can I divide by (2x - 4)?**
+
+Factor out the 2: it's 2(x - 2). Divide by (x - 2) using synthetic division, then divide the result by 2.
+
+**How do I read the bottom row?**
+
+All numbers except the last are the quotient's coefficients (starting one degree lower than the dividend). The last number is the remainder.
+
+**Can synthetic division be done with decimals or fractions?**
+
+Yes, but it's messier. The process is the same, just more careful arithmetic required.
+
+**What's the point of this method?**
+
+Speed. When finding roots or factoring, you might test dozens of candidates. Synthetic division makes each test quick.
+
+**How does this help factor polynomials?**
+
+Find a root c (remainder = 0), then use the quotient as your reduced polynomial. Repeat until fully factored.
+
+**Can I go backwards?**
+
+Yes, multiplication. If quotient is x² + 3x + 2 and remainder is 5 from dividing by (x - 3), the original is (x - 3)(x² + 3x + 2) + 5.
+
+**What if my divisor doesn't have a constant?**
+
+If dividing by just x, that's x - 0, so c = 0. The synthetic division simplifies significantly.
+
+**Why does the remainder equal f(c)?**
+
+From the division algorithm: f(x) = (x - c)q(x) + r. Plugging in x = c: f(c) = 0 + r = r.
+
+**Do I need to show all the steps?**
+
+For homework or tests, yes. Show the setup and each multiply-add step. For personal calculations, experienced users can work faster.
+
+**What are the most common errors?**
+
+Sign errors (especially with c), forgetting zero coefficients, and misidentifying the quotient degree.

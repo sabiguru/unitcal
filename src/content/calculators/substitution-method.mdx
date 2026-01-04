@@ -1,0 +1,468 @@
+## Substitution Method Calculator: Solve Systems of Equations
+
+## Table of Contents - Substitution Method
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Understanding the Substitution Method](#understanding-the-substitution-method)
+- [How to Solve Using Substitution Manually](#how-to-solve-using-substitution-manually)
+- [Real-World Applications](#real-world-applications)
+- [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Substitution Method
+
+Enter your system of two equations with two variables. For example, enter y = 2x + 1 and 3x + y = 11, or write both equations in standard form like 2x + 3y = 8 and x - y = 1.
+
+Click "Solve" to see the step-by-step substitution process. The calculator shows which variable gets substituted, performs the algebraic manipulation, and finds the solution.
+
+The results display the values of both variables, show verification by plugging back into original equations, and explain each step clearly.
+
+---
+
+## Understanding the Substitution Method
+
+The substitution method is a technique for solving systems of equations by expressing one variable in terms of another, then substituting that expression into the second equation. This reduces two equations with two unknowns into one equation with one unknown.
+
+**The basic idea:**
+
+If you have two equations and two variables, solve one equation for one variable, then replace (substitute) that variable in the other equation with the expression you found. Now you have just one equation with one variable, which you can solve.
+
+**Why it works:**
+
+Both equations must be true simultaneously. If y equals some expression in terms of x from equation one, then wherever y appears in equation two, you can replace it with that expression. This doesn't change the truth of the system.
+
+**When to use substitution:**
+
+Substitution works best when one equation already has a variable isolated (like y = 3x + 2) or when isolating a variable is straightforward. It's especially good when coefficients are 1 or simple fractions.
+
+**The four main steps:**
+
+1. Solve one equation for one variable
+2. Substitute that expression into the other equation
+3. Solve the resulting single-variable equation
+4. Back-substitute to find the other variable
+
+**Checking your answer:**
+
+Always verify by plugging both values back into both original equations. If both equations balance, your solution is correct.
+
+**Alternative: elimination:**
+
+The other common method is elimination (adding or subtracting equations to cancel a variable). Choose substitution when one variable is already isolated or nearly isolated.
+
+---
+
+## How to Solve Using Substitution Manually
+
+Let me walk through the substitution method with detailed examples covering different scenarios.
+
+**Example 1: Simple substitution with y isolated**
+
+Solve:
+y = 2x + 1
+3x + y = 11
+
+Step 1: First equation already has y isolated
+y = 2x + 1
+
+Step 2: Substitute this into the second equation
+3x + (2x + 1) = 11
+
+Step 3: Solve for x
+3x + 2x + 1 = 11
+5x + 1 = 11
+5x = 10
+x = 2
+
+Step 4: Back-substitute x = 2 into the first equation
+y = 2(2) + 1
+y = 4 + 1
+y = 5
+
+Solution: x = 2, y = 5
+
+Step 5: Verify in both equations
+First: y = 2x + 1 → 5 = 2(2) + 1 → 5 = 5 ✓
+Second: 3x + y = 11 → 3(2) + 5 = 11 → 11 = 11 ✓
+
+**Example 2: Need to isolate a variable first**
+
+Solve:
+2x + 3y = 8
+x - y = 1
+
+Step 1: The second equation is simpler, solve for x
+x - y = 1
+x = y + 1
+
+Step 2: Substitute into the first equation
+2(y + 1) + 3y = 8
+
+Step 3: Solve for y
+2y + 2 + 3y = 8
+5y + 2 = 8
+5y = 6
+y = 6/5
+
+Step 4: Find x using x = y + 1
+x = 6/5 + 1
+x = 6/5 + 5/5
+x = 11/5
+
+Solution: x = 11/5, y = 6/5
+
+Step 5: Verify
+First: 2(11/5) + 3(6/5) = 22/5 + 18/5 = 40/5 = 8 ✓
+Second: 11/5 - 6/5 = 5/5 = 1 ✓
+
+**Example 3: Both equations in standard form**
+
+Solve:
+3x + 2y = 12
+5x + 3y = 19
+
+Step 1: Choose the easier variable to isolate
+From first equation, solve for y:
+2y = 12 - 3x
+y = (12 - 3x)/2
+y = 6 - (3/2)x
+
+Step 2: Substitute into second equation
+5x + 3(6 - (3/2)x) = 19
+
+Step 3: Solve for x
+5x + 18 - (9/2)x = 19
+5x - (9/2)x = 1
+(10/2)x - (9/2)x = 1
+(1/2)x = 1
+x = 2
+
+Step 4: Find y
+y = 6 - (3/2)(2)
+y = 6 - 3
+y = 3
+
+Solution: x = 2, y = 3
+
+**Example 4: Equations with fractions**
+
+Solve:
+x/2 + y/3 = 2
+x - y = 3
+
+Step 1: Solve second equation for x (simpler)
+x = y + 3
+
+Step 2: Substitute into first equation
+(y + 3)/2 + y/3 = 2
+
+Step 3: Clear fractions (multiply by 6)
+3(y + 3) + 2y = 12
+3y + 9 + 2y = 12
+5y = 3
+y = 3/5
+
+Step 4: Find x
+x = 3/5 + 3 = 3/5 + 15/5 = 18/5
+
+Solution: x = 18/5, y = 3/5
+
+**Example 5: System with no solution**
+
+Solve:
+y = 2x + 3
+2x - y = 5
+
+Step 1: Substitute first into second
+2x - (2x + 3) = 5
+2x - 2x - 3 = 5
+-3 = 5
+
+This is false! The system has no solution (parallel lines).
+
+**Example 6: Infinite solutions**
+
+Solve:
+y = 2x + 1
+4x - 2y = -2
+
+Step 1: Substitute first into second
+4x - 2(2x + 1) = -2
+4x - 4x - 2 = -2
+-2 = -2
+
+This is always true! The system has infinite solutions (same line).
+
+**Example 7: Negative coefficients**
+
+Solve:
+-x + 2y = 7
+3x + y = 5
+
+Step 1: Solve first for x
+-x = 7 - 2y
+x = -7 + 2y
+or x = 2y - 7
+
+Step 2: Substitute into second
+3(2y - 7) + y = 5
+6y - 21 + y = 5
+7y = 26
+y = 26/7
+
+Step 3: Find x
+x = 2(26/7) - 7
+x = 52/7 - 49/7
+x = 3/7
+
+Solution: x = 3/7, y = 26/7
+
+---
+
+## Real-World Applications
+
+**Business pricing:**
+
+If you know that 3 shirts and 2 pairs of pants cost $85, and 2 shirts and 3 pants cost $90, substitution helps find individual prices by setting up and solving a system.
+
+**Mixture problems:**
+
+When combining two solutions of different concentrations to get a target amount and concentration, substitution solves for the quantities of each solution needed.
+
+**Age problems:**
+
+Classic algebra problems like "A father is twice as old as his son, and in 10 years their ages will sum to 80" create systems solvable by substitution.
+
+**Distance rate time:**
+
+When two vehicles leave from different points traveling toward or away from each other, substitution finds when and where they meet.
+
+**Investment portfolios:**
+
+If you invest in two accounts with different interest rates and know the total invested and total interest earned, substitution finds how much is in each account.
+
+**Recipe scaling:**
+
+When adjusting recipes that require specific ratios of ingredients but you want a particular total amount, substitution helps calculate individual ingredient amounts.
+
+**Supply and demand:**
+
+In economics, finding market equilibrium where quantity supplied equals quantity demanded involves solving a system, often by substitution.
+
+---
+
+## Common Mistakes and How to Avoid Them
+
+**Mistake 1: Forgetting to distribute**
+
+Wrong: Substituting y = 2x + 1 into 3x + y = 11 as 3x + 2x + 1
+
+Right: It should be 3x + (2x + 1) = 11. The parentheses remind you it's a complete expression.
+
+Why it happens: Rushing. Always put substituted expressions in parentheses.
+
+**Mistake 2: Sign errors during substitution**
+
+Wrong: For y = x - 3, substituting into 2x - y = 7 as 2x - x - 3 = 7
+
+Right: 2x - (x - 3) = 7. You need 2x - x + 3 = 7. The negative distributes.
+
+Why it happens: Not treating the substituted expression as a unit. Use parentheses and distribute carefully.
+
+**Mistake 3: Solving for the wrong variable**
+
+Wrong: After finding x = 5, stopping without finding y
+
+Right: Always find both variables unless the problem asks for just one.
+
+Why it happens: Thinking you're done when you solve the single-variable equation. Remember to back-substitute.
+
+**Mistake 4: Arithmetic errors in back-substitution**
+
+Wrong: If x = 3 and y = 2x + 1, calculating y = 2(3) + 1 = 5 but writing y = 6
+
+Right: Carefully compute 2(3) + 1 = 6 + 1 = 7.
+
+Why it happens: Careless calculation. Double-check arithmetic.
+
+**Mistake 5: Not verifying the solution**
+
+Wrong: Finding x and y but not checking in original equations
+
+Right: Always substitute both values into both original equations to verify.
+
+Why it happens: Assuming your algebra was perfect. Verification catches mistakes.
+
+**Mistake 6: Mishandling fractions**
+
+Wrong: For y = (6 - 2x)/3, substituting without simplifying or distributing incorrectly
+
+Right: Either simplify to y = 2 - (2/3)x first, or carefully distribute the denominator.
+
+Why it happens: Fraction anxiety. Take time to handle fractions properly.
+
+**Mistake 7: Not recognizing special cases**
+
+Wrong: Getting 0 = 5 and not realizing this means no solution
+
+Right: If you get a false statement (like 0 = 5), the system has no solution. If you get a true statement (like 2 = 2), it has infinite solutions.
+
+Why it happens: Focusing on algebra and not interpreting results. Pay attention to what your answer means.
+
+---
+
+## Related Topics
+
+- [System of Equations Calculator](/calculator/mathematics/system-equations) - Alternative solution methods
+- [Elimination Method Calculator](/calculator/mathematics/elimination-method) - Different solving technique
+- [Graphing Calculator](/calculator/mathematics/graphing) - Visual solution approach
+- [Matrix Calculator](/calculator/mathematics/matrix) - Solve larger systems
+
+---
+
+## How This Calculator Works
+
+**Step 1: Parse both equations**
+```
+Extract coefficients and constants
+Identify variables (x and y)
+Convert to standard form if needed
+```
+
+**Step 2: Choose variable to isolate**
+```
+Look for coefficient of 1 or -1
+Check which equation is simpler
+Choose strategically to minimize fractions
+```
+
+**Step 3: Solve for chosen variable**
+```
+Isolate variable on one side
+Express in terms of the other variable
+Simplify the expression
+```
+
+**Step 4: Substitute**
+```
+Replace variable in second equation
+Distribute and combine like terms
+Create single-variable equation
+```
+
+**Step 5: Solve single-variable equation**
+```
+Combine like terms
+Isolate variable
+Simplify to get numerical value
+```
+
+**Step 6: Back-substitute**
+```
+Use found value in substitution expression
+Calculate the other variable
+Simplify to get numerical value
+```
+
+**Step 7: Verify solution**
+```
+Substitute both values into equation 1
+Substitute both values into equation 2
+Confirm both equations balance
+Display solution if verified
+```
+
+**Step 8: Display results**
+```
+Show solution as ordered pair
+Display step-by-step work
+Explain verification
+Handle special cases (no solution, infinite solutions)
+```
+
+---
+
+## FAQs
+
+**What is the substitution method?**
+
+A technique for solving systems of equations by solving one equation for one variable, then substituting that expression into the other equation to eliminate one variable.
+
+**When should I use substitution instead of elimination?**
+
+Use substitution when one variable is already isolated (like y = 3x + 1) or when it's easy to isolate a variable with a coefficient of 1.
+
+**How do I know which variable to solve for?**
+
+Choose the variable that's easiest to isolate, usually one with a coefficient of 1 or -1, to minimize working with fractions.
+
+**What if I get 0 = 5 when solving?**
+
+This means the system has no solution. The lines are parallel and never intersect.
+
+**What if I get 3 = 3 (always true)?**
+
+This means the system has infinite solutions. The two equations represent the same line.
+
+**Do I always substitute into the second equation?**
+
+You substitute into whichever equation you didn't solve for the variable. It doesn't matter which you call "first" or "second."
+
+**Can substitution work for more than two equations?**
+
+Yes, but it gets complicated. For three or more equations, matrix methods or systematic elimination are often better.
+
+**What if both equations have fractions?**
+
+You can still use substitution. Just be extra careful with fraction arithmetic, or clear the fractions first by multiplying equations by appropriate values.
+
+**How do I check my answer?**
+
+Plug both values into both original equations. Both should balance (left side equals right side) if your solution is correct.
+
+**What's back-substitution?**
+
+After solving for one variable, you substitute that value back into one of the equations to find the other variable.
+
+**Can the solution have fractions?**
+
+Yes, solutions can be fractions, decimals, or even irrational numbers. Not all systems have integer solutions.
+
+**What if the numbers get really messy?**
+
+If you're working with particularly messy numbers, double-check your choice of which variable to isolate. Sometimes choosing differently makes the algebra cleaner.
+
+**Is substitution faster than elimination?**
+
+It depends on the system. If a variable is already isolated, substitution is faster. If both equations are in standard form with no isolated variable, elimination might be faster.
+
+**Can I use substitution for inequalities?**
+
+The concept is similar, but with inequalities you must be careful about inequality signs, especially when multiplying or dividing by negatives.
+
+**What if I make an algebra mistake?**
+
+Your verification step will catch it. If the values don't check in both original equations, redo the algebra carefully.
+
+**Do I need to simplify the expressions?**
+
+It's not required but usually makes subsequent steps easier. Simplified expressions reduce chances of arithmetic errors.
+
+**What are the most common errors?**
+
+Sign errors when distributing, arithmetic mistakes, forgetting to find both variables, and not verifying the answer.
+
+**Can substitution give complex number solutions?**
+
+For linear systems with real coefficients, solutions are real. Quadratic or higher-degree systems might have complex solutions.
+
+**How is this different from solving a single equation?**
+
+A single equation has one variable and infinitely many solutions (or specific numeric solutions). A system constrains both variables simultaneously, usually giving one solution point.
+
+**What if the equations are identical?**
+
+Then every point on the line is a solution (infinite solutions). You'll get a true statement like 0 = 0 when solving.

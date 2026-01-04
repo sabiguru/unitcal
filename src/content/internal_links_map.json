@@ -1,0 +1,480 @@
+{
+  "basic": [
+    "scientific",
+    "graphing",
+    "percentage",
+    "fraction"
+  ],
+  "alcohol-dilution": [
+    "coffee-ratio",
+    "recipe-converter"
+  ],
+  "baking": [
+    "coffee-ratio",
+    "recipe-converter"
+  ],
+  "area": [
+    "concrete",
+    "paint",
+    "tile",
+    "patio"
+  ],
+  "abacus": [
+    "scientific",
+    "graphing",
+    "percentage",
+    "fraction"
+  ],
+  "age": [
+    "scientific",
+    "graphing",
+    "percentage",
+    "fraction"
+  ],
+  "aquarium-volume": [
+    "space-weight",
+    "age-on-mars",
+    "golf-balls-boeing-747",
+    "cat-age"
+  ],
+  "age-on-mars": [
+    "space-weight",
+    "aquarium-volume",
+    "golf-balls-boeing-747",
+    "cat-age"
+  ],
+   "bodyfat": [
+    "bmi",
+    "bmr",
+    "calorie",
+    "heartrate"
+  ],
+  "binary-converter": [
+    "ohms-law",
+    "electrical",
+    "resistor",
+    "subnet"
+  ],
+  "bmr": [
+    "bmi",
+    "calorie",
+    "bodyfat",
+    "heartrate"
+  ],
+  "capacitor": [
+    "ohms-law",
+    "electrical",
+    "resistor",
+    "subnet"
+  ],
+  "braille-translator": [
+    "morse-code",
+    "roman-numerals",
+    "currency-converter",
+    "unit-converter"
+  ],
+  "bmi": [
+    "bmr",
+    "calorie",
+    "bodyfat",
+    "heartrate"
+  ],
+  "budget": [
+    "compound-interest",
+    "loan",
+    "mortgage",
+    "investment"
+  ],
+  "calorie": [
+    "bmi",
+    "bmr",
+    "bodyfat",
+    "heartrate"
+  ],
+  "credit-card-payoff": [
+    "compound-interest",
+    "investment",
+    "loan",
+    "mortgage"
+  ],
+  "car-lease": [
+    "fuel-cost",
+    "mpg",
+    "ev-range",
+    "tire-size"
+  ],
+  "coffee-ratio": [
+    "baking",
+    "recipe-converter",
+    "alcohol-dilution"
+  ],
+  "cat-age": [
+    "dog-age",
+    "space-weight",
+    "age-on-mars",
+    "aquarium-volume"
+  ],
+  "compound-interest": [
+    "investment",
+    "loan",
+    "mortgage",
+    "credit-card-payoff"
+  ],
+  "currency-converter": [
+    "unit-converter",
+    "roman-numerals",
+    "morse-code"
+  ],
+  "concrete": [
+    "tile",
+    "paint",
+    "patio",
+    "roofing"
+  ],
+  "car-loan": [
+    "fuel-cost",
+    "mpg",
+    "ev-range",
+    "tire-size"
+  ],
+  "date": [
+    "basic",
+    "percentage",
+    "fraction",
+    "speed"
+  ],
+  "depreciation": [
+    "compound-interest",
+    "investment",
+    "loan",
+    "mortgage"
+  ],
+  "dog-age": [
+    "cat-age",
+    "space-weight",
+    "age-on-mars",
+    "aquarium-volume"
+  ],
+  "electrical": [
+    "ohms-law",
+    "resistor",
+    "capacitor",
+    "subnet"
+  ],
+  "equation-solver": [
+    "basic",
+    "percentage",
+    "fraction",
+    "speed"
+  ],
+  "ev-range": [
+    "fuel-cost",
+    "mpg",
+    "tire-size",
+    "car-loan"
+  ],
+  "fitness": [
+    "bmi",
+    "bmr",
+    "calorie",
+    "heartrate"
+  ],
+  "fraction": [
+    "basic",
+    "percentage",
+    "speed",
+    "volume"
+  ],
+  "fuel-cost": [
+    "mpg",
+    "ev-range",
+    "tire-size",
+    "car-loan"
+  ],
+  "golf-balls-boeing-747": [
+    "dog-age",
+    "cat-age",
+    "space-weight",
+    "age-on-mars"
+  ],
+  "gpa": [
+    "molecular-weight",
+    "stoichiometry",
+    "ph",
+    "roman-numerals"
+  ],
+  "graphing": [
+    "basic",
+    "percentage",
+    "fraction",
+    "speed"
+  ],
+  "heartrate": [
+    "bmi",
+    "bmr",
+    "calorie",
+    "fitness"
+  ],
+  "interest": [
+    "compound-interest",
+    "investment",
+    "loan",
+    "mortgage"
+  ],
+  "investment": [
+    "interest",
+    "compound-interest",
+    "loan",
+    "mortgage"
+  ],
+  "loan": [
+    "interest",
+    "compound-interest",
+    "investment",
+    "mortgage"
+  ],
+  "love-calculator": [
+    "dog-age",
+    "cat-age",
+    "space-weight",
+    "age-on-mars"
+  ],
+  "matrix": [
+    "basic",
+    "percentage",
+    "fraction",
+    "speed"
+  ],
+  "molecular-weight": [
+    "gpa",
+    "stoichiometry",
+    "ph",
+    "roman-numerals"
+  ],
+  "morse-code": [
+    "roman-numerals",
+    "binary-converter",
+    "braille-translator",
+    "unit-converter"
+  ],
+  "mortgage": [
+    "interest",
+    "compound-interest",
+    "investment",
+    "loan"
+  ],
+  "mpg": [
+    "fuel-cost",
+    "ev-range",
+    "tire-size",
+    "car-loan"
+  ],
+  "npv-irr": [
+    "interest",
+    "compound-interest",
+    "investment",
+    "loan"
+  ],
+  "ohms-law": [
+    "electrical",
+    "resistor",
+    "capacitor",
+    "subnet"
+  ],
+  "paint": [
+    "area",
+    "concrete",
+    "patio",
+    "roofing"
+  ],
+  "password-generator": [
+    "ohms-law",
+    "electrical",
+    "resistor",
+    "capacitor"
+  ],
+  "patio": [
+    "area",
+    "concrete",
+    "paint",
+    "roofing"
+  ],
+  "percentage": [
+    "basic",
+    "fraction",
+    "speed",
+    "volume"
+  ],
+  "ph": [
+    "gpa",
+    "molecular-weight",
+    "stoichiometry",
+    "roman-numerals"
+  ],
+  "prime": [
+    "basic",
+    "percentage",
+    "fraction",
+    "speed"
+  ],
+  "protein": [
+    "bmi",
+    "bmr",
+    "calorie",
+    "heartrate"
+  ],
+  "ratio": [
+    "basic",
+    "percentage",
+    "fraction",
+    "speed"
+  ],
+  "recipe-converter": [
+    "baking",
+    "coffee-ratio",
+    "alcohol-dilution"
+  ],
+  "refinance": [
+    "interest",
+    "compound-interest",
+    "investment",
+    "loan"
+  ],
+  "resistor": [
+    "ohms-law",
+    "electrical",
+    "capacitor",
+    "subnet"
+  ],
+  "retirement": [
+    "interest",
+    "compound-interest",
+    "investment",
+    "loan"
+  ],
+  "roi": [
+    "interest",
+    "compound-interest",
+    "investment",
+    "loan"
+  ],
+  "roman-numerals": [
+    "morse-code",
+    "binary-converter",
+    "unit-converter",
+    "currency-converter"
+  ],
+  "roofing": [
+    "area",
+    "concrete",
+    "paint",
+    "patio"
+  ],
+  "salary": [
+    "interest",
+    "compound-interest",
+    "investment",
+    "loan"
+  ],
+  "scientific": [
+    "basic",
+    "percentage",
+    "fraction",
+    "speed"
+  ],
+  "seed-spacing": [
+    "love-calculator",
+    "dog-age",
+    "cat-age",
+    "space-weight"
+  ],
+  "significant-figures": [
+    "basic",
+    "percentage",
+    "fraction",
+    "speed"
+  ],
+  "sleep": [
+    "bmi",
+    "bmr",
+    "calorie",
+    "heartrate"
+  ],
+  "solar-panel-savings": [
+    "love-calculator",
+    "dog-age",
+    "cat-age",
+    "space-weight"
+  ],
+  "space-weight": [
+    "love-calculator",
+    "dog-age",
+    "cat-age",
+    "age-on-mars"
+  ],
+  "speed": [
+    "basic",
+    "percentage",
+    "fraction",
+    "volume"
+  ],
+  "stairs": [
+    "area",
+    "concrete",
+    "paint",
+    "patio"
+  ],
+  "stoichiometry": [
+    "gpa",
+    "molecular-weight",
+    "ph",
+    "roman-numerals"
+  ],
+  "subnet": [
+    "ohms-law",
+    "electrical",
+    "resistor",
+    "capacitor"
+  ],
+  "tax": [
+    "interest",
+    "compound-interest",
+    "investment",
+    "loan"
+  ],
+  "tile": [
+    "area",
+    "concrete",
+    "paint",
+    "patio"
+  ],
+  "tip": [
+    "basic",
+    "percentage",
+    "fraction",
+    "speed"
+  ],
+  "tire-size": [
+    "fuel-cost",
+    "mpg",
+    "ev-range"
+  ],
+  "unit-converter": [
+    "roman-numerals",
+    "morse-code",
+    "binary-converter",
+    "currency-converter"
+  ],
+  "volume": [
+    "basic",
+    "percentage",
+    "fraction",
+    "speed"
+  ],
+  "water": [
+    "bmi",
+    "bmr",
+    "calorie",
+    "heartrate"
+  ]
+}

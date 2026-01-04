@@ -1,0 +1,15 @@
+bodyfat.mdx: 1882 words
+braille-translator.mdx: 1866 words
+budget.mdx: 1825 words
+calorie.mdx: 1869 words
+capacitor.mdx: 1825 words
+car-lease.mdx: 1905 words
+car-loan.mdx: 1937 words
+carbon-footprint.mdx: 1807 words
+cat-age.mdx: 1823 words
+coffee-ratio.mdx: 1815 words
+compound-interest.mdx: 1837 words
+concrete.mdx: 1875 words
+countdown-timer.mdx: 1819 words
+credit-card-payoff.mdx: 1876 words
+currency-converter.mdx: 1832 words

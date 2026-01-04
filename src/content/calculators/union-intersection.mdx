@@ -1,0 +1,421 @@
+## Union and Intersection Calculator: Combine and Compare Sets
+
+## Table of Contents - Union and Intersection
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Understanding Union and Intersection](#understanding-union-and-intersection)
+- [How to Find Union and Intersection Manually](#how-to-find-union-and-intersection-manually)
+- [Real-World Applications](#real-world-applications)
+- [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Union and Intersection
+
+Enter two sets using curly braces and commas. For example, `{1, 2, 3, 4}` and `{3, 4, 5, 6}`, or `{a, b, c}` and `{b, c, d, e}`.
+
+Click "Calculate" to see the union and intersection. The calculator shows which elements belong to both operations, displays results in set notation, and provides Venn diagram visualization.
+
+The results show the union (all elements from both sets), the intersection (only elements in both sets), and any other set operations like difference or complement if applicable.
+
+---
+
+## Understanding Union and Intersection
+
+Sets are collections of distinct objects. Union and intersection are two fundamental ways to combine sets, each answering a different question about what elements the sets share or contain together.
+
+**Union - the "or" operation:**
+
+The union of two sets contains everything that's in either set. If an element appears in set A or set B (or both), it's in the union. We write this as A ∪ B, using the symbol ∪ which looks like a U for "union."
+
+Think of union as combining two groups. If you have a set of students who play basketball and a set who play soccer, the union is everyone who plays at least one of these sports.
+
+**Intersection - the "and" operation:**
+
+The intersection of two sets contains only what's in both sets simultaneously. An element must appear in set A and set B to be in the intersection. We write this as A ∩ B, using the symbol ∩ which looks like an upside-down U.
+
+Think of intersection as finding overlap. Using the same sports example, the intersection is students who play both basketball and soccer.
+
+**Why these operations matter:**
+
+Union and intersection let us answer questions about categories, membership, and relationships. They're the foundation of logic, database queries, probability, and countless real-world scenarios where we need to combine or compare groups.
+
+**The empty set:**
+
+If two sets have no elements in common, their intersection is the empty set, written as ∅ or `\{ \}`. The union still contains all elements from both sets.
+
+**Visual understanding:**
+
+Venn diagrams make these concepts concrete. Two overlapping circles represent the sets. The union is everything inside either circle. The intersection is the overlapping region where both circles meet.
+
+---
+
+## How to Find Union and Intersection Manually
+
+Let me show you how to compute these operations step by step.
+
+**Example 1: Simple numeric sets**
+
+Set A = `{1, 2, 3, 4, 5}`
+Set B = `{4, 5, 6, 7, 8}`
+
+Find A ∪ B (union):
+
+Step 1: List all elements from set A
+1, 2, 3, 4, 5
+
+Step 2: Add elements from set B that aren't already listed
+6, 7, 8 (we don't repeat 4 and 5 since they're already there)
+
+Step 3: Combine and sort
+A ∪ B = `{1, 2, 3, 4, 5, 6, 7, 8}`
+
+Find A ∩ B (intersection):
+
+Step 1: Look for elements that appear in both sets
+4 appears in both ✓
+5 appears in both ✓
+
+Step 2: List only those common elements
+A ∩ B = `{4, 5}`
+
+**Example 2: Sets with no overlap**
+
+Set A = `{1, 2, 3}`
+Set B = `{7, 8, 9}`
+
+Union:
+A ∪ B = `{1, 2, 3, 7, 8, 9}`
+
+Intersection:
+A ∩ B = ∅ (empty set - no common elements)
+
+**Example 3: One set contained in another**
+
+Set A = `{1, 2, 3}`
+Set B = `{1, 2, 3, 4, 5, 6}`
+
+Union:
+A ∪ B = `{1, 2, 3, 4, 5, 6}` (same as B, since A is completely inside B)
+
+Intersection:
+A ∩ B = `{1, 2, 3}` (same as A, since all of A is in B)
+
+**Example 4: Sets with letters**
+
+Set A = `{a, b, c, d}`
+Set B = `{c, d, e, f}`
+
+Union:
+List from A: a, b, c, d
+Add from B: e, f
+A ∪ B = `{a, b, c, d, e, f}`
+
+Intersection:
+Elements in both: c, d
+A ∩ B = `{c, d}`
+
+**Example 5: Three sets**
+
+Set A = `{1, 2, 3}`
+Set B = `{2, 3, 4}`
+Set C = `{3, 4, 5}`
+
+Find A ∪ B ∪ C:
+
+Step 1: Find A ∪ B first
+A ∪ B = `{1, 2, 3, 4}`
+
+Step 2: Union that result with C
+`{1, 2, 3, 4}` ∪ `{3, 4, 5}` = `{1, 2, 3, 4, 5}`
+
+Find A ∩ B ∩ C:
+
+Step 1: Find A ∩ B first
+A ∩ B = `{2, 3}`
+
+Step 2: Intersect that result with C
+`{2, 3}` ∩ `{3, 4, 5}` = `{3}`
+
+Only 3 appears in all three sets.
+
+**Example 6: Intervals (continuous sets)**
+
+Set A = [1, 5] (all numbers from 1 to 5)
+Set B = [3, 7] (all numbers from 3 to 7)
+
+Union:
+A ∪ B = [1, 7] (all numbers from 1 to 7)
+
+Intersection:
+A ∩ B = [3, 5] (numbers in both ranges)
+
+**Example 7: Mixed operations**
+
+Set A = `{1, 2, 3, 4}`
+Set B = `{3, 4, 5, 6}`
+Set C = `{5, 6, 7, 8}`
+
+Find (A ∪ B) ∩ C:
+
+Step 1: A ∪ B = `{1, 2, 3, 4, 5, 6}`
+
+Step 2: Intersect with C
+`{1, 2, 3, 4, 5, 6}` ∩ `{5, 6, 7, 8}` = `{5, 6}`
+
+Find (A ∩ B) ∪ C:
+
+Step 1: A ∩ B = `{3, 4}`
+
+Step 2: Union with C
+`{3, 4}` ∪ `{5, 6, 7, 8}` = `{3, 4, 5, 6, 7, 8}`
+
+---
+
+## Real-World Applications
+
+**Database queries:**
+
+SQL uses union and intersection operations constantly. "Find customers who bought product A or product B" is a union. "Find customers who bought both A and B" is an intersection.
+
+**Student course enrollment:**
+
+Which students are taking math or science (union)? Which students are taking both math and science (intersection)? Schools use these operations for scheduling and resource planning.
+
+**Social media friend networks:**
+
+Finding mutual friends is an intersection. Finding all your friends plus your partner's friends is a union. These set operations power social network features.
+
+**Medical diagnosis:**
+
+Patients with symptom A or symptom B (union) might need screening. Patients with both symptom A and symptom B (intersection) might need immediate intervention.
+
+**E-commerce product filtering:**
+
+"Show items that are red or large" (union). "Show items that are both red and large" (intersection). Every filtering system uses these set operations.
+
+**Event planning:**
+
+Finding dates when all attendees are available is an intersection of their available dates. Finding any date when at least one person is available is a union.
+
+**Genetics and biology:**
+
+Determining which genes are expressed in multiple cell types uses intersection. Finding all genes expressed in any tissue type uses union.
+
+---
+
+## Common Mistakes and How to Avoid Them
+
+**Mistake 1: Counting elements twice in union**
+
+Wrong: A = `{1, 2, 3}`, B = `{2, 3, 4}`, so A ∪ B = `{1, 2, 2, 3, 3, 4}`
+
+Right: A ∪ B = `{1, 2, 3, 4}`. Sets don't have duplicates. Each element appears once.
+
+Why it happens: Thinking of union as simple concatenation. Remember: sets contain distinct elements.
+
+**Mistake 2: Including elements in intersection that aren't in both sets**
+
+Wrong: A = `{1, 2, 3}`, B = `{3, 4, 5}`, so A ∩ B = `{1, 2, 3, 4, 5}`
+
+Right: A ∩ B = `{3}`. Only 3 appears in both sets.
+
+Why it happens: Confusing intersection with union. Intersection is much more restrictive.
+
+**Mistake 3: Using the wrong symbol**
+
+Wrong: Writing A ∩ B when you mean union
+
+Right: ∪ is union (like U for union), ∩ is intersection (like A for "and")
+
+Why it happens: The symbols look similar. Create a mnemonic to remember which is which.
+
+**Mistake 4: Forgetting the empty set possibility**
+
+Wrong: Assuming intersection always has elements
+
+Right: If sets don't overlap, A ∩ B = ∅. This is valid and important.
+
+Why it happens: Not considering the case where sets are disjoint (no common elements).
+
+**Mistake 5: Order confusion with multiple operations**
+
+Wrong: Computing A ∪ B ∩ C left to right when there are no parentheses
+
+Right: Intersection typically has higher precedence, like multiplication in arithmetic. But always use parentheses to be clear.
+
+Why it happens: Not knowing the conventional order of operations for set theory.
+
+**Mistake 6: Treating union as addition**
+
+Wrong: Thinking |A ∪ B| = |A| + |B| (where |A| means the number of elements)
+
+Right: |A ∪ B| = |A| + |B| - |A ∩ B|. You must subtract the overlap to avoid double-counting.
+
+Why it happens: Forgetting that elements in both sets shouldn't be counted twice.
+
+**Mistake 7: Incorrect interval notation**
+
+Wrong: [1, 3] ∪ [5, 7] = [1, 7]
+
+Right: [1, 3] ∪ [5, 7] remains as two separate intervals because the gap from 3 to 5 isn't included.
+
+Why it happens: Thinking union always creates a single continuous interval.
+
+---
+
+## Related Topics
+
+- [Subset Calculator](/calculator/mathematics/subset) - Check if one set contains another
+- [Power Set Calculator](/calculator/mathematics/power-set) - All possible subsets
+
+---
+
+## How This Calculator Works
+
+**Step 1: Parse input sets**
+```
+Extract elements from set A
+Extract elements from set B
+Remove duplicates within each set
+Convert to appropriate data type
+```
+
+**Step 2: Calculate union**
+```
+Create empty result set
+Add all elements from set A
+Add all elements from set B (skip duplicates)
+Sort result if elements are orderable
+```
+
+**Step 3: Calculate intersection**
+```
+Create empty result set
+For each element in set A:
+  If element also in set B:
+    Add to result set
+Sort result
+```
+
+**Step 4: Additional set operations (optional)**
+```
+Calculate set difference: A - B
+Calculate symmetric difference: (A - B) ∪ (B - A)
+Determine if sets are disjoint: A ∩ B = ∅
+```
+
+**Step 5: Calculate cardinalities**
+```
+Count |A| = number of elements in A
+Count |B| = number of elements in B
+Count |A ∪ B|
+Count |A ∩ B|
+Verify: |A ∪ B| = |A| + |B| - |A ∩ B|
+```
+
+**Step 6: Generate Venn diagram**
+```
+Create visual representation
+Show elements unique to A
+Show elements unique to B
+Show elements in intersection
+Label all regions
+```
+
+**Step 7: Display results**
+```
+Show A ∪ B with set notation
+Show A ∩ B with set notation
+Provide Venn diagram
+List element counts
+Explain which elements went where
+```
+
+---
+
+## FAQs
+
+**What is the union of two sets?**
+
+The union of sets A and B, written A ∪ B, contains all elements that are in A or in B (or in both). It's everything from both sets combined.
+
+**What is the intersection of two sets?**
+
+The intersection of sets A and B, written A ∩ B, contains only elements that are in both A and B simultaneously. It's the overlap.
+
+**Can sets have no intersection?**
+
+Yes, if two sets have no common elements, their intersection is the empty set ∅. Such sets are called disjoint.
+
+**Is A ∪ B the same as B ∪ A?**
+
+Yes, union is commutative. Order doesn't matter: A ∪ B = B ∪ A.
+
+**Is A ∩ B the same as B ∩ A?**
+
+Yes, intersection is also commutative. A ∩ B = B ∩ A.
+
+**What if a set is empty?**
+
+A ∪ ∅ = A (union with empty set doesn't change A)
+A ∩ ∅ = ∅ (intersection with empty set is always empty)
+
+**How do I find union of three sets?**
+
+Work left to right: (A ∪ B) ∪ C. First find A ∪ B, then union that result with C.
+
+**What's the difference between ∪ and U?**
+
+∪ is the union symbol (set operation). U is just the letter U. Don't confuse them, though the symbol resembles the letter intentionally.
+
+**Can elements repeat in a set?**
+
+No, sets contain unique elements. `{1, 2, 2, 3}` is the same as `{1, 2, 3}`.
+
+**How do I know how many elements are in the union?**
+
+Use the formula: |A ∪ B| = |A| + |B| - |A ∩ B|. This accounts for not double-counting the intersection.
+
+**What does disjoint mean?**
+
+Two sets are disjoint if they have no elements in common, meaning A ∩ B = ∅.
+
+**Can I do union and intersection with more than two sets?**
+
+Yes. A ∪ B ∪ C ∪ D works fine. Same with intersections. Process them in order or use parentheses to be clear.
+
+**What's the complement of a set?**
+
+The complement of A (written A' or A̅) contains all elements not in A, relative to some universal set. It's different from union and intersection.
+
+**How do these relate to logic?**
+
+Union corresponds to "or" (logical OR). Intersection corresponds to "and" (logical AND). Set theory and logic are deeply connected.
+
+**What's symmetric difference?**
+
+Elements in A or B but not in both. Written A △ B or A ⊕ B. It's (A ∪ B) - (A ∩ B).
+
+**Can I use these operations on infinite sets?**
+
+Yes, the definitions extend to infinite sets. For example, the union of all even numbers and all odd numbers is all integers.
+
+**What if sets contain different types of elements?**
+
+You can't usually compare different types meaningfully. `{1, 2, 3}` and `{a, b, c}` are disjoint because integers and letters are different.
+
+**How do intervals work with these operations?**
+
+[1, 3] ∪ [2, 4] = [1, 4] (continuous from 1 to 4)
+[1, 3] ∩ [2, 4] = [2, 3] (overlapping portion)
+
+**What's the universal set?**
+
+The set containing all elements under consideration. The complement of A is relative to this universal set.
+
+**Are these operations associative?**
+
+Yes. (A ∪ B) ∪ C = A ∪ (B ∪ C) and (A ∩ B) ∩ C = A ∩ (B ∩ C). Grouping doesn't matter.

@@ -1,0 +1,246 @@
+## Percentage Difference Calculator: Compare Two Values
+
+## Table of Contents - Percentage Difference
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Understanding Percentage Difference](#understanding-percentage-difference)
+- [How to Calculate Percentage Difference Manually](#how-to-calculate-percentage-difference-manually)
+- [Real-World Applications](#real-world-applications)
+- [Common Mistakes to Avoid](#common-mistakes-to-avoid)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Percentage Difference
+
+Enter the first value in the "Value 1" input field.
+
+Enter the second value in the "Value 2" input field.
+
+Click "Calculate" to see results. The output displays:
+- The percentage difference between the two values
+- The formula used
+- Step-by-step calculation breakdown
+- Absolute difference for reference
+
+The order of values doesn't matter—percentage difference is symmetric.
+
+---
+
+## Understanding Percentage Difference
+
+Percentage difference measures the relative difference between two values as a percentage of their average. Unlike percentage change (which has a directional base), percentage difference treats both values equally.
+
+**The fundamental formula:**
+Percentage Difference = (|Value1 - Value2| / ((Value1 + Value2) / 2)) × 100
+
+**Key distinction:**
+- **Percentage Difference:** Symmetric, uses average as base. Comparing two independent values.
+- **Percentage Change:** Asymmetric, uses original as base. Tracking change from a starting point.
+
+**When to use percentage difference:**
+Use when comparing two measurements with no clear "before" and "after" relationship—comparing two products, two regions, two competitors, or two alternatives.
+
+**Why the average matters:**
+Using the average as the base ensures symmetry. The percentage difference from A to B equals the difference from B to A. This prevents bias toward either value.
+
+**Range:**
+Percentage difference can range from 0% (identical values) to 200% (comparing a positive number with zero, or positive with equally negative).
+
+---
+
+## How to Calculate Percentage Difference Manually
+
+**Standard formula:**
+Percentage Difference = (|Value1 - Value2| / Average) × 100
+Where Average = (Value1 + Value2) / 2
+
+**Step-by-step process:**
+1. Find the absolute difference: |Value1 - Value2|
+2. Calculate the average: (Value1 + Value2) / 2
+3. Divide difference by average
+4. Multiply by 100
+
+**Example 1: Comparing prices**
+Product A: £150, Product B: £200
+Absolute difference = |150 - 200| = 50
+Average = (150 + 200) / 2 = 175
+Percentage difference = (50 / 175) × 100 ≈ 28.57%
+
+**Example 2: Comparing measurements**
+Lab result 1: 85 mg/dL, Lab result 2: 95 mg/dL
+Absolute difference = |85 - 95| = 10
+Average = (85 + 95) / 2 = 90
+Percentage difference = (10 / 90) × 100 ≈ 11.11%
+
+**Example 3: Symmetric property**
+Value A: 100, Value B: 120
+Difference = 20, Average = 110, Percentage = 18.18%
+
+Value A: 120, Value B: 100
+Difference = 20, Average = 110, Percentage = 18.18%
+Same result regardless of order.
+
+**When values have opposite signs:**
+Comparing positive and negative values requires care. The average might be near zero, creating extreme percentages. Consider using absolute difference instead.
+
+---
+
+## Real-World Applications
+
+**Product comparison.** Laptop A costs £800, Laptop B costs £1,000. Percentage difference = (200 / 900) × 100 ≈ 22.22%. Helps consumers gauge price variation.
+
+**Performance benchmarks.** CPU A scores 8,500 points, CPU B scores 9,200 points. Difference = (700 / 8,850) × 100 ≈ 7.91%. Evaluates performance parity.
+
+**Scientific measurements.** Two thermometers read 98.2°F and 98.8°F. Difference = (0.6 / 98.5) × 100 ≈ 0.61%. Assesses measurement consistency.
+
+**Regional analysis.** City A median income £45,000, City B median income £52,000. Difference = (7,000 / 48,500) × 100 ≈ 14.43%. Compares economic conditions.
+
+**Quality control.** Target weight 500g. Sample A: 495g, Sample B: 505g. Difference = (10 / 500) × 100 = 2%. Evaluates manufacturing variance.
+
+**Athletic performance.** Runner A completes race in 28.5 minutes, Runner B in 30.2 minutes. Difference = (1.7 / 29.35) × 100 ≈ 5.79%. Compares competitive parity.
+
+**Survey results.** Poll A shows 52% approval, Poll B shows 48% approval. Difference = (4 / 50) × 100 = 8%. Compares polling variation.
+
+---
+
+## Common Mistakes to Avoid
+
+**Using percentage change instead of percentage difference.** Percentage change has direction (from original to new). Percentage difference is symmetric. For comparing two independent values, use percentage difference.
+
+**Forgetting the average denominator.** Simply dividing the difference by one value creates asymmetry. Always use the average: (Value1 + Value2) / 2.
+
+**Confusing with percentage points.** If approval rates are 45% and 50%, the percentage difference is approximately 10.5%, not 5%. The 5 is the absolute difference in percentage points.
+
+**Applying to values near zero.** When the average approaches zero, percentage difference becomes unstable. Example: comparing +5 and -5 has average 0, making calculation impossible. Use absolute difference instead.
+
+**Misinterpreting direction.** Percentage difference has no direction—it's the same from A to B or B to A. If direction matters, use percentage change.
+
+**Ignoring absolute magnitude.** A 50% difference between £2 and £3 is £1. A 50% difference between £2,000 and £3,000 is £1,000. Same percentage, vastly different practical impact.
+
+**Overcomplicating simple comparisons.** Sometimes the absolute difference (£50) is clearer than percentage (25.6%). Choose the metric that communicates best for your audience.
+
+---
+
+## Related Topics
+
+**Percentage change.** Directional metric measuring change from an original value to a new value. Uses original as denominator.
+
+**Percentage points.** Arithmetic difference between two percentages. If approval goes from 40% to 45%, that's a 5 percentage point increase.
+
+**Relative error.** In science, comparing measured value to true value: |measured - true| / true × 100.
+
+**Coefficient of variation.** Standard deviation divided by mean, expressed as percentage. Measures relative variability.
+
+**Percent error.** Similar to percentage difference but asymmetric, using the expected or true value as the base.
+
+Explore more at [Percentage Calculator](/calculator/mathematics/percentage) and [Percent Error Calculator](/calculator/mathematics/percent-error).
+
+---
+
+## How This Calculator Works
+
+**Calculation:**
+```
+absoluteDifference = |value1 - value2|
+average = (value1 + value2) / 2
+percentageDifference = (absoluteDifference / average) × 100
+```
+
+**Validation:**
+The calculator verifies:
+- Both values are numeric
+- Average is not zero (prevents division by zero)
+- Results are displayed with appropriate precision
+
+**Special cases:**
+- If both values are identical, result is 0%
+- If values have opposite signs with average near zero, a warning is shown
+- Negative values are handled, but require careful interpretation
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**What's the difference between percentage difference and percentage change?**
+
+Percentage change is directional: (new - old) / old × 100. It matters which is "old" and which is "new." Percentage difference is symmetric: |A - B| / average × 100. Order doesn't matter. Use change for tracking progress, difference for comparing alternatives.
+
+**When should I use percentage difference instead of percentage change?**
+
+Use percentage difference when comparing two independent values with no temporal or causal relationship—two products, two competitors, two regions. Use percentage change when tracking a value over time or measuring impact of an intervention.
+
+**Can percentage difference exceed 100%?**
+
+Yes. When comparing values with very different magnitudes, percentage difference can exceed 100%. Comparing 10 and 50: (40 / 30) × 100 = 133.33%. This is mathematically valid but can be confusing.
+
+**Why use the average as the denominator?**
+
+Using the average ensures symmetry—the percentage difference from A to B equals the difference from B to A. This prevents bias toward either value and provides a neutral comparison base.
+
+**How do I compare percentage difference with absolute difference?**
+
+Absolute difference shows actual magnitude (£50). Percentage difference shows relative scale (25%). Both are useful. For communicating to general audiences, often both should be provided.
+
+**What if one value is zero?**
+
+If one value is zero and the other isn't, the average is half the non-zero value. The percentage difference becomes 200%. Example: comparing 0 and 100 gives (100 / 50) × 100 = 200%.
+
+**Can I use percentage difference with negative numbers?**
+
+Yes, but carefully. If both are negative, it works normally. If signs differ, the average might be near zero, creating extreme percentages. Check if percentage difference is the right metric for your scenario.
+
+**How is percentage difference used in scientific research?**
+
+Researchers use it to compare experimental conditions, measurement methods, or replicate results. It helps assess whether differences between samples are meaningful or within expected variation.
+
+**What's the relationship between percentage difference and error margins?**
+
+In quality control, percentage difference from target value indicates tolerance compliance. A 2% difference might be acceptable; 10% might indicate a problem. Acceptable ranges vary by industry.
+
+**How do I interpret a 50% percentage difference?**
+
+A 50% difference means the absolute difference is half the average value. Example: comparing 100 and 150—difference is 50, average is 125, percentage is 40%. Comparing 100 and 200—difference is 100, average is 150, percentage is 66.67%.
+
+**Is percentage difference the same as relative difference?**
+
+Yes, they're used interchangeably. Both express the difference relative to the average. Some fields prefer "relative difference," others "percentage difference."
+
+**How does percentage difference help in decision-making?**
+
+It contextualizes differences. A £10 difference between £50 and £60 items (18.2%) is more significant than between £500 and £510 items (1.98%). Percentages help assess proportional importance.
+
+**Can I calculate percentage difference for more than two values?**
+
+The standard formula applies to two values. For multiple values, calculate pairwise differences or use statistical measures like coefficient of variation (standard deviation / mean).
+
+**What's a "small" versus "large" percentage difference?**
+
+Context-dependent. In manufacturing, 1-2% might be large. In economic forecasts, 10-15% might be acceptable. Domain expertise determines significance thresholds.
+
+**How do I explain percentage difference to non-technical audiences?**
+
+"Percentage difference shows how far apart two numbers are relative to their average." Use concrete examples: "These two prices differ by 20%, meaning the gap is one-fifth of their average price."
+
+**Does percentage difference account for uncertainty?**
+
+No, it's a point estimate. If measurements have uncertainty ranges, consider whether differences are statistically significant. Percentage difference alone doesn't provide confidence intervals.
+
+**How does percentage difference relate to variance?**
+
+Both measure spread. Variance measures dispersion around the mean across a dataset. Percentage difference measures relative gap between two specific values. Different purposes, related concepts.
+
+**When is absolute difference more useful than percentage difference?**
+
+When base values are very small, percentages can be misleading. "50% more!" sounds dramatic, but if it's 2 vs. 3, absolute difference (1) is clearer. Use both for comprehensive communication.
+
+**Can percentage difference be negative?**
+
+No. The formula uses absolute value, so the result is always non-negative. Direction is indicated by which value is larger, but the percentage itself is positive.
+
+**How do I handle percentage difference in data visualization?**
+
+Use bar charts or diverging bar charts to show differences. Include absolute values for context. Color coding can indicate magnitude ranges (e.g., less than 5% green, 5-15% yellow, greater than 15% red).

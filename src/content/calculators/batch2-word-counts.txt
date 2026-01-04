@@ -1,0 +1,5 @@
+baking.mdx: 1892 words
+basic.mdx: 1898 words
+binary-converter.mdx: 1942 words
+bmi.mdx: 1885 words
+bmr.mdx: 2023 words

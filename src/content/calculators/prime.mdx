@@ -1,0 +1,302 @@
+## Prime Number Calculator: Primality Testing and Factorization
+
+## Table of Contents - Prime
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Prime Numbers](#the-core-principle-prime-numbers)
+- [How to Test Primality and Factor Numbers](#how-to-test-primality-and-factor-numbers)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Prime
+Select your Calculation Type:
+- Check Primality — Determine if a number is prime
+- Prime Factorization — Break a number into prime factors
+- Generate Primes — List all primes up to a limit
+
+For primality testing and factorization, enter a positive integer greater than 1.
+
+For prime generation, enter an upper limit.
+
+Click "Calculate" to see results. The output displays:
+- Primality verdict (Prime or Composite)
+- Complete prime factorization in exponential form (e.g., 504 = 2³ × 3² × 7)
+- List of prime numbers up to your specified limit
+- Step-by-step factor tree for educational purposes
+
+---
+
+## The Core Principle: Prime Numbers
+
+A prime number has exactly two divisors: 1 and itself. This simple definition has profound implications.
+
+**Examples of primes:** 2, 3, 5, 7, 11, 13, 17, 19, 23, 29...
+
+**The number 1 is not prime** because it has only one divisor (itself), not two.
+
+**The number 2 is the only even prime** because all other even numbers are divisible by 2.
+
+**The Fundamental Theorem of Arithmetic** states that every integer greater than 1 has a unique prime factorization. This uniqueness is why primes are called the "building blocks" of integers.
+
+**There are infinitely many primes.** Euclid proved this over 2,000 years ago. No matter how large a prime you find, there's always a larger one.
+
+The distribution of primes becomes sparser as numbers grow larger, but they never stop appearing entirely.
+
+---
+
+## How to Test Primality and Factor Numbers
+
+**Trial division for primality:**
+To check if n is prime, test divisibility by all integers from 2 to √n.
+
+Example: Is 97 prime?
+√97 ≈ 9.8
+Test: 97 ÷ 2, 97 ÷ 3, 97 ÷ 5, 97 ÷ 7 (primes up to 9)
+None divide evenly → 97 is prime.
+
+**Prime factorization by repeated division:**
+1. Divide by 2 until no longer divisible
+2. Move to 3, then 5, then 7...
+3. Continue until quotient is 1
+
+Example: Factor 504
+504 ÷ 2 = 252
+252 ÷ 2 = 126
+126 ÷ 2 = 63
+63 ÷ 3 = 21
+21 ÷ 3 = 7
+7 ÷ 7 = 1
+
+Result: 504 = 2³ × 3² × 7
+
+**Sieve of Eratosthenes for generating primes:**
+1. List all integers from 2 to n
+2. Start with 2 (first prime)
+3. Cross out all multiples of 2
+4. Move to next uncrossed number (3)
+5. Cross out all multiples of 3
+6. Repeat until you've processed all numbers up to √n
+7. Remaining uncrossed numbers are prime
+
+---
+
+## Real-World Applications
+
+**Cryptography.** RSA encryption relies on the difficulty of factoring large numbers. Your secure online transactions depend on the computational intractability of prime factorization.
+
+**Hash functions.** Prime numbers are used in hash table sizing and hash function design to minimize collisions.
+
+**Random number generation.** Prime moduli are used in linear congruential generators for pseudo-random numbers.
+
+**Error detection.** Cyclic redundancy checks (CRCs) use prime-based polynomials for data integrity verification.
+
+**Music and acoustics.** Prime-numbered frequencies avoid harmonic overlap, useful in speaker placement and room acoustics.
+
+**Cicada life cycles.** Some cicada species have prime-numbered life cycles (13 or 17 years), possibly to avoid synchronizing with predator cycles.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The even prime exception.** Students often think all primes are odd. But 2 is prime—the only even prime. It's special because it's the smallest prime.
+
+**The 1 is not prime confusion.** By historical convention and mathematical utility, 1 is neither prime nor composite. If 1 were prime, unique factorization would fail.
+
+**The factor tree approach.** Building a factor tree helps visualize factorization. Branch until all leaves are prime; the product of leaves equals the original number.
+
+**The large number challenge.** Testing 1,000,000 for primality requires checking divisors up to 1,000. Testing 1,000,000,000,000 requires checking up to 1,000,000. Size matters exponentially.
+
+**The twin prime observation.** Pairs like (11, 13) and (17, 19) are "twin primes"—primes differing by 2. Whether infinitely many exist remains unproven.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Algorithm efficiency.** Trial division is O(√n) but impractical for very large numbers. Probabilistic tests like Miller-Rabin are faster but not deterministic.
+
+**Deterministic versus probabilistic.** For cryptographic applications, "probably prime" (with astronomically small error probability) is acceptable. For mathematical proof, deterministic verification matters.
+
+**Factorization difficulty.** Primality testing is computationally easy (polynomial time). Factorization is believed to be hard (no known polynomial algorithm). This asymmetry enables RSA encryption.
+
+**Memory versus computation.** Storing a list of primes up to 10⁹ requires gigabytes. Computing primality on demand uses less memory but more CPU time.
+
+**Exact versus approximate.** The Prime Number Theorem approximates π(n) ≈ n/ln(n), where π(n) is the number of primes up to n. Good for estimation; not for exact counting.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Forgetting to check small factors.** When manually testing primality, start with 2 before checking odd numbers. Many composite numbers are even.
+
+**Not stopping at √n.** You only need to test divisors up to √n. If n = a × b and both a and b exceed √n, then a × b > n—contradiction.
+
+**Confusing "odd" with "prime."** 9, 15, 21, 25 are odd but composite. Oddness is necessary but not sufficient for primality (except 2).
+
+**Incomplete factorization.** Stopping before the quotient reaches 1 leaves factors unfound. Factor completely until only 1 remains.
+
+**Assuming large gaps.** Prime gaps can be arbitrarily large (consecutive composites), but new primes always eventually appear.
+
+---
+
+## Related Topics
+
+**Composite numbers.** Integers with more than two divisors. Every composite has a unique prime factorization.
+
+**GCD and LCM.** Greatest Common Divisor and Least Common Multiple use prime factorizations for efficient calculation.
+
+**Modular arithmetic.** Operations "mod n" are fundamental to number theory and cryptography, often involving prime moduli.
+
+**Fermat's Little Theorem.** If p is prime and a is not divisible by p, then a^(p-1) ≡ 1 (mod p). Basis for primality tests.
+
+**Mersenne primes.** Primes of the form 2^p - 1. The largest known primes are usually Mersenne primes.
+
+---
+
+## How This Calculator Works
+
+**Primality test (trial division):**
+```
+if n &lt; 2: return "Not prime"
+if n == 2: return "Prime"
+if n % 2 == 0: return "Composite"
+
+for i from 3 to √n, step 2:
+  if n % i == 0: return "Composite"
+
+return "Prime"
+```
+
+**Prime factorization:**
+```
+factors = []
+divisor = 2
+
+while n > 1:
+  while n % divisor == 0:
+    factors.append(divisor)
+    n = n / divisor
+  divisor++
+  if divisor² > n and n > 1:
+    factors.append(n)
+    break
+
+return factors
+```
+
+**Prime generation (Sieve of Eratosthenes):**
+```
+isPrime = array of True, size n+1
+isPrime[0] = isPrime[1] = False
+
+for i from 2 to √n:
+  if isPrime[i]:
+    for j from i² to n, step i:
+      isPrime[j] = False
+
+return indices where isPrime is True
+```
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**Is 1 a prime number?**
+
+No. By definition, a prime has exactly two divisors: 1 and itself. The number 1 has only one divisor.
+
+**Is 2 a prime number?**
+
+Yes. 2 is the only even prime and the smallest prime. It has exactly two divisors: 1 and 2.
+
+**What's the largest prime number?**
+
+Unknown—there are infinitely many. The largest known prime (as of recent records) is a Mersenne prime with millions of digits.
+
+**How does the calculator test large numbers?**
+
+For small numbers, trial division. For larger numbers, probabilistic tests (Miller-Rabin) provide high confidence with less computation.
+
+**Why is factorization hard but primality testing easy?**
+
+Primality testing has polynomial-time algorithms. No known polynomial algorithm exists for factorization. This asymmetry underpins cryptographic security.
+
+**Can this handle numbers with many digits?**
+
+The calculator efficiently handles numbers up to 10¹² for primality and 10¹⁵ for factorization. Beyond that, specialized software is needed.
+
+**What is the Prime Number Theorem?**
+
+An approximation: the number of primes up to n is approximately n/ln(n). Useful for estimating prime density.
+
+**Can I use this for homework?**
+
+Yes—the calculator shows step-by-step factorization, helping you understand the process while verifying your work.
+
+**What are twin primes?**
+
+Pairs of primes differing by 2: (3,5), (11,13), (17,19), (29,31). Whether infinitely many exist remains one of mathematics' unsolved problems.
+
+**What is the prime number theorem?**
+
+The density of primes near n is approximately 1/ln(n). This means primes become increasingly sparse but never stop appearing.
+
+**How are primes used in cryptography?**
+
+RSA encryption uses the product of two large primes. Multiplying primes is easy; factoring the product back into primes is computationally infeasible for large numbers.
+
+**What are Mersenne primes?**
+
+Primes of the form 2^p - 1, where p is itself prime. Examples: 3, 7, 31, 127. The largest known primes are typically Mersenne primes.
+
+**What is the next prime after a given number?**
+
+The calculator can find this by testing consecutive numbers for primality. Gaps between consecutive primes can be arbitrarily large.
+
+**How do prime factorizations relate to GCD and LCM?**
+
+GCD = product of shared prime factors (lowest powers). LCM = product of all prime factors (highest powers). Factorization makes these calculations systematic.
+
+**What is a prime gap?**
+
+The difference between consecutive primes. Gap between 23 and 29 is 6. Gaps can be arbitrarily large: n! + 2, n! + 3, ..., n! + n are all composite.
+
+**What are Sophie Germain primes?**
+
+Primes p where 2p + 1 is also prime. Examples: 2 (gives 5), 3 (gives 7), 5 (gives 11), 11 (gives 23). Used in cryptography.
+
+**How do I find the nth prime?**
+
+No formula gives the nth prime directly. Generate primes sequentially until you reach position n, or use approximations like n × ln(n).
+
+**What is a prime-counting function?**
+
+π(n) counts primes up to n. π(100) = 25 (there are 25 primes up to 100). Prime Number Theorem: π(n) ≈ n/ln(n).
+
+**What is a semiprime?**
+
+A number that is the product of exactly two primes. Examples: 6 = 2×3, 15 = 3×5, 77 = 7×11. Used in RSA encryption.
+
+**How do primes relate to modular arithmetic?**
+
+Fermat's Little Theorem: a^(p-1) ≡ 1 (mod p) for prime p. This is the basis for many primality tests and cryptographic algorithms.
+
+**What are prime factorization applications in everyday math?**
+
+Finding GCD and LCM, simplifying fractions, determining divisibility, solving problems involving multiple cycles or periodic events.
+
+**Why is the distribution of primes important?**
+
+Understanding prime distribution helps with cryptographic security assessment, algorithm efficiency, and fundamental number theory research.
+
+**Additional Notes**
+
+Prime numbers are mathematically beautiful and practically essential. From ancient Greek mathematics to modern cryptography, primes remain at the heart of number theory and secure communication.
+Explore the fascinating world of prime numbers using these tools.

@@ -1,0 +1,426 @@
+## Rational Zeros Calculator: Find Possible Rational Roots
+
+## Table of Contents - Rational Zeros
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Understanding the Rational Zero Theorem](#understanding-the-rational-zero-theorem)
+- [How to Apply the Theorem Manually](#how-to-apply-the-theorem-manually)
+- [Real-World Applications](#real-world-applications)
+- [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Rational Zeros
+
+Enter your polynomial in standard form with integer coefficients. For example, x³ - 6x² + 11x - 6 or 2x⁴ + 3x³ - 11x² + 12x - 4.
+
+Click "Calculate" to see all possible rational zeros. The calculator lists factors of the constant term, factors of the leading coefficient, and all possible p/q combinations.
+
+The results show the complete list of candidates to test, organized and formatted for easy verification using synthetic division or substitution.
+
+---
+
+## Understanding the Rational Zero Theorem
+
+The Rational Zero Theorem (also called the Rational Root Theorem) provides a list of all possible rational zeros of a polynomial with integer coefficients. It doesn't tell you which ones are actually zeros, but it dramatically narrows down what to test.
+
+**The theorem statement:**
+
+If a polynomial has integer coefficients and p/q is a rational zero (in lowest terms), then p must divide the constant term and q must divide the leading coefficient.
+
+**Why this works:**
+
+When you substitute a rational root p/q into the polynomial and it equals zero, the algebra forces p to be a factor of the constant and q to be a factor of the leading coefficient. This comes from the fundamental properties of polynomial division.
+
+**What it gives you:**
+
+A finite list of possibilities. Instead of testing infinitely many rational numbers, you only test the combinations of factors of two specific numbers from your polynomial.
+
+**How to use it:**
+
+1. List all factors of the constant term (positive and negative)
+2. List all factors of the leading coefficient (positive and negative)
+3. Form all possible p/q fractions
+4. Simplify and remove duplicates
+5. Test each candidate using synthetic division or substitution
+
+**When it's most helpful:**
+
+Factoring higher-degree polynomials where you need to find at least one root to get started. Once you find one rational root, synthetic division reduces the degree, making the rest easier.
+
+**Limitation:**
+
+The theorem only finds rational zeros. If your polynomial has only irrational or complex zeros, the theorem gives you candidates to test, but none will work. You'll need other methods for those roots.
+
+---
+
+## How to Apply the Theorem Manually
+
+Let me show you how to use the Rational Zero Theorem with detailed examples.
+
+**Example 1: Basic cubic**
+
+Find possible rational zeros of x³ - 6x² + 11x - 6
+
+Step 1: Identify the constant term and leading coefficient
+Constant term: -6
+Leading coefficient: 1
+
+Step 2: List factors of the constant (-6)
+±1, ±2, ±3, ±6
+
+Step 3: List factors of leading coefficient (1)
+±1
+
+Step 4: Form all p/q possibilities
+p/q where p divides -6 and q divides 1
+
+Possible zeros: ±1, ±2, ±3, ±6
+
+Step 5: Test each candidate (using synthetic division or substitution)
+Test x = 1:
+1³ - 6(1)² + 11(1) - 6 = 1 - 6 + 11 - 6 = 0 ✓
+
+Found a zero! x = 1 is a root.
+
+**Example 2: Leading coefficient not 1**
+
+Find possible rational zeros of 2x³ - 3x² - 11x + 6
+
+Step 1: Identify terms
+Constant: 6
+Leading coefficient: 2
+
+Step 2: Factors of 6
+±1, ±2, ±3, ±6
+
+Step 3: Factors of 2
+±1, ±2
+
+Step 4: Form all p/q combinations
+±1/1, ±2/1, ±3/1, ±6/1 (from q = 1)
+±1/2, ±2/2, ±3/2, ±6/2 (from q = 2)
+
+Step 5: Simplify and remove duplicates
+±1, ±2, ±3, ±6, ±1/2, ±3/2
+
+(Note: 2/2 = 1 and 6/2 = 3 are already in the list)
+
+Possible rational zeros: ±1, ±2, ±3, ±6, ±1/2, ±3/2
+
+**Example 3: Testing to find actual zeros**
+
+For 2x³ - 3x² - 11x + 6, test the candidates:
+
+Test x = 1/2:
+2(1/2)³ - 3(1/2)² - 11(1/2) + 6
+= 2(1/8) - 3(1/4) - 11/2 + 6
+= 1/4 - 3/4 - 11/2 + 6
+= -2/4 - 22/4 + 24/4
+= 0 ✓
+
+x = 1/2 is a zero!
+
+**Example 4: Higher degree polynomial**
+
+Find possible rational zeros of x⁴ - 5x³ + 5x² + 5x - 6
+
+Constant: -6, factors: ±1, ±2, ±3, ±6
+Leading coefficient: 1, factors: ±1
+
+Possible zeros: ±1, ±2, ±3, ±6
+
+Test x = 1:
+1 - 5 + 5 + 5 - 6 = 0 ✓
+
+Test x = 2:
+16 - 40 + 20 + 10 - 6 = 0 ✓
+
+Both 1 and 2 are zeros!
+
+**Example 5: No rational zeros**
+
+Find possible rational zeros of x² + x + 1
+
+Constant: 1, factors: ±1
+Leading coefficient: 1, factors: ±1
+
+Possible zeros: ±1
+
+Test x = 1: 1 + 1 + 1 = 3 ≠ 0
+Test x = -1: 1 - 1 + 1 = 1 ≠ 0
+
+No rational zeros exist. (The actual zeros are complex: -1/2 ± i√3/2)
+
+**Example 6: Large constant and leading coefficient**
+
+Find possible rational zeros of 6x³ - 5x² - 17x + 6
+
+Constant: 6, factors: ±1, ±2, ±3, ±6
+Leading coefficient: 6, factors: ±1, ±2, ±3, ±6
+
+Possible p/q combinations:
+±1, ±2, ±3, ±6 (when q = 1)
+±1/2, ±1/3, ±1/6, ±2/3, ±3/2 (various fractions)
+
+After simplifying: ±1, ±2, ±3, ±6, ±1/2, ±1/3, ±1/6, ±2/3, ±3/2
+
+That's 18 possible rational zeros to test!
+
+**Example 7: Using Descartes' Rule to narrow down**
+
+For x³ - 6x² + 11x - 6:
+
+Rational Zero Theorem gives: ±1, ±2, ±3, ±6
+
+Descartes' Rule of Signs:
+- Three sign changes means 3 or 1 positive real roots
+- f(-x) = -x³ - 6x² - 11x - 6 has zero sign changes, so 0 negative roots
+
+This tells us to only test positive candidates: 1, 2, 3, 6
+
+Testing shows 1, 2, and 3 are all roots. We found all three without testing negatives!
+
+---
+
+## Real-World Applications
+
+**Factoring for engineering calculations:**
+
+Engineering formulas often result in polynomial equations. The Rational Zero Theorem helps find exact solutions rather than relying solely on numerical approximations.
+
+**Computer algebra systems:**
+
+Math software uses the Rational Zero Theorem as a first step in polynomial solving. It's computationally cheap to generate and test candidates.
+
+**Chemistry reaction rates:**
+
+Equilibrium equations can produce polynomials. Finding rational roots helps determine realistic concentration values.
+
+**Economics break-even analysis:**
+
+Revenue minus cost polynomials need to be solved for break-even points. The theorem provides candidates to check.
+
+**Physics trajectory problems:**
+
+Time-of-flight calculations sometimes yield polynomial equations where rational solutions correspond to nice time intervals.
+
+**Educational tool:**
+
+The theorem teaches students systematic problem-solving: generate candidates methodically, test each one, use the results to factor completely.
+
+**Quality control in manufacturing:**
+
+Tolerance specifications can create polynomial inequalities. Finding exact rational boundaries helps set precise limits.
+
+---
+
+## Common Mistakes and How to Avoid Them
+
+**Mistake 1: Forgetting negative factors**
+
+Wrong: For constant -6, only listing 1, 2, 3, 6
+
+Right: Include both positive and negative: ±1, ±2, ±3, ±6
+
+Why it happens: Focusing only on magnitude. Negative values can be zeros too.
+
+**Mistake 2: Not simplifying fractions**
+
+Wrong: Including both 2/2 and 1 in your list of possibilities
+
+Right: Recognize 2/2 = 1, so don't list it twice. Simplify all fractions.
+
+Why it happens: Mechanically listing all p/q without reducing. Always simplify.
+
+**Mistake 3: Switching p and q**
+
+Wrong: Saying p divides the leading coefficient
+
+Right: p divides the constant term, q divides the leading coefficient. Don't mix them up.
+
+Why it happens: Confusing which is which. Remember: p = numerator goes with constant (both start with consonants can help remember).
+
+**Mistake 4: Testing incorrectly**
+
+Wrong: Substituting x = 2/3 but making arithmetic errors
+
+Right: Carefully compute each term. For fractions, find a common denominator. Double-check arithmetic.
+
+Why it happens: Rushing. Fraction arithmetic needs attention.
+
+**Mistake 5: Stopping after finding one zero**
+
+Wrong: Finding one zero and thinking you're done
+
+Right: For a degree n polynomial, there are n zeros (counting multiplicities). Keep looking or use synthetic division to reduce degree.
+
+Why it happens: Forgetting about multiplicity and total root count.
+
+**Mistake 6: Not using synthetic division efficiently**
+
+Wrong: Substituting each candidate into the full polynomial
+
+Right: Use synthetic division. It's faster, and if the remainder is zero, you get the reduced polynomial automatically.
+
+Why it happens: Not knowing synthetic division well. It's worth learning for this purpose.
+
+**Mistake 7: Assuming all listed values are zeros**
+
+Wrong: Thinking the theorem tells you which ones ARE zeros
+
+Right: The theorem gives possibilities. Most won't be zeros. You must test each one.
+
+Why it happens: Misunderstanding what the theorem promises. It narrows the search but doesn't provide answers directly.
+
+---
+
+## Related Topics
+
+- [Synthetic Division Calculator](/calculator/mathematics/synthetic-division) - Test candidates efficiently
+- [Polynomial Calculator](/calculator/mathematics/equation-solver) - General polynomial operations
+- [Descartes' Rule Calculator](/calculator/mathematics/descartes-rule-signs) - Narrow down candidates
+- [Complex Root Calculator](/calculator/mathematics/complex-root) - For irrational and complex zeros
+
+---
+
+## How This Calculator Works
+
+**Step 1: Parse polynomial**
+```
+Extract constant term (a₀)
+Extract leading coefficient (aₙ)
+Verify integer coefficients
+```
+
+**Step 2: Find factors of constant**
+```
+Find all divisors of |a₀|
+Include both positive and negative
+Store in array
+```
+
+**Step 3: Find factors of leading coefficient**
+```
+Find all divisors of |aₙ|
+Include both positive and negative
+Store in array
+```
+
+**Step 4: Generate all p/q combinations**
+```
+For each factor p of a₀:
+  For each factor q of aₙ:
+    Calculate p/q
+    Add to possibilities list
+```
+
+**Step 5: Simplify and deduplicate**
+```
+Reduce each fraction to lowest terms
+Remove duplicates
+Sort for easy reading
+```
+
+**Step 6: Optional testing**
+```
+For each candidate:
+  Substitute into polynomial
+  Check if result is zero
+  Mark which are actual zeros
+```
+
+**Step 7: Display results**
+```
+Show factors of constant
+Show factors of leading coefficient
+Display all possible rational zeros
+Highlight actual zeros if tested
+Provide count of possibilities
+```
+
+---
+
+## FAQs
+
+**What is the Rational Zero Theorem?**
+
+A theorem stating that any rational zero p/q (in lowest terms) of a polynomial with integer coefficients must have p dividing the constant term and q dividing the leading coefficient.
+
+**Does it tell me what the zeros are?**
+
+No, it only tells you which rational numbers could possibly be zeros. You must test each candidate to find which ones actually are zeros.
+
+**What if my polynomial has no rational zeros?**
+
+Then none of the candidates will work. The polynomial's zeros are irrational or complex. You'll need the quadratic formula or numerical methods.
+
+**How many possible rational zeros are there?**
+
+It depends on how many factors the constant and leading coefficient have. With constant 12 and leading coefficient 2, you could have 12-24 possibilities.
+
+**Do I have to test all of them?**
+
+Not always. Descartes' Rule of Signs can narrow down whether to test positives or negatives. Graphing can show approximately where zeros are.
+
+**What if the leading coefficient is 1?**
+
+Then q can only be ±1, so all possible rational zeros are just ±(factors of the constant term). Much simpler!
+
+**Can a polynomial have repeated rational zeros?**
+
+Yes. If (x - 2)² is a factor, then 2 is a zero with multiplicity 2. The Rational Zero Theorem still lists it once.
+
+**How do I test the candidates efficiently?**
+
+Use synthetic division. It's faster than substitution and gives you the reduced polynomial automatically when you find a zero.
+
+**What's the difference between a root, zero, and x-intercept?**
+
+They're the same thing viewed differently. A zero of f(x), a root of f(x) = 0, and an x-intercept of y = f(x) all refer to the same x-value.
+
+**Can the theorem find irrational zeros?**
+
+No, only rational zeros. Irrational zeros (like √2) won't appear in the list. You need other methods for those.
+
+**What if my coefficients aren't integers?**
+
+The theorem requires integer coefficients. If you have fractions or decimals, multiply the entire polynomial by a constant to clear them first.
+
+**How does this help with factoring?**
+
+Find one rational zero, use synthetic division to factor it out, reduce the polynomial degree, and repeat. This breaks down the factoring problem step by step.
+
+**Should I test the smaller numbers first?**
+
+Often yes, as smaller values are more common. But if you have reason to expect a certain value (from context or graphing), test that first.
+
+**What if I get a huge list of possibilities?**
+
+Use Descartes' Rule to determine if positive or negative roots exist. Graph to see approximate locations. These narrow down which candidates to test first.
+
+**Can a polynomial have more rational zeros than possibilities listed?**
+
+No. The theorem lists all possible rational zeros. Any rational zero must be on the list.
+
+**Do I need to worry about complex zeros here?**
+
+No, the theorem only addresses rational (real) zeros. Complex zeros require different methods.
+
+**What if the constant term is zero?**
+
+Then zero is automatically a root, and you can factor out x. Apply the theorem to the remaining polynomial.
+
+**Why must p and q be in lowest terms?**
+
+So we don't count the same zero multiple times. 2/4 and 1/2 are the same number, so we list only 1/2.
+
+**Can I use this for polynomials with coefficients in other number systems?**
+
+The standard theorem is for integer coefficients. Generalizations exist for other coefficient rings, but that's advanced algebra.
+
+**Is there a pattern to how many candidates there are?**
+
+If the constant has m factors and the leading coefficient has n factors, you can have up to 2mn possibilities (the 2 accounts for ± signs), though many will be duplicates after simplification.

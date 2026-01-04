@@ -1,0 +1,228 @@
+## Area Calculator: Calculate Square Footage for Rectangles, Circles, Triangles, and Trapezoids
+
+## Table of Contents - Area
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Area Formulas by Shape](#the-core-principle-area-formulas-by-shape)
+- [How to Calculate Area Manually](#how-to-calculate-area-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Area
+Start by selecting a shape from the four options: Rectangle, Circle, Triangle, or Trapezoid. Each shape displays different input fields.
+
+Next, select your unit of measurement: feet, meters, inches, or yards. All dimension inputs will use this unit, and results will display in the corresponding square unit.
+
+**For Rectangle:** Enter Length and Width. These are the two dimensions of the rectangular shape.
+
+**For Circle:** Enter Radius (the distance from the center to the edge, not diameter). If you know the diameter, divide it by 2.
+
+**For Triangle:** Enter Base and Height. Height must be perpendicular to the base—the vertical distance from base to apex, not the length of a slanted side.
+
+**For Trapezoid:** Enter Base 1, Base 2 (the two parallel sides), and Height (the perpendicular distance between the parallel sides).
+
+Click "Calculate Area" to see results. The calculator displays your area in multiple unit conversions: square feet, square meters, square inches, square yards, and acres. For rectangles and circles, it also shows the perimeter (or circumference for circles).
+
+---
+
+## The Core Principle: Area Formulas by Shape
+
+Area measures the two-dimensional space enclosed by a shape. Each shape has a specific formula derived from its geometry.
+
+**Rectangle:** Area = length × width. The simplest case—multiply two perpendicular dimensions.
+
+**Circle:** Area = π × radius². Because circles are symmetric, all you need is the distance from center to edge (radius), squared and multiplied by pi (approximately 3.14159).
+
+**Triangle:** Area = ½ × base × height. Any side can be the base; the height is the perpendicular distance from that base to the opposite vertex. The ½ factor accounts for a triangle being half of a parallelogram with the same base and height.
+
+**Trapezoid:** Area = ½ × (base₁ + base₂) × height. A trapezoid has two parallel sides of different lengths. This formula averages them and multiplies by the perpendicular distance between them.
+
+These formulas apply regardless of unit—the result is always in square units of whatever linear unit you used for input.
+
+---
+
+## How to Calculate Area Manually
+
+**Rectangle example:**
+
+A room is 15 feet by 12 feet.
+Area = 15 × 12 = 180 square feet
+
+**Circle example:**
+
+A circular garden has a radius of 8 feet.
+Area = π × 8² = 3.14159 × 64 = 201.1 square feet
+
+If you measured diameter (16 feet), divide by 2 first: radius = 8 feet.
+
+**Triangle example:**
+
+A triangular flower bed has a base of 10 feet and height of 6 feet.
+Area = ½ × 10 × 6 = 30 square feet
+
+Remember: height must be perpendicular to the base. If you measured a slanted side, that's not the height.
+
+**Trapezoid example:**
+
+A trapezoid-shaped yard has parallel sides of 20 feet and 14 feet, with a height of 10 feet between them.
+Area = ½ × (20 + 14) × 10 = ½ × 34 × 10 = 170 square feet
+
+**Unit conversions:**
+
+- Square feet to square meters: multiply by 0.0929
+- Square feet to square inches: multiply by 144
+- Square feet to square yards: divide by 9
+- Square feet to acres: divide by 43,560
+
+**Perimeter calculations:**
+
+Rectangle: 2 × (length + width)
+Circle (circumference): 2 × π × radius
+
+---
+
+## Real-World Applications
+
+**Flooring and carpeting.** Calculating square footage tells you how much material to buy. A 15 × 12 room needs 180 square feet of carpet, plus typically 10% extra for cuts and waste.
+
+**Paint coverage.** Paint cans specify coverage per gallon (usually 350-400 square feet). Calculate wall area (height × perimeter minus windows and doors) to determine how many gallons you need.
+
+**Landscaping and gardening.** Calculating garden bed area tells you how much soil, mulch, or sod to buy. Most materials are sold by cubic yards (volume) or coverage per bag.
+
+**Property and real estate.** Square footage is a primary metric for property valuation. Lot sizes, building footprints, and usable floor area all derive from area calculations.
+
+**HVAC sizing.** Air conditioning capacity relates to square footage. A rough rule is 20 BTU per square foot, though ceiling height, insulation, and climate affect actual requirements.
+
+**Roofing.** Roof area determines shingle or material quantity. For pitched roofs, you must calculate the actual surface area, not the footprint—a steeper pitch means more area covering the same floor space.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The non-rectangular room.** Most rooms aren't perfect rectangles. An L-shaped living room can be divided into two rectangles, each calculated separately, then added. A room with a bay window adds a trapezoid or triangle to the basic rectangle.
+
+**The diameter versus radius confusion.** You measured across the circular patio: 20 feet. That's diameter. Radius is half: 10 feet. Using diameter instead of radius quadruples your area calculation (because you're squaring it).
+
+**The "height" misunderstanding for triangles.** You measured all three sides of a triangular lot. None of those measurements is the height—height is perpendicular to the base. You need either actual perpendicular height or must use Heron's formula (requires all three sides).
+
+**The pitched roof problem.** Your house footprint is 1,500 square feet, but the roof isn't 1,500 square feet. A 6:12 pitch (rising 6 inches for every 12 inches horizontal) adds about 12% to area. Steeper pitches add more.
+
+**The irregular shape dilemma.** Your yard is curved, irregular, and defies simple shapes. Options: approximate with the closest shape, divide into multiple shapes and sum, or measure via satellite/drone imagery with area calculation tools.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Measurement precision versus practical precision.** You measured the room as 15.3 × 12.7 feet. The calculator gives 194.31 square feet. But your measurements might be off by half an inch, making the third decimal place meaningless. Round appropriately.
+
+**Waste factor for materials.** Calculated area tells you minimum material needed. Reality requires more: cuts produce waste, patterns require alignment, and extra coverage for mistakes is wise. Add 10-15% for flooring, 5-10% for paint.
+
+**Which dimensions to measure.** For rooms, measure at floor level, not ceiling (ceilings can be larger due to angled walls). For roofs, measure actual surface, not footprint. For lots, measure at ground level, not fence lines.
+
+**Interior versus exterior dimensions.** A house has a 2,000 square foot footprint (exterior). Interior living space is less due to wall thickness. Real estate listings use interior square footage for livable area.
+
+**Acres and large areas.** People underestimate how large an acre is (43,560 square feet—roughly 209 feet on each side if square). A "one-acre lot" sounds small but isn't.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Using diameter instead of radius for circles.** If your result seems four times too large, you probably entered diameter. Divide by 4 to correct, or re-enter with the actual radius (diameter ÷ 2).
+
+**Confusing base and height for triangles.** The height must be perpendicular to the base. If you used the length of a slanted side, your result is wrong. Either measure perpendicular height or use Heron's formula.
+
+**Unit mismatch.** You entered some measurements in feet and others in inches without converting. Results will be wildly wrong. Ensure all inputs use the same unit, matching your selection.
+
+**Forgetting to square units.** If a room is 15 feet × 12 feet, you have 180 square feet, not 180 feet. Square feet are area; linear feet are distance. Material suppliers need the correct unit.
+
+**Trapezoid height measurement error.** Height is the perpendicular distance between the two parallel bases, not the length of the slanted sides. Measuring along the slanted edge gives the wrong number.
+
+---
+
+## Related Topics
+
+**Volume calculations.** Area is two-dimensional; volume is three-dimensional. For soil, concrete, or fill, you need volume (area × depth). A garden bed of 100 square feet filled with 4 inches of mulch needs 33 cubic feet of material.
+
+**Perimeter applications.** Perimeter tells you how much fencing, edging, or trim you need. A 20 × 15 foot room has a 70-foot perimeter (2 × 20 + 2 × 15)—that's how much baseboard you need minus doorways.
+
+**Complex shape decomposition.** Any complex shape can be broken into triangles, rectangles, and circles. Architects and engineers do this routinely. Calculate each piece separately and sum for total area.
+
+**Heron's formula.** For triangles where you know all three sides but not height: Area = √[s(s-a)(s-b)(s-c)], where s = (a+b+c)/2 (semi-perimeter). Useful when perpendicular height is hard to measure.
+
+**Surface area versus cross-sectional area.** A cylinder has different areas depending on what you're calculating: cross-section (circle: πr²) versus total surface area (2πr² + 2πrh). Context determines which you need.
+
+---
+
+## How This Calculator Works
+
+The calculator accepts dimension inputs in your selected unit and applies the appropriate formula based on shape selection.
+
+**Rectangle:**
+Area = length × width
+Perimeter = 2 × (length + width)
+
+**Circle:**
+Area = π × radius²
+Circumference = 2 × π × radius
+
+**Triangle:**
+Area = 0.5 × base × height
+(Perimeter not calculated—would need all three sides)
+
+**Trapezoid:**
+Area = 0.5 × (base1 + base2) × height
+(Perimeter not calculated—would need all four sides)
+
+**Unit conversions:**
+
+The calculator converts the primary result to multiple square units:
+- Square feet ↔ square meters: factor of 0.0929
+- Square feet ↔ square inches: factor of 144
+- Square feet ↔ square yards: factor of 9
+- Square feet ↔ acres: factor of 43,560
+
+Conversions depend on which base unit you selected. The calculator standardizes internally and then displays all common conversions.
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**Why can't I enter diameter for circles?**
+
+The calculator expects radius. If you measured diameter, divide by 2 before entering. This is standard mathematical convention—the area formula uses radius, not diameter.
+
+**Why doesn't the triangle calculation ask for all three sides?**
+
+The base-height formula is simpler and more commonly known. Heron's formula (which uses all three sides) requires more computation and is less intuitive. The calculator assumes you can measure or calculate perpendicular height.
+
+**What's the difference between square feet and linear feet?**
+
+Linear feet measure length (one dimension). Square feet measure area (two dimensions). A 10-foot piece of trim is 10 linear feet. A 10 × 10 room is 100 square feet.
+
+**Can I calculate the area of an irregular shape?**
+
+Not directly with these four shapes. Break irregular shapes into component rectangles, triangles, and circles. Calculate each component separately and add the results.
+
+**Why does my room's calculated square footage differ from the real estate listing?**
+
+Real estate listings use specific measurement standards that may include or exclude certain areas (closets, under-stair spaces, etc.). Your measurement method and theirs may differ.
+
+**How accurate are the unit conversions?**
+
+The conversion factors are mathematically exact (or standard approximations for π). The accuracy of your final result depends on the accuracy of your input measurements, not the conversion math.
+
+**Why isn't perimeter shown for triangles and trapezoids?**
+
+Perimeter requires all sides. For triangles, this calculator only asks for base and height (two of three sides). For trapezoids, it asks for two bases and height but not the slanted sides. Without all edges, perimeter can't be calculated.
+
+**What if my trapezoid has non-parallel sides of different lengths?**
+
+That's fine—the area formula only needs the two parallel sides (bases) and the perpendicular distance between them (height). The slanted sides can be any length without affecting area.

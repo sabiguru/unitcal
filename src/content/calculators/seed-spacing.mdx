@@ -1,0 +1,294 @@
+## Seed Spacing Calculator: Plant Density for Gardens
+
+## Table of Contents - Seed Spacing
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Area Division](#the-core-principle-area-division)
+- [How to Calculate Seed Spacing Manually](#how-to-calculate-seed-spacing-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Seed Spacing
+Select your Layout Type: Grid (standard rows and columns) or Staggered (offset rows for ~15% more plants).
+
+Enter your Bed Dimensions: length and width in your preferred units (cm, meters, feet, or inches).
+
+Enter your Spacing Requirements:
+- In-row spacing: distance between plants within a row
+- Between-row spacing: distance between rows
+
+Click "Calculate" to see results. The output displays:
+- Total plants that fit
+- Number of rows
+- Plants per row
+- Recommended seed quantity (including germination buffer)
+- Visual layout preview
+
+---
+
+## The Core Principle: Area Division
+
+Seed spacing calculations determine how many plants fit in a given area based on their space requirements.
+
+**Grid layout formula:**
+Plants per row = (Bed length / In-row spacing) + 1
+Number of rows = (Bed width / Between-row spacing) + 1
+Total plants = Plants per row × Number of rows
+
+**Staggered layout:**
+Offset alternate rows by half the in-row spacing. This allows closer row spacing while maintaining plant clearance:
+Row spacing (staggered) ≈ Standard row spacing × 0.866
+This fits approximately 15% more plants in the same area.
+
+**Buffer calculation:**
+Seeds needed = Total plants × (1 + Buffer percentage)
+
+Add 10-15% for transplants, 20-30% for direct-sown seeds requiring thinning.
+
+---
+
+## How to Calculate Seed Spacing Manually
+
+**Example: 1.2m × 2.4m raised bed, kale at 35cm spacing**
+
+**Step 1: Calculate plants per row**
+Bed length = 240 cm
+Plants per row = floor(240 / 35) = 6 plants
+
+**Step 2: Calculate number of rows**
+Bed width = 120 cm
+Rows = floor(120 / 35) = 3 rows
+
+**Step 3: Calculate total plants**
+Total = 6 × 3 = 18 plants
+
+**Step 4: Add germination buffer (10%)**
+Seeds needed = 18 × 1.10 = 19.8 → 20 seeds/transplants
+
+**For staggered layout:**
+Row spacing = 35 × 0.866 = 30.3 cm
+Rows = floor(120/30.3) = 3 rows
+Alternate rows are offset by half spacing, providing better coverage and potentially more plants.
+
+---
+
+## Real-World Applications
+
+**Raised bed planning.** Calculate how many vegetable plants fit in your raised bed before buying seeds or transplants.
+
+**Allotment layouts.** Plan traditional row gardens with proper spacing for walking paths and cultivation.
+
+**Square foot gardening.** Calculate plant density for intensive methods that maximize yield per area.
+
+**Commercial growing.** Estimate seed quantities and harvest yields for market garden planning.
+
+**Companion planting.** Calculate spacing for interplanted crops that share space.
+
+**Succession planting.** Plan staggered plantings with accurate quantities for continuous harvest.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The seed packet confusion.** Packet says "thin to 4 inches apart"—that's in-row spacing. Row spacing may be different (often 12-18 inches).
+
+**The raised bed edge problem.** Plants at edges need half-spacing from the bed wall. A 4-foot bed with 12-inch spacing fits 4 plants across, not 3.
+
+**The germination shortfall.** You planted exactly 20 seeds; only 15 germinated. Always add a buffer for germination rates and seedling losses.
+
+**The transplant size surprise.** Seedlings at transplanting are tiny. Mature plants need the full spacing—don't crowd them.
+
+**The interplanting puzzle.** Tall crops (tomatoes) with ground cover (lettuce) share space. Calculate each crop's positions separately.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Density versus yield.** Tighter spacing means more plants but smaller individual yields. Optimal density varies by crop and goal.
+
+**Grid versus staggered.** Staggered fits 15% more plants but is slightly more complex to plant and cultivate.
+
+**Intensive versus traditional.** Wide rows with walking paths waste space but make maintenance easier.
+
+**Soil fertility impact.** Higher density requires proportionally more soil nutrients. Plan amendments accordingly.
+
+**Air circulation.** Crowded plants have higher disease risk, especially in humid climates. Proper spacing prevents fungal issues.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Using final size for seedling spacing.** Plant at final spacing even if seedlings look small. They'll grow to fill the space.
+
+**Forgetting row margins.** Leave 6-12 inches from bed edges to first row. Edge plants often underperform.
+
+**Ignoring plant height.** Tall crops (corn, tomatoes) need more space than their base footprint suggests.
+
+**Same spacing for all crops.** Carrots at 2-inch spacing; cabbage at 18-inch spacing. Each crop has unique requirements.
+
+**Not accounting for paths.** In-ground gardens need walking paths. Don't plant where you'll need to step.
+
+---
+
+## Related Topics
+
+**Square foot gardening.** Intensive method dividing beds into 1-foot squares with specific plants per square.
+
+**Companion planting.** Strategic plant combinations that benefit each other through pest control, pollination, or nutrient sharing.
+
+**Succession planting.** Staggered planting dates for continuous harvest rather than all-at-once gluts.
+
+**Crop rotation.** Changing plant locations annually to prevent soil depletion and disease buildup.
+
+**Germination rates.** The percentage of seeds that successfully sprout, varying by seed age, species, and conditions.
+
+---
+
+## How This Calculator Works
+
+**Grid layout:**
+```
+plantsPerRow = floor(bedLength / inRowSpacing)
+numRows = floor(bedWidth / rowSpacing)
+totalPlants = plantsPerRow × numRows
+```
+
+**Staggered layout:**
+```
+effectiveRowSpacing = rowSpacing × 0.866 (sin 60°)
+numRows = floor(bedWidth / effectiveRowSpacing)
+
+for each row:
+  if row is odd:
+    offset = inRowSpacing / 2
+  else:
+    offset = 0
+  plantsInRow = floor((bedLength - offset) / inRowSpacing)
+
+totalPlants = sum of all rows
+```
+
+**Seed quantity with buffer:**
+```
+seedsNeeded = ceiling(totalPlants × (1 + bufferPercentage))
+```
+
+**Unit conversion:**
+```
+Internally normalize to centimeters
+1 inch = 2.54 cm
+1 foot = 30.48 cm
+1 meter = 100 cm
+```
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**Where do I find correct spacing for my crops?**
+
+Check the seed packet or plant label. It specifies both in-row and between-row spacing. General guides like RHS recommendations are reliable for common UK vegetables.
+
+**What's the difference between grid and staggered layout?**
+
+Grid: plants aligned in straight rows and columns. Staggered: rows offset like bricks, fitting approximately 15% more plants while maintaining proper spacing.
+
+**Should I include a buffer for seeds?**
+
+Yes. Add 10-15% for transplants or large seeds (beans, peas). Add 20-30% for small seeds requiring thinning (carrots, lettuce, radishes).
+
+**Can I use this for flowers or herbs?**
+
+Yes. Input the appropriate spacing for your chosen species—25cm for marigolds, 45cm for rosemary, etc.
+
+**Does it work for irregularly shaped beds?**
+
+For non-rectangular beds, divide into rectangles, calculate each section, and sum the totals manually.
+
+**Why is proper spacing important?**
+
+Correct spacing prevents overcrowding, reduces disease risk, improves yields, and makes weeding and harvesting easier—especially important in damp climates.
+
+**Can I plan interplanting with this tool?**
+
+Use it separately for each crop. Calculate primary crop positions first, then fill gaps with secondary crops using their own spacing requirements.
+
+**How do I account for paths in large gardens?**
+
+Subtract path width from bed dimensions, or calculate each bed section separately. Standard paths are 18-24 inches for comfortable access.
+
+**What is square foot gardening spacing?**
+
+Mel Bartholomew's method uses 1-foot squares with specific plant counts: 1 tomato per square, 4 lettuce, 9 spinach, 16 radishes. Based on mature plant size.
+
+**How does soil quality affect spacing?**
+
+Rich soil can support tighter spacing. Poor soil may require wider spacing to reduce competition. Amend soil to support desired density.
+
+**Should I space differently for raised beds versus in-ground?**
+
+Raised beds with improved soil can often use tighter spacing. In-ground gardens with native soil may need standard or wider spacing.
+
+**How do I mark planting positions?**
+
+Use a planting board with holes at correct spacing, string lines for rows, or measure with a ruler/tape. Consistency improves appearance and ease of maintenance.
+
+**What about vertical spacing for trellised crops?**
+
+Climbing crops (beans, peas, cucumbers) need less ground spacing when trellised. Follow in-row spacing but can reduce between-row spacing.
+
+**How do I calculate for broadcast seeding?**
+
+Broadcast seeding (scattering seed) doesn't use row spacing. Calculate seeds per square foot based on desired density and germination rate, then multiply by bed area.
+
+**What is intensive spacing?**
+
+Planting closer than traditional recommendations, often in beds rather than rows. Requires excellent soil fertility and irrigation but maximizes yield per area.
+
+**How do different seasons affect spacing?**
+
+Cool-season crops grow larger in favorable conditions, potentially needing more space. Adjust spacing based on expected mature size in your growing conditions.
+
+**Can I use this calculator for indoor growing?**
+
+Yes, for soil-based indoor gardens. Hydroponic systems have different spacing requirements based on the system design and light coverage.
+
+**What about intercropping calculations?**
+
+Plan the primary crop first, then identify spaces for secondary crops. Fast-growing crops (radishes) between slow-growing crops (tomatoes) maximize space utilization.
+
+**How do I plan for seasonal succession?**
+
+Calculate space for each planting. As one crop finishes, the space becomes available for the next. Keep a planting calendar with calculated quantities for each session.
+
+**What tools help with physical layout?**
+
+Dibble boards with holes at correct spacing, seed tapes with pre-spaced seeds, and planting grids all help maintain accurate spacing without measuring each plant.
+
+**Additional Notes**
+
+Proper plant spacing is fundamental to successful gardening. Crowded plants compete for light, water, and nutrients, resulting in smaller yields and increased disease risk. Adequate spacing also makes maintenance—weeding, watering, and harvesting—much easier.
+
+Use seed packets as your primary spacing reference, as varieties may differ from general guidelines. Keep records of what works in your specific conditions, and adjust spacing based on your observations over time. The calculator provides the mathematics; your experience provides the wisdom.
+
+**Practical Tips for Success**
+
+Start with high-quality seed for better germination rates. Pre-measure and mark spacing with stakes and string before planting. Plant at the right depth as well as the right spacing. Water newly planted seeds gently to avoid displacement. Label your plantings—you'll forget what's where. Keep a garden journal with spacing results for future reference.
+
+**Understanding Plant Biology**
+
+Plants need space for roots, air circulation, and light access. Crowded roots compete for water and nutrients. Poor air circulation promotes fungal diseases. Shade from neighbors reduces photosynthesis and yield. Different plants have different requirements based on their growth habits. Understanding why spacing matters helps you make informed decisions when conditions force compromises.
+
+Proper plant spacing is an investment in garden success. The time spent calculating and marking accurate positions pays dividends in healthier plants, better yields, and easier maintenance. Combined with good soil preparation and consistent care, optimal spacing helps you grow the best garden possible.
+Every successful garden starts with good planning. Use this calculator to determine exactly how many plants fit in your space and how many seeds to buy.
+Gardening success begins with good planning. Proper spacing calculations ensure healthy plants and maximize your harvest from available space.
+Good garden planning sets the foundation for a bountiful harvest.
+Plan your garden well and nature rewards your effort.

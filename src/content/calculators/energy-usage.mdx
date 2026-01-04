@@ -1,0 +1,266 @@
+## Energy Usage Calculator: Home Electricity Cost Calculator
+
+## Table of Contents - Energy Usage
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Watts, Hours, and Kilowatt-Hours](#the-core-principle-watts-hours-and-kilowatt-hours)
+- [How to Calculate Energy Usage Manually](#how-to-calculate-energy-usage-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Energy Usage
+Enter your Electricity Rate in dollars per kilowatt-hour ($/kWh). Find this on your utility bill—typical rates range from $0.10 to $0.30 depending on location.
+
+For each appliance, fill in a row:
+- Name: Description of the appliance
+- Wattage: Power consumption in watts (find on nameplate or manual)
+- Hours per Day: How many hours it runs daily
+- Days per Month: How many days per month it's used (default 30)
+
+Use the "Add Appliance" button to add more rows. The calculator includes presets for common appliances (refrigerator, LED bulb, computer, air conditioner, etc.) that auto-fill typical wattage and usage values.
+
+Click "Calculate" to see results. The output displays:
+- Each appliance's daily, monthly, and annual energy consumption (kWh)
+- Each appliance's monthly and annual cost
+- Totals across all appliances
+- Average daily cost
+- Average hourly usage
+- Estimated annual CO₂ emissions
+
+---
+
+## The Core Principle: Watts, Hours, and Kilowatt-Hours
+
+Energy consumption is power multiplied by time. A device's wattage tells you how much power it uses at any moment; running time determines total energy consumed.
+
+The formula: Energy (kWh) = Power (W) × Time (hours) ÷ 1000
+
+The division by 1000 converts watt-hours to kilowatt-hours, the standard billing unit.
+
+A 100W light bulb running for 10 hours uses 1 kWh (100 × 10 ÷ 1000 = 1). At $0.15/kWh, that costs $0.15.
+
+Some appliances cycle on and off (refrigerators, air conditioners). Their "duty cycle"—the percentage of time they're actually running—affects real consumption. A refrigerator rated at 150W might only run 40% of the time, effectively using 60W on average.
+
+Understanding energy usage helps identify the biggest consumers in your home, evaluate efficiency upgrades, and control electricity costs.
+
+---
+
+## How to Calculate Energy Usage Manually
+
+**Basic daily energy:**
+Daily kWh = Wattage × Hours per day ÷ 1000
+
+Example: 1500W space heater for 4 hours
+Daily kWh = 1500 × 4 ÷ 1000 = 6 kWh
+
+**Monthly energy:**
+Monthly kWh = Daily kWh × Days per month
+
+Example: Space heater 6 kWh/day × 30 days = 180 kWh/month
+
+**Monthly cost:**
+Cost = Monthly kWh × Rate per kWh
+
+Example: 180 kWh × $0.15 = $27/month
+
+**Annual cost:**
+Annual = Monthly × 12 (or Daily × 365)
+
+Example: $27 × 12 = $324/year
+
+**With duty cycle:**
+Effective wattage = Rated wattage × Duty cycle %
+
+Example: 400W refrigerator at 50% duty cycle
+Effective = 400 × 0.50 = 200W average
+
+**CO₂ emissions:**
+CO₂ (lbs) = kWh × 0.92 (US average emission factor)
+
+Example: 180 kWh × 0.92 = 166 lbs CO₂
+
+---
+
+## Real-World Applications
+
+**Identifying energy hogs.** Calculate consumption for each major appliance. Often, one or two devices (water heater, air conditioning, old refrigerator) dominate your bill.
+
+**Evaluating efficiency upgrades.** Compare old versus new appliance costs. If a new refrigerator saves $10/month and costs $600, payback is 5 years.
+
+**Budgeting for new appliances.** Before buying a space heater, hot tub, or gaming PC, calculate ongoing electricity costs. A 1500W heater at 8 hours/day costs $36/month at $0.15/kWh.
+
+**Seasonal cost forecasting.** Summer AC and winter heating dramatically change usage. Calculate expected costs before the season hits.
+
+**Time-of-use optimization.** If your utility charges more during peak hours, calculate which heavy loads (laundry, dishwasher) to shift to off-peak times.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The phantom load surprise.** Devices on standby (TV, game consoles, chargers) use power continuously. A home might have 50-100W of "vampire" loads running 24/7—costing $50-100/year.
+
+**The old appliance trap.** Your 20-year-old refrigerator uses 600 kWh/year. A new efficient model uses 300 kWh/year. The $30/year savings pays for replacement over 10 years—plus the old fridge was probably about to fail anyway.
+
+**The space heater shock.** "It's just a small heater" — but at 1500W for 8 hours daily, it adds $36/month to your bill. Electric resistance heating is expensive.
+
+**The AC accounting.** A 3000W central AC running 8 hours on hot days uses 720 kWh/month = $108 at $0.15/kWh. This single appliance can triple summer electric bills.
+
+**The LED payback.** Replacing a 60W incandescent with a 9W LED saves 51W. At 5 hours/day, that's 93 kWh/year savings = $14/year. A $3 LED pays back in 3 months.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Upfront cost versus operating cost.** A cheap, inefficient appliance costs more long-term. A $500 air conditioner using 1000W versus a $700 unit using 700W—the efficient one saves $50/year and pays back the premium in 4 years.
+
+**Convenience versus cost.** Running the dryer costs about $0.50 per load; air drying is free but takes time and space. Convenience has a price.
+
+**Comfort versus savings.** Raising AC from 72°F to 76°F can save 10-15% on cooling costs. Is comfort worth $10-20/month?
+
+**Time-of-use complexity.** Shifting loads to off-peak hours saves money but requires behavior change. Is the savings worth remembering to run the dishwasher at 9 PM?
+
+**Solar economics.** Your energy usage determines solar panel payback. High-usage homes benefit more from solar than low-usage homes.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Using nameplate wattage for cycling appliances.** A 400W refrigerator doesn't run continuously. Apply a duty cycle (30-50% typical) for accurate estimates.
+
+**Forgetting standby power.** Devices that seem "off" may still draw power. Use a smart power strip or unplug devices to eliminate phantom loads.
+
+**Ignoring seasonal variation.** Your summer bill (AC) and winter bill (heating, if electric) are very different from spring and fall. Calculate seasonally for accurate annual estimates.
+
+**Using rated efficiency versus real efficiency.** Advertised energy ratings assume ideal conditions. Real-world usage (door openings, temperature settings, maintenance) affects actual consumption.
+
+**Focusing on small loads.** Obsessing over 5W phone chargers while ignoring the 4000W water heater misallocates effort. Prioritize the biggest consumers.
+
+---
+
+## Related Topics
+
+**Energy audit.** A comprehensive analysis of home energy use, often including insulation, HVAC efficiency, and appliance assessment. Utilities sometimes offer free audits.
+
+**Time-of-use rates.** Some utilities charge different rates at different times. Peak hours (evenings) cost more; off-peak (night, weekends) costs less.
+
+**Demand charges.** For commercial accounts, utilities may charge based on peak demand (maximum instantaneous usage) in addition to total consumption.
+
+**Energy Star ratings.** Appliances meeting EPA efficiency standards. Energy Star products use 10-50% less energy than standard models.
+
+**Smart meters and monitoring.** Real-time energy monitoring shows exactly what's using power. Smart plugs can measure individual device consumption.
+
+---
+
+## How This Calculator Works
+
+**Per-appliance calculations:**
+
+```
+dailyKWh = (wattage × hoursPerDay) / 1000
+monthlyKWh = dailyKWh × daysPerMonth
+annualKWh = dailyKWh × 365
+monthlyCost = monthlyKWh × rate
+annualCost = annualKWh × rate
+```
+
+**Totals:**
+
+Sum all appliances for total monthly kWh, annual kWh, monthly cost, and annual cost.
+
+**Derived values:**
+
+```
+avgDailyCost = annualCost / 365
+avgHourlyUsage = annualKWh / (365 × 24)
+co2Emissions = annualKWh × 0.92 (lbs CO₂ per kWh, US average)
+```
+
+**Common appliance presets:**
+
+The calculator includes typical wattages for:
+- Refrigerator: 400W (runs ~8 hours effectively due to cycling)
+- LED Light Bulb: 9W
+- Desktop Computer: 300W
+- Air Conditioner: 3000W
+- Washing Machine: 500W
+- Dishwasher: 1800W
+- Television (55" LED): 150W
+- Microwave: 1000W
+- Water Heater: 4000W
+- Dryer: 3000W
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**Where do I find my electricity rate?**
+
+Check your utility bill. Look for "price per kWh" or divide total charges by kWh used. Typical US rates range from $0.10 to $0.30/kWh depending on location.
+
+**What uses the most electricity in a home?**
+
+Typically: HVAC (heating/cooling), water heating, refrigerator, and laundry. These four categories often account for 50-70% of home electricity use.
+
+**How do I find an appliance's wattage?**
+
+Check the nameplate (usually on the back or bottom), the manual, or search the model number online. Some devices list amps instead; multiply amps by voltage (usually 120V US) to get watts.
+
+**Why is my calculated usage different from my bill?**
+
+Possible reasons: seasonal variation not accounted for, appliances you forgot to include, duty cycles different than assumed, or rate changes on your bill. Also verify you're using actual kWh from the bill.
+
+**How much do standby devices really cost?**
+
+A typical home has 20-50W of standby loads running 24/7. At $0.15/kWh, that's $26-66/year—not huge, but not nothing.
+
+**Is it worth unplugging devices when not in use?**
+
+For devices with significant standby draw (game consoles, cable boxes, computers), yes. For minimal-draw devices (phone chargers, LED bulbs), the savings are negligible.
+
+**How accurate are these estimates?**
+
+Within 10-20% for most appliances when you use actual wattage and realistic usage hours. Cycling appliances (refrigerators, HVAC) require duty cycle adjustments for accuracy.
+
+**Should I buy Energy Star appliances?**
+
+Generally yes for major appliances you'll use for years. The efficiency savings compound over the appliance's lifetime. For rarely-used devices, the premium may not pay back.
+
+**How do smart plugs help with energy monitoring?**
+
+Smart plugs with energy monitoring measure actual consumption of individual devices. This provides precise data rather than estimates, helping identify energy hogs and verify that "off" devices aren't drawing standby power.
+
+**What's the best way to reduce energy costs?**
+
+Focus on the biggest consumers first: HVAC, water heating, and old refrigerators. Upgrading to efficient models, adjusting thermostats, and improving insulation typically provide the largest savings. Don't obsess over small loads.
+
+**How does time-of-use pricing affect my strategy?**
+
+If your utility charges more during peak hours (typically 2-8 PM), shift heavy loads like laundry, dishwashing, and EV charging to off-peak times. The same energy use costs less at different times.
+
+**What's the payback period for efficiency upgrades?**
+
+Payback = Upgrade cost / Annual savings. If a $600 refrigerator saves $50/year versus your old one, payback is 12 years. Compare this to the appliance's expected lifespan to evaluate the investment.
+
+**How do I read my electricity bill for rate information?**
+
+Look for "price per kWh" or divide total energy charges by total kWh used. Some bills have tiered rates (higher price above a threshold) or time-of-use components. Understanding your rate structure helps optimize usage patterns.
+
+**What's the difference between demand and consumption charges?**
+
+Consumption (kWh) measures total energy used. Demand (kW) measures peak instantaneous power draw. Commercial customers often pay demand charges based on their highest 15-minute average usage in the billing period.
+
+**How can I reduce energy waste while away from home?**
+
+Unplug unnecessary devices, adjust thermostat settings, and use timers for essential items. A typical home can reduce consumption 10-20% during extended absences by eliminating standby loads and unnecessary climate control.
+
+**What's the most efficient way to heat water?**
+
+Heat pump water heaters are 2-3× more efficient than traditional electric resistance heaters. Tankless (on-demand) heaters eliminate standby losses. Solar thermal systems can provide free hot water in suitable climates.

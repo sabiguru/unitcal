@@ -1,0 +1,5 @@
+percentage.mdx: 1806 words
+ph.mdx: 1802 words
+prime.mdx: 1805 words
+protein.mdx: 1807 words
+ratio.mdx: 1800 words

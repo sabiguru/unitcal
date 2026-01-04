@@ -1,0 +1,5 @@
+tax.mdx: 1800 words
+tile.mdx: 1803 words
+time.mdx: 1800 words
+timezone-converter.mdx: 1820 words
+tip.mdx: 1802 words

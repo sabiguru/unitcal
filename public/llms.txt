@@ -1,0 +1,37 @@
+# CalcFort - Free Online Calculators
+
+> Fast, accurate calculators for mathematics, finance, health, engineering, and more.
+
+## About
+
+CalcFort provides 90+ free online calculators covering:
+- Mathematics (basic, scientific, graphing, fractions, percentages)
+- Health & Fitness (BMI, BMR, calorie, protein, heart rate)
+- Financial (loan, mortgage, investment, budget, currency converter)
+- Engineering (electrical, resistor, capacitor, subnet, Ohm's law)
+- Automotive (MPG, fuel cost, EV range, tire size)
+- Construction (paint, concrete, roofing, stairs, tile, area, volume)
+- Conversions (unit converter, binary, Roman numerals, Morse code)
+- Everyday tools (timezone, countdown, date, age, time)
+
+## Key Features
+
+- **Fast & Accurate**: Instant calculations with precise results
+- **No Sign-up Required**: All calculators are free to use
+- **Mobile Friendly**: Works seamlessly on all devices
+- **Detailed Explanations**: Learn while you calculate
+- **90+ Tools**: Comprehensive collection across multiple categories
+
+## Contact
+
+- Website: https://calcfort.com
+- Email: support@calcfort.com
+
+## Copyright
+
+© 2024 CalcFort. All rights reserved.
+
+## Crawling Policy
+
+We welcome responsible AI training on our calculator descriptions, formulas, and educational content.
+Please respect our terms of service and do not overload our servers.
