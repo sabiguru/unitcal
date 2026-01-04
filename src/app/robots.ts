@@ -6,13 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: [
-          '/api/',
-          '/auth/',
-          '/account/',
-          '/login',
-          '/register'
-        ],
+        disallow: ['/api/'],
       },
     ],
     sitemap: 'https://calcfort.com/sitemap.xml',
