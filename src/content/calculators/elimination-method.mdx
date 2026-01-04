@@ -1,0 +1,367 @@
+## Elimination Method Calculator: Solve Systems of Equations
+
+## Table of Contents - Elimination Method
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Canceling Variables](#the-core-principle-canceling-variables)
+- [How to Use Elimination Manually](#how-to-use-elimination-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Elimination Method
+
+Enter the coefficients for your system of two linear equations:
+
+**First equation:** ax + by = c
+- Enter values for a, b, and c
+
+**Second equation:** dx + ey = f
+- Enter values for d, e, and f
+
+Click "Calculate" to see results. The output displays:
+- The solution (x, y) values
+- Step-by-step elimination process
+- Which variable was eliminated first
+- Verification by substitution
+- Whether the system has one solution, no solution, or infinite solutions
+
+---
+
+## The Core Principle: Canceling Variables
+
+The elimination method is beautifully simple: add or subtract equations to make one variable disappear. Once a variable is gone, you're left with a single-variable equation you already know how to solve.
+
+**The fundamental idea:**
+
+When you have two equations with two unknowns, you can combine them strategically to eliminate one variable. Think of it like balancing scales—whatever you do to one side, you do to the other, and whatever you do to one equation, you must do to the other equation in the system.
+
+**Why elimination works:**
+
+If 3x + 2y = 11 and 3x + 5y = 17, subtracting the first from the second gives:
+(3x + 5y) - (3x + 2y) = 17 - 11
+
+The 3x terms cancel: 3y = 6, so y = 2
+
+Now substitute y = 2 back into either original equation to find x = 3/3 = 1. No, wait: 3(1) + 2(2) = 3 + 4 = 7, not 11. Let me recalculate: 3x + 4 = 11, so 3x = 7, giving x = 7/3. Actually, let me be more careful.
+
+From 3x + 2(2) = 11: 3x + 4 = 11, so 3x = 7, meaning x = 7/3.
+Check: 3(7/3) + 2(2) = 7 + 4 = 11 ✓
+
+**The three-step process:**
+
+1. **Align and compare:** Look at coefficients to decide which variable to eliminate
+2. **Multiply if needed:** Make coefficients of one variable equal (or opposites)
+3. **Add or subtract:** Combine equations to eliminate that variable
+4. **Solve and back-substitute:** Find one variable, then use it to find the other
+
+---
+
+## How to Use Elimination Manually
+
+**Basic elimination (when coefficients already match):**
+
+Example: Solve the system
+- 2x + 3y = 13
+- 2x - y = 5
+
+The x coefficients are already the same (both 2x), so subtract:
+(2x + 3y) - (2x - y) = 13 - 5
+2x + 3y - 2x + y = 8
+4y = 8
+y = 2
+
+Substitute y = 2 into the first equation:
+2x + 3(2) = 13
+2x + 6 = 13
+2x = 7
+x = 3.5
+
+Solution: (3.5, 2)
+
+**Elimination requiring multiplication:**
+
+Example: Solve the system
+- 3x + 4y = 10
+- 2x + 3y = 7
+
+Neither variable has matching coefficients. Let's eliminate x by making coefficients equal.
+
+Multiply first equation by 2: 6x + 8y = 20
+Multiply second equation by 3: 6x + 9y = 21
+
+Now subtract to eliminate x:
+(6x + 9y) - (6x + 8y) = 21 - 20
+y = 1
+
+Substitute y = 1 into 3x + 4y = 10:
+3x + 4(1) = 10
+3x = 6
+x = 2
+
+Solution: (2, 1)
+
+**Using addition instead of subtraction:**
+
+Example: Solve the system
+- 5x + 2y = 16
+- 3x - 2y = 8
+
+The y coefficients are opposites (2 and -2), so add the equations:
+(5x + 2y) + (3x - 2y) = 16 + 8
+8x = 24
+x = 3
+
+Substitute x = 3 into 5x + 2y = 16:
+5(3) + 2y = 16
+15 + 2y = 16
+2y = 1
+y = 0.5
+
+Solution: (3, 0.5)
+
+**When one coefficient is 1:**
+
+Example: Solve the system
+- x + 2y = 8
+- 3x + 5y = 19
+
+Multiply the first equation by 3: 3x + 6y = 24
+The second stays: 3x + 5y = 19
+
+Subtract:
+(3x + 6y) - (3x + 5y) = 24 - 19
+y = 5
+
+Substitute y = 5 into x + 2y = 8:
+x + 2(5) = 8
+x + 10 = 8
+x = -2
+
+Solution: (-2, 5)
+
+---
+
+## Real-World Applications
+
+**Business pricing problems.** You sell coffee and muffins. Day 1: 5 coffees + 3 muffins = $23. Day 2: 3 coffees + 4 muffins = $19. Find individual prices using elimination.
+
+**Mixture problems in chemistry.** You have two solutions with different concentrations. How much of each do you mix to get a specific concentration and volume? Elimination solves this system.
+
+**Investment allocation.** You invest in stocks and bonds totaling $50,000, earning $2,400 in interest. If stocks pay 4% and bonds pay 6%, how much is in each? Two equations, two unknowns—perfect for elimination.
+
+**Geometry and dimensions.** A rectangle's perimeter is 28 and its length is 2 more than its width. Set up equations (2L + 2W = 28 and L = W + 2) and solve with elimination.
+
+**Break-even analysis.** A company's revenue equation is R = 50x and cost equation is C = 30x + 4000. Where do they break even? This is a system where elimination (or substitution) finds x.
+
+**Nutrition planning.** You want 2000 calories and 50g protein daily from two foods. Food A has 300 cal and 8g protein per serving. Food B has 200 cal and 5g protein per serving. Elimination finds the servings needed.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The sign-flip disaster.** You're subtracting 2x - 3y = 5 from another equation. Remember: subtracting (2x - 3y) means you distribute the negative: -2x + 3y. People forget to flip the y sign and get wrong answers.
+
+**Forgetting to multiply the right side.** You multiply 2x + y = 7 by 3 to get 6x + 3y, but write "= 7" instead of "= 21." The right side needs the same multiplication.
+
+**The variable that won't eliminate.** You subtract equations expecting x to cancel, but you miscalculated coefficients. Always verify: 4x - 4x = 0 ✓, but 4x - 3x = x (not eliminated).
+
+**Decimal nightmares from poor planning.** You could eliminate x by multiplying by 2 and 3, or you could eliminate y by multiplying by 5 and 7. One gives simpler arithmetic—choose wisely.
+
+**Infinite solutions surprise.** You eliminate x and get 0 = 0. That's not an error—it means the equations represent the same line, giving infinite solutions.
+
+**No solution confusion.** You eliminate a variable and get 0 = 5. This seems wrong but means the lines are parallel (inconsistent system) with no solution point.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Which variable to eliminate first?** Look for the easiest path. If one variable already has matching or opposite coefficients, eliminate that one. Save yourself arithmetic headaches.
+
+**Multiplication strategy matters.** To match coefficients of 3 and 5, you could multiply by 5 and 3 (LCM = 15) or you could multiply by different numbers. The LCM approach minimizes the size of numbers you work with.
+
+**Elimination versus substitution.** If one equation is already solved for a variable (like y = 2x + 1), substitution is faster. If both equations are in standard form with no coefficients of 1, elimination often wins.
+
+**Fraction management.** Sometimes accepting fractional coefficients early (by dividing) simplifies later steps. Other times, clearing fractions first by multiplying prevents errors.
+
+**Adding versus subtracting.** When coefficients are opposites (3 and -3), add. When they're the same (3 and 3), subtract. Choosing correctly saves you from sign errors.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Distributing negatives incorrectly.** When subtracting an entire equation, distribute the minus to every term. Subtracting (2x + 3y = 8) means -2x - 3y = -8, not -2x + 3y = -8.
+
+**Multiplying only one side.** If you multiply the left side of an equation by 2, you must multiply the right side by 2 as well. Equations are equalities—what you do to one side, do to the other.
+
+**Wrong operation choice.** If coefficients are 3x and -3x, add the equations (they'll cancel). If they're both 3x, subtract. Using the wrong operation leaves the variable instead of eliminating it.
+
+**Losing track of which equation you modified.** Write clearly. If you multiply equation (1) by 2, label it as (1') or "new equation 1." This prevents using the wrong version later.
+
+**Arithmetic errors in combination.** When subtracting 15 - 8, some rush and get 6. Double-check your arithmetic, especially with negatives.
+
+**Forgetting to find both variables.** Finding x = 4 is only half done. Substitute back to find y. Write your final answer as an ordered pair: (4, 3).
+
+**Not verifying the solution.** Always check your answer in both original equations. If x = 2 and y = 3, plug them in. Both equations should be true statements.
+
+---
+
+## Related Topics
+
+**Substitution method.** The other major technique for solving systems—solve for one variable, then substitute into the other equation.
+
+**Graphing systems.** The solution to a system is where the lines intersect. Elimination finds this algebraically instead of graphically.
+
+**Matrices and row reduction.** Elimination is the conceptual foundation for Gaussian elimination in matrix algebra.
+
+**Three-variable systems.** The same elimination principles extend to systems with three (or more) variables, though you need more equations.
+
+**Inconsistent and dependent systems.** Understanding what 0 = 5 (no solution) and 0 = 0 (infinite solutions) mean geometrically.
+
+**Linear programming.** Systems of inequalities (not just equations) use similar algebraic techniques.
+
+**Cramer's Rule.** An alternative method using determinants to solve systems without elimination.
+
+---
+
+## How This Calculator Works
+
+**Input processing:**
+```
+Read coefficients: a, b, c from first equation
+Read coefficients: d, e, f from second equation
+System: ax + by = c
+        dx + ey = f
+```
+
+**Decision algorithm:**
+```
+Calculate determinant: D = ae - bd
+If D ≠ 0: unique solution exists
+If D = 0 and equations proportional: infinite solutions
+If D = 0 and equations not proportional: no solution
+```
+
+**Elimination process:**
+```
+Choose variable to eliminate (typically x)
+Multiply equation 1 by e: aex + bey = ce
+Multiply equation 2 by b: bdx + bey = bf
+Subtract to eliminate y: (ae - bd)x = ce - bf
+Solve: x = (ce - bf) / (ae - bd)
+```
+
+**Back substitution:**
+```
+Substitute x into first original equation
+Solve for y: y = (c - ax) / b
+Verify in second equation
+```
+
+**Output formatting:**
+```
+Display solution as ordered pair (x, y)
+Show each step of the elimination
+Indicate if system has no solution or infinite solutions
+```
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**What's the difference between elimination and substitution?**
+
+Elimination combines equations to cancel a variable. Substitution solves for one variable and plugs it into the other equation. Elimination is often cleaner when both equations are in standard form.
+
+**When should I use elimination instead of substitution?**
+
+Use elimination when both equations are in standard form (ax + by = c) with no variable isolated. Use substitution when one equation is already solved for a variable.
+
+**Can elimination work for any system of equations?**
+
+Elimination works for any linear system. For nonlinear systems (with terms like x² or xy), you need different methods.
+
+**What if both variables eliminate?**
+
+If you get 0 = 0, the equations are actually the same line (infinite solutions). If you get 0 = 5 (or any non-zero number), the lines are parallel (no solution).
+
+**How do I know which variable to eliminate first?**
+
+Choose whichever looks easier. If one variable already has matching or opposite coefficients, eliminate that one. Otherwise, eliminate the variable that requires simpler multiplication.
+
+**What if I get fractions?**
+
+Fractions are fine. Work carefully and simplify at the end. Or, at the start, multiply equations by values that clear fractions.
+
+**Can I add and subtract the same equations?**
+
+You can add or subtract equations as many times as you want, as long as you're doing it legally (treating equations as balanced equalities).
+
+**What does it mean to multiply an equation by a number?**
+
+Multiply every term on both sides by that number. If 2x + y = 5 and you multiply by 3, you get 6x + 3y = 15.
+
+**How do I check my answer?**
+
+Substitute your x and y values into both original equations. Both should produce true statements. If even one doesn't work, you made an error.
+
+**What if the coefficients are very large?**
+
+Use smaller multipliers if possible. For coefficients 12 and 18, instead of multiplying by each other (huge), multiply by 3 and 2 (their LCM is 36 vs 216).
+
+**Can elimination solve three-variable systems?**
+
+Yes. Eliminate one variable from two pairs of equations to get two two-variable equations, then solve that system.
+
+**Why would a system have no solution?**
+
+When lines are parallel—same slope, different y-intercepts. Algebraically, this shows up when elimination gives a false statement like 0 = 3.
+
+**Why would a system have infinite solutions?**
+
+When both equations represent the same line. Every point on that line is a solution. Algebraically, elimination gives 0 = 0.
+
+**Is there a formula for solving systems?**
+
+Yes—Cramer's Rule uses determinants. But elimination is more intuitive and less formulaic.
+
+**What if one equation has a missing variable?**
+
+That's actually easier. If you have x + 2y = 5 and x = 3, you already know x. Substitute directly.
+
+**Can I eliminate both variables in sequence?**
+
+No need. Eliminate one, solve for it, then substitute. Eliminating both would leave you with no variables to solve.
+
+**What's the fastest way to solve a system?**
+
+Depends on the system. If a variable has coefficient 1, substitution is fastest. If coefficients are large and no variable is isolated, elimination is fastest.
+
+**How do I handle negative coefficients?**
+
+Treat them normally. Just be extra careful with signs when adding or subtracting equations.
+
+**What if I make a mistake midway?**
+
+Your final answer won't check in the original equations. Retrace your steps or restart.
+
+**Can calculators do this faster?**
+
+Yes, but understanding elimination helps you solve by hand, check answers, and understand the geometry of intersecting lines.
+
+**Additional Notes**
+
+The elimination method is one of the most powerful techniques in algebra. It transforms a problem with two unknowns into two simpler problems with one unknown each. This divide-and-conquer strategy appears throughout mathematics.
+
+Understanding elimination builds algebraic thinking skills that transfer to advanced topics. Matrix row operations, solving differential equations, and even numerical computing methods all use the same core idea: combine equations strategically to simplify.
+
+Practice choosing the best strategy for each system. Sometimes elimination is clearly superior; other times substitution is faster. Developing this judgment makes you efficient and confident in problem-solving.
+
+The geometric interpretation matters too. When you solve a system with elimination, you're finding where two lines cross. Visualizing this connection between algebra and geometry deepens mathematical understanding.

@@ -1,0 +1,120 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider      = "prisma-client-js"
+  output        = "../src/generated/prisma"
+  binaryTargets = ["native", "rhel-openssl-1.1.x"]
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")   // pooled
+  directUrl = env("DIRECT_URL")     // direct/unpooled
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  image         String?
+  password      String?
+  plan          String    @default("free") // free, premium, enterprise
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // User preferences
+  firstName     String?
+  lastName      String?
+  phone         String?
+  timezone      String    @default("America/New_York")
+  language      String    @default("en")
+
+  // Notification settings
+  emailNotifications     Boolean @default(true)
+  newsletterSubscription Boolean @default(false)
+  securityAlerts         Boolean @default(true)
+  productUpdates         Boolean @default(true)
+
+  // Privacy settings
+  saveCalculations Boolean @default(true)
+  publicProfile    Boolean @default(false)
+  dataSharing      Boolean @default(false)
+
+  accounts           Account[]
+  sessions           Session[]
+  calculations       Calculation[]
+  favoriteCalculators FavoriteCalculator[]
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model VerificationCode {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  code      String
+  type      String   // "signup" or "login"
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model Calculation {
+  id          String   @id @default(cuid())
+  userId      String
+  type        String   // Type of calculator used
+  inputs      Json     // Input parameters as JSON
+  results     Json     // Calculation results as JSON
+  category    String   // Calculator category
+  createdAt   DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+}
+
+model FavoriteCalculator {
+  id           String @id @default(cuid())
+  userId       String
+  calculatorId String // Calculator identifier (e.g., "compound-interest")
+  name         String // Display name
+  category     String
+  createdAt    DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, calculatorId])
+}

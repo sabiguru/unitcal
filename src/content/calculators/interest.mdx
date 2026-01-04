@@ -1,0 +1,263 @@
+## Interest Calculator: Simple and Compound Interest Calculator
+
+## Table of Contents - Interest
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: How Interest Works](#the-core-principle-how-interest-works)
+- [How to Calculate Interest Manually](#how-to-calculate-interest-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Interest
+Enter your Principal Amount—the initial sum you're investing or borrowing.
+
+Enter the Annual Interest Rate as a percentage (e.g., 5 for 5%).
+
+Select the Compounding Frequency: Annual (1), Semi-annual (2), Quarterly (4), Monthly (12), or Daily (365).
+
+Enter the Time Period in years (decimals work for partial years).
+
+Select Calculation Type: Compound (standard for most accounts) or Simple (rare, for comparison).
+
+Click "Calculate" to see results. The output displays:
+- Final amount (principal + interest)
+- Total interest earned/paid
+- Simple versus compound comparison
+- Effective annual rate (APY)
+- Time to double your money (Rule of 72)
+- Year-by-year breakdown showing growth over time
+
+---
+
+## The Core Principle: How Interest Works
+
+Interest is the cost of borrowing money or the reward for lending/saving it. Two fundamental types exist:
+
+**Simple interest** calculates interest only on the original principal. The formula is straightforward:
+Interest = Principal × Rate × Time
+
+If you invest $1,000 at 5% simple interest for 10 years, you earn $50 per year, totaling $500 interest.
+
+**Compound interest** calculates interest on principal plus accumulated interest. This creates exponential growth:
+Amount = Principal × (1 + Rate/n)^(n×Time)
+
+The same $1,000 at 5% compounded annually for 10 years grows to $1,629—yielding $629 in interest, $129 more than simple interest.
+
+Compounding frequency matters significantly. More frequent compounding (monthly versus annually) produces higher effective returns because interest starts earning interest sooner.
+
+Understanding this difference is crucial: compound interest builds wealth over time but also makes debt dangerous if left unpaid.
+
+---
+
+## How to Calculate Interest Manually
+
+**Simple interest:**
+Interest = P × r × t
+
+Example: $5,000 at 4% for 3 years
+Interest = $5,000 × 0.04 × 3 = $600
+Final amount = $5,000 + $600 = $5,600
+
+**Compound interest (annual compounding):**
+Amount = P × (1 + r)^t
+
+Example: $5,000 at 4% for 3 years
+Amount = $5,000 × (1.04)³ = $5,000 × 1.1249 = $5,624.32
+Interest = $5,624.32 - $5,000 = $624.32
+
+**Compound interest (monthly compounding):**
+Amount = P × (1 + r/12)^(12×t)
+
+Example: $5,000 at 4% for 3 years
+Amount = $5,000 × (1 + 0.04/12)^36 = $5,000 × 1.1273 = $5,636.36
+Interest = $636.36
+
+**Effective annual rate (APY):**
+APY = (1 + r/n)^n - 1
+
+Example: 4% compounded monthly
+APY = (1 + 0.04/12)^12 - 1 = 1.0407 - 1 = 4.07%
+
+**Doubling time (Rule of 72):**
+Years to double ≈ 72 / Interest rate
+
+Example: At 6% interest
+Years ≈ 72 / 6 = 12 years
+
+---
+
+## Real-World Applications
+
+**Savings account comparison.** Bank A offers 2.5% APR compounded daily; Bank B offers 2.55% compounded monthly. Calculate APY for each to make a fair comparison.
+
+**Credit card debt projection.** A $3,000 balance at 22% APR compounded daily, with no payments, becomes $8,950 in 5 years. Understanding this motivates aggressive payoff.
+
+**Retirement planning.** $500/month invested at 7% for 30 years grows to over $566,000—of which only $180,000 is your contributions. Compound interest contributes the majority.
+
+**Loan comparison.** Two car loans: 4.5% for 60 months versus 3.9% for 72 months. The longer term's lower rate still costs more in total interest due to extended time.
+
+**Certificate of deposit evaluation.** A 5-year CD at 4% compounded quarterly versus a 3-year CD at 4.5% compounded monthly—which earns more per year invested?
+
+---
+
+## Scenarios People Actually Run Into
+
+**The credit card trap.** You have a $2,000 credit card balance at 22% APR. Paying only the minimum (say, $40/month), you'll pay for over 10 years and spend more on interest than the original purchase.
+
+**The savings stagnation.** Your savings account pays 0.01% APY. $10,000 earns $1 per year. Moving to a high-yield account at 4% APY earns $400—a $399 annual difference for no additional risk.
+
+**The early start advantage.** Person A invests $5,000/year from age 25-35 (10 years, $50,000 total). Person B invests $5,000/year from age 35-65 (30 years, $150,000 total). At 7% return, Person A ends with more money despite investing less, because compound interest had more time to work.
+
+**The APR versus APY confusion.** A bank advertises 4% APR. But with monthly compounding, the APY is 4.07%. For a $50,000 deposit, that's a $35 difference annually—not huge, but it adds up.
+
+**The inflation erosion.** Your savings earn 2% while inflation runs 3%. Despite earning interest, your purchasing power decreases. Real return = nominal return - inflation.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Compounding frequency impact.** The difference between annual and daily compounding is smaller than intuition suggests. At 5%, annual compounding yields 5.00% APY; daily compounding yields 5.13% APY—meaningful over decades, marginal over months.
+
+**Rate versus time.** Time in the market often matters more than interest rate. A modest return over 40 years typically beats a high return over 10 years.
+
+**Liquidity versus return.** Higher-yielding accounts often restrict access (CDs, bonds). Balance earning potential against needing funds available.
+
+**Simple versus compound for loans.** Most consumer loans use amortization (compound interest behavior). Simple interest auto loans exist and save money if you pay early.
+
+**Reinvestment assumption.** Compound interest calculations assume all interest is reinvested at the same rate. If you withdraw interest, you're effectively earning simple interest.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Confusing APR and APY.** APR is the stated rate; APY includes compounding effects. For savings, compare APY to APY. For loans, compare APR to APR with the same compounding.
+
+**Ignoring compounding on debt.** Credit card interest compounds on the balance plus previous interest. Paying only minimums means interest charges grow over time.
+
+**Assuming linear growth.** Compound interest grows exponentially. The second 10 years of growth exceed the first 10 years at the same rate because the base is larger.
+
+**Forgetting fees.** A 5% return with 1% fees is really 4%. Over 30 years, that 1% fee consumes nearly 25% of potential returns.
+
+**Not accounting for taxes.** Interest income is typically taxable. A 4% return in a taxable account at 25% tax bracket is effectively 3% after taxes.
+
+---
+
+## Related Topics
+
+**Annual Percentage Rate (APR).** The nominal interest rate, not accounting for compounding within the year.
+
+**Annual Percentage Yield (APY).** The effective rate including compounding, allowing apples-to-apples comparison.
+
+**Amortization.** How loan payments are structured over time, with early payments being mostly interest and later payments mostly principal.
+
+**Present value and future value.** Related calculations for understanding the time value of money—what future money is worth today, and vice versa.
+
+**Rule of 72.** Quick estimate: divide 72 by the interest rate to approximate years to double. At 8%, money doubles in about 9 years.
+
+---
+
+## How This Calculator Works
+
+**Simple interest:**
+```
+simpleInterest = P × r × t
+simpleAmount = P + simpleInterest
+```
+
+**Compound interest:**
+```
+compoundAmount = P × (1 + r/n)^(n×t)
+compoundInterest = compoundAmount - P
+```
+
+**Effective annual rate:**
+```
+effectiveRate = ((compoundAmount / P) - 1) / t × 100
+```
+
+**Time to double:**
+```
+doubleTime = ln(2) / ln(1 + r/n)
+```
+
+**Year-by-year breakdown:**
+For each year from 1 to the lesser of t or 10:
+- Simple: P + (P × r × year)
+- Compound: P × (1 + r/n)^(n × year)
+- Difference: compound - simple
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**What's the difference between APR and APY?**
+
+APR is the annual rate without accounting for compounding. APY includes compounding effects. A 5% APR compounded monthly equals about 5.12% APY.
+
+**How does compounding frequency affect returns?**
+
+More frequent compounding yields slightly more interest. The effect is modest: 5% compounded annually yields 5.00% APY; daily compounding yields 5.13% APY.
+
+**Why is compound interest called the "eighth wonder of the world"?**
+
+Attributed to Einstein (probably apocryphal), the phrase captures how compound interest grows exponentially over time, turning modest savings into substantial wealth.
+
+**How do I calculate interest on my credit card?**
+
+Credit cards typically use daily compounding on average daily balance. Monthly interest ≈ Balance × (APR/12). Daily compounds make the effective rate slightly higher.
+
+**What's the Rule of 72?**
+
+A quick mental estimate: 72 ÷ interest rate ≈ years to double. At 6%, money doubles in about 12 years. At 9%, about 8 years.
+
+**Does compounding matter for short-term savings?**
+
+Minimally. For a 1-year investment, daily versus annual compounding at 5% differs by about 0.13%—$13 per $10,000. Over decades, it compounds.
+
+**How do I compare savings accounts fairly?**
+
+Compare APY to APY. This accounts for different compounding frequencies. A 4.0% APY compounded daily equals a 4.0% APY compounded monthly—the APY already reflects compounding.
+
+**What's continuous compounding?**
+
+The mathematical limit of compounding infinitely often. Formula: A = P × e^(rt). The difference from daily compounding is negligible for practical purposes.
+
+**How does compound interest relate to debt?**
+
+The same exponential growth that builds wealth devastates debtors. Credit card balances compound daily at high rates. A $5,000 balance at 22% APR, unpaid for 5 years, becomes over $14,000. Pay down high-interest debt aggressively.
+
+**What's the impact of starting early?**
+
+Dramatic. Due to compounding, a 25-year-old investing $200/month for 10 years ($24,000 total), then stopping, ends up with more at 65 than someone starting at 35 and investing $200/month for 30 years ($72,000 total). Time beats amount.
+
+**How do I account for variable interest rates?**
+
+This calculator assumes fixed rates. For variable rates (many savings accounts, adjustable mortgages), the projection is approximate. Recalculate when rates change for updated projections.
+
+**What's the difference between nominal and effective rates?**
+
+Nominal rate is stated annually without compounding consideration. Effective rate (APY) includes compounding effects within the year. Always compare effective rates for accurate assessment.
+
+**How does compound interest apply to mortgages and car loans?**
+
+Amortized loans like mortgages compound interest monthly on the remaining balance. However, because you pay principal with each payment, the balance decreases. This differs from savings accounts where the balance only grows. The net effect is still compound interest behavior—paying only minimums on debt means interest compounds dangerously.
+
+**What's the "miracle of compound interest" people mention?**
+
+The phrase captures how small, consistent investments grow exponentially over decades. $100/month at 7% for 40 years becomes $240,000—you contributed $48,000 and earned $192,000 in interest. The longer the time, the more dramatic the effect.
+
+**How do bond yields relate to interest calculations?**
+
+Bond yields are essentially interest rates. A bond paying 5% yields $50 annually per $1,000 invested. Understanding compound versus simple interest helps evaluate bond investments, especially comparing coupon payments to total return.
+
+**Additional Notes and Tips**
+
+This calculator processes all inputs locally in your browser, ensuring both privacy and instant results without data transmission. For specialized applications or complex planning scenarios, consider consulting professionals who can account for your specific circumstances and goals.

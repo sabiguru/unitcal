@@ -1,0 +1,415 @@
+## Completing the Square Calculator: Convert Quadratics to Vertex Form
+
+## Table of Contents - Completing the Square
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Understanding Completing the Square](#understanding-completing-the-square)
+- [How to Complete the Square Manually](#how-to-complete-the-square-manually)
+- [Real-World Applications](#real-world-applications)
+- [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Completing the Square
+
+Enter your quadratic equation in standard form: ax² + bx + c. For example, you might enter x² + 6x + 5 or 2x² - 8x + 3.
+
+Click "Calculate" to see the equation transformed into vertex form: a(x - h)² + k. The calculator shows you every step of the process, including factoring out the leading coefficient if needed.
+
+The result tells you the vertex of the parabola at point (h, k), which is incredibly useful for graphing and understanding the quadratic's behavior.
+
+---
+
+## Understanding Completing the Square
+
+Completing the square is a technique that rewrites a quadratic equation from standard form into vertex form. Think of it as rearranging the furniture in a room to see it from a different angle - same equation, different perspective.
+
+**Why does this matter?**
+
+Standard form (ax² + bx + c) is great for some things, but vertex form a(x - h)² + k immediately shows you the most important features of the parabola: where the vertex is located and whether it opens up or down.
+
+**The big idea:**
+
+Every quadratic can be written as a perfect square plus or minus some constant. The term "completing the square" means you're literally completing an incomplete perfect square trinomial by adding and subtracting the right number.
+
+**Perfect square trinomials:**
+
+These are expressions like (x + 3)² which expand to x² + 6x + 9. Notice the pattern: the constant term (9) is exactly half of the middle coefficient (6) squared. That's the key insight for completing the square.
+
+**Visual interpretation:**
+
+Imagine a square with side length (x + 3). Its area is (x + 3)². If you expand this geometrically, you get a square of side x, plus two rectangles of dimensions x by 3, plus a small square of side 3. The algebra matches the geometry.
+
+**When to use this technique:**
+
+Completing the square is essential for deriving the quadratic formula, converting to vertex form for graphing, solving quadratic equations that don't factor nicely, and analyzing optimization problems in calculus.
+
+---
+
+## How to Complete the Square Manually
+
+Let's work through this step-by-step with progressively challenging examples.
+
+**Example 1: Simple case with leading coefficient of 1**
+
+Solve: x² + 6x + 5 = 0
+
+Step 1: Move the constant to the right side
+x² + 6x = -5
+
+Step 2: Take half of the middle coefficient and square it
+Middle coefficient is 6
+Half of 6 is 3
+3 squared is 9
+
+Step 3: Add this value to both sides
+x² + 6x + 9 = -5 + 9
+x² + 6x + 9 = 4
+
+Step 4: Factor the left side as a perfect square
+(x + 3)² = 4
+
+Step 5: The vertex form is clear now
+This tells us the vertex is at (-3, -1) when we rewrite as (x - (-3))² - 1 = 0
+
+To solve completely:
+x + 3 = ±2
+x = -3 + 2 = -1  or  x = -3 - 2 = -5
+
+**Example 2: Another simple case**
+
+Complete the square for: x² - 10x + 7 = 0
+
+Step 1: Isolate x terms
+x² - 10x = -7
+
+Step 2: Find the completing value
+Half of -10 is -5
+(-5)² = 25
+
+Step 3: Add to both sides
+x² - 10x + 25 = -7 + 25
+x² - 10x + 25 = 18
+
+Step 4: Factor
+(x - 5)² = 18
+
+Vertex form: (x - 5)² - 18 = 0
+Vertex is at (5, -18)
+
+**Example 3: When the leading coefficient isn't 1**
+
+Complete the square for: 2x² + 12x + 10 = 0
+
+Step 1: Factor out the leading coefficient from x terms ONLY
+2(x² + 6x) + 10 = 0
+
+Step 2: Move the constant
+2(x² + 6x) = -10
+
+Step 3: Complete the square INSIDE the parentheses
+Half of 6 is 3, and 3² = 9
+2(x² + 6x + 9) = -10 + 2(9)
+
+Note: We added 9 inside the parentheses, but since it's multiplied by 2, we're really adding 18 to the left side. So add 18 to the right side too.
+
+2(x² + 6x + 9) = -10 + 18
+2(x² + 6x + 9) = 8
+
+Step 4: Factor the perfect square
+2(x + 3)² = 8
+
+Step 5: Simplify
+(x + 3)² = 4
+
+Vertex form: 2(x + 3)² - 8 = 0  or  2(x - (-3))² - 8 = 0
+Vertex is at (-3, -8)
+
+**Example 4: Fraction coefficients**
+
+Complete the square for: x² + 5x + 3 = 0
+
+Step 1: Move constant
+x² + 5x = -3
+
+Step 2: Half of 5 is 5/2, and (5/2)² = 25/4
+
+Step 3: Add to both sides
+x² + 5x + 25/4 = -3 + 25/4
+x² + 5x + 25/4 = -12/4 + 25/4
+x² + 5x + 25/4 = 13/4
+
+Step 4: Factor
+(x + 5/2)² = 13/4
+
+Vertex form: (x + 5/2)² - 13/4 = 0
+Vertex is at (-5/2, -13/4) or (-2.5, -3.25)
+
+**Example 5: Leading coefficient that's not 1**
+
+Complete the square for: 3x² - 18x + 24 = 0
+
+Step 1: Factor out 3 from x terms
+3(x² - 6x) + 24 = 0
+
+Step 2: Move constant
+3(x² - 6x) = -24
+
+Step 3: Complete the square inside parentheses
+Half of -6 is -3, and (-3)² = 9
+3(x² - 6x + 9) = -24 + 3(9)
+3(x² - 6x + 9) = -24 + 27
+3(x² - 6x + 9) = 3
+
+Step 4: Factor
+3(x - 3)² = 3
+
+Step 5: Simplify
+(x - 3)² = 1
+
+Vertex form: 3(x - 3)² - 3 = 0
+Vertex is at (3, -3)
+
+**Pro tips:**
+- Always factor out the leading coefficient before completing the square
+- Remember to add the same value to BOTH sides
+- When the coefficient is factored out, multiply it by the number you add inside
+- Check your work by expanding the final answer
+
+---
+
+## Real-World Applications
+
+**Projectile motion:**
+
+When you throw a ball, its height follows a quadratic path. Completing the square converts the height equation to vertex form, immediately revealing the maximum height (vertex) the ball reaches and when it occurs.
+
+**Business optimization:**
+
+Profit functions are often quadratic. Completing the square finds the vertex, which represents the optimal production level that maximizes profit or minimizes cost.
+
+**Engineering parabolas:**
+
+Satellite dishes, bridges, and arches follow parabolic curves. Completing the square helps engineers identify the focus point (for dishes) or the highest/lowest point (for structures).
+
+**Physics and free fall:**
+
+Objects falling under gravity follow quadratic equations. Completing the square reveals when and where the object reaches maximum or minimum positions.
+
+**Revenue maximization:**
+
+When price affects demand quadratically, completing the square on the revenue function shows exactly what price maximizes total revenue.
+
+**Lens and mirror design:**
+
+Parabolic mirrors in telescopes and headlights use the vertex form to position the focus correctly. Completing the square is essential in optical design.
+
+**Vertical motion problems:**
+
+Any object thrown upward has a height equation in standard form. Completing the square quickly reveals the peak height and when it's reached, without needing calculus.
+
+---
+
+## Common Mistakes and How to Avoid Them
+
+**Mistake 1: Adding to only one side**
+
+Wrong: Starting with x² + 6x = -5, adding 9 to get x² + 6x + 9 = -5
+
+Right: Add 9 to BOTH sides: x² + 6x + 9 = -5 + 9 = 4
+
+Why it happens: We focus on completing the square on the left and forget that equations require balance. Whatever you add to one side must be added to the other.
+
+**Mistake 2: Forgetting to account for the factored coefficient**
+
+Wrong: For 2(x² + 6x) = -10, adding 9 to both sides to get 2(x² + 6x + 9) = -10 + 9
+
+Right: When you add 9 inside the parentheses multiplied by 2, you're actually adding 18 to the left side. So add 18 to the right: 2(x² + 6x + 9) = -10 + 18
+
+Why it happens: The parentheses "hide" the multiplication. Remember that the 2 multiplies everything inside, including your added term.
+
+**Mistake 3: Taking half of the wrong number**
+
+Wrong: For x² + 6x + 5, taking half of 5 instead of half of 6
+
+Right: Always take half of the coefficient of x (the middle term), not the constant. Half of 6 is 3, then square it to get 9.
+
+Why it happens: Looking at the wrong number. The completing value comes from the linear coefficient, never from the constant term.
+
+**Mistake 4: Squaring incorrectly**
+
+Wrong: Half of 6 is 3, so add 3 (instead of 9)
+
+Right: Take half, THEN square. Half of 6 is 3, and 3 squared is 9. You add 9, not 3.
+
+Why it happens: Rushing through the steps. Write it out: (coefficient/2)². First divide, then square.
+
+**Mistake 5: Sign errors with negative coefficients**
+
+Wrong: For x² - 8x, taking half to get -4, but forgetting that (-4)² = +16
+
+Right: Half of -8 is -4, and (-4)² = positive 16. Add +16, not -16. Squaring always gives a positive result.
+
+Why it happens: Confusion about negative signs. Remember: squaring any real number (positive or negative) gives a positive result.
+
+**Mistake 6: Not factoring out the leading coefficient first**
+
+Wrong: Trying to complete the square on 2x² + 12x + 10 without factoring out the 2
+
+Right: Factor out 2 from the x terms first: 2(x² + 6x) + 10, then complete the square inside the parentheses.
+
+Why it happens: Skipping steps to save time. This shortcut creates more problems than it solves. Always factor when the leading coefficient isn't 1.
+
+**Mistake 7: Incorrect vertex identification**
+
+Wrong: From (x + 3)² = 4, saying the vertex is at (3, 4)
+
+Right: The vertex form is (x - h)² + k where vertex is (h, k). So (x + 3)² = (x - (-3))², meaning h = -3. Rewriting as (x + 3)² - 0 = 4, we move -4 to get (x + 3)² - 4 = 0, so k = -4. Vertex is (-3, -4) when solving for y.
+
+Why it happens: Confusion about the negative sign in vertex form. Remember: (x - h)² means if you see (x + 3)², then h = -3 (negative of what you see).
+
+---
+
+## Related Topics
+
+- [Quadratic Formula Calculator](/calculator/mathematics/quadratic-formula) - Alternative method for solving quadratics
+- [Discriminant Calculator](/calculator/mathematics/discriminant) - Determine the nature of solutions
+- [Factoring Trinomials Calculator](/calculator/mathematics/factoring-trinomials) - Factor quadratics when possible
+- [Graphing Calculator](/calculator/mathematics/graphing) - Visualize the parabola and vertex
+
+---
+
+## How This Calculator Works
+
+**Step 1: Parse the input**
+```
+Extract coefficients a, b, c from ax² + bx + c
+Validate that a ≠ 0 (otherwise it's not quadratic)
+```
+
+**Step 2: Handle the leading coefficient**
+```
+if a ≠ 1:
+    factor a from x² and x terms
+    track the constant separately
+```
+
+**Step 3: Calculate completing value**
+```
+completing_value = (b/(2a))²
+This is the key number that makes the perfect square
+```
+
+**Step 4: Add and subtract**
+```
+Add completing_value inside the factored expression
+Adjust the constant term accordingly
+```
+
+**Step 5: Create perfect square**
+```
+Factor x² + (b/a)x + completing_value as (x + b/(2a))²
+```
+
+**Step 6: Write vertex form**
+```
+a(x - h)² + k
+where h = -b/(2a)
+and k = c - a(b/(2a))²
+```
+
+**Step 7: Display results**
+```
+Show original equation
+Show step-by-step transformation
+Show final vertex form
+Display vertex coordinates (h, k)
+```
+
+The calculator handles all coefficient types: positive, negative, fractions, and decimals.
+
+---
+
+## FAQs
+
+**What does "completing the square" mean?**
+
+It means transforming an incomplete perfect square trinomial into a complete one by adding the right value. You're literally completing it to make a perfect square like (x + 3)².
+
+**Why is this technique useful?**
+
+It converts quadratics to vertex form, which immediately reveals the vertex (turning point) of the parabola. This is crucial for graphing, optimization, and understanding the equation's behavior.
+
+**When should I use completing the square instead of factoring?**
+
+Use it when the quadratic doesn't factor with integers, when you need vertex form, or when deriving the quadratic formula. Factoring is faster when it works, but completing the square always works.
+
+**How do I know what number to add?**
+
+Take half of the coefficient of x, then square it. For x² + 6x, that's (6/2)² = 9. For x² - 10x, that's (-10/2)² = 25.
+
+**What if the leading coefficient isn't 1?**
+
+Factor it out from the x² and x terms before completing the square. For 2x² + 8x + 1, factor to get 2(x² + 4x) + 1, then complete the square inside the parentheses.
+
+**Do I always add and subtract the same number?**
+
+You add it to both sides of the equation to keep it balanced. Or if you're converting to vertex form without solving, you add and subtract it on the same side to avoid changing the expression's value.
+
+**Can I complete the square with negative coefficients?**
+
+Yes, the process is identical. For x² - 8x + 7, you'd still take half of -8 (which is -4) and square it (getting +16). Negative times negative equals positive.
+
+**How does this relate to the quadratic formula?**
+
+The quadratic formula is derived by completing the square on the general equation ax² + bx + c = 0. It's completing the square with letters instead of numbers.
+
+**What's the vertex form of a quadratic?**
+
+It's a(x - h)² + k, where (h, k) is the vertex. This form makes it obvious where the parabola's turning point is located and whether it opens up (a positive) or down (a negative).
+
+**Can I complete the square on any quadratic?**
+
+Yes, every quadratic can be rewritten in vertex form using this technique. It's a universal method that works regardless of whether the quadratic factors nicely.
+
+**What if I get a fraction when completing the square?**
+
+That's fine and common. If the x coefficient is odd, you'll get a fraction. For x² + 5x, half is 5/2, and (5/2)² = 25/4. Just work with fractions carefully.
+
+**How do I check my answer?**
+
+Expand the vertex form back to standard form and see if you get the original equation. If (x + 3)² - 4 expands to x² + 6x + 5, you did it correctly.
+
+**Is there a shortcut for finding the vertex?**
+
+Yes! The x-coordinate of the vertex is always -b/(2a) from the equation ax² + bx + c. Completing the square shows why this formula works.
+
+**What if the equation equals something other than zero?**
+
+The technique still works. You can complete the square on either side. For x² + 6x = 15, just complete the square normally: x² + 6x + 9 = 15 + 9.
+
+**Can this help me graph parabolas?**
+
+Absolutely. Vertex form tells you exactly where to place the vertex, then you can plot a few points on either side and draw the parabola. It's much easier than plotting many points from standard form.
+
+**Why do we use this method in calculus?**
+
+Completing the square appears in integration, optimization without derivatives, and analyzing quadratic approximations. It's a foundational technique that appears throughout higher math.
+
+**What's the geometric meaning?**
+
+You can visualize completing the square as literally arranging geometric squares. The algebra mirrors the process of creating a large square from smaller pieces.
+
+**Do I need to complete the square if I have the quadratic formula?**
+
+The quadratic formula is faster for just finding solutions, but completing the square gives you the vertex form, which is more informative for graphing and optimization problems.
+
+**Can I complete the square on cubic or higher degree polynomials?**
+
+The technique is specific to quadratics. Higher degree polynomials require different methods, though some techniques use completing the square as part of a larger process.
+
+**What if both solutions are complex numbers?**
+
+The vertex form still works! You'll get (x - h)² = negative number, which leads to complex solutions. The vertex is still at (h, k) on the real coordinate plane.

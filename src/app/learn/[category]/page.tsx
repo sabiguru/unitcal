@@ -1,0 +1,339 @@
+import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import Header from '@/components/Header';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { calculatorCategories } from '@/data/categoryData';
+import { getSlugsForCategory } from '@/utils/learnCategoryMapping';
+import { getAvailableLearnSlugs, getLearnSeo } from '@/data/learnSeoBySlug';
+import EzoicAd from '@/components/ads/EzoicAd';
+import { EZOIC_PLACEMENTS } from '@/config/ezoicPlacements';
+
+interface LearnCategoryPageProps {
+  params: Promise<{
+    category: string;
+  }>;
+  searchParams: Promise<{
+    page?: string;
+  }>;
+}
+
+// Function to map learn articles to categories using centralized mapping
+function getLearnArticlesForCategory(categorySlug: string) {
+  const availableLearnSlugs = getAvailableLearnSlugs();
+  const learnSlugs = getSlugsForCategory(categorySlug);
+  const availableArticles = learnSlugs.filter(slug => availableLearnSlugs.includes(slug));
+
+  return availableArticles.map(slug => {
+    const seoData = getLearnSeo(slug);
+    return {
+      slug,
+      title: seoData?.metaTitle?.replace(' — ', ' - ') || slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+      description: seoData?.metaDescription || `Learn how to use the ${slug.replace(/-/g, ' ')} calculator`,
+      primaryKeyword: seoData?.primaryKeyword || slug.replace(/-/g, ' '),
+      lastResearched: seoData?.lastResearched || '2025-01-01'
+    };
+  }).sort((a, b) => {
+    // Sort newest first by lastResearched date
+    return new Date(b.lastResearched).getTime() - new Date(a.lastResearched).getTime();
+  });
+}
+
+// Enhanced metadata generation for category learn pages
+export async function generateMetadata({ params }: LearnCategoryPageProps): Promise<Metadata> {
+  const { category } = await params;
+  const categoryData = calculatorCategories.find(cat => cat.slug === category);
+
+  if (!categoryData) {
+    return {
+      title: 'Learn Category Not Found | Calcfort',
+      description: 'The requested learn category could not be found.'
+    };
+  }
+
+  const learnArticles = getLearnArticlesForCategory(category);
+
+  return {
+    title: `Learn ${categoryData.title} | Calcfort`,
+    description: `${learnArticles.length} comprehensive guides for ${categoryData.title.toLowerCase()}. Learn calculation methods, formulas, and practical examples.`,
+    keywords: [
+      `learn ${categoryData.title.toLowerCase()}`,
+      `how to use ${categoryData.title.toLowerCase()} calculators`,
+      'calculator tutorials',
+      'step by step guides',
+      'calculation methods explained',
+      'Calcfort'
+    ],
+    openGraph: {
+      title: `Learn ${categoryData.title} | Calcfort`,
+      description: `${learnArticles.length} guides for ${categoryData.title.toLowerCase()}. ${categoryData.description}`,
+      url: `https://calcfort.com/learn/${category}`,
+      siteName: 'Calcfort',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Learn ${categoryData.title} | Calcfort`,
+      description: `${learnArticles.length} guides for ${categoryData.title.toLowerCase()}.`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    alternates: {
+      canonical: `https://calcfort.com/learn/${category}`,
+    },
+  };
+}
+
+// Generate static params for all categories that have learn content
+export function generateStaticParams() {
+  const availableLearnSlugs = getAvailableLearnSlugs();
+
+  return calculatorCategories
+    .filter(category => {
+      const learnSlugs = getSlugsForCategory(category.slug);
+      const availableArticles = learnSlugs.filter(slug => availableLearnSlugs.includes(slug));
+      return availableArticles.length > 0;
+    })
+    .map(category => ({
+      category: category.slug,
+    }));
+}
+
+export default async function LearnCategoryPage({ params, searchParams }: LearnCategoryPageProps) {
+  const { category } = await params;
+  const { page: pageParam } = await searchParams;
+
+  const categoryData = calculatorCategories.find(cat => cat.slug === category);
+
+  if (!categoryData) {
+    notFound();
+  }
+
+  const allLearnArticles = getLearnArticlesForCategory(category);
+
+  if (allLearnArticles.length === 0) {
+    notFound();
+  }
+
+  // Pagination settings
+  const POSTS_PER_PAGE = 8;
+  const totalPosts = allLearnArticles.length;
+  const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
+
+  // Get current page from query params
+  const currentPage = Math.max(1, Math.min(parseInt(pageParam || '1', 10), totalPages));
+  const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+  const endIndex = startIndex + POSTS_PER_PAGE;
+  const learnArticles = allLearnArticles.slice(startIndex, endIndex);
+
+  const breadcrumbs = [
+    { label: 'Home', href: '/' },
+    { label: 'Learn', href: '/learn' },
+    { label: categoryData.title, current: true }
+  ];
+
+  // Category learn page schema
+  const categoryLearnSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": `Learn ${categoryData.title} - Step-by-Step Guides`,
+    "description": `${totalPosts} comprehensive guides for ${categoryData.title.toLowerCase()}. Learn calculation methods, formulas, and practical examples.`,
+    "url": `https://calcfort.com/learn/${category}`,
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": totalPosts,
+      "itemListElement": allLearnArticles.map((article, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "Article",
+          "name": article.title,
+          "description": article.description,
+          "url": `https://calcfort.com/learn/${category}/${article.slug}`
+        }
+      }))
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Calcfort"
+    }
+  };
+
+  // Get related calculators for sidebar
+  const relatedCalculators = calculatorCategories
+    .filter(cat => cat.slug !== category)
+    .slice(0, 6);
+
+  return (
+    <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(categoryLearnSchema)
+        }}
+      />
+
+      <Header />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <Breadcrumbs items={breadcrumbs} />
+
+        {/* Header Section */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 mb-6">
+          <div className="text-center">
+            <div className="text-6xl mb-4">{categoryData.icon}</div>
+            <h1 className="text-3xl font-bold text-slate-700 mb-4">
+              Learn {categoryData.title} — Calculator Tutorials & Guides
+            </h1>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              {totalPosts} step-by-step guides for {categoryData.title.toLowerCase()}.
+              Master calculation methods with detailed examples and practical tips.
+            </p>
+          </div>
+        </div>
+
+        {/* Main Content Area - Classic Blog Layout */}
+        <div className="grid grid-cols-12 gap-6">
+          {/* Left Column - Blog Posts */}
+          <main className="col-span-12 lg:col-span-8">
+            <div className="space-y-6">
+              {learnArticles.map((article) => (
+                <Link
+                  key={article.slug}
+                  href={`/learn/${category}/${article.slug}`}
+                  className="group block bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md hover:border-gray-300 transition-all duration-300 overflow-hidden"
+                >
+                  <div className="p-6">
+                    <div className="flex items-start justify-between mb-3">
+                      <span className="inline-block px-3 py-1 text-xs font-medium bg-blue-50 text-blue-700 rounded-full">
+                        {categoryData.title}
+                      </span>
+                      <span className="text-xs text-gray-500">
+                        {new Date(article.lastResearched).toLocaleDateString('en-US', {
+                          year: 'numeric',
+                          month: 'short',
+                          day: 'numeric'
+                        })}
+                      </span>
+                    </div>
+
+                    <h2 className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-3">
+                      {article.title}
+                    </h2>
+
+                    <p className="text-gray-600 mb-4 line-clamp-2">
+                      {article.description}
+                    </p>
+
+                    <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                      <div className="flex items-center text-sm font-medium text-blue-600 group-hover:text-blue-700 transition-colors">
+                        <span>Read Full Guide</span>
+                        <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                      <span className="text-xs text-green-600 bg-green-50 px-3 py-1 rounded-full font-medium">
+                        Calculator Available
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="mt-8 flex items-center justify-center gap-2">
+                {currentPage > 1 ? (
+                  <Link
+                    href={`/learn/${category}?page=${currentPage - 1}`}
+                    className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                  >
+                    Previous
+                  </Link>
+                ) : (
+                  <span className="px-4 py-2 text-sm font-medium text-gray-400 bg-gray-100 border border-gray-200 rounded-lg cursor-not-allowed">
+                    Previous
+                  </span>
+                )}
+
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                    page === currentPage ? (
+                      <span
+                        key={page}
+                        className="px-4 py-2 text-sm font-medium rounded-lg bg-blue-600 text-white"
+                      >
+                        {page}
+                      </span>
+                    ) : (
+                      <Link
+                        key={page}
+                        href={`/learn/${category}?page=${page}`}
+                        className="px-4 py-2 text-sm font-medium rounded-lg text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors"
+                      >
+                        {page}
+                      </Link>
+                    )
+                  ))}
+                </div>
+
+                {currentPage < totalPages ? (
+                  <Link
+                    href={`/learn/${category}?page=${currentPage + 1}`}
+                    className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                  >
+                    Next
+                  </Link>
+                ) : (
+                  <span className="px-4 py-2 text-sm font-medium text-gray-400 bg-gray-100 border border-gray-200 rounded-lg cursor-not-allowed">
+                    Next
+                  </span>
+                )}
+              </div>
+            )}
+          </main>
+
+          {/* Right Sidebar */}
+          <aside className="col-span-12 lg:col-span-4">
+            <div className="sticky top-6 space-y-6">
+              <EzoicAd placementId={EZOIC_PLACEMENTS.LEARN_SIDEBAR} />
+
+              {/* Related Calculator Categories */}
+              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">
+                  Calculator Categories
+                </h3>
+                <div className="space-y-3">
+                  {relatedCalculators.map((cat) => (
+                    <Link
+                      key={cat.slug}
+                      href={`/calculator/${cat.slug}`}
+                      className="flex items-center gap-3 p-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors group"
+                    >
+                      <div className="text-2xl group-hover:scale-110 transition-transform">
+                        {cat.icon}
+                      </div>
+                      <div className="flex-1">
+                        <div className="text-sm font-medium text-gray-900 group-hover:text-blue-600 transition-colors">
+                          {cat.title}
+                        </div>
+                      </div>
+                      <svg className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <EzoicAd placementId={EZOIC_PLACEMENTS.LEARN_SIDEBAR} />
+            </div>
+          </aside>
+        </div>
+      </div>
+    </>
+  );
+}

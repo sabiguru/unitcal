@@ -1,0 +1,466 @@
+## Hyperbolic Functions Calculator: Compute sinh, cosh, tanh, and More
+
+## Table of Contents - Hyperbolic Functions
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Understanding Hyperbolic Functions](#understanding-hyperbolic-functions)
+- [How to Calculate Hyperbolic Functions Manually](#how-to-calculate-hyperbolic-functions-manually)
+- [Real-World Applications](#real-world-applications)
+- [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Hyperbolic Functions
+
+Enter a value for x to calculate hyperbolic functions. For example, enter 0, 1, -2, or 0.5.
+
+Click "Calculate" to see sinh(x), cosh(x), tanh(x), coth(x), sech(x), and csch(x). The calculator also shows inverse hyperbolic functions when applicable.
+
+The results display exact exponential forms, decimal approximations, and key identities verified for your input value.
+
+---
+
+## Understanding Hyperbolic Functions
+
+Hyperbolic functions are analogs of trigonometric functions but based on hyperbolas instead of circles. They appear throughout mathematics, physics, and engineering.
+
+**The basic definitions:**
+
+sinh(x) = (e^x - e^(-x)) / 2 (hyperbolic sine)
+cosh(x) = (e^x + e^(-x)) / 2 (hyperbolic cosine)
+tanh(x) = sinh(x) / cosh(x) (hyperbolic tangent)
+
+The other three are reciprocals:
+csch(x) = 1/sinh(x) (hyperbolic cosecant)
+sech(x) = 1/cosh(x) (hyperbolic secant)
+coth(x) = 1/tanh(x) (hyperbolic cotangent)
+
+**Relationship to the hyperbola:**
+
+Just as cos²(t) + sin²(t) = 1 relates to the circle x² + y² = 1, the identity cosh²(x) - sinh²(x) = 1 relates to the hyperbola x² - y² = 1.
+
+**Why "hyperbolic":**
+
+These functions parameterize the unit hyperbola the same way trig functions parameterize the unit circle. The point (cosh(t), sinh(t)) lies on the hyperbola x² - y² = 1.
+
+**Connection to exponentials:**
+
+All hyperbolic functions can be expressed using e^x and e^(-x). This makes them natural in contexts involving exponential growth, decay, and differential equations.
+
+**Even and odd functions:**
+
+cosh(x) is even: cosh(-x) = cosh(x). Its graph is symmetric about the y-axis.
+sinh(x) is odd: sinh(-x) = -sinh(x). Its graph has rotational symmetry about the origin.
+
+**Behavior at zero:**
+
+sinh(0) = 0
+cosh(0) = 1
+tanh(0) = 0
+
+These mirror the values sin(0) = 0, cos(0) = 1, tan(0) = 0.
+
+**Asymptotic behavior:**
+
+As x approaches infinity, both sinh(x) and cosh(x) approach e^x / 2. They grow exponentially.
+tanh(x) approaches 1 as x approaches infinity and -1 as x approaches negative infinity.
+
+---
+
+## How to Calculate Hyperbolic Functions Manually
+
+Let me show you how to compute these functions step by step.
+
+**Example 1: sinh(0)**
+
+Calculate sinh(0)
+
+Step 1: Use the formula
+sinh(x) = (e^x - e^(-x)) / 2
+
+Step 2: Substitute x = 0
+sinh(0) = (e^0 - e^0) / 2
+
+Step 3: Evaluate
+e^0 = 1
+sinh(0) = (1 - 1) / 2 = 0 / 2 = 0
+
+**Example 2: cosh(0)**
+
+Calculate cosh(0)
+
+Step 1: Formula
+cosh(x) = (e^x + e^(-x)) / 2
+
+Step 2: Substitute
+cosh(0) = (e^0 + e^0) / 2
+
+Step 3: Evaluate
+cosh(0) = (1 + 1) / 2 = 2 / 2 = 1
+
+**Example 3: sinh(1)**
+
+Calculate sinh(1) approximately
+
+Step 1: Formula
+sinh(1) = (e^1 - e^(-1)) / 2
+
+Step 2: Evaluate exponentials
+e ≈ 2.71828
+e^(-1) = 1/e ≈ 0.36788
+
+Step 3: Compute
+sinh(1) = (2.71828 - 0.36788) / 2
+sinh(1) = 2.3504 / 2
+sinh(1) ≈ 1.1752
+
+**Example 4: cosh(ln 2)**
+
+Calculate cosh(ln 2)
+
+Step 1: Substitute into formula
+cosh(ln 2) = (e^(ln 2) + e^(-ln 2)) / 2
+
+Step 2: Simplify exponentials
+e^(ln 2) = 2
+e^(-ln 2) = e^(ln(1/2)) = 1/2
+
+Step 3: Calculate
+cosh(ln 2) = (2 + 1/2) / 2
+cosh(ln 2) = (5/2) / 2
+cosh(ln 2) = 5/4 = 1.25
+
+**Example 5: tanh(0)**
+
+Calculate tanh(0)
+
+Step 1: Use definition
+tanh(x) = sinh(x) / cosh(x)
+
+Step 2: We know
+sinh(0) = 0
+cosh(0) = 1
+
+Step 3: Divide
+tanh(0) = 0 / 1 = 0
+
+**Example 6: Verify identity**
+
+Verify cosh²(1) - sinh²(1) = 1
+
+Step 1: Calculate cosh(1)
+cosh(1) = (e + 1/e) / 2 ≈ (2.71828 + 0.36788) / 2 ≈ 1.5431
+
+Step 2: Calculate sinh(1)
+sinh(1) ≈ 1.1752 (from Example 3)
+
+Step 3: Compute cosh²(1) - sinh²(1)
+1.5431² - 1.1752²
+≈ 2.3811 - 1.3811
+≈ 1.0000 ✓
+
+The identity holds!
+
+**Example 7: sech(0)**
+
+Calculate sech(0)
+
+Step 1: Definition
+sech(x) = 1 / cosh(x)
+
+Step 2: We know cosh(0) = 1
+
+Step 3: Calculate
+sech(0) = 1 / 1 = 1
+
+**Example 8: Derivatives**
+
+Find d/dx [sinh(x)]
+
+Step 1: Use definition
+sinh(x) = (e^x - e^(-x)) / 2
+
+Step 2: Differentiate
+d/dx [sinh(x)] = (e^x - (-1)e^(-x)) / 2
+= (e^x + e^(-x)) / 2
+
+Step 3: Recognize
+This equals cosh(x)
+
+So: d/dx [sinh(x)] = cosh(x)
+
+**Example 9: Addition formula**
+
+Calculate sinh(a + b) using sinh(a) and cosh(b)
+
+Formula: sinh(a + b) = sinh(a)cosh(b) + cosh(a)sinh(b)
+
+Example: sinh(2) using sinh(1) and cosh(1)
+sinh(2) = sinh(1 + 1)
+= sinh(1)cosh(1) + cosh(1)sinh(1)
+= 2·sinh(1)cosh(1)
+≈ 2(1.1752)(1.5431)
+≈ 3.6269
+
+Verify: sinh(2) = (e² - e^(-2))/2 ≈ (7.389 - 0.135)/2 ≈ 3.627 ✓
+
+**Example 10: Inverse function**
+
+Find arsinh(1) (also written sinh⁻¹(1))
+
+Step 1: Set up equation
+sinh(y) = 1
+
+Step 2: Use formula
+arsinh(x) = ln(x + sqrt(x² + 1))
+
+Step 3: Calculate
+arsinh(1) = ln(1 + sqrt(1 + 1))
+= ln(1 + sqrt(2))
+= ln(1 + 1.4142...)
+= ln(2.4142...)
+≈ 0.8814
+
+---
+
+## Real-World Applications
+
+**Catenary curves:**
+
+A hanging chain or cable forms a catenary, described by y = a·cosh(x/a). This appears in suspension bridges, power lines, and architecture.
+
+**Special relativity:**
+
+Hyperbolic functions describe rapidity (relativistic velocity). The Lorentz transformation uses cosh and sinh for spacetime rotations.
+
+**Heat transfer:**
+
+Temperature distribution in fins and extended surfaces follows hyperbolic equations. Engineers use these functions to model heat dissipation.
+
+**Electrical transmission lines:**
+
+Voltage and current along transmission lines are governed by hyperbolic functions, critical for power distribution analysis.
+
+**Magnetic fields:**
+
+Field distributions around certain conductor geometries involve hyperbolic functions in electromagnetic theory.
+
+**Probability and statistics:**
+
+The hyperbolic secant distribution and certain probability density functions use sech² terms.
+
+**Fluid dynamics:**
+
+Wave patterns and flow profiles in certain conditions are described using hyperbolic functions.
+
+**Structural engineering:**
+
+Arch shapes optimized for compressive stress often follow hyperbolic curves, making structures more stable.
+
+---
+
+## Common Mistakes and How to Avoid Them
+
+**Mistake 1: Confusing with trig functions**
+
+Wrong: Thinking sinh²(x) + cosh²(x) = 1
+
+Right: cosh²(x) - sinh²(x) = 1 (note the minus sign)
+
+Why it happens: Mixing up the hyperbolic identity with the Pythagorean identity. Remember: hyperbola has minus.
+
+**Mistake 2: Sign errors**
+
+Wrong: sinh(-x) = sinh(x)
+
+Right: sinh(-x) = -sinh(x) (odd function)
+
+Why it happens: Not remembering which is even and which is odd. cosh is even, sinh is odd.
+
+**Mistake 3: Wrong exponential form**
+
+Wrong: sinh(x) = (e^x + e^(-x)) / 2
+
+Right: sinh(x) = (e^x - e^(-x)) / 2 (minus, not plus)
+
+Why it happens: Confusing sinh and cosh formulas. sinh has minus, cosh has plus.
+
+**Mistake 4: Division by zero**
+
+Wrong: Calculating csch(0) = 1/sinh(0) = 1/0
+
+Right: csch(0) is undefined. sinh(0) = 0, so you can't divide.
+
+Why it happens: Not checking if the denominator is zero. Always verify.
+
+**Mistake 5: Inverse function domain**
+
+Wrong: Trying to find arcosh(-1)
+
+Right: arcosh(x) requires x is greater than or equal to 1. arcosh(-1) is undefined.
+
+Why it happens: Not knowing domain restrictions. cosh(x) is greater than or equal to 1 for all real x, so arcosh only defined for x is greater than or equal to 1.
+
+**Mistake 6: Derivative confusion**
+
+Wrong: d/dx[cosh(x)] = sinh(x) with a negative
+
+Right: d/dx[cosh(x)] = sinh(x) (positive), d/dx[sinh(x)] = cosh(x)
+
+Why it happens: Incorrectly applying chain rule thinking. These derivatives are simpler than trig.
+
+**Mistake 7: Addition formula errors**
+
+Wrong: cosh(a + b) = cosh(a) + cosh(b)
+
+Right: cosh(a + b) = cosh(a)cosh(b) + sinh(a)sinh(b)
+
+Why it happens: Thinking it distributes like regular addition. Use the proper addition formulas.
+
+---
+
+## Related Topics
+
+- [Complex Number Calculator](/calculator/mathematics/complex-number) - Related through Euler's formula
+
+---
+
+## How This Calculator Works
+
+**Step 1: Input validation**
+```
+Accept real number input x
+Check for special values (0, 1, -1)
+Verify domain for inverse functions
+```
+
+**Step 2: Calculate basic functions**
+```
+Compute e^x and e^(-x)
+sinh(x) = (e^x - e^(-x)) / 2
+cosh(x) = (e^x + e^(-x)) / 2
+tanh(x) = sinh(x) / cosh(x)
+```
+
+**Step 3: Calculate reciprocals**
+```
+If sinh(x) ≠ 0: csch(x) = 1 / sinh(x)
+If cosh(x) ≠ 0: sech(x) = 1 / cosh(x) (always defined)
+If tanh(x) ≠ 0: coth(x) = 1 / tanh(x)
+```
+
+**Step 4: Inverse functions (if requested)**
+```
+arsinh(x) = ln(x + sqrt(x² + 1))
+arcosh(x) = ln(x + sqrt(x² - 1)) for x ≥ 1
+artanh(x) = ln((1+x)/(1-x)) / 2 for |x| is less than 1
+```
+
+**Step 5: Verify identities**
+```
+Check cosh²(x) - sinh²(x) = 1
+Check tanh²(x) + sech²(x) = 1
+Check coth²(x) - csch²(x) = 1
+```
+
+**Step 6: Format output**
+```
+Display exact symbolic form
+Show decimal approximation
+Provide exponential representation
+List applicable identities
+```
+
+**Step 7: Additional information**
+```
+Show derivatives at x
+Display series expansion (if small x)
+Graph function behavior
+```
+
+---
+
+## FAQs
+
+**What are hyperbolic functions?**
+
+Functions defined using exponentials: sinh(x) = (e^x - e^(-x))/2, cosh(x) = (e^x + e^(-x))/2, and their ratios and reciprocals.
+
+**How are they different from trig functions?**
+
+Trig functions are based on circles; hyperbolic functions on hyperbolas. The key identity has a minus: cosh² - sinh² = 1.
+
+**What does sinh stand for?**
+
+Hyperbolic sine, pronounced "sinch" or "shine" or "s-i-n-h."
+
+**Why use hyperbolic functions?**
+
+They naturally appear in solutions to differential equations, catenary curves, relativity, and many physics and engineering problems.
+
+**What is the catenary?**
+
+The curve formed by a hanging chain, given by y = a·cosh(x/a). It's the optimal shape for arches under compression.
+
+**Are sinh and cosh even or odd?**
+
+cosh is even: cosh(-x) = cosh(x). sinh is odd: sinh(-x) = -sinh(x).
+
+**What is the fundamental identity?**
+
+cosh²(x) - sinh²(x) = 1 for all x. This mirrors cos² + sin² = 1 but with a minus sign.
+
+**How do I calculate sinh(x) without a calculator?**
+
+Use sinh(x) = (e^x - e^(-x)) / 2. Calculate e^x and e^(-x), subtract, and divide by 2.
+
+**What is tanh(x) useful for?**
+
+Activation functions in neural networks, velocity in relativity, and modeling saturation effects. It maps all reals to (-1, 1).
+
+**What are the derivatives?**
+
+d/dx[sinh(x)] = cosh(x), d/dx[cosh(x)] = sinh(x), d/dx[tanh(x)] = sech²(x).
+
+**Do addition formulas exist?**
+
+Yes, similar to trig: sinh(a+b) = sinh(a)cosh(b) + cosh(a)sinh(b), and cosh(a+b) = cosh(a)cosh(b) + sinh(a)sinh(b).
+
+**What is arsinh?**
+
+The inverse of sinh, also written sinh⁻¹. arsinh(x) = ln(x + sqrt(x² + 1)).
+
+**Can hyperbolic functions be negative?**
+
+sinh(x) can be negative (when x is less than 0). cosh(x) is always at least 1. tanh(x) ranges from -1 to 1.
+
+**What is the range of cosh(x)?**
+
+[1, ∞). The minimum value is cosh(0) = 1.
+
+**How do you pronounce these?**
+
+sinh: "sinch" or "shine", cosh: "cosh" (rhymes with "gosh"), tanh: "tanch" or "than".
+
+**What is sech used for?**
+
+The hyperbolic secant appears in soliton solutions, pulse shapes in optics, and probability distributions.
+
+**Are there double-angle formulas?**
+
+Yes. sinh(2x) = 2sinh(x)cosh(x) and cosh(2x) = cosh²(x) + sinh²(x) = 2cosh²(x) - 1.
+
+**What's the relationship to complex numbers?**
+
+sinh(ix) = i·sin(x) and cosh(ix) = cos(x). Hyperbolic functions are trig functions with imaginary arguments.
+
+**Can I integrate these?**
+
+Yes. ∫sinh(x)dx = cosh(x) + C, ∫cosh(x)dx = sinh(x) + C.
+
+**Why does cosh(0) = 1?**
+
+Because cosh(0) = (e^0 + e^0)/2 = (1 + 1)/2 = 1.
+

@@ -1,0 +1,458 @@
+## Quaternion Calculator: Compute 4D Rotations and Operations
+
+## Table of Contents - Quaternion
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Understanding Quaternions](#understanding-quaternions)
+- [How to Perform Quaternion Operations Manually](#how-to-perform-quaternion-operations-manually)
+- [Real-World Applications](#real-world-applications)
+- [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Quaternion
+
+Enter quaternions in the form a + bi + cj + dk, where a, b, c, d are real numbers and i, j, k are the quaternion basis units. For example, 1 + 2i + 3j + 4k or 0.5 - i + 2j.
+
+Click "Calculate" to perform operations like addition, multiplication, conjugate, norm, or inverse. The calculator handles all quaternion arithmetic and displays results in standard form.
+
+The results show step-by-step calculations, verify properties like norm preservation, and display geometric interpretations when applicable.
+
+---
+
+## Understanding Quaternions
+
+Quaternions are an extension of complex numbers to four dimensions, invented by William Rowan Hamilton in 1843. They're written as q = a + bi + cj + dk, where a, b, c, d are real numbers and i, j, k are imaginary units.
+
+**The fundamental equation:**
+
+Hamilton discovered that i² = j² = k² = ijk = -1. This single equation defines the entire quaternion multiplication system.
+
+**The basis units:**
+
+Unlike complex numbers with one imaginary unit i, quaternions have three: i, j, and k. These units don't commute: ij = k but ji = -k. This non-commutativity is what makes quaternions special and useful.
+
+**Structure:**
+
+Every quaternion has a scalar part (a, the real number) and a vector part (bi + cj + dk, the three imaginary components). You can think of quaternions as combining a scalar with a 3D vector.
+
+**Why they matter:**
+
+Quaternions represent 3D rotations without gimbal lock, a problem that plagues Euler angles. They're more compact than rotation matrices (4 numbers versus 9) and interpolate smoothly between orientations.
+
+**Multiplication rules:**
+
+The key multiplication identities are:
+- ij = k, jk = i, ki = j (cyclic)
+- ji = -k, kj = -i, ik = -j (reverse cyclic gives negatives)
+- i² = j² = k² = -1
+
+**Norm and conjugate:**
+
+The conjugate of q = a + bi + cj + dk is q* = a - bi - cj - dk (flip signs of imaginary parts). The norm is |q| = sqrt(a² + b² + c² + d²). The product qq* = |q|².
+
+**Unit quaternions:**
+
+Quaternions with norm 1 form the set of unit quaternions. These are the ones used for rotations. They lie on a 4D unit sphere.
+
+---
+
+## How to Perform Quaternion Operations Manually
+
+Let me show you how to work with quaternions step by step.
+
+**Example 1: Addition**
+
+Add q₁ = 1 + 2i + 3j + 4k and q₂ = 2 - i + j - k
+
+Step 1: Add corresponding components
+Scalar parts: 1 + 2 = 3
+i components: 2 + (-1) = 1
+j components: 3 + 1 = 4
+k components: 4 + (-1) = 3
+
+Step 2: Combine
+q₁ + q₂ = 3 + i + 4j + 3k
+
+Addition is commutative and associative, just like vector addition.
+
+**Example 2: Scalar multiplication**
+
+Multiply q = 1 + i + j + k by 3
+
+Step 1: Multiply each component by 3
+3(1) = 3
+3(1) = 3 for i
+3(1) = 3 for j
+3(1) = 3 for k
+
+Step 2: Result
+3q = 3 + 3i + 3j + 3k
+
+**Example 3: Conjugate**
+
+Find the conjugate of q = 2 + 3i - j + 4k
+
+Step 1: Keep scalar part, negate imaginary parts
+Scalar: 2 stays 2
+i part: 3i becomes -3i
+j part: -j becomes j
+k part: 4k becomes -4k
+
+Step 2: Conjugate
+q* = 2 - 3i + j - 4k
+
+**Example 4: Norm**
+
+Find |q| for q = 1 + 2i + 2j + 2k
+
+Step 1: Square each component
+1² = 1
+2² = 4
+2² = 4
+2² = 4
+
+Step 2: Sum squares
+1 + 4 + 4 + 4 = 13
+
+Step 3: Take square root
+|q| = sqrt(13)
+
+**Example 5: Multiplication (basic)**
+
+Multiply i times j
+
+Step 1: Apply multiplication rule
+ij = k (from the fundamental identities)
+
+This is direct from the definition.
+
+**Example 6: Full quaternion multiplication**
+
+Multiply q₁ = 1 + i and q₂ = j (treating as quaternions)
+
+Expand: (1 + i)(j) = 1·j + i·j
+
+Step 1: First term
+1·j = j
+
+Step 2: Second term
+i·j = k (from multiplication rules)
+
+Step 3: Combine
+q₁q₂ = j + k
+
+**Example 7: Larger multiplication**
+
+Multiply q₁ = 1 + i + j + k by q₂ = 1 - i
+
+Using the distributive property:
+(1 + i + j + k)(1 - i)
+
+Expand all terms:
+= 1·1 + 1·(-i) + i·1 + i·(-i) + j·1 + j·(-i) + k·1 + k·(-i)
+= 1 - i + i - i² + j - ji + k - ki
+= 1 + (-i² is 1) + j - (-k) + k - j (using ji = -k, ki = j)
+= 1 + 1 + j + k + k - j
+= 2 + 2k
+
+**Example 8: Inverse**
+
+Find the inverse of q = 1 + i + j + k
+
+Step 1: Calculate norm squared
+|q|² = 1² + 1² + 1² + 1² = 4
+
+Step 2: Find conjugate
+q* = 1 - i - j - k
+
+Step 3: Inverse formula
+q⁻¹ = q* / |q|²
+q⁻¹ = (1 - i - j - k) / 4
+q⁻¹ = 0.25 - 0.25i - 0.25j - 0.25k
+
+Step 4: Verify qq⁻¹ = 1
+(1 + i + j + k)(0.25 - 0.25i - 0.25j - 0.25k) should equal 1.
+
+**Example 9: Rotation quaternion**
+
+Create a quaternion for 90° rotation around the z-axis
+
+For rotation by angle θ around axis (x, y, z):
+q = cos(θ/2) + sin(θ/2)(xi + yj + zk)
+
+Step 1: Identify values
+θ = 90° = π/2 radians
+Axis = (0, 0, 1) (z-axis)
+
+Step 2: Calculate components
+cos(π/4) = sqrt(2)/2
+sin(π/4) = sqrt(2)/2
+
+Step 3: Form quaternion
+q = sqrt(2)/2 + sqrt(2)/2·k
+q = 0.707 + 0.707k
+
+**Example 10: Normalizing**
+
+Normalize q = 1 + 2i + 2j
+
+Step 1: Find norm
+|q| = sqrt(1² + 2² + 2²) = sqrt(9) = 3
+
+Step 2: Divide by norm
+q̂ = q/|q| = (1 + 2i + 2j)/3
+q̂ = 1/3 + (2/3)i + (2/3)j
+
+Step 3: Verify unit norm
+|q̂| = sqrt((1/3)² + (2/3)² + (2/3)²) = sqrt(1/9 + 4/9 + 4/9) = sqrt(9/9) = 1 ✓
+
+---
+
+## Real-World Applications
+
+**3D graphics and game engines:**
+
+Quaternions represent object orientations in 3D space. Every rotation in games, animations, and simulations uses quaternions to avoid gimbal lock and enable smooth interpolation.
+
+**Spacecraft attitude control:**
+
+NASA and aerospace engineers use quaternions to track and control spacecraft orientation. The math is more stable and efficient than Euler angles for real-time control systems.
+
+**Robotics:**
+
+Robot arm orientation and movement planning relies on quaternions. They provide a singularity-free representation of rotations, crucial for continuous motion paths.
+
+**Virtual reality:**
+
+Head tracking in VR headsets uses quaternions to represent head orientation. This ensures smooth, accurate tracking without the gimbal lock that would make you feel disoriented.
+
+**Computer vision:**
+
+Camera pose estimation and 3D reconstruction algorithms use quaternions to represent camera orientations relative to the scene being captured.
+
+**Molecular dynamics:**
+
+Simulating molecular rotations in chemistry and biology uses quaternions to represent molecular orientation changes efficiently.
+
+**Animation and motion capture:**
+
+Character animation systems use quaternion interpolation (SLERP - spherical linear interpolation) to create smooth, natural-looking rotations between keyframes.
+
+**Inertial navigation:**
+
+IMUs (Inertial Measurement Units) in smartphones and drones use quaternions to fuse accelerometer, gyroscope, and magnetometer data for orientation tracking.
+
+---
+
+## Common Mistakes and How to Avoid Them
+
+**Mistake 1: Assuming multiplication commutes**
+
+Wrong: Thinking ij = ji
+
+Right: ij = k but ji = -k. Order matters in quaternion multiplication.
+
+Why it happens: In regular numbers, ab = ba. Quaternions are non-commutative. Always preserve order.
+
+**Mistake 2: Forgetting the sign rules**
+
+Wrong: Computing ji as k instead of -k
+
+Right: Reverse cyclic order gives negative. ij = k, ji = -k. jk = i, kj = -i. ki = j, ik = -j.
+
+Why it happens: Not memorizing the multiplication table. Use the right-hand rule or remember "reverse gives minus."
+
+**Mistake 3: Adding quaternions incorrectly**
+
+Wrong: Trying to multiply components when adding
+
+Right: Add component-wise. (a + bi) + (c + di) in the i component is (b + d)i.
+
+Why it happens: Confusing addition with multiplication. Addition is simple and component-wise.
+
+**Mistake 4: Wrong conjugate**
+
+Wrong: Conjugating as q* = -a + bi + cj + dk
+
+Right: q* = a - bi - cj - dk. Keep scalar positive, negate all imaginary parts.
+
+Why it happens: Misremembering which parts change sign. Only imaginary parts flip.
+
+**Mistake 5: Inverse calculation errors**
+
+Wrong: Inverse = 1/q = conjugate only
+
+Right: q⁻¹ = q* / |q|². You need to divide the conjugate by norm squared.
+
+Why it happens: Forgetting the normalization factor. Only unit quaternions have inverse equal to conjugate.
+
+**Mistake 6: Rotation angle confusion**
+
+Wrong: Rotation by θ uses q = cos(θ) + sin(θ)(axis)
+
+Right: Use θ/2 (half angle). q = cos(θ/2) + sin(θ/2)(axis).
+
+Why it happens: Not knowing quaternion rotations use half angles. This is fundamental to how quaternion rotation works.
+
+**Mistake 7: Gimbal lock still possible**
+
+Wrong: Thinking quaternions themselves can't represent gimbal lock
+
+Right: Quaternions don't have gimbal lock, but converting to/from Euler angles can still encounter it at the conversion step.
+
+Why it happens: Misunderstanding where the problem lies. Use quaternions throughout to avoid gimbal lock entirely.
+
+---
+
+## Related Topics
+
+- [Complex Number Calculator](/calculator/mathematics/complex-number) - 2D analogue of quaternions
+
+---
+
+## How This Calculator Works
+
+**Step 1: Parse quaternion input**
+```
+Extract a (scalar part)
+Extract b (i coefficient)
+Extract c (j coefficient)
+Extract d (k coefficient)
+Validate format
+```
+
+**Step 2: Identify operation**
+```
+Addition: component-wise sum
+Subtraction: component-wise difference
+Multiplication: apply quaternion product rules
+Conjugate: negate imaginary parts
+Norm: sqrt(a² + b² + c² + d²)
+Inverse: conjugate divided by norm squared
+```
+
+**Step 3: Perform calculation**
+```
+For multiplication:
+  (a₁ + b₁i + c₁j + d₁k)(a₂ + b₂i + c₂j + d₂k)
+  Apply distributive property
+  Use i² = j² = k² = -1
+  Use ij=k, jk=i, ki=j, ji=-k, kj=-i, ik=-j
+  Collect terms
+```
+
+**Step 4: Simplify result**
+```
+Combine like terms
+Order as a + bi + cj + dk
+Round to appropriate precision
+```
+
+**Step 5: Calculate properties**
+```
+Norm: sqrt(a² + b² + c² + d²)
+Conjugate: a - bi - cj - dk
+Verify qq* = |q|² if checking
+```
+
+**Step 6: Format output**
+```
+Display in standard form
+Show intermediate steps
+Highlight key properties
+```
+
+**Step 7: Additional information**
+```
+If unit quaternion: show rotation interpretation
+Provide axis-angle form if applicable
+Display matrix equivalent if rotation
+```
+
+---
+
+## FAQs
+
+**What is a quaternion?**
+
+A number of the form a + bi + cj + dk, where a, b, c, d are real numbers and i, j, k are imaginary units satisfying i² = j² = k² = ijk = -1.
+
+**How are quaternions different from complex numbers?**
+
+Complex numbers have one imaginary unit (i). Quaternions have three (i, j, k) and don't commute under multiplication.
+
+**Why use quaternions for rotations?**
+
+They avoid gimbal lock, use only 4 numbers (versus 9 for matrices), normalize easily, and interpolate smoothly between orientations.
+
+**Do quaternions commute?**
+
+No. In general, q₁q₂ ≠ q₂q₁. For example, ij = k but ji = -k.
+
+**What is the quaternion conjugate?**
+
+For q = a + bi + cj + dk, the conjugate is q* = a - bi - cj - dk (negate the imaginary parts).
+
+**How do you calculate quaternion norm?**
+
+|q| = sqrt(a² + b² + c² + d²), the same formula as 4D Euclidean distance.
+
+**What is a unit quaternion?**
+
+A quaternion with norm 1. All rotation quaternions are unit quaternions.
+
+**How do you find quaternion inverse?**
+
+q⁻¹ = q* / |q|². For unit quaternions, q⁻¹ = q* (conjugate equals inverse).
+
+**What does ijk equal?**
+
+ijk = -1 by definition. This is part of Hamilton's fundamental quaternion equation.
+
+**Can quaternions represent any 3D rotation?**
+
+Yes, every 3D rotation can be represented by a unit quaternion. The representation is double-cover (q and -q give the same rotation).
+
+**What is SLERP?**
+
+Spherical Linear Interpolation - a method to smoothly interpolate between two quaternions, used extensively in animation.
+
+**Are quaternions a field?**
+
+No, because multiplication doesn't commute. They form a division ring (or skew field).
+
+**How do you multiply two quaternions?**
+
+Use the distributive property and apply the multiplication rules: ij=k, jk=i, ki=j, and reverse order gives negatives.
+
+**What is the relationship to 4D rotations?**
+
+Quaternions can represent 4D rotations, but their main use is representing 3D rotations via the formula: v' = qvq*.
+
+**Can you add quaternions?**
+
+Yes, component-wise: (a₁ + b₁i + c₁j + d₁k) + (a₂ + b₂i + c₂j + d₂k) = (a₁+a₂) + (b₁+b₂)i + (c₁+c₂)j + (d₁+d₂)k.
+
+**What is the scalar part?**
+
+The real number component a in q = a + bi + cj + dk.
+
+**What is the vector part?**
+
+The imaginary components bi + cj + dk, which can be viewed as a 3D vector.
+
+**How do quaternions avoid gimbal lock?**
+
+They represent orientation as a single 4D unit, not as sequential rotations around axes, eliminating the singularities that cause gimbal lock.
+
+**What happens when you multiply a quaternion by its conjugate?**
+
+qq* = |q|², a non-negative real number (all imaginary parts cancel).
+
+**Are octonions like quaternions?**
+
+Yes, octonions extend quaternions to 8 dimensions, but they lose associativity (quaternions are associative but not commutative).
+

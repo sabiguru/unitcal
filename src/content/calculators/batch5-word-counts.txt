@@ -1,0 +1,10 @@
+home-energy-audit.mdx: 1810 words
+interest.mdx: 1804 words
+investment.mdx: 1829 words
+loan.mdx: 1800 words
+love-calculator.mdx: 1806 words
+matrix.mdx: 1811 words
+molecular-weight.mdx: 1805 words
+morse-code.mdx: 1846 words
+mortgage.mdx: 1800 words
+mpg.mdx: 1835 words

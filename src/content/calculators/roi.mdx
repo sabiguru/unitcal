@@ -1,0 +1,293 @@
+## ROI Calculator: Return on Investment Analysis
+
+## Table of Contents - Roi
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Return Relative to Cost](#the-core-principle-return-relative-to-cost)
+- [How to Calculate ROI Manually](#how-to-calculate-roi-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Roi
+Enter your Investment Cost—the total amount spent on the investment.
+
+Enter your Gain or Return—the total value received or profit generated.
+
+For time-based analysis, enter the Project Duration in years.
+
+For multi-year projects with varying cash flows, switch to NPV/IRR mode and enter annual cash flows.
+
+Click "Calculate" to see results. The output displays:
+- Simple ROI percentage
+- Annualized ROI (for multi-year investments)
+- Payback period
+- NPV and IRR (for cash flow analysis)
+- Break-even analysis
+
+---
+
+## The Core Principle: Return Relative to Cost
+
+ROI measures profitability by comparing gain to cost, expressed as a percentage.
+
+**Simple ROI formula:**
+ROI = [(Gain - Cost) / Cost] × 100
+
+A £10,000 investment returning £13,000:
+ROI = [(13,000 - 10,000) / 10,000] × 100 = 30%
+
+**Annualized ROI** accounts for time:
+Annualized ROI = [(1 + Total ROI)^(1/n) - 1] × 100
+
+30% over 3 years:
+Annualized = [(1.30)^(1/3) - 1] × 100 = 9.1% per year
+
+This allows comparing investments of different durations on equal footing.
+
+**Payback period:**
+Payback = Investment Cost / Annual Cash Inflow
+
+A £50,000 investment generating £20,000/year:
+Payback = 50,000 / 20,000 = 2.5 years
+
+---
+
+## How to Calculate ROI Manually
+
+**Simple ROI example:**
+You spend £18,000 on software that saves £26,000/year for 3 years.
+
+Total gain: £26,000 × 3 = £78,000
+Simple ROI = [(78,000 - 18,000) / 18,000] × 100 = 333%
+
+**Annualized ROI:**
+Annualized = [(1 + 3.33)^(1/3) - 1] × 100 = 62.5%
+
+**Payback period:**
+Payback = 18,000 / 26,000 = 0.69 years (about 8 months)
+
+**NPV calculation (10% discount rate):**
+Year 0: -£18,000
+Year 1: £26,000 / 1.10 = £23,636
+Year 2: £26,000 / 1.21 = £21,488
+Year 3: £26,000 / 1.33 = £19,549
+
+NPV = -18,000 + 23,636 + 21,488 + 19,549 = £46,673
+
+Positive NPV confirms this is a good investment at a 10% hurdle rate.
+
+---
+
+## Real-World Applications
+
+**Marketing campaign analysis.** Ad spend versus attributable revenue determines which channels deserve more budget.
+
+**Equipment purchase decisions.** Will a new machine's efficiency gains justify its cost within your planning horizon?
+
+**Employee training ROI.** Training cost versus productivity improvements and reduced turnover.
+
+**Real estate investment.** Purchase price versus rental income and appreciation over your holding period.
+
+**Software subscriptions.** Annual cost versus time savings or revenue enablement.
+
+**Energy efficiency upgrades.** Upfront cost versus ongoing utility savings over equipment lifetime.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The timing mismatch.** Marketing shows 200% ROI, but the sales cycle is 18 months. Cash flow is negative for over a year before returns materialize.
+
+**The hidden cost trap.** Software costs £10,000 but requires £5,000 in training and £3,000 in integration work. True cost is £18,000.
+
+**The attribution challenge.** Website redesign preceded 20% sales increase, but was it the cause? Correlation doesn't prove ROI causation.
+
+**The scaling assumption.** First campaign had 50% ROI. Doubling budget doesn't guarantee same ROI—diminishing returns often apply.
+
+**The risk-adjusted view.** 15% ROI from a volatile investment versus 8% ROI from a stable one. Which is actually better?
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Simple versus annualized ROI.** Simple ROI ignores time. A 50% return over 10 years (4.1% annualized) isn't the same as 50% in 1 year.
+
+**ROI versus NPV.** ROI shows percentage return; NPV shows absolute value creation. A 100% ROI on £1,000 creates less value than 20% ROI on £100,000.
+
+**Payback versus profitability.** Short payback reduces risk but doesn't maximize returns. Balance speed of recovery with total returns.
+
+**Hurdle rate selection.** A 15% hurdle rate rejects different projects than 10%. Set hurdle based on cost of capital plus risk premium.
+
+**Sunk cost exclusion.** Already-spent money shouldn't factor into ROI of continuing an investment.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Ignoring hidden costs.** Include implementation, training, maintenance, and opportunity costs in your investment figure.
+
+**Using optimistic projections.** Conservative estimates prevent disappointment. Sensitivity analysis shows impact of various scenarios.
+
+**Comparing different durations.** Always annualize when comparing investments of different lengths.
+
+**Forgetting opportunity cost.** The £50,000 invested here can't be invested elsewhere. Compare to your best alternative.
+
+**Ignoring time value.** £1,000 received in 5 years is worth less than £1,000 today. Use NPV for long-term projects.
+
+---
+
+## Related Topics
+
+**Net Present Value (NPV).** The present value of all future cash flows minus the initial investment, accounting for time value of money.
+
+**Internal Rate of Return (IRR).** The discount rate at which NPV equals zero—the project's effective yield.
+
+**Payback period.** Time to recover initial investment. Simple and intuitive but ignores returns after payback.
+
+**Hurdle rate.** Minimum acceptable return. Projects exceeding the hurdle rate are worth pursuing.
+
+**Discounted Cash Flow (DCF).** Valuation method based on present value of projected future cash flows.
+
+---
+
+## How This Calculator Works
+
+**Simple ROI:**
+```
+roi = ((totalGain - investmentCost) / investmentCost) × 100
+```
+
+**Annualized ROI:**
+```
+annualizedROI = ((1 + totalROI/100)^(1/years) - 1) × 100
+```
+
+**Payback period:**
+```
+paybackYears = investmentCost / annualCashInflow
+```
+
+**NPV calculation:**
+```
+npv = -initialInvestment
+for each year t:
+  npv += cashFlow[t] / (1 + discountRate)^t
+```
+
+**IRR (iterative Newton-Raphson):**
+```
+Find rate where NPV = 0
+```
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**How do I calculate ROI for multiple years of cash flow?**
+
+Use NPV/IRR mode. Enter initial investment as negative Year 0 cash flow, then each year's net cash inflow. The calculator computes NPV and IRR.
+
+**What's the difference between simple and annualized ROI?**
+
+Simple ROI shows total return over the project's life. Annualized ROI shows equivalent yearly return. Use annualized to compare investments of different durations.
+
+**Can I use this for personal investments?**
+
+Yes—for real estate, education costs, or stock purchases. Use your personal cost of capital as the hurdle rate.
+
+**How accurate is payback period for uneven cash flows?**
+
+The calculator uses cumulative cash flow interpolation, finding the exact point where cumulative returns equal investment.
+
+**Why might NPV be negative while ROI is positive?**
+
+This happens when returns are delayed. ROI ignores timing; NPV discounts future cash flows. Late returns reduce NPV at high discount rates.
+
+**What is a hurdle rate and how do I set it?**
+
+Your minimum required return, based on cost of capital, risk premium, and opportunity cost. Common hurdle rates range from 10-20%.
+
+**Can I compare marketing channels using this?**
+
+Absolutely. Calculate ROI for each channel (spend versus attributable profit). Channels with highest ROI deserve increased budget.
+
+**Does this account for taxes?**
+
+Not automatically. For after-tax ROI, input net cash flows (after tax). Use consistent treatment (all pre-tax or all post-tax) for comparisons.
+
+**How do I account for risk in ROI calculations?**
+
+Higher-risk investments should be compared to higher hurdle rates. A 15% ROI from a risky venture may be less attractive than 10% from a stable investment when risk-adjusted.
+
+**What is return on assets (ROA) versus ROI?**
+
+ROA measures profit relative to total assets deployed. ROI measures return relative to invested capital. They're related but not identical, especially when leverage is involved.
+
+**How do I calculate ROI for intangible benefits?**
+
+Assign monetary values to intangibles where possible: time saved × labor cost, customer satisfaction scores × estimated revenue impact. Be transparent about assumptions.
+
+**What's the difference between ROI and ROIC?**
+
+ROI typically refers to a specific project or investment. ROIC (Return on Invested Capital) measures a company's overall efficiency at generating returns from capital.
+
+**How do I present ROI analysis to stakeholders?**
+
+Include simple ROI, annualized ROI, payback period, and NPV. Show sensitivity analysis with best/worst cases. Be explicit about assumptions.
+
+**Can ROI be too high?**
+
+Extremely high projected ROI may indicate optimistic assumptions or hidden risks. Validate projections and apply appropriate skepticism to outlier results.
+
+**How do I calculate ROI for recurring investments?**
+
+For subscriptions or ongoing costs, calculate annual cost versus annual benefit. The first year may show negative ROI due to setup costs; subsequent years improve.
+
+**What is cash-on-cash return?**
+
+Used in real estate: annual cash flow divided by initial cash invested. Differs from total ROI by focusing on cash generated rather than appreciation.
+
+**How do I track actual versus projected ROI?**
+
+After implementation, compare actual results to projections. Document variances and use learnings to improve future estimates.
+
+**What's the difference between gross and net ROI?**
+
+Gross ROI uses revenue; net ROI uses profit after all costs. Net ROI is more meaningful but requires accurate cost allocation.
+
+**How do I present ROI for non-financial stakeholders?**
+
+Use simple terms: "For every £1 we invest, we get £X back." Avoid jargon. Visualize with charts showing cost, benefit, and timeline.
+
+**Additional Notes**
+
+ROI analysis provides a common language for evaluating investments of all kinds. Whether you're assessing marketing campaigns, equipment purchases, or personal decisions like education, the fundamental question remains: does the return justify the investment?
+
+Good analysis requires accurate inputs—garbage in, garbage out. Be rigorous about including all costs, realistic about projections, and honest about assumptions. Sensitivity analysis showing best and worst cases often matters more than a single point estimate.
+
+**Practical Tips for Success**
+
+Document your assumptions explicitly—they're often more valuable than the final number. Track actual results against projections to improve future estimates. Present ROI analysis with context—what decisions does it inform? Consider qualitative factors that can't be easily quantified. Remember that the goal is better decisions, not perfect numbers.
+
+**Understanding Investment Decisions**
+
+ROI is one tool among many for investment decisions. Consider strategic fit, risk tolerance, opportunity cost, and intangible benefits alongside financial returns. Sometimes the highest ROI project isn't the best choice if it doesn't align with long-term goals or carries unacceptable risk. Use ROI to inform decisions, not to make them automatically. Context and judgment remain essential.
+
+ROI analysis brings discipline to investment decisions. By quantifying returns relative to costs, you can compare options objectively and allocate resources effectively. The numbers matter, but so does understanding their limitations and the context in which decisions are made.
+Every investment decision benefits from ROI analysis. Use this calculator to evaluate opportunities and allocate resources where they generate the most value.
+Good investment analysis combines quantitative ROI with qualitative judgment. Let the numbers inform but not dictate your decisions.
+Every investment deserves careful analysis before committing resources. Use ROI calculations to guide better decision-making.
+Rigorous analysis leads to better investment decisions and resource allocation across your portfolio of projects.
+Data-driven decisions consistently outperform guesswork across all types of investments.
+Sound investment analysis delivers superior returns over time.
+Quantify returns, understand risks, and make better investment decisions.
+Effective ROI analysis transforms decision-making.
+Make data-driven choices for success.

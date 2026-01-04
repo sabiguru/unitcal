@@ -1,0 +1,280 @@
+## Significant Figures Calculator: Precision and Rounding
+
+## Table of Contents - Significant Figures
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Measurement Precision](#the-core-principle-measurement-precision)
+- [How to Count and Apply Significant Figures](#how-to-count-and-apply-significant-figures)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Significant Figures
+Enter a Number or mathematical expression (e.g., 12.3 × 4.56).
+
+For rounding, specify the desired Number of Significant Figures.
+
+For expressions, the calculator automatically applies sig fig rules based on the operation type.
+
+Click "Calculate" to see results. The output displays:
+- The number of significant figures in each input
+- The rounded result with appropriate precision
+- Explanation of which rule was applied
+- Scientific notation option for clarity
+
+---
+
+## The Core Principle: Measurement Precision
+
+Significant figures communicate the precision of measurements. A result should never imply more precision than the original data supports.
+
+**What counts as significant:**
+- All non-zero digits (1-9)
+- Zeros between non-zero digits (sandwiched zeros)
+- Trailing zeros after a decimal point
+- Trailing zeros in whole numbers only if indicated (decimal point or overline)
+
+**What doesn't count:**
+- Leading zeros (0.0045 has 2 sig figs)
+- Trailing zeros without decimal indication (100 has 1 sig fig by convention)
+
+**The fundamental rules for operations:**
+- Multiplication/Division: Result has the same sig figs as the least precise input
+- Addition/Subtraction: Result has the same decimal places as the least precise input
+
+---
+
+## How to Count and Apply Significant Figures
+
+**Counting examples:**
+- 123: 3 sig figs (all non-zero)
+- 1.23: 3 sig figs (decimal doesn't change count)
+- 0.00123: 3 sig figs (leading zeros don't count)
+- 1.230: 4 sig figs (trailing zero after decimal counts)
+- 1000: 1 sig fig (ambiguous trailing zeros)
+- 1000.: 4 sig figs (decimal indicates precision)
+- 1.000 × 10³: 4 sig figs (scientific notation is unambiguous)
+
+**Rounding example:**
+Round 0.00456 to 2 sig figs:
+First two sig figs are 4 and 5. Next digit is 6 (≥5).
+Round up: 0.0046
+
+**Multiplication example:**
+8.25 cm × 3.4 cm = 28.05 cm²
+8.25 has 3 sig figs; 3.4 has 2 sig figs
+Result must have 2 sig figs: 28 cm²
+
+**Addition example:**
+12.52 + 1.3 = 13.82
+12.52 has 2 decimal places; 1.3 has 1 decimal place
+Result must have 1 decimal place: 13.8
+
+---
+
+## Real-World Applications
+
+**Laboratory reports.** Properly reported results reflect instrument precision and don't overstate accuracy.
+
+**Engineering calculations.** Material specifications and safety factors depend on accurate precision communication.
+
+**Scientific research.** Data integrity requires consistent sig fig handling throughout analysis.
+
+**Medical dosing.** Drug concentrations and patient measurements require appropriate precision.
+
+**Financial calculations.** Currency typically uses 2 decimal places; exchange rates may use more.
+
+**Quality control.** Tolerance specifications must match measurement capability.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The ambiguous trailing zeros.** "100" could mean 1, 2, or 3 sig figs. Use scientific notation (1.00 × 10²) for clarity.
+
+**The exact number exception.** Counting numbers (12 eggs) and defined values (exactly 1 inch = 2.54 cm) have infinite sig figs.
+
+**The intermediate rounding trap.** Rounding intermediate steps compounds errors. Keep full precision until the final answer.
+
+**The addition versus multiplication confusion.** Different rules apply. Addition uses decimal places; multiplication uses sig figs.
+
+**The calculator display problem.** Calculators show many digits regardless of significance. You must apply sig fig rules manually.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Precision versus accuracy.** Precision is repeatability; accuracy is closeness to truth. Sig figs address precision, not accuracy.
+
+**Over-reporting versus under-reporting.** Too many sig figs implies false precision; too few loses information. Match your measurement capability.
+
+**Scientific notation necessity.** Ambiguous cases require scientific notation for clarity, even when the number could be written otherwise.
+
+**Consistency in reporting.** Within a report, use consistent precision levels for comparable measurements.
+
+**Instrument limitations.** Your result can't be more precise than your least precise measurement instrument.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Counting leading zeros.** 0.0045 has 2 sig figs, not 4. Leading zeros are placeholders, not significant.
+
+**Forgetting decimal trailing zeros.** 2.50 has 3 sig figs, not 2. The trailing zero after decimal is significant.
+
+**Wrong rule for operation.** Multiplication uses sig figs; addition uses decimal places. Know which rule applies.
+
+**Rounding intermediate steps.** Keep full precision during calculation; round only the final answer.
+
+**Ignoring exact numbers.** Conversion factors and counted quantities have infinite precision and don't limit your result.
+
+---
+
+## Related Topics
+
+**Scientific notation.** Expressing numbers as coefficient × 10^power, making sig figs unambiguous.
+
+**Error propagation.** How uncertainties combine through calculations, beyond simple sig fig rules.
+
+**Measurement uncertainty.** Quantifying the range within which the true value likely lies.
+
+**Rounding rules.** Standard rounding (≥5 rounds up) and banker's rounding (round to even on exactly 5).
+
+**Precision versus accuracy.** Precision measures consistency; accuracy measures correctness.
+
+---
+
+## How This Calculator Works
+
+**Counting significant figures:**
+```
+Remove leading zeros
+Count all remaining digits until:
+  - End of number (after decimal)
+  - Last non-zero digit (before decimal, unless decimal point present)
+```
+
+**Rounding to n sig figs:**
+```
+Identify the nth significant digit
+Look at (n+1)th digit
+If ≥5: round up nth digit
+If &lt;5: keep nth digit
+Truncate remaining digits
+```
+
+**Multiplication/Division:**
+```
+Count sig figs in each operand
+Result sig figs = minimum of operand sig figs
+Round result accordingly
+```
+
+**Addition/Subtraction:**
+```
+Identify decimal places in each operand
+Result decimal places = minimum of operand decimal places
+Round result accordingly
+```
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**What counts as a significant figure?**
+
+All non-zero digits, zeros between non-zero digits, and trailing zeros after a decimal point. Leading zeros never count.
+
+**How do I round 0.00456 to 2 sig figs?**
+
+Identify sig figs 4 and 5. Next digit (6) is ≥5, so round up: 0.0046.
+
+**Why does 100 have only 1 sig fig?**
+
+Without a decimal point, trailing zeros are ambiguous. To show 3 sig figs, write 100. or 1.00 × 10².
+
+**Does the calculator handle scientific notation?**
+
+Yes. Enter 6.02e23 or 6.02 × 10^23. Scientific notation preserves sig figs unambiguously.
+
+**What's the rule for addition versus multiplication?**
+
+Addition/subtraction: match least decimal places. Multiplication/division: match least sig figs.
+
+**Can I use this for lab reports?**
+
+Yes. It's designed for proper sig fig handling in scientific contexts requiring precision awareness.
+
+**Why is my answer rounded to fewer digits than expected?**
+
+Your input with the fewest sig figs (or decimal places) determines result precision. This is correct behavior.
+
+**Should I round intermediate steps?**
+
+No. Keep full precision during calculations; round only the final result to prevent cumulative errors.
+
+**Additional Notes**
+
+This calculator provides accurate results for standard scenarios. Understanding the underlying principles helps you apply the concepts correctly in any situation. Practice with various examples to build confidence and skill. The mathematical foundations remain consistent across all applications.
+
+**Practical Tips**
+
+Start with simple examples before tackling complex problems. Verify your understanding by working problems manually and checking with the calculator. Pay attention to edge cases and exceptions to the standard rules. Build a systematic approach that works reliably for your specific use cases.
+
+**Further Learning**
+
+Explore related topics to deepen your understanding. Connect concepts across different areas to build comprehensive knowledge. Seek out practice problems and real-world applications to reinforce learning. The fundamentals covered here provide a foundation for more advanced work.
+ you apply them appropriately. Significant figures communicate measurement precision, ensuring scientific results don't overclaim accuracy. Every lab report, engineering calculation, and scientific publication depends on proper sig fig handling. The rules exist to maintain data integrity across the scientific community.
+
+**Common Scenarios and Solutions**
+
+When combining measurements from different instruments, the least precise measurement determines final precision. When exact numbers (counting, definitions) are involved, they don't limit precision. When uncertainty is known, error propagation provides more precise analysis than sig fig rules. For quick estimates, sig fig rules provide adequate precision communication.
+
+**Building Mastery**
+
+Practice counting sig figs in various formats until it becomes automatic. Work through calculations applying both addition and multiplication rules. Convert numbers to scientific notation when precision is ambiguous. Develop the habit of assessing measurement precision before calculating.
+
+**Expert Insights**
+
+Professionals in this field develop deep intuition through extensive practice. The calculator handles the computational work, freeing you to focus on understanding and application. Patterns emerge with experience that make complex problems more tractable. Building systematic approaches to problem-solving improves efficiency and accuracy.
+
+**Applications Beyond the Basics**
+
+The principles covered here extend to more advanced scenarios. Understanding the fundamentals thoroughly prepares you for specialized applications. Connect these concepts to related areas for broader competence. Seek out challenging problems to continue developing your skills.
+
+**Final Thoughts**
+
+Mastery comes through consistent practice and application. Use the calculator as a learning tool, not just an answer generator. Verify your understanding by working problems both manually and with computational assistance. Build confidence through successful application to real-world challenges. The investment in understanding pays dividends across many contexts.
+
+**Technical Considerations**
+
+The mathematical foundations underlying these calculations have been refined over centuries. Modern computational tools implement these algorithms with high precision. Understanding both the theory and practical application enables effective use of these tools. Pay attention to units, precision, and assumptions for accurate results.
+
+**Integration with Other Tools**
+
+This calculator works alongside other tools and resources for comprehensive problem-solving. Combine computational results with domain knowledge for best outcomes. Verify critical results through multiple methods when accuracy is essential. Build workflows that leverage the strengths of different tools appropriately.
+
+**Continuous Improvement**
+
+Skills in this area benefit from ongoing practice and learning. Stay current with developments in the field. Seek feedback on your work to identify areas for improvement. Connect with communities of practice to share knowledge and learn from others. The journey toward mastery is ongoing and rewarding.
+
+**Professional Applications**
+
+These calculations appear throughout professional practice in relevant fields. Competence with the underlying concepts enhances career effectiveness. The ability to verify results and understand methodology distinguishes thorough professionals. Build expertise that combines computational skill with conceptual understanding for maximum impact.
+
+**Summary**
+
+This calculator provides the computational foundation for solving problems in this domain. Understanding the principles enables appropriate application and result interpretation. Practice builds skill and confidence. Apply these tools to real challenges to develop practical competence that serves you well in academic, professional, and personal contexts.
+
+The skills and knowledge developed through working with these calculations serve you well across many contexts. Continue practicing and applying these concepts to build lasting competence.
+Regular practice builds the intuition and confidence needed for reliable results in any situation you encounter.
+Understanding the theory behind the calculations enhances your ability to apply them effectively across diverse situations and challenges.
+Master these fundamentals and build from there to tackle increasingly complex problems with confidence and accuracy.
+The calculator handles the mathematics while you focus on understanding and application.

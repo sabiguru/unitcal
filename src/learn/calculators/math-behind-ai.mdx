@@ -1,0 +1,363 @@
+import Image from 'next/image';
+
+# The Maths Behind AI — Explained So Anyone Can Understand
+
+
+<Image
+  src="/images/blog/math-behind-ai.webp"
+  alt="Understanding the mathematics behind artificial intelligence"
+  width={1200}
+  height={630}
+  priority
+  className="rounded-lg mb-6"
+/>
+
+## Table of Contents — The Maths Behind AI — Explained So Anyone Can Understand
+- [Why Understanding AI Maths Matters](#why-understanding-ai-maths-matters)
+- [The Three Big Ideas](#the-three-big-ideas)
+- [Linear Algebra: Lists and Tables of Numbers](#linear-algebra-lists-and-tables-of-numbers)
+- [Probability: Dealing with Uncertainty](#probability-dealing-with-uncertainty)
+- [Optimisation: Finding the Best Answer](#optimisation-finding-the-best-answer)
+- [How These Ideas Work Together](#how-these-ideas-work-together)
+- [AI vs Traditional Calculators](#ai-vs-traditional-calculators)
+- [Common Questions](#common-questions)
+
+---
+
+## Why Understanding AI Maths Matters
+
+AI seems like magic. It writes paragraphs. It recognises faces. It predicts what you want to buy. It beats humans at chess and Go.
+
+But underneath? It's just maths. Lots of maths, done very fast.
+
+You don't need a degree to understand the basics. And knowing the basics helps you:
+
+- See that AI isn't magic — it's pattern matching
+- Understand why AI makes mistakes
+- Know when to trust AI and when to question it
+- Use AI tools more effectively
+- Avoid being fooled by AI hype
+
+The goal here isn't to make you a data scientist. It's to pull back the curtain so AI makes more sense.
+
+---
+
+## The Three Big Ideas
+
+All modern AI boils down to three areas of maths:
+
+1. **Linear Algebra** — Working with lists and tables of numbers
+2. **Probability** — Dealing with uncertainty and making guesses
+3. **Optimisation** — Finding the best answer among many options
+
+That's it. Everything else builds on these three foundations.
+
+Let's take each one and make it simple.
+
+---
+
+## Linear Algebra: Lists and Tables of Numbers
+
+Linear algebra sounds scary. But you use it all the time without knowing.
+
+### Vectors: Lists of Numbers
+
+A vector is just a list of numbers.
+
+Your monthly spending might be: [£1200, £150, £400, £200]
+That's a vector: [rent, utilities, food, transport]
+
+Your daily step counts: [8500, 7200, 6100, 9000, 8800, 10500, 5200]
+That's a vector too.
+
+Vectors represent things with multiple parts. Your location is a vector: [latitude, longitude]. A colour is a vector: [red, green, blue].
+
+### Matrices: Tables of Numbers
+
+A matrix is a table of numbers — like a spreadsheet.
+
+Your budget over three months:
+```
+         Jan    Feb    Mar
+Rent    1200   1200   1200
+Food     400    450    380
+Travel   200    180    220
+```
+
+That's a matrix. Three columns, three rows.
+
+Images are matrices too. A black-and-white photo is just a grid of numbers, where each number represents how bright a pixel is.
+
+### What AI Does With These
+
+AI takes huge vectors and matrices and performs operations on them.
+
+**Example:** A photo-editing filter. Making an image brighter means multiplying each pixel value by a number. That's a matrix operation.
+
+AI does the same thing, but with more complex operations, billions of times per second.
+
+When you ask ChatGPT something, your words become numbers (vectors). The AI multiplies those vectors by enormous matrices (billions of numbers). The result is another vector. That vector becomes the reply you see.
+
+The maths is just multiplying and adding. There's just A LOT of it.
+
+Use the [Matrix Calculator](https://calcfort.com/calculator/mathematics/matrix) to try matrix operations yourself. Multiply two matrices. See what happens.
+
+---
+
+## Probability: Dealing with Uncertainty
+
+AI doesn't know things for certain. It makes guesses — educated guesses based on patterns.
+
+### Probability Basics
+
+Probability measures how likely something is. Scale of 0 to 1.
+
+- 0 = impossible
+- 1 = certain
+- 0.5 = 50/50
+
+If you flip a coin, heads is probability 0.5. Rain tomorrow might be probability 0.3 (30% chance).
+
+### How AI Uses Probability
+
+When AI predicts the next word in a sentence, it doesn't KNOW the answer. It calculates probabilities for every possible word.
+
+"The cat sat on the ___"
+
+AI might calculate:
+- "mat" — probability 0.25
+- "floor" — probability 0.20
+- "chair" — probability 0.15
+- "dog" — probability 0.001
+- ... thousands of other words with tiny probabilities
+
+It picks a word based on these probabilities. Usually a high-probability one, but sometimes it samples randomly to seem less repetitive.
+
+This is why AI sometimes says weird things. Low-probability words occasionally get chosen.
+
+### Conditional Probability
+
+This is where it gets powerful.
+
+Conditional probability asks: "What's the probability of X, GIVEN that Y is true?"
+
+"What's the probability of rain GIVEN that clouds are forming?" is different from "What's the probability of rain?" (without knowing about clouds).
+
+AI learns these conditional relationships from training data. Given millions of examples, it learns:
+
+- Given "The cat sat on the", what word usually comes next?
+- Given this customer's history, what will they probably buy?
+- Given this image, is it probably a cat or a dog?
+
+### Probability in Everyday Life
+
+You already think probabilistically:
+
+- "I'll probably get a parking spot if I leave by 8"
+- "There's a good chance it'll rain — I'll bring an umbrella"
+- "He'll probably say yes, but he might not"
+
+AI formalises this intuition with actual numbers.
+
+Use the [Percentage Calculator](https://calcfort.com/calculator/mathematics/percentage) to work with probabilities expressed as percentages.
+
+---
+
+## Optimisation: Finding the Best Answer
+
+Optimisation is about finding the best option from many choices.
+
+### A Simple Example
+
+Imagine you're planning a route to work. There are 50 possible routes. You want the fastest one.
+
+One approach: try all 50 and see which is fastest.
+Better approach: start with one route, find ways to improve it, repeat until you can't improve anymore.
+
+That second approach is optimisation. You don't check every option — you iteratively improve until you find something good.
+
+### How AI Uses Optimisation
+
+AI learns by optimisation.
+
+When AI is "trained," here's what happens:
+
+1. AI makes a prediction
+2. The prediction is compared to the right answer
+3. The difference is measured (called "loss" or "error")
+4. AI adjusts its numbers slightly to reduce the error
+5. Repeat millions of times
+
+Each adjustment makes the error a tiny bit smaller. Over millions of adjustments, the AI gets good at predicting.
+
+### The Mountain Climbing Analogy
+
+Imagine you're blindfolded on a mountain. You want to reach the top.
+
+You can't see, so you feel the ground around you. Whichever direction slopes upward, you step that way. Repeat until no direction goes higher.
+
+That's optimisation. You're finding the highest point by always moving upward.
+
+AI does the same thing, but in reverse — it's finding the LOWEST point (lowest error) in a landscape with billions of dimensions.
+
+### Why It Works
+
+Optimisation works because:
+- Small improvements add up
+- You don't need to check every possibility
+- Mathematics can calculate which direction to go
+
+Modern AI does this incredibly fast. Billions of tiny adjustments, each making predictions slightly better.
+
+---
+
+## How These Ideas Work Together
+
+Let's see how all three come together in real AI.
+
+### Training an Image Recogniser
+
+**Step 1: Represent images as matrices**
+Each photo becomes a grid of numbers. Linear algebra.
+
+**Step 2: Start with random guesses**
+The AI begins with random numbers (its "weights"). It guesses randomly at first.
+
+**Step 3: Calculate probabilities**
+For each image, AI outputs probabilities: "70% cat, 20% dog, 10% other."
+
+**Step 4: Measure error**
+Compare predictions to actual labels. If the image was actually a cat and AI said 70% cat, that's pretty good. If it said 10% cat, that's bad. Calculate the error.
+
+**Step 5: Optimise**
+Adjust the AI's numbers to reduce error. Repeat with millions of images.
+
+**Step 6: Result**
+After enough training, AI recognises cats, dogs, and other things reliably.
+
+### Training a Language Model
+
+Same process, different data:
+
+**Step 1: Represent text as vectors**
+Words become numbers. Sentences become lists of numbers.
+
+**Step 2: Start with random weights**
+Billions of random numbers.
+
+**Step 3: Predict next words**
+Given "The sky is", predict what comes next. Output probabilities for every word.
+
+**Step 4: Measure error**
+If the actual next word was "blue" and AI gave that high probability, good. Low probability, bad.
+
+**Step 5: Optimise**
+Adjust weights. Repeat with billions of sentences.
+
+**Step 6: Result**
+AI that can write coherently, answer questions, and hold conversations.
+
+---
+
+## AI vs Traditional Calculators
+
+Here's an important distinction.
+
+### Traditional Calculators: Exact and Transparent
+
+When you use the [Loan Calculator](https://calcfort.com/calculator/financial/loan), you get an exact answer. The formula is known. You can verify it. Same inputs always give same outputs.
+
+2 + 2 = 4. Every time.
+
+### AI: Probabilistic and Opaque
+
+AI gives PROBABLE answers, not exact ones. It might be wrong. And you often can't see why it gave a particular answer.
+
+"What's the capital of France?" — AI is very likely to say "Paris," but technically it's outputting a probability distribution, and "Paris" just happened to be the most likely word.
+
+### When to Use Which
+
+**Use calculators when:**
+- You need exact numbers
+- You want to understand the logic
+- The formula is known
+- Errors are costly
+
+**Use AI when:**
+- The problem is fuzzy (like language or images)
+- Approximate answers are fine
+- There's no known formula
+- Pattern recognition is needed
+
+For money calculations, use the [Budget Calculator](https://calcfort.com/calculator/financial/budget). Exact numbers matter.
+
+For writing help, AI is great. Approximate is fine.
+
+For health decisions, use calculators like the [BMI Calculator](https://calcfort.com/calculator/health/bmi) for exact measurements. AI can provide context, but verify important numbers.
+
+---
+
+## Common Questions
+
+### Do I need to be good at maths to use AI?
+
+No. Using AI requires no maths. Understanding AI at a deep level requires serious maths (calculus, linear algebra, probability theory). The basics covered here are enough for informed use.
+
+### Why does AI sometimes give wrong answers?
+
+Several reasons:
+- It's probabilistic, so occasionally low-probability outputs happen
+- Training data had errors or biases
+- The question is outside what it learned
+- It's "hallucinating" — generating plausible-sounding but wrong content
+
+### Can AI do maths itself?
+
+Sort of. AI can do arithmetic, but it's not how it works internally. It predicts what the answer should LOOK like based on patterns, not by actually calculating. That's why AI sometimes fails simple maths questions.
+
+For reliable maths, use calculators:
+- [Scientific Calculator](https://calcfort.com/calculator/mathematics/scientific)
+- [Percentage Calculator](https://calcfort.com/calculator/mathematics/percentage)
+- [Matrix Calculator](https://calcfort.com/calculator/mathematics/matrix)
+
+### Why is AI training so expensive?
+
+Those billions of optimisation steps require enormous computing power. Training large AI models can cost millions in electricity and hardware. Once trained, using AI is much cheaper.
+
+### Is AI actually intelligent?
+
+Depends on your definition. AI is very good at pattern matching. It's not conscious, doesn't understand meaning, and doesn't have goals. It's a very sophisticated mathematical function. "Intelligence" is debatable.
+
+### Will AI get better at maths?
+
+Probably. New approaches combine AI pattern-matching with traditional calculators. AI might identify what calculation to do; calculators execute it exactly. Hybrid approaches are promising.
+
+### How accurate is AI?
+
+Varies wildly. For common tasks it's trained on: very accurate. For unusual situations: unreliable. Always verify important outputs.
+
+---
+
+## The Bottom Line
+
+AI maths isn't as scary as it sounds:
+
+- **Linear algebra:** Lists and tables of numbers, plus operations on them
+- **Probability:** Making educated guesses about uncertain things
+- **Optimisation:** Finding the best answer by iteratively improving
+
+These three ideas, done at massive scale, produce AI that can write, recognise images, translate languages, and more.
+
+It's not magic. It's maths — elegant, powerful maths done very fast.
+
+Understanding this helps you use AI better. You'll know when to trust it, when to question it, and when a simple calculator is actually what you need.
+
+---
+
+## Related Tools
+
+- [Scientific Calculator](https://calcfort.com/calculator/mathematics/scientific) — Complex calculations
+- [Matrix Calculator](https://calcfort.com/calculator/mathematics/matrix) — Matrix operations
+- [Percentage Calculator](https://calcfort.com/calculator/mathematics/percentage) — Probability as percentages
+- [Budget Calculator](https://calcfort.com/calculator/financial/budget) — Exact financial maths
+- [BMI Calculator](https://calcfort.com/calculator/health/bmi) — Exact health measurements

@@ -1,0 +1,295 @@
+## Refinance Calculator: Mortgage Refinancing Analysis
+
+## Table of Contents - Refinance
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Break-Even Analysis](#the-core-principle-break-even-analysis)
+- [How to Calculate Refinance Savings Manually](#how-to-calculate-refinance-savings-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Refinance
+Enter your Current Loan Details:
+- Current balance remaining
+- Current interest rate
+- Remaining term in years
+- Current monthly payment (principal and interest only)
+
+Enter your New Loan Terms:
+- New interest rate offered
+- New loan term (years)
+- Closing costs for the refinance
+
+Click "Calculate" to see results. The output displays:
+- New monthly payment
+- Monthly savings
+- Break-even point in months
+- Total interest on current loan versus new loan
+- Net lifetime savings after closing costs
+
+---
+
+## The Core Principle: Break-Even Analysis
+
+Refinancing makes sense when long-term savings exceed the costs. The key metric is break-even point.
+
+**Break-even formula:**
+Break-even (months) = Closing Costs / Monthly Savings
+
+If closing costs are £3,500 and monthly savings are £200:
+Break-even = £3,500 / £200 = 17.5 months
+
+If you'll stay in the home longer than 17.5 months, refinancing pays off.
+
+**Total savings:**
+Total Savings = (Monthly Savings × Remaining Months) - Closing Costs
+
+This calculation assumes you keep the loan to term. Paying off early or selling changes the math.
+
+**Interest comparison:**
+Compare total interest paid under current loan versus new loan, factoring in the different term lengths and rates.
+
+---
+
+## How to Calculate Refinance Savings Manually
+
+**Example scenario:**
+Current: £180,000 balance, 5.25% rate, 25 years remaining
+New offer: 4.0% rate, 30 years, £3,500 closing costs
+
+**Current payment:**
+Using standard mortgage formula at 5.25%/25 years:
+Monthly P&I ≈ £1,080
+
+**New payment at 30 years:**
+At 4.0%/30 years:
+Monthly P&I ≈ £859
+
+**Monthly savings:**
+£1,080 - £859 = £221
+
+**Break-even:**
+£3,500 / £221 ≈ 15.8 months
+
+**Total interest comparison:**
+Current: £1,080 × 300 months - £180,000 = £144,000 interest
+New: £859 × 360 months - £180,000 = £129,240 interest
+Interest savings: £14,760
+
+**But consider term extension:**
+You're adding 5 years of payments. Compare total paid:
+Current: £1,080 × 300 = £324,000
+New: £859 × 360 = £309,240
+Net savings: £14,760 (before closing costs) → £11,260 after
+
+---
+
+## Real-World Applications
+
+**Rate reduction refinance.** Rates dropped 1%+ since your original loan. Calculate whether the savings justify closing costs.
+
+**Term reduction.** Refinancing from 30-year to 15-year increases payment but dramatically reduces total interest.
+
+**Cash-out refinance.** Borrowing additional funds against equity for home improvements, debt consolidation, or investments.
+
+**Removing PMI.** Refinancing when you reach 20% equity can eliminate PMI payments, improving monthly cash flow.
+
+**Adjustable to fixed conversion.** Switching from ARM to fixed rate before rate adjustments hit, providing payment certainty.
+
+**Consolidating loans.** Combining first and second mortgages into a single, lower-rate loan.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The term extension trap.** Lower payment feels like savings, but extending from 20 years remaining to 30 years costs more total interest. Compare same-term options.
+
+**The PMI elimination opportunity.** Current loan has £150/month PMI. Refinancing at 80% LTV eliminates this—add £150 to monthly savings calculation.
+
+**The cash-out consideration.** You need £30,000 for renovations. Cash-out refinance at 4% beats personal loan at 8%, but increases mortgage balance.
+
+**The closing cost roll-in.** Rolling £5,000 closing costs into the loan avoids upfront payment but means paying interest on those costs for 30 years.
+
+**The rate versus term decision.** Same rate but shorter term means higher payments but massive interest savings. Run both scenarios.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Monthly savings versus total cost.** A lower payment might cost more over the loan's life if you extend the term significantly.
+
+**Closing costs variability.** Closing costs range from 2-5% of loan amount. Shop multiple lenders—fees vary substantially.
+
+**Opportunity cost of closing costs.** £5,000 in closing costs could earn returns if invested instead. Factor this into break-even analysis.
+
+**Reset amortization.** Early in a refinanced loan, payments are mostly interest. You restart the amortization curve.
+
+**Time horizon uncertainty.** Break-even assumes you stay. Job changes, family growth, or market conditions might force an earlier move.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Comparing payment only.** A lower payment with a longer term often costs more total. Always compare total interest paid.
+
+**Ignoring closing costs.** "No closing cost" refinances typically have higher rates. The costs are just hidden.
+
+**Refinancing too often.** Each refinance has costs. Refinancing every time rates drop 0.25% rarely makes sense—wait for significant drops.
+
+**Not shopping around.** Rate quotes vary by 0.5% or more between lenders. Get multiple quotes on the same day for comparison.
+
+**Extending term unnecessarily.** If you can afford the payment, refinancing to the same remaining term maximizes savings.
+
+---
+
+## Related Topics
+
+**Mortgage amortization.** Understanding how payments split between principal and interest over time.
+
+**Loan-to-value ratio (LTV).** Your loan balance divided by home value. Affects rates and PMI requirements.
+
+**Annual Percentage Rate (APR).** Includes rate plus fees, providing better comparison between loan offers.
+
+**Points and credits.** Paying points buys down your rate; credits increase your rate but reduce closing costs.
+
+**Rate lock.** Locking your rate protects against increases during the closing process.
+
+---
+
+## How This Calculator Works
+
+**Monthly payment calculation:**
+```
+monthlyRate = annualRate / 12
+termMonths = termYears × 12
+payment = loanAmount × [monthlyRate × (1 + monthlyRate)^termMonths] / [(1 + monthlyRate)^termMonths - 1]
+```
+
+**Monthly savings:**
+```
+savings = currentPayment - newPayment
+```
+
+**Break-even:**
+```
+breakEvenMonths = closingCosts / monthlySavings
+```
+
+**Total interest:**
+```
+totalInterest = (payment × termMonths) - loanAmount
+```
+
+**Net lifetime savings:**
+```
+lifetimeSavings = (currentTotalInterest - newTotalInterest) - closingCosts
+```
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**What is the break-even point?**
+
+The number of months until your monthly savings cover your closing costs. Only refinance if you'll stay longer than this period.
+
+**Should I choose a shorter term when refinancing?**
+
+If you can afford the higher payment, yes. A shorter term dramatically reduces total interest even if the rate is similar.
+
+**Can this calculator handle cash-out refinances?**
+
+Yes. Enter the new (higher) loan amount. The calculator shows your new payment and whether the cash-out makes financial sense.
+
+**Do I include PMI in the calculations?**
+
+If refinancing eliminates PMI, add that monthly savings to your comparison. The calculator allows toggling PMI.
+
+**How accurate are the interest savings?**
+
+Precise for fixed-rate loans using standard amortization. Variable rate results assume the initial rate continues.
+
+**What if closing costs are rolled into the loan?**
+
+Increase the new loan amount by the closing costs. This increases your payment and total interest but eliminates upfront costs.
+
+**Is refinancing worth it for a small rate drop?**
+
+Only if closing costs are low and you'll stay long-term. Calculate break-even—if it's over 3-4 years, a small drop may not be worthwhile.
+
+**Can I use this for UK mortgages?**
+
+Yes. The calculator works for any fixed-rate repayment mortgage. Ensure you input principal and interest only, excluding fees and insurance.
+
+**How do I know if it's the right time to refinance?**
+
+Consider refinancing when rates drop 1%+ from your current rate, your credit has improved significantly, you need to remove PMI, or you want to switch from adjustable to fixed rate.
+
+**What fees should I include in closing costs?**
+
+Include lender fees, valuation/appraisal fees, legal fees, title search, recording fees, and any broker costs. Get a detailed estimate before committing.
+
+**How does my credit score affect refinancing?**
+
+Better credit scores qualify for lower rates. Improving your score before refinancing can significantly reduce your interest rate and total savings.
+
+**What is a rate-and-term refinance versus cash-out?**
+
+Rate-and-term changes your interest rate and/or loan term without increasing the balance. Cash-out increases your loan amount to access home equity.
+
+**Should I pay points to lower my rate?**
+
+Points buy down your rate but increase upfront costs. Calculate break-even: if you'll stay past the break-even point, points may be worthwhile.
+
+**How does refinancing affect my taxes?**
+
+Mortgage interest is tax-deductible in some circumstances. Refinancing to a lower rate reduces your deduction but also reduces your actual interest paid. Consult a tax advisor for your situation.
+
+**What is an adjustable-rate mortgage (ARM)?**
+
+An ARM has a rate that changes periodically. Refinancing from ARM to fixed rate provides payment certainty, especially when rates are expected to rise.
+
+**How long does the refinancing process take?**
+
+Typically 30-45 days from application to closing. Shopping for rates, appraisal, underwriting, and closing all take time.
+
+**Can I refinance with bad credit?**
+
+Possible but with higher rates. FHA and VA loans have more flexible credit requirements. Improving credit before refinancing gets better terms.
+
+**What is loan-to-value (LTV) ratio?**
+
+Your loan balance divided by home value. LTV above 80% may require PMI. Refinancing when LTV drops below 80% can eliminate this cost.
+
+**Should I refinance to pay off other debt?**
+
+Cash-out refinancing to pay high-interest debt can save money, but you're converting unsecured debt to debt secured by your home. Consider the risks carefully.
+
+**Additional Notes**
+
+Refinancing can be a powerful tool for improving your financial situation, but it requires careful analysis. The break-even calculation is crucial—only refinance if you'll stay long enough to recover closing costs. Compare total interest paid, not just monthly payments, to understand the true financial impact.
+
+Shop multiple lenders for the best rates, and don't forget to factor in all costs. The lowest rate isn't always the best deal when fees are considered. Take your time, run the numbers, and make an informed decision.
+
+**Practical Tips for Success**
+
+Get your credit report before shopping for rates—errors can affect your offers. Calculate your debt-to-income ratio; lenders look at this closely. Document your income thoroughly for self-employed applications. Consider the emotional factor of extending your mortgage term—even if financially rational, some homeowners prefer the security of a shorter payoff timeline.
+
+**Understanding Market Timing**
+
+Interest rates fluctuate based on economic conditions. The best time to refinance is when rates are significantly lower than your current rate and you have good credit and equity. Don't try to time the market perfectly—if refinancing makes sense today, it probably makes sense. Waiting for rates to drop further can backfire if they rise instead. Focus on your specific situation rather than general market predictions.
+
+Refinancing is a significant financial decision that deserves careful analysis. The break-even calculation is your most important metric. Take time to understand all costs and benefits, compare multiple offers, and ensure the decision aligns with your overall financial goals and timeline.
+With careful analysis, refinancing can significantly improve your financial situation. Use this calculator to explore your options and make a data-driven decision.
+The best refinance decisions are informed decisions. Run multiple scenarios and compare outcomes before committing to any loan.
+Smart refinancing combines good timing with thorough analysis.
+The right refinance at the right time improves your finances.
+Every decision benefits from thorough analysis.

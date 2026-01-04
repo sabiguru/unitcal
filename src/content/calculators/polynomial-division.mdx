@@ -1,0 +1,405 @@
+## Polynomial Division Calculator: Long Division with Polynomials
+
+## Table of Contents - Polynomial Division
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [What Is Polynomial Division?](#what-is-polynomial-division)
+- [How to Divide Polynomials Manually](#how-to-divide-polynomials-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Polynomial Division
+
+Enter the dividend (the polynomial being divided) in the first input field using standard notation like "x³ + 2x² - 5x + 3".
+
+Enter the divisor (what you're dividing by) in the second input field like "x - 2" or "x² + 1".
+
+Click "Calculate" to see the division result. The output shows:
+- The quotient polynomial
+- The remainder (if any)
+- Complete long division work shown step-by-step
+- Verification that divisor times quotient plus remainder equals dividend
+
+Use standard polynomial notation with terms in descending order of degree for clearest results.
+
+---
+
+## What Is Polynomial Division?
+
+Polynomial division works just like long division with numbers, except you're dividing expressions with variables. If you can divide 847 by 7, you can divide polynomials—the process is remarkably similar.
+
+Think about dividing 847 by 7. You ask "how many times does 7 go into 8?" and build the answer digit by digit. With polynomials, you ask "how many times does x go into x³?" and build the answer term by term.
+
+**Why this matters:** Division reveals factors and simplifies rational expressions. It's essential for partial fraction decomposition, finding zeros of polynomials, and simplifying complex fractions. The remainder theorem connects division to function values.
+
+The key relationship is: Dividend = Divisor times Quotient plus Remainder. For polynomials, if there's no remainder, the divisor is a factor of the dividend.
+
+Understanding polynomial division gives you power to simplify expressions, solve higher-degree equations, and understand the structure of polynomial functions.
+
+---
+
+## How to Divide Polynomials Manually
+
+**Basic long division setup:**
+
+Divide (x³ + 5x² + 2x - 8) by (x + 2)
+
+Set up like numerical long division:
+```
+        x + 2 | x³ + 5x² + 2x - 8
+```
+
+**Step 1: Divide leading terms.**
+
+x³ divided by x equals x². Write x² above the division line.
+
+```
+              x²
+        x + 2 | x³ + 5x² + 2x - 8
+```
+
+**Step 2: Multiply divisor by first quotient term.**
+
+x²(x + 2) = x³ + 2x²
+
+Write this under the dividend and subtract:
+
+```
+              x²
+        x + 2 | x³ + 5x² + 2x - 8
+                x³ + 2x²
+                ─────────
+                     3x² + 2x
+```
+
+**Step 3: Bring down next term and repeat.**
+
+Divide 3x² by x to get 3x. Add to quotient.
+
+```
+              x² + 3x
+        x + 2 | x³ + 5x² + 2x - 8
+                x³ + 2x²
+                ─────────
+                     3x² + 2x
+                     3x² + 6x
+                     ─────────
+                         -4x - 8
+```
+
+**Step 4: Continue until degree of remainder is less than divisor.**
+
+Divide -4x by x to get -4.
+
+```
+              x² + 3x - 4
+        x + 2 | x³ + 5x² + 2x - 8
+                x³ + 2x²
+                ─────────
+                     3x² + 2x
+                     3x² + 6x
+                     ─────────
+                         -4x - 8
+                         -4x - 8
+                         ───────
+                              0
+```
+
+Result: (x³ + 5x² + 2x - 8) / (x + 2) = x² + 3x - 4 with remainder 0.
+
+**Example with remainder:**
+
+Divide (x³ + 2x + 5) by (x - 1)
+
+Note the missing x² term—treat it as 0x².
+
+```
+              x² + x + 3
+        x - 1 | x³ + 0x² + 2x + 5
+                x³ - x²
+                ───────
+                    x² + 2x
+                    x² - x
+                    ───────
+                        3x + 5
+                        3x - 3
+                        ──────
+                            8
+```
+
+Result: (x³ + 2x + 5) / (x - 1) = x² + x + 3 with remainder 8.
+
+Written as: (x³ + 2x + 5) = (x - 1)(x² + x + 3) + 8
+
+Or: (x³ + 2x + 5)/(x - 1) = x² + x + 3 + 8/(x - 1)
+
+**Dividing by a quadratic:**
+
+Divide (2x⁴ - 3x³ + x² - 5x + 7) by (x² + 1)
+
+```
+              2x² - 3x - 1
+    x² + 1 | 2x⁴ - 3x³ + x² - 5x + 7
+             2x⁴      + 2x²
+             ──────────────
+                 -3x³ - x² - 5x
+                 -3x³      - 3x
+                 ───────────────
+                      -x² - 2x + 7
+                      -x²      - 1
+                      ────────────
+                          -2x + 8
+```
+
+Result: Quotient is 2x² - 3x - 1, remainder is -2x + 8.
+
+**Checking your work:**
+
+Multiply quotient by divisor and add remainder:
+(x² + 1)(2x² - 3x - 1) + (-2x + 8) should equal original dividend.
+
+Expand: 2x⁴ - 3x³ - x² + 2x² - 3x - 1 - 2x + 8 = 2x⁴ - 3x³ + x² - 5x + 7 ✓
+
+**Using placeholder zeros:**
+
+Divide (x⁴ - 16) by (x - 2)
+
+Write as x⁴ + 0x³ + 0x² + 0x - 16 to keep terms aligned.
+
+```
+              x³ + 2x² + 4x + 8
+        x - 2 | x⁴ + 0x³ + 0x² + 0x - 16
+                x⁴ - 2x³
+                ────────
+                    2x³ + 0x²
+                    2x³ - 4x²
+                    ─────────
+                         4x² + 0x
+                         4x² - 8x
+                         ────────
+                              8x - 16
+                              8x - 16
+                              ───────
+                                   0
+```
+
+Result: (x⁴ - 16)/(x - 2) = x³ + 2x² + 4x + 8
+
+---
+
+## Real-World Applications
+
+**Simplifying rational functions.** The expression (x³ - 8)/(x - 2) looks complicated, but dividing gives x² + 2x + 4, much simpler (since remainder is 0).
+
+**Finding asymptotes in calculus.** For y = (2x³ + x² - 1)/(x² + 1), dividing numerator by denominator gives y = 2x + quotient + remainder/(divisor), revealing oblique asymptote y = 2x.
+
+**Partial fraction decomposition setup.** Before decomposing, improper fractions need division. If numerator degree is greater than or equal to denominator degree, divide first.
+
+**Signal processing filter design.** Transfer functions are rational expressions. Division helps analyze frequency response and system behavior.
+
+**Cryptography and error correction.** Polynomial division over finite fields enables Reed-Solomon codes used in QR codes, CDs, and data transmission.
+
+**Physics and engineering models.** Rational function models often require division to identify dominant terms or asymptotic behavior.
+
+---
+
+## Scenarios People Actually Run Into
+
+**Factoring by division.** You know x = 3 is a root of x³ - 2x² - 5x + 6, so (x - 3) is a factor. Divide the polynomial by (x - 3) to find the quadratic factor, then solve that.
+
+**Simplifying before integrating.** Calculus integral of (x³ + 1)/(x + 1) is easier if you divide first: (x³ + 1)/(x + 1) = x² - x + 1, which integrates easily.
+
+**Checking if one polynomial divides another.** Does (x + 2) divide (x³ + 8)? Divide and check remainder. If it's zero, yes. In this case, x³ + 8 = (x + 2)(x² - 2x + 4).
+
+**Finding unknown coefficients.** You know (x³ + ax² + bx + 6) divided by (x - 2) gives remainder 0. Use division and the remainder theorem to find a and b.
+
+**Analyzing polynomial behavior.** For large x, how does (3x⁴ + 2x² - 1)/(x² - 4) behave? Divide to get 3x² + 12 + (51x - 49)/(x² - 4). The quotient 3x² + 12 dominates as x grows.
+
+**Verifying factorizations.** Someone claims x⁴ - 1 = (x - 1)(x³ + x² + x + 1). Divide x⁴ - 1 by x - 1 to verify the quotient is indeed x³ + x² + x + 1.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Long division versus synthetic division.** For linear divisors (x - a), synthetic division is faster. For quadratic or higher-degree divisors, long division is necessary. Learn both.
+
+**When to check for factors first.** If you suspect the divisor is a factor, try the remainder theorem first. Plug in the zero and see if you get zero output—faster than full division.
+
+**Keeping terms aligned.** Missing terms cause errors. Always include placeholder zeros: x⁴ - 1 becomes x⁴ + 0x³ + 0x² + 0x - 1. This alignment prevents mistakes.
+
+**Deciding what form to leave the answer.** Sometimes quotient plus remainder/divisor is useful: q(x) + r(x)/d(x). Other times, just the quotient matters. Choose based on what you need next.
+
+**Dividing before factoring versus factoring before dividing.** If the divisor factors easily, factor it first to potentially use simpler divisions. For x² - 1, divide by (x - 1) then (x + 1) instead of by x² - 1 directly.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Forgetting placeholder zeros.** Dividing x³ - 8 by x - 2 without writing x³ + 0x² + 0x - 8 leads to misalignment and wrong terms. Always write all degrees.
+
+**Sign errors during subtraction.** Subtracting (x³ + 2x²) means adding -(x³ + 2x²) = -x³ - 2x². Watch signs carefully. Common error: forgetting to distribute the negative.
+
+**Not continuing until remainder degree is less than divisor.** The remainder must have degree less than the divisor. If dividing by x², remainder should be at most degree 1 (linear).
+
+**Dividing terms incorrectly.** When dividing 6x² by 2x, the answer is 3x, not 3x². Subtract exponents, don't forget.
+
+**Misaligning terms.** Writing the subtraction incorrectly or bringing down wrong terms creates cascading errors. Use columnar format with careful alignment.
+
+**Forgetting to bring down terms.** After each subtraction, bring down the next term from the dividend. Skipping this step breaks the algorithm.
+
+---
+
+## Related Topics
+
+**Synthetic division.** Faster method for dividing by linear factors (x - a). Same results, less writing.
+
+**Remainder theorem.** States that dividing f(x) by (x - a) gives remainder f(a). Connects division to function evaluation.
+
+**Factor theorem.** Says (x - a) is a factor of f(x) if and only if f(a) = 0. Remainder theorem specialized to zero remainder.
+
+**Rational root theorem.** Identifies potential rational zeros, which lead to linear factors for division.
+
+**Partial fraction decomposition.** Requires division first when rational expression is improper.
+
+**Polynomial factorization.** Division helps factor polynomials by removing known factors iteratively.
+
+---
+
+## How This Calculator Works
+
+**Input parsing:**
+```
+Dividend: parse as polynomial with coefficients
+Divisor: parse as polynomial with coefficients
+Ensure terms in descending order by degree
+Add zero coefficients for missing degrees
+```
+
+**Long division algorithm:**
+```
+While degree of current dividend >= degree of divisor:
+  Divide leading term of current dividend by leading term of divisor
+  Add result to quotient
+  Multiply entire divisor by this quotient term
+  Subtract from current dividend
+  Update current dividend to result
+Remainder is final current dividend
+```
+
+**Output formatting:**
+```
+Display quotient polynomial
+Display remainder polynomial
+Show full long division work step-by-step
+Verify: divisor × quotient + remainder = original dividend
+```
+
+**Special handling:**
+```
+Missing terms: insert 0 coefficients
+Leading coefficient not 1: factor out if needed
+Zero divisor: return error
+Constant divisor: divide all coefficients
+```
+
+---
+
+## FAQs
+
+**What is polynomial division?**
+
+Dividing one polynomial by another using a process similar to long division with numbers. Results in a quotient polynomial and possibly a remainder.
+
+**When do I need to use polynomial division?**
+
+When simplifying rational expressions, finding factors, performing partial fraction decomposition, or analyzing polynomial functions.
+
+**How is it different from synthetic division?**
+
+Polynomial long division works for any divisor. Synthetic division only works for linear divisors (x - a) but is faster and more compact.
+
+**What is the remainder?**
+
+What's left over when division isn't exact. Its degree is always less than the divisor's degree. If remainder is zero, the divisor is a factor.
+
+**How do I know if one polynomial divides another?**
+
+Perform the division. If the remainder is zero, the divisor divides the dividend evenly—it's a factor.
+
+**What's the dividend and what's the divisor?**
+
+Dividend is what you're dividing (numerator). Divisor is what you're dividing by (denominator). Quotient is the result.
+
+**Why use placeholder zeros?**
+
+To keep columns aligned. Missing terms have coefficient zero. Writing them explicitly prevents errors in subtraction and alignment.
+
+**Can I divide by any polynomial?**
+
+Any non-zero polynomial. Can't divide by zero polynomial. Divisor degree can be anything from 0 (constant) to less than dividend degree for meaningful quotient.
+
+**What if the dividend degree is less than divisor degree?**
+
+Quotient is 0, remainder is the entire dividend. Like dividing 3 by 5: quotient 0, remainder 3.
+
+**How do I check my division?**
+
+Multiply quotient by divisor and add remainder. Should equal the original dividend. This verifies correctness.
+
+**What is an improper rational expression?**
+
+One where numerator degree is greater than or equal to denominator degree. Divide to convert to proper form plus polynomial.
+
+**Can the remainder be negative?**
+
+Coefficients can be negative, yes. The remainder polynomial can have negative coefficients or even be a negative constant.
+
+**How does this relate to the remainder theorem?**
+
+Remainder theorem says dividing f(x) by (x - a) gives remainder f(a). Division confirms this—plug in a, get the remainder value.
+
+**What if there's a remainder?**
+
+Express as: dividend = divisor times quotient plus remainder. Or: dividend/divisor = quotient + remainder/divisor.
+
+**Why does descending order matter?**
+
+Keeps work organized and terms aligned by degree. Standard convention makes sharing and checking work easier.
+
+**Can I divide polynomials with different variables?**
+
+Yes, but they act as independent. Dividing (x² + y²) by x gives quotient x plus remainder y². Variables that don't appear in divisor stay in remainder.
+
+**What about dividing with fractions?**
+
+Coefficients can be fractions. Process is the same. 1/2 x² divided by x gives 1/2 x. Work carefully with fraction arithmetic.
+
+**Is there a shortcut for dividing by (x - a)?**
+
+Yes—synthetic division. It's specifically designed for linear factors and is much faster than long division.
+
+**What happens with complex coefficients?**
+
+Same process. Complex numbers follow standard arithmetic. Division works with complex coefficients just like real ones.
+
+**How do I find all factors of a polynomial?**
+
+Start with one factor (using rational root theorem or graphing). Divide to get quotient. Factor quotient. Repeat until only linear and irreducible quadratic factors remain.
+
+**Additional Notes**
+
+Polynomial division is fundamental algebra that bridges arithmetic and abstract mathematics. The algorithm mirrors long division you learned with numbers, showing the power of generalization.
+
+Master the technique with practice. Start with simple linear divisors, progress to quadratics, and build confidence with higher degrees. The process is mechanical—follow steps carefully.
+
+Always verify your work by multiplying back. This habit catches errors immediately and reinforces understanding of the division relationship.
+
+Polynomial division appears throughout higher mathematics: calculus, abstract algebra, number theory, and applied fields. Understanding it deeply pays dividends across mathematical disciplines.
+
+The connection to the remainder and factor theorems reveals deep structure in polynomials. Division isn't just computation—it's a tool for understanding polynomial behavior and structure.

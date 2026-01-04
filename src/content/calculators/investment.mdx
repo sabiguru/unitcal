@@ -1,0 +1,272 @@
+## Investment Calculator: Portfolio Growth and Returns Calculator
+
+## Table of Contents - Investment
+- [How to Use This Calculator](#how-to-use-this-calculator)
+- [The Core Principle: Compound Growth with Contributions](#the-core-principle-compound-growth-with-contributions)
+- [How to Calculate Investment Growth Manually](#how-to-calculate-investment-growth-manually)
+- [Real-World Applications](#real-world-applications)
+- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
+- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
+- [Related Topics](#related-topics)
+- [How This Calculator Works](#how-this-calculator-works)
+- [FAQs](#faqs)
+
+---
+
+## How to Use This Calculator - Investment
+Enter your Starting Balance—your current investment portfolio value. This can be zero if you're starting fresh.
+
+Enter your Monthly Contribution—the amount you'll add each month. Consistency matters more than size.
+
+Enter your Expected Annual Return as a percentage. Historical stock market returns average 7-10% before inflation; use 6-7% for conservative projections.
+
+Enter your Investment Period in years—how long until you need the money.
+
+Select Compounding Frequency: Monthly (standard for most projections) or other intervals.
+
+Optionally enter an Inflation Rate (typically 2-3%) to see inflation-adjusted values.
+
+Click "Calculate" to see results. The output displays:
+- Future value in nominal dollars
+- Future value adjusted for inflation (real purchasing power)
+- Total contributions versus investment earnings
+- Return on investment percentage
+- Year-by-year breakdown showing balance, contributions, and gains
+
+---
+
+## The Core Principle: Compound Growth with Contributions
+
+Investment growth combines two powerful forces: compound returns on your existing balance and regular contributions that each start compounding.
+
+The future value formula for investments with regular contributions:
+FV = P(1 + r)^t + PMT × [(1 + r)^t - 1] / r
+
+Where P is initial investment, PMT is periodic contribution, r is periodic rate, and t is number of periods.
+
+The first term represents growth of your initial investment. The second term represents the accumulated value of all contributions, each growing for different lengths of time.
+
+Early contributions are worth dramatically more than later ones because they have more time to compound. A dollar invested at age 25 is worth far more at retirement than a dollar invested at age 55.
+
+This is why financial advisors emphasize starting early, even with small amounts. Time is the most powerful variable in the equation.
+
+---
+
+## How to Calculate Investment Growth Manually
+
+**Lump sum growth (no contributions):**
+FV = P × (1 + r)^t
+
+Example: $10,000 at 7% for 30 years
+FV = $10,000 × (1.07)^30 = $10,000 × 7.612 = $76,123
+
+**Monthly contributions only (no starting balance):**
+FV = PMT × [(1 + r)^n - 1] / r
+
+Where r = annual rate / 12, n = months
+
+Example: $500/month at 7% for 30 years
+r = 0.07/12 = 0.00583
+n = 360 months
+FV = $500 × [(1.00583)^360 - 1] / 0.00583 = $566,764
+
+**Combined (initial + contributions):**
+Total FV = Lump sum FV + Contributions FV
+Example: $10,000 initial + $500/month at 7% for 30 years
+Total = $76,123 + $566,764 = $642,887
+
+**Inflation adjustment:**
+Real FV = Nominal FV / (1 + inflation)^years
+
+Example: $642,887 nominal with 2.5% inflation over 30 years
+Real = $642,887 / (1.025)^30 = $306,627
+
+**Contribution breakdown:**
+Total contributions = Initial + (Monthly × Months)
+Example: $10,000 + ($500 × 360) = $190,000
+Investment earnings = FV - Total contributions = $642,887 - $190,000 = $452,887
+
+---
+
+## Real-World Applications
+
+**Retirement planning.** How much will $500/month grow to in 30 years? If you need $1 million, how much must you save monthly? The calculator answers both directions.
+
+**Education savings.** Starting when a child is born, what monthly contribution reaches $100,000 by age 18? At 7% return, approximately $250/month.
+
+**House down payment.** Need $60,000 in 5 years? At 5% return, you need about $880/month—or $1,000/month in a savings account at 1%.
+
+**Goal feasibility.** Is your retirement plan realistic? Compare projected portfolio to expected expenses (typically 25× annual spending for 4% withdrawal rate).
+
+**Catch-up planning.** Started saving late? Calculate what aggressive contributions are needed to reach goals—and whether they're feasible.
+
+---
+
+## Scenarios People Actually Run Into
+
+**The early start advantage.** Sarah invests $400/month from age 25-35 (10 years, $48,000 total), then stops. Mike starts at 35, invests $400/month until 65 (30 years, $144,000 total). At 7%, Sarah has more at 65—$600,000 versus $567,000—despite investing one-third as much.
+
+**The inflation reality check.** Your projections show $2 million at retirement. Adjusted for 2.5% inflation over 35 years, that's equivalent to $850,000 today. Still good, but not as rich as it sounds.
+
+**The fee erosion.** You project $1 million at 7%. But your funds charge 1% in fees, so your effective return is 6%. At 6%, you accumulate $830,000—fees cost you $170,000.
+
+**The sequence of returns risk.** The calculator assumes steady 7% returns. Reality is volatile—some years +20%, some years -15%. If bad years cluster early or late in your timeline, results differ significantly from projections.
+
+**The lifestyle inflation trap.** You plan to save $500/month forever. But raises lead to lifestyle inflation—you upgrade but don't increase savings. The projection assumed increasing contributions; reality didn't match.
+
+---
+
+## Trade-Offs and Decisions People Underestimate
+
+**Aggressive contribution versus comfortable living.** Saving 25% of income accelerates goals but may feel constraining. Saving 10% is comfortable but may require working longer. Find your balance.
+
+**Expected return assumptions.** Using 10% looks optimistic; 5% looks pessimistic. Small rate differences compound dramatically: 7% versus 8% over 30 years differs by 30%+ in final value.
+
+**Contribution timing.** Contributing at month start versus month end affects results slightly. A $500 contribution at month start earns one extra month's returns—about $2 per month at 7%, adding up over decades.
+
+**Inflation rate assumptions.** Historical US inflation averages 3%. Using 2% makes projections look better; 4% makes them look worse. Recent years show inflation can surprise.
+
+**Time horizon flexibility.** Can you delay retirement by 2 years if markets underperform? That flexibility dramatically reduces risk. A rigid deadline creates pressure.
+
+---
+
+## Common Mistakes and How to Recover
+
+**Ignoring inflation.** $1 million in 30 years isn't worth $1 million today. Always calculate real (inflation-adjusted) values for goal setting.
+
+**Using unrealistic returns.** 12% annual returns aren't sustainable long-term. Use 6-8% for diversified portfolios, 4-5% for conservative allocations.
+
+**Forgetting taxes.** Investment gains in taxable accounts face capital gains tax. Account type (401k, IRA, taxable) significantly affects after-tax results.
+
+**Not accounting for fees.** Fund expense ratios, advisor fees, and platform costs reduce effective returns. A 1% total fee on a 7% return means you keep 6%.
+
+**Linear extrapolation.** The market doesn't return 7% every year—it averages 7% with significant volatility. Actual results vary, sometimes dramatically.
+
+---
+
+## Related Topics
+
+**Dollar-cost averaging.** Investing fixed amounts regularly regardless of market conditions. Your contributions naturally buy more shares when prices are low.
+
+**Asset allocation.** How you divide investments among stocks, bonds, and other assets. Affects expected return and risk level.
+
+**Withdrawal rate.** The percentage of portfolio withdrawn annually in retirement. 4% is a common guideline for sustainable 30-year withdrawals.
+
+**Tax-advantaged accounts.** 401(k)s, IRAs, and similar accounts offer tax benefits that effectively increase returns. Maximize these before taxable investing.
+
+**Rebalancing.** Periodically adjusting portfolio to maintain target allocation as different assets grow at different rates.
+
+---
+
+## How This Calculator Works
+
+**Initial investment growth:**
+```
+futureValueInitial = initial × (1 + r/n)^(n×t)
+```
+
+**Contribution growth (future value of annuity):**
+```
+monthlyRate = annualRate / 12
+totalMonths = years × 12
+futureValueContributions = monthly × [(1 + monthlyRate)^months - 1] / monthlyRate
+```
+
+**Total future value:**
+```
+totalFutureValue = futureValueInitial + futureValueContributions
+```
+
+**Total contributions:**
+```
+totalContributions = initial + (monthly × totalMonths)
+```
+
+**Investment gains:**
+```
+totalGains = totalFutureValue - totalContributions
+```
+
+**Inflation adjustment:**
+```
+inflationAdjustedValue = totalFutureValue / (1 + inflationRate)^years
+```
+
+**Return on investment:**
+```
+ROI = (totalGains / totalContributions) × 100
+```
+
+**Year-by-year breakdown:**
+For each year, calculates cumulative balance, contributions, and gains using the same formulas applied to that year's time horizon.
+
+All calculations happen locally in your browser.
+
+---
+
+## FAQs
+
+**What return rate should I assume?**
+
+For a diversified stock portfolio, 7% is reasonable after inflation, 10% before inflation historically. For balanced portfolios (60/40 stocks/bonds), use 5-6%. Be conservative for planning.
+
+**How does inflation affect my projections?**
+
+$1 million in 30 years at 2.5% inflation equals about $480,000 in today's purchasing power. Always check inflation-adjusted values for realistic goal setting.
+
+**Should I use before-tax or after-tax contributions?**
+
+Use gross contributions for tax-advantaged accounts (401k, IRA) since taxes aren't due until withdrawal. For taxable accounts, the calculation is the same, but remember gains will be taxed.
+
+**What about investment fees?**
+
+Subtract typical fees (often 0.5-1.5%) from your expected return. A 7% gross return with 1% fees is effectively 6%.
+
+**How reliable are long-term projections?**
+
+They're estimates based on assumptions. Actual results will differ due to market volatility, changing contribution levels, and economic conditions. Review and adjust plans periodically.
+
+**What's the difference between nominal and real returns?**
+
+Nominal is the raw percentage. Real is nominal minus inflation—what you can actually buy with the returns. Real returns matter for goal planning.
+
+**Can I include employer matching?**
+
+Yes—include employer contributions in your monthly amount. If you contribute $500 and employer matches 50%, use $750 monthly.
+
+**What if I miss some monthly contributions?**
+
+The calculator assumes consistent contributions. Missed contributions simply mean less total investment. You can recalculate anytime with current balance and remaining time.
+
+**How do I account for market volatility?**
+
+This calculator uses a constant return rate. Real markets fluctuate significantly. Consider running projections at optimistic (9%), expected (7%), and pessimistic (5%) rates to understand the range of possible outcomes.
+
+**Should I invest a lump sum or dollar-cost average?**
+
+Statistically, lump sum investing beats dollar-cost averaging about two-thirds of the time because markets trend upward. However, DCA reduces psychological stress and the risk of investing everything at a market peak.
+
+**How do different account types affect results?**
+
+Tax-advantaged accounts (401k, IRA) grow tax-free or tax-deferred, effectively increasing returns. A 7% return in a taxable account at 25% capital gains rate is effectively 5.25%. Maximize tax-advantaged space first.
+
+**What's the 4% rule and how does it relate to this calculator?**
+
+The 4% rule suggests withdrawing 4% of your portfolio annually in retirement for sustainable 30-year income. If you need $40,000/year, target $1,000,000 portfolio. Use this calculator to determine contributions needed to reach your target.
+
+**How do I factor in employer matching?**
+
+Add the full match to your contribution. If you contribute $500/month and your employer matches 50%, enter $750 as your monthly contribution. Free matching money dramatically accelerates growth—never leave it on the table.
+
+**What if I plan to increase contributions over time?**
+
+This calculator assumes fixed contributions. In reality, you might increase savings with raises. Run multiple scenarios: current contributions, increased contributions, and aggressive contributions to see the range of outcomes.
+
+**How do market corrections affect my long-term projections?**
+
+Market corrections (10%+ drops) occur regularly. They're temporary setbacks in long-term growth. If you continue investing during downturns, you buy at lower prices, potentially accelerating growth when markets recover. Staying the course matters more than timing the market.
+
+**Additional Notes**
+
+This calculator processes all inputs locally in your browser, ensuring privacy and instant results. For complex planning scenarios, consider consulting professionals who can account for your specific circumstances and goals.
