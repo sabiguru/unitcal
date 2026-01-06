@@ -226,9 +226,26 @@ const legacyRedirects = [
   { source: '/category/education', destination: '/calculator/education', permanent: true },
   { source: '/category/conversions', destination: '/calculator/conversions', permanent: true },
   { source: '/category/unique', destination: '/calculator/unique', permanent: true },
+  { source: '/category/automotive', destination: '/calculator/automotive', permanent: true },
+  { source: '/category/animal-age', destination: '/calculator/animal-age', permanent: true },
+  { source: '/category/cooking', destination: '/calculator/cooking', permanent: true },
+  { source: '/category/energy', destination: '/calculator/energy', permanent: true },
+  { source: '/category/health', destination: '/calculator/health', permanent: true },
+  { source: '/category/everyday', destination: '/calculator/everyday', permanent: true },
+  { source: '/category/mathematics', destination: '/calculator/mathematics', permanent: true },
   { source: '/categories', destination: '/calculators', permanent: true },
   { source: '/learn/category/mathematics', destination: '/calculator/mathematics', permanent: true },
   { source: '/learn/category/health', destination: '/calculator/health', permanent: true },
+  { source: '/learn/category/automotive', destination: '/calculator/automotive', permanent: true },
+  { source: '/learn/category/space', destination: '/calculator/space', permanent: true },
+
+  // Additional missing learn page redirects
+  { source: '/learn/scientific', destination: '/calculator/mathematics/scientific', permanent: true },
+  { source: '/learn/time-on-mars', destination: '/calculator/space/age-on-mars', permanent: true },
+  { source: '/learn/holistic-recovery-mobility-low-impact-training', destination: '/learn/health/holistic-recovery-mobility-low-impact-training', permanent: true },
+  { source: '/learn/wearable-tech-data-driven-fitness', destination: '/learn/health/wearable-tech-data-driven-fitness', permanent: true },
+  { source: '/learn/strength-training-building-muscle-healthgoal', destination: '/learn/health/strength-training-building-muscle-healthgoal', permanent: true },
+  { source: '/learn/mathematics/age', destination: '/calculator/mathematics/age', permanent: true },
 
   // Other redirects
   { source: '/privacy-policy', destination: '/privacy', permanent: true },
