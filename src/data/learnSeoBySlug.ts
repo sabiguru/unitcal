@@ -359,7 +359,7 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
       "Mars seasons and calendar explained for colonisation"
     ],
     "metaTitle": "A Day on Mars (Sol) & Martian Time Explained",
-    "metaDescription": "Learn how Martian days and years work and how timekeeping would adapt for life on Mars.",
+    "metaDescription": "Learn how Martian days (sols) and years work, how they differ from Earth time, and how timekeeping would adapt for future Mars colonization and exploration.",
     "lastResearched": "2025-10-28"
   },
 

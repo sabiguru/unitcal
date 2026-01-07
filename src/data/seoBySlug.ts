@@ -931,7 +931,7 @@ export const seoBySlug: Record<string, CalcSEO> =
       "name match love calculator"
     ],
     "metaTitle": "Love Calculator — Name Compatibility Test",
-    "metaDescription": "Try a fun love calculator to check name compatibility and love percentage. Light-hearted results for entertainment.",
+    "metaDescription": "Try a fun love calculator to check name compatibility and calculate your love percentage. Get light-hearted compatibility results for entertainment purposes.",
     "webAppSchema": seoSchemas["love-calculator"]?.webApp,
     "faqSchema": seoSchemas["love-calculator"]?.faq,
   },
@@ -951,7 +951,7 @@ export const seoBySlug: Record<string, CalcSEO> =
       "matrix operations step by step"
     ],
     "metaTitle": "Matrix Calculator — Multiply, Inverse & Determinants",
-    "metaDescription": "Perform matrix operations including multiplication, inversion and determinants. Useful for algebra and engineering maths.",
+    "metaDescription": "Perform comprehensive matrix operations including multiplication, addition, subtraction, inversion, determinants, and transpose. Essential tool for linear algebra, engineering mathematics, and scientific computing.",
     "webAppSchema": seoSchemas["matrix"]?.webApp,
     "faqSchema": seoSchemas["matrix"]?.faq,
   },
@@ -1171,7 +1171,7 @@ export const seoBySlug: Record<string, CalcSEO> =
       "generate prime numbers calculator"
     ],
     "metaTitle": "Prime Number Calculator — Check and Factor Numbers",
-    "metaDescription": "Check if a number is prime and find prime factors. Useful for maths study and number theory.",
+    "metaDescription": "Check if any number is prime, find complete prime factorization, and generate prime number lists. Essential tool for mathematics study and number theory.",
     "webAppSchema": seoSchemas["prime"]?.webApp,
     "faqSchema": seoSchemas["prime"]?.faq,
   },
@@ -1211,7 +1211,7 @@ export const seoBySlug: Record<string, CalcSEO> =
       "solve ratios and proportions calculator"
     ],
     "metaTitle": "Ratio Calculator — Simplify, Scale & Compare",
-    "metaDescription": "Simplify ratios, scale them and convert to percentages. Useful for maths, recipes and proportions.",
+    "metaDescription": "Simplify ratios to lowest terms, scale ratios up or down, convert ratios to percentages, and solve proportions. Perfect for mathematics, cooking recipes, and scaling projects.",
     "webAppSchema": seoSchemas["ratio"]?.webApp,
     "faqSchema": seoSchemas["ratio"]?.faq,
   },
@@ -1271,7 +1271,7 @@ export const seoBySlug: Record<string, CalcSEO> =
       "decode resistor color code online"
     ],
     "metaTitle": "Resistor Calculator — Color Codes & Resistance",
-    "metaDescription": "Calculate resistor values from color codes and series or parallel combinations. Useful for electronics projects.",
+    "metaDescription": "Calculate resistor values from color codes, decode 4-band and 5-band resistors, and compute series or parallel combinations. Essential tool for electronics projects and circuit design.",
     "webAppSchema": seoSchemas["resistor"]?.webApp,
     "faqSchema": seoSchemas["resistor"]?.faq,
   },
@@ -1331,7 +1331,7 @@ export const seoBySlug: Record<string, CalcSEO> =
       "roman numerals chart and converter"
     ],
     "metaTitle": "Roman Numeral Converter — Roman to Number",
-    "metaDescription": "Convert Roman numerals to numbers and numbers to Roman numerals instantly. Simple and accurate conversion tool.",
+    "metaDescription": "Convert Roman numerals to numbers and numbers to Roman numerals instantly. Simple, accurate bidirectional conversion tool with full support for I to MMMCMXCIX.",
     "webAppSchema": seoSchemas["roman-numerals"]?.webApp,
     "faqSchema": seoSchemas["roman-numerals"]?.faq,
   },
@@ -1371,7 +1371,7 @@ export const seoBySlug: Record<string, CalcSEO> =
       "how much is my salary per year"
     ],
     "metaTitle": "Salary Calculator — Hourly, Monthly & Annual Pay",
-    "metaDescription": "Convert hourly wages to monthly or annual salary. Useful for job offers and pay comparisons.",
+    "metaDescription": "Convert between hourly, daily, weekly, monthly, and annual salary formats. Compare job offers, calculate pay rates, and plan your budget with accurate wage conversions.",
     "webAppSchema": seoSchemas["salary"]?.webApp,
     "faqSchema": seoSchemas["salary"]?.faq,
   },
@@ -1391,7 +1391,7 @@ export const seoBySlug: Record<string, CalcSEO> =
       "scientific calculator with functions"
     ],
     "metaTitle": "Scientific Calculator — Advanced Online Calculator",
-    "metaDescription": "Use an online scientific calculator for trigonometry, logarithms and advanced maths functions.",
+    "metaDescription": "Free online scientific calculator with trigonometry, logarithms, exponentials, roots, and advanced mathematical functions. Perfect for students, engineers, and scientists.",
     "webAppSchema": seoSchemas["scientific"]?.webApp,
     "faqSchema": seoSchemas["scientific"]?.faq,
   },
@@ -1591,7 +1591,7 @@ export const seoBySlug: Record<string, CalcSEO> =
       "subnetting calculator for VLAN planning"
     ],
     "metaTitle": "Subnet Calculator — CIDR, Mask & IP Ranges",
-    "metaDescription": "Calculate subnet mask, network address, broadcast address and usable IP ranges from CIDR or mask.",
+    "metaDescription": "Calculate subnet masks, network addresses, broadcast addresses, and usable IP ranges from CIDR notation or subnet masks. Essential tool for network planning, VLAN configuration, and IP address management.",
     "webAppSchema": seoSchemas["subnet"]?.webApp,
     "faqSchema": seoSchemas["subnet"]?.faq,
   },
@@ -1651,7 +1651,7 @@ export const seoBySlug: Record<string, CalcSEO> =
       "tile calculator for herringbone and diagonal patterns"
     ],
     "metaTitle": "Tile Calculator — How Many Tiles Do You Need?",
-    "metaDescription": "Calculate tiles needed for floors or walls with waste allowance. Plan quantities fast for any room size.",
+    "metaDescription": "Calculate the exact number of tiles needed for floors or walls with customizable waste allowance. Plan your tiling project quantities for any room size or pattern.",
     "webAppSchema": seoSchemas["tile"]?.webApp,
     "faqSchema": seoSchemas["tile"]?.faq,
   },
@@ -1731,7 +1731,7 @@ export const seoBySlug: Record<string, CalcSEO> =
       "tire circumference and revs per mile calculator"
     ],
     "metaTitle": "Tire Size Calculator — Diameter, Fitment & Speedometer",
-    "metaDescription": "Calculate tire diameter, circumference and speedometer error. Compare tyre sizes for fitment and performance.",
+    "metaDescription": "Calculate tire diameter, circumference, revolutions per mile, and speedometer error when changing tire sizes. Compare different tyre sizes for proper fitment, clearance, and performance impact.",
     "webAppSchema": seoSchemas["tire-size"]?.webApp,
     "faqSchema": seoSchemas["tire-size"]?.faq,
   },
