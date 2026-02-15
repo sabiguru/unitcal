@@ -239,18 +239,17 @@ const legacyRedirects = [
   { source: '/learn/category/automotive', destination: '/calculator/automotive', permanent: true },
   { source: '/learn/category/space', destination: '/calculator/space', permanent: true },
 
-  // Learn category pages (temporary redirects - will have actual content in future)
-  { source: '/learn/financial', destination: '/calculator/financial', permanent: false },
-  { source: '/learn/engineering', destination: '/calculator/engineering', permanent: false },
+  // Learn category pages (temporary redirects for categories WITHOUT learn content)
+  // Categories WITH content: health, financial, engineering, education, everyday, energy, space
+  // Only redirect categories that still have NO learn articles:
   { source: '/learn/cooking', destination: '/calculator/cooking', permanent: false },
-  { source: '/learn/education', destination: '/calculator/education', permanent: false },
-  { source: '/learn/everyday', destination: '/calculator/everyday', permanent: false },
   { source: '/learn/conversions', destination: '/calculator/conversions', permanent: false },
-  { source: '/learn/energy', destination: '/calculator/energy', permanent: false },
-  { source: '/learn/space', destination: '/calculator/space', permanent: false },
   { source: '/learn/automotive', destination: '/calculator/automotive', permanent: false },
   { source: '/learn/agriculture', destination: '/calculator/agriculture', permanent: false },
   { source: '/learn/animal-age', destination: '/calculator/animal-age', permanent: false },
+  { source: '/learn/mathematics', destination: '/calculator/mathematics', permanent: false },
+  { source: '/learn/construction', destination: '/calculator/construction', permanent: false },
+  { source: '/learn/unique', destination: '/calculator/unique', permanent: false },
 
   // Additional missing learn page redirects
   { source: '/learn/scientific', destination: '/calculator/mathematics/scientific', permanent: true },
