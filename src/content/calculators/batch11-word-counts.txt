@@ -1,5 +1,0 @@
-tire-size.mdx: 1802 words
-unit-converter.mdx: 1805 words
-volume.mdx: 1801 words
-water.mdx: 1804 words
-western-abacus.mdx: 1910 words

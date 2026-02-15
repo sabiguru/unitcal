@@ -1,0 +1,437 @@
+import Image from 'next/image';
+
+# Solar Panel Savings Calculator: Estimating Payback Time, Annual Savings and ROI for Home Solar in 2026
+
+<Image
+  src="/images/blog/solar-panel-savings-roi.webp"
+  alt="Homeowner calculating solar panel savings and payback period"
+  width={1200}
+  height={630}
+  priority
+  className="rounded-lg mb-6"
+/>
+
+## Table of Contents — Solar Panel Savings Calculator
+- [What "solar savings" actually means](#what-solar-savings-actually-means)
+- [Inputs required before using any calculator](#inputs-required-before-using-any-calculator)
+- [Using the Calcfort Solar Panel Savings calculator](#using-the-calcfort-solar-panel-savings-calculator)
+- [Worked example: a typical UK home in 2026](#worked-example-a-typical-uk-home-in-2026)
+- [Payback time and ROI: the two figures people want](#payback-time-and-roi-the-two-figures-people-want)
+- [Export payments: Smart Export Guarantee explained](#export-payments-smart-export-guarantee-explained)
+- [System performance: generation estimates and why they vary](#system-performance-generation-estimates-and-why-they-vary)
+- [Solar plus battery: when storage alters the calculation](#solar-plus-battery-when-storage-alters-the-calculation)
+- [Common mistakes that inflate savings estimates](#common-mistakes-that-inflate-savings-estimates)
+- [Sources and further reading](#sources-and-further-reading)
+- [FAQs](#faqs)
+
+---
+
+Rooftop solar offers one straightforward proposition: **generate electricity on the roof so less is purchased from the grid**. The complexity arises because actual savings depend on *how electricity is used*, *how much is exported*, *the applicable tariff*, and *system size and performance*.
+
+This guide presents a method for estimating solar savings that is:
+
+- **transparent** (every assumption is visible),
+- **calculator-driven** (enabling rapid validation), and
+- **realistic** (accounting for export payments, degradation and price uncertainty).
+
+The **Calcfort Solar Panel Savings calculator** is employed for the core estimate, with the Calcfort ROI calculator used to validate the business case.
+
+---
+
+<a id="what-solar-savings-actually-means"></a>
+## What "solar savings" actually means
+
+Solar does not generate money directly. It shifts a household's electricity balance:
+
+- **Self-consumption:** electricity generated and used immediately at home (this saves the *retail unit rate* that would otherwise be paid to the supplier).
+- **Export:** electricity generated but not used (exported to the grid and paid at an export rate if registered with a scheme such as the UK's Smart Export Guarantee).
+- **Grid import:** electricity still purchased when solar generation is insufficient (evenings, winter peaks).
+
+Annual "savings" are typically the sum of:
+
+1) **Bill reduction from self-consumption**
+2) **Export income**
+3) minus any added costs (maintenance, inverter replacement, financing interest)
+
+The most significant consideration: **solar is most valuable when the electricity can be used**. Two households with identical panels can have different payback times purely because one household is occupied during the day (higher self-consumption) whilst the other is unoccupied (more export).
+
+---
+
+<a id="inputs-required-before-using-any-calculator"></a>
+## Inputs required before using any calculator
+
+An effective calculator requires appropriate inputs. The following should be collected before beginning.
+
+### 1) Annual electricity usage (kWh)
+
+In the UK, the bill, smart meter portal or supplier account typically displays annual usage in kWh. If only monthly usage is available, twelve months can be aggregated.
+
+If usage is genuinely unknown, a conservative estimate should be employed with subsequent sensitivity analysis.
+
+### 2) Import unit rate (p/kWh) and standing charge
+
+In the UK, the energy price cap sets maximum unit rates and standing charges for customers on default tariffs. Ofgem's price cap guidance serves as the official reference point and includes cap period details. For Q1 2026 (January to March), the average electricity unit rate under the cap is 27.69 pence per kWh for direct debit customers.
+
+Even those on fixed tariffs benefit from knowing the cap figure for context and scenario planning, as prices change over time.
+
+### 3) Expected export rate (p/kWh)
+
+Export payments vary by supplier and tariff. The Smart Export Guarantee (SEG) requires licensed suppliers to offer an export tariff to eligible small-scale generators, though it does not mandate a universal price. According to Ofgem's SEG Annual Report for Year 5, households on an export tariff in 2024–25 earned 13p per kWh on average, based on £56.97 million paid out for 443 GWh of exported electricity.
+
+### 4) System size (kW) and expected annual generation (kWh)
+
+System size (kW) is not equivalent to annual energy (kWh). A 4 kW system does not generate 4 kW continuously; it generates varying power depending on sunlight, tilt, shading and season.
+
+For generation estimates, tools such as **NREL PVWatts** are commonly employed, which estimate PV energy production using location and system assumptions.
+
+### 5) Self-consumption percentage (how much is used versus exported)
+
+Without a battery, self-consumption might range from 25–50% depending on lifestyle and appliances. With a battery, this can increase, though the extent depends on capacity and usage patterns.
+
+When uncertain, three cases should be modelled:
+- conservative (low self-consumption),
+- expected,
+- optimistic (high self-consumption).
+
+### 6) Upfront cost (or financed cost)
+
+The installed system price after any grants or discounts is required. If financed, the APR and term are needed.
+
+---
+
+<a id="using-the-calcfort-solar-panel-savings-calculator"></a>
+## Using the Calcfort Solar Panel Savings calculator
+
+Calcfort provides a dedicated calculator for estimating solar savings:
+
+- [Solar Panel Savings Calculator](https://calcfort.com/calculator/energy/solar-panel-savings)
+
+### Step-by-step usage
+
+1) Enter **annual electricity usage (kWh)**.
+2) Enter **import price** (unit rate).
+3) Enter **system size** and/or **annual generation estimate**.
+4) Enter **self-consumption rate** (percentage of generation used).
+5) Enter **export rate** (if exporting).
+6) Enter the **installed cost** (or the amount to be financed).
+
+The calculator should output metrics including:
+- estimated annual self-consumption (kWh),
+- estimated annual export (kWh),
+- annual bill reduction,
+- annual export income,
+- estimated annual total benefit,
+- and a payback estimate (depending on available fields).
+
+### How to validate the calculator's output
+
+After obtaining a result, three aspects should be verified:
+
+- Does the annual generation appear plausible for the location and system size?
+- Is the self-consumption assumption realistic for the household routine?
+- Does the savings primarily derive from reducing imports (typically the main driver) rather than from export income?
+
+If export income dominates the savings in the output, self-consumption assumptions and rates should be reviewed.
+
+---
+
+<a id="worked-example-a-typical-uk-home-in-2026"></a>
+## Worked example: a typical UK home in 2026
+
+The following presents a realistic, transparent example. These figures are illustrative; individual values should be substituted.
+
+### Assumptions
+
+- Location: UK
+- Annual electricity use: 3,800 kWh
+- System size: 4 kW
+- Estimated annual generation: 3,600 kWh
+- Self-consumption: 40% (no battery)
+- Export rate: 6 p/kWh (example; varies by supplier)
+- Import unit rate: 27.69 p/kWh (Q1 2026 price cap electricity rate)
+- Installed cost: £6,000
+
+#### Step 1: Split generation into self-consumed and exported energy
+
+- Self-consumed kWh = 3,600 × 0.40 = 1,440 kWh
+- Exported kWh = 3,600 − 1,440 = 2,160 kWh
+
+#### Step 2: Convert self-consumption into bill savings
+
+Self-consumption saves the import unit rate:
+
+- Bill savings ≈ 1,440 kWh × £0.2769 = £398.74
+
+#### Step 3: Convert exports into export income
+
+- Export income ≈ 2,160 kWh × £0.06 = £129.60
+
+#### Step 4: Total annual benefit
+
+- Total benefit ≈ £398.74 + £129.60 = £528.34 per year
+
+#### Step 5: Simple payback (before degradation, maintenance and price changes)
+
+- Payback ≈ £6,000 / £528.34 ≈ 11.4 years
+
+### Run it in Calcfort
+
+Open the [Solar Panel Savings Calculator](https://calcfort.com/calculator/energy/solar-panel-savings) and enter the example values:
+- usage: 3,800 kWh
+- generation: 3,600 kWh
+- self-consumption: 40%
+- import rate: 27.69 p/kWh
+- export rate: 6 p/kWh
+- cost: £6,000
+
+An annual savings estimate in the same range should be obtained.
+
+### Why this estimate is intentionally conservative
+
+- It does not assume electricity prices rise rapidly.
+- It does not assume perfect usage optimisation (such as always running appliances at midday).
+- It does not assume a battery increases self-consumption.
+- It treats export income as a secondary benefit.
+
+This conservative approach is useful when determining whether solar remains worthwhile if conditions are merely "acceptable" rather than optimal.
+
+---
+
+<a id="payback-time-and-roi-the-two-figures-people-want"></a>
+## Payback time and ROI: the two figures people want
+
+Payback time answers: *When do savings cover the cost?*
+ROI answers: *How large is the return compared to what was spent?*
+
+They are related but not identical.
+
+### Computing payback
+
+If the following are available:
+
+- upfront cost (or financed total cost), and
+- estimated annual (or monthly) net benefit,
+
+payback can be computed by division:
+
+- Payback (years) = Total cost / Annual net benefit
+
+**Example**
+If annual benefit is £528.34 and cost is £6,000:
+- Payback ≈ £6,000 / £528.34 ≈ 11.4 years
+
+### Using the ROI Calculator
+
+ROI is useful for comparing solar to other upgrades (heat pump, insulation, window improvements, etc.).
+
+- [ROI Calculator](https://calcfort.com/calculator/financial/roi)
+
+To employ it, a time horizon is required, such as 10 years. Using the example:
+
+- Total benefit in 10 years ≈ 10 × £528.34 = £5,283.40
+- ROI over 10 years ≈ (£5,283.40 − £6,000) / £6,000 ≈ −11.9%
+
+This appears negative because conservative assumptions were employed and price rises were not included. Solar systems often have useful lifetimes exceeding 10 years; the question becomes: what is the ROI over 20–25 years?
+
+Over 20 years at the same annual benefit:
+
+- Benefit ≈ £10,566.80
+- ROI ≈ (£10,566.80 − £6,000) / £6,000 ≈ 76.1%
+
+This demonstrates why ROI horizon must be matched to asset life.
+
+### Adding realism: degradation and inverter replacement
+
+PV output degrades gradually over time. Many models assume approximately 0.5% per year degradation (varies by module and conditions). Rather than guessing, a scenario approach should be employed:
+
+- no degradation (optimistic),
+- modest degradation (expected),
+- higher degradation (conservative).
+
+Inverter replacement is another genuine cost; many inverters do not last as long as panels. A replacement budget should be included in the model (for example, a one-time cost in year 10–15), treated as reducing ROI.
+
+---
+
+<a id="export-payments-smart-export-guarantee-explained"></a>
+## Export payments: Smart Export Guarantee explained
+
+In the UK, the **Smart Export Guarantee (SEG)** is the policy framework enabling small-scale low-carbon generators (including solar PV) to receive payment for electricity exported to the grid. Suppliers are required to offer a tariff, though the export price varies by supplier and plan.
+
+According to Ofgem's SEG Annual Report for Year 5 (April 2024 to March 2025), 270,395 installations were registered to a SEG tariff with a total installed capacity of 1,585 MW. A total of 443.1 GWh of low-carbon electricity export was reported and £56.97 million was paid to registered installations—significantly higher than the 283.1 GWh exported and £30.75 million paid in Year 4.
+
+What to understand for the savings model:
+
+- Export payments can be **fixed** or **variable** depending on tariff.
+- An eligible installation and metering setup are typically required.
+- Export income is often smaller than self-consumption savings unless the export rate is unusually high or self-consumption is unusually low.
+
+Practical implication: better savings are usually achieved by **increasing self-consumption** rather than pursuing export income.
+
+Methods households commonly employ to increase self-consumption:
+
+- shifting dishwashers, washing machines and EV charging to midday,
+- scheduling immersion heaters or hot-water usage,
+- adding a battery (in some cases), and
+- employing smart energy management.
+
+---
+
+<a id="system-performance-generation-estimates-and-why-they-vary"></a>
+## System performance: generation estimates and why they vary
+
+If only one point is taken from this article, it should be this:
+
+**The annual generation estimate drives everything.**
+
+Generation depends on:
+
+- location and solar resource,
+- roof tilt and azimuth (direction),
+- shading,
+- panel/inverter efficiency,
+- temperature effects,
+- and system losses (wiring, inverter conversion, soiling).
+
+Tools such as **NREL PVWatts** exist because production estimation requires solar resource data and system assumptions. PVWatts also provides a published technical manual describing modelling assumptions and default parameters.
+
+### Rule of thumb for UK planning
+
+Rules of thumb are not authoritative, but they assist with validation:
+
+- If a calculator indicates a 4 kW system will produce 7,000 kWh/year in the UK, this is implausible.
+- If it indicates 2,000 kWh/year, this may be possible in a heavily shaded or poorly oriented setup, but should be verified.
+
+At least two independent estimates should be employed:
+1) an installer estimate (which should account for the specific roof),
+2) a model such as PVWatts (as a cross-check),
+3) and the final estimate then entered into Calcfort's solar savings calculator.
+
+---
+
+<a id="solar-plus-battery-when-storage-alters-the-calculation"></a>
+## Solar plus battery: when storage alters the calculation
+
+A battery typically improves the solar equation by increasing **self-consumption**—midday solar is stored and used later.
+
+However, batteries add:
+- upfront cost,
+- round-trip efficiency losses,
+- and replacement risk.
+
+A straightforward method for modelling solar plus battery:
+
+1) Estimate solar-only savings with self-consumption (for example, 40%).
+2) Estimate solar plus battery savings with higher self-consumption (for example, 65%).
+3) Compute the difference in annual benefit.
+4) Compare that incremental benefit to the battery cost to determine incremental payback.
+
+### Example (incremental modelling)
+
+Using the earlier example:
+
+- Generation: 3,600 kWh
+- Import rate: 27.69 p/kWh
+- Export rate: 6 p/kWh
+
+If self-consumption rises from 40% to 65%:
+
+- Solar-only self-consumed: 1,440 kWh
+- Solar+storage self-consumed: 2,340 kWh
+- Incremental self-consumed: +900 kWh
+
+Incremental value per year is approximately:
+
+- Import avoided for 900 kWh at 27.69p, but 900 kWh less exported at 6p.
+- Incremental annual value ≈ 900 × (£0.2769 − £0.06) = 900 × £0.2169 = £195.21
+
+If a battery costs £4,000 installed, payback on the battery *increment* is:
+
+- £4,000 / £195.21 ≈ 20.5 years
+
+This does not indicate batteries are unsuitable. It indicates the economics depend heavily on:
+- tariff structure,
+- load shape (EVs can alter the picture),
+- and battery pricing.
+
+Modelling the incremental benefit is more informative than combining solar and storage into a single figure.
+
+---
+
+<a id="common-mistakes-that-inflate-savings-estimates"></a>
+## Common mistakes that inflate savings estimates
+
+### Mistake 1: assuming 100% self-consumption
+
+Unless storage and a load shape matching generation are present, some energy will be exported. Overestimating self-consumption is the most common method of inflating savings.
+
+**Resolution:** Employ a realistic range and run scenarios.
+
+### Mistake 2: using a future electricity price with current system cost
+
+If electricity prices are assumed to rise, this can increase savings. However, for consistency, recognition that technology costs can also change is required. IEA commentary on solar PV markets indicates that in China, solar PV module prices have declined over 60% since 2023 due to supply surplus and competition for market share.
+
+**Resolution:** Make assumptions explicit and run at least two cases:
+- flat prices,
+- moderate price rise.
+
+### Mistake 3: ignoring standing charges
+
+Solar reduces unit consumption, but standing charges remain. If the model assumes "bill becomes zero," this is typically incorrect.
+
+**Resolution:** Separate unit-rate savings from standing charges.
+
+### Mistake 4: not budgeting for maintenance or replacements
+
+Panels often last decades, but components such as inverters can fail earlier. Even if low maintenance is assumed, a replacement allowance should be included in long-horizon ROI.
+
+### Mistake 5: not validating generation assumptions
+
+If the production estimate is incorrect by 20%, the savings estimate is incorrect by 20%. Generation should be validated using more than one method, as described previously.
+
+---
+
+<a id="sources-and-further-reading"></a>
+## Sources and further reading
+
+- Ofgem — Energy Price Cap Explained: [https://www.ofgem.gov.uk/information-consumers/energy-advice-households/energy-price-cap-explained](https://www.ofgem.gov.uk/information-consumers/energy-advice-households/energy-price-cap-explained)
+- Ofgem — Changes to Energy Price Cap Q1 2026: [https://www.ofgem.gov.uk/news/changes-energy-price-cap-between-1-january-and-31-march-2026](https://www.ofgem.gov.uk/news/changes-energy-price-cap-between-1-january-and-31-march-2026)
+- Ofgem — Smart Export Guarantee (SEG): [https://www.ofgem.gov.uk/environmental-and-social-schemes/smart-export-guarantee-seg](https://www.ofgem.gov.uk/environmental-and-social-schemes/smart-export-guarantee-seg)
+- Ofgem — SEG Annual Report Year 5 (April 2024 to March 2025): [https://www.ofgem.gov.uk/transparency-document/smart-export-guarantee-annual-report-april-2024-march-2025](https://www.ofgem.gov.uk/transparency-document/smart-export-guarantee-annual-report-april-2024-march-2025)
+- UK Parliament — Gas and Electricity Prices Research Briefing: [https://commonslibrary.parliament.uk/research-briefings/cbp-9714/](https://commonslibrary.parliament.uk/research-briefings/cbp-9714/)
+- NREL — PVWatts Calculator: [https://pvwatts.nrel.gov/](https://pvwatts.nrel.gov/)
+- IEA — Solar PV Overview: [https://www.iea.org/energy-system/renewables/solar-pv](https://www.iea.org/energy-system/renewables/solar-pv)
+- IEA-PVPS — Trends in PV Applications 2025: [https://iea-pvps.org/trends_reports/trends-2025/](https://iea-pvps.org/trends_reports/trends-2025/)
+
+---
+
+<a id="faqs"></a>
+## FAQs
+
+### Which inputs matter most in a solar savings estimate?
+
+1) Annual generation (kWh), 2) self-consumption rate, and 3) import unit rate. Export rate is also relevant, though for many homes, most value derives from reducing imports.
+
+### Where can official information about export payments in the UK be found?
+
+Ofgem's Smart Export Guarantee pages and the annual SEG reports explain eligibility and how the scheme operates, including statistics on payments and registrations.
+
+### How can a realistic generation estimate be obtained?
+
+An installer's assessment plus an independent tool such as NREL PVWatts for cross-checking should be employed. Understanding that modelling assumptions (tilt, losses, solar resource) affect results is important.
+
+### Should battery storage be included in the first estimate?
+
+Solar-only should be modelled first, then battery added as an incremental upgrade. The battery cost is compared to the *incremental* annual benefit to determine battery-specific payback.
+
+### What is an effective method for presenting uncertainty?
+
+Three scenarios should be run:
+- conservative (low generation, low self-consumption, low export rate),
+- expected,
+- optimistic (higher self-consumption, higher unit rates).
+
+The [Percentage Calculator](https://calcfort.com/calculator/mathematics/percentage) can be employed to compute the spread between scenarios as a percentage.
+
+### Does the energy price cap mean the unit rate is fixed?
+
+The price cap limits what suppliers can charge on default tariffs for a given period and sets maximum rates, but actual tariffs and future cap levels can change. Ofgem explains this in its price cap guidance, and cap levels are announced quarterly.

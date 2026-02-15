@@ -157,6 +157,87 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
     "lastResearched": "2025-11-16"
   },
 
+"degree-cost-projection-2026": {
+  "primaryKeyword": "college cost calculator",
+  "variants": [
+    "college tuition increase calculator",
+    "tuition inflation calculator",
+    "cost of attendance calculator",
+    "university tuition fees 2026",
+    "project college costs 2026"
+  ],
+  "longTails": [
+    "how to calculate total cost of college including tuition and living expenses",
+    "how to project tuition increases year by year for a 2026 intake",
+    "university tuition fees england 2026 2027 inflation increase explained",
+    "how much will a degree cost if tuition rises every year",
+    "college board trends college pricing 2025 2026 tuition and fees increase"
+  ],
+  "metaTitle": "College Cost Calculator for 2026 — Project Tuition, Fees & Living Costs",
+  "metaDescription": "Estimate the real cost of a degree for a 2026 intake by projecting tuition increases, fees, and living costs, plus payback and ROI scenarios.",
+  "lastResearched": "2026-02-15"
+},
+"ai-productivity-roi-calculation": {
+  "primaryKeyword": "AI ROI calculator",
+  "variants": [
+    "AI productivity ROI",
+    "AI automation ROI calculator",
+    "calculate ROI of AI tools",
+    "AI time savings calculator",
+    "AI payback period calculator"
+  ],
+  "longTails": [
+    "how to calculate ai roi from time saved and subscription costs",
+    "ai productivity roi calculator for professionals and teams",
+    "how to measure roi of generative ai tools at work",
+    "break even time for ai tools using time savings and hourly cost",
+    "ai coding tools roi calculator for engineering teams"
+  ],
+  "metaTitle": "AI ROI Calculator — Convert Time Saved Into Money, ROI & Break-Even",
+  "metaDescription": "Calculate the ROI of AI tools using time saved, hourly cost, rework, and subscription spend—then estimate break-even months for individuals or teams.",
+  "lastResearched": "2026-02-15"
+},
+"ipv4-subnetting-guide-subnet-calculator": {
+  "primaryKeyword": "subnet calculator",
+  "variants": [
+    "CIDR calculator",
+    "IP subnet calculator",
+    "subnet mask calculator",
+    "VLSM calculator",
+    "calculate network and broadcast address"
+  ],
+  "longTails": [
+    "how to calculate subnet mask network address and broadcast address",
+    "ipv4 subnetting explained with examples /24 /26 /27 /30",
+    "how to find usable host range from cidr prefix",
+    "subnet calculator for aws vpc cidr ranges",
+    "how to avoid overlapping subnets in vpn and site to site networks"
+  ],
+  "metaTitle": "Subnet Calculator Guide — IPv4 CIDR, Masks, Network & Broadcast",
+  "metaDescription": "Learn IPv4 subnetting fast: calculate CIDR ranges, subnet masks, network/broadcast addresses, and usable hosts with worked examples and a subnet calculator.",
+  "lastResearched": "2026-02-15"
+},
+"solar-panel-savings-payback-roi-2026": {
+  "primaryKeyword": "solar panel savings calculator",
+  "variants": [
+    "solar panel payback calculator",
+    "solar ROI calculator UK",
+    "solar panel payback time UK",
+    "smart export guarantee rates",
+    "solar panel cost and savings calculator"
+  ],
+  "longTails": [
+    "solar panel savings calculator uk estimate payback time and roi",
+    "how to calculate solar panel payback with self consumption and export",
+    "smart export guarantee seg how export payments affect solar savings",
+    "solar panel roi over 25 years with degradation and inverter replacement",
+    "solar and battery payback calculator increase self consumption"
+  ],
+  "metaTitle": "Solar Panel Savings Calculator (UK) — Payback Time, Annual Savings & ROI",
+  "metaDescription": "Estimate UK solar PV savings in 2026 with self-consumption and SEG export payments. Calculate payback time and ROI with realistic assumptions and scenarios.",
+  "lastResearched": "2026-02-15"
+},
+
   "math-behind-ai": {
     "primaryKeyword": "math behind AI",
     "variants": [

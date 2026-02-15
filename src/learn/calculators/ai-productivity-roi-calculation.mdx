@@ -1,0 +1,349 @@
+import Image from 'next/image';
+
+# Is AI Saving You Money at Work? A Practical Time-to-Money ROI Calculation for Professionals
+
+<Image
+  src="/images/blog/ai-productivity-roi.webp"
+  alt="Professional calculating AI productivity ROI with time and cost data"
+  width={1200}
+  height={630}
+  priority
+  className="rounded-lg mb-6"
+/>
+
+## Table of Contents — Is AI Saving You Money at Work?
+- [Mapping your workday and identifying automatable tasks](#mapping-your-workday-and-identifying-automatable-tasks)
+- [Converting time saved into monetary value](#converting-time-saved-into-monetary-value)
+- [Accounting for AI subscription and infrastructure costs](#accounting-for-ai-subscription-and-infrastructure-costs)
+- [Break-even analysis: when the AI investment pays for itself](#break-even-analysis-when-the-ai-investment-pays-for-itself)
+- [Stress-testing scenarios: accuracy, rework, compliance](#stress-testing-scenarios-accuracy-rework-compliance)
+- [Why this topic is relevant now](#why-this-topic-is-relevant-now)
+- [Data and sources used in this article](#data-and-sources-used-in-this-article)
+- [FAQs](#faqs)
+
+---
+
+Generative AI has become embedded in email clients, integrated development environments, presentation software, meeting transcription tools and search interfaces. However, the question most professionals and budget-approving managers eventually ask is direct:
+
+**Is it saving money, or merely redistributing time across tasks?**
+
+This guide presents a method for transforming "AI feels faster" into a measurable model that can be defended before finance teams. The approach involves:
+
+- mapping a workday and identifying tasks AI can realistically accelerate,
+- converting reclaimed time into cash value using an effective hourly cost,
+- subtracting the true monthly cost of tools (licences, usage, overhead),
+- and calculating **ROI** and **break-even time** suitable for presentation to stakeholders.
+
+The calculations can be performed with calculators on **Calcfort** to facilitate stress-testing of assumptions.
+
+---
+
+<a id="mapping-your-workday-and-identifying-automatable-tasks"></a>
+## Mapping your workday and identifying automatable tasks
+
+A reliable ROI estimate requires avoiding the trap of stating "AI saves 30% of my job." Such a figure is too imprecise to defend and too prone to overestimation.
+
+A more robust approach involves building a **task inventory**: repeatable activities with defined duration and frequency. Tasks that AI can accelerate with minimal risk are then marked for analysis.
+
+### Step 1: create a task inventory (15 minutes)
+
+A table structure such as the following can be employed. Simplicity is preferred; simple is defensible.
+
+| Task | Typical duration | Frequency | Notes |
+|---|---:|---:|---|
+| Drafting routine emails | 8 min | 15/week | Repetitive, template-friendly |
+| Summarising meetings | 12 min | 4/week | Most effective with transcripts |
+| Writing tickets / specifications | 20 min | 5/week | Requires domain context |
+| First-pass research | 25 min | 3/week | Sources must be verified |
+| Code scaffolding | 30 min | 2/week | Requires review and testing |
+| Slide refinement | 18 min | 2/week | Layout and wording adjustments |
+
+This approach can be applied to engineering, HR, marketing, operations, finance and support roles.
+
+### Step 2: convert minutes into weekly hours
+
+**Use the Time Calculator on Calcfort**:
+
+- Tool: [Time Calculator](https://calcfort.com/calculator/mathematics/time)
+- Inputs: minutes per task multiplied by occurrences per week
+- Output: total time per week per task
+
+**Example (email drafting)**
+8 minutes × 15/week = 120 minutes = 2 hours/week.
+
+Tasks believed to be AI-addressable can then be aggregated.
+
+### Step 3: classify tasks by risk
+
+A practical rule: **high error cost tasks** necessitate guardrails. AI should be employed for drafts, outlines and options, with subsequent verification.
+
+A 2×2 classification:
+
+- **Low error cost + repetitive** → best early wins (templates, summaries, formatting)
+- **High error cost** → checklists and human review required (client commitments, compliance, security)
+
+### Step 4: select a realistic speed-up rate per task
+
+Conservative defaults:
+
+- 10–20%: judgement-intensive tasks
+- 25–40%: repetitive drafting and summarisation
+- 40%+: highly structured tasks with reusable templates
+
+When uncertain, beginning with lower estimates and updating after 30 days of usage data is advisable.
+
+---
+
+<a id="converting-time-saved-into-monetary-value"></a>
+## Converting time saved into monetary value
+
+Time saved does not automatically equate to money saved. The conversion depends on context:
+
+- For those billing by the hour, time saved can become revenue.
+- For salaried employees, the value typically represents "capacity created" (increased output within the same hours).
+- For team managers, it can reduce overtime or enable growth without additional hiring.
+
+A monetary value can still be assigned to time, though clarity about what it represents is essential.
+
+### Step 5: compute effective hourly cost (salary plus overhead)
+
+A credible ROI model should employ **loaded cost** rather than base salary alone. Loaded cost encompasses benefits, payroll taxes, equipment and overhead. In the absence of an internal multiplier, a conservative assumption (for example, 1.25×) can be applied.
+
+**Use the Salary Calculator on Calcfort**:
+
+- Tool: [Salary Calculator](https://calcfort.com/calculator/financial/salary)
+- Inputs: annual salary, working hours per year
+- Output: hourly rate (then apply load factor)
+
+**Example**
+- Salary: £70,000
+- Work hours/year: 1,800 → base hourly ≈ £38.89
+- Loaded hourly (1.25×) ≈ £48.61
+
+### Step 6: compute weekly and monthly value of time saved
+
+- Weekly value = hours saved/week × loaded hourly
+- Monthly value ≈ weekly value × 4.33
+
+### Step 7: calculate ROI
+
+**Use the ROI Calculator on Calcfort**:
+
+- Tool: [ROI Calculator](https://calcfort.com/calculator/financial/roi)
+- Inputs: monthly benefit and monthly cost
+- Output: ROI percentage
+
+**Worked example**
+Assume:
+- Time saved: 4 hours/week
+- Loaded hourly: £48.61
+- Monthly value: 4 × 48.61 × 4.33 ≈ £841.93
+
+Costs:
+- AI subscription: £25/month
+- Additional costs: £15/month
+- Total cost: £40/month
+
+Raw ROI = (841.93 − 40) / 40 ≈ **2005%**.
+
+To maintain honesty in the calculation, a **realisation rate** should be added: the percentage of saved time that becomes meaningful output. A range of 50–70% is reasonable.
+
+If realisation is 60%, monthly benefit becomes £505.16, and ROI becomes (505.16 − 40) / 40 ≈ **1163%**.
+
+### Mini worksheet: a 10-minute ROI estimate
+
+For a rapid estimate before conducting a full inventory, the following shortcut can be employed:
+
+1) Select **one** recurring task performed frequently (for many roles, email drafting or meeting notes).
+2) Estimate minutes required *without* AI and *with* AI (after some practice).
+3) Multiply by frequency per week to obtain weekly minutes saved.
+4) Convert to hours and multiply by loaded hourly cost.
+
+**Example (meeting summaries)**
+- Without AI: 12 minutes
+- With AI: 7 minutes
+- Saved: 5 minutes
+- Frequency: 4/week → 20 minutes/week saved → 0.33 hours/week
+At £48.61/hour loaded, value ≈ £16.20/week → £70/month (using 4.33 weeks/month).
+
+This addresses a single task. The purpose is to build confidence in the method before scaling to a full task list.
+
+### Step 7.5: translate time into value based on role type
+
+To maintain an honest ROI presentation, the applicable "value pathway" should be stated:
+
+- **Freelancers and consultants**: time saved can become **billable hours** (revenue). The billable rate should be used rather than salary-based hourly cost.
+- **In-house professionals**: time saved becomes **throughput** (additional deliverables) or **reduced overtime**. Where overtime is common, saved hours can be valued closer to actual cash.
+- **Managers**: time saved for a team can translate into avoiding a hire or delivering earlier. The benefit can be modelled as either (a) hours saved × loaded hourly, or (b) a conservative fraction of a headcount cost.
+
+When presenting to leadership, stating the chosen pathway in one sentence prevents subsequent disputes.
+
+---
+
+<a id="accounting-for-ai-subscription-and-infrastructure-costs"></a>
+## Accounting for AI subscription and infrastructure costs
+
+AI expenditure extends beyond "£20 per seat." A practical monthly cost stack can include:
+
+- per-user licences,
+- usage fees (API tokens, transcription),
+- security/compliance add-ons (SSO, audit logs),
+- training time,
+- and rework/QA time.
+
+### Step 8: build a monthly cost breakdown
+
+| Cost category | Monthly estimate |
+|---|---:|
+| AI subscription (per seat) | £25 |
+| Usage (API/transcription) | £10 |
+| Security/compliance add-ons | £12 |
+| Training time | £15 |
+| Rework / QA | £0–£50 |
+
+**Use the Percentage Calculator on Calcfort** to compute proportions:
+
+- Tool: [Percentage Calculator](https://calcfort.com/calculator/mathematics/percentage)
+- Inputs: each monthly cost line relative to total
+- Output: cost breakdown percentages
+
+### A hidden costs checklist (often overlooked)
+
+Even a personal AI subscription can create small but measurable costs:
+
+- **Tool sprawl**: multiple overlapping subscriptions across the team.
+- **Context switching**: time spent re-prompting due to non-standardised workflows.
+- **Data handling**: rules governing what can and cannot be entered into tools, plus training time to follow them.
+- **Review load**: senior reviewers expend additional time checking AI-assisted work until quality stabilises.
+
+When modelling ROI for a team, adding a small monthly line item for governance and review (even 15–30 minutes per person) increases credibility and reduces pushback from security and compliance teams.
+
+### Step 9: compare new spend versus reallocated spend
+
+If AI replaces older tools, the net change should be modelled.
+
+**Use the Percentage Calculator on Calcfort**:
+
+- Tool: [Percentage Calculator](https://calcfort.com/calculator/mathematics/percentage)
+- Inputs: pre-AI software spend versus post-AI spend
+- Output: percentage increase or decrease
+
+---
+
+<a id="break-even-analysis-when-the-ai-investment-pays-for-itself"></a>
+## Break-even analysis: when the AI investment pays for itself
+
+Break-even is often more intuitive than ROI:
+
+> "How long until savings cover costs?"
+
+### Step 10: compute break-even in months
+
+Break-even can be calculated by dividing total investment by monthly net benefit.
+
+- Monthly net benefit = monthly realised benefit − monthly cost
+- Break-even months = initial investment / monthly net benefit
+
+For ongoing subscriptions with no upfront cost, the calculation simplifies: if monthly benefit exceeds monthly cost, the investment pays for itself immediately on a rolling basis.
+
+### Step 11: compare break-even to contract term
+
+If a vendor requires a 12-month commitment, break-even should occur well before that period concludes.
+
+**Use the Percentage Calculator on Calcfort** to assess the ratio:
+
+- Tool: [Percentage Calculator](https://calcfort.com/calculator/mathematics/percentage)
+- Inputs: break-even time and contract length
+- Output: break-even as percentage of contract term
+
+---
+
+<a id="stress-testing-scenarios-accuracy-rework-compliance"></a>
+## Stress-testing scenarios: accuracy, rework, compliance
+
+A rigorous model does not assume AI operates without error. It explicitly accounts for:
+
+- rework (correcting outputs),
+- quality checks,
+- and governance constraints that limit usage.
+
+### Step 12: model rework as savings erosion
+
+Net saved time = gross saved time × (1 − rework rate).
+
+**Use the Percentage Calculator on Calcfort**:
+
+- Tool: [Percentage Calculator](https://calcfort.com/calculator/mathematics/percentage)
+
+Practical ranges:
+- 10%: structured tasks with templates
+- 20–30%: complex drafting
+- 40%+: high-stakes work without guardrails
+
+### Step 13: run three scenarios
+
+| Scenario | Weekly gross hours saved | Rework rate | Realisation rate |
+|---|---:|---:|---:|
+| Conservative | 2.5 | 30% | 50% |
+| Expected | 4.0 | 20% | 60% |
+| Aggressive | 6.0 | 10% | 70% |
+
+Monthly benefit and ROI should be computed for each scenario:
+
+- ROI tool: [ROI Calculator](https://calcfort.com/calculator/financial/roi)
+- Percentage tool: [Percentage Calculator](https://calcfort.com/calculator/mathematics/percentage)
+
+This approach represents the most straightforward method to avoid inflated calculations.
+
+---
+
+<a id="why-this-topic-is-relevant-now"></a>
+## Why this topic is relevant now
+
+This ROI framing is gaining traction because AI budgets are increasing and decision-makers require evidence of returns rather than impressions.
+
+According to Gartner, worldwide spending on AI is forecast to total $2.52 trillion in 2026, representing a 44% increase year-over-year. Among the G7 hyperscalers alone, capital expenditure on AI infrastructure is projected to exceed $500 billion in 2026, with estimates reaching as high as $665 billion at the upper bound.
+
+The UK Government's assessment of AI capabilities published in January 2026 indicates that OECD estimates suggest UK labour productivity could gain 0.4–1.2 percentage points annually from AI adoption over the next decade, though the document notes that adoption remains uneven—only one in five firms currently use or plan to use AI.
+
+TIME has reported on how AI's labour and productivity effects vary by sector and adoption approach. Saadia Zahidi of the World Economic Forum noted that geoeconomic trends could shape labour markets to an equal or greater extent than technological change alone.
+
+Meanwhile, OECD research indicates that individuals working in customer support, software development or consulting have observed average productivity gains ranging from 5% to over 25% when using generative AI tools. Less experienced or lower-skilled individuals tend to realise the largest productivity improvements.
+
+---
+
+<a id="data-and-sources-used-in-this-article"></a>
+## Data and sources used in this article
+
+- TIME — "The Real Economics of AI and Jobs" (January 2026): [https://time.com/7357476/economics-of-ai-and-jobs/](https://time.com/7357476/economics-of-ai-and-jobs/)
+- Gartner — "Worldwide AI Spending Will Total $2.5 Trillion in 2026" (January 2026): [https://www.gartner.com/en/newsroom/press-releases/2026-1-15-gartner-says-worldwide-ai-spending-will-total-2-point-5-trillion-dollars-in-2026](https://www.gartner.com/en/newsroom/press-releases/2026-1-15-gartner-says-worldwide-ai-spending-will-total-2-point-5-trillion-dollars-in-2026)
+- UK Government — "Assessment of AI Capabilities and the Impact on the UK Labour Market" (January 2026): [https://www.gov.uk/government/publications/assessment-of-ai-capabilities-and-the-impact-on-the-uk-labour-market/assessment-of-ai-capabilities-and-the-impact-on-the-uk-labour-market](https://www.gov.uk/government/publications/assessment-of-ai-capabilities-and-the-impact-on-the-uk-labour-market/assessment-of-ai-capabilities-and-the-impact-on-the-uk-labour-market)
+- OECD — "The Effects of Generative AI on Productivity, Innovation and Entrepreneurship" (June 2025): [https://www.oecd.org/en/publications/the-effects-of-generative-ai-on-productivity-innovation-and-entrepreneurship_b21df222-en.html](https://www.oecd.org/en/publications/the-effects-of-generative-ai-on-productivity-innovation-and-entrepreneurship_b21df222-en.html)
+- Goldman Sachs — "Why AI Companies May Invest More than $500 Billion in 2026": [https://www.goldmansachs.com/insights/articles/why-ai-companies-may-invest-more-than-500-billion-in-2026](https://www.goldmansachs.com/insights/articles/why-ai-companies-may-invest-more-than-500-billion-in-2026)
+
+---
+
+<a id="faqs"></a>
+## FAQs
+
+### Does time saved count as money for salaried employees?
+
+Time saved for salaried employees typically represents "capacity value" rather than direct cash. Applying a conservative realisation rate (50–60%) prevents overstating the impact.
+
+### How can inflated ROI calculations be avoided?
+
+Rework and realisation rates should be modelled explicitly. The full cost stack—licences, usage and overhead—must be included.
+
+### Which Calcfort calculator should be used first?
+
+The following sequence is recommended:
+- [Time Calculator](https://calcfort.com/calculator/mathematics/time) — for duration calculations
+- [Salary Calculator](https://calcfort.com/calculator/financial/salary) — for hourly rate computation
+- [Percentage Calculator](https://calcfort.com/calculator/mathematics/percentage) — for proportional calculations
+
+Then proceed to:
+- [ROI Calculator](https://calcfort.com/calculator/financial/roi) — for return on investment
+
+### Should ROI be measured weekly or monthly?
+
+Monthly measurement is preferable for budget purposes. Weekly time savings should be tracked during a pilot phase to refine assumptions.

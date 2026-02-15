@@ -110,6 +110,31 @@ export const relatedCalculatorsMap: Record<string, RelatedCalculator[]> = {
     { slug: 'timezone-converter', name: 'Time Zone Converter', description: 'Convert times between zones' },
     { slug: 'time', name: 'Time Calculator', description: 'Add, subtract, and convert time' },
   ],
+
+  // New Blogs February 2026
+  'degree-cost-projection-2026': [
+    { slug: 'compound-interest', name: 'Compound Interest Calculator', description: 'Project costs with compounding growth' },
+    { slug: 'loan', name: 'Loan Calculator', description: 'Calculate loan payments and interest' },
+    { slug: 'roi', name: 'ROI Calculator', description: 'Evaluate returns on investments' },
+    { slug: 'percentage', name: 'Percentage Calculator', description: 'Calculate percentage changes' },
+  ],
+  'ai-productivity-roi-calculation': [
+    { slug: 'roi', name: 'ROI Calculator', description: 'Calculate return on investment' },
+    { slug: 'salary', name: 'Salary Calculator', description: 'Convert salary to hourly rate' },
+    { slug: 'time', name: 'Time Calculator', description: 'Add, subtract, and convert time' },
+    { slug: 'percentage', name: 'Percentage Calculator', description: 'Calculate percentages and ratios' },
+  ],
+  'ipv4-subnetting-guide-subnet-calculator': [
+    { slug: 'subnet', name: 'Subnet Calculator', description: 'Calculate IPv4 subnets and CIDR ranges' },
+    { slug: 'binary-converter', name: 'Binary Converter', description: 'Convert between binary, decimal, hex' },
+    { slug: 'scientific', name: 'Scientific Calculator', description: 'Advanced mathematical functions' },
+  ],
+  'solar-panel-savings-payback-roi-2026': [
+    { slug: 'solar-panel-savings', name: 'Solar Panel Savings Calculator', description: 'Estimate solar savings and payback' },
+    { slug: 'roi', name: 'ROI Calculator', description: 'Calculate return on investment' },
+    { slug: 'energy-usage', name: 'Energy Usage Calculator', description: 'Calculate electricity consumption' },
+    { slug: 'percentage', name: 'Percentage Calculator', description: 'Calculate self-consumption rates' },
+  ],
 };
 
 // Default related calculators shown when no specific mapping exists
