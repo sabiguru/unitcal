@@ -173,7 +173,7 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
     "how much will a degree cost if tuition rises every year",
     "college board trends college pricing 2025 2026 tuition and fees increase"
   ],
-  "metaTitle": "College Cost Calculator for 2026 — Project Tuition, Fees & Living Costs",
+  "metaTitle": "2026 Degree Cost Projection: Tuition, Fees & Living Costs",
   "metaDescription": "Estimate the real cost of a degree for a 2026 intake by projecting tuition increases, fees, and living costs, plus payback and ROI scenarios.",
   "lastResearched": "2026-02-15"
 },
@@ -233,7 +233,7 @@ export const learnSeoBySlug: Record<string, LearnSEO> = {
     "solar panel roi over 25 years with degradation and inverter replacement",
     "solar and battery payback calculator increase self consumption"
   ],
-  "metaTitle": "Solar Panel Savings Calculator (UK) — Payback Time, Annual Savings & ROI",
+  "metaTitle": "Solar Panel Savings Calculator: Payback Time & ROI (UK 2026)",
   "metaDescription": "Estimate UK solar PV savings in 2026 with self-consumption and SEG export payments. Calculate payback time and ROI with realistic assumptions and scenarios.",
   "lastResearched": "2026-02-15"
 },
