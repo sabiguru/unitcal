@@ -1,5 +1,0 @@
-npv-irr.mdx: 1819 words
-ohms-law.mdx: 1805 words
-paint.mdx: 1802 words
-password-generator.mdx: 1804 words
-patio.mdx: 1828 words

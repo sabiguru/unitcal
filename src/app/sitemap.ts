@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { calculators } from '@/data/calculators';
 import { calculatorCategories } from '@/data/categoryData';
 import { getAvailableLearnSlugs } from '@/data/learnSeoBySlug';
-import { getCategoryForSlug, getSlugsForCategory } from '@/utils/learnCategoryMapping';
+import { LEARN_CATEGORY_MAPPING, getCategoryForSlug, getSlugsForCategory } from '@/utils/learnCategoryMapping';
 import { getCategoryForCalculator } from '@/utils/calculatorCategoryMapping';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -79,67 +79,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Function to map learn articles to categories
   function getLearnCategoriesWithContent() {
     const availableLearnSlugs = getAvailableLearnSlugs();
-    const categoryMapping: Record<string, string[]> = {
-      'mathematics': [
-        'basic', 'scientific', 'graphing', 'fraction', 'percentage', 'ratio', 'prime', 'matrix',
-        'equation-solver', 'significant-figures', 'binary-converter', 'speed',
-        'suanpan-abacus', 'soroban-abacus', 'western-abacus'
-      ],
-      'health': [
-        'bmi', 'bmr', 'bodyfat', 'calorie', 'protein', 'heartrate', 'fitness', 'sleep', 'water',
-        'wearable-tech-data-driven-fitness', 'strength-training-building-muscle-healthgoal',
-        'holistic-recovery-mobility-low-impact-training', 'quick-home-workouts'
-      ],
-      'financial': [
-        'budget', 'compound-interest', 'credit-card-payoff', 'currency-converter', 'depreciation',
-        'discount', 'interest', 'investment', 'loan', 'mortgage', 'npv-irr', 'refinance',
-        'retirement', 'roi', 'salary', 'tax', 'car-lease', 'car-loan', 'finance-automation-2026',
-        'remote-work-2026'
-      ],
-      'engineering': [
-        'capacitor', 'electrical', 'ohms-law', 'resistor', 'subnet', 'password-generator',
-        'ai-engineering-2026', 'concept-to-silicon'
-      ],
-      'automotive': [
-        'mpg', 'fuel-cost', 'ev-range', 'tire-size'
-      ],
-      'construction': [
-        'paint', 'patio', 'concrete', 'roofing', 'stairs', 'tile', 'area', 'volume'
-      ],
-      'cooking': [
-        'baking', 'recipe-converter', 'coffee-ratio', 'alcohol-dilution'
-      ],
-      'education': [
-        'gpa', 'molecular-weight', 'stoichiometry', 'ph'
-      ],
-      'everyday': [
-        'age', 'date', 'tip', 'time', 'timezone-converter', 'countdown-timer',
-        'ai-everyday-calculations', 'ai-tools-2026', 'math-behind-ai', 'ai-habits-health'
-      ],
-      'conversions': [
-        'unit-converter', 'roman-numerals', 'morse-code', 'braille-translator'
-      ],
-      'energy': [
-        'solar-panel-savings', 'energy-usage', 'carbon-footprint', 'home-energy-audit'
-      ],
-      'agriculture': [
-        'seed-spacing'
-      ],
-      'animal-age': [
-        'dog-age', 'cat-age'
-      ],
-      'space': [
-        'age-on-mars', 'space-weight', 'planetary-years', 'weight-on-mars'
-      ],
-      'unique': [
-        'love-calculator', 'golf-balls-boeing-747', 'aquarium-volume'
-      ]
-    };
 
     return calculatorCategories
       .filter(category => category.slug !== 'cooking') // Exclude cooking category
       .filter(category => {
-        const learnSlugs = categoryMapping[category.slug] || [];
+        const learnSlugs = LEARN_CATEGORY_MAPPING[category.slug] || [];
         const availableArticles = learnSlugs.filter(slug => availableLearnSlugs.includes(slug));
         return availableArticles.length > 0;
       })

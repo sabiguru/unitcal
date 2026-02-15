@@ -13,16 +13,20 @@ export const LEARN_CATEGORY_MAPPING: Record<string, string[]> = {
     'finance-automation-2026',
     'remote-work-2026',
     'cost-of-living-2026',
-    'ai-finance-2026'
+    'ai-finance-2026',
+    'ai-productivity-roi-calculation'
   ],
   'engineering': [
     'ai-engineering-2026',
-    'concept-to-silicon'
+    'concept-to-silicon',
+    'ipv4-subnetting-guide-subnet-calculator'
   ],
   'automotive': [],
   'construction': [],
   'cooking': [],
-  'education': [],
+  'education': [
+    'degree-cost-projection-2026'
+  ],
   'everyday': [
     'ai-everyday-calculations',
     'ai-tools-2026',
@@ -30,7 +34,9 @@ export const LEARN_CATEGORY_MAPPING: Record<string, string[]> = {
     'ai-habits-health'
   ],
   'conversions': [],
-  'energy': [],
+  'energy': [
+    'solar-panel-savings-payback-roi-2026'
+  ],
   'agriculture': [],
   'animal-age': [],
   'space': [
