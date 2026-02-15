@@ -63,6 +63,10 @@ export async function generateMetadata({ params }: LearnPageProps): Promise<Meta
         title: seoData.metaTitle,
         description: seoData.metaDescription,
       },
+      robots: {
+        index: true,
+        follow: true,
+      },
       alternates: {
         canonical: `https://calcfort.com/learn/${category}/${slug}`,
       },
@@ -77,6 +81,10 @@ export async function generateMetadata({ params }: LearnPageProps): Promise<Meta
       title: `Learn ${slug.replace(/-/g, ' ')} - Calculator Fort`,
       description: `Learn how to use the ${slug.replace(/-/g, ' ')} calculator with examples, FAQs, and detailed guides.`,
       type: 'article',
+    },
+    robots: {
+      index: true,
+      follow: true,
     },
     alternates: {
       canonical: `https://calcfort.com/learn/${category}/${slug}`,
