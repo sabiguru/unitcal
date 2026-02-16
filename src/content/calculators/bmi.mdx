@@ -1,168 +1,337 @@
 ## BMI Calculator: Calculate Your Body Mass Index
 
-## Table of Contents - Bmi
+## Table of Contents
+- [The Global Obesity Crisis in 2026](#global-obesity-crisis-2026)
+- [Why BMI Remains the Standard Measure](#why-bmi-standard-measure)
 - [How to Use This Calculator](#how-to-use-this-calculator)
-- [The Core Principle: Weight-to-Height Ratio](#the-core-principle-weight-to-height-ratio)
-- [How to Calculate BMI Manually](#how-to-calculate-bmi-manually)
-- [Real-World Applications](#real-world-applications)
-- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
-- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
-- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
-- [Related Topics](#related-topics)
-- [How This Calculator Works](#how-this-calculator-works)
+- [Understanding BMI Categories](#understanding-bmi-categories)
+- [Regional Obesity Statistics](#regional-obesity-statistics)
+- [BMI Limitations and Modern Alternatives](#bmi-limitations)
+- [Scenario-Based Calculations](#scenario-calculations)
+- [Professional and Clinical Considerations](#professional-considerations)
+- [Sources](#sources)
 - [FAQs](#faqs)
 
 ---
 
-## How to Use This Calculator - Bmi
-The calculator provides two input sections. For weight, enter your value and select units from the dropdown—either kg (metric) or lbs (imperial). When you select imperial, the height input changes accordingly.
+## The Global Obesity Crisis in 2026
 
-For metric mode, enter your height as a single value in centimeters. For imperial mode, two fields appear for feet and inches.
+The world has reached a troubling milestone: over one billion people now live with obesity. According to the NCD Risk Factor Collaboration's 2024 data, published in The Lancet, approximately 880 million adults and 159 million children aged 5-19 years have a BMI of 30 or above. When overweight individuals are included, nearly 3 billion people globally carry excess weight.
 
-Click "Calculate BMI" to see your results. A "Clear" button resets all fields.
+### The Scale of the Problem
 
-Results appear in two highlighted boxes: your BMI number (like 24.3) with "Your BMI" labeled beneath, and your weight category (like "Normal weight") with color coding—blue for underweight, green for normal, yellow for overweight, red for obese.
+As of 2025, approximately 16% of the global adult population is classified as obese—nearly triple the rate observed in 1975. Current projections suggest that by 2030:
 
-Below the results, a "BMI Categories" reference shows the standard thresholds: Underweight below 18.5, Normal weight 18.5-24.9, Overweight 25-29.9, Obese 30 and above.
+- 50% of adult men and women globally will have elevated BMI
+- Over 2.9 billion adults will be overweight or obese
+- 1.1 billion adults will meet clinical obesity thresholds
+- Levels of severe obesity (BMI over 35) will more than double from 2010 levels
 
-Additional information panels cover what BMI measures (body fat based on height and weight), BMI limitations (doesn't distinguish muscle from fat), age considerations (different standards for children), and health assessment recommendations.
+The health consequences are substantial. In 2021, higher-than-optimal BMI caused an estimated 3.7 million deaths from non-communicable diseases including cardiovascular disease, diabetes, cancers and respiratory disorders. Annual premature deaths from overweight and obesity—1.6 million—now exceed global road traffic fatalities.
 
----
+### Policy Response Gap
 
-## The Core Principle: Weight-to-Height Ratio
-
-BMI is a simple ratio that compares your body weight to your height squared. The formula produces a single number that places you in a weight category, making it useful as a quick screening tool.
-
-The squaring of height is key. A person who is twice as tall as another isn't expected to weigh twice as much—they're expected to weigh roughly four times as much, because body volume scales with the cube of linear dimensions. Squaring height (rather than cubing) is a compromise that works reasonably well for typical adult body proportions.
-
-BMI doesn't measure body fat directly. It doesn't distinguish between weight from muscle, bone, water, or fat. A muscular athlete and an inactive person of the same height and weight have the same BMI but very different body compositions.
-
-Despite these limitations, BMI correlates with health outcomes at the population level. People with BMIs in the "normal" range statistically have lower rates of certain diseases than those at either extreme. This is why BMI remains a standard screening tool, even as its limitations are well understood.
+Despite the scale of the crisis, two-thirds of countries (126 out of 194) have either none or just one of the key policies needed to address rising obesity levels. Only 7% of countries have health systems adequately prepared to address obesity as a public health priority.
 
 ---
 
-## How to Calculate BMI Manually
+## Why BMI Remains the Standard Measure
 
-**Metric formula:**
+Body Mass Index, despite well-documented limitations, continues to serve as the primary screening tool for weight-related health assessment. Its persistence reflects practical advantages that no alternative has successfully replicated at scale.
 
-BMI = weight (kg) ÷ height (m)²
+### The Core Calculation
 
-Example: 70 kg, 1.75 m tall
-Height squared: 1.75 × 1.75 = 3.0625 m²
-BMI: 70 ÷ 3.0625 = 22.9
+BMI is a simple ratio comparing body weight to height squared:
 
-**Imperial formula:**
+```
+BMI = Weight (kg) ÷ Height (m)²
+```
 
-BMI = [weight (lb) ÷ height (in)²] × 703
+For imperial units:
+```
+BMI = [Weight (lb) ÷ Height (in)²] × 703
+```
 
-The 703 is a conversion factor to make imperial units produce the same BMI as metric.
+The formula produces a single number that places individuals within standardised categories, enabling population-level comparisons and clinical screening with minimal equipment or expertise.
 
-Example: 154 lbs, 5'9" (69 inches)
-Height squared: 69 × 69 = 4,761 in²
-Division: 154 ÷ 4,761 = 0.03235
-Multiply: 0.03235 × 703 = 22.7
+### Why Height is Squared
 
-**Quick reference for converting height to inches:**
-- 5'0" = 60 inches
-- 5'6" = 66 inches
-- 6'0" = 72 inches
-- 6'6" = 78 inches
+The squaring of height reflects body proportions. A person twice as tall as another is not expected to weigh twice as much—volume scales with the cube of linear dimensions. Squaring height rather than cubing it represents a compromise that works reasonably well for typical adult body proportions.
 
-**Standard BMI categories (WHO):**
-- Underweight: below 18.5
-- Normal weight: 18.5 to 24.9
-- Overweight: 25.0 to 29.9
-- Obesity Class I: 30.0 to 34.9
-- Obesity Class II: 35.0 to 39.9
-- Obesity Class III: 40.0 and above
+### Population-Level Validity
+
+Despite limitations for individuals, BMI correlates with health outcomes at population levels. People with BMIs in the "normal" range statistically demonstrate lower rates of cardiovascular disease, type 2 diabetes and certain cancers than those at either extreme. This statistical relationship, though imperfect, justifies BMI's continued use as an initial screening measure.
 
 ---
 
-## Real-World Applications
+## How to Use This Calculator
 
-**Clinical screening.** Healthcare providers use BMI as an initial assessment during checkups. It's quick, requires only a scale and height measurement, and flags patients who might benefit from lifestyle discussions or further evaluation.
+**Step 1: Select Your Unit System**
+Choose between metric (kilograms and centimetres) or imperial (pounds and feet/inches). The calculator adjusts input fields accordingly.
 
-**Public health monitoring.** Population-level BMI statistics track obesity trends. Health departments compare BMI distributions across regions, demographics, and time periods to identify public health priorities.
+**Step 2: Enter Your Weight**
+Input your current weight. For consistent tracking, weigh yourself at the same time each day—ideally in the morning after using the bathroom and before eating.
 
-**Insurance risk assessment.** Some life and health insurance policies consider BMI in underwriting. While controversial, BMI provides a standardized metric for population-level risk assessment.
+**Step 3: Enter Your Height**
+For metric mode, enter height in centimetres. For imperial mode, use the separate feet and inches fields.
 
-**Personal health tracking.** Tracking BMI over time shows the general direction of weight relative to height. For adults whose height is stable, BMI changes reflect weight changes.
+**Step 4: Review Your Results**
+The calculator displays:
+- Your BMI value (rounded to one decimal place)
+- Your weight category with colour coding
+- Reference chart showing all BMI categories
 
-**Research enrollment criteria.** Many medical studies use BMI to define eligible populations. "Normal weight participants" or "participants with BMI over 30" are common enrollment criteria.
-
----
-
-## Scenarios People Actually Run Into
-
-**The fit person with a high BMI.** A person who strength trains regularly might have a BMI of 27 (overweight category) despite having visible abs and excellent health markers. Their weight comes largely from muscle, which BMI can't distinguish from fat.
-
-**The "normal BMI" with concerning body composition.** Conversely, someone with a BMI of 22 might carry excessive abdominal fat and little muscle—sometimes called "skinny fat." Their BMI looks fine, but their body composition suggests metabolic risk.
-
-**The height measurement dispute.** You're 5'10" at the doctor's office but measured 5'11" somewhere else. That inch difference changes your BMI from 25.1 to 24.8—crossing a category boundary. Measure height consistently (same time of day, proper posture) for meaningful comparisons.
-
-**The morning versus evening weight.** Body weight fluctuates 2-5 pounds during the day due to food, water, and bathroom visits. Weigh at a consistent time (morning, after using the bathroom, before eating) for meaningful tracking.
-
-**The slow creep.** BMI increases by 0.5 over a year, still within "normal." Easy to dismiss. But 0.5 per year for 10 years means going from 22 to 27. Tracking helps you notice trends before they become concerning.
-
----
-
-## Trade-Offs and Decisions People Underestimate
-
-**Individual versus population utility.** BMI works well for population-level health assessment but poorly for individual diagnosis. Your BMI tells you where you fall on a statistical distribution, not whether you specifically are healthy.
-
-**Category thresholds are arbitrary.** Why is 24.9 "normal" but 25.0 "overweight"? These cutoffs are based on statistical risk curves, but the curves are smooth—there's no magic transition at exactly 25. Someone at 24.8 isn't meaningfully different from someone at 25.2.
-
-**Ethnic variations in risk.** BMI cutoffs were developed primarily on European populations. Research suggests that some ethnic groups (particularly Asian populations) may face elevated health risks at lower BMI values. Some guidelines recommend lower thresholds for Asian populations.
-
-**Age adjustments.** The standard BMI categories apply to adults 20+. For children and teens, BMI is compared to growth charts as percentiles. For older adults, slightly higher BMI may actually be associated with better outcomes—the "obesity paradox" in elderly populations.
-
-**Trend versus snapshot.** A single BMI reading is a snapshot. The trend over time is often more informative. A BMI of 26 that's been stable for years suggests different things than a BMI of 26 that was 22 two years ago.
+**BMI Category Reference:**
+| Category | BMI Range | Colour Code |
+|----------|-----------|-------------|
+| Underweight | Below 18.5 | Blue |
+| Normal weight | 18.5 – 24.9 | Green |
+| Overweight | 25.0 – 29.9 | Yellow |
+| Obese (Class I) | 30.0 – 34.9 | Red |
+| Obese (Class II) | 35.0 – 39.9 | Red |
+| Obese (Class III) | 40.0 and above | Red |
 
 ---
 
-## Common Mistakes and How to Recover
+## Understanding BMI Categories
 
-**Mixing unit systems.** You enter weight in pounds but height in centimeters, or forget to convert feet-and-inches to total inches. The calculator handles unit selection through dropdowns to prevent this, but if doing manual calculation, ensure consistency.
+### World Health Organisation Thresholds
 
-**Using height in centimeters with the metric formula expecting meters.** The formula uses meters squared. If you're 175 cm tall, you need to convert to 1.75 m before squaring, or you'll get a BMI that's 10,000× too small.
+The WHO established BMI thresholds based on epidemiological evidence linking weight status to health outcomes:
 
-**Obsessing over decimal places.** A BMI of 24.87 versus 24.91 is meaningless noise—your weight fluctuates by more than that difference throughout the day. Focus on whole numbers and trends, not precise decimals.
+**Standard WHO Categories:**
+- **Underweight (BMI < 18.5):** Associated with nutritional deficiency, weakened immune function and increased mortality risk
+- **Normal weight (BMI 18.5 – 24.9):** Statistically lowest risk of weight-related health complications
+- **Overweight (BMI 25.0 – 29.9):** Moderately elevated risk of cardiovascular disease and type 2 diabetes
+- **Obesity Class I (BMI 30.0 – 34.9):** Significantly elevated health risks; lifestyle intervention typically recommended
+- **Obesity Class II (BMI 35.0 – 39.9):** High risk; medical intervention often indicated
+- **Obesity Class III (BMI ≥ 40.0):** Very high risk; surgical intervention may be considered
 
-**Treating BMI as a fitness metric.** BMI doesn't measure fitness. An athlete can have a "normal" BMI but be in exceptional shape, or have an "overweight" BMI with excellent cardiovascular fitness. Use actual fitness tests for fitness assessment.
+### Ethnic Variations in Risk
 
-**Ignoring context.** A very muscular person, a pregnant woman, an elderly person, and a sedentary young adult might all have the same BMI but vastly different health profiles. BMI is a starting point, not a conclusion.
+BMI cutoffs were developed primarily from European population data. Research demonstrates that health risks vary by ethnicity at equivalent BMI values:
+
+**Asian Populations:**
+A lower threshold of BMI ≥ 25 has been recommended for Asian populations to define obesity, rather than the standard ≥ 30. Asian adults, on average, have 3% to 5% higher body fat percentage than White adults at the same BMI, resulting in elevated cardiovascular and diabetes risk at lower BMI values.
+
+**South Asian Body Habitus:**
+Research suggests South Asian populations may require completely different BMI cutoffs due to distinct body composition patterns and metabolic profiles.
+
+**Polynesian Populations:**
+Different cutoffs may also be appropriate for Polynesian body habitus, where greater muscle mass may elevate BMI without corresponding health risk.
 
 ---
 
-## Related Topics
+## Regional Obesity Statistics
 
-**Waist circumference.** Where you carry fat matters. Abdominal fat (measured by waist circumference) is associated with higher health risk than fat on hips and thighs. Some guidelines combine BMI with waist circumference for better risk assessment.
+### United States
 
-**Body fat percentage.** Direct measurement of fat versus lean mass provides more information than BMI. Methods include DEXA scans, bioelectrical impedance, skinfold calipers, and underwater weighing. Each has different accuracy and accessibility.
+According to CDC data from NHANES 2021-2023:
 
-**Waist-to-hip ratio.** This measures fat distribution. A ratio above 0.85 for women or 0.90 for men suggests excess abdominal fat and increased health risk, regardless of BMI.
+- **Adult obesity prevalence:** 40.3%
+- **Severe obesity prevalence:** 9.4% (up from 7.7% in 2013-2014)
+- **Prevalence by sex:** 39.2% men, 41.3% women
+- **Highest age group:** Ages 40-59 at 46.4%
 
-**BMR and metabolism.** BMI is about body size; BMR (Basal Metabolic Rate) is about energy expenditure. Two people with the same BMI can have very different metabolic rates depending on muscle mass and other factors.
+**State-Level Variation (2024):**
+All US states and territories now have obesity prevalence of at least 25%. West Virginia leads at 40.6%, whilst states in the Midwest (35.9%) and South (34.5%) have the highest regional prevalence.
 
-**Metabolic health markers.** Blood pressure, blood glucose, cholesterol levels, and inflammatory markers tell you more about health than BMI alone. Someone with a high BMI but excellent blood work may be metabolically healthy.
+**Racial and Ethnic Disparities:**
+Non-Hispanic Black adults have the highest age-adjusted obesity prevalence at 49.9%, followed by Hispanic adults at 45.6%. Non-Hispanic Asian adults have the lowest prevalence at 16.1%.
+
+**Children and Adolescents:**
+19.7% of children and adolescents aged 2-19 are obese—approximately 14.7 million young people.
+
+### United Kingdom
+
+According to the Health Survey for England 2022:
+
+- **Adult obesity prevalence:** 28%
+- **Adults overweight or obese:** 64.5% (2023-24)
+- **Sex difference:** 67% of men versus 61% of women are overweight or obese
+
+**Trend Since 1993:**
+The proportion of adults who are overweight or obese has risen from 52.9% to 64.3%, whilst obesity specifically has risen from 14.9% to 28.9%.
+
+**Children (2022-23):**
+26.8% of children aged 2-15 are overweight or obese. Significant deprivation gradients exist: in Year 6 (ages 10-11), 30.1% of children in the most deprived areas are obese, compared with 13.1% in the least deprived areas.
+
+**Economic Impact:**
+Obesity costs the NHS approximately £6.5 billion annually. Projections suggest that by 2040, more than 70% of people across the UK could be classified as overweight or obese if current trends continue.
+
+### Global Extremes
+
+**Highest Obesity Rates:**
+- American Samoa: 68.50%
+- Nauru: 61.00%
+- Pacific Island nations dominate the top 10
+
+**Lowest Obesity Rates:**
+- Vietnam: 2.1%
+- Timor-Leste: 2.2%
+- Ethiopia: 2.4%
+- Japan: 4.9%
 
 ---
 
-## How This Calculator Works
+## BMI Limitations and Modern Alternatives
 
-The calculator takes weight and height inputs in either metric or imperial units. If imperial is selected, it converts feet and inches to total inches, then to centimeters internally.
+### The 2025 Lancet Commission on Obesity
 
-The BMI calculation follows the standard formula: weight in kilograms divided by height in meters squared. For imperial input, the calculator first converts pounds to kilograms (divide by 2.205) and inches to centimeters (multiply by 2.54), then applies the metric formula.
+The 2025 Lancet Commission on Obesity has formally advocated for moving beyond BMI alone. Traditional reliance on BMI as a diagnostic tool is increasingly challenged due to its inability to differentiate between fat and lean mass and to capture fat distribution.
 
-The result is compared against WHO category thresholds to determine the weight category label and color coding:
-- Below 18.5: "Underweight" (blue)
-- 18.5-24.9: "Normal weight" (green)
-- 25.0-29.9: "Overweight" (yellow)
-- 30.0+: "Obese" (red)
+The Commission recommends a nuanced diagnostic framework distinguishing between:
+- **Preclinical obesity:** Excess adiposity without evident organ dysfunction
+- **Clinical obesity:** Excess adiposity associated with measurable impairments in tissue or organ function
 
-The calculator rounds the BMI to one decimal place for display.
+This framework requires body composition assessment through multiple measurement modalities, not BMI alone.
 
-All calculations happen locally in your browser.
+### Key BMI Limitations
+
+**Body Composition Blindness:**
+BMI does not differentiate between lean mass and fat mass. A person can have high BMI with very low fat mass (muscular athletes) or normal BMI with excessive fat and minimal muscle ("skinny fat" or metabolically obese normal weight individuals).
+
+**Fat Distribution Ignored:**
+BMI does not capture where fat is located. Abdominal (visceral) fat poses substantially greater health risk than subcutaneous fat on hips and thighs.
+
+**Misclassification of Health Risk:**
+Research demonstrates that overweight or obese individuals defined by BMI sometimes show better survival outcomes than normal-weight counterparts—the so-called "obesity paradox." This relationship is explained by BMI's inaccuracy in measuring actual body fat.
+
+**2025 University of Florida Research:**
+Recent UF Health research published in 2025 concluded that BMI is a "weak predictor of future health," reinforcing calls for more comprehensive assessment approaches.
+
+### Alternative Measures
+
+**Waist Circumference:**
+Abdominal fat measurement provides additional information about metabolic risk. Thresholds indicating elevated risk:
+- Men: above 94 cm (37 inches) indicates increased risk; above 102 cm (40 inches) indicates substantially increased risk
+- Women: above 80 cm (31.5 inches) indicates increased risk; above 88 cm (35 inches) indicates substantially increased risk
+
+**Waist-to-Hip Ratio:**
+Measures fat distribution. Ratios above 0.85 for women or 0.90 for men suggest excess abdominal fat and increased health risk, regardless of BMI.
+
+**Body Fat Percentage:**
+Direct measurement through DEXA scans, bioelectrical impedance, skinfold calipers or underwater weighing provides superior body composition data:
+- Essential fat: 2-5% (men), 10-13% (women)
+- Athletes: 6-13% (men), 14-20% (women)
+- Fitness: 14-17% (men), 21-24% (women)
+- Average: 18-24% (men), 25-31% (women)
+- Obese: 25%+ (men), 32%+ (women)
+
+---
+
+## Scenario-Based Calculations
+
+### Scenario 1: The Muscular Athlete
+
+**Profile:** 28-year-old male, 185 cm (6'1"), 95 kg (209 lbs), competitive weightlifter with visible abdominal definition.
+
+**BMI Calculation:**
+```
+BMI = 95 ÷ (1.85)² = 95 ÷ 3.4225 = 27.8
+```
+
+**Classification:** Overweight (BMI 25-29.9)
+
+**Reality Check:** This individual likely has body fat percentage around 12-15%, well within the athletic range. The elevated BMI reflects muscle mass, not health risk. Waist circumference of 82 cm confirms low abdominal fat.
+
+**Recommendation:** BMI classification is misleading in this case. Body fat percentage or waist-to-hip ratio provides more accurate health assessment for muscular individuals.
+
+### Scenario 2: The Sedentary Office Worker
+
+**Profile:** 45-year-old female, 165 cm (5'5"), 62 kg (137 lbs), sedentary occupation, no regular exercise.
+
+**BMI Calculation:**
+```
+BMI = 62 ÷ (1.65)² = 62 ÷ 2.7225 = 22.8
+```
+
+**Classification:** Normal weight (BMI 18.5-24.9)
+
+**Reality Check:** Despite normal BMI, this individual may have elevated body fat percentage (32%+) and reduced muscle mass—sometimes termed "metabolically obese normal weight" (MONW). Waist circumference of 86 cm suggests moderate abdominal fat despite normal BMI.
+
+**Recommendation:** BMI provides false reassurance. Metabolic markers (blood pressure, blood glucose, lipid panel) and body composition assessment would reveal more accurate health status.
+
+### Scenario 3: Tracking Weight Loss Progress
+
+**Profile:** 52-year-old male, 178 cm (5'10"), starting weight 105 kg (231 lbs), current weight 88 kg (194 lbs) after 12 months.
+
+**Starting BMI:**
+```
+BMI = 105 ÷ (1.78)² = 105 ÷ 3.1684 = 33.1 (Obese Class I)
+```
+
+**Current BMI:**
+```
+BMI = 88 ÷ (1.78)² = 88 ÷ 3.1684 = 27.8 (Overweight)
+```
+
+**Progress:** BMI reduction of 5.3 points, moving from obesity to overweight category.
+
+**Context:** This represents approximately 16% body weight reduction, consistent with meaningful health improvement. Research suggests 5-10% weight loss in obese individuals produces measurable improvements in blood pressure, blood glucose and cardiovascular risk markers.
+
+### Scenario 4: Asian Population Considerations
+
+**Profile:** 35-year-old woman of South Asian descent, 160 cm (5'3"), 65 kg (143 lbs).
+
+**BMI Calculation:**
+```
+BMI = 65 ÷ (1.60)² = 65 ÷ 2.56 = 25.4
+```
+
+**Standard Classification:** Overweight (BMI 25-29.9)
+
+**Asian-Adjusted Interpretation:** For South Asian populations, this BMI (25.4) corresponds to obesity-equivalent risk. With 3-5% higher body fat at equivalent BMI compared to European populations, metabolic risk assessment should treat this as equivalent to BMI 28-30 in European populations.
+
+**Recommendation:** Apply Asian-adjusted thresholds and monitor metabolic markers more closely than standard BMI categories would suggest.
+
+---
+
+## Professional and Clinical Considerations
+
+### When BMI is Most Useful
+
+BMI functions best as:
+- Initial screening tool in primary care settings
+- Population-level health surveillance metric
+- Research enrollment criterion
+- Tracking weight change trends over time
+
+### When BMI is Insufficient
+
+BMI should not be the sole assessment for:
+- Athletes and highly muscular individuals
+- Elderly populations (where slightly higher BMI may be protective)
+- Individuals with suspected metabolic syndrome despite normal BMI
+- Pre-surgical risk assessment
+- Insurance underwriting (though commonly used)
+
+### Comprehensive Assessment Approach
+
+Modern clinical practice increasingly combines multiple measures:
+
+1. **BMI:** Initial screening and trend tracking
+2. **Waist circumference:** Abdominal fat assessment
+3. **Blood pressure:** Cardiovascular risk marker
+4. **Fasting glucose/HbA1c:** Diabetes risk assessment
+5. **Lipid panel:** Cardiovascular risk profiling
+6. **Body composition:** Where available (DEXA, bioimpedance)
+
+This multidimensional approach aligns with the 2025 Lancet Commission recommendations for distinguishing preclinical from clinical obesity.
+
+---
+
+## Sources
+
+- [WHO Obesity and Overweight Fact Sheet](https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight)
+- [World Obesity Atlas 2025](https://www.worldobesity.org/resources/resource-library/world-obesity-atlas-2025)
+- [CDC Adult Obesity Prevalence Maps 2024](https://www.cdc.gov/obesity/data-and-statistics/adult-obesity-prevalence-maps.html)
+- [NCHS Data Brief: Obesity and Severe Obesity Prevalence in Adults](https://www.cdc.gov/nchs/products/databriefs/db508.htm)
+- [House of Commons Library: Obesity Statistics UK](https://commonslibrary.parliament.uk/research-briefings/sn03336/)
+- [NHS England: Child Obesity Statistics](https://www.england.nhs.uk/2024/09/one-in-eight-toddlers-and-primary-school-aged-children-obese/)
+- [UF Health: BMI a Poor Predictor of Future Health (2025)](https://ufhealth.org/news/2025/uf-health-study-shows-bmis-weakness-as-a-predictor-of-future-health)
+- [Springer: Advantages and Limitations of BMI](https://link.springer.com/article/10.1186/s12966-025-01719-6)
+- [The Lancet Commission on Obesity 2025](https://www.thelancet.com/)
 
 ---
 
@@ -170,32 +339,40 @@ All calculations happen locally in your browser.
 
 **Is BMI accurate for athletes?**
 
-Often not. BMI can't distinguish muscle from fat. A heavily muscular person will have an elevated BMI despite low body fat. For athletes, body fat percentage or performance metrics are more relevant than BMI.
+BMI frequently misclassifies athletes. A heavily muscular individual will have elevated BMI despite low body fat percentage. Athletes should use body fat percentage or performance metrics rather than BMI for health assessment.
 
-**How does age affect BMI interpretation?**
+**How do age considerations affect BMI interpretation?**
 
-For adults, the standard categories apply regardless of age, though some research suggests slightly higher BMI may be acceptable or even beneficial in older adults. For children and teens, BMI is interpreted using age- and sex-specific percentile charts rather than fixed cutoffs.
+Standard BMI categories apply to adults aged 20 and over. For children and adolescents, BMI is compared against age- and sex-specific percentile charts. For elderly populations, research suggests slightly higher BMI (25-27) may be associated with better outcomes—the "obesity paradox" in older adults.
 
 **Should I aim for a specific BMI number?**
 
-Aiming for a healthy weight range makes more sense than fixating on a specific number. Within the "normal" range (18.5-24.9), there's no evidence that lower is better. Other factors—fitness, diet quality, sleep, stress—matter as much or more.
+Aiming for a healthy weight range is more appropriate than targeting a specific number. Within the normal range (18.5-24.9), there is no evidence that lower BMI is inherently better. Fitness level, diet quality, sleep and stress management matter as much or more than BMI.
 
-**Why is BMI still used if it has so many limitations?**
+**Why is BMI still used if it has documented limitations?**
 
-It's free, fast, and requires no special equipment. For population health screening, its limitations average out. For individuals, it's a starting point that should be combined with other assessments.
+BMI remains practical: it is free, fast and requires no special equipment. For population health screening, limitations average out across large groups. For individuals, BMI serves as a starting point that should be combined with other assessments.
 
-**Does BMI apply to pregnant women?**
+**What are the adjusted BMI thresholds for Asian populations?**
 
-BMI before pregnancy helps assess healthy weight gain targets during pregnancy, but BMI during pregnancy isn't interpreted the same way—weight gain is expected and necessary.
+Research suggests that Asian populations face elevated health risks at lower BMI values. A threshold of BMI ≥ 25 has been recommended to define obesity in Asian populations, compared with the standard ≥ 30 for European populations. Asian adults typically have 3-5% higher body fat at equivalent BMI.
 
-**Can medications affect my BMI?**
+**How does the 2025 Lancet Commission recommendation affect BMI use?**
 
-Medications affect weight, which affects BMI. Some medications cause weight gain (certain antidepressants, steroids, antipsychotics); others cause weight loss. If your weight changes significantly on medication, discuss with your healthcare provider.
+The Commission advocates for distinguishing between preclinical obesity (excess fat without organ dysfunction) and clinical obesity (excess fat with measurable organ impairment). This requires comprehensive body composition assessment beyond BMI alone, though BMI remains part of initial screening.
 
-**What's more important: BMI or waist circumference?**
+**Is "skinny fat" a real concern?**
 
-Both contribute useful information. Waist circumference specifically indicates abdominal fat, which is associated with metabolic risk. Many health guidelines now recommend measuring both.
+Yes. Metabolically obese normal weight (MONW) individuals have normal BMI but elevated body fat percentage, often with excess abdominal fat and insufficient muscle mass. These individuals may have poor metabolic markers despite BMI in the "healthy" range.
 
-**How often should I check my BMI?**
+**How often should I calculate BMI?**
 
-For general health monitoring, monthly is sufficient. More frequently introduces noise from normal weight fluctuations. The goal is to track trends over months and years, not daily variations.
+For general health monitoring, monthly calculation is sufficient. More frequent measurement introduces noise from normal weight fluctuations of 2-5 pounds daily. Focus on trends over months and years rather than day-to-day variations.
+
+**Does waist circumference add useful information beyond BMI?**
+
+Yes. Waist circumference specifically measures abdominal fat, which poses greater metabolic risk than fat stored elsewhere. Many current guidelines recommend measuring both BMI and waist circumference for more accurate risk assessment.
+
+**Can BMI change without weight changing?**
+
+BMI is mathematically determined by weight and height. For adults, height remains stable, so BMI changes only when weight changes. However, body composition can change (gaining muscle, losing fat) without significant weight change—in which case BMI remains constant whilst health improves.

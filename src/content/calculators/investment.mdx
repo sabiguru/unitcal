@@ -1,272 +1,451 @@
-## Investment Calculator: Portfolio Growth and Returns Calculator
-
-## Table of Contents - Investment
-- [How to Use This Calculator](#how-to-use-this-calculator)
-- [The Core Principle: Compound Growth with Contributions](#the-core-principle-compound-growth-with-contributions)
-- [How to Calculate Investment Growth Manually](#how-to-calculate-investment-growth-manually)
-- [Real-World Applications](#real-world-applications)
-- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
-- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
-- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
-- [Related Topics](#related-topics)
-- [How This Calculator Works](#how-this-calculator-works)
-- [FAQs](#faqs)
+## Investment Calculator: Portfolio Growth Analysis for 2026
 
 ---
 
-## How to Use This Calculator - Investment
-Enter your Starting Balance—your current investment portfolio value. This can be zero if you're starting fresh.
+## Market Performance: The 2025 Backdrop
 
-Enter your Monthly Contribution—the amount you'll add each month. Consistency matters more than size.
+The S&P 500 delivered its third consecutive year of double-digit returns in 2025, gaining 17.9% including dividends. This remarkable streak—three years averaging over 20% annually—has occurred only five times in 97 years of market history. Understanding historical returns contextualises expectations for future growth projections.
 
-Enter your Expected Annual Return as a percentage. Historical stock market returns average 7-10% before inflation; use 6-7% for conservative projections.
+Current market data (February 2026):
 
-Enter your Investment Period in years—how long until you need the money.
+| Index/Asset | 2025 Return | 3-Year Total Return | 2026 Forecast |
+|-------------|-------------|---------------------|---------------|
+| S&P 500 | +17.9% | +100.6% | +12% (Goldman Sachs) |
+| FTSE 100 | +21.0% | Best since 2009 | +10% (JP Morgan) |
+| Nasdaq Composite | +29.8% | Tech-led gains | Varies by analyst |
+| Bitcoin | -6.0% | +121% (2023-2025 combined) | Highly variable |
+| Magnificent Seven (avg) | +27.5% | Dominated US returns | AI-dependent |
 
-Select Compounding Frequency: Monthly (standard for most projections) or other intervals.
+Sources: [Macrotrends](https://www.macrotrends.net/2526/sp-500-historical-annual-returns), [CNBC](https://www.cnbc.com/2025/12/22/ftse-100-outperformed-sp-500-this-year-is-more-upside-ahead-in-2026.html), [Visual Capitalist](https://www.visualcapitalist.com/magnificent-seven-stock-returns-in-2025/)
 
-Optionally enter an Inflation Rate (typically 2-3%) to see inflation-adjusted values.
+Past performance does not guarantee future results—yet historical data provides the foundation for reasonable return assumptions in investment planning.
 
-Click "Calculate" to see results. The output displays:
-- Future value in nominal dollars
-- Future value adjusted for inflation (real purchasing power)
+---
+
+## Contents
+
+- [Calculator Guide](#calculator-guide)
+- [The Mathematics of Compound Growth](#the-mathematics-of-compound-growth)
+- [Historical Return Analysis](#historical-return-analysis)
+- [Real Investment Scenarios with 2026 Data](#real-investment-scenarios-with-2026-data)
+- [AI and Technology Investments](#ai-and-technology-investments)
+- [Cryptocurrency in Portfolio Allocation](#cryptocurrency-in-portfolio-allocation)
+- [UK Investing: ISAs and FTSE Performance](#uk-investing-isas-and-ftse-performance)
+- [Retirement Savings Benchmarks](#retirement-savings-benchmarks)
+- [How This Calculator Works](#how-this-calculator-works)
+- [Sources](#sources)
+
+---
+
+## Calculator Guide
+
+The Starting Balance field accepts the current portfolio value. This may be zero for new investors or the present value of existing investments.
+
+Monthly Contribution represents regular investment amounts. Consistency in contributions typically matters more than timing. The current average US worker contributes 7.7% of salary to retirement accounts, with total contributions (including employer matching) averaging 12%.
+
+Expected Annual Return should reflect realistic assumptions. Historical S&P 500 returns average 9.3% annually (1950-2024), though individual years vary dramatically. Conservative projections employ 6-7%; aggressive projections may use 8-10%.
+
+Investment Period represents the time horizon in years. Longer periods allow greater tolerance for volatility and higher equity allocations.
+
+Compounding Frequency is typically monthly for most investment accounts. More frequent compounding produces marginally higher returns.
+
+Inflation Rate adjusts projections to real purchasing power. Historical US inflation averages approximately 3%; recent years have demonstrated inflation can surprise in either direction.
+
+Results display:
+- Nominal future value
+- Inflation-adjusted (real) future value
 - Total contributions versus investment earnings
 - Return on investment percentage
-- Year-by-year breakdown showing balance, contributions, and gains
+- Year-by-year balance progression
 
 ---
 
-## The Core Principle: Compound Growth with Contributions
+## The Mathematics of Compound Growth
 
-Investment growth combines two powerful forces: compound returns on your existing balance and regular contributions that each start compounding.
+Investment growth combines compound returns on existing balances with regular contributions that each begin compounding upon deposit.
 
-The future value formula for investments with regular contributions:
+**Future Value Formula (with contributions):**
+
+```
 FV = P(1 + r)^t + PMT × [(1 + r)^t - 1] / r
+```
 
-Where P is initial investment, PMT is periodic contribution, r is periodic rate, and t is number of periods.
+Where:
+- P = Initial investment (principal)
+- PMT = Periodic contribution
+- r = Periodic interest rate
+- t = Number of periods
 
-The first term represents growth of your initial investment. The second term represents the accumulated value of all contributions, each growing for different lengths of time.
+**Example Calculation:**
 
-Early contributions are worth dramatically more than later ones because they have more time to compound. A dollar invested at age 25 is worth far more at retirement than a dollar invested at age 55.
+Initial Investment: £10,000
+Monthly Contribution: £500
+Annual Return: 7%
+Time Horizon: 30 years
 
-This is why financial advisors emphasize starting early, even with small amounts. Time is the most powerful variable in the equation.
+**Lump Sum Growth:**
+£10,000 × (1.07)^30 = £76,123
 
----
+**Contribution Growth:**
+Monthly rate = 0.07/12 = 0.00583
+Months = 360
+£500 × [(1.00583)^360 - 1] / 0.00583 = £566,764
 
-## How to Calculate Investment Growth Manually
+**Total Future Value:** £642,887
 
-**Lump sum growth (no contributions):**
-FV = P × (1 + r)^t
+**Total Contributions:** £10,000 + (£500 × 360) = £190,000
 
-Example: $10,000 at 7% for 30 years
-FV = $10,000 × (1.07)^30 = $10,000 × 7.612 = $76,123
+**Investment Earnings:** £642,887 - £190,000 = £452,887
 
-**Monthly contributions only (no starting balance):**
-FV = PMT × [(1 + r)^n - 1] / r
-
-Where r = annual rate / 12, n = months
-
-Example: $500/month at 7% for 30 years
-r = 0.07/12 = 0.00583
-n = 360 months
-FV = $500 × [(1.00583)^360 - 1] / 0.00583 = $566,764
-
-**Combined (initial + contributions):**
-Total FV = Lump sum FV + Contributions FV
-Example: $10,000 initial + $500/month at 7% for 30 years
-Total = $76,123 + $566,764 = $642,887
-
-**Inflation adjustment:**
-Real FV = Nominal FV / (1 + inflation)^years
-
-Example: $642,887 nominal with 2.5% inflation over 30 years
-Real = $642,887 / (1.025)^30 = $306,627
-
-**Contribution breakdown:**
-Total contributions = Initial + (Monthly × Months)
-Example: $10,000 + ($500 × 360) = $190,000
-Investment earnings = FV - Total contributions = $642,887 - $190,000 = $452,887
+The £190,000 in contributions grew by £452,887—a 238% return on invested capital. Time and compounding produced more than double the original investment in pure earnings.
 
 ---
 
-## Real-World Applications
+## Historical Return Analysis
 
-**Retirement planning.** How much will $500/month grow to in 30 years? If you need $1 million, how much must you save monthly? The calculator answers both directions.
+### S&P 500: 97 Years of Data
 
-**Education savings.** Starting when a child is born, what monthly contribution reaches $100,000 by age 18? At 7% return, approximately $250/month.
+The [S&P 500's historical performance](https://www.macrotrends.net/2526/sp-500-historical-annual-returns) provides context for return assumptions:
 
-**House down payment.** Need $60,000 in 5 years? At 5% return, you need about $880/month—or $1,000/month in a savings account at 1%.
+| Return Range | Frequency | Historical Occurrence |
+|--------------|-----------|----------------------|
+| Above 40% | 2% | Exceptional (1933, 1954, 1958) |
+| 20-40% | 18% | Strong bull markets |
+| 10-20% | Most common | Median range |
+| 0-10% | 22% | Modest positive years |
+| -10% to 0% | 12% | Minor corrections |
+| Below -10% | 13% | Bear markets |
 
-**Goal feasibility.** Is your retirement plan realistic? Compare projected portfolio to expected expenses (typically 25× annual spending for 4% withdrawal rate).
+Approximately two-thirds of years produce positive returns. The most common outcome is 10-20% annual gain.
 
-**Catch-up planning.** Started saving late? Calculate what aggressive contributions are needed to reach goals—and whether they're feasible.
+### Recent Performance Context
 
----
+The [2025 S&P 500 return of 17.9%](https://www.rbcwealthmanagement.com/en-us/insights/us-equity-returns-in-2025-record-breaking-resilience) was driven primarily by earnings growth (13.5 percentage points) rather than multiple expansion (2.5 percentage points). This earnings-led growth is considered more sustainable than valuation-driven rallies.
 
-## Scenarios People Actually Run Into
+Historical patterns following 10-20% years suggest median returns of 11.8% the following year, with 70% probability of positive performance.
 
-**The early start advantage.** Sarah invests $400/month from age 25-35 (10 years, $48,000 total), then stops. Mike starts at 35, invests $400/month until 65 (30 years, $144,000 total). At 7%, Sarah has more at 65—$600,000 versus $567,000—despite investing one-third as much.
+### FTSE 100: Outperformance in 2025
 
-**The inflation reality check.** Your projections show $2 million at retirement. Adjusted for 2.5% inflation over 35 years, that's equivalent to $850,000 today. Still good, but not as rich as it sounds.
+The [FTSE 100 gained 21% in 2025](https://www.cnbc.com/2025/12/22/ftse-100-outperformed-sp-500-this-year-is-more-upside-ahead-in-2026.html)—its strongest year since 2009, outperforming the S&P 500 for the first time in years. Several factors contributed:
 
-**The fee erosion.** You project $1 million at 7%. But your funds charge 1% in fees, so your effective return is 6%. At 6%, you accumulate $830,000—fees cost you $170,000.
+- Lower technology exposure (3.5% vs S&P's 33%) provided stability during tech volatility
+- Mining sector benefited from AI infrastructure demand (copper, precious metals)
+- Reduced tariff tensions benefited internationally-exposed companies
+- Attractive valuations (Buffett indicator: 119% vs US 219%)
 
-**The sequence of returns risk.** The calculator assumes steady 7% returns. Reality is volatile—some years +20%, some years -15%. If bad years cluster early or late in your timeline, results differ significantly from projections.
-
-**The lifestyle inflation trap.** You plan to save $500/month forever. But raises lead to lifestyle inflation—you upgrade but don't increase savings. The projection assumed increasing contributions; reality didn't match.
-
----
-
-## Trade-Offs and Decisions People Underestimate
-
-**Aggressive contribution versus comfortable living.** Saving 25% of income accelerates goals but may feel constraining. Saving 10% is comfortable but may require working longer. Find your balance.
-
-**Expected return assumptions.** Using 10% looks optimistic; 5% looks pessimistic. Small rate differences compound dramatically: 7% versus 8% over 30 years differs by 30%+ in final value.
-
-**Contribution timing.** Contributing at month start versus month end affects results slightly. A $500 contribution at month start earns one extra month's returns—about $2 per month at 7%, adding up over decades.
-
-**Inflation rate assumptions.** Historical US inflation averages 3%. Using 2% makes projections look better; 4% makes them look worse. Recent years show inflation can surprise.
-
-**Time horizon flexibility.** Can you delay retirement by 2 years if markets underperform? That flexibility dramatically reduces risk. A rigid deadline creates pressure.
+UK dividend yields approaching 3.5% significantly exceed the S&P 500's 1.14%—its lowest level on record.
 
 ---
 
-## Common Mistakes and How to Recover
+## Real Investment Scenarios with 2026 Data
 
-**Ignoring inflation.** $1 million in 30 years isn't worth $1 million today. Always calculate real (inflation-adjusted) values for goal setting.
+### Scenario 1: 30-Year Retirement Portfolio
 
-**Using unrealistic returns.** 12% annual returns aren't sustainable long-term. Use 6-8% for diversified portfolios, 4-5% for conservative allocations.
+Starting at age 35, retiring at 65, using historical average returns:
 
-**Forgetting taxes.** Investment gains in taxable accounts face capital gains tax. Account type (401k, IRA, taxable) significantly affects after-tax results.
+**Conservative Scenario (6% annual return):**
+- Starting Balance: $50,000
+- Monthly Contribution: $500
+- Future Value: $873,432
+- Inflation-Adjusted (2.5%): $415,206
+- Total Contributions: $230,000
+- Investment Earnings: $643,432
 
-**Not accounting for fees.** Fund expense ratios, advisor fees, and platform costs reduce effective returns. A 1% total fee on a 7% return means you keep 6%.
+**Moderate Scenario (7% annual return):**
+- Future Value: $1,028,572
+- Inflation-Adjusted: $488,907
+- Investment Earnings: $798,572
 
-**Linear extrapolation.** The market doesn't return 7% every year—it averages 7% with significant volatility. Actual results vary, sometimes dramatically.
+**Aggressive Scenario (8% annual return):**
+- Future Value: $1,217,811
+- Inflation-Adjusted: $578,776
+- Investment Earnings: $987,811
+
+The difference between 6% and 8% returns over 30 years exceeds $344,000—demonstrating the profound impact of return assumptions.
+
+### Scenario 2: Current Average 401(k) Holder
+
+Based on [Fidelity's Q3 2025 data](https://www.fidelity.com/learning-center/personal-finance/average-retirement-savings), the average 401(k) balance reached $144,400:
+
+**Age 45, Balance $144,400, Retiring at 67:**
+- Monthly Contribution: $2,042 (maxing out 2026 limit of $24,500)
+- Expected Return: 7%
+- Future Value: $1,847,234
+- Inflation-Adjusted (2.5%): $1,137,912
+- Projected Annual Income (4% rule): $45,517
+
+This projection assumes consistent maximum contributions and no employer matching. With typical 4% employer match, results improve substantially.
+
+### Scenario 3: UK ISA Investor
+
+The UK Individual Savings Account (ISA) allows £20,000 annual tax-free investment:
+
+**Maximising ISA Allowance:**
+- Annual Contribution: £20,000 (£1,667/month)
+- Starting Balance: £0
+- Time Horizon: 25 years
+- Expected Return: 7% (FTSE-based)
+- Future Value: £1,143,875
+- Tax Savings: All gains exempt from Capital Gains Tax
+
+The ISA structure makes pound-for-pound contributions more valuable than taxable investments, where 20% (basic rate) to 24% (higher rate) CGT would apply.
 
 ---
 
-## Related Topics
+## AI and Technology Investments
 
-**Dollar-cost averaging.** Investing fixed amounts regularly regardless of market conditions. Your contributions naturally buy more shares when prices are low.
+### Magnificent Seven Performance
 
-**Asset allocation.** How you divide investments among stocks, bonds, and other assets. Affects expected return and risk level.
+The [Magnificent Seven](https://www.visualcapitalist.com/magnificent-seven-stock-returns-in-2025/) (Apple, Microsoft, Alphabet, Amazon, Nvidia, Meta, Tesla) dominated US market returns:
 
-**Withdrawal rate.** The percentage of portfolio withdrawn annually in retirement. 4% is a common guideline for sustainable 30-year withdrawals.
+| Stock | 2025 Return | 2-Year Return | Key Driver |
+|-------|-------------|---------------|------------|
+| Alphabet | +65.4% | AI/TPU chips | Search + Cloud AI |
+| Nvidia | +38.9% | +1,190% since 2023 | 86% AI chip market share |
+| Meta | +28% | Social media AI | Advertising efficiency |
+| Microsoft | +22% | Azure AI integration | Enterprise AI adoption |
+| Apple | +15% | Services growth | AI integration in devices |
+| Amazon | +8% | AWS AI services | Cloud infrastructure |
+| Tesla | +5% | EV competition | Autonomous driving development |
 
-**Tax-advantaged accounts.** 401(k)s, IRAs, and similar accounts offer tax benefits that effectively increase returns. Maximize these before taxable investing.
+Source: [Motley Fool](https://www.fool.com/investing/2026/01/28/only-2-magnificent-seven-stocks-outperformed-the-s/)
 
-**Rebalancing.** Periodically adjusting portfolio to maintain target allocation as different assets grow at different rates.
+### AI Investment Considerations
+
+[Nvidia's 86% market share](https://www.fool.com/investing/2025/12/15/magnificent-seven-winners-and-losers-in-2025-and-w/) in AI chips positions it centrally in the AI infrastructure buildout. However, concentration risk exists—the company faces challenges including China export restrictions and emerging competition from AMD and custom chips (Google TPUs, Amazon Trainium).
+
+Beyond the Magnificent Seven, AI beneficiaries in 2025 included:
+- Broadcom: +49% (TPU manufacturing)
+- Micron: +239% (AI memory demand)
+- Credo Technology: +114% (data centre connectivity)
+
+### Portfolio Allocation Considerations
+
+Concentrated AI exposure amplifies both gains and losses. The S&P 500's technology weighting (~33%) provides substantial AI exposure through diversified index funds. Direct AI stock investment offers higher potential returns with correspondingly higher risk.
+
+---
+
+## Cryptocurrency in Portfolio Allocation
+
+### 2025 Performance Review
+
+[Bitcoin's 2025 performance](https://www.fool.com/investing/2026/01/04/is-bitcoin-a-buy-hold-or-sell-in-2026/) disappointed expectations:
+
+| Asset | 2025 Return | Peak-to-Trough | Year-End Price |
+|-------|-------------|----------------|----------------|
+| Bitcoin | -6% | -30% (from $126k peak) | ~$88,000 |
+| Ethereum | -11% | Significant drawdown | Variable |
+| Solana | -34% | Sharp decline | Variable |
+| Median Altcoin | -79% | Severe losses | Variable |
+
+Source: [Morningstar](https://global.morningstar.com/en-nd/markets/bitcoin-2026-what-investors-should-think-about-cryptocurrencies-now)
+
+### Historical Context
+
+Bitcoin has been the [top-performing asset in 10 of 13 years](https://www.fool.com/investing/2025/12/26/bitcoin-positioned-outperform-the-market-in-2026/) since 2012, yet 2025 marked its fourth negative year in that period. Following negative years, Bitcoin historically rebounds substantially:
+- 2022: -65%
+- 2023: +156%
+- 2024: +119%
+- 2025: -6%
+
+Some analysts project $200,000+ targets for 2026, though such predictions carry substantial uncertainty.
+
+### Allocation Guidance
+
+Research suggests [adding Bitcoin to portfolios](https://panteracapital.com/blockchain-letter/navigating-crypto-in-2026/) at small allocations (1-5%) has historically improved risk-adjusted returns over any three-year period, provided regular rebalancing occurs. However:
+- Volatility remains extreme
+- Regulatory uncertainty persists
+- No intrinsic cash flows for valuation
+- Median altcoin losses of 79% in 2025 demonstrate sector risk
+
+Conservative investors may prefer zero cryptocurrency allocation; risk-tolerant investors might allocate 1-5% with understanding of potential total loss.
+
+---
+
+## UK Investing: ISAs and FTSE Performance
+
+### FTSE 100 Valuation Advantage
+
+The [FTSE 100 trades at more attractive valuations](https://www.fool.co.uk/2026/01/03/the-ftse-100-beat-the-sp-500-in-2025-3-reasons-why-uk-shares-could-do-it-again-in-2026/) than US counterparts:
+
+| Metric | FTSE 100 | S&P 500 |
+|--------|----------|---------|
+| Buffett Indicator | 118.8% | 219.4% |
+| Dividend Yield | ~3.5% | 1.14% (record low) |
+| P/E Ratio | Lower | Elevated |
+| Tech Exposure | 3.5% | ~33% |
+
+Analysts [forecast 14% FTSE profit growth](https://uk.finance.yahoo.com/news/ftse-100-beat-p-500-074600470.html) in 2026, with dividend growth and buybacks potentially boosting total returns further.
+
+### ISA Investment Framework
+
+The UK ISA provides tax-efficient investing:
+
+**2025-2026 ISA Allowance:** £20,000 annually
+
+**Example: 20-Year ISA Strategy**
+- Annual Contribution: £20,000
+- Monthly Equivalent: £1,667
+- Expected Return: 7%
+- Future Value: £877,126
+- Tax Saved (vs taxable at 20% CGT): ~£87,713
+
+### SIPP Pension Investing
+
+Self-Invested Personal Pensions (SIPPs) offer additional tax relief:
+
+**Higher-Rate Taxpayer Example:**
+- £10,000 contribution costs £6,000 after 40% tax relief
+- Growing at 7% for 25 years: £54,274
+- Effective return on £6,000 outlay: 804%
+
+The combination of ISA and SIPP maximises tax-efficient investing for UK residents.
+
+---
+
+## Retirement Savings Benchmarks
+
+### Average 401(k) Balances by Age (2025)
+
+[Fidelity and Vanguard data](https://www.nerdwallet.com/retirement/learn/the-average-401k-balance-by-age) reveals current savings levels:
+
+| Age Range | Average Balance | Median Balance | Fidelity Benchmark |
+|-----------|-----------------|----------------|-------------------|
+| 20-29 | $16,499 | $7,351 | 1× salary by 30 |
+| 30-39 | $55,749 | $21,752 | 3× salary by 40 |
+| 40-49 | $125,837 | $42,345 | 6× salary by 50 |
+| 50-59 | $207,874 | $62,843 | 8× salary by 60 |
+| 60-69 | $239,706 | $72,923 | 10× salary by 67 |
+| 70+ | $431,962 | $106,654 | Withdrawal phase |
+
+Source: [Empower](https://www.empower.com/the-currency/life/average-401k-balance-age), [Fidelity](https://www.fidelity.com/learning-center/personal-finance/average-retirement-savings)
+
+### 2026 Contribution Limits
+
+[401(k) limits](https://www.bankrate.com/retirement/average-401k-balance-by-age/) increased for 2026:
+
+| Category | 2025 Limit | 2026 Limit |
+|----------|------------|------------|
+| Standard Contribution | $23,500 | $24,500 |
+| Catch-Up (50+) | $7,500 | $8,000 |
+| Super Catch-Up (60-63) | — | $11,250 |
+| Maximum (Age 60-63) | $31,000 | $35,750 |
+
+The new "super catch-up" provision under SECURE 2.0 allows workers aged 60-63 to contribute up to $35,750 annually—significantly accelerating late-career savings.
+
+### The 4% Rule and Target Calculation
+
+The 4% withdrawal rule suggests safe annual withdrawals of 4% of portfolio value:
+
+**Target Portfolio = Annual Expenses × 25**
+
+| Annual Expenses | Required Portfolio | Monthly Savings (25 years, 7%) |
+|-----------------|-------------------|-------------------------------|
+| $40,000 | $1,000,000 | $1,234 |
+| $60,000 | $1,500,000 | $1,851 |
+| $80,000 | $2,000,000 | $2,468 |
+| $100,000 | $2,500,000 | $3,085 |
 
 ---
 
 ## How This Calculator Works
 
-**Initial investment growth:**
+**Initial Investment Growth:**
 ```
 futureValueInitial = initial × (1 + r/n)^(n×t)
 ```
 
-**Contribution growth (future value of annuity):**
+**Contribution Growth (Future Value of Annuity):**
 ```
 monthlyRate = annualRate / 12
 totalMonths = years × 12
 futureValueContributions = monthly × [(1 + monthlyRate)^months - 1] / monthlyRate
 ```
 
-**Total future value:**
+**Total Future Value:**
 ```
 totalFutureValue = futureValueInitial + futureValueContributions
 ```
 
-**Total contributions:**
+**Total Contributions:**
 ```
 totalContributions = initial + (monthly × totalMonths)
 ```
 
-**Investment gains:**
+**Investment Gains:**
 ```
 totalGains = totalFutureValue - totalContributions
 ```
 
-**Inflation adjustment:**
+**Inflation Adjustment:**
 ```
 inflationAdjustedValue = totalFutureValue / (1 + inflationRate)^years
 ```
 
-**Return on investment:**
+**Return on Investment:**
 ```
 ROI = (totalGains / totalContributions) × 100
 ```
 
-**Year-by-year breakdown:**
-For each year, calculates cumulative balance, contributions, and gains using the same formulas applied to that year's time horizon.
+All calculations execute locally within the browser.
 
-All calculations happen locally in your browser.
+---
+
+## Sources
+
+- [Macrotrends - S&P 500 Historical Annual Returns](https://www.macrotrends.net/2526/sp-500-historical-annual-returns)
+- [RBC Wealth Management - US Equity Returns 2025](https://www.rbcwealthmanagement.com/en-us/insights/us-equity-returns-in-2025-record-breaking-resilience)
+- [Goldman Sachs - S&P 500 2026 Outlook](https://www.goldmansachs.com/insights/articles/the-sp-500-expected-to-rally-12-this-year)
+- [CNBC - FTSE 100 Performance 2025-2026](https://www.cnbc.com/2025/12/22/ftse-100-outperformed-sp-500-this-year-is-more-upside-ahead-in-2026.html)
+- [Visual Capitalist - Magnificent Seven Returns 2025](https://www.visualcapitalist.com/magnificent-seven-stock-returns-in-2025/)
+- [Motley Fool - Magnificent Seven Performance](https://www.fool.com/investing/2026/01/28/only-2-magnificent-seven-stocks-outperformed-the-s/)
+- [Morningstar - Bitcoin in 2026](https://global.morningstar.com/en-nd/markets/bitcoin-2026-what-investors-should-think-about-cryptocurrencies-now)
+- [Pantera Capital - Navigating Crypto 2026](https://panteracapital.com/blockchain-letter/navigating-crypto-in-2026/)
+- [Fidelity - Average Retirement Savings](https://www.fidelity.com/learning-center/personal-finance/average-retirement-savings)
+- [Empower - Average 401(k) Balance by Age](https://www.empower.com/the-currency/life/average-401k-balance-age)
+- [NerdWallet - Average 401(k) Balance](https://www.nerdwallet.com/retirement/learn/the-average-401k-balance-by-age)
+- [Bankrate - 401(k) Balance by Age](https://www.bankrate.com/retirement/average-401k-balance-by-age/)
 
 ---
 
 ## FAQs
 
-**What return rate should I assume?**
+**What annual return assumption is appropriate for long-term planning?**
 
-For a diversified stock portfolio, 7% is reasonable after inflation, 10% before inflation historically. For balanced portfolios (60/40 stocks/bonds), use 5-6%. Be conservative for planning.
+For diversified equity portfolios, 7% (after inflation) or 9-10% (before inflation) reflects historical S&P 500 averages since 1950. Balanced portfolios (60/40 stocks/bonds) warrant 5-6% assumptions. Conservative planning employs lower figures; the actual outcome will vary based on market conditions during the specific investment period.
 
-**How does inflation affect my projections?**
+**How should inflation be factored into projections?**
 
-$1 million in 30 years at 2.5% inflation equals about $480,000 in today's purchasing power. Always check inflation-adjusted values for realistic goal setting.
+Historical US inflation averages approximately 3%. Use 2-3% for standard projections. Always review inflation-adjusted values—a $2 million portfolio in 30 years equals roughly $1 million in current purchasing power at 2.5% inflation.
 
-**Should I use before-tax or after-tax contributions?**
+**What impact do investment fees have on returns?**
 
-Use gross contributions for tax-advantaged accounts (401k, IRA) since taxes aren't due until withdrawal. For taxable accounts, the calculation is the same, but remember gains will be taxed.
+A 1% annual fee on a 7% return effectively reduces returns to 6%. Over 30 years, this difference compounds substantially. On a $500,000 portfolio earning 7% versus 6% over 20 years, the fee cost exceeds $200,000. Index funds with 0.03-0.10% expense ratios minimise this drag.
 
-**What about investment fees?**
+**How did the Magnificent Seven stocks perform in 2025?**
 
-Subtract typical fees (often 0.5-1.5%) from your expected return. A 7% gross return with 1% fees is effectively 6%.
+The Magnificent Seven averaged 27.5% returns in 2025. Only Alphabet (+65.4%) and Nvidia (+38.9%) outperformed the S&P 500. Nvidia has gained 1,190% since early 2023, driven by 86% market share in AI chips. Concentration in these stocks amplifies both gains and losses.
 
-**How reliable are long-term projections?**
+**Should cryptocurrency be included in investment portfolios?**
 
-They're estimates based on assumptions. Actual results will differ due to market volatility, changing contribution levels, and economic conditions. Review and adjust plans periodically.
+Research suggests 1-5% Bitcoin allocation has historically improved risk-adjusted returns when regularly rebalanced. However, 2025 saw median altcoin losses of 79%. Cryptocurrency remains highly volatile, speculative, and unsuitable as a core portfolio holding. Only risk-tolerant investors should consider allocation, and only amounts they can afford to lose entirely.
 
-**What's the difference between nominal and real returns?**
+**How do UK ISAs compare to US 401(k)s?**
 
-Nominal is the raw percentage. Real is nominal minus inflation—what you can actually buy with the returns. Real returns matter for goal planning.
+ISAs offer tax-free growth with £20,000 annual allowance but no employer matching or upfront tax relief. 401(k)s provide pre-tax contributions (reducing current taxable income) plus potential employer matching, but face taxes upon withdrawal. SIPPs offer the UK equivalent of 401(k) tax treatment.
 
-**Can I include employer matching?**
+**What are current 401(k) contribution limits for 2026?**
 
-Yes—include employer contributions in your monthly amount. If you contribute $500 and employer matches 50%, use $750 monthly.
+The standard 2026 limit is $24,500, up from $23,500 in 2025. Workers 50+ can add $8,000 catch-up contributions. The new "super catch-up" for ages 60-63 allows $11,250 additional—bringing the total maximum to $35,750 for this age group.
 
-**What if I miss some monthly contributions?**
+**Why did the FTSE 100 outperform the S&P 500 in 2025?**
 
-The calculator assumes consistent contributions. Missed contributions simply mean less total investment. You can recalculate anytime with current balance and remaining time.
+The FTSE's low technology exposure (3.5% vs 33%) provided stability during tech volatility. Mining stocks benefited from AI infrastructure demand. Attractive valuations (lower Buffett indicator, higher dividend yields) drew investor attention. Analysts project continued relative value in UK equities.
 
-**How do I account for market volatility?**
+**What is the 4% rule for retirement withdrawals?**
 
-This calculator uses a constant return rate. Real markets fluctuate significantly. Consider running projections at optimistic (9%), expected (7%), and pessimistic (5%) rates to understand the range of possible outcomes.
+The 4% rule suggests withdrawing 4% of portfolio value annually for sustainable 30-year retirement income. To generate $50,000 annual income, target $1,250,000 portfolio ($50,000 ÷ 0.04). Recent research suggests 3.5% may be more conservative given current valuations and longer lifespans.
 
-**Should I invest a lump sum or dollar-cost average?**
+**How does starting early affect investment outcomes?**
 
-Statistically, lump sum investing beats dollar-cost averaging about two-thirds of the time because markets trend upward. However, DCA reduces psychological stress and the risk of investing everything at a market peak.
-
-**How do different account types affect results?**
-
-Tax-advantaged accounts (401k, IRA) grow tax-free or tax-deferred, effectively increasing returns. A 7% return in a taxable account at 25% capital gains rate is effectively 5.25%. Maximize tax-advantaged space first.
-
-**What's the 4% rule and how does it relate to this calculator?**
-
-The 4% rule suggests withdrawing 4% of your portfolio annually in retirement for sustainable 30-year income. If you need $40,000/year, target $1,000,000 portfolio. Use this calculator to determine contributions needed to reach your target.
-
-**How do I factor in employer matching?**
-
-Add the full match to your contribution. If you contribute $500/month and your employer matches 50%, enter $750 as your monthly contribution. Free matching money dramatically accelerates growth—never leave it on the table.
-
-**What if I plan to increase contributions over time?**
-
-This calculator assumes fixed contributions. In reality, you might increase savings with raises. Run multiple scenarios: current contributions, increased contributions, and aggressive contributions to see the range of outcomes.
-
-**How do market corrections affect my long-term projections?**
-
-Market corrections (10%+ drops) occur regularly. They're temporary setbacks in long-term growth. If you continue investing during downturns, you buy at lower prices, potentially accelerating growth when markets recover. Staying the course matters more than timing the market.
-
-**Additional Notes**
-
-This calculator processes all inputs locally in your browser, ensuring privacy and instant results. For complex planning scenarios, consider consulting professionals who can account for your specific circumstances and goals.
+An investor contributing £400/month from age 25-35 (£48,000 total) accumulates more by age 65 than someone contributing £400/month from 35-65 (£144,000 total) at 7% returns. The early investor's £48,000 has 40 years to compound; the late starter's larger contributions have less time. Starting early is the single most powerful investment decision.

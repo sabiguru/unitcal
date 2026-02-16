@@ -1,258 +1,501 @@
-## Car Lease Calculator: Monthly Lease Payment Calculator
+## Car Lease Calculator: Lease Payment Analysis for 2026
 
-## Table of Contents - Car Lease
-- [How to Use This Calculator](#how-to-use-this-calculator)
-- [The Core Principle: Depreciation Plus Finance](#the-core-principle-depreciation-plus-finance)
-- [How to Calculate Lease Payments Manually](#how-to-calculate-lease-payments-manually)
-- [Real-World Applications](#real-world-applications)
-- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
-- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
-- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
-- [Related Topics](#related-topics)
+---
+
+## The Leasing Equation in 2026
+
+With new car transaction prices exceeding $50,000 in the United States and £30,000 in the United Kingdom, leasing has emerged as the primary means by which many consumers access new vehicles. The mathematics of leasing differ fundamentally from traditional financing, yet understanding these calculations can save thousands over a typical three-year term.
+
+Current market conditions present a compelling case for leasing consideration:
+
+| Metric | Value | Source |
+|--------|-------|--------|
+| Average new car price (USA) | $50,326 | Cox Automotive |
+| Average monthly lease payment | $662 | Industry average |
+| Average monthly finance payment | $1,325 | 36-month term |
+| Typical 36-month residual value | 50-60% | Varies by vehicle |
+| Average lease buyout APR (2026) | 9.49% | All credit profiles |
+| Excellent credit buyout APR | 6.25% | 720+ credit score |
+
+Sources: [CarsDirect](https://www.carsdirect.com/deals-articles/best-lease-deals), [LeaseEnd](https://www.leaseend.com/learn/lease-buyout-loan-rates)
+
+The difference between leasing and financing the same vehicle can exceed $600 monthly—making leasing the only viable option for many households seeking reliable transportation.
+
+---
+
+## Contents
+
+- [Calculator Guide](#calculator-guide)
+- [How Lease Payments Are Calculated](#how-lease-payments-are-calculated)
+- [February 2026: Current Lease Deals](#february-2026-current-lease-deals)
+- [Residual Values: Which Cars Lease Best](#residual-values-which-cars-lease-best)
+- [UK Personal Contract Hire](#uk-personal-contract-hire)
+- [Lease Versus Buy: The 2026 Analysis](#lease-versus-buy-the-2026-analysis)
+- [Electric Vehicle Leasing](#electric-vehicle-leasing)
+- [Strategic Leasing Decisions](#strategic-leasing-decisions)
 - [How This Calculator Works](#how-this-calculator-works)
-- [FAQs](#faqs)
+- [Sources](#sources)
 
 ---
 
-## How to Use This Calculator - Car Lease
-Enter the Vehicle Price (MSRP)—the manufacturer's suggested retail price, which serves as the basis for calculating residual value.
+## Calculator Guide
 
-Enter your Down Payment—the amount you'll pay upfront to reduce the amount financed.
+The Vehicle Price (MSRP) field accepts the manufacturer's suggested retail price. This serves as the basis for residual value calculations, even if the negotiated price differs.
 
-Enter the Residual Value as a percentage. This represents what the car will be worth at lease end as a percentage of MSRP. Dealers provide this figure; typical ranges are 50-60% for 36-month leases.
+The Down Payment reduces the capitalised cost, lowering monthly payments. However, financial advisers often recommend minimising down payments on leases—if the vehicle is totalled, the down payment is lost whilst insurance pays off only the lease balance.
 
-Select your Lease Term from the dropdown: common options are 24, 36, 39, or 48 months.
+Residual Value is entered as a percentage of MSRP. This figure, provided by the leasing company, represents the predicted vehicle value at lease end. Higher residuals result in lower monthly payments. Typical ranges are 50-60% for 36-month leases, though vehicles that hold value exceptionally well (Toyota Tacoma, Porsche 911) may exceed 70%.
 
-Enter the Interest Rate (APR)—the annual percentage rate that determines your finance charges.
+Lease Term options include 24, 36, 39 and 48 months. Shorter terms mean higher payments but more frequent access to new vehicles. Longer terms reduce payments but accumulate more mileage and may extend beyond warranty coverage.
 
-Enter Sales Tax rate as a percentage if applicable.
+The Interest Rate (APR) represents the financing cost. Dividing APR by 2,400 converts to money factor—the decimal used in lease calculations. A competitive money factor ranges from 0.001 to 0.002 (2.4% to 4.8% APR).
 
-Optionally, enter Trade-in Value if you're applying a vehicle toward the lease.
+Sales Tax application varies by jurisdiction. Some states tax the full vehicle price; others tax only monthly payments.
 
-Click "Calculate Lease" to see results. The output displays: monthly payment breakdown (depreciation portion, finance charge, tax), total monthly payment, total cost of the lease, and a comparison showing what you'd pay if financing instead.
-
----
-
-## The Core Principle: Depreciation Plus Finance
-
-Leasing means paying for the vehicle's depreciation during your use period, plus interest charges on the capital tied up in the car. You're not paying off the whole vehicle—just the difference between its value when new and its predicted value when returned.
-
-The two main payment components are:
-
-**Depreciation charge:** (Capitalized Cost - Residual Value) ÷ Term. This pays for the vehicle's loss in value.
-
-**Finance charge:** (Capitalized Cost + Residual Value) × Money Factor. This is interest on the lease, calculated differently than a loan.
-
-Money factor is the lease equivalent of interest rate. To convert APR to money factor, divide by 2,400. So 3.6% APR = 0.0015 money factor.
-
-Residual value is crucial—higher residual means lower depreciation, means lower payment. Vehicles that hold value well (Honda, Toyota, Lexus) often lease more favorably than those that depreciate heavily.
+Trade-in Value reduces the capitalised cost, lowering monthly payments. Positive equity in the trade-in (worth more than owed) provides maximum benefit.
 
 ---
 
-## How to Calculate Lease Payments Manually
+## How Lease Payments Are Calculated
 
-**Step 1: Determine capitalized cost**
+Lease payments comprise two primary components: depreciation and finance charges. Understanding this structure enables evaluation of dealer offers.
 
-Cap cost = Negotiated price + fees - down payment - trade-in
+**Component 1: Depreciation**
 
-Example: $35,000 MSRP, negotiated to $33,000, $3,000 down, no trade-in
-Cap cost = $33,000 - $3,000 = $30,000
+Depreciation represents the value consumed during the lease term:
 
-**Step 2: Calculate residual value**
+```
+Depreciation = (Capitalised Cost - Residual Value) ÷ Term
+```
 
-Residual = MSRP × residual percentage
+**Component 2: Finance Charge**
 
-Example: 55% residual on $35,000 MSRP
-Residual = $35,000 × 0.55 = $19,250
+The finance charge covers the cost of capital:
 
-**Step 3: Calculate depreciation**
+```
+Money Factor = APR ÷ 2,400
+Finance Charge = (Capitalised Cost + Residual Value) × Money Factor
+```
 
-Depreciation = Cap cost - Residual
-Monthly depreciation = Depreciation ÷ Term
+**Example Calculation**
 
-Example: 36-month lease
-Depreciation = $30,000 - $19,250 = $10,750
-Monthly depreciation = $10,750 ÷ 36 = $298.61
+Vehicle: £40,000 MSRP
+Negotiated Price: £38,000
+Down Payment: £2,000
+Capitalised Cost: £36,000
+Residual Value (55%): £22,000
+Term: 36 months
+APR: 4.8% (Money Factor: 0.002)
 
-**Step 4: Calculate finance charge**
+**Depreciation:**
+(£36,000 - £22,000) ÷ 36 = £388.89/month
 
-Convert APR to money factor: APR ÷ 2,400
+**Finance Charge:**
+(£36,000 + £22,000) × 0.002 = £116.00/month
 
-Finance charge = (Cap cost + Residual) × Money factor
+**Base Payment:** £504.89/month
 
-Example: 3.6% APR
-Money factor = 3.6 ÷ 2,400 = 0.0015
-Finance charge = ($30,000 + $19,250) × 0.0015 = $73.88
+**With 8% Sales Tax:** £545.28/month
 
-**Step 5: Add components**
+**Total Lease Cost:** (£545.28 × 36) + £2,000 = £21,630.08
 
-Base payment = Monthly depreciation + Finance charge
-Base payment = $298.61 + $73.88 = $372.49
-
-**Step 6: Add sales tax**
-
-Total payment = Base payment × (1 + tax rate)
-
-Example: 8% sales tax
-Total payment = $372.49 × 1.08 = $402.29
+This calculation reveals that £14,000 covers depreciation whilst £4,176 covers financing—demonstrating why negotiating the capitalised cost and money factor matters significantly.
 
 ---
 
-## Real-World Applications
+## February 2026: Current Lease Deals
 
-**Cash flow optimization.** Leasing typically offers lower monthly payments than financing the same vehicle. If monthly budget is constrained but you need reliable transportation, leasing fits more car into less cash flow.
+The elimination of the $7,500 federal EV tax credit in October 2025 has prompted manufacturers to offer aggressive lease incentives, particularly on electric vehicles.
 
-**Business vehicle expenses.** Lease payments are often fully deductible for business use. The tax treatment can make leasing more attractive than owning for business vehicles.
+### Lowest Monthly Payments (USA, February 2026)
 
-**Technology hedging.** Automotive technology evolves rapidly—electric vehicles, driver assistance, connectivity. Leasing lets you upgrade every 2-3 years without trading a depreciating asset.
+| Vehicle | Monthly Payment | Due at Signing | Term | Source |
+|---------|-----------------|----------------|------|--------|
+| 2025 Kia Niro EV | $159 | $3,999 | 24 months | [CarsDirect](https://www.carsdirect.com/deals-articles/best-green-car-deals) |
+| 2025 Kia Niro Wind EV | $249 | $3,999 | 36 months | [U.S. News](https://cars.usnews.com/cars-trucks/advice/cheapest-lease-deals) |
+| 2025 Mini Countryman SE | $269 | $4,699 | 39 months | [CarsDirect](https://www.carsdirect.com/deals-articles/best-green-car-deals) |
+| 2025 Hyundai IONIQ 6 | $273 | $2,000 | 36 months | [InsideEVs](https://insideevs.com/features/410039/best-electric-car-deals-this-month/) |
+| 2025 Kia Niro EV | $284 | $3,999 | 36 months | [TrueCar](https://www.truecar.com/deals/fuel-electric/) |
+| 2026 Subaru Solterra | $299 | $2,799 | 36 months | [U.S. News](https://cars.usnews.com/cars-trucks/advice/best-ev-deals) |
 
-**Predictable costs.** Leased vehicles are typically under warranty for the entire lease term. Maintenance costs are minimal and predictable, unlike older owned vehicles.
+### Zero-Down Lease Option
 
-**Comparison shopping.** Understanding lease math helps compare dealer offers. When you can calculate payments yourself, you can't be misled by payment manipulation that hides unfavorable terms.
+The [2025 Ford Mustang Mach-E](https://insideevs.com/features/410039/best-electric-car-deals-this-month/) offers a zero-down lease at $363 monthly for 36 months (Select trim with Standard Battery). Only the first month's payment is required at signing, eliminating the substantial upfront outlay typical of lease transactions.
 
----
+### Manufacturer Cash Incentives
 
-## Scenarios People Actually Run Into
+With federal credits eliminated, manufacturers are compensating through direct discounts:
 
-**The low payment trap.** A dealer offers $199/month on a $40,000 car. Sounds amazing until you see the $5,000 down payment, 15,000-mile annual limit, and 60-month term. Low payments can hide unfavorable total costs.
+- **Hyundai IONIQ 5:** $10,000 cash discount (following a ~$10,000 price reduction)
+- **Hyundai IONIQ 6:** Aggressive lease pricing as shown above
+- **Kia EV models:** 0% APR financing available on select models
 
-**The mileage penalty shock.** You leased with 10,000 miles/year allowance but drove 15,000 annually. At lease end, you owe $0.25/mile × 15,000 excess miles = $3,750. Always lease with realistic mileage expectations.
-
-**The negotiable cap cost.** You assumed MSRP was the starting point. Actually, the capitalized cost (effective purchase price) is negotiable just like buying. A lower cap cost means lower monthly payment.
-
-**The residual value mystery.** You can't negotiate residual value—it's set by the leasing company. But you can shop different lessors; manufacturer captive finance arms often offer higher residuals (lower payments) than banks.
-
-**The termination penalty reality.** Life changed and you need out of the lease early. Termination fees, remaining payments, and negative equity can make early exit very expensive. Leases aren't easily escaped.
-
----
-
-## Trade-Offs and Decisions People Underestimate
-
-**Lease versus buy total cost.** Leasing usually costs more over time than buying and keeping a car long-term. But buying requires larger down payment, and you bear depreciation risk.
-
-**Down payment strategy.** Larger down payment reduces monthly payment but increases upfront cost. If the car is totaled early, gap insurance covers the loan but you lose your down payment.
-
-**Term length trade-offs.** Shorter leases mean higher payments but more frequent upgrades. Longer leases reduce payments but tie you to a car longer and accumulate more mileage.
-
-**Residual gambling.** If residual is set too high, you might owe more than the car's worth at lease end (though you just walk away). If set too low, you're overpaying monthly—but have a buyout option at a good price.
-
-**Wear and tear subjectivity.** Lease return inspections can find "excessive wear" subjectively. What you consider normal use, the lessor may charge for. Some lessors are stricter than others.
+Source: [InsideEVs](https://insideevs.com/features/410039/best-electric-car-deals-this-month/)
 
 ---
 
-## Common Mistakes and How to Recover
+## Residual Values: Which Cars Lease Best
 
-**Ignoring money factor.** A dealer quotes a payment but won't explain the interest rate. Convert their money factor to APR (multiply by 2,400) to see if it's competitive. High money factors mean you're overpaying for financing.
+Residual value is the single most important factor determining lease affordability. Higher residuals mean lower depreciation charges and thus lower monthly payments.
 
-**Not negotiating cap cost.** The sticker price isn't sacred. Negotiate the vehicle price before discussing lease terms. A $2,000 reduction in cap cost saves $55/month on a 36-month lease.
+### Best Residual Values (3-Year Projections)
 
-**Underestimating mileage needs.** Be realistic about driving patterns. It's cheaper to buy extra miles upfront (typically $0.10-0.15/mile) than to pay excess at return (typically $0.20-0.30/mile).
+| Vehicle | 3-Year Residual | MSRP | Est. Depreciation |
+|---------|-----------------|------|-------------------|
+| Toyota Tacoma | 77% | $42,854 | ~$9,000 |
+| Porsche 911 | ~75% | Varies | Minimal |
+| Toyota Tundra | 72% | $42,000+ | ~$11,760 |
+| Jeep Wrangler | 70%+ | $35,000+ | Varies |
+| Honda Civic | 65%+ | $25,000+ | Good |
+| Toyota RAV4 | 63% | $32,000+ | Good |
 
-**Ignoring acquisition and disposition fees.** These add $500-1,500 to the lease cost. They're usually not negotiable but should be included in total cost comparisons.
+Source: [CarEdge](https://caredge.com/ranks/depreciation), [U.S. News](https://cars.usnews.com/cars-trucks/advice/cars-with-the-slowest-depreciation)
 
-**Putting too much money down.** If the car is totaled, your down payment is gone (insurance pays off the lease, not you). Minimize down payment; use those funds for gap insurance or keep them invested.
+### ALG Residual Value Award Winners (2026)
+
+[Seven Toyota models](https://www.guideautoweb.com/en/articles/80878/these-are-the-2026-models-with-the-highest-projected-residual-value/) earned ALG awards for best projected residual value:
+- Toyota Camry
+- Toyota Corolla
+- Toyota Corolla Cross
+- Toyota Highlander
+- Toyota Sienna
+- Toyota Tacoma
+- Toyota Tundra
+
+### Worst Residual Values (Vehicles to Avoid Leasing)
+
+| Vehicle Type | 5-Year Depreciation | Notes |
+|--------------|---------------------|-------|
+| Luxury EVs | 60%+ | Tesla dominates worst depreciation list |
+| Maserati Quattroporte | 64.5% | Highest depreciation, 5 years |
+| BMW 7 Series | 61.8% | Second-worst depreciation |
+| Large luxury sedans | 55-65% | Poor lease candidates |
+
+Source: [iSeeCars](https://www.iseecars.com/cars-that-hold-their-value-study)
+
+**Practical Application:**
+
+A vehicle with 77% residual (Toyota Tacoma) versus 50% residual (average luxury sedan) on a £40,000 MSRP:
+
+- **77% Residual:** Depreciation = £9,200 over 36 months = £255.56/month
+- **50% Residual:** Depreciation = £20,000 over 36 months = £555.56/month
+- **Difference:** £300/month or £10,800 over the lease term
 
 ---
 
-## Related Topics
+## UK Personal Contract Hire
 
-**Gap insurance.** Covers the difference between insurance payout (actual value) and lease payoff if the car is totaled. Essential for leases where payoff often exceeds market value early in term.
+The United Kingdom employs Personal Contract Hire (PCH) as the standard consumer leasing arrangement, differing from the USA structure in several respects.
 
-**Lease buyout.** At lease end, you can purchase the vehicle for the residual value. If the car is worth more than residual, buying and selling could profit. If worth less, walk away.
+### Current UK PCH Deals (February 2026)
 
-**Lease transfer.** Services exist to transfer remaining lease obligations to another person. This can help exit a lease without termination penalties, though approval is required.
+| Vehicle | Monthly Payment | Initial Payment | Term | Mileage |
+|---------|-----------------|-----------------|------|---------|
+| Chery Tiggo 7 | £184.95 | £2,569.39 | 24 months | Standard |
+| MG IM5 | £242.90 | £3,154.76 | 24 months | Standard |
+| Tesla Model 3 | £307.20 | £3,686.40 | 24 months | 8,000/year |
 
-**Money factor markup.** Dealers can mark up the money factor, pocketing the difference. Ask for the "buy rate" or check manufacturer websites for advertised lease rates.
+Source: [Auto Express](https://www.autoexpress.co.uk/best/deals/best-car-leasing-deals)
 
-**Manufacturer incentives.** Factory lease deals often include subvented (below-market) money factors and inflated residuals. These promotional offers can make leasing extremely attractive.
+### UK Pricing Structure
+
+[UK PCH deals](https://motorway.co.uk/sell-my-car/guides/personal-car-leasing) follow predictable pricing tiers:
+
+| Vehicle Class | Monthly Payment Range | Contract Length |
+|---------------|----------------------|-----------------|
+| Small hatchback/SUV | Under £200 | 2-3 years |
+| Small car (longer term) | ~£100 | 4 years |
+| Luxury vehicles | ~£400 | 2-3 years |
+
+### PCH Versus PCP
+
+The UK market offers two primary options:
+
+**Personal Contract Hire (PCH):**
+- Lower monthly payments
+- No balloon payment at end
+- No ownership option
+- Road tax included
+- Cannot terminate early (must pay full lease cost)
+
+**Personal Contract Purchase (PCP):**
+- Slightly higher monthly payments
+- Balloon payment option at end
+- Can purchase the vehicle
+- More flexibility for early termination
+
+[MoneyHelper guidance](https://www.moneyhelper.org.uk/en/everyday-money/buying-and-running-a-car/leasing-a-car-with-personal-contract-hire-pch) recommends PCH for those certain they want to upgrade every few years, and PCP for those who may wish to retain the vehicle.
+
+### UK Excess Mileage Charges
+
+Exceeding agreed mileage incurs per-mile charges:
+
+| Charge Level | Per Mile | 5,000 Excess Miles Cost |
+|--------------|----------|------------------------|
+| Minimum | 3p | £150 |
+| Typical | 10p | £500 |
+| Maximum | 50p | £2,500 |
+
+Source: [Motorway](https://motorway.co.uk/sell-my-car/guides/personal-car-leasing)
+
+---
+
+## Lease Versus Buy: The 2026 Analysis
+
+The lease-versus-buy decision depends on ownership duration, cash flow priorities and total cost tolerance.
+
+### 36-Month Comparison: £45,000 Vehicle
+
+**Leasing:**
+- Down payment: £3,000
+- Monthly payment: ~£550
+- Total payments: £19,800
+- Total cash outlay: £22,800
+- Asset owned at end: None
+
+**Financing (60-month loan at 7%):**
+- Down payment: £3,000
+- Monthly payment: ~£831
+- 36 months of payments: £29,916
+- Total cash outlay: £32,916
+- Remaining balance: ~£17,280
+- Vehicle value (55% residual): £24,750
+- Equity position: +£7,470
+
+Source: [CarBuzz](https://carbuzz.com/lease-vs-finance-a-car-in-2026/)
+
+### The Mathematics Explained
+
+After 36 months:
+- **Leasing cost:** £22,800 (vehicle returned)
+- **Financing net cost:** £32,916 - £7,470 equity = £25,446
+
+Leasing appears £2,646 cheaper over 36 months. However, the financed buyer owns an asset worth £24,750 with £17,280 owed—creating future options unavailable to the lessee.
+
+### Long-Term Perspective
+
+[Consumer Reports analysis](https://www.consumerreports.org/cars/buying-a-car/leasing-vs-buying-a-new-car-a9135602164/) demonstrates that two consecutive 36-month leases cost thousands more than financing and owning a vehicle for six years. The savings increase further if the vehicle is retained for nine years, even accounting for maintenance and repairs.
+
+### When Leasing Makes Sense
+
+- Monthly cash flow is constrained
+- Business deduction for vehicle is desired
+- Technology evolution is important (EV improvements)
+- Predictable costs are prioritised
+- No interest in vehicle ownership
+
+### When Buying Makes Sense
+
+- Long-term vehicle retention is planned
+- High annual mileage (exceeding 15,000)
+- Vehicle customisation is desired
+- Building equity is valued
+- Total cost minimisation is the priority
+
+---
+
+## Electric Vehicle Leasing
+
+The post-federal-credit landscape has fundamentally altered EV leasing calculations.
+
+### The Credit Elimination Impact
+
+Prior to October 2025, manufacturers could claim the $7,500 federal credit on leased EVs (via the commercial vehicle provision) and pass savings to lessees. This mechanism produced exceptionally low lease payments.
+
+In 2026, [automakers are compensating](https://cars.usnews.com/cars-trucks/advice/best-ev-deals) through:
+- Direct price reductions (Hyundai IONIQ 5: ~$10,000 cut)
+- Manufacturer cash incentives
+- Subsidised lease rates
+- Extended promotional terms
+
+### EV Residual Value Concerns
+
+Electric vehicles depreciate faster than petrol equivalents, creating lease complications:
+
+| Category | 5-Year Depreciation | Best for Leasing? |
+|----------|--------------------|--------------------|
+| Hybrid vehicles | 40.7% | Yes—excellent lease candidates |
+| Industry average | ~60% | Standard |
+| Tesla Model 3 | ~50% | Best among EVs, still above average |
+| Luxury EVs | 60%+ | Poor—high depreciation |
+
+Source: [CarEdge](https://caredge.com/ranks/depreciation)
+
+### Strategic EV Leasing
+
+Given rapid battery technology evolution, leasing EVs offers strategic advantages:
+- Access to improving range and charging speeds
+- Avoid long-term battery degradation concerns
+- Exit strategy if EV infrastructure disappoints
+- Manufacturer incentives often favour leasing
+
+The [Kia Niro EV at $159/month](https://www.carsdirect.com/deals-articles/best-green-car-deals) demonstrates manufacturers' willingness to subsidise EV leases heavily—likely accepting losses to build market share and meet regulatory targets.
+
+---
+
+## Strategic Leasing Decisions
+
+### Money Factor Negotiation
+
+The money factor is negotiable, yet many lessees accept marked-up rates without question.
+
+**Example Impact:**
+
+On a £35,000 capitalised cost with £19,000 residual over 36 months:
+
+| Money Factor | APR Equivalent | Monthly Finance Charge | 36-Month Difference |
+|--------------|----------------|------------------------|---------------------|
+| 0.0010 | 2.4% | £54.00 | — |
+| 0.0015 | 3.6% | £81.00 | +£972 |
+| 0.0020 | 4.8% | £108.00 | +£1,944 |
+| 0.0025 | 6.0% | £135.00 | +£2,916 |
+
+Source: [CarLeases.org](https://www.carleases.org/money-factor-car-lease/)
+
+Always request the "buy rate" from the manufacturer's captive finance company. [Captive finance companies](https://www.leaseguide.com/articles/car-lease-rate/) (Toyota Financial Services, Honda Financial, Ford Credit) typically offer the most competitive rates.
+
+### Capitalised Cost Reduction
+
+The capitalised cost is negotiable precisely as purchase price is negotiable. A £2,000 reduction on a 36-month lease saves £55.56 monthly (£2,000 total).
+
+**Negotiation Approach:**
+1. Negotiate the vehicle price as if purchasing
+2. Only then discuss lease terms
+3. Request the money factor and buy rate
+4. Calculate expected payment independently
+5. Compare to dealer quotation
+
+### Mileage Strategy
+
+| Strategy | Upfront Cost | Excess Charge | Recommendation |
+|----------|--------------|---------------|----------------|
+| Buy miles upfront | £0.10-0.15/mile | — | Cheaper if certain |
+| Pay excess at return | — | £0.20-0.30/mile | More expensive |
+
+If annual driving typically reaches 15,000 miles, leasing with 10,000-mile allowance creates £1,500+ exposure per year. Purchasing adequate mileage upfront saves substantially.
+
+### Down Payment Minimisation
+
+Unlike financing, where down payment reduces interest cost, lease down payment primarily shifts timing of expense. Additionally:
+
+- If the vehicle is totalled, insurance pays the lease balance—not you
+- Your down payment is lost
+- Gap insurance covers the lease, not your deposit
+
+Financial advisers recommend first-payment-only leases where available (example: Ford Mustang Mach-E at $363 due at signing).
 
 ---
 
 ## How This Calculator Works
 
-The calculator takes vehicle price, down payment, residual value percentage, lease term, interest rate, sales tax, and trade-in value.
+**Net Capitalised Cost:**
+```
+netCapCost = vehiclePrice - downPayment - tradeIn
+```
 
-**Net capitalized cost:**
-Net cap cost = Vehicle price - Down payment - Trade-in
-
-**Residual value:**
-Residual = Vehicle price × (Residual percentage ÷ 100)
+**Residual Value:**
+```
+residualValue = vehiclePrice × (residualPercentage ÷ 100)
+```
 
 **Depreciation:**
-Total depreciation = Net cap cost - Residual
-Monthly depreciation = Total depreciation ÷ Term
+```
+totalDepreciation = netCapCost - residualValue
+monthlyDepreciation = totalDepreciation ÷ termMonths
+```
 
-**Money factor:**
-Money factor = (Interest rate ÷ 100) ÷ 24
+**Money Factor:**
+```
+moneyFactor = (interestRate ÷ 100) ÷ 24
+```
 
-**Finance charge:**
-Monthly finance charge = (Net cap cost + Residual) × Money factor
+**Finance Charge:**
+```
+monthlyFinanceCharge = (netCapCost + residualValue) × moneyFactor
+```
 
-**Base payment:**
-Base payment = Monthly depreciation + Monthly finance charge
+**Base Payment:**
+```
+basePayment = monthlyDepreciation + monthlyFinanceCharge
+```
 
-**Sales tax:**
-Tax amount = Base payment × (Sales tax ÷ 100)
+**Sales Tax:**
+```
+taxAmount = basePayment × (salesTaxRate ÷ 100)
+```
 
-**Total payment:**
-Total monthly = Base payment + Tax amount
+**Total Monthly Payment:**
+```
+totalMonthly = basePayment + taxAmount
+```
 
-**Total lease cost:**
-Total cost = (Total monthly × Term) + Down payment
+**Total Lease Cost:**
+```
+totalCost = (totalMonthly × termMonths) + downPayment
+```
 
-**Financing comparison:**
-Standard loan payment calculation for same principal, rate, and term
+All calculations execute locally within the browser.
 
-All calculations happen locally in your browser.
+---
+
+## Sources
+
+- [CarsDirect - Best Lease Deals February 2026](https://www.carsdirect.com/deals-articles/best-lease-deals)
+- [CarsDirect - Best Green Car Deals](https://www.carsdirect.com/deals-articles/best-green-car-deals)
+- [InsideEVs - Best EV Lease and Finance Deals February 2026](https://insideevs.com/features/410039/best-electric-car-deals-this-month/)
+- [U.S. News - Cheapest Lease Deals February 2026](https://cars.usnews.com/cars-trucks/advice/cheapest-lease-deals)
+- [U.S. News - Cars with Slowest Depreciation 2026](https://cars.usnews.com/cars-trucks/advice/cars-with-the-slowest-depreciation)
+- [CarEdge - Money Factor Explained](https://caredge.com/money-factors)
+- [CarEdge - Best Residual Values](https://caredge.com/ranks/depreciation)
+- [LeaseEnd - Lease Buyout Loan Rates 2026](https://www.leaseend.com/learn/lease-buyout-loan-rates)
+- [Auto Express - Best Car Leasing Deals 2026](https://www.autoexpress.co.uk/best/deals/best-car-leasing-deals)
+- [Motorway - Personal Car Leasing PCH](https://motorway.co.uk/sell-my-car/guides/personal-car-leasing)
+- [MoneyHelper - Leasing with PCH](https://www.moneyhelper.org.uk/en/everyday-money/buying-and-running-a-car/leasing-a-car-with-personal-contract-hire-pch)
+- [CarBuzz - Lease vs Finance 2026](https://carbuzz.com/lease-vs-finance-a-car-in-2026/)
+- [Consumer Reports - Leasing vs Buying](https://www.consumerreports.org/cars/buying-a-car/leasing-vs-buying-a-new-car-a9135602164/)
+- [The Car Guide - 2026 Highest Residual Values](https://www.guideautoweb.com/en/articles/80878/these-are-the-2026-models-with-the-highest-projected-residual-value/)
+- [iSeeCars - Cars That Hold Value](https://www.iseecars.com/cars-that-hold-their-value-study)
 
 ---
 
 ## FAQs
 
-**What's a good residual value percentage?**
+**What constitutes a competitive money factor in 2026?**
 
-Higher is better for lower payments. 55-60% after 36 months is strong (typically luxury brands and vehicles that hold value). Below 50% indicates rapid depreciation and likely higher payments.
+A competitive money factor ranges from 0.001 to 0.002 (equivalent to 2.4% to 4.8% APR). Manufacturer promotional offers occasionally provide 0.0005 or lower (1.2% APR). Money factors above 0.0025 (6% APR) suggest dealer markup or subprime credit terms.
 
-**What money factor should I expect?**
+**What residual value percentage indicates a good lease?**
 
-Competitive money factors are typically 0.001-0.002 (equivalent to 2.4-4.8% APR). Manufacturer promotions sometimes offer 0.0005 or lower. Above 0.003 suggests markup or poor credit terms.
+Residual values of 55-60% after 36 months are considered strong. Values exceeding 65% (typical of Toyota trucks and Porsche vehicles) produce exceptionally low payments. Values below 50% indicate rapid depreciation and correspondingly higher monthly costs.
 
-**Should I put money down on a lease?**
+**Should substantial down payment be made on a lease?**
 
-Minimize down payment. Unlike buying, where down payment reduces interest cost, lease down payment primarily shifts when you pay (upfront versus monthly). If the car is totaled, your down payment is lost.
+Financial advisers recommend minimising lease down payments. Unlike financing, where down payment reduces interest cost, lease down payment primarily shifts expense timing. If the vehicle is totalled, the down payment is lost—insurance pays the lease balance, not the lessee.
 
-**How many miles should I lease for?**
+**How does UK PCH differ from US leasing?**
 
-Be realistic. Most standard leases offer 10,000-12,000 miles/year. If you drive more, buy additional miles upfront. Excess mileage charges at lease end are expensive.
+UK Personal Contract Hire includes road tax in monthly payments and offers optional maintenance packages. PCH typically cannot be terminated early without paying the full remaining lease cost. US leases offer more termination flexibility. Both structures produce similar monthly cost calculations.
 
-**Can I negotiate a lease?**
+**Are electric vehicles good lease candidates?**
 
-Yes—specifically the capitalized cost (price of the car) and money factor (if the dealer marked it up). Residual value is set by the lessor and isn't negotiable.
+EVs present mixed considerations. Rapid technology evolution makes leasing advantageous (access to improvements without depreciation exposure). However, EVs depreciate faster than petrol vehicles, potentially producing higher monthly payments. Current manufacturer incentives (post-federal-credit elimination) make many EVs exceptionally affordable to lease.
 
-**Is leasing cheaper than buying?**
+**Can the money factor be negotiated?**
 
-Monthly payments are lower, but you never own anything. Over 10+ years, buying and keeping a car costs less than serial leasing. Leasing makes sense for lower payments, always having new cars, and business deductions.
+Yes. Dealers often mark up the money factor provided by the manufacturer's captive finance company. Requesting the "buy rate" reveals the baseline rate. The difference represents dealer profit that may be negotiated.
 
-**What happens if I exceed the mileage limit?**
+**What occurs at lease termination?**
 
-You pay per-mile charges at lease return—typically $0.15-0.30/mile. Driving 5,000 miles over on a $0.25 rate costs $1,250.
+Three options exist: return the vehicle (paying any excess mileage or wear charges), purchase the vehicle at the residual price, or trade toward a new lease. If market value exceeds residual, purchasing and reselling can produce profit.
 
-**Can I end a lease early?**
+**How are excess mileage charges calculated?**
 
-Yes, but it's expensive. You typically owe remaining payments, disposition fee, and any negative equity. Lease transfer services or buying out and selling the car may be better options.
+Excess mileage charges typically range from £0.15 to £0.30 per mile in the USA and 3p to 50p per mile in the UK. On a 36-month lease with 10,000-mile annual allowance, driving 15,000 annually creates 15,000 excess miles—costing £2,250 to £4,500 at US rates.
 
-**What happens at lease end?**
+**What is a lease buyout and when is it advantageous?**
 
-You have three options: return the car (pay any excess wear/mileage fees), buy the car at the residual price, or trade it in on a new lease. If the car is worth more than residual, buying and selling can profit you.
+A lease buyout involves purchasing the vehicle at lease end for the residual value. It is advantageous when market value exceeds residual value. Current average lease buyout loan rates stand at 9.49% across all credit profiles, reducing to 6.25% for excellent credit.
 
-**What are acquisition and disposition fees?**
+**How do acquisition and disposition fees affect total cost?**
 
-Acquisition fee (charged at lease start) covers the lessor's administrative costs—typically $500-1,000. Disposition fee (charged at lease end if you return the car) covers inspection and remarketing—typically $300-500. These fees are often not negotiable.
-
-**How does a trade-in work with a lease?**
-
-Trade-in value is subtracted from the capitalized cost, reducing your monthly payment. If you have positive equity in your trade (worth more than you owe), this reduces your lease cost. Negative equity adds to the cap cost, increasing payments.
-
-**What is a money factor and how do I convert it?**
-
-Money factor is the lease equivalent of interest rate, expressed as a decimal. To convert APR to money factor, divide by 2,400. To convert money factor to APR, multiply by 2,400. Example: 0.00125 money factor × 2,400 = 3% APR.
+Acquisition fees (£500-£1,000 at lease start) and disposition fees (£300-£500 at return) add to total lease cost. These fees are generally not negotiable and should be included when comparing lease offers across manufacturers.
