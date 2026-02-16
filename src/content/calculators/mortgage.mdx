@@ -1,280 +1,495 @@
-## Mortgage Calculator: Home Loan Payment Calculator
+## Mortgage Calculator: Home Loan Payment and Affordability Analysis
 
-## Table of Contents - Mortgage
-- [How to Use This Calculator](#how-to-use-this-calculator)
-- [The Core Principle: Amortized Home Loans](#the-core-principle-amortized-home-loans)
-- [How to Calculate Mortgage Payments Manually](#how-to-calculate-mortgage-payments-manually)
-- [Real-World Applications](#real-world-applications)
-- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
-- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
-- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
-- [Related Topics](#related-topics)
+---
+
+## Current Mortgage Market Overview
+
+The mortgage market in 2026 reflects the aftermath of the 2022-2024 rate tightening cycle, with rates now stabilising as central banks pause their hiking campaigns.
+
+### Current Average Rates (February 2026)
+
+| Country | Product | Current Rate | Year Ago |
+|---------|---------|-------------|----------|
+| United States | 30-year fixed | 6.09% | 6.87% |
+| United States | 15-year fixed | 5.44% | 6.09% |
+| United Kingdom | 2-year fixed | 4.23% | 5.56% |
+| United Kingdom | 5-year fixed | 4.91% | 5.25% |
+
+Sources: [Freddie Mac](https://www.freddiemac.com/pmms), [Moneyfacts](https://www.rightmove.co.uk/news/articles/property-news/current-uk-mortgage-rates/), [Rightmove](https://www.rightmove.co.uk/news/articles/property-news/current-uk-mortgage-rates/)
+
+These rates represent significant improvement from the peaks of late 2023, yet remain elevated compared to the sub-3% rates available during 2020-2021.
+
+### Housing Affordability Context
+
+According to [Freddie Mac's analysis](https://www.freddiemac.com/pmms), housing affordability continues to improve due to strong economic growth, stable employment and mortgage rates at three-year lows. However, the [IMF Housing Affordability Index](https://www.imf.org/-/media/Files/Publications/WP/2023/English/wpiea2023247-print-pdf.ashx) indicates that affordability constraints remain significant in many markets, with mortgage repayments exceeding 23% of income in the UK through 2026.
+
+---
+
+## Contents
+
+- [Calculator Guide](#calculator-guide)
+- [Understanding Mortgage Amortisation](#understanding-mortgage-amortisation)
+- [Real Calculations with 2026 Rates](#real-calculations-with-2026-rates)
+- [UK Versus US Mortgage Comparison](#uk-versus-us-mortgage-comparison)
+- [First-Time Buyer Analysis](#first-time-buyer-analysis)
+- [Remortgage and Refinance Scenarios](#remortgage-and-refinance-scenarios)
+- [AI and Digital Mortgage Platforms](#ai-and-digital-mortgage-platforms)
+- [Limitations and Market Risks](#limitations-and-market-risks)
 - [How This Calculator Works](#how-this-calculator-works)
-- [FAQs](#faqs)
+- [Sources](#sources)
 
 ---
 
-## How to Use This Calculator - Mortgage
-Enter the Home Price—the purchase price of the property.
+## Calculator Guide
 
-Enter your Down Payment as a dollar amount or percentage.
+The Home Price field accepts the total purchase price of the property. This value determines the loan amount after down payment deduction.
 
-Enter the Interest Rate (APR) offered by your lender.
+The Down Payment may be entered as a currency amount or percentage. In the UK, typical first-time buyer deposits range from 5-15%; in the US, 3-20% is common depending on loan programme.
 
-Select the Loan Term: 15 years, 20 years, or 30 years are common options.
+The Interest Rate (APR) should reflect current market rates or specific lender quotes. For UK fixed-rate mortgages, enter the rate applicable during the fixed period.
 
-Optionally add:
-- PMI annual percentage if down payment is under 20%
-- Property Tax annual amount
-- Home Insurance annual premium
-- HOA Fees monthly amount
+The Loan Term is typically 25-30 years in the UK and 15-30 years in the US. Shorter terms increase monthly payments but reduce total interest substantially.
 
-Click "Calculate" to see results. The output displays principal and interest payment, escrow amounts, PMI payment, total monthly payment, total interest over the loan life, and an amortization schedule.
+Optional fields include:
+- PMI/MIG: Required when deposit is below 20% (US) or lender-required (UK)
+- Property Tax: Annual council tax (UK) or property tax (US)
+- Home Insurance: Buildings insurance premium
+- HOA/Service Charge: Applicable for leasehold properties or managed estates
 
----
-
-## The Core Principle: Amortized Home Loans
-
-A mortgage is an amortized loan—fixed payments over time gradually pay down principal while covering interest. The same payment amount applies throughout, but allocation between principal and interest shifts.
-
-The payment formula:
-PMT = P × [r(1+r)^n] / [(1+r)^n - 1]
-
-Where P is loan amount, r is monthly rate (APR/12), and n is total payments.
-
-Early years are interest-heavy. On a 30-year loan, the first payment might be 70% interest, 30% principal. Later years are principal-heavy—by year 25, payments might be 30% interest, 70% principal.
-
-This structure means extra payments early in the loan have outsized impact—they reduce the principal that accrues interest for decades.
+Results displayed include monthly principal and interest payment, escrow amounts, PMI payment, total monthly outgoing, total interest over the loan term, and a detailed amortisation schedule.
 
 ---
 
-## How to Calculate Mortgage Payments Manually
+## Understanding Mortgage Amortisation
 
-**Example: $300,000 loan at 6% for 30 years**
+A mortgage is an amortised loan, meaning fixed payments over time gradually reduce the principal whilst covering interest charges. The payment amount remains constant throughout the term, but the allocation between principal and interest shifts progressively.
 
-P = $300,000, r = 0.005, n = 360 months
+The amortisation formula:
 
-P&I Payment:
-PMT = $300,000 × [0.005 × 6.023] / [5.023] = $1,798.65
+**PMT = P × [r(1+r)^n] / [(1+r)^n - 1]**
 
-Total repayment: $1,798.65 × 360 = $647,514
-Total interest: $647,514 - $300,000 = $347,514
+Where:
+- P = Principal (loan amount)
+- r = Monthly interest rate (annual rate ÷ 12)
+- n = Total number of payments
 
-Adding escrow (taxes $3,600/yr, insurance $1,200/yr):
-Monthly escrow = $400
-Total payment = $2,198.65
+**The Interest-Heavy Early Years**
 
-PMI (if applicable, 0.5% of loan):
-Monthly PMI = $125
-Total with PMI = $2,323.65
+Consider a £250,000 mortgage at 5% over 25 years:
 
----
+| Year | Annual Interest | Annual Principal | Remaining Balance |
+|------|-----------------|------------------|-------------------|
+| 1 | £12,297 | £5,297 | £244,703 |
+| 5 | £11,470 | £6,124 | £224,106 |
+| 10 | £9,903 | £7,691 | £188,147 |
+| 20 | £5,055 | £12,539 | £80,447 |
+| 25 | £691 | £16,903 | £0 |
 
-## Real-World Applications
-
-**Affordability assessment.** Calculate what payment you can afford (28% or less of gross income), then work backwards to determine maximum home price.
-
-**Comparing loan options.** 15-year versus 30-year: shorter term has higher payments but dramatically less total interest.
-
-**Refinance analysis.** Calculate monthly savings, multiply by remaining term, subtract closing costs.
-
-**Extra payment strategy.** Adding $200/month to a $300,000 mortgage at 6% saves $89,000 in interest.
-
-**Pre-approval preparation.** Understand what you'll commit to monthly at various price points.
+In Year 1, 70% of payments cover interest. By Year 25, less than 4% covers interest. This structure explains why early overpayments have disproportionate impact.
 
 ---
 
-## Scenarios People Actually Run Into
+## Real Calculations with 2026 Rates
 
-**The total cost shock.** Your $300,000 home costs $647,514 total. You pay more in interest than the original loan. This is normal but surprising to first-time buyers.
+### Scenario 1: UK First-Time Buyer (February 2026)
 
-**The PMI elimination goal.** You pay $150/month PMI. Once you reach 20% equity, request removal—saving $1,800/year.
+With average UK house prices at £290,000 and a 10% deposit:
 
-**The escrow adjustment.** Property taxes increased, creating an escrow shortage. Payments increase to cover the shortfall.
+**Purchase Details:**
+- Property Price: £290,000
+- Deposit: £29,000 (10%)
+- Loan Amount: £261,000
+- Rate: 4.23% (2-year fix)
+- Term: 25 years
 
-**The refinance math.** Refinancing from 7% to 5.5% saves $350/month but costs $8,000 in closing. Breakeven: 23 months.
+**Monthly Calculation:**
+- Monthly P&I: £1,423.47
+- Estimated Council Tax: £150/month
+- Buildings Insurance: £25/month
+- **Total Monthly: £1,598.47**
 
-**The 15 versus 30 debate.** 30-year at 6%: $1,799/month, $347K interest. 15-year at 5.5%: $2,451/month, $141K interest. Save $206K with the higher payment.
+**Affordability Check:**
+At the standard 4.5× income multiple, this mortgage requires household income of approximately £58,000.
+At the 28% housing cost guideline, total housing costs of £1,598 require gross monthly income of £5,707 (£68,484 annually).
+
+**Total Cost Over Term:**
+- Total Payments: £427,041
+- Total Interest: £166,041
+- Effective Cost: 64% above purchase price
+
+### Scenario 2: US Home Purchase (February 2026)
+
+With median US home price at approximately $415,000 and 20% down payment:
+
+**Purchase Details:**
+- Property Price: $415,000
+- Down Payment: $83,000 (20%)
+- Loan Amount: $332,000
+- Rate: 6.09% (30-year fixed)
+- Term: 30 years
+
+**Monthly Calculation:**
+- Monthly P&I: $2,009.47
+- Property Tax (1.1% annually): $380/month
+- Homeowners Insurance: $150/month
+- **Total Monthly: $2,539.47**
+
+**Total Cost Over Term:**
+- Total Payments: $723,409
+- Total Interest: $391,409
+- Interest exceeds original loan amount
+
+### Scenario 3: 15-Year Versus 30-Year Comparison
+
+For the same US $332,000 loan:
+
+| Term | Rate | Monthly P&I | Total Interest | Total Cost |
+|------|------|-------------|----------------|------------|
+| 30 years | 6.09% | $2,009.47 | $391,409 | $723,409 |
+| 15 years | 5.44% | $2,710.81 | $155,946 | $487,946 |
+
+**Analysis:**
+- 15-year payment is 35% higher ($701/month)
+- 15-year saves $235,463 in interest (60% reduction)
+- 15-year total cost is 33% lower
+
+The decision depends on cash flow flexibility versus long-term cost minimisation.
 
 ---
 
-## Trade-Offs and Decisions People Underestimate
+## UK Versus US Mortgage Comparison
 
-**Term length impact.** 30-year loans have lower payments but cost nearly twice as much in interest as 15-year loans.
+The UK and US mortgage markets operate quite differently, affecting how borrowers should approach calculations.
 
-**Rate versus points.** Pay points upfront for a lower rate. Good if you'll keep the loan long enough to recoup costs.
+### Structural Differences
 
-**Fixed versus adjustable.** ARMs start lower but can increase. Assess your risk tolerance.
+| Aspect | United Kingdom | United States |
+|--------|----------------|---------------|
+| Typical Fixed Period | 2-5 years | 15-30 years (fully fixed) |
+| Standard Term | 25 years | 30 years |
+| Rate After Fix | Variable (SVR) | Remains fixed |
+| Prepayment Penalties | Common during fix | Rare |
+| Deposit/Down Payment | 5-25% typical | 3-20% typical |
+| Government Schemes | Help to Buy (ended), LISA | FHA, VA, USDA loans |
 
-**Larger down payment.** More down means lower payment, no PMI (at 20%+), and less interest. But it depletes savings.
+### Rate Uncertainty: UK Perspective
 
-**Prepayment versus investing.** Extra mortgage payments guarantee return equal to your rate. Investments might return more historically.
+UK borrowers face rate uncertainty when fixed periods end. A borrower currently at 4.23% on a 2-year fix must consider:
+
+**Scenario: £250,000 Mortgage, Current 2-Year Fix at 4.23%**
+
+Current monthly payment: £1,370
+
+If Standard Variable Rate (SVR) at fix end is 7.5%:
+- New monthly payment: £1,747
+- Increase: £377/month (27.5%)
+
+This uncertainty necessitates either:
+1. Remortgaging to a new fixed rate before term end
+2. Building buffer for potential SVR exposure
+3. Selecting longer fixed periods (5-10 years)
+
+### US Fixed-Rate Certainty
+
+US 30-year fixed mortgages provide payment certainty throughout the term. The [6.09% current rate](https://www.freddiemac.com/pmms) locks in for the entire loan duration, eliminating refinancing necessity unless rates drop substantially.
+
+However, this certainty comes at a premium—US fixed rates typically exceed UK equivalent fixed-period rates due to the interest rate risk borne by lenders.
 
 ---
 
-## Common Mistakes and How to Recover
+## First-Time Buyer Analysis
 
-**Ignoring total cost.** Monthly payment fits budget, but total interest is staggering. Always calculate total cost.
+First-time buyers face particular challenges in 2026, though conditions have improved from 2023 peaks.
 
-**Forgetting taxes and insurance.** P&I is just part of housing cost. Add property tax, insurance, PMI, and HOA.
+### UK First-Time Buyer Scenario
 
-**Not shopping rates.** 0.25% difference on $300,000 is $18,000+ over 30 years. Get multiple quotes.
+**Typical Constraints:**
+- Average first-time buyer age: 34
+- Average deposit: £53,935 (15%)
+- Average purchase price: £288,136
+- Required household income: £52,000-£64,000
 
-**Buying maximum approval.** Lenders approve more than you should borrow. Their calculation doesn't account for other goals.
+**Calculation: London Versus Regional**
 
-**Ignoring closing costs.** Closing costs run 2-5% of loan amount beyond your down payment.
+| Location | Avg Price | 10% Deposit | Monthly P&I (4.23%) | Required Income |
+|----------|-----------|-------------|---------------------|-----------------|
+| London | £525,000 | £52,500 | £2,575 | £105,000 |
+| South East | £380,000 | £38,000 | £1,864 | £76,000 |
+| North West | £215,000 | £21,500 | £1,054 | £43,000 |
+| Scotland | £195,000 | £19,500 | £956 | £39,000 |
+
+Regional variations demonstrate why location significantly affects affordability calculations.
+
+### Lifetime ISA Contribution
+
+UK first-time buyers may utilise Lifetime ISAs, receiving 25% government bonus on contributions up to £4,000 annually:
+
+**4-Year LISA Savings Plan:**
+- Annual contribution: £4,000
+- Government bonus: £1,000/year
+- 4-year total: £20,000 (£16,000 contributed + £4,000 bonus)
+- Plus assumed 3% growth: ~£21,200
+
+This reduces required mortgage by £21,200, lowering monthly payments by approximately £116.
+
+### US First-Time Buyer Programmes
+
+FHA loans permit 3.5% down payments with credit scores as low as 580:
+
+**FHA Loan Calculation: $350,000 Home**
+- Down Payment: $12,250 (3.5%)
+- Loan Amount: $337,750
+- Upfront MIP: $5,912 (rolled into loan)
+- Monthly MIP: $200
+- Monthly P&I at 6.5%: $2,134
+- Total Monthly: $2,334 + taxes/insurance
+
+The lower down payment enables earlier homeownership but increases monthly costs through mortgage insurance premiums.
 
 ---
 
-## Related Topics
+## Remortgage and Refinance Scenarios
 
-**Amortization schedule.** Breakdown showing principal versus interest at each payment.
+With rates having declined from 2023 peaks, many borrowers are evaluating refinancing opportunities.
 
-**Private Mortgage Insurance (PMI).** Required when down payment is under 20%. Can be removed at 20% equity.
+### UK Remortgage Analysis
 
-**Escrow account.** Lender-held account for property tax and insurance.
+**Scenario: Coming Off 2-Year Fix onto SVR**
 
-**Debt-to-income ratio (DTI).** Total monthly debt payments divided by gross income. Lenders want 36-43% or less.
+A borrower with £200,000 remaining at 5.5% (original 2023 fix) facing SVR of 7.5%:
 
-**Loan-to-value ratio (LTV).** Loan amount divided by property value. Higher LTV means higher risk.
+| Option | Rate | Monthly P&I | 2-Year Cost |
+|--------|------|-------------|-------------|
+| Stay on SVR | 7.5% | £1,478 | £35,472 |
+| New 2-year fix | 4.23% | £1,100 | £26,400 |
+| Difference | - | £378/month | £9,072 saved |
+
+**Break-Even Calculation:**
+If arrangement fee is £999 and valuation is £300:
+- Total remortgage cost: £1,299
+- Monthly savings: £378
+- Break-even: 3.4 months
+
+Remortgaging is clearly beneficial in this scenario.
+
+### US Refinance Calculation
+
+**Scenario: 2022 Purchase at 7% Now Considering 6.09%**
+
+Original: $400,000 at 7%, 28 years remaining
+- Current monthly P&I: $2,661
+- Remaining balance: ~$380,000
+
+Refinance to 6.09%, 30-year term:
+- New monthly P&I: $2,299
+- Monthly savings: $362
+- Closing costs: ~$9,000
+
+**Break-Even Analysis:**
+- Break-even: 24.9 months
+- If staying 10+ years: substantial benefit
+- If moving within 2 years: may not recoup costs
+
+### Rate Drop Required to Justify Refinancing
+
+The conventional wisdom of "1% rate drop justifies refinancing" varies by loan size and remaining term:
+
+| Loan Balance | Required Rate Drop | Approximate Monthly Savings |
+|--------------|-------------------|---------------------------|
+| $200,000 | 0.75-1.0% | $100-$130 |
+| $400,000 | 0.5-0.75% | $170-$250 |
+| $600,000 | 0.25-0.5% | $130-$250 |
+
+Larger loans benefit from smaller rate reductions; closing costs are similar regardless of loan size.
+
+---
+
+## AI and Digital Mortgage Platforms
+
+The mortgage industry increasingly employs artificial intelligence for underwriting, valuation and customer service.
+
+### AI-Powered Mortgage Lenders
+
+Digital-first lenders utilise AI for:
+- **Automated underwriting**: Credit decisions in minutes rather than days
+- **Document processing**: AI extracts data from payslips and bank statements
+- **Fraud detection**: Pattern recognition identifies suspicious applications
+- **Valuation models**: Automated Valuation Models (AVMs) reduce surveyor dependency
+
+**Implications for Borrowers:**
+- Faster decisions (potentially same-day approval)
+- Potentially more consistent criteria application
+- Reduced ability to explain unusual circumstances
+- Data requirements may be more stringent
+
+### Blockchain and Cryptocurrency Considerations
+
+Some platforms now accept cryptocurrency for down payments, though with limitations:
+
+**Cryptocurrency Down Payment Process:**
+1. Convert crypto to fiat currency
+2. Deposit in bank account
+3. Provide 60-90 days of "seasoning" (transaction history)
+4. Document conversion and source
+
+Most traditional lenders remain hesitant about cryptocurrency-derived funds due to volatility and regulatory uncertainty.
+
+### Open Banking Impact
+
+Open Banking enables direct data sharing between banks and mortgage lenders:
+
+**Benefits:**
+- Automated income and expenditure verification
+- Real-time affordability assessment
+- Reduced documentation requirements
+- Faster processing times
+
+**Considerations:**
+- Scrutiny of all transactions (gambling, cryptocurrency)
+- Less opportunity to explain one-off expenses
+- Algorithm-driven decisions may lack nuance
+
+---
+
+## Limitations and Market Risks
+
+### Interest Rate Risk (UK Variable/Tracker Mortgages)
+
+With the [Bank of England base rate at 3.75%](https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate), tracker mortgage payments directly correlate with rate decisions:
+
+**£300,000 Tracker Mortgage (Base Rate + 1%)**
+
+| Base Rate | Mortgage Rate | Monthly P&I |
+|-----------|---------------|-------------|
+| 3.00% | 4.00% | £1,584 |
+| 3.75% | 4.75% | £1,706 |
+| 5.00% | 6.00% | £1,933 |
+| 6.00% | 7.00% | £2,121 |
+
+A 2 percentage point rise increases payments by £415/month (26%).
+
+### House Price Risk
+
+Negative equity occurs when mortgage balance exceeds property value. With 5-10% deposits common, even modest price declines create vulnerability:
+
+**5% Deposit Scenario:**
+- Purchase: £300,000
+- Deposit: £15,000
+- Mortgage: £285,000
+- 10% price drop: Property worth £270,000
+- Negative equity: £15,000
+
+This constrains ability to move or remortgage until equity is restored through payments or price recovery.
+
+### Affordability Stress Testing
+
+UK lenders stress-test affordability at rates typically 3% above the offered rate:
+
+**Stress Test Example:**
+- Offered rate: 4.23%
+- Stress test rate: 7.23%
+- Loan: £250,000
+- Payment at offered rate: £1,370
+- Payment at stress rate: £1,784
+
+Borrowers must demonstrate affordability at the stress rate, which may limit maximum borrowing despite current rates being comfortable.
 
 ---
 
 ## How This Calculator Works
 
-**Loan amount:**
+**Loan Amount Calculation:**
 ```
 loanAmount = homePrice - downPayment
 ```
 
-**Monthly P&I payment:**
+**Monthly Principal and Interest:**
 ```
 monthlyRate = annualRate / 12
 payment = loanAmount × [monthlyRate × (1 + monthlyRate)^termMonths] / [(1 + monthlyRate)^termMonths - 1]
 ```
 
-**Escrow:**
+**Escrow/Additional Costs:**
 ```
 monthlyEscrow = (annualPropertyTax + annualInsurance) / 12
 ```
 
-**PMI:**
+**PMI/MIG:**
 ```
 monthlyPMI = (loanAmount × pmiRate) / 12
 ```
 
-**Total payment:**
+**Total Monthly Payment:**
 ```
 totalMonthly = payment + monthlyEscrow + monthlyPMI + monthlyHOA
 ```
 
-**Total interest:**
+**Total Interest:**
 ```
 totalInterest = (payment × termMonths) - loanAmount
 ```
 
-All calculations happen locally in your browser.
+All calculations are performed locally in the browser.
+
+---
+
+## Sources
+
+- [Freddie Mac - Primary Mortgage Market Survey](https://www.freddiemac.com/pmms)
+- [Rightmove - UK Mortgage Rates](https://www.rightmove.co.uk/news/articles/property-news/current-uk-mortgage-rates/)
+- [Bank of England - Interest Rate Decisions](https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate)
+- [IMF - Housing Affordability Dataset](https://www.imf.org/-/media/Files/Publications/WP/2023/English/wpiea2023247-print-pdf.ashx)
+- [HomeOwners Alliance - Mortgage Rate Forecast](https://hoa.org.uk/advice/guides-for-homeowners/for-owners/mortgage-rate-forecast/)
+- [ONS - Housing Purchase Affordability](https://www.ons.gov.uk/peoplepopulationandcommunity/housing/bulletins/housingpurchaseaffordabilitygreatbritain/2024)
 
 ---
 
 ## FAQs
 
-**What's included in my monthly payment?**
+**What is included in the monthly payment?**
 
-PITI: Principal, Interest, Taxes, and Insurance. Plus PMI if down payment is under 20%, and HOA fees if applicable.
+PITI: Principal, Interest, Taxes and Insurance. Additionally, PMI/MIG applies if the deposit is below 20%, and service charges apply for leasehold properties.
 
-**How much house can I afford?**
+**How much can I afford to borrow?**
 
-Housing costs should be 28% or less of gross income. On $6,000/month income, aim for $1,680 or less total housing payment.
+Traditional guidance suggests housing costs should not exceed 28% of gross income. Lenders typically offer 4-4.5× household income in the UK and similar debt-to-income ratios in the US. However, affordability depends on individual circumstances including other debts and living costs.
 
-**What is PMI and how do I get rid of it?**
+**What is PMI/MIG and how is it eliminated?**
 
-PMI protects the lender if you default. Required under 20% down. Request removal at 20% equity; automatically removed at 22%.
+Private Mortgage Insurance (US) or Mortgage Indemnity Guarantee (UK) protects the lender when deposits are below 20%. It may be removed upon reaching 20% equity through payments or property appreciation.
 
-**Should I choose 15-year or 30-year?**
+**Should I select a 15-year or 30-year term?**
 
-15-year: higher payment, lower rate, much less interest. 30-year: lower payment, more flexibility, significantly more interest.
+Fifteen-year terms have higher monthly payments but lower rates and dramatically reduced total interest. Thirty-year terms offer payment flexibility but cost substantially more in interest. The decision depends on cash flow priorities versus long-term cost minimisation.
 
-**How much does interest rate affect my payment?**
+**How does interest rate affect my payment?**
 
-On $300,000 for 30 years: 5% = $1,610/month; 6% = $1,799/month; 7% = $1,996/month. Each point is roughly $200/month.
+On a £300,000 mortgage over 25 years: 4% yields £1,584/month; 5% yields £1,754/month; 6% yields £1,933/month. Each percentage point represents approximately £170-180/month.
 
-**Should I make extra payments?**
+**When should I remortgage?**
 
-If your rate is high and you have emergency savings, extra payments save significant interest. Early in the loan has biggest impact.
+Consider remortgaging when your fixed period ends, when rates have dropped significantly since your current deal, or when your property has appreciated substantially (enabling access to better rates at lower LTV).
 
-**What are points?**
+**What are arrangement fees?**
 
-Prepaid interest to reduce your rate. One point = 1% of loan = approximately 0.25% rate reduction.
+Lender charges for setting up the mortgage, typically £500-£2,000 in the UK. These may be added to the loan or paid upfront. Lower-rate deals often have higher fees; calculating total cost over the fixed period reveals the true best option.
 
-**How accurate is this calculator?**
+**How do UK and US mortgages differ?**
 
-Mathematically precise for fixed-rate mortgages. Actual payments may vary due to lender-specific rounding or fees.
+UK mortgages typically fix for 2-5 years then revert to variable rates, requiring periodic remortgaging. US 30-year fixed mortgages maintain the same rate throughout the term, providing payment certainty but typically at higher initial rates.
 
-**What's the difference between pre-qualification and pre-approval?**
+**What is negative equity?**
 
-Pre-qualification is a quick estimate based on self-reported information. Pre-approval involves document verification and a credit check, providing a more reliable loan amount. Sellers prefer pre-approved buyers.
+When the mortgage balance exceeds the property value. This restricts ability to move or remortgage. Higher deposits and longer ownership periods reduce negative equity risk.
 
-**How do adjustable-rate mortgages (ARMs) work?**
+**How does the stress test work?**
 
-ARMs have a fixed rate for an initial period (often 5, 7, or 10 years), then adjust periodically based on a market index. Initial rates are lower than fixed rates, but future payments are uncertain.
+UK lenders assess affordability at rates typically 3% above the offered rate. This ensures borrowers can withstand rate increases but may limit maximum borrowing amounts.
 
-**What's escrow and why do lenders require it?**
+**What happens when my fixed rate ends?**
 
-Escrow accounts hold funds for property taxes and insurance. Lenders require them to ensure these bills are paid—unpaid taxes create liens, and uninsured property puts their collateral at risk. Monthly escrow payments smooth out large annual bills.
+Without action, the mortgage reverts to the lender's Standard Variable Rate (SVR), which is typically significantly higher than fixed rates. Most borrowers should remortgage to a new fixed deal before the end date.
 
-**How does refinancing work?**
+**Can I use cryptocurrency for a deposit?**
 
-Refinancing replaces your existing mortgage with a new one, typically at a lower rate. You pay closing costs (2-5% of loan) but save on monthly payments and total interest. Calculate break-even time before refinancing.
-
-**What's the difference between conforming and jumbo loans?**
-
-Conforming loans meet Fannie Mae/Freddie Mac limits (varies by area, typically $726,200+). Jumbo loans exceed these limits and often have stricter requirements and slightly higher rates.
-
-**How do I calculate how much I can save with extra payments?**
-
-Use the amortization schedule. Adding $100/month to a $300,000 mortgage at 6% saves approximately $50,000 in interest and shortens the loan by nearly 5 years. The earlier you start extra payments, the greater the impact.
-
-**What happens if I sell my home before the mortgage is paid off?**
-
-At closing, the sale proceeds first pay off your remaining mortgage balance. Any excess goes to you. If you owe more than the sale price (underwater), you must cover the difference or negotiate a short sale.
-
-**What's the impact of credit score on mortgage rates?**
-
-Significant. A score of 760+ typically qualifies for the best rates. Each 20-point drop can add 0.25-0.50% to your rate. On a $300,000 loan, the difference between excellent and fair credit could cost $100+/month and $40,000+ over the loan life.
-
-**How do I decide between renting and buying?**
-
-Calculate total monthly costs of owning (PITI + maintenance + opportunity cost of down payment) versus renting. Consider how long you'll stay—transaction costs typically require 3-5 years to break even. Factor in local market conditions, tax benefits, and personal preferences.
-
-**What are closing costs and who pays them?**
-
-Closing costs include appraisal, title insurance, attorney fees, origination fees, and prepaid items. Typically 2-5% of loan amount. Usually paid by the buyer, but negotiable. Some sellers offer closing cost assistance as a purchase incentive.
-
-**How does the mortgage interest deduction work?**
-
-In the US, mortgage interest on up to $750,000 of debt is tax-deductible if you itemize. This reduces the effective interest rate. However, many taxpayers benefit more from the standard deduction, especially with lower mortgage balances.
-
-**What's the difference between pre-qualification and pre-approval?**
-
-Pre-qualification is a quick estimate based on self-reported information—useful for initial planning. Pre-approval involves document verification and credit check, producing a more reliable commitment letter. Sellers prefer pre-approved buyers.
-
-**How do I compare different mortgage offers?**
-
-Calculate total cost: principal, interest over loan life, all fees, and ongoing costs (PMI duration). APR helps compare but doesn't capture everything. Create a spreadsheet comparing total 5-year cost and total lifetime cost for each option.
-
-**What factors determine my mortgage rate?**
-
-Credit score, down payment percentage, loan type (conventional, FHA, VA), loan term, property type, and market conditions. You control some factors (credit, down payment) but not others (market rates). Improve controllable factors before applying.
-
-**How do I know when I can afford to buy?**
-
-Beyond calculator math: stable employment, emergency fund intact after down payment, debt-to-income ratio below 36%, and confidence you'll stay in the area 3-5+ years. Numbers matter, but so does overall financial stability and life circumstances.
-
-**What is mortgage preapproval versus prequalification?**
-
-Prequalification is informal—a rough estimate. Preapproval involves document submission and credit check, producing a letter with specific amount and rate. Sellers take preapproval seriously; prequalification less so.
-
-**Additional Notes and Tips**
-
-This calculator processes all inputs locally in your browser, ensuring both privacy and instant results without data transmission. For specialized applications or complex planning scenarios, consider consulting professionals who can account for your specific circumstances and goals.
+Some lenders accept cryptocurrency-derived funds, but typically require conversion to fiat currency and 60-90 days of bank account history demonstrating the funds' source. Most traditional lenders remain cautious about crypto-sourced deposits.

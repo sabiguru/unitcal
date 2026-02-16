@@ -1,248 +1,518 @@
 ## Depreciation Calculator: Asset Value Decline Calculator
 
-## Table of Contents - Depreciation
+## Table of Contents
+- [2026 Depreciation Rules and Allowances](#2026-depreciation-rules)
+- [Why Depreciation Matters for Business Planning](#why-depreciation-matters)
 - [How to Use This Calculator](#how-to-use-this-calculator)
-- [The Core Principle: Allocating Asset Cost Over Time](#the-core-principle-allocating-asset-cost-over-time)
-- [How to Calculate Depreciation Manually](#how-to-calculate-depreciation-manually)
-- [Real-World Applications](#real-world-applications)
-- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
-- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
-- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
-- [Related Topics](#related-topics)
-- [How This Calculator Works](#how-this-calculator-works)
+- [Depreciation Methods Explained](#depreciation-methods-explained)
+- [US Tax Depreciation: MACRS and Section 179](#us-tax-depreciation)
+- [UK Capital Allowances](#uk-capital-allowances)
+- [Worked Calculations with Real Assets](#worked-calculations)
+- [Vehicle Depreciation in the Real World](#vehicle-depreciation)
+- [Limitations and Professional Considerations](#limitations)
+- [Sources](#sources)
 - [FAQs](#faqs)
 
 ---
 
-## How to Use This Calculator - Depreciation
-Enter the Asset Cost—the original purchase price including delivery, installation, and setup costs that are capitalizable.
+## 2026 Depreciation Rules and Allowances
 
-Enter the Salvage Value—the estimated value of the asset at the end of its useful life. This is what you expect to sell or dispose of it for.
+The depreciation landscape in 2026 offers substantial opportunities for businesses to accelerate tax deductions on capital investments. In the United States, the One Big Beautiful Bill Act of 2025 (OBBBA) restored 100% bonus depreciation, whilst the UK has made full expensing permanent for companies. Understanding these provisions can significantly affect cash flow and investment decisions.
 
-Enter the Useful Life in years—how long you expect to use the asset before it's fully depreciated.
+### US: Section 179 and Bonus Depreciation
 
-Select your Depreciation Method. The calculator supports straight-line depreciation (even amounts each year), which is the most common method for financial reporting.
+**Section 179 Deduction Limits for 2026:**
 
-Optionally enter the Current Year to see accumulated depreciation and book value at a specific point in the asset's life.
+| Parameter | 2026 Amount |
+|-----------|------------:|
+| Maximum deduction | $2,560,000 |
+| Phase-out threshold begins | $4,090,000 |
+| Phase-out complete | $6,650,000 |
+| Heavy SUV cap | $32,000 |
 
-Click "Calculate" to see results. The output displays:
+Section 179 allows immediate expensing of qualifying property rather than depreciating over multiple years. The deduction is limited by the business's taxable income—it cannot create a net operating loss.
+
+**Bonus Depreciation for 2026:**
+
+Following OBBBA, bonus depreciation has returned to 100% for qualified property acquired and placed in service after 19 January 2025. Unlike Section 179, bonus depreciation has no overall dollar limit and can create or increase a net operating loss, providing additional flexibility for businesses with significant capital expenditure.
+
+**Order of Application:**
+1. Section 179 first (elected on specific assets up to limit)
+2. Bonus depreciation next (applies automatically unless elected out)
+3. MACRS last (remaining basis over recovery period)
+
+### UK: Capital Allowances Update
+
+The UK capital allowances regime underwent significant changes effective from early 2026:
+
+**Full Expensing (Permanent):**
+- 100% first-year allowance for main rate plant and machinery
+- 50% first-year allowance for special rate expenditure
+- Available only to companies (not sole traders or partnerships)
+- Excludes cars and leased assets
+
+**Annual Investment Allowance (AIA):**
+- Permanently set at £1,000,000
+- Available to all business structures
+- Covers plant and machinery, integral features and long-life assets
+
+**New 40% First-Year Allowance (from January 2026):**
+- Available to companies and unincorporated businesses
+- Fewer restrictions than full expensing
+- Applies from 1 January 2026 (corporation tax) or 6 April 2026 (income tax)
+
+**Writing Down Allowances Reduction:**
+- Main rate reduced from 18% to 14% from 1 April 2026 (CT) / 6 April 2026 (IT)
+- Hybrid rates apply for accounting periods spanning the change date
+
+**Zero Emission Vehicles:**
+- 100% first-year allowance extended to 31 March 2027 (companies)
+- Includes electric vehicle charging points
+
+---
+
+## Why Depreciation Matters for Business Planning
+
+Depreciation allocates the cost of long-term assets over their useful lives, matching expenses with the revenue they help generate. Beyond accounting compliance, depreciation decisions have significant financial implications.
+
+### The Tax Shield Effect
+
+Depreciation is a non-cash expense—it reduces taxable income without requiring cash outflow (beyond the initial purchase). This "depreciation tax shield" provides real cash flow benefits.
+
+**Tax Shield Calculation:**
+```
+Annual Tax Savings = Depreciation Expense × Tax Rate
+```
+
+**Example:** A £100,000 asset depreciated over 5 years (£20,000 annually) at a 25% corporate tax rate generates £5,000 in annual tax savings. Over the asset's life, total tax savings equal £25,000.
+
+### Accelerated Depreciation Benefits
+
+Accelerated methods (declining balance, MACRS, bonus depreciation) front-load deductions, providing tax benefits earlier. Due to the time value of money, £5,000 saved today is worth more than £5,000 saved in five years.
+
+**Present Value Comparison (10% discount rate):**
+
+| Method | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 | PV of Savings |
+|--------|--------|--------|--------|--------|--------|---------------|
+| Straight-line | £5,000 | £5,000 | £5,000 | £5,000 | £5,000 | £18,954 |
+| Accelerated | £10,000 | £6,000 | £4,000 | £3,000 | £2,000 | £20,721 |
+
+Despite identical total deductions (£25,000), accelerated depreciation provides £1,767 more in present value due to timing.
+
+---
+
+## How to Use This Calculator
+
+**Step 1: Enter Asset Cost**
+Input the original purchase price including delivery, installation and setup costs that are capitalisable. Do not include financing costs or interest.
+
+**Step 2: Enter Salvage Value**
+Estimate the asset's value at the end of its useful life. This is what you expect to receive upon disposal. For tax purposes, salvage value is often set to zero under MACRS.
+
+**Step 3: Enter Useful Life**
+Input the expected useful life in years. For tax purposes, refer to MACRS recovery periods (US) or HMRC guidelines (UK) rather than estimated actual life.
+
+**Step 4: Select Depreciation Method**
+Choose straight-line (equal amounts each year) or other available methods. Different methods suit different purposes—tax versus financial reporting.
+
+**Step 5: Review Results**
+The calculator displays:
 - Annual depreciation expense
-- Accumulated depreciation (total depreciated so far)
-- Current book value (cost minus accumulated depreciation)
-- Annual and total depreciation rates as percentages
-- Estimated tax savings (at 25% assumed rate)
-- Year-by-year depreciation schedule showing each year's expense, accumulated total, and book value
+- Accumulated depreciation by year
+- Current book value
+- Depreciation rate (annual and total)
+- Estimated tax savings
+- Year-by-year depreciation schedule
 
 ---
 
-## The Core Principle: Allocating Asset Cost Over Time
+## Depreciation Methods Explained
 
-Depreciation is an accounting method that spreads the cost of a long-term asset over its useful life. Rather than expensing the entire purchase price when bought, you recognize a portion each year, matching the expense with the revenue the asset helps generate.
+### Straight-Line Method
 
-The depreciable amount is the asset's cost minus its salvage value. This is the total amount that will be expensed over the asset's life.
+The simplest and most common method for financial reporting. Depreciation is constant each year:
 
-Straight-line depreciation divides this amount equally across all years. A $50,000 machine with $5,000 salvage value over 10 years depreciates $4,500 per year (($50,000 - $5,000) ÷ 10).
-
-Depreciation is a non-cash expense—it reduces reported income and taxes without requiring cash outflow (beyond the initial purchase). This makes it valuable for tax planning and cash flow management.
-
-Book value (cost minus accumulated depreciation) represents the asset's value on financial statements, not its market value. An asset might be fully depreciated but still valuable and in use.
-
----
-
-## How to Calculate Depreciation Manually
-
-**Straight-line method (most common):**
-
+```
 Annual Depreciation = (Cost - Salvage Value) ÷ Useful Life
+```
 
-Example: $50,000 machine, $5,000 salvage, 5-year life
-Annual Depreciation = ($50,000 - $5,000) ÷ 5 = $9,000/year
+**Example:** £80,000 equipment, £8,000 salvage, 8-year life
+- Annual depreciation: (£80,000 - £8,000) ÷ 8 = £9,000
 
-Year-by-year schedule:
-- Year 1: $9,000 depreciation, $41,000 book value
-- Year 2: $9,000 depreciation, $32,000 book value
-- Year 3: $9,000 depreciation, $23,000 book value
-- Year 4: $9,000 depreciation, $14,000 book value
-- Year 5: $9,000 depreciation, $5,000 book value (equals salvage)
+| Year | Depreciation | Accumulated | Book Value |
+|------|--------------|-------------|------------|
+| 1 | £9,000 | £9,000 | £71,000 |
+| 2 | £9,000 | £18,000 | £62,000 |
+| 3 | £9,000 | £27,000 | £53,000 |
+| 4 | £9,000 | £36,000 | £44,000 |
+| 5 | £9,000 | £45,000 | £35,000 |
+| 6 | £9,000 | £54,000 | £26,000 |
+| 7 | £9,000 | £63,000 | £17,000 |
+| 8 | £9,000 | £72,000 | £8,000 |
 
-**Depreciation rate:**
+### Double Declining Balance (DDB)
 
-Rate = (Annual Depreciation ÷ Cost) × 100
+An accelerated method that applies twice the straight-line rate to the declining book value:
 
-Example: $9,000 ÷ $50,000 × 100 = 18% per year
+```
+DDB Rate = (2 ÷ Useful Life) × 100%
+Year n Depreciation = Book Value × DDB Rate
+```
 
-**Double declining balance (accelerated):**
+**Example:** £80,000 equipment, 8-year life, DDB rate = 25%
 
-Rate = (2 ÷ Useful Life) × 100
-Year 1 Depreciation = Cost × Rate
-Year 2 Depreciation = (Cost - Year 1 Accumulated) × Rate
+| Year | Beginning Book Value | Depreciation | Ending Book Value |
+|------|---------------------|--------------|-------------------|
+| 1 | £80,000 | £20,000 | £60,000 |
+| 2 | £60,000 | £15,000 | £45,000 |
+| 3 | £45,000 | £11,250 | £33,750 |
+| 4 | £33,750 | £8,438 | £25,312 |
+| 5 | £25,312 | £6,328 | £18,984 |
 
-**Sum-of-years'-digits (accelerated):**
+Typically switches to straight-line in later years to ensure full depreciation.
 
+### Sum-of-Years'-Digits (SYD)
+
+Another accelerated method using a declining fraction based on remaining life:
+
+```
 Sum = n(n+1)/2 where n = useful life
-Year 1 Rate = n ÷ Sum
-Year 2 Rate = (n-1) ÷ Sum
+Year 1 fraction = n/Sum
+Year 2 fraction = (n-1)/Sum
+```
+
+**Example:** 5-year asset, Sum = 5(6)/2 = 15
+
+| Year | Fraction | Applied To | Depreciation |
+|------|----------|------------|--------------|
+| 1 | 5/15 | Depreciable amount | 33.3% |
+| 2 | 4/15 | Depreciable amount | 26.7% |
+| 3 | 3/15 | Depreciable amount | 20.0% |
+| 4 | 2/15 | Depreciable amount | 13.3% |
+| 5 | 1/15 | Depreciable amount | 6.7% |
 
 ---
 
-## Real-World Applications
+## US Tax Depreciation: MACRS and Section 179
 
-**Financial reporting.** Depreciation expense appears on income statements, reducing reported profit. Accumulated depreciation reduces asset values on balance sheets.
+### MACRS Recovery Periods
 
-**Tax deductions.** Depreciation reduces taxable income, lowering tax liability. The tax savings equal depreciation times the tax rate.
+The Modified Accelerated Cost Recovery System (MACRS) assigns assets to property classes with predetermined recovery periods:
 
-**Asset management.** Tracking depreciation helps plan for asset replacement. When book value approaches salvage value, it's time to consider replacement.
+| Property Class | Recovery Period | Examples |
+|----------------|-----------------|----------|
+| 3-year | 3 years | Racehorses, tractor units |
+| 5-year | 5 years | Computers, office equipment, automobiles, trucks |
+| 7-year | 7 years | Office furniture, farm equipment, most machinery |
+| 10-year | 10 years | Barges, vessels, single-purpose agricultural structures |
+| 15-year | 15 years | Land improvements, retail motor fuel outlets |
+| 20-year | 20 years | Farm buildings, municipal sewers |
+| 27.5-year | 27.5 years | Residential rental property |
+| 39-year | 39 years | Nonresidential real property |
 
-**Budgeting and pricing.** Businesses include depreciation when calculating product costs. Understanding true asset costs helps set profitable prices.
+### MACRS Percentage Tables (200% Declining Balance, Half-Year Convention)
 
-**Investment analysis.** Depreciation affects cash flow projections and return on investment calculations. Higher depreciation means lower taxable income but the same actual cash flow.
+**5-Year Property:**
 
----
+| Year | MACRS % |
+|------|---------|
+| 1 | 20.00% |
+| 2 | 32.00% |
+| 3 | 19.20% |
+| 4 | 11.52% |
+| 5 | 11.52% |
+| 6 | 5.76% |
 
-## Scenarios People Actually Run Into
+**7-Year Property:**
 
-**The fully depreciated asset.** Your 10-year-old computer system is fully depreciated (book value equals salvage) but still working fine. It has no more depreciation expense, but remains a productive asset—your accounting doesn't reflect its ongoing value.
+| Year | MACRS % |
+|------|---------|
+| 1 | 14.29% |
+| 2 | 24.49% |
+| 3 | 17.49% |
+| 4 | 12.49% |
+| 5 | 8.93% |
+| 6 | 8.92% |
+| 7 | 8.93% |
+| 8 | 4.46% |
 
-**The technology obsolescence.** You bought equipment with a 7-year useful life, but technology advances made it obsolete in 3 years. The remaining book value must be written off, creating a large one-time expense.
+Note: The half-year convention treats all property as placed in service at mid-year, extending recovery into Year 6 (for 5-year property) or Year 8 (for 7-year property).
 
-**The tax versus book difference.** For financial reporting, you use 10-year straight-line depreciation. For taxes, you use 5-year accelerated depreciation. You maintain two sets of depreciation schedules and track the temporary difference.
+### Section 179 vs. Bonus Depreciation Decision
 
-**The partial-year purchase.** You bought equipment on October 1. Do you take a full year of depreciation or prorate for 3 months? Convention varies—some methods take half-year in the first and last years regardless of purchase date.
-
-**The salvage value estimation.** You estimated $5,000 salvage value but actually sold the asset for $8,000. The $3,000 difference is a gain on sale that increases taxable income in the year of sale.
-
----
-
-## Trade-Offs and Decisions People Underestimate
-
-**Accelerated versus straight-line.** Accelerated methods (declining balance, sum-of-years'-digits) front-load depreciation, providing larger tax deductions early. Straight-line is simpler and spreads expense evenly. The total depreciation is the same; only timing differs.
-
-**Useful life estimation.** Longer useful life means lower annual depreciation but more years of expense. Shorter life means higher annual depreciation but fewer years. IRS guidelines provide ranges, but management has some discretion.
-
-**Salvage value impact.** Higher salvage value reduces depreciable amount, lowering annual expense. Zero salvage value maximizes depreciation but may not reflect reality if assets have resale value.
-
-**Tax versus financial reporting.** Companies often use different depreciation methods for tax returns versus financial statements. Tax depreciation optimizes cash flow; financial depreciation aims for accurate reporting.
-
-**Impairment versus depreciation.** If an asset loses value faster than depreciation (due to damage, obsolescence, or market changes), an impairment charge may be required—a separate concept from regular depreciation.
-
----
-
-## Common Mistakes and How to Recover
-
-**Forgetting salvage value.** Depreciation is calculated on cost minus salvage, not on cost alone. Including salvage value prevents over-depreciation.
-
-**Inconsistent methods.** Once you select a depreciation method for an asset, you generally must continue using it. Changing methods requires disclosure and may need restating prior periods.
-
-**Depreciating land.** Land doesn't depreciate—only buildings and improvements on land. When purchasing property, allocate the price between land (not depreciable) and buildings (depreciable).
-
-**Missing partial-year adjustments.** Assets purchased mid-year may require prorated depreciation for the first and last years. Check your accounting convention.
-
-**Ignoring component depreciation.** A building might last 40 years, but its HVAC system lasts 15 years. Component depreciation treats major components as separate assets with different lives.
-
----
-
-## Related Topics
-
-**Capital allowances (UK).** The UK equivalent of depreciation for tax purposes, with specific rates set by HMRC rather than estimated useful lives.
-
-**MACRS (US).** The Modified Accelerated Cost Recovery System specifies depreciation methods and recovery periods for US tax purposes. Different from book depreciation.
-
-**Amortization.** Similar to depreciation but for intangible assets (patents, copyrights, goodwill). Same concept of spreading cost over useful life.
-
-**Depletion.** For natural resources (mines, oil wells, timber). Expense is based on units extracted rather than time elapsed.
-
-**Impairment.** When an asset's market value drops below book value, impairment charges reduce book value to fair value—a separate process from regular depreciation.
+| Factor | Section 179 | Bonus Depreciation |
+|--------|-------------|-------------------|
+| Annual limit | $2,560,000 (2026) | No limit |
+| Net operating loss | Cannot create | Can create/increase |
+| Asset selection | Elective by asset | Automatic (elect out by class) |
+| Income limitation | Yes (taxable income) | No |
+| Best for | Profitable businesses with targeted assets | High capital expenditure, loss positions |
 
 ---
 
-## How This Calculator Works
+## UK Capital Allowances
 
-The calculator implements straight-line depreciation:
+### Main Pool and Special Rate Pool
 
-**Depreciable amount:**
-Depreciable = Cost - Salvage Value
+UK capital allowances separate assets into pools with different treatment:
 
-**Annual depreciation:**
-Annual = Depreciable ÷ Useful Life
+**Main Pool (Main Rate Assets):**
+- Most plant and machinery
+- Writing down allowance: 14% (from April 2026, reduced from 18%)
+- Full expensing available (100% FYA for companies)
 
-**Accumulated depreciation (for year n):**
-Accumulated = Annual × n
+**Special Rate Pool:**
+- Long-life assets (expected life over 25 years)
+- Integral features (electrical systems, lifts, escalators)
+- Thermal insulation
+- Writing down allowance: 6%
+- 50% FYA available for companies
 
-**Book value (for year n):**
-Book Value = Cost - Accumulated
+### Example: UK Company Capital Investment
 
-**Depreciation rate:**
-Annual Rate = (Annual ÷ Cost) × 100
-Total Rate = (Accumulated ÷ Cost) × 100
+**Scenario:** UK company purchases £500,000 manufacturing equipment in June 2026
 
-**Tax savings estimate:**
-Tax Savings = Annual × 0.25 (assumes 25% tax rate)
+**Option 1: Full Expensing**
+- Year 1 deduction: £500,000 (100%)
+- Tax savings at 25%: £125,000
+- Immediate cash flow benefit
 
-**Depreciation schedule:**
-For each year from 1 to useful life, calculates that year's depreciation, accumulated total, and ending book value. Book value never goes below salvage value.
+**Option 2: Writing Down Allowances**
+- Year 1: £500,000 × 14% = £70,000
+- Year 2: £430,000 × 14% = £60,200
+- Year 3: £369,800 × 14% = £51,772
+- Tax savings spread over multiple years
 
-All calculations happen locally in your browser.
+For most companies, full expensing provides superior cash flow benefits due to time value of money.
+
+### Sole Traders and Partnerships
+
+Unincorporated businesses cannot access full expensing but benefit from:
+- Annual Investment Allowance: £1,000,000 first-year deduction
+- New 40% First-Year Allowance (from April 2026)
+- Writing down allowances at 14%
+
+---
+
+## Worked Calculations with Real Assets
+
+### Scenario 1: US Computer Equipment Purchase
+
+**Profile:** US corporation purchases $75,000 of computer equipment (5-year MACRS property) in March 2026.
+
+**Option A: Section 179 + MACRS**
+- Section 179 election: $75,000 (full amount)
+- Year 1 deduction: $75,000
+- Tax savings (21% rate): $15,750
+
+**Option B: 100% Bonus Depreciation**
+- Bonus depreciation: $75,000 (100%)
+- Year 1 deduction: $75,000
+- Tax savings: $15,750
+
+**Option C: MACRS Only (no Section 179 or bonus)**
+- Year 1: $75,000 × 20% = $15,000
+- Year 2: $75,000 × 32% = $24,000
+- Year 3: $75,000 × 19.2% = $14,400
+- Year 4: $75,000 × 11.52% = $8,640
+- Year 5: $75,000 × 11.52% = $8,640
+- Year 6: $75,000 × 5.76% = $4,320
+
+**NPV of Tax Savings (10% discount rate, 21% tax rate):**
+- Options A/B: $15,750 (immediate)
+- Option C: $12,876
+
+The accelerated methods provide $2,874 more value in present terms.
+
+### Scenario 2: UK Manufacturing Machinery
+
+**Profile:** UK limited company purchases £250,000 CNC machine in July 2026.
+
+**Full Expensing Approach:**
+- Year 1 allowance: £250,000 (100%)
+- Corporation tax savings (25%): £62,500
+- Immediate cash flow benefit
+
+**Alternative: AIA if Full Expensing Unavailable:**
+- AIA claim: £250,000 (within £1m limit)
+- Same result: £62,500 tax savings in Year 1
+
+**For a Partnership (Full Expensing Not Available):**
+- AIA claim: £250,000
+- Tax savings depend on partners' marginal rates
+- Higher-rate partners (45%): up to £112,500 combined savings
+
+### Scenario 3: Commercial Vehicle Fleet
+
+**Profile:** Transport company acquires five delivery trucks at $60,000 each ($300,000 total) in 2026. Trucks are 5-year MACRS property.
+
+**With 100% Bonus Depreciation:**
+- Year 1 deduction: $300,000
+- Tax savings (21%): $63,000
+
+**Without Bonus (MACRS only):**
+
+| Year | MACRS % | Depreciation | Tax Savings |
+|------|---------|--------------|-------------|
+| 1 | 20.00% | $60,000 | $12,600 |
+| 2 | 32.00% | $96,000 | $20,160 |
+| 3 | 19.20% | $57,600 | $12,096 |
+| 4 | 11.52% | $34,560 | $7,258 |
+| 5 | 11.52% | $34,560 | $7,258 |
+| 6 | 5.76% | $17,280 | $3,629 |
+
+**NPV comparison (10% discount rate):** Bonus depreciation provides approximately $8,500 more value than standard MACRS.
+
+---
+
+## Vehicle Depreciation in the Real World
+
+Vehicle depreciation affects both business tax planning and personal financial decisions. Recent market data reveals significant variation by vehicle type.
+
+### Average Depreciation Rates
+
+Vehicles typically lose 20% or more of their value in the first year, with approximately 60% depreciation over five years. However, market conditions have created substantial variation:
+
+**2025 Depreciation by Vehicle Segment:**
+
+| Segment | Average 5-Year Depreciation |
+|---------|----------------------------:|
+| Electric vehicles (premium) | 60-72% |
+| Luxury sedans | 55-65% |
+| Full-size vans | 50-60% |
+| Mid-size sedans | 45-55% |
+| Compact SUVs | 40-50% |
+| Small pickups | 35-45% |
+| Toyota/Lexus (overall) | 35-45% |
+
+### Electric Vehicle Depreciation Challenge
+
+Electric vehicles have experienced the fastest depreciation in recent years:
+
+- **Jaguar I-Pace:** 72.2% depreciation over 5 years (average loss of $51,953)
+- **Tesla Model S:** 61.5% depreciation (average loss of $74,132)
+- **Tesla Model X:** 55.2% depreciation (average loss of $71,792)
+- **Audi e-tron:** 66% depreciation over 3 years
+
+Contributing factors include Tesla's aggressive price reductions on new vehicles, concerns about battery longevity and replacement costs, rapidly evolving technology making older models less desirable, and charging infrastructure uncertainty.
+
+### Vehicles That Hold Value
+
+Toyota and Lexus consistently demonstrate the slowest depreciation. Trucks and hybrid vehicles maintain value better than sedans and EVs. Factors supporting value retention include:
+
+- Proven reliability and low maintenance costs
+- Strong brand perception
+- Limited supply relative to demand
+- Practical utility (trucks, SUVs)
+
+### Business Vehicle Depreciation Limits (US)
+
+Passenger automobiles face annual depreciation caps under Section 280F:
+
+**2026 Depreciation Limits (Passenger Auto):**
+
+| Year | With Bonus | Without Bonus |
+|------|------------|---------------|
+| 1 | $20,400 | $12,400 |
+| 2 | $19,800 | $19,800 |
+| 3 | $11,900 | $11,900 |
+| 4+ | $7,160 | $7,160 |
+
+Vehicles weighing over 6,000 pounds (heavy SUVs, trucks) are not subject to these limitations under the SUV exception.
+
+---
+
+## Limitations and Professional Considerations
+
+### When Book and Tax Depreciation Differ
+
+Companies frequently maintain separate depreciation schedules:
+
+**Book Depreciation (Financial Reporting):**
+- Aims for accurate representation of asset consumption
+- Uses estimated useful lives based on actual expected use
+- Includes salvage value in calculations
+- Follows GAAP or IFRS standards
+
+**Tax Depreciation:**
+- Optimises cash flow through accelerated deductions
+- Uses statutory recovery periods (MACRS, capital allowances)
+- Often assumes zero salvage value
+- Follows tax code requirements
+
+The difference creates "temporary differences" for deferred tax accounting—book-tax reconciliation is required.
+
+### Impairment vs. Depreciation
+
+Impairment occurs when an asset's market value falls below its book value due to damage, obsolescence or market conditions. Unlike regular depreciation, impairment is recognised as a one-time charge when triggered, not scheduled over the asset's life.
+
+### Component Depreciation
+
+Large assets with components having different useful lives may require component depreciation. A building with 40-year life may contain HVAC equipment (15 years), roofing (20 years) and electrical systems (25 years). Each component depreciates according to its individual life.
+
+### Records and Documentation
+
+Maintain comprehensive records for each depreciable asset:
+- Purchase documentation and capitalised costs
+- Useful life determination and rationale
+- Salvage value estimates and supporting analysis
+- Annual depreciation schedules
+- Method selection justification
+- Disposal documentation and gain/loss calculations
+
+---
+
+## Sources
+
+- [IRS Publication 946: How To Depreciate Property](https://www.irs.gov/publications/p946)
+- [Section179.org 2026 Deduction Guide](https://www.section179.org/section_179_deduction/)
+- [GOV.UK Capital Allowances Full Expensing](https://www.gov.uk/government/publications/capital-allowances-full-expensing)
+- [GOV.UK New First-Year Allowance and WDA Changes](https://www.gov.uk/government/publications/new-first-year-allowance-and-main-rate-of-writing-down-allowances)
+- [PKF Francis Clark: Budget 2025 Capital Allowances](https://pkf-francisclark.co.uk/insights/budget-2025-what-are-the-main-changes-to-capital-allowances/)
+- [US News: Cars With Fastest Depreciation 2026](https://cars.usnews.com/cars-trucks/advice/cars-with-the-fastest-depreciation)
+- [iSeeCars Vehicle Depreciation Study 2025](https://www.iseecars.com/)
+- [Kelley Blue Book Depreciation Calculator](https://www.kbb.com/car-depreciation/)
 
 ---
 
 ## FAQs
 
-**What's the difference between depreciation and amortization?**
+**What is the difference between depreciation and amortisation?**
 
-Depreciation applies to tangible assets (equipment, buildings, vehicles). Amortization applies to intangible assets (patents, software, goodwill). Both spread cost over useful life.
+Depreciation applies to tangible assets (equipment, buildings, vehicles). Amortisation applies to intangible assets (patents, software, goodwill). Both spread cost over useful life, but different accounting standards may apply.
 
 **Can I depreciate a personal vehicle?**
 
-Only if used for business. The business-use percentage of the vehicle's cost can be depreciated. Personal-use vehicles are not depreciable for tax purposes.
+Only the business-use percentage is depreciable. A vehicle used 60% for business allows depreciation on 60% of its cost. Personal-use vehicles cannot be depreciated for tax purposes.
 
-**What if the asset is worth more than book value?**
+**What happens when I sell an asset before it is fully depreciated?**
 
-Book value is an accounting concept, not market value. An asset can be fully depreciated but still valuable. If you sell for more than book value, the excess is a taxable gain.
-
-**How do I choose a useful life?**
-
-For tax purposes, IRS guidelines specify recovery periods by asset class. For financial reporting, estimate how long you'll actually use the asset productively.
-
-**What happens if I sell an asset before it's fully depreciated?**
-
-Compare sale price to book value. If sale price exceeds book value, you have a gain. If sale price is less, you have a loss. Both affect taxable income in the year of sale.
+Compare sale price to book value (cost minus accumulated depreciation). If sale price exceeds book value, the difference is a taxable gain. If sale price is less, the difference is a deductible loss.
 
 **Is depreciation a cash expense?**
 
-No. Depreciation is a non-cash expense—it reduces reported income but doesn't require cash outflow. The cash was spent when the asset was purchased.
+No. Depreciation reduces reported income and taxes without requiring cash outflow beyond the original purchase. The depreciation tax shield provides real cash benefits—lower taxes payable—but depreciation itself involves no cash movement.
 
-**Can I change depreciation methods?**
+**How do I choose between Section 179 and bonus depreciation?**
 
-Generally, you must be consistent once a method is chosen. Changes require disclosure and may need justification. Tax authorities may question frequent changes.
+Section 179 is limited to taxable income—it cannot create a loss. Bonus depreciation has no income limitation and can create or increase net operating losses. Profitable businesses with targeted asset purchases often prefer Section 179; those with significant capital expenditure or loss positions may benefit more from bonus depreciation.
 
-**What's the difference between tax depreciation and book depreciation?**
+**What is the UK Annual Investment Allowance limit?**
 
-Tax depreciation follows tax code rules (like MACRS in the US) to minimize taxes. Book depreciation follows accounting standards to accurately report financial position. Companies often maintain both.
+The AIA is permanently set at £1,000,000 per year, covering plant and machinery, integral features and long-life assets (but not cars). This provides immediate tax relief similar to Section 179 in the US.
 
-**How do accelerated methods differ from straight-line?**
+**Can a sole trader claim full expensing in the UK?**
 
-Accelerated methods (declining balance, sum-of-years'-digits) front-load depreciation, providing larger deductions early in the asset's life. Total depreciation is the same; only timing differs.
+No. Full expensing (100% FYA) is available only to companies within corporation tax. Sole traders and partnerships can claim the £1,000,000 AIA and the new 40% first-year allowance from April 2026.
 
-**What assets cannot be depreciated?**
+**What are MACRS recovery periods?**
 
-Land never depreciates—only buildings and improvements on land. Inventory, which is sold rather than used over time, is expensed through cost of goods sold, not depreciation. Personal assets used solely for non-business purposes also cannot be depreciated.
+MACRS assigns assets to property classes with statutory recovery periods: 5 years (computers, vehicles), 7 years (office furniture, machinery), 15 years (land improvements), 27.5 years (residential rental), 39 years (commercial buildings). These override actual useful life for tax purposes.
 
-**How does partial-year depreciation work?**
+**Why do electric vehicles depreciate so quickly?**
 
-Assets purchased mid-year may require prorated depreciation. Some conventions take a half-year in the first year regardless of purchase date; others prorate based on the actual month of acquisition. Know your accounting policy.
+EV depreciation reflects manufacturer price reductions (especially Tesla), battery technology concerns, rapidly evolving technology making older models less desirable, and uncertainty about charging infrastructure. Premium EVs have lost 60-72% of value over five years.
 
-**What is bonus depreciation?**
+**What records should I maintain for depreciation?**
 
-In some tax jurisdictions, businesses can immediately expense a percentage of qualifying asset costs rather than depreciating over time. This provides an immediate tax benefit but reduces future depreciation deductions.
-
-**How do I handle improvements to existing assets?**
-
-Improvements that extend useful life or add functionality are capitalized and depreciated separately. Repairs that maintain existing function are expensed immediately. The distinction matters for tax purposes.
-
-**What records should I keep for depreciation?**
-
-Maintain purchase documentation, useful life determination rationale, salvage value estimates, and annual depreciation schedules. These support tax filings and audits.
-
-**How does depreciation affect cash flow analysis?**
-
-Depreciation is a non-cash expense that reduces taxable income. Add it back to net income when calculating operating cash flow. This "depreciation tax shield" provides real cash benefits without cash outflow.
+Keep purchase documentation, useful life determination rationale, salvage value estimates, annual depreciation schedules, method selection justification, and disposal records. These support tax filings and audit defence.

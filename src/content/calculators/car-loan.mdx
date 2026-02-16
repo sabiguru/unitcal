@@ -1,247 +1,440 @@
-## Car Loan Calculator: Auto Loan Payment Calculator
+## Car Loan Calculator: Auto Financing Analysis for 2026
 
-## Table of Contents - Car Loan
-- [How to Use This Calculator](#how-to-use-this-calculator)
-- [The Core Principle: Amortization](#the-core-principle-amortization)
-- [How to Calculate Car Loan Payments Manually](#how-to-calculate-car-loan-payments-manually)
-- [Real-World Applications](#real-world-applications)
-- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
-- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
-- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
-- [Related Topics](#related-topics)
+---
+
+## The Auto Financing Landscape in 2026
+
+The average new car now costs over $50,000 in the United States, a milestone crossed for the first time in October 2025. According to Cox Automotive, December 2025 saw average transaction prices reach $50,326, representing a 0.8% year-over-year increase. This escalation has rendered auto loans not merely convenient but essential for most vehicle purchasers.
+
+Current average auto loan rates reflect the Federal Reserve's gradual easing cycle:
+
+| Credit Tier | New Car Rate (60-month) | Used Car Rate (48-month) |
+|-------------|------------------------|--------------------------|
+| Super Prime (781+) | 4.88% | 6.82% |
+| Prime (661-780) | 6.50% | 9.50% |
+| Near-Prime (601-660) | 9.75% | 13.18% |
+| Subprime (501-600) | 13.18% | 18.86% |
+| Deep Subprime (300-500) | 15.81% | 21.58% |
+
+Sources: [Experian State of Automotive Finance](https://www.experian.com/blogs/ask-experian/average-car-loan-interest-rates-by-credit-score/), [Bankrate](https://www.bankrate.com/loans/auto-loans/rates/)
+
+The difference between excellent and poor credit on a $40,000 loan exceeds $15,000 in total interest—sufficient to purchase another vehicle.
+
+---
+
+## Contents
+
+- [Calculator Guide](#calculator-guide)
+- [The Mathematics of Auto Financing](#the-mathematics-of-auto-financing)
+- [Real Calculations with 2026 Data](#real-calculations-with-2026-data)
+- [Electric Vehicle Financing](#electric-vehicle-financing)
+- [UK Car Finance: PCP Versus HP](#uk-car-finance-pcp-versus-hp)
+- [Online Car Buying Platforms](#online-car-buying-platforms)
+- [The Credit Score Calculation](#the-credit-score-calculation)
+- [Strategic Financing Decisions](#strategic-financing-decisions)
 - [How This Calculator Works](#how-this-calculator-works)
-- [FAQs](#faqs)
+- [Sources](#sources)
 
 ---
 
-## How to Use This Calculator - Car Loan
-Enter the Vehicle Price—the total cost of the car before any reductions.
+## Calculator Guide
 
-Enter your Down Payment—the amount you'll pay upfront. A larger down payment reduces the amount financed and monthly payments.
+The Vehicle Price field accepts the total cost before any deductions. For new vehicles, this corresponds to the manufacturer's suggested retail price plus any dealer additions. For used vehicles, the agreed purchase price is entered.
 
-Enter Trade-in Value if you're trading a vehicle. This amount reduces what you need to finance.
+The Down Payment represents funds paid at signing. A larger down payment reduces the amount financed, lowers monthly payments, and decreases total interest paid. Financial advisers typically recommend 20% for new vehicles and 10% for used.
 
-Enter the Interest Rate (APR)—the annual percentage rate on the loan. This varies based on credit score, lender, and whether the car is new or used.
+Trade-in Value is subtracted from the amount financed. In most jurisdictions, trade-in value also reduces the taxable amount, providing additional savings.
 
-Select the Loan Term—common options are 36, 48, 60, 72, or 84 months. Longer terms mean lower payments but more total interest.
+The Interest Rate (APR) should reflect actual quoted rates, not manufacturer advertisements which often apply only to specific terms or credit tiers. Obtaining pre-approval from credit unions or banks before dealership visits establishes a comparison baseline.
 
-Enter Sales Tax rate as a percentage. Tax is typically calculated on the purchase price minus trade-in.
+Loan Term options range from 36 to 84 months. Whilst longer terms reduce monthly payments, they substantially increase total interest and may result in negative equity throughout much of the loan term.
 
-Enter any Additional Fees—documentation, registration, or dealer fees that will be financed.
+Sales Tax Rate varies by location. The calculator applies tax to the vehicle price minus trade-in value, reflecting most state calculations.
 
-Click "Calculate" to see results. The output displays: monthly payment, total amount financed, total of all payments, total interest paid, and a breakdown of costs. An amortization schedule shows how each payment splits between principal and interest over the first year.
-
----
-
-## The Core Principle: Amortization
-
-Car loans are amortizing loans—each payment includes both principal (reducing what you owe) and interest (cost of borrowing). Early payments are mostly interest; later payments are mostly principal.
-
-The standard amortization formula calculates the fixed monthly payment needed to repay a loan over a specific term:
-
-PMT = P × [r(1 + r)ⁿ] / [(1 + r)ⁿ - 1]
-
-Where P is principal (loan amount), r is monthly interest rate (APR ÷ 12), and n is number of payments.
-
-This formula ensures each payment covers that month's interest on the remaining balance, plus enough principal to reach zero at the end of the term.
-
-Because interest is calculated on the remaining balance, paying extra toward principal early in the loan saves significant interest over time. An extra $100/month in year one has more impact than the same extra payment in year four.
+Additional Fees may include documentation fees, registration, title transfer and any dealer charges being financed rather than paid at signing.
 
 ---
 
-## How to Calculate Car Loan Payments Manually
+## The Mathematics of Auto Financing
 
-**Step 1: Determine the loan amount**
+Auto loans employ amortisation, wherein each payment comprises both principal reduction and interest charges. The standard amortisation formula calculates the fixed payment required:
 
-Loan amount = Vehicle price + Sales tax + Fees - Down payment - Trade-in
+**PMT = P × [r(1 + r)^n] / [(1 + r)^n - 1]**
 
-Example:
-Vehicle: $25,000
-Sales tax (7%): $1,750
-Fees: $500
-Down payment: $5,000
-Trade-in: $3,000
+Where:
+- P = Principal (loan amount)
+- r = Periodic interest rate (APR ÷ 12)
+- n = Number of payments
 
-Loan amount = $25,000 + $1,750 + $500 - $5,000 - $3,000 = $19,250
+**The Front-Loaded Interest Structure**
 
-**Step 2: Calculate monthly interest rate**
+Interest is calculated on the outstanding balance, meaning early payments are dominated by interest charges. Consider a £35,000 loan at 7.01% APR for 60 months:
 
-Monthly rate = APR ÷ 12 ÷ 100
+| Payment | Interest | Principal | Remaining Balance |
+|---------|----------|-----------|-------------------|
+| 1 | £204.46 | £488.92 | £34,511.08 |
+| 12 | £178.35 | £515.03 | £28,765.22 |
+| 30 | £119.89 | £573.49 | £16,934.86 |
+| 60 | £4.04 | £689.34 | £0.00 |
 
-Example: 6% APR
-Monthly rate = 6 ÷ 12 ÷ 100 = 0.005
-
-**Step 3: Calculate number of payments**
-
-For a 60-month loan: n = 60
-
-**Step 4: Apply the formula**
-
-PMT = P × [r(1 + r)ⁿ] / [(1 + r)ⁿ - 1]
-PMT = $19,250 × [0.005(1.005)⁶⁰] / [(1.005)⁶⁰ - 1]
-PMT = $19,250 × [0.005 × 1.349] / [1.349 - 1]
-PMT = $19,250 × 0.006745 / 0.349
-PMT = $19,250 × 0.01933
-PMT = $372.10
-
-**Step 5: Calculate total cost**
-
-Total payments = $372.10 × 60 = $22,326
-Total interest = $22,326 - $19,250 = $3,076
+In the first payment, 29.5% covers interest. In the final payment, merely 0.6% covers interest. This structure means additional payments made early save substantially more than equivalent payments made later.
 
 ---
 
-## Real-World Applications
+## Real Calculations with 2026 Data
 
-**Budgeting for vehicle purchase.** Before shopping, know what payment fits your budget. Work backward: if you can afford $400/month, what loan amount does that support at current rates?
+### Scenario 1: Average New Car Purchase (USA)
 
-**Comparing financing offers.** Dealers, banks, and credit unions offer different rates. Calculate payments for each option to find the best total cost, not just the lowest monthly payment.
+The [average new car transaction price of $50,326](https://www.moneygeek.com/resources/average-price-of-a-new-car/) with 20% down payment:
 
-**Trade-off analysis.** Should you choose 60 months at $372 or 72 months at $320? The calculator shows that the longer term saves $52/month but costs $2,000+ more in total interest.
+**Calculation:**
+- Vehicle Price: $50,326
+- Down Payment (20%): $10,065
+- Loan Amount: $40,261
+- Rate: 7.01% APR (current average)
+- Term: 60 months
+- Monthly Payment: **$797.53**
+- Total Interest: **$7,890.80**
+- Total Cost: **$58,216.80**
 
-**Down payment strategy.** How much does increasing down payment by $2,000 affect monthly payments and total cost? The calculator helps optimize this trade-off.
+**With Excellent Credit (4.88% APR):**
+- Monthly Payment: $757.62
+- Total Interest: $5,196.20
+- **Savings: $2,694.60**
 
-**Refinancing evaluation.** If rates have dropped or your credit improved, calculate potential savings from refinancing. Compare new total interest against current remaining interest.
+**With Subprime Credit (13.18% APR):**
+- Monthly Payment: $924.03
+- Total Interest: $15,180.80
+- **Additional Cost: $7,290.00**
+
+### Scenario 2: Used Car Purchase Analysis
+
+The average used car loan rate of 11.75% combined with a $25,000 used vehicle:
+
+**60-Month Financing:**
+- Monthly Payment: $553.47
+- Total Interest: $8,208.20
+
+**36-Month Financing:**
+- Monthly Payment: $825.73
+- Total Interest: $4,726.28
+- **Interest Savings: $3,481.92**
+
+The shorter term increases monthly payments by $272 but saves over $3,400—sufficient for a significant repair fund.
+
+### Scenario 3: Full-Size Pickup Truck
+
+[Full-size pickup trucks average $66,192](https://www.moneygeek.com/resources/average-price-of-a-new-car/) in transaction price. With 10% down:
+
+**Calculation:**
+- Loan Amount: $59,573
+- Rate: 7.01% APR
+- Term: 72 months
+- Monthly Payment: **$1,016.98**
+- Total Interest: **$13,649.56**
+
+Extending to 84 months reduces the monthly payment to $897.42 but increases total interest to $15,810.28—an additional $2,160 for the privilege of lower monthly payments.
 
 ---
 
-## Scenarios People Actually Run Into
+## Electric Vehicle Financing
 
-**The payment-focused trap.** A dealer offers an "affordable" $299/month payment. That sounds great until you realize it's an 84-month loan on a car that'll need major repairs before it's paid off. Low payments can hide expensive loans.
+### The Post-Credit Landscape (2026)
 
-**The underwater surprise.** You financed $30,000 on a $28,000 car (100%+ financing). After two years, you owe $24,000 but the car's worth $18,000. You're $6,000 underwater—can't sell without bringing cash to close the deal.
+Federal EV purchase credits ended for most buyers after September 30, 2025. The [30D, 25E and 45W clean vehicle credits](https://www.irs.gov/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after) are no longer available for vehicles acquired after that date, fundamentally altering EV financing calculations.
 
-**The rate shock.** Credit score is 620. The dealer's 18% rate makes your $25,000 car cost $35,000+ over the loan term. Working on credit before buying could save thousands.
+**Impact on Effective Cost:**
 
-**The term creep.** You started shopping for a 48-month loan but "needed" a larger payment to "fit your budget" (the dealer's words). Now you're in a 72-month loan on a car you'll want to replace in 4 years.
+Prior to October 2025, a $45,000 EV with $7,500 federal credit had an effective cost of $37,500. In 2026, that same vehicle costs the full $45,000 unless state or manufacturer incentives apply.
 
-**The GAP insurance moment.** You totaled your car in year two. Insurance paid $16,000 actual value. You still owe $19,000. Without GAP coverage, you're writing a $3,000 check for a car you can't drive.
+### State Incentives Still Available
 
----
+Several states maintain EV incentives:
 
-## Trade-Offs and Decisions People Underestimate
+| State | Incentive | Requirements |
+|-------|-----------|--------------|
+| Illinois | Up to $4,000 rebate | Income-qualified residents |
+| New York | $500-$2,000 | Based on MSRP or range |
+| California | Varies by district | Clean Air Vehicle programs |
+| San Francisco Bay Area | Up to $12,000 | Income-qualified, replacing older vehicle |
 
-**Term length trade-offs.** Shorter terms mean higher payments but lower total interest and faster equity building. Longer terms reduce payments but cost more overall and keep you in debt longer.
+Source: [Caribou EV Tax Credit Guide](https://caribou.com/resource-center/auto-refinance/ev-tax-credit-update-2026-what-changed-state-incentives-still-available/)
 
-**Down payment versus liquidity.** A larger down payment reduces interest cost but depletes cash reserves. Keep emergency funds intact; don't drain savings for a larger down payment.
+### Manufacturer-Subsidised EV Financing
 
-**New versus used financing.** New cars get better rates but depreciate faster. Used cars cost less but often have higher rates. The lowest total cost of ownership isn't always obvious.
+With federal credits eliminated, manufacturers have increased direct incentives:
 
-**Rate versus incentives.** A manufacturer offers 0% financing OR a $3,000 rebate with regular financing. Which is better? It depends on loan amount, term, and available rates. Calculate both scenarios.
+**Current EV Deals (February 2026):**
+- [Hyundai Ioniq 5](https://www.capitalone.com/cars/learn/getting-a-good-deal/how-do-federal-and-state-incentives-for-electric-cars-work/1944): ~$10,000 price reduction on 2026 models plus low-APR financing
+- Tesla: Promotional APR rates and tailored financing solutions
+- Volkswagen ID.4: £7,250 deposit contribution with 2.9% APR (UK)
 
-**Early payoff impact.** Paying off early saves interest but verify there's no prepayment penalty. Some loans use precomputed interest where early payoff doesn't save as much as expected.
+### EV Charger Credit
 
----
-
-## Common Mistakes and How to Recover
-
-**Focusing only on monthly payment.** A $350 payment for 60 months ($21,000 total) beats a $300 payment for 84 months ($25,200 total) even though the monthly is higher. Compare total cost, not just payments.
-
-**Skipping the down payment.** Financing 100%+ of a car's value starts you underwater immediately. The car depreciates faster than you pay down the loan. Aim for at least 10-20% down.
-
-**Ignoring the APR.** Different lenders offer vastly different rates. A 6% versus 9% APR on $25,000 for 60 months costs $2,000+ more. Shop rates at credit unions, banks, and online lenders before visiting dealerships.
-
-**Financing for too long.** A car loan shouldn't outlast the car's reliable lifespan. Financing a used car for 72 months often means paying for a car that needs expensive repairs while still making payments.
-
-**Rolling negative equity.** You're $3,000 underwater on your current car. The dealer offers to "pay it off" by adding that $3,000 to your new loan. Now you're starting $3,000 underwater again, in a deeper hole.
+A [30% federal tax credit](https://www.irs.gov/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after) remains available for home EV charging equipment installed by June 30, 2026, up to $1,000 per item. Eligibility depends on location—the property must be in a qualifying census tract (low-income community or non-urban area).
 
 ---
 
-## Related Topics
+## UK Car Finance: PCP Versus HP
 
-**Loan-to-value ratio.** The percentage of the car's value that you're financing. Below 100% means you have equity; above 100% means you're underwater. Aim to stay below 100% from day one.
+The United Kingdom employs different financing structures than the USA, with Personal Contract Purchase (PCP) and Hire Purchase (HP) dominating the market.
 
-**Credit score impact.** Your credit score heavily influences available rates. Scores above 720 get the best rates; below 600 may face rates above 15% or loan denial.
+### Current UK APR Rates (2026)
 
-**Preapproval.** Getting preapproved by a bank or credit union before shopping establishes your rate and gives negotiating leverage. Dealer financing must beat your preapproval to earn your business.
+| Finance Type | Good Credit | Average Credit | Poor Credit |
+|--------------|-------------|----------------|-------------|
+| PCP | 2.9% - 6.9% | 7.9% - 12% | 15% - 25% |
+| HP | 6.9% - 9.9% | 10% - 14% | 15% - 25% |
+| Manufacturer 0% | Available on select models | — | — |
 
-**Simple versus compound interest.** Car loans typically use simple interest calculated on remaining balance. Some predatory loans use precomputed interest that doesn't benefit from early payoff.
+Source: [MoneySuperMarket](https://www.moneysupermarket.com/loans/car-finance/calculator/), [Parkers](https://www.parkers.co.uk/car-finance/advice/what-is-pcp-finance/)
 
-**GAP insurance.** Covers the "gap" between what you owe and what insurance pays if the car is totaled. Essential when financing more than 80% of value or on long-term loans.
+### UK Average Car Prices (2026)
+
+[Office for National Statistics data](https://www.nimblefins.co.uk/cheap-car-insurance/average-cost-cars-uk) shows new car prices have increased 40% over the past decade:
+
+| Segment | Starting Price Range |
+|---------|---------------------|
+| Small Cars (Polo, Puma) | £19,725 - £26,580 |
+| Medium Cars (Astra, Golf) | £26,135 - £28,490 |
+| Popular SUVs (Qashqai, Tucson) | £30,615 - £33,105 |
+
+### PCP Versus HP: Real Comparison
+
+For a £28,000 medium car:
+
+**PCP (6.9% APR, 48 months, 30% balloon):**
+- Monthly Payment: £328
+- Total of Payments: £15,744
+- Balloon Payment: £8,400
+- Total Cost: £24,144 (plus balloon if retained)
+
+**HP (7.9% APR, 48 months):**
+- Monthly Payment: £681
+- Total Interest: £4,688
+- Total Cost: £32,688
+
+PCP offers lower monthly payments but does not build ownership equity. HP payments are higher but the vehicle is owned outright upon completion.
+
+**Critical Consideration:** [Identical APRs generate different total interest costs](https://www.autohit.co.uk/uk-car-finance-explained-2026-pcp-vs-hp-best-deals-and-how-to-end-agreements-early/) between PCP and HP, with PCP potentially costing 15-25% more interest for the same vehicle due to the deferred balloon payment structure.
+
+---
+
+## Online Car Buying Platforms
+
+### The Digital Shift
+
+Online car buying platforms have transformed vehicle purchasing, eliminating traditional dealership negotiations and offering home delivery. However, the landscape continues evolving.
+
+### Platform Comparison (2026)
+
+**Carvana:**
+- [Minimum credit score: approximately 450](https://www.crediful.com/auto-loans/carvana/)
+- In-house financing with terms up to 72 months
+- 7-day return policy
+- Home delivery or vending machine pickup
+- Full transaction completion online
+
+**CarMax:**
+- Traditional dealership backing with online capabilities
+- Financing through multiple lender partnerships
+- Physical inspection available before purchase
+- Price transparency (no-haggle model)
+
+**Vroom (Business Model Shift):**
+- [Ceased direct car sales in late 2024](https://www.autostartransport.com/blog/vroom-review-online-used-car-buying/)
+- Now focused on financing solutions through subsidiary UACC
+- Provides AI-powered tools for dealerships
+- No longer operates as direct-to-consumer retailer
+
+Source: [Carvira Platform Comparison](https://www.carvira.com/online-used-car-buying-platforms-comparing-carvana-carmax-and-vroom-for-u-s-buyers-in-2026/)
+
+### AI Integration in Auto Financing
+
+Digital platforms increasingly employ artificial intelligence for:
+- **Credit decisioning:** Alternative data analysis beyond traditional credit scores
+- **Pricing optimisation:** Dynamic pricing based on market conditions
+- **Virtual showrooms:** AR/VR tools for remote vehicle inspection
+- **Chatbot support:** 24/7 financing questions and application assistance
+
+Carvana's minimum credit score of 450 demonstrates how AI-powered underwriting enables lending to borrowers whom traditional institutions might decline—though typically at substantially higher rates.
+
+---
+
+## The Credit Score Calculation
+
+Credit score is the single largest determinant of auto loan cost after vehicle price. The following demonstrates actual interest differences on a $40,000 loan:
+
+### Credit Score Impact Analysis
+
+| Credit Score | APR | Monthly Payment | Total Interest | Cost vs. Excellent |
+|--------------|-----|-----------------|----------------|-------------------|
+| 781+ (Excellent) | 4.88% | $754.16 | $5,249.60 | — |
+| 661-780 (Good) | 6.50% | $782.22 | $6,933.20 | +$1,684 |
+| 601-660 (Fair) | 9.75% | $841.43 | $10,485.80 | +$5,236 |
+| 501-600 (Poor) | 13.18% | $907.03 | $14,421.80 | +$9,172 |
+| 300-500 (Deep Subprime) | 15.81% | $959.47 | $17,568.20 | +$12,319 |
+
+Source: [Experian](https://www.experian.com/blogs/ask-experian/average-car-loan-interest-rates-by-credit-score/)
+
+A borrower with deep subprime credit pays $12,319 more than an excellent-credit borrower—effectively financing a second car within the first loan.
+
+### 2026 Rate Outlook
+
+[Bankrate senior analyst Ted Rossman projects](https://www.bankrate.com/loans/auto-loans/auto-loan-rate-forecast/) auto loan interest rates will continue their gradual descent throughout 2026. The anticipated reduction from 7% to approximately 6.40% for 60-month new car loans would save approximately $11 per month on a $40,000 loan. Those with poor credit are less likely to see relief, as subprime rates respond less to Federal Reserve policy changes.
+
+---
+
+## Strategic Financing Decisions
+
+### The 20/4/10 Rule
+
+Financial planners recommend:
+- **20%** minimum down payment
+- **4** years maximum loan term
+- **10%** maximum of gross income for total vehicle costs (payment, insurance, fuel, maintenance)
+
+On a $50,000 vehicle with current average prices and rates:
+- 20% down: $10,000
+- 48-month loan at 7.01%: $956.89/month
+- Required gross income: $115,000+ annually
+
+This explains why [average loan terms have extended to 68 months](https://www.experian.com/blogs/ask-experian/auto-loan-rates-financing/)—many buyers cannot afford shorter terms under traditional guidelines.
+
+### Extra Payment Impact by Timing
+
+On a $40,000 loan at 7% for 60 months:
+
+| Extra Payment Strategy | Interest Saved | Term Reduction |
+|-----------------------|----------------|----------------|
+| $200 extra months 1-12 | $1,847 | 11 months |
+| $200 extra months 25-36 | $892 | 6 months |
+| $200 extra months 49-60 | $187 | 2 months |
+
+The same total extra payment ($2,400) saves nearly 10× more interest when applied early versus late.
+
+### Refinancing Decision Framework
+
+Consider refinancing when:
+- Rate reduction exceeds 1 percentage point
+- Credit score has improved substantially
+- At least 24 months remain on the loan
+- No prepayment penalty exists
+
+**Example:**
+- Original: $30,000 at 11% APR, 36 months remaining
+- Balance: $25,000
+- Refinance: 7% APR, 36 months
+- Monthly savings: $78
+- Total savings: $2,808
+
+### Negative Equity Warning Signs
+
+Negative equity (owing more than the vehicle's worth) creates financial risk:
+
+**Year-One New Car Scenario:**
+- Purchase price: $45,000
+- First-year depreciation: 20-30%
+- Value after 12 months: ~$33,750
+- Balance after 12 payments (84-month loan): $40,000
+- **Negative equity: $6,250**
+
+Gap insurance covers this differential if the vehicle is totalled. Without it, borrowers must pay the difference from personal funds.
 
 ---
 
 ## How This Calculator Works
 
-The calculator takes vehicle price, down payment, trade-in value, interest rate, loan term, sales tax, and fees.
+**Tax Calculation:**
+```
+taxableAmount = vehiclePrice - tradeInValue
+salesTax = taxableAmount × (taxRate ÷ 100)
+```
 
-**Tax calculation:**
-Taxable amount = Vehicle price - Trade-in value
-Tax = Taxable amount × (Tax rate ÷ 100)
+**Loan Amount:**
+```
+loanAmount = vehiclePrice + salesTax + additionalFees - downPayment - tradeInValue
+```
 
-**Loan amount:**
-Loan = Vehicle price + Tax + Fees - Down payment - Trade-in
+**Monthly Payment (Amortisation):**
+```
+monthlyRate = (annualRate ÷ 100) ÷ 12
+numberOfPayments = termMonths
+payment = loanAmount × [monthlyRate × (1 + monthlyRate)^numberOfPayments] / [(1 + monthlyRate)^numberOfPayments - 1]
+```
 
-**Monthly payment (amortization formula):**
-r = (Interest rate ÷ 100) ÷ 12
-n = Term × 12
-PMT = Loan × [r(1 + r)ⁿ] / [(1 + r)ⁿ - 1]
+**Total Interest:**
+```
+totalPayments = payment × numberOfPayments
+totalInterest = totalPayments - loanAmount
+```
 
-**Total payments:**
-Total = PMT × n
+**Amortisation Schedule:**
+For each payment:
+```
+interestPortion = remainingBalance × monthlyRate
+principalPortion = payment - interestPortion
+newBalance = remainingBalance - principalPortion
+```
 
-**Total interest:**
-Interest = Total payments - Loan amount
+All calculations execute locally within the browser.
 
-**Amortization schedule:**
-For each month:
-- Interest portion = Remaining balance × Monthly rate
-- Principal portion = Payment - Interest portion
-- New balance = Previous balance - Principal portion
+---
 
-**Affordability analysis:**
-Based on 15% of income guideline for vehicle expenses.
+## Sources
 
-All calculations happen locally in your browser.
+- [Bankrate - Auto Loan Rates February 2026](https://www.bankrate.com/loans/auto-loans/rates/)
+- [Experian - Average Auto Loan Interest Rates by Credit Score](https://www.experian.com/blogs/ask-experian/average-car-loan-interest-rates-by-credit-score/)
+- [U.S. News - Average Auto Loan Rates February 2026](https://cars.usnews.com/cars-trucks/advice/average-auto-loan-interest-rates)
+- [MoneyGeek - Average New Car Price 2026](https://www.moneygeek.com/resources/average-price-of-a-new-car/)
+- [Edmunds - 2026 Auto Market Trends](https://www.edmunds.com/car-news/trends-that-will-shape-2026-car-market-edmunds-insights.html)
+- [IRS - Clean Vehicle Credits](https://www.irs.gov/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after)
+- [Caribou - EV Tax Credit 2026 Update](https://caribou.com/resource-center/auto-refinance/ev-tax-credit-update-2026-what-changed-state-incentives-still-available/)
+- [NimbleFins - Average Cost of Cars UK 2026](https://www.nimblefins.co.uk/cheap-car-insurance/average-cost-cars-uk)
+- [Parkers - PCP Car Finance UK 2026](https://www.parkers.co.uk/car-finance/advice/what-is-pcp-finance/)
+- [AutoHit - UK Car Finance Explained 2026](https://www.autohit.co.uk/uk-car-finance-explained-2026-pcp-vs-hp-best-deals-and-how-to-end-agreements-early/)
+- [Carvira - Online Car Buying Platforms 2026](https://www.carvira.com/online-used-car-buying-platforms-comparing-carvana-carmax-and-vroom-for-u-s-buyers-in-2026/)
 
 ---
 
 ## FAQs
 
-**What's a good interest rate for a car loan?**
+**What is a competitive interest rate for a car loan in 2026?**
 
-For new cars with excellent credit (750+): 4-6%. Good credit (700-749): 6-8%. Fair credit (650-699): 8-12%. Below 650: rates climb quickly above 15%.
+For new vehicles with excellent credit (781+), rates of 4.5-5.5% are competitive. Good credit (661-780) should secure 6-7%. Used car rates typically run 2-3 percentage points higher. The national average stands at 7.01% for new and 11.75% for used vehicles as of February 2026.
 
-**How much should I put down?**
+**How much should be allocated as down payment?**
 
-At least 10-20% of the purchase price. This reduces the loan amount, lowers payments, and helps prevent being underwater if the car depreciates faster than expected.
+A minimum of 20% is recommended for new vehicles and 10% for used. Larger down payments reduce monthly payments, decrease total interest and help avoid negative equity. However, depleting emergency savings for a larger down payment is inadvisable.
 
-**What loan term is best?**
+**What loan term is most advisable?**
 
-The shortest term you can afford. 48-60 months balances payment affordability with reasonable total interest. Avoid 72-84 month loans—you'll pay thousands more in interest and likely want a new car before payoff.
+The shortest term affordable is optimal. Terms of 48-60 months balance affordability with reasonable total interest. Loans of 72-84 months cost thousands more in interest and frequently result in negative equity throughout much of the term.
 
-**Should I pay cash or finance?**
+**Are federal EV tax credits still available in 2026?**
 
-If rates are low (under 4-5%), investing your cash might earn more than the loan costs. At higher rates, paying cash or larger down payment makes more sense. Keep emergency funds regardless.
+For most buyers, federal EV purchase credits ended after September 30, 2025. Those who signed binding contracts and made deposits by that date may still claim credits. State incentives vary by location, with California, New York and Illinois maintaining substantial programmes.
 
-**Is dealer financing or bank financing better?**
+**How does UK car finance differ from US auto loans?**
 
-Compare both. Dealers sometimes offer promotional rates (0%, 1.9%) that beat banks. Other times they mark up rates for profit. Get preapproved elsewhere first to have a comparison baseline.
+The UK market is dominated by PCP (Personal Contract Purchase) and HP (Hire Purchase) rather than traditional amortising loans. PCP offers lower monthly payments with a balloon payment at term end, whilst HP builds ownership equity with each payment. Typical UK APRs range from 2.9% to 9.9% for good credit.
 
-**Can I pay off my car loan early?**
+**Can online platforms finance bad credit?**
 
-Usually yes. Most simple-interest car loans have no prepayment penalty. Verify by reading your loan agreement. Paying extra toward principal reduces total interest.
+Platforms such as Carvana accept credit scores as low as 450, substantially below traditional lender minimums. However, rates for subprime borrowers can exceed 20% APR. Improving credit before purchasing typically saves thousands in interest.
 
-**What if I can't make my payment?**
+**How does trade-in value affect financing?**
 
-Contact your lender immediately. Options may include payment deferral, loan modification, or refinancing. Ignoring the problem leads to repossession, which damages credit severely.
+Trade-in value reduces the amount financed, lowering both monthly payments and total interest. In most states, trade-in value also reduces the taxable amount. Obtaining multiple trade-in valuations before dealership visits ensures fair value.
 
-**How does a trade-in affect my loan?**
+**When should refinancing be considered?**
 
-Trade-in value is subtracted from the amount financed, reducing your loan. In most states, it also reduces taxable amount. Getting the best trade-in value directly lowers your new car cost.
+Refinancing merits consideration when rates have declined 1+ percentage points, credit score has improved substantially, at least two years remain on the loan and no prepayment penalties apply. Current rate environments may offer savings for loans originated during the higher-rate period of 2022-2024.
 
-**What's the difference between simple and precomputed interest?**
+**What is negative equity and how is it avoided?**
 
-Simple interest is calculated on the remaining balance—paying early saves interest. Precomputed interest is calculated upfront and added to the loan; early payoff may not save as much. Most modern auto loans use simple interest.
+Negative equity occurs when the loan balance exceeds the vehicle's market value. It is avoided by making substantial down payments (20%+), selecting shorter loan terms, avoiding financing fees and add-ons and choosing vehicles with slower depreciation. Gap insurance protects against loss if a negatively-equitied vehicle is totalled.
 
-**Should I get pre-approved before shopping?**
+**How reliable are AI-powered lending decisions?**
 
-Absolutely. Pre-approval from a bank or credit union establishes your rate and budget, gives you negotiating leverage, and lets you focus on vehicle price rather than payment. The dealer must beat your pre-approved rate to earn your financing business.
-
-**What's GAP insurance and do I need it?**
-
-GAP (Guaranteed Asset Protection) covers the difference between what you owe and what insurance pays if your car is totaled. You need it if you financed more than 80% of the car's value, have a long loan term, or chose a vehicle that depreciates quickly.
-
-**How do I calculate my total cost of ownership?**
-
-Add purchase price, total interest paid, sales tax, fees, insurance, fuel, and expected maintenance. Compare this across different vehicles and loan terms. A cheaper car with worse fuel economy may cost more overall than a pricier efficient vehicle.
+AI lending platforms analyse alternative data beyond traditional credit scores, potentially approving borrowers whom conventional lenders decline. However, this expanded access typically comes at premium rates. Loan terms should be evaluated with the same scrutiny applied to traditional lenders, regardless of the decision methodology employed.
