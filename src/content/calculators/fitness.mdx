@@ -1,204 +1,361 @@
-## Fitness Calculator: 1RM, Calories, Pace, and VO2 Max
+## Fitness Calculator: 1RM, Calories, Pace and VO2 Max
 
-## Table of Contents - Fitness
+## Table of Contents
+- [The WHO 2024 Physical Activity Guidelines](#who-physical-activity-guidelines)
+- [Understanding Fitness Metrics](#understanding-fitness-metrics)
 - [How to Use This Calculator](#how-to-use-this-calculator)
-- [The Core Principle: Performance Metrics](#the-core-principle-performance-metrics)
-- [How to Calculate Fitness Metrics Manually](#how-to-calculate-fitness-metrics-manually)
-- [Real-World Applications](#real-world-applications)
-- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
-- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
-- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
-- [Related Topics](#related-topics)
-- [How This Calculator Works](#how-this-calculator-works)
+- [The Science Behind Each Calculation](#calculation-science)
+- [Worked Examples with Real Data](#worked-examples)
+- [Fitness Trends and Technology 2025-2026](#fitness-trends)
+- [Sources](#sources)
 - [FAQs](#faqs)
 
 ---
 
-## How to Use This Calculator - Fitness
-Select your calculation type: 1RM (one-rep max), Calories (burned during exercise), Pace (running speed), or VO2 Max (aerobic capacity).
+## The WHO 2024 Physical Activity Guidelines
 
-**For 1RM calculation:**
-- Enter the Weight lifted in pounds or kilograms
-- Enter the Reps completed (1-20 range for accurate estimation)
-- Results show estimated one-rep maximum and training zone weights
+The World Health Organisation updated global physical activity guidelines in 2024, establishing evidence-based recommendations that apply across populations. These guidelines inform the context in which fitness calculations are used.
 
-**For Calorie calculation:**
-- Select an Activity from the dropdown (running, cycling, swimming, etc.)
-- Enter Duration in minutes
-- Enter your Body Weight
-- Results show estimated calories burned
+### Adult Recommendations (18-64 years)
 
-**For Pace calculation:**
-- Enter Distance in miles or kilometers
-- Enter Time in minutes
-- Results show pace per mile/km and equivalent speeds
+**Aerobic Activity:**
+- 150-300 minutes of moderate-intensity activity weekly, or
+- 75-150 minutes of vigorous-intensity activity weekly, or
+- An equivalent combination
 
-**For VO2 Max calculation:**
-- Enter your Age
-- Select Gender
-- Select Fitness Level (poor to superior)
-- Results show estimated VO2 max and fitness classification
+**Strength Training:**
+- Muscle-strengthening activities involving all major muscle groups on 2 or more days weekly
 
-Click "Calculate" to see results. A "Clear" button resets all fields.
+**Additional Benefits:**
+- Additional health benefits accrue from exceeding the upper threshold
+- Adults should limit sedentary time and replace it with physical activity
 
----
+### Global Activity Levels 2025
 
-## The Core Principle: Performance Metrics
+According to WHO data published in 2025, physical inactivity remains a significant global health concern:
+- 27.5% of adults worldwide do not meet recommended activity levels
+- Inactivity rates are higher in high-income countries (36.8%) than low-income countries (16.2%)
+- Women are less active than men globally (31.7% vs 23.4% insufficiently active)
 
-Fitness calculations translate workout data into actionable metrics for training optimization.
-
-**One-rep max (1RM)** estimates the maximum weight you can lift for a single repetition, based on submaximal lifts. This is safer than actually testing your max and provides the foundation for percentage-based training programs.
-
-**Calorie burn** uses MET (Metabolic Equivalent of Task) values to estimate energy expenditure. Different activities have different MET values; combined with body weight and duration, this predicts calories burned.
-
-**Running pace** converts distance and time into speed metrics. Knowing your pace helps set training zones, predict race times, and track improvement.
-
-**VO2 max** measures maximum oxygen uptake—the gold standard for aerobic fitness. Higher VO2 max correlates with better endurance performance and cardiovascular health.
+The fitness metrics calculated herein help individuals quantify their exercise and track progress toward meeting or exceeding these recommendations.
 
 ---
 
-## How to Calculate Fitness Metrics Manually
+## Understanding Fitness Metrics
 
-**1RM calculation (Epley formula):**
+### One-Rep Maximum (1RM)
+
+**Definition:** The maximum weight an individual can lift for a single repetition with proper form.
+
+**Why It Matters:**
+1RM forms the foundation of percentage-based strength training programmes. Rather than testing actual maximal strength (which carries injury risk), athletes estimate 1RM from submaximal lifts and calculate training weights as percentages.
+
+**Training Zones Based on 1RM:**
+
+| Goal | Percentage of 1RM | Typical Rep Range |
+|------|-------------------|-------------------|
+| Strength | 85-100% | 1-5 reps |
+| Power | 75-90% | 1-5 reps (explosive) |
+| Hypertrophy | 67-85% | 6-12 reps |
+| Muscular Endurance | 50-67% | 15-25 reps |
+
+### Exercise Calorie Expenditure
+
+**Definition:** The energy expended during physical activity, measured in kilocalories.
+
+**MET Values:**
+Metabolic Equivalent of Task (MET) represents energy expenditure relative to resting metabolism. One MET equals approximately 3.5 ml O2/kg/min or 1 kcal/kg/hour.
+
+**Sample MET Values (2024 Compendium):**
+
+| Activity | MET Value |
+|----------|-----------|
+| Walking (3.5 mph) | 4.3 |
+| Jogging (6 mph) | 9.8 |
+| Running (8 mph) | 11.5 |
+| Cycling (12-14 mph) | 8.0 |
+| Swimming (moderate) | 8.3 |
+| Resistance training | 6.0 |
+| Yoga | 3.0 |
+| HIIT | 12.0 |
+
+### Running Pace
+
+**Definition:** Time required to cover a given distance, typically expressed as minutes per mile or kilometre.
+
+**Pace and Race Performance:**
+Understanding current pace enables realistic goal-setting for races. General relationships exist between shorter and longer race performances.
+
+| 5K Time | Predicted Marathon | Pace/Mile |
+|---------|-------------------|-----------|
+| 20:00 | 2:55-3:05 | 6:26 (5K) to 6:40-7:05 (Marathon) |
+| 25:00 | 3:40-3:55 | 8:03 (5K) to 8:23-8:57 (Marathon) |
+| 30:00 | 4:25-4:45 | 9:40 (5K) to 10:07-10:52 (Marathon) |
+
+### VO2 Max
+
+**Definition:** Maximum rate of oxygen consumption during incremental exercise, expressed as ml/kg/min.
+
+**VO2 Max Classifications (Cooper Institute):**
+
+| Age | Poor | Fair | Good | Excellent | Superior |
+|-----|------|------|------|-----------|----------|
+| **Men 20-29** | Below 36 | 36-41 | 42-45 | 46-52 | Above 52 |
+| **Men 30-39** | Below 34 | 34-39 | 40-43 | 44-50 | Above 50 |
+| **Men 40-49** | Below 32 | 32-37 | 38-41 | 42-48 | Above 48 |
+| **Men 50-59** | Below 28 | 28-33 | 34-37 | 38-44 | Above 44 |
+| **Women 20-29** | Below 30 | 30-35 | 36-39 | 40-46 | Above 46 |
+| **Women 30-39** | Below 28 | 28-33 | 34-37 | 38-44 | Above 44 |
+| **Women 40-49** | Below 26 | 26-31 | 32-35 | 36-42 | Above 42 |
+| **Women 50-59** | Below 24 | 24-29 | 30-33 | 34-40 | Above 40 |
+
+Elite endurance athletes typically have VO2 max values of 70-90 ml/kg/min.
+
+---
+
+## How to Use This Calculator
+
+### 1RM Calculation
+
+**Step 1:** Enter the weight lifted (pounds or kilograms)
+**Step 2:** Enter the number of repetitions completed (1-20 range)
+**Step 3:** Review the estimated one-rep maximum
+
+**Results Include:**
+- Estimated 1RM
+- Training zone weights (percentages for strength, hypertrophy, endurance)
+
+### Calorie Calculation
+
+**Step 1:** Select an activity from the dropdown
+**Step 2:** Enter duration in minutes
+**Step 3:** Enter body weight (pounds or kilograms)
+**Step 4:** Review estimated calories burned
+
+### Pace Calculation
+
+**Step 1:** Enter distance (miles or kilometres)
+**Step 2:** Enter time (minutes)
+**Step 3:** Review pace and equivalent speeds
+
+### VO2 Max Estimation
+
+**Step 1:** Enter age
+**Step 2:** Select gender
+**Step 3:** Select fitness level
+**Step 4:** Review estimated VO2 max and classification
+
+---
+
+## The Science Behind Each Calculation
+
+### 1RM Formulas
+
+**Epley Formula (This Calculator):**
+```
 1RM = Weight × (1 + Reps/30)
+```
 
-Example: 185 lbs for 8 reps
-1RM = 185 × (1 + 8/30) = 185 × 1.267 = 234 lbs
+The Epley formula, developed by Boyd Epley of the University of Nebraska, remains widely used due to its simplicity and reasonable accuracy for rep ranges of 1-10.
 
-**Brzycki formula (alternative):**
+**Brzycki Formula (Alternative):**
+```
 1RM = Weight × 36 / (37 - Reps)
+```
 
-Example: 185 lbs for 8 reps
-1RM = 185 × 36 / (37 - 8) = 6660 / 29 = 230 lbs
+Matt Brzycki's formula tends to give slightly lower estimates, particularly at higher rep counts.
 
-**Calorie burn (MET method):**
+**Accuracy Considerations:**
+- Both formulas are most accurate for 1-10 rep ranges
+- Accuracy decreases significantly above 10 repetitions
+- Individual variation of 5-10% is common
+- Form breakdown invalidates the calculation
+
+### Calorie Calculation
+
+**Formula:**
+```
 Calories = MET × Weight(kg) × Time(hours)
-
-Example: Running (MET 9.8), 180 lbs (82 kg), 30 minutes
-Calories = 9.8 × 82 × 0.5 = 402 calories
-
-**Running pace:**
-Pace (min/mile) = Time (minutes) / Distance (miles)
-
-Example: 5K (3.1 miles) in 25 minutes
-Pace = 25 / 3.1 = 8:04 per mile
-
-**VO2 max estimation (from 1.5-mile run):**
-VO2 max = 483 / Time(minutes) + 3.5
-
-Example: 1.5 miles in 12 minutes
-VO2 max = 483 / 12 + 3.5 = 43.75 ml/kg/min
-
----
-
-## Real-World Applications
-
-**Programming strength training.** Your 1RM determines training loads. Hypertrophy: 67-85% of 1RM. Strength: 85-95% of 1RM. Power: 50-70% of 1RM with speed emphasis.
-
-**Weight management.** Tracking calories burned helps balance energy intake and expenditure. Creating a 500 calorie daily deficit through exercise and diet produces approximately 1 lb weekly weight loss.
-
-**Race goal setting.** Current 5K pace predicts reasonable marathon goals. A 25-minute 5K (8:04/mile) suggests a 3:40-4:00 marathon with proper training.
-
-**Fitness assessment.** VO2 max provides an objective fitness measure. Tracking changes over time shows training effectiveness.
-
-**Injury prevention.** Estimating 1RM from lighter weights avoids the injury risk of maximal testing, especially for beginners or those returning from layoff.
-
----
-
-## Scenarios People Actually Run Into
-
-**The 1RM reality check.** You calculated a 300 lb squat 1RM from 225 lbs × 8 reps. But when you tried it, you got stuck at 275. The formulas are estimates—actual performance varies based on technique, fatigue, and neural factors.
-
-**The calorie overestimate.** Your tracker says you burned 600 calories running. You celebrated with a 600-calorie meal. But the tracker was probably 20-30% high, and you didn't account for calories you'd burn at rest anyway. Net extra burn might be only 400 calories.
-
-**The pace plateau.** You've run 8:00/mile pace for months. To improve, you need structured training—tempo runs, intervals, and easy recovery days—not just more miles at the same pace.
-
-**The VO2 max surprise.** Your estimated VO2 max is "average" for your age, but you feel quite fit. VO2 max is one metric; running economy, lactate threshold, and mental toughness also determine performance.
-
-**The high-rep limitation.** You did 20 reps at 135 lbs and calculated a 235 lb 1RM. But 1RM formulas become less accurate above 10-12 reps. Your actual max might be 200-220.
-
----
-
-## Trade-Offs and Decisions People Underestimate
-
-**1RM testing versus estimation.** Actually testing your 1RM is more accurate but risks injury and requires significant warm-up time. Estimation is safer and convenient but less precise.
-
-**Calorie tracking precision.** Obsessing over exact calories creates anxiety and may be counterproductive. Approximate tracking with reasonable margin works for most people.
-
-**Pace improvement rate.** Beginners improve quickly; experienced runners plateau. A 30-minute 5K runner might drop 5 minutes in a year; a 17-minute 5K runner might fight for 30 seconds.
-
-**Training specificity.** High VO2 max doesn't guarantee good race times. Marathon performance depends more on lactate threshold and running economy than raw aerobic capacity.
-
-**Recovery versus volume.** More training isn't always better. Adequate recovery between hard sessions produces better adaptation than maximum volume with insufficient rest.
-
----
-
-## Common Mistakes and How to Recover
-
-**Using high-rep sets for 1RM estimation.** Accuracy drops significantly above 10 reps. Use sets of 3-6 reps for best 1RM estimates.
-
-**Ignoring form breakdown.** If your last reps had poor form, the calculator doesn't know. Using strict form reps produces more accurate and safer estimates.
-
-**Trusting calorie burn displays.** Exercise machines and trackers often overestimate by 20-40%. Use burned calorie estimates conservatively.
-
-**Comparing VO2 max across methods.** Lab-tested VO2 max differs from field estimates. Compare like to like when tracking progress.
-
-**Pace calculation without accounting for terrain.** A 9:00/mile pace on hills isn't comparable to 9:00/mile on flat ground. Note conditions when tracking pace.
-
----
-
-## Related Topics
-
-**Progressive overload.** Gradually increasing weight, reps, or volume over time to drive adaptation. 1RM tracking helps structure progression.
-
-**Heart rate training zones.** Based on percentage of max heart rate, defining intensity zones for different training effects.
-
-**Rate of perceived exertion (RPE).** Subjective 1-10 scale for effort that complements objective metrics like pace and weight.
-
-**Periodization.** Structured variation of training intensity and volume over weeks and months to optimize adaptation and prevent overtraining.
-
-**Body composition.** Weight alone doesn't indicate fitness. Muscle mass, body fat percentage, and distribution matter for both performance and health.
-
----
-
-## How This Calculator Works
-
-**1RM (Epley formula):**
-```
-1RM = weight × (1 + reps / 30)
 ```
 
-**Calorie burn:**
+**Example:**
+Running (8 mph, MET 11.5), 82 kg individual, 30 minutes
 ```
-Calories = MET × weight(kg) × time(hours)
-```
-
-MET values by activity:
-- Running (8 mph): 11.5
-- Jogging (6 mph): 9.8
-- Walking (3.5 mph): 4.3
-- Cycling (moderate): 8.0
-- Swimming: 8.3
-- Weight lifting: 6.0
-- Yoga: 3.0
-
-**Pace calculation:**
-```
-paceMinutes = totalTime / distance
-minutes = floor(paceMinutes)
-seconds = round((paceMinutes - minutes) × 60)
+Calories = 11.5 × 82 × 0.5 = 472 kcal
 ```
 
-**VO2 max estimation:**
-Base value by gender and age, adjusted for fitness level:
+**Important Caveats:**
+- This represents gross calories, not net (above resting)
+- Individual variation of 20-30% is expected
+- Fitness trackers typically overestimate by 20-40%
+- Environmental factors (heat, altitude) affect actual expenditure
+
+### Pace Calculation
+
+**Formula:**
+```
+Pace (min/unit) = Total Time (min) / Distance (units)
+```
+
+**Speed Conversion:**
+```
+Speed (mph) = 60 / Pace (min/mile)
+Speed (km/h) = 60 / Pace (min/km)
+```
+
+**Example:**
+5K (3.1 miles) in 25 minutes
+```
+Pace = 25 / 3.1 = 8.06 min/mile = 8:04/mile
+Speed = 60 / 8.06 = 7.44 mph
+```
+
+### VO2 Max Estimation
+
+**Cooper 1.5-Mile Test:**
+```
+VO2 max = 483 / Time(min) + 3.5
+```
+
+**Resting Estimation (This Calculator):**
+Base values by age and gender, adjusted by fitness level:
 - Poor: -10
-- Below average: -5
+- Below Average: -5
 - Average: 0
-- Above average: +5
+- Above Average: +5
 - Excellent: +10
 - Superior: +15
 
-All calculations happen locally in your browser.
+---
+
+## Worked Examples with Real Data
+
+### Scenario 1: Strength Training Programming
+
+**Profile:** 35-year-old male, bench pressed 100 kg for 6 reps
+
+**1RM Calculation (Epley):**
+```
+1RM = 100 × (1 + 6/30)
+1RM = 100 × 1.2
+1RM = 120 kg
+```
+
+**Training Programme Application:**
+
+| Training Goal | Percentage | Working Weight |
+|--------------|------------|----------------|
+| Strength (5×3) | 85% | 102 kg |
+| Hypertrophy (4×8) | 75% | 90 kg |
+| Endurance (3×15) | 60% | 72 kg |
+
+### Scenario 2: Marathon Training Calorie Needs
+
+**Profile:** 28-year-old female, 62 kg, running 80 km weekly at 6:15/km pace
+
+**Weekly Training Breakdown:**
+- 3 easy runs (10 km each): 30 km at MET 8.5
+- 1 tempo run (15 km): MET 10.5
+- 1 long run (25 km): MET 8.0
+- 2 rest days
+
+**Calorie Calculations:**
+```
+Easy runs: 8.5 × 62 × (30/10 × 1.0) = 1,581 kcal
+Tempo run: 10.5 × 62 × 1.25 = 814 kcal
+Long run: 8.0 × 62 × 2.5 = 1,240 kcal
+Total weekly: approximately 3,635 kcal from running
+```
+
+**Implication:** This athlete requires approximately 500+ additional daily calories beyond baseline to support training volume. Inadequate fuelling leads to relative energy deficiency in sport (RED-S).
+
+### Scenario 3: 5K to Marathon Pace Prediction
+
+**Profile:** 42-year-old male, recent 5K time: 22:30
+
+**Current 5K Pace:**
+```
+Pace = 22.5 / 3.1 = 7:15/mile
+```
+
+**Marathon Prediction:**
+Using the Riegel formula (Time2 = Time1 × (D2/D1)^1.06):
+```
+Marathon time = 22.5 × (26.2/3.1)^1.06
+Marathon time = 22.5 × 9.84
+Marathon time = 221 minutes = 3:41
+```
+
+**Marathon Target Pace:**
+```
+3:41 marathon = 221 / 26.2 = 8:26/mile
+```
+
+**Training Application:** This runner should train for marathon pace of 8:20-8:30/mile, with long runs at 9:00-9:30/mile and tempo runs at 7:30-7:45/mile.
+
+### Scenario 4: VO2 Max Improvement Tracking
+
+**Profile:** 55-year-old female, sedentary baseline, 12-week training programme
+
+**Baseline Assessment (1.5-mile test: 16:00):**
+```
+VO2 max = 483 / 16 + 3.5 = 33.7 ml/kg/min
+Classification: Fair for age/gender
+```
+
+**Post-Programme Assessment (1.5-mile test: 13:00):**
+```
+VO2 max = 483 / 13 + 3.5 = 40.7 ml/kg/min
+Classification: Excellent for age/gender
+```
+
+**Improvement:** 21% increase in VO2 max, representing significant cardiovascular adaptation. Research indicates 5-15% improvement is typical with 8-12 weeks of structured training.
+
+---
+
+## Fitness Trends and Technology 2025-2026
+
+### Wearable Technology Adoption
+
+Global wearable device revenue reached $82 billion in 2025, with fitness trackers and smartwatches representing the largest category. Key developments include:
+
+**Improved Accuracy:**
+- Optical heart rate sensors now achieve 95% accuracy during steady-state exercise
+- GPS accuracy has improved to within 1-2% for distance tracking
+- Sleep tracking algorithms have been validated against polysomnography
+
+**AI Integration:**
+- Adaptive training recommendations based on recovery metrics
+- Automatic workout detection and classification
+- Personalised calorie expenditure models
+
+### Strength Training Evolution
+
+**Velocity-Based Training:**
+Increasingly accessible technology enables athletes to measure barbell velocity, providing objective feedback on power output and fatigue.
+
+**Percentage-Based to RPE-Based:**
+Many programmes now combine percentage prescriptions with autoregulation through rate of perceived exertion, adjusting loads based on daily readiness.
+
+### Running Technology
+
+**Carbon-Plated Shoes:**
+The introduction of carbon-plated running shoes has improved marathon performance by an estimated 2-4%. World records in distances from 5K to marathon have fallen since their introduction.
+
+**Super Shoes and Age Group Records:**
+Masters and recreational runners have also benefited, with numerous age-group records broken since 2020.
+
+---
+
+## Sources
+
+- [WHO Physical Activity Guidelines 2024](https://www.who.int/publications/i/item/9789240015128)
+- [American College of Sports Medicine: ACSM Guidelines for Exercise Testing](https://www.acsm.org/)
+- [Compendium of Physical Activities: MET Values](https://sites.google.com/site/compendiumofphysicalactivities/)
+- [Cooper Institute: VO2 Max Classifications](https://www.cooperinstitute.org/)
+- [British Journal of Sports Medicine: Strength Training Recommendations](https://bjsm.bmj.com/)
+- [Journal of Sports Sciences: 1RM Prediction Accuracy](https://www.tandfonline.com/toc/rjsp20/current)
+- [Riegel Formula: Endurance Prediction](https://pubmed.ncbi.nlm.nih.gov/7253871/)
 
 ---
 
@@ -206,72 +363,68 @@ All calculations happen locally in your browser.
 
 **How accurate is the 1RM estimation?**
 
-Within 5-10% for 3-10 rep sets with good form. Accuracy decreases with higher rep counts. Individual variation in strength endurance affects results.
+Within 5-10% for sets of 3-10 reps with strict form. Accuracy decreases significantly above 10 repetitions due to the increased contribution of muscular endurance. Individual variation in strength-endurance relationship also affects accuracy.
 
 **Which activities burn the most calories?**
 
-High-intensity activities like running, cycling, and swimming burn more per minute. But sustainability matters—a 30-minute run beats a 10-minute sprint you can't maintain.
+High-intensity activities such as running, cycling and swimming burn more calories per minute. However, sustainability matters—a 30-minute moderate run burns more total calories than a 10-minute sprint that cannot be maintained.
 
-**What's a good VO2 max?**
+**What constitutes a good VO2 max?**
 
-For men: 35-40 is average, 45+ is good, 55+ is excellent. For women: 30-35 is average, 40+ is good, 50+ is excellent. Elite endurance athletes reach 70-90.
+For men: 35-40 ml/kg/min is average, 45 and above is good, 55 and above is excellent. For women: 30-35 is average, 40 and above is good, 50 and above is excellent. Elite endurance athletes typically achieve 70-90.
 
-**How often should I test my 1RM?**
+**How frequently should I test my 1RM?**
 
-Every 4-8 weeks for active training programs. More frequent testing doesn't show meaningful change and risks overtraining.
+Every 4-8 weeks for active training programmes. More frequent testing does not show meaningful change and risks accumulated fatigue. Estimated 1RM from regular training sets provides ongoing feedback.
 
-**Why does my calorie burn vary day to day?**
+**Why does my calorie burn vary between days?**
 
-Intensity, duration, body weight, temperature, and fitness level all affect calorie burn. Two identical workouts can differ by 10-20%.
+Intensity, duration, body weight, temperature, altitude and fitness level all affect calorie expenditure. Two apparently identical workouts can differ by 10-20% based on environmental and physiological factors.
 
-**Can I improve my VO2 max?**
+**Can VO2 max be improved?**
 
-Yes. High-intensity interval training (HIIT) is most effective. Typical improvement is 5-15% over several months of consistent training.
+Yes. High-intensity interval training (HIIT) is most effective for VO2 max improvement. Typical improvement of 5-15% occurs over 8-12 weeks of consistent training. Improvement rate slows as fitness increases.
 
 **What percentage of 1RM should I train with?**
 
-Hypertrophy: 67-85%. Strength: 85-95%. Endurance: 50-67%. Power: 50-70% with explosive movements.
+Hypertrophy (muscle growth): 67-85%. Strength: 85-100%. Muscular endurance: 50-67%. Power: 75-90% with explosive movement.
 
 **How do I convert pace to speed?**
 
-Speed (mph) = 60 / Pace (min/mile). A 10:00/mile pace = 6 mph. An 8:00/mile pace = 7.5 mph.
+Speed (mph) = 60 / Pace (min/mile). A 10:00/mile pace equals 6 mph. An 8:00/mile pace equals 7.5 mph.
 
-**What's the difference between VO2 max and lactate threshold?**
+**What distinguishes VO2 max from lactate threshold?**
 
-VO2 max is your ceiling—maximum oxygen processing capacity. Lactate threshold is the intensity you can sustain—typically 75-85% of VO2 max. For endurance events, threshold matters more than max.
+VO2 max represents maximum oxygen processing capacity—the ceiling. Lactate threshold represents sustainable intensity—typically 75-85% of VO2 max. For endurance events lasting more than a few minutes, threshold matters more than peak capacity.
 
 **How do I track fitness improvement?**
 
-Test the same metrics periodically under consistent conditions. 1RM every 4-8 weeks, timed runs monthly. Look for trends over months, not day-to-day variation.
+Test the same metrics periodically under consistent conditions. 1RM every 4-8 weeks, timed runs monthly. Analyse trends over months rather than reacting to day-to-day variation.
 
-**Are fitness tracker calories accurate?**
+**Are fitness tracker calorie estimates accurate?**
 
-Generally within 20-30% but often overestimate. Use them for relative comparison (today versus last week) rather than absolute values. Don't eat back all "burned" calories if trying to lose weight.
+Generally within 20-30% but often overestimate. Use them for relative comparison (today versus last week) rather than absolute values. Do not consume all "burned" calories when attempting weight loss.
 
-**What's the difference between Epley and Brzycki formulas for 1RM?**
+**What distinguishes Epley and Brzycki 1RM formulas?**
 
-Both estimate max from submaximal lifts. Epley: weight × (1 + reps/30). Brzycki: weight × 36/(37 - reps). They give similar results for 5-10 reps but diverge at higher rep counts. Use whichever your training program references.
+Both estimate maximum from submaximal lifts. Epley: weight × (1 + reps/30). Brzycki: weight × 36/(37 - reps). They produce similar results for 5-10 reps but diverge at higher rep counts. Use whichever your training programme references.
 
 **How do I estimate calories for activities not listed?**
 
-Look up the MET value for your activity. METs range from 1 (rest) to 18+ (sprinting). Calculate: Calories = MET × weight(kg) × time(hours). Most moderate activities fall in the 4-8 MET range.
+Research the MET value for your activity. METs range from 1 (rest) to 18 and above (sprinting). Calculate: Calories = MET × weight(kg) × time(hours). Most moderate activities fall in the 4-8 MET range.
 
-**What's the relationship between 1RM and training percentages?**
+**What is the relationship between 1RM and training percentages?**
 
-Standard percentages: 70% for hypertrophy rep ranges (8-12 reps), 85% for strength ranges (3-5 reps), 90%+ for peaking. These are guidelines—individual response varies.
+Standard percentages: 70% for hypertrophy rep ranges (8-12 reps), 85% for strength ranges (3-5 reps), 90% and above for peaking. These are guidelines—individual response varies.
 
 **Should I test my actual 1RM?**
 
-Generally not necessary and carries injury risk. Estimated 1RM from submaximal sets guides programming effectively. Reserve actual max attempts for competition or specific testing periods with proper preparation.
+Generally not necessary and carries injury risk. Estimated 1RM from submaximal sets guides programming effectively. Reserve actual maximal attempts for competition or specific testing periods with proper preparation.
 
-**How do I adjust calculations for different units?**
+**What constitutes realistic strength improvement for beginners?**
 
-For calories: weight in kg × MET × hours. For pace: ensure distance and time use matching units. For 1RM: formulas work with any weight unit, just be consistent in application.
-
-**What's a realistic rate of strength improvement for beginners?**
-
-New lifters can often add 5-10 lbs per week to major lifts for several months ("newbie gains"). This rate slows significantly after 6-12 months of training. Intermediate lifters might add 5 lbs per month; advanced lifters may fight for yearly PRs.
+New lifters can often add 2-5 kg weekly to major lifts for several months (termed "newbie gains"). This rate slows significantly after 6-12 months of training. Intermediate lifters might add 2 kg monthly; advanced lifters may work for years for personal records.
 
 **How do fitness metrics change with age?**
 
-VO2 max naturally declines about 1% per year after age 30. Maximum heart rate decreases predictably. However, training can significantly slow age-related decline, and relative fitness (compared to age peers) can improve throughout life.
+VO2 max declines approximately 1% per year after age 30 without training intervention. Maximum heart rate decreases predictably. Strength can be maintained well into older age with consistent training. Training substantially slows age-related decline across all metrics.
