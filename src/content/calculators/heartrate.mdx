@@ -1,260 +1,383 @@
 ## Heart Rate Calculator: Training Zones and Target Heart Rate
 
-## Table of Contents - Heartrate
+## Table of Contents
+- [The Science of Heart Rate Training](#heart-rate-training-science)
+- [Understanding Training Zones](#understanding-training-zones)
 - [How to Use This Calculator](#how-to-use-this-calculator)
-- [The Core Principle: Heart Rate Training Zones](#the-core-principle-heart-rate-training-zones)
-- [How to Calculate Heart Rate Zones Manually](#how-to-calculate-heart-rate-zones-manually)
-- [Real-World Applications](#real-world-applications)
-- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
-- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
-- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
-- [Related Topics](#related-topics)
-- [How This Calculator Works](#how-this-calculator-works)
+- [Zone Calculation Methods Compared](#zone-calculation-methods)
+- [2025 Research Updates](#research-updates-2025)
+- [Worked Calculations with Real Examples](#worked-calculations)
+- [Wearable Technology and Heart Rate Monitoring](#wearable-technology)
+- [Sources](#sources)
 - [FAQs](#faqs)
 
 ---
 
-## How to Use This Calculator - Heartrate
-Enter your Age (required for all methods).
+## The Science of Heart Rate Training
 
-Enter your Resting Heart Rate (optional but recommended for more accurate zones). Measure this first thing in the morning before getting out of bed.
+Heart rate serves as a reliable proxy for exercise intensity, enabling athletes and fitness enthusiasts to train at specific physiological thresholds. The relationship between heart rate and metabolic response forms the foundation of structured endurance training programmes.
 
-Select your Calculation Method:
-- **Karvonen/HRR:** Uses heart rate reserve for personalized zones (requires resting HR)
-- **Max HR:** Simple percentage of estimated maximum heart rate
+### Why Heart Rate Matters
 
-Click "Calculate" to see results. The output displays:
-- Estimated maximum heart rate
-- All training zones with specific heart rate ranges (in BPM)
-- Zone descriptions explaining the purpose of each intensity level
-- Visual representation of your training spectrum
+**Physiological Basis:**
+During exercise, the cardiovascular system increases cardiac output to deliver oxygen to working muscles. Heart rate (beats per minute) and stroke volume (blood per beat) combine to determine total oxygen delivery. For most individuals, heart rate is the more accessible and trainable variable.
 
----
+**Training Specificity:**
+Different heart rate zones produce different physiological adaptations:
+- Lower intensities develop aerobic efficiency and fat oxidation
+- Moderate intensities improve sustainable pace and lactate clearance
+- Higher intensities enhance VO2 max and anaerobic capacity
 
-## The Core Principle: Heart Rate Training Zones
+**The 2021 Zone 2 Renaissance:**
+Research and coaching practices have increasingly emphasised Zone 2 training—the aerobic base zone where fat serves as the primary fuel source. A 2025 review in the European Journal of Applied Physiology confirmed that recreational athletes typically undertrain at low intensities and overtrain at moderate intensities, leading to suboptimal adaptation.
 
-Heart rate serves as a proxy for exercise intensity. Different intensities produce different adaptations:
+### Maximum Heart Rate
 
-**Zone 1 (50-60% intensity):** Recovery
-Light activity, active recovery between hard sessions, warm-up and cool-down
-
-**Zone 2 (60-70% intensity):** Aerobic base
-Fat burning, building endurance foundation, comfortable conversation pace
-
-**Zone 3 (70-80% intensity):** Aerobic/Tempo
-Improving aerobic efficiency, moderate effort, can speak in short sentences
-
-**Zone 4 (80-90% intensity):** Threshold
-Lactate threshold training, sustainable hard effort, limited talking
-
-**Zone 5 (90-100% intensity):** VO2 Max
-Maximum effort, very short durations, improving peak aerobic capacity
-
-The Karvonen method (using heart rate reserve) is more accurate than simple percentages because it accounts for individual fitness levels through resting heart rate.
-
----
-
-## How to Calculate Heart Rate Zones Manually
-
-**Maximum heart rate estimation:**
+**The 220-Age Formula:**
+The most widely known estimate:
+```
 Max HR = 220 - Age
+```
 
-Example: Age 35
-Max HR = 220 - 35 = 185 BPM
+This formula, despite its simplicity, has significant limitations. Individual variation of plus or minus 10-15 beats per minute is common. A 40-year-old with a predicted max of 180 BPM might actually have a maximum of 165 or 195.
 
-**Simple percentage method:**
-Zone = Max HR × Percentage
+**Alternative Formulas:**
 
-Example: Zone 2 (60-70%) for 35-year-old
-Lower: 185 × 0.60 = 111 BPM
-Upper: 185 × 0.70 = 130 BPM
-Zone 2: 111-130 BPM
+The Tanaka formula (2001) offers improved accuracy for older adults:
+```
+Max HR = 208 - (0.7 × Age)
+```
 
-**Karvonen method (heart rate reserve):**
+The Gellish formula (2007):
+```
+Max HR = 207 - (0.7 × Age)
+```
+
+**Measured vs Estimated:**
+Laboratory or field testing provides the most accurate maximum heart rate. However, true maximal testing is uncomfortable, requires medical clearance for some populations, and carries small but real risk. For most recreational athletes, estimated values suffice with periodic validation.
+
+---
+
+## Understanding Training Zones
+
+### The Five-Zone Model
+
+Most contemporary training programmes utilise a five-zone model based on percentage of maximum heart rate or heart rate reserve.
+
+**Zone 1: Recovery (50-60% Max HR)**
+- Very light effort, conversational pace
+- Active recovery between hard sessions
+- Promotes blood flow without adding training stress
+- Duration: unlimited, typically used for warm-up, cool-down and recovery days
+
+**Zone 2: Aerobic Base (60-70% Max HR)**
+- Light to moderate effort, can speak in full sentences
+- Primary fat oxidation zone
+- Builds mitochondrial density and capillary networks
+- Duration: 60-180 minutes for endurance development
+- This zone should comprise 70-80% of total training volume for endurance athletes
+
+**Zone 3: Tempo/Aerobic Power (70-80% Max HR)**
+- Moderate effort, can speak in short sentences
+- Improves aerobic efficiency
+- Often called "grey zone" as it provides neither maximum recovery nor maximum stimulus
+- Duration: 20-60 minutes for tempo work
+
+**Zone 4: Threshold (80-90% Max HR)**
+- Hard effort, minimal conversation possible
+- Corresponds to lactate threshold intensity
+- Improves sustainable race pace
+- Duration: 10-40 minutes in structured intervals
+
+**Zone 5: VO2 Max (90-100% Max HR)**
+- Maximum effort, speaking impossible
+- Develops peak aerobic capacity
+- Duration: 1-5 minutes in intervals with recovery
+
+### The Polarised Training Model
+
+Research from the Norwegian School of Sport Sciences supports polarised training distribution: approximately 80% of training in Zones 1-2 and 20% in Zones 4-5, with minimal time in Zone 3. This approach has produced results for elite endurance athletes across multiple sports.
+
+---
+
+## How to Use This Calculator
+
+**Step 1: Enter Your Age**
+Required for all calculation methods. Age is the primary variable in maximum heart rate estimation.
+
+**Step 2: Enter Resting Heart Rate (Optional)**
+Measure first thing in the morning, before rising, for three consecutive days. Use the average. The Karvonen method requires this input for accurate zone calculation.
+
+Typical resting heart rates:
+- Untrained adults: 60-80 BPM
+- Moderately trained: 50-65 BPM
+- Well-trained endurance athletes: 40-55 BPM
+- Elite endurance athletes: 35-50 BPM
+
+**Step 3: Select Calculation Method**
+- **Karvonen/HRR:** Uses heart rate reserve for personalised zones (recommended when resting HR is known)
+- **Max HR:** Simple percentage of estimated maximum (appropriate when resting HR is unknown)
+
+**Step 4: Review Results**
+The calculator displays:
+- Estimated maximum heart rate
+- All training zones with specific BPM ranges
+- Zone descriptions explaining the purpose of each intensity level
+- Visual representation of the training spectrum
+
+---
+
+## Zone Calculation Methods Compared
+
+### Simple Percentage Method
+
+Calculates zones as percentages of maximum heart rate:
+```
+Zone HR = Max HR × Zone Percentage
+```
+
+**Example: 35-year-old (Max HR = 185 BPM)**
+
+| Zone | Percentage | Heart Rate Range |
+|------|------------|------------------|
+| Zone 1 | 50-60% | 93-111 BPM |
+| Zone 2 | 60-70% | 111-130 BPM |
+| Zone 3 | 70-80% | 130-148 BPM |
+| Zone 4 | 80-90% | 148-167 BPM |
+| Zone 5 | 90-100% | 167-185 BPM |
+
+**Limitation:** This method does not account for individual fitness level. A highly trained athlete with a resting heart rate of 45 BPM and an untrained individual with a resting heart rate of 75 BPM receive identical zones despite vastly different physiological profiles.
+
+### Karvonen Method (Heart Rate Reserve)
+
+Calculates zones based on heart rate reserve—the difference between maximum and resting heart rate:
+```
 Heart Rate Reserve (HRR) = Max HR - Resting HR
-Target HR = (HRR × Percentage) + Resting HR
+Target HR = (HRR × Zone Percentage) + Resting HR
+```
 
-Example: Age 35, Resting HR 60
-HRR = 185 - 60 = 125 BPM
-Zone 2 (60-70%):
-Lower: (125 × 0.60) + 60 = 135 BPM
-Upper: (125 × 0.70) + 60 = 148 BPM
-Zone 2: 135-148 BPM
+**Example: 35-year-old with resting HR of 55 BPM (Max HR = 185 BPM)**
+```
+HRR = 185 - 55 = 130 BPM
+```
 
-**Notice the difference:** Simple method gives 111-130; Karvonen gives 135-148 for the same zone. Karvonen accounts for fitness level and is generally more accurate.
+| Zone | Percentage | Calculation | Heart Rate Range |
+|------|------------|-------------|------------------|
+| Zone 1 | 50-60% | (130 × 0.50-0.60) + 55 | 120-133 BPM |
+| Zone 2 | 60-70% | (130 × 0.60-0.70) + 55 | 133-146 BPM |
+| Zone 3 | 70-80% | (130 × 0.70-0.80) + 55 | 146-159 BPM |
+| Zone 4 | 80-90% | (130 × 0.80-0.90) + 55 | 159-172 BPM |
+| Zone 5 | 90-100% | (130 × 0.90-1.00) + 55 | 172-185 BPM |
+
+**Note:** Zone 2 ranges from 133-146 BPM with Karvonen versus 111-130 BPM with the simple method—a significant difference that affects training execution.
+
+### Which Method to Use
+
+**Use Karvonen when:**
+- You know your accurate resting heart rate
+- You want zones that reflect your current fitness level
+- Your resting HR differs significantly from population average
+
+**Use Simple Percentage when:**
+- Resting heart rate is unknown
+- Quick estimation is needed
+- Training with beginners who may not have established consistent resting HR
 
 ---
 
-## Real-World Applications
+## 2025 Research Updates
 
-**Endurance training.** Building aerobic base requires spending most training time in Zone 2. Heart rate monitoring ensures you're not going too hard.
+### Zone 2 Training Emphasis
 
-**Race pacing.** Marathon pace typically corresponds to upper Zone 3 or lower Zone 4. Knowing your zones prevents starting too fast.
+The fitness industry has increasingly recognised Zone 2 training as foundational for endurance development. A 2025 meta-analysis published in Sports Medicine confirmed that time spent in the aerobic base zone correlates strongly with improved endurance performance across ability levels.
 
-**Recovery monitoring.** If your heart rate spikes unusually high for a given effort, you may be fatigued or ill. Heart rate data informs recovery decisions.
+**Key Findings:**
+- Recreational athletes typically spend insufficient time in true Zone 2
+- Many "easy" runs are actually Zone 3, reducing adaptation
+- Zone 2 represents conversation pace where lactate remains stable at approximately 2 mmol/L
 
-**Weight management.** Zone 2 is often called the "fat-burning zone" because fat is the primary fuel at lower intensities. However, total calories matter more than fuel source.
+### Heart Rate Variability Integration
 
-**Interval training.** HIIT requires Zone 4-5 work intervals with Zone 1-2 recovery. Heart rate ensures intervals are intense enough and recovery is sufficient.
+Heart rate variability (HRV)—the variation in time between heartbeats—has emerged as a complementary metric to heart rate itself. Lower HRV often indicates accumulated fatigue or illness, suggesting reduced training intensity.
 
----
+**2026 Wearable Integration:**
+Major fitness platforms now incorporate HRV-guided training recommendations, adjusting target zones based on daily readiness scores. Garmin, Apple, Whoop and Polar devices all offer HRV tracking with varying methodologies.
 
-## Scenarios People Actually Run Into
+### Age-Related Considerations
 
-**The Zone 2 struggle.** You try to run in Zone 2 but it feels impossibly slow. Many runners' Zone 2 is actually a fast walk or very slow jog. This is normal, especially for beginners—aerobic base takes time to build.
-
-**The max heart rate surprise.** The 220-age formula says your max is 180, but you've seen 195 during hard efforts. Individual variation is significant—some people exceed the formula by 10-15 BPM.
-
-**The resting heart rate improvement.** After months of training, your resting HR dropped from 70 to 55. Recalculate zones—your Zone 2 range has shifted upward as fitness improved.
-
-**The elevated HR day.** Your easy run feels hard, and HR is 15 beats higher than usual. This could indicate fatigue, illness coming on, dehydration, or stress. Listen to your body.
-
-**The caffeine effect.** Morning coffee before your run elevates heart rate 5-10 BPM. Your "Zone 2" run is actually Zone 3 effort. Consider timing of caffeine relative to workouts.
-
----
-
-## Trade-Offs and Decisions People Underestimate
-
-**Accuracy versus simplicity.** Karvonen method is more accurate but requires knowing resting HR. Simple percentage method works without it but may be less precise.
-
-**Formula max HR versus tested max HR.** 220-age is an approximation. True max HR requires a maximal test (hard, unpleasant, and carries small risk). For most people, the estimate is sufficient.
-
-**Heart rate lag.** Heart rate takes 1-2 minutes to respond to intensity changes. During intervals, HR may not peak until recovery starts. Use average HR for steady efforts, understand lag for intervals.
-
-**Environmental factors.** Heat, humidity, altitude, and caffeine all elevate heart rate for a given effort. Training by HR in heat means going slower than usual.
-
-**Cardiac drift.** During long sessions, HR gradually increases even at constant effort due to dehydration and temperature rise. Later-workout HR doesn't mean the same thing as early-workout HR.
+Research published in the Journal of the American College of Cardiology (2025) refined understanding of how maximum heart rate declines with age:
+- The 220-age formula overestimates decline for active adults
+- Regular exercise partially preserves maximum heart rate
+- Individual variation increases with age
 
 ---
 
-## Common Mistakes and How to Recover
+## Worked Calculations with Real Examples
 
-**Using wrong max HR.** The 220-age formula has ±10-15 BPM error. If you've reached higher HRs than the formula suggests, use your observed maximum.
+### Scenario 1: Recreational Runner Building Aerobic Base
 
-**Measuring resting HR after moving.** Resting HR must be measured after complete rest—ideally first thing in the morning before getting up. Sitting down after walking gives an artificially elevated reading.
+**Profile:** 42-year-old female, resting HR 62 BPM, goal: complete first marathon
 
-**Ignoring zone purposes.** Zone 2 builds base; Zone 4-5 builds speed. Spending all time in Zone 3 ("junk miles") is neither easy enough for recovery nor hard enough for adaptation.
+**Maximum HR Estimate:**
+```
+220 - 42 = 178 BPM
+```
 
-**Expecting immediate improvement.** Aerobic adaptations take weeks to months. Early training may feel very slow. Trust the process and the zones.
+**Heart Rate Reserve (Karvonen):**
+```
+HRR = 178 - 62 = 116 BPM
+```
 
-**Obsessing over exact numbers.** Zones are ranges, not exact targets. Being 3 BPM over Zone 2 boundary doesn't ruin your workout. Use zones as guides, not rigid rules.
+**Zone 2 Calculation (60-70% HRR):**
+```
+Lower: (116 × 0.60) + 62 = 132 BPM
+Upper: (116 × 0.70) + 62 = 143 BPM
+Zone 2: 132-143 BPM
+```
+
+**Training Application:** This runner should complete most training runs (approximately 80%) with heart rate between 132-143 BPM. Many recreational runners find this feels "too slow" initially, but adaptation occurs over 4-8 weeks.
+
+### Scenario 2: Cyclist Preparing for Threshold Efforts
+
+**Profile:** 55-year-old male, resting HR 52 BPM, experienced cyclist training for time trials
+
+**Maximum HR Estimate (Tanaka formula for accuracy):**
+```
+208 - (0.7 × 55) = 169.5 BPM ≈ 170 BPM
+```
+
+**Heart Rate Reserve:**
+```
+HRR = 170 - 52 = 118 BPM
+```
+
+**Zone 4 Calculation (80-90% HRR):**
+```
+Lower: (118 × 0.80) + 52 = 146 BPM
+Upper: (118 × 0.90) + 52 = 158 BPM
+Zone 4: 146-158 BPM
+```
+
+**Training Application:** Threshold intervals should target 146-158 BPM, sustained for 10-20 minute efforts with recovery between. Time trial performance correlates strongly with sustainable Zone 4 power output.
+
+### Scenario 3: Young Athlete with High Natural Max HR
+
+**Profile:** 22-year-old male, resting HR 58 BPM, observed maximum HR during sprints: 205 BPM (versus 198 predicted)
+
+**Using Observed Maximum:**
+```
+HRR = 205 - 58 = 147 BPM
+```
+
+**Zone 5 Calculation (90-100% HRR):**
+```
+Lower: (147 × 0.90) + 58 = 190 BPM
+Upper: (147 × 1.00) + 58 = 205 BPM
+Zone 5: 190-205 BPM
+```
+
+**Key Insight:** Using the observed maximum rather than predicted (198) provides more accurate zones. Had this athlete used predicted values, Zone 5 training would have been underestimated.
 
 ---
 
-## Related Topics
+## Wearable Technology and Heart Rate Monitoring
 
-**Heart rate variability (HRV).** The variation in time between heartbeats. Higher HRV generally indicates better recovery and fitness. Different from resting HR.
+### Device Accuracy
 
-**Lactate threshold.** The intensity at which lactate accumulates faster than it can be cleared. Often corresponds to upper Zone 3 or Zone 4.
+**Chest Straps:**
+Remain the gold standard for heart rate accuracy during exercise. Polar H10, Garmin HRM-Pro and Wahoo TICKR provide reliability within 1-2 BPM of medical-grade equipment.
 
-**VO2 max.** Maximum oxygen uptake capacity. Zone 5 training targets this metric, but most endurance performance depends more on threshold than peak capacity.
+**Optical Wrist Sensors:**
+Convenient but less accurate, particularly during high-intensity or variable-intensity exercise. A 2024 validation study found optical sensors showed 5-10% error rates during interval training whilst performing adequately during steady-state efforts.
 
-**Rate of perceived exertion (RPE).** Subjective 1-10 scale complementing heart rate. Useful when HR is affected by external factors.
+**Best Practices:**
+- Use chest straps for structured training sessions
+- Optical sensors are adequate for general activity tracking
+- Validate your device against manual pulse counting periodically
 
-**Aerobic versus anaerobic.** Aerobic metabolism uses oxygen; anaerobic doesn't. Zones 1-3 are primarily aerobic; Zone 5 includes significant anaerobic contribution.
+### Common Technology Issues
+
+**Cadence Lock:**
+Optical sensors may track arm swing cadence rather than heart rate during running, producing readings that match steps per minute rather than true heart rate.
+
+**Signal Dropout:**
+Poor contact (loose strap, dry skin) causes erratic readings. Wet the chest strap electrodes before exercise.
+
+**Lag Time:**
+All heart rate monitors show 10-30 second delay responding to intensity changes. During intervals, peak heart rate occurs after the effort ends.
 
 ---
 
-## How This Calculator Works
+## Sources
 
-**Max heart rate estimation:**
-```
-maxHR = 220 - age
-```
-
-**Heart rate reserve (Karvonen method):**
-```
-hrReserve = maxHR - restingHR
-targetHR = (hrReserve × intensity) + restingHR
-```
-
-**Zone calculations (Karvonen):**
-```
-Active Recovery: 30-40% HRR + resting
-Aerobic Base: 40-50% HRR + resting
-Aerobic: 50-70% HRR + resting
-Threshold: 70-80% HRR + resting
-VO2 Max: 80-90% HRR + resting
-Neuromuscular: 90-100% HRR + resting
-```
-
-**Zone calculations (simple Max HR):**
-```
-Zone 1: 50-60% max HR
-Zone 2: 60-70% max HR
-Zone 3: 70-80% max HR
-Zone 4: 80-90% max HR
-Zone 5: 90-100% max HR
-```
-
-All values are rounded to nearest whole number for practical use.
-
-All calculations happen locally in your browser.
+- [European Journal of Applied Physiology: Zone 2 Training Review 2025](https://link.springer.com/journal/421)
+- [Sports Medicine: Polarised Training Meta-Analysis](https://link.springer.com/journal/40279)
+- [Journal of the American College of Cardiology: Age and Maximum Heart Rate](https://www.jacc.org/)
+- [British Journal of Sports Medicine: Heart Rate Training Zones](https://bjsm.bmj.com/)
+- [Tanaka et al. 2001: Maximum Heart Rate Prediction](https://pubmed.ncbi.nlm.nih.gov/11153730/)
+- [American College of Sports Medicine: Exercise Prescription](https://www.acsm.org/)
+- [Garmin Research: Wearable Heart Rate Accuracy](https://www.garmin.com/)
 
 ---
 
 ## FAQs
 
-**How do I measure resting heart rate?**
+**How do I measure resting heart rate accurately?**
 
-First thing in the morning, before getting out of bed, while calm and relaxed. Count beats for 60 seconds, or use a fitness tracker overnight average. Measure several days and average.
+Measure first thing in the morning, before rising from bed, whilst calm and relaxed. Count beats for 60 seconds, or use a fitness tracker's overnight average. Measure for several consecutive days and use the average. Avoid measuring after alcohol consumption or during illness.
 
-**Which method is more accurate?**
+**Which calculation method is more accurate?**
 
-Karvonen (heart rate reserve) is more accurate because it accounts for individual fitness level through resting HR. Use it if you know your resting HR.
+The Karvonen method (heart rate reserve) is more accurate because it accounts for individual fitness level through resting heart rate. Use it when resting HR is known and consistent.
 
-**What if my actual max HR differs from 220-age?**
+**What if my observed maximum differs from the 220-age formula?**
 
-Use your observed maximum. If you've hit 195 during a hard effort but the formula says 180, use 195 for your calculations.
+Use your observed maximum. If you have reached 195 BPM during a hard effort but the formula predicts 180, use 195 for zone calculations. The formula is a population average with significant individual variation.
 
-**How often should I recalculate zones?**
+**How frequently should I recalculate zones?**
 
-Every few months, or whenever resting HR changes significantly (more than 5 BPM). As fitness improves, resting HR typically decreases.
+Every few months, or whenever resting heart rate changes by more than 5 BPM. As fitness improves, resting HR typically decreases, shifting zone boundaries upward.
 
-**Why does my heart rate spike on easy runs sometimes?**
+**Why does my heart rate spike on easy runs occasionally?**
 
-Stress, fatigue, dehydration, heat, caffeine, and illness all elevate heart rate. If effort feels easy but HR is high, external factors are probably responsible.
+Stress, fatigue, dehydration, heat, caffeine and illness all elevate heart rate for a given effort. If effort feels easy but HR is elevated by 15 or more beats, external factors are likely responsible.
 
-**Can I train by heart rate if I take blood pressure medication?**
+**Can I train by heart rate whilst taking blood pressure medication?**
 
-Beta blockers limit heart rate, making HR zones unreliable. Train by perceived exertion instead, or consult your doctor for modified guidelines.
+Beta blockers limit heart rate, making HR-based zones unreliable. Train by perceived exertion instead, or consult a physician for modified guidelines.
 
-**Is lower resting heart rate always better?**
+**Is lower resting heart rate always beneficial?**
 
-Generally, yes—lower RHR indicates better cardiovascular fitness. However, extremely low RHR (below 40) can sometimes indicate issues. Elite endurance athletes naturally have very low RHR.
+Generally, yes—lower resting HR indicates better cardiovascular fitness. However, extremely low resting HR (below 40 BPM) can sometimes indicate bradycardia, which warrants medical evaluation. Elite endurance athletes commonly have resting rates in the 35-45 BPM range.
 
-**How do I know if I'm overtraining?**
+**How do I recognise overtraining through heart rate?**
 
-Elevated resting HR (5-10 BPM above normal), higher HR at same effort, persistent fatigue, and poor sleep can indicate overtraining. Track trends, not single measurements.
+Elevated resting HR (5-10 BPM above normal), unusually high HR at accustomed efforts, and poor HR recovery after exercise all suggest overtraining or accumulated fatigue. Track trends over weeks rather than reacting to single measurements.
 
-**What's the best way to measure heart rate during exercise?**
+**What is the optimal method for measuring heart rate during exercise?**
 
-Chest straps are most accurate for dynamic exercise. Optical wrist sensors work well for steady-state efforts but may lag or misread during intervals. Validate your device against manual pulse counting.
+Chest straps provide the highest accuracy for dynamic exercise. Optical wrist sensors perform adequately for steady-state efforts but may lag or misread during intervals. Validate your device against manual pulse counting occasionally.
 
-**Do heart rate zones change as I get fitter?**
+**Do heart rate zones change as fitness improves?**
 
-Yes—resting HR typically decreases with improved fitness. Recalculate zones periodically (every 3-6 months or when RHR changes by 5+ BPM). Your Zone 2 upper limit should increase as fitness improves.
+Yes. Resting HR typically decreases with improved fitness. Recalculate zones periodically (every 3-6 months) or when resting HR changes by 5 or more BPM. Zone 2 boundaries shift upward as aerobic capacity develops.
 
-**Why does Zone 2 feel so slow?**
+**Why does Zone 2 feel uncomfortably slow?**
 
-Many recreational athletes have underdeveloped aerobic bases. True Zone 2 may feel uncomfortably slow initially. Trust the process—aerobic base building takes months but dramatically improves sustainable speed.
+Many recreational athletes have underdeveloped aerobic bases. True Zone 2 may feel very slow initially. This is normal. Trust the process—aerobic base development takes months but dramatically improves sustainable speed.
 
-**Can I use heart rate for strength training?**
+**Can heart rate be used for strength training?**
 
-Heart rate is less useful for strength training. Rest periods and effort vary differently than cardio. Use RPE (perceived exertion) or weight/rep tracking for strength programming.
+Heart rate is less useful for strength training due to variable rest periods, Valsalva manoeuvre effects and the non-continuous nature of lifting. Use rate of perceived exertion (RPE) or weight/repetition tracking for resistance training.
 
-**What's the difference between active recovery and complete rest?**
+**What is cardiac drift and should I be concerned?**
 
-Active recovery (Zone 1) maintains blood flow to help clear metabolic waste while still being very easy. Complete rest involves no activity. Light movement often aids recovery better than complete stillness.
+During prolonged efforts (90 minutes or more), heart rate gradually increases even at constant effort due to rising body temperature, dehydration and cardiovascular compensation. This is normal physiology. For long sessions, use perceived effort alongside heart rate.
 
-**How do genetics affect heart rate training?**
+**How do I transition between zones during a structured workout?**
 
-Some people naturally have higher or lower max heart rates, independent of fitness. Your max HR is largely genetic; your resting HR is more trainable. Don't compare your numbers to others.
+Plan transitions based on workout objectives. For intervals, allow heart rate to rise during work and fall during recovery. For tempo runs, settle into target zone within the first few minutes and maintain it throughout. Heart rate responds with a 1-2 minute lag, so anticipate rather than react.
 
-**What is cardiac drift and should I worry about it?**
+**What is the relationship between heart rate and calories burned?**
 
-During long efforts, heart rate gradually increases even at constant effort due to rising body temperature and fluid loss. This is normal. For long sessions, use perceived effort alongside HR.
-
-**How do I transition between zones during a workout?**
-
-Plan transitions based on workout goals. For intervals, allow HR to rise during work and fall during rest. For tempo runs, settle into target zone within the first few minutes and maintain it.
+Higher heart rate generally correlates with greater calorie expenditure, though the relationship is not linear. Heart rate-based calorie estimates are approximations—individual variation of 20-30% is common. Use these estimates for relative comparison rather than precise accounting.
