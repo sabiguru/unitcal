@@ -10,6 +10,8 @@ export const EZOIC_PLACEMENTS = {
   // Calculator page placements
   CALCULATOR_CONTENT: 111,  // Reuse 111 for calculator pages
   CALCULATOR_SIDEBAR: 113,  // Reuse 113 for calculator sidebar
+  CALCULATOR_SIDEBAR_TOP: 115,  // Calculator sidebar top placement
+  CALCULATOR_SIDEBAR_BOTTOM: 116,  // Calculator sidebar bottom placement
   
   // Category page placements
   CATEGORY_TOP: 114,        // Reuse 114 for category pages
