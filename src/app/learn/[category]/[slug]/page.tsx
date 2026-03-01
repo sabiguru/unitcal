@@ -5,8 +5,6 @@ import { Metadata } from 'next';
 import Header from '@/components/Header';
 import { getLearnSeo } from '@/data/learnSeoBySlug';
 import LearnMDXContent from '@/components/LearnMDXContent';
-import EzoicAd from '@/components/ads/EzoicAd';
-import { EZOIC_PLACEMENTS } from '@/config/ezoicPlacements';
 import { getRelatedCalculators } from '@/data/relatedCalculators';
 import { getCategoryForSlug, getSlugsForCategory } from '@/utils/learnCategoryMapping';
 import { calculatorCategories } from '@/data/categoryData';
@@ -236,11 +234,6 @@ export default async function LearnPage({ params }: LearnPageProps) {
                   </a>
                 ))}
               </div>
-            </div>
-
-            {/* Advertisement */}
-            <div className="mb-6">
-              <EzoicAd placementId={EZOIC_PLACEMENTS.LEARN_SIDEBAR} className="text-center" />
             </div>
 
             {/* Tips Box */}

@@ -4,9 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import { calculatorCategories } from '@/data/categoryData';
-import EzoicAd from '@/components/ads/EzoicAd';
 import AdsSidebar from '@/components/ads/AdsSidebar';
-import { EZOIC_PLACEMENTS } from '@/config/ezoicPlacements';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import { organizationSchema, websiteSchema } from '@/config/schemas';
 import CalculatorCategoryGrid from '@/components/CalculatorCategoryGrid';
@@ -565,23 +563,14 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Column - Sidebar with Ads */}
+          {/* Right Column - Sidebar */}
           <div className="col-span-12 lg:col-span-4">
-            <EzoicAd placementId={EZOIC_PLACEMENTS.HOME_SIDEBAR_TOP} className="mb-6" />
-            
-            <AdsSidebar 
+            <AdsSidebar
               hidePopularCalculators={true}
               hideCalculatorStats={true}
               hideCalculationTips={true}
             />
-            
-            <EzoicAd placementId={EZOIC_PLACEMENTS.HOME_SIDEBAR_BOTTOM} className="mt-6" />
           </div>
-        </div>
-
-        {/* Banner Advertisement */}
-        <div className="mb-12">
-          <EzoicAd placementId={EZOIC_PLACEMENTS.HOME_BANNER} className="text-center" />
         </div>
 
         {/* Bottom Section - All Calculator Categories */}

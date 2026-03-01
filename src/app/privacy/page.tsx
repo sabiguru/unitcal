@@ -180,8 +180,6 @@ export default function PrivacyPage() {
                 If you have any questions about this Privacy Policy or our privacy practices, please contact us through our website or support channels.
               </p>
 
-              <span id="ezoic-privacy-policy-embed"></span>
-
               <div className="mt-8 p-4 bg-green-50 rounded-lg border border-green-200">
                 <p className="text-green-800 text-sm">
                   <strong>Your Privacy Matters:</strong> We are committed to transparency and protecting your personal information. If you have concerns about how we handle your data, please don't hesitate to reach out to us.

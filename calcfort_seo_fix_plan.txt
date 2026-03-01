@@ -1,0 +1,438 @@
+================================================================
+CALCFORT.COM — COMPLETE SEO & INDEXING FIX PLAN
+================================================================
+Compiled from full technical audit conducted March 2026
+Priority order: fix top items first, they have compounding effects
+================================================================
+
+
+----------------------------------------------------------------
+ISSUE 1 — BROKEN BREADCRUMB URL (Code Bug)
+Priority: CRITICAL — Fix Immediately
+----------------------------------------------------------------
+
+WHAT IS WRONG:
+Your JSON-LD breadcrumb structured data contains a JavaScript bug
+on every single page. The third breadcrumb item resolves to:
+
+  "item": "https://calcfort.comundefined"
+
+The word "undefined" is literally being concatenated into the URL
+because a variable holding the current page path is not being
+passed correctly to the breadcrumb component. This affects every
+page on the site.
+
+Google's structured data parser reads this, flags it as an error,
+and treats the entire page's structured data as untrustworthy.
+This is a site-wide trust signal problem.
+
+HOW TO FIX:
+In your Next.js breadcrumb component, find where the third
+breadcrumb item URL is being constructed. It will look something
+like:
+
+  item: "https://calcfort.com" + slug  (where slug is undefined)
+
+Fix it so the full canonical URL is passed correctly. Example of
+what the correct output should look like:
+
+  {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Percentage Calculator",
+    "item": "https://calcfort.com/calculator/mathematics/percentage"
+  }
+
+The "item" field for the current page should use the page's own
+canonical URL, which you already have available in your page
+metadata. Pass it through to the breadcrumb component properly.
+
+After fixing, validate every page type using:
+  https://search.google.com/test/rich-results
+
+EXPECTED OUTCOME:
+Structured data errors resolved across all 222 pages. Google
+regains trust in your schema markup.
+
+
+----------------------------------------------------------------
+ISSUE 2 — OG TAGS POINTING TO HOMEPAGE ON EVERY PAGE
+Priority: CRITICAL — Fix Immediately
+----------------------------------------------------------------
+
+WHAT IS WRONG:
+Every single calculator and learn page on your site currently
+sends Google these identical Open Graph tags:
+
+  <meta property="og:url" content="https://calcfort.com" />
+  <meta property="og:title" content="Calcfort — Free Online Calculators" />
+  <meta property="og:description" content="Free calculators for maths,
+    finance, health and engineering. Get instant results..." />
+
+When Google crawls 222 pages and they all declare og:url as the
+homepage, Google treats them all as duplicates of each other and
+of the homepage. This is directly why "Google-selected canonical"
+was BLANK in Search Console — Google could not distinguish any
+of your pages from one another.
+
+This is the primary reason none of your pages are being indexed.
+
+HOW TO FIX:
+In your Next.js layout or page metadata generation (likely in
+generateMetadata() or your layout.tsx), ensure each page passes
+its own specific values for OG tags.
+
+For the percentage calculator page, the correct tags should be:
+
+  <meta property="og:url"
+    content="https://calcfort.com/calculator/mathematics/percentage" />
+  <meta property="og:title"
+    content="Percentage Calculator — Percent Change & Difference" />
+  <meta property="og:description"
+    content="Calculate percentages, percent increase, decrease and
+    change between numbers quickly and accurately." />
+
+The og:url must match the canonical URL of each individual page.
+The og:title should match the page <title> tag.
+The og:description should match the page meta description.
+
+In Next.js App Router using generateMetadata(), this looks like:
+
+  export async function generateMetadata({ params }) {
+    return {
+      openGraph: {
+        title: pageTitle,         // page-specific
+        description: pageDesc,    // page-specific
+        url: "https://calcfort.com/calculator/" + params.category
+             + "/" + params.slug,
+      },
+    };
+  }
+
+Do this for ALL page types:
+  - /calculator/[category]/[slug]
+  - /learn/[category]/[slug]
+  - /calculator/[category]  (category index pages)
+  - /learn  (learn index page)
+  - All other pages
+
+EXPECTED OUTCOME:
+Google can now distinguish each page as a unique URL. The
+Google-selected canonical field will populate. Pages become
+eligible for indexing. This single fix is the most impactful
+change you can make.
+
+
+----------------------------------------------------------------
+ISSUE 3 — FAKE AGGREGATE RATINGS IN STRUCTURED DATA
+Priority: HIGH — Fix Before Requesting Re-indexing
+----------------------------------------------------------------
+
+WHAT IS WRONG:
+Every calculator page contains this JSON-LD schema:
+
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "1250",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+
+There is no visible rating mechanism on any page. A site founded
+in 2024 cannot have 1,250 genuine user ratings per calculator.
+Google's quality systems and the March 2024 spam update
+specifically target fake structured data as a spam signal. If a
+manual reviewer or automated system flags this, it can trigger a
+site-wide quality demotion that is very difficult to recover from.
+
+HOW TO FIX:
+Remove the aggregateRating block entirely from all pages.
+
+Do not replace it with lower numbers — any hardcoded rating
+without a real review system is still fake and still a risk.
+
+If you want to add real ratings in future, implement an actual
+user rating widget that stores and displays genuine submissions,
+then add the schema only once you have real data.
+
+EXPECTED OUTCOME:
+Removal of a significant spam signal from all 222 pages.
+Reduces risk of manual penalty. Improves structured data
+validity scores.
+
+
+----------------------------------------------------------------
+ISSUE 4 — AUTHOR / E-E-A-T SIGNALS MISSING
+Priority: MEDIUM — Implement After Fixing Issues 1-3
+----------------------------------------------------------------
+
+WHAT IS WRONG:
+No author attribution exists on any page. Google's quality
+systems (E-E-A-T: Experience, Expertise, Authoritativeness,
+Trustworthiness) require a credible human identity behind content.
+A site with 150+ pages covering mathematics, finance, engineering,
+space, chemistry, and energy — all with no named author — matches
+the profile of automated content farms Google actively suppresses.
+
+YOUR SITUATION:
+You have a PhD in Electrical and Electronic Engineering and
+professional experience at a major semiconductor company. This
+makes you genuinely credible across mathematics, engineering
+tools, and technical content. You do not need to use your real
+name — a consistent pen name with a truthful bio is sufficient.
+
+HOW TO FIX (OPTION A — Pen Name, Recommended):
+
+1. Choose a pen name. Suggestion: "Ben Konna" or similar.
+
+2. Create an author page at: calcfort.com/about/ben-konna
+   Content should include (all truthful, nothing identifying):
+
+   "Ben holds a PhD in Electrical and Electronic Engineering and
+   has spent over a decade working in technical IC design and
+   implementation. He writes about mathematics, engineering
+   tools, and practical calculation methods, drawing on deep
+   experience with complex technical systems and real-world
+   engineering problems."
+
+3. Add author attribution to every article and calculator page:
+   - Visible byline: "By Ben Konna"
+   - Link the byline to the author page
+   - Add Person schema to the author page:
+
+   {
+     "@context": "https://schema.org",
+     "@type": "Person",
+     "name": "Ben Konna",
+     "url": "https://calcfort.com/about/ben-konna",
+     "description": "PhD engineer specialising in mathematics
+       and technical implementation"
+   }
+
+HOW TO FIX (OPTION B — Brand Author, Simpler):
+
+1. Use "The CalcFort Team" as the author on all pages.
+
+2. Create a proper /about page that describes:
+   - The team's background in engineering and mathematics
+   - The purpose and approach of the site
+   - Contact information
+
+3. This is weaker than a named person but significantly better
+   than no author at all.
+
+EXPECTED OUTCOME:
+Establishes E-E-A-T signals. Gives Google a credible identity
+to attribute content to. Reduces the "automated content farm"
+profile of the site.
+
+
+----------------------------------------------------------------
+ISSUE 5 — AD SCRIPTS LOADING BEFORE CONTENT
+Priority: LOW — Address After Core Issues Fixed
+----------------------------------------------------------------
+
+WHAT IS WRONG:
+Multiple heavy third-party scripts load in the <head> before
+page content:
+  - Ezoic (sa.min.js)
+  - Gatekeeper Consent (min.js and cmp.min.js)
+  - id5-sync API
+  - Google Tag Manager (loaded via requestIdleCallback, which
+    is better, but other scripts still block)
+
+For a new site with no established authority, heavy ad
+infrastructure loading on every page before the site has proven
+its value to Google sends a poor Page Experience signal. Ezoic
+in particular is known to interfere with Googlebot rendering
+in some configurations.
+
+HOW TO FIX:
+1. Ensure ALL third-party scripts use defer or async attributes
+   and load after the main content is parsed.
+2. Move non-critical scripts to load on user interaction or
+   after a delay (requestIdleCallback pattern — you already
+   do this for GTM, apply it to others).
+3. Consider whether Ezoic monetisation is worth keeping while
+   the site is still trying to establish indexing. Ezoic
+   requires a minimum traffic threshold anyway — it may be
+   adding render complexity with no revenue benefit at this
+   stage.
+4. Test Page Experience scores at:
+   https://pagespeed.web.dev/
+
+EXPECTED OUTCOME:
+Improved Core Web Vitals. Cleaner rendering for Googlebot.
+Reduced risk of render-blocking issues affecting content
+visibility.
+
+
+----------------------------------------------------------------
+ISSUE 6 — SITE-WIDE CONTENT QUALITY SIGNALS
+Priority: MEDIUM — Ongoing, Run in Parallel
+----------------------------------------------------------------
+
+WHAT IS WRONG:
+Google's Helpful Content System (integrated into core ranking
+since March 2024) applies site-wide quality signals. Your site
+currently matches several patterns it flags:
+
+  - Large volume of pages published rapidly across many
+    unrelated topic domains
+  - Identical content structure across all pages
+  - No unique data, original research, or first-hand experience
+  - Content that exists primarily to funnel users to a tool
+    rather than to inform independently
+
+HOW TO FIX (Long-term content strategy):
+
+1. Pick 2-3 topic areas where your background gives you
+   genuine authority. Given your engineering PhD and
+   experience, the strongest candidates are:
+     - Mathematics & calculation tools
+     - Engineering & electronics calculators
+   These align with verifiable expertise. Energy/finance/space
+   are weaker without domain-specific credentials.
+
+2. For your highest-priority calculator pages, add something
+   no other site has — a real example from engineering practice,
+   a note about how this calculation is used in IC design, or
+   a specific insight from professional experience. Even one
+   paragraph of genuine expert perspective per page changes
+   the quality signal significantly.
+
+3. Consider removing or noindexing the weakest pages — "Space
+   Discoveries 2026", "A Day on Mars", and similar content
+   that has no connection to your site's core purpose and no
+   credible expertise behind it. These pages actively drag
+   down your domain's quality score.
+
+4. The /learn/ articles that exist purely to explain your own
+   calculators are low-value in Google's eyes. Either make
+   them genuinely useful independent resources (not just
+   "here's how to use our calculator") or noindex them and
+   focus Google's attention on the calculator pages themselves.
+
+EXPECTED OUTCOME:
+Gradual improvement in site-wide quality signals. Better
+alignment between content and demonstrable expertise. Reduced
+risk of Helpful Content System suppression.
+
+
+================================================================
+IMPLEMENTATION SEQUENCE
+================================================================
+
+Week 1 — Code Fixes (Issues 1, 2, 3):
+  [ ] Fix breadcrumb undefined URL bug in Next.js component
+  [ ] Fix OG tags to be page-specific across all page types
+  [ ] Remove fake aggregateRating from all structured data
+  [ ] Validate fixes using Rich Results Test and View Source
+  [ ] Submit 5-10 key pages via Search Console URL Inspection
+
+Week 2 — Author & Trust (Issue 4):
+  [ ] Create author page (pen name or brand) pen name is BenKonna
+  [ ] Add byline to all calculator and learn pages - this should not give details of where I work, but can say things like has a PhD in Elec..., likes designing calculators, has published 3 peer reviewed paper, .... see my CV to get what to write.
+  [ ] Add Person or Organization schema to author page - use person
+  [ ] Update About page with genuine background information
+
+Week 2-3 — Technical Performance (Issue 5):
+  [ ] Audit all third-party script loading - also disable Ezoic for now.
+  [ ] Defer/async all non-critical scripts
+  [ ] Run PageSpeed Insights and address LCP/CLS issues
+  [ ] Re-test with Google's Rich Results Test
+
+Ongoing — Content Quality (Issue 6):
+  [ ] Identify 10 highest-priority calculator pages to improve
+  [ ] Add genuine expert perspective to those pages
+  [ ] Review /learn/ section — noindex or improve weakest pages
+  [ ] Consider removing off-topic content (space, mars, etc.)
+  [ ] Build 2-3 external backlinks from relevant sites
+
+
+================================================================
+HOW TO VERIFY FIXES ARE WORKING
+================================================================
+
+After implementing Issues 1-3, do the following:
+
+1. Go to Google Search Console > URL Inspection
+2. Enter: https://calcfort.com/calculator/mathematics/percentage
+3. Click "Test Live URL"
+4. Click "View Tested Page" > HTML tab
+5. Check that:
+   - og:url shows the page-specific URL (not homepage)
+   - Breadcrumb schema shows correct URL (not "undefined")
+   - No aggregateRating block present
+6. Click "Request Indexing"
+7. Repeat for 5-10 other pages across different categories
+
+Check back in 2-3 weeks. If Google-selected canonical now
+shows the page URL (not blank), the core issues are resolved
+and indexing should follow within 4-6 weeks.
+
+Key metric to watch in Search Console:
+  Pages report > "Crawled - currently not indexed" count
+  This should decrease as fixes take effect.
+
+
+================================================================
+TOOLS FOR ONGOING MONITORING
+================================================================
+
+Google Search Console (free):
+  https://search.google.com/search-console
+  - URL Inspection for individual page checks
+  - Pages report for indexing status
+  - Rich Results for structured data validation
+
+Rich Results Test (free):
+  https://search.google.com/test/rich-results
+  - Use after every structured data change
+
+PageSpeed Insights (free):
+  https://pagespeed.web.dev/
+  - Core Web Vitals and performance scores
+
+Schema Markup Validator (free):
+  https://validator.schema.org/
+  - Validate all JSON-LD structured data
+
+Bing Webmaster Tools (free):
+  https://www.bing.com/webmasters
+  - Useful comparison since Bing already indexes your pages
+
+
+================================================================
+SUMMARY — ROOT CAUSES IN ORDER OF IMPACT
+================================================================
+
+1. OG tags pointing to homepage on every page
+   → Google sees all pages as duplicates → no canonical selected
+   → NONE of your pages can be indexed
+
+2. Breadcrumb URL bug ("undefined" in every page's schema)
+   → Structured data flagged as invalid on every page
+   → Google loses trust in all your schema markup
+
+3. Fake aggregate ratings in structured data
+   → Spam signal on every page
+   → Risk of manual penalty
+
+4. No author attribution
+   → Fails E-E-A-T evaluation
+   → Matches automated content farm profile
+
+5. Heavy ad scripts before content
+   → Poor Page Experience signals
+   → Potential render interference with Googlebot
+
+Fix items 1 and 2 this week. They are code bugs, not content
+problems, and they are the direct cause of 222 pages showing
+"Crawled - currently not indexed" with a blank Google-selected
+canonical.
+
+================================================================
+END OF PLAN
+================================================================

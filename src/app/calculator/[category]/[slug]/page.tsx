@@ -4,8 +4,6 @@ import { seoBySlug } from '@/data/seoBySlug';
 import Header from '@/components/Header';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { generateCalculatorBreadcrumbs } from '@/lib/breadcrumbs';
-import EzoicAd from '@/components/ads/EzoicAd';
-import { EZOIC_PLACEMENTS } from '@/config/ezoicPlacements';
 import { getRelatedCalculators } from '@/data/relatedCalculators';
 import { getCategoryForCalculator } from '@/utils/calculatorCategoryMapping';
 import MDXContent from '@/components/MDXContent';
@@ -143,8 +141,6 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
               <Calc />
             </CalculatorWithReset>
 
-            <EzoicAd placementId={EZOIC_PLACEMENTS.CALCULATOR_CONTENT} className="text-center" />
-
             {meta.mdx && (
               <>
                 <AuthorByline className="mb-4" />
@@ -154,8 +150,6 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
           </main>
 
           <aside className="col-span-12 lg:col-span-4 space-y-6">
-            <EzoicAd placementId={EZOIC_PLACEMENTS.CALCULATOR_SIDEBAR_TOP} />
-
             {relatedCalculators && relatedCalculators.length > 0 && (
               <div className="bg-white rounded-xl border border-gray-200 shadow-md p-6">
                 <h2 className="text-xl font-bold text-slate-700 mb-4">Related {meta.category} Calculators</h2>
@@ -173,8 +167,6 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
                 </div>
               </div>
             )}
-
-            <EzoicAd placementId={EZOIC_PLACEMENTS.CALCULATOR_SIDEBAR_BOTTOM} />
           </aside>
         </div>
       </div>
