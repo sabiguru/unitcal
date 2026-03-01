@@ -168,13 +168,7 @@ export default async function LearnPage({ params }: LearnPageProps) {
   const webPageSchemaData = generateWebPageSchema(
     title,
     learnUrl,
-    description,
-    [
-      { name: 'Home', url: 'https://calcfort.com' },
-      { name: 'Learn', url: 'https://calcfort.com/learn' },
-      { name: categoryData?.title || category, url: `https://calcfort.com/learn/${category}` },
-      { name: title, url: learnUrl }
-    ]
+    description
   );
 
   const allSchemas = [organizationSchema, articleSchemaData, webPageSchemaData];

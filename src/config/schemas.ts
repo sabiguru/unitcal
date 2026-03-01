@@ -50,13 +50,13 @@ export const websiteSchema = {
 };
 
 // WebPage Schema generator for individual pages
+// Note: Breadcrumbs are handled separately by the Breadcrumbs component's JSON-LD
 export function generateWebPageSchema(
   pageName: string,
   pageUrl: string,
-  description: string,
-  breadcrumbs?: Array<{ name: string; url: string }>
+  description: string
 ) {
-  const schema: any = {
+  return {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: pageName,
@@ -73,21 +73,6 @@ export function generateWebPageSchema(
       url: 'https://calcfort.com'
     }
   };
-
-  if (breadcrumbs && breadcrumbs.length > 0) {
-    schema.breadcrumb = {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: breadcrumbs.map((crumb, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: crumb.name,
-        item: crumb.url
-      }))
-    };
-  }
-
-  return schema;
 }
 
 // SoftwareApplication Schema for calculators

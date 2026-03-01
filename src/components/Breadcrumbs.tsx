@@ -46,36 +46,26 @@ export default function Breadcrumbs({ items, className = '' }: BreadcrumbsProps)
         className={`bg-gray-50 border-b border-gray-200 ${className}`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <ol
-            className="flex text-sm text-gray-600"
-            itemScope
-            itemType="https://schema.org/BreadcrumbList"
-          >
+          <ol className="flex text-sm text-gray-600">
             {items.map((item, index) => (
               <li
                 key={index}
                 className="flex items-center"
-                itemProp="itemListElement"
-                itemScope
-                itemType="https://schema.org/ListItem"
               >
                 {item.href && !item.current ? (
                   <Link
                     href={item.href}
                     className="hover:text-blue-600 transition-colors"
-                    itemProp="item"
                   >
-                    <span itemProp="name">{item.label}</span>
+                    {item.label}
                   </Link>
                 ) : (
                   <span
                     className={item.current ? 'text-gray-900 font-medium' : 'text-gray-600'}
-                    itemProp="name"
                   >
                     {item.label}
                   </span>
                 )}
-                <meta itemProp="position" content={(index + 1).toString()} />
                 {index < items.length - 1 && (
                   <svg
                     className="w-5 h-5 text-gray-400 mx-2"

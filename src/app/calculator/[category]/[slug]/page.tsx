@@ -121,11 +121,7 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
   const webPageSchemaData = generateWebPageSchema(
     meta.title,
     calculatorUrl,
-    meta.description,
-    breadcrumbs.map(b => ({
-      name: b.label,
-      url: b.canonicalUrl || (b.href ? `https://calcfort.com${b.href}` : calculatorUrl)
-    }))
+    meta.description || ''
   );
 
   const allSchemas = [

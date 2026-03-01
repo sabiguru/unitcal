@@ -125,11 +125,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   const webPageSchemaData = generateWebPageSchema(
     `${category.title} Calculators`,
     categoryUrl,
-    category.description,
-    breadcrumbs.map(b => ({
-      name: b.label,
-      url: b.canonicalUrl || (b.href ? `https://calcfort.com${b.href}` : categoryUrl)
-    }))
+    category.description
   );
 
   const allSchemas = [
