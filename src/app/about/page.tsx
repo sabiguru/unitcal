@@ -135,6 +135,27 @@ export default function AboutPage() {
           <CalculatorCategoryGrid title="Calculator Categories" />
         </div>
 
+        {/* Author Section */}
+        <div className="mb-20">
+          <h3 className="text-2xl font-bold text-slate-700 text-center mb-12">Meet the Author</h3>
+          <div className="max-w-2xl mx-auto">
+            <Link href="/about/ben-konna" className="block bg-white rounded-xl shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center space-x-6">
+                <div className="w-20 h-20 bg-gradient-to-r from-slate-600 to-slate-700 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-amber-200 text-3xl font-bold">BK</span>
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold text-slate-700 mb-1">Ben Konna</h4>
+                  <p className="text-blue-600 font-medium mb-2">Technical Author</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    PhD in Electrical and Electronic Engineering with expertise in mathematics and technical implementation.
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+
         {/* Team Section */}
         <div className="mb-20">
           <h3 className="text-2xl font-bold text-slate-700 text-center mb-12">Our Team</h3>
