@@ -12,7 +12,7 @@ import MDXContent from '@/components/MDXContent';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import { organizationSchema, generateCalculatorSchema, generateWebPageSchema } from '@/config/schemas';
 import CalculatorWithReset from '@/components/CalculatorWithReset';
-import { useState } from 'react';
+import AuthorByline from '@/components/AuthorByline';
 
 export function generateStaticParams() {
   return calculators.map((c) => {
@@ -37,9 +37,13 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
 
   if (!meta) return {};
 
+  const pageTitle = seoData?.metaTitle || `${meta.title} | CalcFort`;
+  const pageDescription = seoData?.metaDescription || meta.description;
+  const pageUrl = `https://calcfort.com/calculator/${category}/${slug}`;
+
   return {
-    title: seoData?.metaTitle || `${meta.title} | CalcFort`,
-    description: seoData?.metaDescription || meta.description,
+    title: pageTitle,
+    description: pageDescription,
     keywords: seoData ? [
       seoData.primaryKeyword,
       ...seoData.variants.slice(0, 3),
@@ -56,8 +60,30 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
         'max-snippet': -1,
       },
     },
+    openGraph: {
+      type: 'website',
+      locale: 'en_US',
+      url: pageUrl,
+      siteName: 'CalcFort',
+      title: pageTitle,
+      description: pageDescription,
+      images: [
+        {
+          url: '/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: `${meta.title} - CalcFort`
+        }
+      ]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: pageTitle,
+      description: pageDescription,
+      images: ['/og-image.png']
+    },
     alternates: {
-      canonical: `https://calcfort.com/calculator/${category}/${slug}`,
+      canonical: pageUrl,
     },
   };
 }
@@ -81,11 +107,11 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
   if (!meta) return notFound();
 
   const Calc = meta.component;
-  const breadcrumbs = generateCalculatorBreadcrumbs(meta.title, meta.category);
+  const calculatorUrl = `https://calcfort.com/calculator/${category}/${slug}`;
+  const breadcrumbs = generateCalculatorBreadcrumbs(meta.title, meta.category, calculatorUrl);
   const relatedCalculators = getRelatedCalculators(slug);
 
   // Generate schemas for calculator page
-  const calculatorUrl = `https://calcfort.com/calculator/${category}/${slug}`;
   const calculatorSchemaData = generateCalculatorSchema(
     meta.title,
     calculatorUrl,
@@ -96,14 +122,16 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
     meta.title,
     calculatorUrl,
     meta.description,
-    breadcrumbs.map(b => ({ name: b.label, url: `https://calcfort.com${b.href}` }))
+    breadcrumbs.map(b => ({
+      name: b.label,
+      url: b.canonicalUrl || (b.href ? `https://calcfort.com${b.href}` : calculatorUrl)
+    }))
   );
 
   const allSchemas = [
     organizationSchema,
     calculatorSchemaData,
-    webPageSchemaData,
-    ...(seoData?.structuredData ? [seoData.structuredData] : [])
+    webPageSchemaData
   ];
 
   return (
@@ -121,7 +149,12 @@ export default async function CalculatorPage({ params }: { params: Promise<{ cat
 
             <EzoicAd placementId={EZOIC_PLACEMENTS.CALCULATOR_CONTENT} className="text-center" />
 
-            {meta.mdx && <MDXContent slug={meta.mdx.replace('.mdx', '')} />}
+            {meta.mdx && (
+              <>
+                <AuthorByline className="mb-4" />
+                <MDXContent slug={meta.mdx.replace('.mdx', '')} />
+              </>
+            )}
           </main>
 
           <aside className="col-span-12 lg:col-span-4 space-y-6">

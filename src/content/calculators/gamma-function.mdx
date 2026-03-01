@@ -1,14 +1,93 @@
 ## Gamma Function Calculator: Extend Factorials to All Numbers
 
 ## Table of Contents - Gamma Function
+- [Gamma Function in Statistics and Science 2026](#gamma-function-statistics-science-2026)
 - [How to Use This Calculator](#how-to-use-this-calculator)
 - [Understanding the Gamma Function](#understanding-the-gamma-function)
 - [How to Calculate the Gamma Function](#how-to-calculate-the-gamma-function)
 - [Real-World Applications](#real-world-applications)
+- [Worked Calculations and Scenarios](#worked-calculations)
 - [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
-- [Related Topics](#related-topics)
-- [How This Calculator Works](#how-this-calculator-works)
+- [Sources](#sources)
 - [FAQs](#faqs)
+
+---
+
+## Gamma Function in Statistics and Science 2026
+
+The gamma function underpins probability distributions, statistical analysis and scientific computation. Modern data science relies heavily on gamma-related distributions for modelling waiting times, lifetimes and Bayesian inference.
+
+### Statistical Distributions Using Gamma Function
+
+**Common Probability Distributions:**
+
+| Distribution | PDF Contains | Parameters | Typical Application |
+|--------------|--------------|------------|---------------------|
+| Gamma | 1/Γ(α) | shape α, rate β | Waiting times, rainfall |
+| Chi-squared | 1/Γ(k/2) | degrees of freedom k | Hypothesis testing |
+| Beta | 1/B(α,β) = Γ(α+β)/[Γ(α)Γ(β)] | shape α, β | Proportions, probabilities |
+| Student's t | Γ((ν+1)/2)/Γ(ν/2) | degrees of freedom ν | Small sample inference |
+| F-distribution | Γ((d₁+d₂)/2)/[Γ(d₁/2)Γ(d₂/2)] | d₁, d₂ | ANOVA, variance ratio |
+| Dirichlet | Γ(Σαᵢ)/∏Γ(αᵢ) | concentration αᵢ | Topic modelling, ML |
+
+**Chi-Squared Critical Values (Γ-based calculations):**
+
+| df | χ²₀.₉₅ | χ²₀.₉₉ | Γ(df/2) Value |
+|----|--------|--------|---------------|
+| 1 | 3.841 | 6.635 | Γ(0.5) = √π = 1.772 |
+| 2 | 5.991 | 9.210 | Γ(1) = 1 |
+| 5 | 11.07 | 15.09 | Γ(2.5) = 1.329 |
+| 10 | 18.31 | 23.21 | Γ(5) = 24 |
+| 20 | 31.41 | 37.57 | Γ(10) = 362,880 |
+
+### Factorial and Combinatorial Values
+
+**Gamma Function Reference Table:**
+
+| x | Γ(x) | Equivalent | Decimal |
+|---|------|------------|---------|
+| 1/2 | √π | - | 1.77245 |
+| 1 | 0! | 1 | 1.00000 |
+| 3/2 | √π/2 | - | 0.88623 |
+| 2 | 1! | 1 | 1.00000 |
+| 5/2 | 3√π/4 | - | 1.32934 |
+| 3 | 2! | 2 | 2.00000 |
+| 4 | 3! | 6 | 6.00000 |
+| 5 | 4! | 24 | 24.0000 |
+| 6 | 5! | 120 | 120.000 |
+| 10 | 9! | 362,880 | 362,880 |
+
+**Beta Function Values B(α,β) = Γ(α)Γ(β)/Γ(α+β):**
+
+| α | β | B(α,β) | Application |
+|---|---|--------|-------------|
+| 0.5 | 0.5 | π | Beta(0.5,0.5) is arc-sine |
+| 1 | 1 | 1 | Uniform distribution |
+| 2 | 2 | 1/6 | Symmetric bell |
+| 2 | 5 | 1/42 | Right-skewed |
+| 5 | 1 | 1/5 | Left-skewed |
+| 10 | 10 | 1/92,378 | Narrow symmetric |
+
+### Physics and Engineering Applications
+
+**Quantum Mechanics Wave Functions:**
+
+| System | Gamma Factor | Physical Meaning |
+|--------|--------------|------------------|
+| Hydrogen radial | Γ(n+l+1)/Γ(2l+2) | Normalization constant |
+| Harmonic oscillator | 1/√(2ⁿn!) = 1/√(2ⁿΓ(n+1)) | Energy eigenstate |
+| Angular momentum | √[Γ(l+m+1)/Γ(l-m+1)] | Spherical harmonics |
+| Coulomb scattering | |Γ(1+iη)|² | Cross-section factor |
+
+**Stirling's Approximation Accuracy:**
+
+| n | n! (exact) | Stirling estimate | Error % |
+|---|------------|-------------------|---------|
+| 5 | 120 | 118.02 | 1.65% |
+| 10 | 3,628,800 | 3,598,696 | 0.83% |
+| 20 | 2.43×10¹⁸ | 2.42×10¹⁸ | 0.42% |
+| 50 | 3.04×10⁶⁴ | 3.04×10⁶⁴ | 0.17% |
+| 100 | 9.33×10¹⁵⁷ | 9.32×10¹⁵⁷ | 0.08% |
 
 ---
 
@@ -254,6 +333,175 @@ Any time you need "fractional factorials" for interpolation or generalized formu
 
 ---
 
+## Worked Calculations and Scenarios
+
+### Scenario 1: Chi-Squared Test Normalisation
+
+**Context:** Computing the PDF normalisation constant for chi-squared distribution.
+
+```
+Chi-squared distribution with k degrees of freedom:
+f(x) = [1 / (2^(k/2) Γ(k/2))] × x^(k/2-1) × e^(-x/2)
+
+For k = 6 degrees of freedom:
+Normalisation constant = 1 / (2^3 × Γ(3))
+                       = 1 / (8 × 2!)
+                       = 1 / (8 × 2)
+                       = 1/16
+
+Verification:
+Γ(3) = 2! = 2
+2^(6/2) = 2³ = 8
+Constant = 1/16 = 0.0625
+
+PDF at x = 4:
+f(4) = 0.0625 × 4^2 × e^(-2)
+     = 0.0625 × 16 × 0.1353
+     = 0.135
+```
+
+### Scenario 2: Bayesian Beta-Binomial Model
+
+**Context:** Posterior distribution for proportion estimation.
+
+```
+Prior: Beta(α=2, β=2)
+Data: 7 successes in 10 trials
+
+Prior normalisation:
+B(2,2) = Γ(2)Γ(2)/Γ(4) = (1!)(1!)/(3!) = 1/6
+
+Posterior: Beta(α'=2+7, β'=2+3) = Beta(9, 5)
+
+Posterior normalisation:
+B(9,5) = Γ(9)Γ(5)/Γ(14)
+       = (8!)(4!)/(13!)
+       = (40,320)(24)/(6,227,020,800)
+       = 967,680/6,227,020,800
+       = 1/6,435
+       ≈ 0.000155
+
+Posterior mean:
+E[p] = α'/(α'+β') = 9/14 = 0.643
+
+Prior mean was: 2/4 = 0.5
+Data moved estimate toward observed 7/10 = 0.7
+```
+
+### Scenario 3: Gamma Distribution Reliability Analysis
+
+**Context:** Time-to-failure modelling for electronic components.
+
+```
+Given:
+Shape parameter: α = 3 (Erlang-3)
+Rate parameter: β = 0.01 per hour
+This models sum of 3 exponential waiting times
+
+Mean time to failure:
+E[T] = α/β = 3/0.01 = 300 hours
+
+Variance:
+Var[T] = α/β² = 3/0.0001 = 30,000 hours²
+SD[T] = 173 hours
+
+Probability of failure before 200 hours:
+P(T < 200) = γ(α, βx)/Γ(α)
+           = γ(3, 2)/Γ(3)
+
+Where γ(3, 2) = incomplete gamma
+γ(3, 2) = Γ(3) × [1 - e^(-2)(1 + 2 + 2)]
+        = 2 × [1 - e^(-2) × 5]
+        = 2 × [1 - 0.677]
+        = 0.646
+
+P(T < 200) = 0.646/2 = 0.323 or 32.3%
+```
+
+### Scenario 4: Student's t-Distribution Critical Values
+
+**Context:** Computing t-distribution PDF normalisation.
+
+```
+Student's t-distribution with ν degrees of freedom:
+f(t) = [Γ((ν+1)/2) / (√(νπ) Γ(ν/2))] × (1 + t²/ν)^(-(ν+1)/2)
+
+For ν = 4 degrees of freedom:
+Numerator: Γ(5/2) = (3/2)(1/2)Γ(1/2) = (3/4)√π ≈ 1.329
+Denominator: √(4π) × Γ(2) = 2√π × 1 = 3.545
+
+Normalisation constant = 1.329/3.545 = 0.375
+
+PDF at t = 0:
+f(0) = 0.375 × (1 + 0)^(-2.5)
+     = 0.375
+
+PDF at t = 2:
+f(2) = 0.375 × (1 + 4/4)^(-2.5)
+     = 0.375 × 2^(-2.5)
+     = 0.375 × 0.177
+     = 0.066
+
+As ν → ∞, t-distribution → normal distribution
+```
+
+### Scenario 5: Binomial Coefficient Generalisation
+
+**Context:** Computing combinations with non-integer arguments.
+
+```
+Standard binomial coefficient:
+C(n,k) = n! / (k!(n-k)!) = Γ(n+1) / [Γ(k+1)Γ(n-k+1)]
+
+Generalised to real numbers:
+C(5.5, 2) = Γ(6.5) / [Γ(3)Γ(4.5)]
+
+Calculate each gamma:
+Γ(6.5) = 5.5 × 4.5 × 3.5 × 2.5 × 1.5 × 0.5 × Γ(0.5)
+       = 5.5 × 4.5 × 3.5 × 2.5 × 1.5 × 0.5 × √π
+       = 287.885 × 0.5 × 1.772
+       = 255.02
+
+Γ(3) = 2! = 2
+
+Γ(4.5) = 3.5 × 2.5 × 1.5 × 0.5 × √π
+       = 6.5625 × 1.772
+       = 11.63
+
+C(5.5, 2) = 255.02 / (2 × 11.63)
+          = 255.02 / 23.26
+          = 10.96
+
+This interpolates between C(5,2)=10 and C(6,2)=15
+```
+
+### Scenario 6: Multivariate Analysis Covariance Determinant
+
+**Context:** Wishart distribution normalisation in Bayesian statistics.
+
+```
+Wishart distribution for p×p covariance matrix:
+Normalisation involves: Γₚ(n/2)
+
+Multivariate gamma function:
+Γₚ(a) = π^(p(p-1)/4) × ∏_{j=1}^p Γ(a - (j-1)/2)
+
+For p = 3, a = 5:
+Γ₃(5) = π^(3×2/4) × Γ(5) × Γ(4.5) × Γ(4)
+      = π^1.5 × 24 × 11.63 × 6
+      = 5.57 × 24 × 11.63 × 6
+      = 9,330
+
+For covariance estimation with n = 10 observations:
+Wishart normalisation includes:
+[2^(np/2) × Γₚ(n/2) × |Σ|^(n/2)]^(-1)
+
+This ensures proper probability normalisation
+for posterior distributions over covariance matrices.
+```
+
+---
+
 ## Common Mistakes and How to Avoid Them
 
 **Mistake 1: Confusing Γ(n) with n!**
@@ -314,9 +562,12 @@ Why it happens: Not anticipating how fast gamma grows. Always use log-gamma for 
 
 ---
 
-## Related Topics
+## Sources
 
-- [Binomial Coefficient Calculator](/calculator/mathematics/binomial-coefficient) - Uses gamma for generalization
+- [NIST Digital Library of Mathematical Functions: Gamma Function](https://dlmf.nist.gov/5)
+- [Wolfram MathWorld: Gamma Function](https://mathworld.wolfram.com/GammaFunction.html)
+- [Cambridge University Press: Statistical Inference](https://www.cambridge.org/)
+- [Journal of Statistical Software: Gamma Distribution](https://www.jstatsoft.org/)
 
 ---
 

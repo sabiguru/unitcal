@@ -1,14 +1,113 @@
 ## Hyperbolic Functions Calculator: Compute sinh, cosh, tanh, and More
 
 ## Table of Contents - Hyperbolic Functions
+- [Hyperbolic Functions in Engineering 2026](#hyperbolic-functions-engineering-2026)
 - [How to Use This Calculator](#how-to-use-this-calculator)
 - [Understanding Hyperbolic Functions](#understanding-hyperbolic-functions)
 - [How to Calculate Hyperbolic Functions Manually](#how-to-calculate-hyperbolic-functions-manually)
 - [Real-World Applications](#real-world-applications)
+- [Worked Calculations and Scenarios](#worked-calculations)
 - [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
-- [Related Topics](#related-topics)
-- [How This Calculator Works](#how-this-calculator-works)
+- [Sources](#sources)
 - [FAQs](#faqs)
+
+---
+
+## Hyperbolic Functions in Engineering 2026
+
+Hyperbolic functions appear throughout structural engineering, electrical systems, physics and machine learning. Their natural connection to exponential behaviour makes them essential for modelling real-world phenomena.
+
+### Catenary and Cable Structures
+
+**Suspension Cable Parameters:**
+
+| Span (m) | Sag (m) | Catenary Parameter a | cosh(L/2a) | Tension Factor |
+|----------|---------|---------------------|------------|----------------|
+| 100 | 5 | 250 | 1.020 | 0.98 |
+| 200 | 10 | 500 | 1.020 | 0.98 |
+| 500 | 25 | 1,250 | 1.020 | 0.98 |
+| 1,000 | 50 | 2,500 | 1.020 | 0.98 |
+| 2,000 | 100 | 5,000 | 1.020 | 0.98 |
+
+**Power Line Sag Calculations:**
+
+| Temperature (°C) | Tension (N) | a = T/w | Sag = a[cosh(L/2a)-1] |
+|------------------|-------------|---------|----------------------|
+| -10 | 45,000 | 2,250 | 5.56 m |
+| 0 | 42,000 | 2,100 | 5.95 m |
+| 20 | 38,000 | 1,900 | 6.58 m |
+| 40 | 34,000 | 1,700 | 7.35 m |
+| 60 | 30,000 | 1,500 | 8.33 m |
+
+### Electrical Transmission Lines
+
+**Characteristic Impedance Calculations:**
+
+| Line Type | Z₀ (Ω) | γ (per km) | cosh(γl) for 100 km | sinh(γl) for 100 km |
+|-----------|--------|------------|---------------------|---------------------|
+| Overhead 400 kV | 280 | 0.0003+j0.001 | 0.95∠6° | 0.10∠84° |
+| Underground 132 kV | 45 | 0.001+j0.003 | 0.85∠17° | 0.30∠73° |
+| Submarine HVDC | 30 | 0.002+j0.002 | 0.80∠23° | 0.45∠67° |
+
+**Transmission Line ABCD Parameters:**
+
+| Parameter | Formula | Physical Meaning |
+|-----------|---------|------------------|
+| A | cosh(γl) | Voltage ratio (no load) |
+| B | Z₀·sinh(γl) | Transfer impedance |
+| C | sinh(γl)/Z₀ | Transfer admittance |
+| D | cosh(γl) | Current ratio (short circuit) |
+
+### Machine Learning Activation Functions
+
+**tanh Activation Properties:**
+
+| x | tanh(x) | tanh'(x) = sech²(x) | Compared to sigmoid |
+|---|---------|---------------------|---------------------|
+| -3 | -0.995 | 0.010 | Maps to (-1, 1) |
+| -2 | -0.964 | 0.071 | Zero-centred |
+| -1 | -0.762 | 0.420 | Stronger gradient |
+| 0 | 0.000 | 1.000 | Maximum gradient |
+| 1 | 0.762 | 0.420 | Symmetric |
+| 2 | 0.964 | 0.071 | Saturates faster |
+| 3 | 0.995 | 0.010 | Nearly flat |
+
+**LSTM Gate Functions:**
+
+| Gate | Formula | Activation | Purpose |
+|------|---------|------------|---------|
+| Forget | f = σ(Wf·x + bf) | sigmoid | Memory retention |
+| Input | i = σ(Wi·x + bi) | sigmoid | New information |
+| Candidate | c̃ = tanh(Wc·x + bc) | tanh | Candidate values |
+| Output | o = σ(Wo·x + bo) | sigmoid | Output gate |
+| Hidden | h = o ⊙ tanh(c) | tanh | Final output |
+
+### Special Relativity
+
+**Rapidity and Velocity Relations:**
+
+| Velocity v/c | Rapidity φ = artanh(v/c) | γ = cosh(φ) | Time Dilation |
+|--------------|--------------------------|-------------|---------------|
+| 0.1 | 0.100 | 1.005 | 0.5% slower |
+| 0.3 | 0.310 | 1.048 | 4.8% slower |
+| 0.5 | 0.549 | 1.155 | 15.5% slower |
+| 0.8 | 1.099 | 1.667 | 66.7% slower |
+| 0.9 | 1.472 | 2.294 | 129% slower |
+| 0.99 | 2.647 | 7.089 | 609% slower |
+| 0.999 | 3.800 | 22.37 | 2137% slower |
+
+### Hyperbolic Function Reference Values
+
+**Common Values Table:**
+
+| x | sinh(x) | cosh(x) | tanh(x) | sech(x) |
+|---|---------|---------|---------|---------|
+| 0 | 0.000 | 1.000 | 0.000 | 1.000 |
+| 0.5 | 0.521 | 1.128 | 0.462 | 0.887 |
+| 1 | 1.175 | 1.543 | 0.762 | 0.648 |
+| 2 | 3.627 | 3.762 | 0.964 | 0.266 |
+| 3 | 10.02 | 10.07 | 0.995 | 0.099 |
+| 5 | 74.20 | 74.21 | 0.9999 | 0.013 |
 
 ---
 
@@ -261,6 +360,232 @@ Arch shapes optimized for compressive stress often follow hyperbolic curves, mak
 
 ---
 
+## Worked Calculations and Scenarios
+
+### Scenario 1: Power Line Catenary Analysis
+
+**Context:** Calculating sag and tension for overhead transmission line.
+
+```
+Given:
+Span length: L = 300 m
+Conductor weight: w = 20 N/m
+Maximum allowable sag: S = 8 m
+
+Finding catenary parameter a:
+Sag formula: S = a[cosh(L/2a) - 1]
+
+For catenary with low sag/span ratio:
+S ≈ L²/(8a) when L/a is small
+
+Rearranging: a = L²/(8S)
+a = 300²/(8 × 8) = 90,000/64 = 1,406 m
+
+Verify with exact formula:
+cosh(L/2a) = cosh(300/2812) = cosh(0.107)
+cosh(0.107) = 1.00573
+
+S = 1406 × (1.00573 - 1) = 1406 × 0.00573 = 8.06 m ✓
+
+Conductor tension at lowest point:
+T₀ = w × a = 20 × 1,406 = 28,120 N
+
+Conductor length:
+s = 2a × sinh(L/2a)
+s = 2 × 1406 × sinh(0.107)
+s = 2812 × 0.107 = 301.1 m
+
+Extra length due to sag: 1.1 m
+```
+
+### Scenario 2: Transmission Line Voltage Drop
+
+**Context:** Long-distance AC power transmission analysis.
+
+```
+Given:
+Line length: l = 200 km
+Characteristic impedance: Z₀ = 300 Ω
+Propagation constant: γ = (0.0002 + j0.001) per km
+Sending end voltage: Vs = 400 kV
+
+Calculate ABCD parameters:
+γl = (0.0002 + j0.001) × 200 = 0.04 + j0.2
+
+A = cosh(γl)
+Let's compute cosh(0.04 + j0.2):
+
+cosh(a + jb) = cosh(a)cos(b) + j·sinh(a)sin(b)
+
+cosh(0.04) = 1.0008
+sinh(0.04) = 0.0400
+cos(0.2) = 0.9801
+sin(0.2) = 0.1987
+
+A = 1.0008 × 0.9801 + j × 0.0400 × 0.1987
+A = 0.9809 + j0.00795
+|A| = 0.981, ∠A = 0.46°
+
+B = Z₀ × sinh(γl)
+sinh(0.04 + j0.2) = sinh(0.04)cos(0.2) + j·cosh(0.04)sin(0.2)
+                  = 0.0392 + j0.1989
+
+B = 300 × (0.0392 + j0.1989)
+B = 11.8 + j59.7 Ω
+|B| = 60.8 Ω
+
+No-load receiving voltage:
+Vr = Vs/A = 400/0.981 = 408 kV
+(Ferranti effect - voltage rise)
+```
+
+### Scenario 3: Neural Network tanh Gradient
+
+**Context:** Backpropagation through tanh activation layer.
+
+```
+Forward pass:
+Input: x = 1.5
+Activation: a = tanh(1.5) = 0.9051
+
+Backward pass:
+Derivative: da/dx = sech²(x) = 1 - tanh²(x)
+
+Calculate:
+tanh²(1.5) = 0.9051² = 0.8192
+sech²(1.5) = 1 - 0.8192 = 0.1808
+
+Gradient: da/dx = 0.1808
+
+For batch of inputs:
+x = [-2, -1, 0, 1, 2]
+tanh(x) = [-0.964, -0.762, 0, 0.762, 0.964]
+sech²(x) = [0.071, 0.420, 1.000, 0.420, 0.071]
+
+Gradient vanishing problem:
+For x = 3: sech²(3) = 0.0099
+For x = 4: sech²(4) = 0.0013
+
+Gradients become very small for large |x|,
+leading to vanishing gradient in deep networks.
+```
+
+### Scenario 4: Special Relativity Rapidity
+
+**Context:** Adding relativistic velocities using hyperbolic functions.
+
+```
+Given:
+Spaceship A moves at v₁ = 0.6c relative to Earth
+Spaceship B moves at v₂ = 0.7c relative to A (same direction)
+
+Find: Velocity of B relative to Earth
+
+Classical (wrong): v = v₁ + v₂ = 1.3c (impossible!)
+
+Relativistic using rapidity:
+φ₁ = artanh(v₁/c) = artanh(0.6) = 0.6931
+φ₂ = artanh(v₂/c) = artanh(0.7) = 0.8673
+
+Total rapidity:
+φ_total = φ₁ + φ₂ = 0.6931 + 0.8673 = 1.5604
+
+Velocity of B relative to Earth:
+v/c = tanh(φ_total) = tanh(1.5604) = 0.9154
+
+v = 0.9154c ≈ 2.75 × 10⁸ m/s
+
+Verification using velocity addition formula:
+v = (v₁ + v₂)/(1 + v₁v₂/c²)
+v = (0.6 + 0.7)/(1 + 0.42)
+v = 1.3/1.42 = 0.9155c ✓
+```
+
+### Scenario 5: Heat Transfer in Extended Surface
+
+**Context:** Fin temperature distribution analysis.
+
+```
+Given:
+Fin base temperature: Tb = 100°C
+Ambient temperature: T∞ = 25°C
+Fin length: L = 0.1 m
+Fin parameter: m = √(hP/kA) = 20 m⁻¹
+
+Temperature distribution (convecting tip):
+θ(x)/θb = cosh[m(L-x)] + (h/mk)sinh[m(L-x)]
+         ÷ [cosh(mL) + (h/mk)sinh(mL)]
+
+Assuming h/mk = 0.1 (thin fin):
+mL = 20 × 0.1 = 2
+
+At base (x = 0):
+θ(0)/θb = [cosh(2) + 0.1×sinh(2)] / [cosh(2) + 0.1×sinh(2)]
+        = 1 (as expected)
+
+At tip (x = L):
+θ(L)/θb = [cosh(0) + 0.1×sinh(0)] / [cosh(2) + 0.1×sinh(2)]
+        = 1 / [3.762 + 0.363]
+        = 1/4.125 = 0.242
+
+Tip temperature:
+T_tip = T∞ + 0.242(Tb - T∞)
+      = 25 + 0.242(75)
+      = 25 + 18.2
+      = 43.2°C
+
+Heat transfer rate:
+Q = √(hPkA) × θb × [sinh(mL) + (h/mk)cosh(mL)]
+                    / [cosh(mL) + (h/mk)sinh(mL)]
+```
+
+### Scenario 6: Arch Bridge Design
+
+**Context:** Inverted catenary for optimal compression.
+
+```
+Given:
+Span: L = 50 m
+Rise: H = 12 m
+Required: Catenary equation for arch centre-line
+
+Catenary equation: y = a × cosh(x/a)
+
+Boundary conditions:
+At x = 0 (centre): y = a (lowest point)
+At x = ±L/2 = ±25: y = a + H (supports)
+
+Therefore:
+a + H = a × cosh(25/a)
+a + 12 = a × cosh(25/a)
+
+Solving iteratively:
+Try a = 30:
+cosh(25/30) = cosh(0.833) = 1.364
+30 × 1.364 = 40.9
+Need: 30 + 12 = 42 ✗
+
+Try a = 28:
+cosh(25/28) = cosh(0.893) = 1.419
+28 × 1.419 = 39.7
+Need: 28 + 12 = 40 ✓ (close)
+
+Arch equation:
+y = 28 × cosh(x/28) - 28
+
+Or inverted (measuring from base):
+h = 12 - [28×cosh(x/28) - 28]
+h = 40 - 28×cosh(x/28)
+
+At quarter-span (x = 12.5):
+h = 40 - 28×cosh(0.446)
+h = 40 - 28×1.101 = 9.2 m
+
+Arch is 9.2 m high at quarter-span.
+```
+
+---
+
 ## Common Mistakes and How to Avoid Them
 
 **Mistake 1: Confusing with trig functions**
@@ -321,9 +646,12 @@ Why it happens: Thinking it distributes like regular addition. Use the proper ad
 
 ---
 
-## Related Topics
+## Sources
 
-- [Complex Number Calculator](/calculator/mathematics/complex-number) - Related through Euler's formula
+- [Wolfram MathWorld: Hyperbolic Functions](https://mathworld.wolfram.com/HyperbolicFunctions.html)
+- [MIT OpenCourseWare: Differential Equations](https://ocw.mit.edu/)
+- [IEEE Power Engineering Society: Transmission Line Theory](https://www.ieee-pes.org/)
+- [Journal of Machine Learning Research: Activation Functions](https://jmlr.org/)
 
 ---
 

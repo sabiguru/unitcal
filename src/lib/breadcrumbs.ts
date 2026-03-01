@@ -8,10 +8,11 @@ const categoryNameToSlug = Object.fromEntries(
 
 export function generateCalculatorBreadcrumbs(
   calculatorTitle: string,
-  categoryName: string
+  categoryName: string,
+  canonicalUrl?: string
 ): BreadcrumbItem[] {
   const categorySlug = categoryNameToSlug[categoryName];
-  
+
   const breadcrumbs: BreadcrumbItem[] = [
     {
       label: 'Home',
@@ -27,16 +28,17 @@ export function generateCalculatorBreadcrumbs(
     });
   }
 
-  // Add current calculator
+  // Add current calculator with canonical URL for JSON-LD
   breadcrumbs.push({
     label: calculatorTitle,
-    current: true
+    current: true,
+    canonicalUrl: canonicalUrl
   });
 
   return breadcrumbs;
 }
 
-export function generateCategoryBreadcrumbs(categoryTitle: string): BreadcrumbItem[] {
+export function generateCategoryBreadcrumbs(categoryTitle: string, canonicalUrl?: string): BreadcrumbItem[] {
   return [
     {
       label: 'Home',
@@ -48,7 +50,8 @@ export function generateCategoryBreadcrumbs(categoryTitle: string): BreadcrumbIt
     },
     {
       label: categoryTitle,
-      current: true
+      current: true,
+      canonicalUrl: canonicalUrl
     }
   ];
 }

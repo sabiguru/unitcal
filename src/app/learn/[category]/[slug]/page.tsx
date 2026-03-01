@@ -13,6 +13,7 @@ import { calculatorCategories } from '@/data/categoryData';
 import { getAvailableLearnSlugs } from '@/data/learnSeoBySlug';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import { organizationSchema, generateArticleSchema, generateWebPageSchema } from '@/config/schemas';
+import AuthorByline from '@/components/AuthorByline';
 
 interface LearnPageProps {
   params: Promise<{ category: string; slug: string }>;
@@ -49,6 +50,7 @@ export async function generateMetadata({ params }: LearnPageProps): Promise<Meta
   const seoData = getLearnSeo(slug);
 
   if (seoData) {
+    const pageUrl = `https://calcfort.com/learn/${category}/${slug}`;
     return {
       title: seoData.metaTitle,
       description: seoData.metaDescription,
@@ -57,37 +59,68 @@ export async function generateMetadata({ params }: LearnPageProps): Promise<Meta
         title: seoData.metaTitle,
         description: seoData.metaDescription,
         type: 'article',
+        url: pageUrl,
+        siteName: 'CalcFort',
+        images: [
+          {
+            url: '/og-image.png',
+            width: 1200,
+            height: 630,
+            alt: `${seoData.metaTitle} - CalcFort`
+          }
+        ]
       },
       twitter: {
         card: 'summary_large_image',
         title: seoData.metaTitle,
         description: seoData.metaDescription,
+        images: ['/og-image.png']
       },
       robots: {
         index: true,
         follow: true,
       },
       alternates: {
-        canonical: `https://calcfort.com/learn/${category}/${slug}`,
+        canonical: pageUrl,
       },
     };
   }
 
   // Fallback metadata for slugs not in SEO data
+  const pageUrl = `https://calcfort.com/learn/${category}/${slug}`;
+  const fallbackTitle = `Learn ${slug.replace(/-/g, ' ')} - Calculator Fort`;
+  const fallbackDescription = `Learn how to use the ${slug.replace(/-/g, ' ')} calculator with examples, FAQs, and detailed guides.`;
+
   return {
-    title: `Learn ${slug.replace(/-/g, ' ')} - Calculator Fort`,
-    description: `Learn how to use the ${slug.replace(/-/g, ' ')} calculator with examples, FAQs, and detailed guides.`,
+    title: fallbackTitle,
+    description: fallbackDescription,
     openGraph: {
-      title: `Learn ${slug.replace(/-/g, ' ')} - Calculator Fort`,
-      description: `Learn how to use the ${slug.replace(/-/g, ' ')} calculator with examples, FAQs, and detailed guides.`,
+      title: fallbackTitle,
+      description: fallbackDescription,
       type: 'article',
+      url: pageUrl,
+      siteName: 'CalcFort',
+      images: [
+        {
+          url: '/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: `${fallbackTitle} - CalcFort`
+        }
+      ]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: fallbackTitle,
+      description: fallbackDescription,
+      images: ['/og-image.png']
     },
     robots: {
       index: true,
       follow: true,
     },
     alternates: {
-      canonical: `https://calcfort.com/learn/${category}/${slug}`,
+      canonical: pageUrl,
     },
   };
 }
@@ -185,6 +218,7 @@ export default async function LearnPage({ params }: LearnPageProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Main Content Area */}
           <div className="lg:col-span-8">
+            <AuthorByline className="mb-4" />
             <LearnMDXContent slug={slug} />
           </div>
 

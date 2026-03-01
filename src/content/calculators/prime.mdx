@@ -1,34 +1,61 @@
-## Prime Number Calculator: Primality Testing and Factorization
+## Prime Number Calculator: Primality Testing and Factorisation
 
 ## Table of Contents - Prime
-- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Prime Numbers in Modern Cryptography 2026](#prime-numbers-cryptography-2026)
 - [The Core Principle: Prime Numbers](#the-core-principle-prime-numbers)
+- [How to Use This Calculator](#how-to-use-this-calculator)
 - [How to Test Primality and Factor Numbers](#how-to-test-primality-and-factor-numbers)
 - [Real-World Applications](#real-world-applications)
-- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
-- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
-- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
-- [Related Topics](#related-topics)
-- [How This Calculator Works](#how-this-calculator-works)
+- [Worked Calculations and Scenarios](#worked-calculations)
+- [Record-Breaking Primes](#record-breaking-primes)
+- [Sources](#sources)
 - [FAQs](#faqs)
 
 ---
 
-## How to Use This Calculator - Prime
-Select your Calculation Type:
-- Check Primality — Determine if a number is prime
-- Prime Factorization — Break a number into prime factors
-- Generate Primes — List all primes up to a limit
+## Prime Numbers in Modern Cryptography 2026
 
-For primality testing and factorization, enter a positive integer greater than 1.
+Prime numbers underpin the security of digital communications, financial transactions and data protection systems worldwide. Their computational properties make them essential to modern cryptography.
 
-For prime generation, enter an upper limit.
+### RSA Encryption Key Sizes
 
-Click "Calculate" to see results. The output displays:
-- Primality verdict (Prime or Composite)
-- Complete prime factorization in exponential form (e.g., 504 = 2³ × 3² × 7)
-- List of prime numbers up to your specified limit
-- Step-by-step factor tree for educational purposes
+**Recommended Key Lengths (NIST 2026 Guidelines):**
+
+| Application | Minimum Key Size | Prime Size (each) | Security Level |
+|-------------|------------------|-------------------|----------------|
+| General use | 2048 bits | 1024 bits | 112 bits |
+| Government | 3072 bits | 1536 bits | 128 bits |
+| Long-term security | 4096 bits | 2048 bits | 140+ bits |
+| Post-quantum preparation | 8192 bits | 4096 bits | 192 bits |
+
+**Factorisation Difficulty:**
+
+| Number Size | Approximate Time (classical computer) |
+|-------------|---------------------------------------|
+| 512 bits | Hours to days |
+| 1024 bits | Decades |
+| 2048 bits | Greater than age of universe |
+| 4096 bits | Computationally infeasible |
+
+### Cryptocurrency Applications
+
+**Elliptic Curve Parameters (Bitcoin, Ethereum):**
+
+The secp256k1 curve used by major cryptocurrencies relies on prime field arithmetic:
+- Field prime: 2²⁵⁶ - 2³² - 977 (a 256-bit prime)
+- Order (also prime): approximately 1.16 × 10⁷⁷
+
+### Prime Number Distribution
+
+**Density of Primes:**
+
+| Up to n | Number of Primes | Density |
+|---------|------------------|---------|
+| 100 | 25 | 25% |
+| 1,000 | 168 | 16.8% |
+| 10,000 | 1,229 | 12.29% |
+| 1,000,000 | 78,498 | 7.85% |
+| 1,000,000,000 | 50,847,534 | 5.08% |
 
 ---
 
@@ -42,11 +69,30 @@ A prime number has exactly two divisors: 1 and itself. This simple definition ha
 
 **The number 2 is the only even prime** because all other even numbers are divisible by 2.
 
-**The Fundamental Theorem of Arithmetic** states that every integer greater than 1 has a unique prime factorization. This uniqueness is why primes are called the "building blocks" of integers.
+**The Fundamental Theorem of Arithmetic** states that every integer greater than 1 has a unique prime factorisation. This uniqueness is why primes are called the "building blocks" of integers.
 
-**There are infinitely many primes.** Euclid proved this over 2,000 years ago. No matter how large a prime you find, there's always a larger one.
+**There are infinitely many primes.** Euclid proved this over 2,000 years ago. No matter how large a prime is found, there is always a larger one.
 
 The distribution of primes becomes sparser as numbers grow larger, but they never stop appearing entirely.
+
+---
+
+## How to Use This Calculator
+
+Select Calculation Type:
+- Check Primality — Determine if a number is prime
+- Prime Factorisation — Break a number into prime factors
+- Generate Primes — List all primes up to a limit
+
+For primality testing and factorisation, enter a positive integer greater than 1.
+
+For prime generation, enter an upper limit.
+
+Click "Calculate" to see results. The output displays:
+- Primality verdict (Prime or Composite)
+- Complete prime factorisation in exponential form (e.g., 504 = 2³ × 3² × 7)
+- List of prime numbers up to the specified limit
+- Step-by-step factor tree for educational purposes
 
 ---
 
@@ -60,7 +106,7 @@ Example: Is 97 prime?
 Test: 97 ÷ 2, 97 ÷ 3, 97 ÷ 5, 97 ÷ 7 (primes up to 9)
 None divide evenly → 97 is prime.
 
-**Prime factorization by repeated division:**
+**Prime factorisation by repeated division:**
 1. Divide by 2 until no longer divisible
 2. Move to 3, then 5, then 7...
 3. Continue until quotient is 1
@@ -81,16 +127,16 @@ Result: 504 = 2³ × 3² × 7
 3. Cross out all multiples of 2
 4. Move to next uncrossed number (3)
 5. Cross out all multiples of 3
-6. Repeat until you've processed all numbers up to √n
+6. Repeat until all numbers up to √n have been processed
 7. Remaining uncrossed numbers are prime
 
 ---
 
 ## Real-World Applications
 
-**Cryptography.** RSA encryption relies on the difficulty of factoring large numbers. Your secure online transactions depend on the computational intractability of prime factorization.
+**Cryptography.** RSA encryption relies on the difficulty of factoring large numbers. Secure online transactions depend on the computational intractability of prime factorisation.
 
-**Hash functions.** Prime numbers are used in hash table sizing and hash function design to minimize collisions.
+**Hash functions.** Prime numbers are used in hash table sizing and hash function design to minimise collisions.
 
 **Random number generation.** Prime moduli are used in linear congruential generators for pseudo-random numbers.
 
@@ -98,111 +144,141 @@ Result: 504 = 2³ × 3² × 7
 
 **Music and acoustics.** Prime-numbered frequencies avoid harmonic overlap, useful in speaker placement and room acoustics.
 
-**Cicada life cycles.** Some cicada species have prime-numbered life cycles (13 or 17 years), possibly to avoid synchronizing with predator cycles.
+**Cicada life cycles.** Some cicada species have prime-numbered life cycles (13 or 17 years), possibly to avoid synchronising with predator cycles.
 
 ---
 
-## Scenarios People Actually Run Into
+## Worked Calculations and Scenarios
 
-**The even prime exception.** Students often think all primes are odd. But 2 is prime—the only even prime. It's special because it's the smallest prime.
+### Scenario 1: RSA Key Generation Simplified
 
-**The 1 is not prime confusion.** By historical convention and mathematical utility, 1 is neither prime nor composite. If 1 were prime, unique factorization would fail.
+**Context:** Understanding how RSA uses prime numbers.
 
-**The factor tree approach.** Building a factor tree helps visualize factorization. Branch until all leaves are prime; the product of leaves equals the original number.
+Choose two prime numbers:
+p = 61, q = 53
 
-**The large number challenge.** Testing 1,000,000 for primality requires checking divisors up to 1,000. Testing 1,000,000,000,000 requires checking up to 1,000,000. Size matters exponentially.
+```
+n = p × q = 61 × 53 = 3,233
+φ(n) = (p-1)(q-1) = 60 × 52 = 3,120
 
-**The twin prime observation.** Pairs like (11, 13) and (17, 19) are "twin primes"—primes differing by 2. Whether infinitely many exist remains unproven.
+Choose e (public exponent) coprime to φ(n):
+e = 17 (common choice)
+
+Find d (private exponent) where e × d ≡ 1 (mod φ(n)):
+17 × d ≡ 1 (mod 3120)
+d = 2,753
+
+Public key: (n=3233, e=17)
+Private key: (n=3233, d=2753)
+```
+
+### Scenario 2: Hash Table Size Selection
+
+**Context:** Choosing optimal hash table size for 1,000 entries.
+
+Load factor target: 0.7
+Minimum size: 1000 / 0.7 ≈ 1,429
+
+```
+Find nearest prime greater than 1,429:
+1,429 is not prime (divisible by 7: 1,429 = 7 × 204 + 1... checking...)
+1,429 = 1,429 (actually prime, check: √1429 ≈ 37.8)
+
+Test divisibility by primes up to 37:
+1429 ÷ 7 = 204.14... ✓ not divisible
+1429 ÷ 11 = 129.9... ✓ not divisible
+1429 ÷ 13 = 109.9... ✓ not divisible
+1429 ÷ 17 = 84.06... ✓ not divisible
+1429 ÷ 19 = 75.2... ✓ not divisible
+1429 ÷ 23 = 62.1... ✓ not divisible
+1429 ÷ 29 = 49.3... ✓ not divisible
+1429 ÷ 31 = 46.1... ✓ not divisible
+1429 ÷ 37 = 38.6... ✓ not divisible
+
+1,429 is prime — use as hash table size.
+```
+
+### Scenario 3: Prime Factorisation for LCM Calculation
+
+**Context:** Finding when two periodic events coincide.
+
+Event A occurs every 84 days
+Event B occurs every 90 days
+
+```
+Find LCM(84, 90) using prime factorisation:
+
+84 = 2² × 3 × 7
+90 = 2 × 3² × 5
+
+LCM = 2² × 3² × 5 × 7
+    = 4 × 9 × 5 × 7
+    = 1,260 days
+
+Events coincide every 1,260 days (approximately 3.45 years)
+```
+
+### Scenario 4: Cryptocurrency Address Generation
+
+**Context:** Understanding prime field arithmetic in Bitcoin.
+
+The secp256k1 elliptic curve uses prime p:
+p = 2²⁵⁶ - 2³² - 2⁹ - 2⁸ - 2⁷ - 2⁶ - 2⁴ - 1
+
+```
+In decimal (77 digits):
+p = 115792089237316195423570985008687907853269984665640564039457584007908834671663
+
+This prime was chosen because:
+1. It is close to 2²⁵⁶ (efficient computation)
+2. It has special structure allowing fast modular reduction
+3. Its primality ensures field arithmetic works correctly
+```
+
+### Scenario 5: Primality Testing in Code Verification
+
+**Context:** Testing if a configuration value is prime for algorithm requirements.
+
+Test number: 2,147,483,647 (maximum 32-bit signed integer)
+
+```
+√2,147,483,647 ≈ 46,340.95
+
+Test divisibility by primes up to 46,340:
+This is a Mersenne prime: 2³¹ - 1
+
+Verification: 2³¹ = 2,147,483,648
+2,147,483,648 - 1 = 2,147,483,647 ✓
+
+2,147,483,647 is the 8th Mersenne prime, discovered in 1772.
+```
 
 ---
 
-## Trade-Offs and Decisions People Underestimate
+## Record-Breaking Primes
 
-**Algorithm efficiency.** Trial division is O(√n) but impractical for very large numbers. Probabilistic tests like Miller-Rabin are faster but not deterministic.
+**Largest Known Primes (2026):**
 
-**Deterministic versus probabilistic.** For cryptographic applications, "probably prime" (with astronomically small error probability) is acceptable. For mathematical proof, deterministic verification matters.
+| Rank | Prime | Digits | Discovered |
+|------|-------|--------|------------|
+| 1 | 2⁸²⁵⁸⁹⁹³³ - 1 | 24,862,048 | 2024 |
+| 2 | 2⁷⁷²³²⁹¹⁷ - 1 | 23,249,425 | 2018 |
+| 3 | 2⁷⁴²⁰⁷²⁸¹ - 1 | 22,338,618 | 2017 |
+| 4 | 2⁵⁷⁸⁸⁵¹⁶¹ - 1 | 17,425,170 | 2013 |
 
-**Factorization difficulty.** Primality testing is computationally easy (polynomial time). Factorization is believed to be hard (no known polynomial algorithm). This asymmetry enables RSA encryption.
+All largest known primes are Mersenne primes (form 2^p - 1 where p is also prime).
 
-**Memory versus computation.** Storing a list of primes up to 10⁹ requires gigabytes. Computing primality on demand uses less memory but more CPU time.
-
-**Exact versus approximate.** The Prime Number Theorem approximates π(n) ≈ n/ln(n), where π(n) is the number of primes up to n. Good for estimation; not for exact counting.
-
----
-
-## Common Mistakes and How to Recover
-
-**Forgetting to check small factors.** When manually testing primality, start with 2 before checking odd numbers. Many composite numbers are even.
-
-**Not stopping at √n.** You only need to test divisors up to √n. If n = a × b and both a and b exceed √n, then a × b > n—contradiction.
-
-**Confusing "odd" with "prime."** 9, 15, 21, 25 are odd but composite. Oddness is necessary but not sufficient for primality (except 2).
-
-**Incomplete factorization.** Stopping before the quotient reaches 1 leaves factors unfound. Factor completely until only 1 remains.
-
-**Assuming large gaps.** Prime gaps can be arbitrarily large (consecutive composites), but new primes always eventually appear.
+**GIMPS Project:**
+The Great Internet Mersenne Prime Search (GIMPS) coordinates distributed computing efforts to discover new Mersenne primes. As of 2026, 52 Mersenne primes have been found.
 
 ---
 
-## Related Topics
+## Sources
 
-**Composite numbers.** Integers with more than two divisors. Every composite has a unique prime factorization.
-
-**GCD and LCM.** Greatest Common Divisor and Least Common Multiple use prime factorizations for efficient calculation.
-
-**Modular arithmetic.** Operations "mod n" are fundamental to number theory and cryptography, often involving prime moduli.
-
-**Fermat's Little Theorem.** If p is prime and a is not divisible by p, then a^(p-1) ≡ 1 (mod p). Basis for primality tests.
-
-**Mersenne primes.** Primes of the form 2^p - 1. The largest known primes are usually Mersenne primes.
-
----
-
-## How This Calculator Works
-
-**Primality test (trial division):**
-```
-if n &lt; 2: return "Not prime"
-if n == 2: return "Prime"
-if n % 2 == 0: return "Composite"
-
-for i from 3 to √n, step 2:
-  if n % i == 0: return "Composite"
-
-return "Prime"
-```
-
-**Prime factorization:**
-```
-factors = []
-divisor = 2
-
-while n > 1:
-  while n % divisor == 0:
-    factors.append(divisor)
-    n = n / divisor
-  divisor++
-  if divisor² > n and n > 1:
-    factors.append(n)
-    break
-
-return factors
-```
-
-**Prime generation (Sieve of Eratosthenes):**
-```
-isPrime = array of True, size n+1
-isPrime[0] = isPrime[1] = False
-
-for i from 2 to √n:
-  if isPrime[i]:
-    for j from i² to n, step i:
-      isPrime[j] = False
-
-return indices where isPrime is True
-```
-
-All calculations happen locally in your browser.
+- [GIMPS: Great Internet Mersenne Prime Search](https://www.mersenne.org/)
+- [NIST: Cryptographic Standards](https://csrc.nist.gov/publications)
+- [The Prime Pages](https://t5k.org/)
+- [Bitcoin Elliptic Curve Parameters](https://en.bitcoin.it/wiki/Secp256k1)
 
 ---
 
@@ -216,21 +292,21 @@ No. By definition, a prime has exactly two divisors: 1 and itself. The number 1 
 
 Yes. 2 is the only even prime and the smallest prime. It has exactly two divisors: 1 and 2.
 
-**What's the largest prime number?**
+**What is the largest prime number?**
 
-Unknown—there are infinitely many. The largest known prime (as of recent records) is a Mersenne prime with millions of digits.
+Unknown—there are infinitely many. The largest known prime (as of 2024) is a Mersenne prime with over 24 million digits.
 
 **How does the calculator test large numbers?**
 
-For small numbers, trial division. For larger numbers, probabilistic tests (Miller-Rabin) provide high confidence with less computation.
+For small numbers, trial division is used. For larger numbers, probabilistic tests (Miller-Rabin) provide high confidence with less computation.
 
-**Why is factorization hard but primality testing easy?**
+**Why is factorisation hard but primality testing easy?**
 
-Primality testing has polynomial-time algorithms. No known polynomial algorithm exists for factorization. This asymmetry underpins cryptographic security.
+Primality testing has polynomial-time algorithms. No known polynomial algorithm exists for factorisation. This asymmetry underpins cryptographic security.
 
 **Can this handle numbers with many digits?**
 
-The calculator efficiently handles numbers up to 10¹² for primality and 10¹⁵ for factorization. Beyond that, specialized software is needed.
+The calculator efficiently handles numbers up to 10¹² for primality and 10¹⁵ for factorisation. Beyond that, specialised software is needed.
 
 **What is the Prime Number Theorem?**
 
@@ -238,15 +314,11 @@ An approximation: the number of primes up to n is approximately n/ln(n). Useful 
 
 **Can I use this for homework?**
 
-Yes—the calculator shows step-by-step factorization, helping you understand the process while verifying your work.
+Yes—the calculator shows step-by-step factorisation, helping understanding while verifying work.
 
 **What are twin primes?**
 
 Pairs of primes differing by 2: (3,5), (11,13), (17,19), (29,31). Whether infinitely many exist remains one of mathematics' unsolved problems.
-
-**What is the prime number theorem?**
-
-The density of primes near n is approximately 1/ln(n). This means primes become increasingly sparse but never stop appearing.
 
 **How are primes used in cryptography?**
 
@@ -256,47 +328,18 @@ RSA encryption uses the product of two large primes. Multiplying primes is easy;
 
 Primes of the form 2^p - 1, where p is itself prime. Examples: 3, 7, 31, 127. The largest known primes are typically Mersenne primes.
 
-**What is the next prime after a given number?**
+**How do prime factorisations relate to GCD and LCM?**
 
-The calculator can find this by testing consecutive numbers for primality. Gaps between consecutive primes can be arbitrarily large.
-
-**How do prime factorizations relate to GCD and LCM?**
-
-GCD = product of shared prime factors (lowest powers). LCM = product of all prime factors (highest powers). Factorization makes these calculations systematic.
+GCD = product of shared prime factors (lowest powers). LCM = product of all prime factors (highest powers). Factorisation makes these calculations systematic.
 
 **What is a prime gap?**
 
-The difference between consecutive primes. Gap between 23 and 29 is 6. Gaps can be arbitrarily large: n! + 2, n! + 3, ..., n! + n are all composite.
+The difference between consecutive primes. Gap between 23 and 29 is 6. Gaps can be arbitrarily large.
 
 **What are Sophie Germain primes?**
 
 Primes p where 2p + 1 is also prime. Examples: 2 (gives 5), 3 (gives 7), 5 (gives 11), 11 (gives 23). Used in cryptography.
 
-**How do I find the nth prime?**
-
-No formula gives the nth prime directly. Generate primes sequentially until you reach position n, or use approximations like n × ln(n).
-
-**What is a prime-counting function?**
-
-π(n) counts primes up to n. π(100) = 25 (there are 25 primes up to 100). Prime Number Theorem: π(n) ≈ n/ln(n).
-
 **What is a semiprime?**
 
 A number that is the product of exactly two primes. Examples: 6 = 2×3, 15 = 3×5, 77 = 7×11. Used in RSA encryption.
-
-**How do primes relate to modular arithmetic?**
-
-Fermat's Little Theorem: a^(p-1) ≡ 1 (mod p) for prime p. This is the basis for many primality tests and cryptographic algorithms.
-
-**What are prime factorization applications in everyday math?**
-
-Finding GCD and LCM, simplifying fractions, determining divisibility, solving problems involving multiple cycles or periodic events.
-
-**Why is the distribution of primes important?**
-
-Understanding prime distribution helps with cryptographic security assessment, algorithm efficiency, and fundamental number theory research.
-
-**Additional Notes**
-
-Prime numbers are mathematically beautiful and practically essential. From ancient Greek mathematics to modern cryptography, primes remain at the heart of number theory and secure communication.
-Explore the fascinating world of prime numbers using these tools.

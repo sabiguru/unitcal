@@ -1,20 +1,115 @@
 ## Significant Figures Calculator: Precision and Rounding
 
 ## Table of Contents - Significant Figures
-- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Measurement Precision in Science and Industry 2026](#measurement-precision-science-industry-2026)
 - [The Core Principle: Measurement Precision](#the-core-principle-measurement-precision)
+- [How to Use This Calculator](#how-to-use-this-calculator)
 - [How to Count and Apply Significant Figures](#how-to-count-and-apply-significant-figures)
 - [Real-World Applications](#real-world-applications)
-- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
-- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Worked Calculations and Scenarios](#worked-calculations)
 - [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
-- [Related Topics](#related-topics)
-- [How This Calculator Works](#how-this-calculator-works)
+- [Sources](#sources)
 - [FAQs](#faqs)
 
 ---
 
-## How to Use This Calculator - Significant Figures
+## Measurement Precision in Science and Industry 2026
+
+Significant figures communicate measurement precision across scientific research, manufacturing and quality control. Understanding precision requirements is essential for regulatory compliance and data integrity.
+
+### Laboratory Instrument Precision Standards
+
+**Analytical Balance Specifications (ISO 17025 Compliant):**
+
+| Balance Class | Readability | Typical Sig Figs | Application |
+|---------------|-------------|------------------|-------------|
+| Ultra-micro | 0.0001 mg | 7 | Pharmaceutical research |
+| Micro | 0.001 mg | 6 | Quality control labs |
+| Semi-micro | 0.01 mg | 5 | Analytical chemistry |
+| Analytical | 0.1 mg | 4 | General laboratory |
+| Precision | 1 mg | 3 | Industrial weighing |
+| Industrial | 10 mg | 2 | Bulk materials |
+
+**Volumetric Glassware Tolerances (Class A):**
+
+| Equipment | Volume | Tolerance | Implied Sig Figs |
+|-----------|--------|-----------|------------------|
+| Volumetric flask | 1000 mL | Plus or minus 0.40 mL | 4 |
+| Volumetric flask | 100 mL | Plus or minus 0.10 mL | 4 |
+| Volumetric flask | 25 mL | Plus or minus 0.04 mL | 4 |
+| Burette | 50 mL | Plus or minus 0.05 mL | 4 |
+| Pipette | 25 mL | Plus or minus 0.03 mL | 4 |
+| Pipette | 10 mL | Plus or minus 0.02 mL | 4 |
+
+### Scientific Data Reporting Requirements
+
+**Journal Publication Standards (Nature, Science, PNAS):**
+
+| Measurement Type | Required Sig Figs | Uncertainty Format |
+|------------------|-------------------|-------------------|
+| Physical constants | Match CODATA | Plus or minus standard error |
+| Experimental data | Match instrument | Plus or minus standard deviation |
+| Calculated values | Least precise input | Propagated uncertainty |
+| Statistical results | 2-3 beyond decimal | Confidence intervals |
+| Percentages | 1 decimal place | Plus or minus percentage points |
+
+**Pharmaceutical Manufacturing (GMP Requirements):**
+
+| Parameter | Required Precision | Regulatory Basis |
+|-----------|-------------------|------------------|
+| Active ingredient content | Plus or minus 0.5% | USP/BP standards |
+| Weight uniformity | Plus or minus 2.5% | EU GMP Annex 1 |
+| Dissolution rate | Plus or minus 5% | FDA guidance |
+| pH measurement | Plus or minus 0.1 | ICH Q6A |
+| Water content | 3 sig figs | Karl Fischer method |
+
+### Engineering Tolerances
+
+**CNC Machining Precision Classes (ISO 2768):**
+
+| Tolerance Class | Linear Tolerance (mm) | Implied Sig Figs |
+|-----------------|----------------------|------------------|
+| Fine (f) | Plus or minus 0.05 | 4 |
+| Medium (m) | Plus or minus 0.1 | 3 |
+| Coarse (c) | Plus or minus 0.2 | 3 |
+| Very Coarse (v) | Plus or minus 0.5 | 2 |
+
+**Semiconductor Manufacturing (2026):**
+
+| Process Node | Feature Size | Required Precision |
+|--------------|--------------|-------------------|
+| 3 nm | 3 nm | Plus or minus 0.1 nm (5%) |
+| 5 nm | 5 nm | Plus or minus 0.2 nm (4%) |
+| 7 nm | 7 nm | Plus or minus 0.3 nm (4%) |
+| 10 nm | 10 nm | Plus or minus 0.5 nm (5%) |
+
+---
+
+## The Core Principle: Measurement Precision
+
+Significant figures communicate the precision of measurements. A result should never imply more precision than the original data supports.
+
+**What counts as significant:**
+- All non-zero digits (1-9)
+- Zeros between non-zero digits (sandwiched zeros)
+- Trailing zeros after a decimal point
+- Trailing zeros in whole numbers only if indicated (decimal point or overline)
+
+**What does not count:**
+- Leading zeros (0.0045 has 2 sig figs)
+- Trailing zeros without decimal indication (100 has 1 sig fig by convention)
+
+**The fundamental rules for operations:**
+- Multiplication/Division: Result has the same sig figs as the least precise input
+- Addition/Subtraction: Result has the same decimal places as the least precise input
+
+**Exact numbers:**
+Counting numbers (12 eggs) and defined values (exactly 2.54 cm = 1 inch) have infinite sig figs and do not limit precision.
+
+---
+
+## How to Use This Calculator
+
 Enter a Number or mathematical expression (e.g., 12.3 × 4.56).
 
 For rounding, specify the desired Number of Significant Figures.
@@ -29,160 +124,229 @@ Click "Calculate" to see results. The output displays:
 
 ---
 
-## The Core Principle: Measurement Precision
-
-Significant figures communicate the precision of measurements. A result should never imply more precision than the original data supports.
-
-**What counts as significant:**
-- All non-zero digits (1-9)
-- Zeros between non-zero digits (sandwiched zeros)
-- Trailing zeros after a decimal point
-- Trailing zeros in whole numbers only if indicated (decimal point or overline)
-
-**What doesn't count:**
-- Leading zeros (0.0045 has 2 sig figs)
-- Trailing zeros without decimal indication (100 has 1 sig fig by convention)
-
-**The fundamental rules for operations:**
-- Multiplication/Division: Result has the same sig figs as the least precise input
-- Addition/Subtraction: Result has the same decimal places as the least precise input
-
----
-
 ## How to Count and Apply Significant Figures
 
 **Counting examples:**
-- 123: 3 sig figs (all non-zero)
-- 1.23: 3 sig figs (decimal doesn't change count)
-- 0.00123: 3 sig figs (leading zeros don't count)
-- 1.230: 4 sig figs (trailing zero after decimal counts)
-- 1000: 1 sig fig (ambiguous trailing zeros)
-- 1000.: 4 sig figs (decimal indicates precision)
-- 1.000 × 10³: 4 sig figs (scientific notation is unambiguous)
+
+| Number | Sig Figs | Explanation |
+|--------|----------|-------------|
+| 123 | 3 | All non-zero digits |
+| 1.23 | 3 | Decimal does not change count |
+| 0.00123 | 3 | Leading zeros do not count |
+| 1.230 | 4 | Trailing zero after decimal counts |
+| 1000 | 1 | Ambiguous trailing zeros |
+| 1000. | 4 | Decimal indicates precision |
+| 1.000 × 10³ | 4 | Scientific notation is unambiguous |
+| 10.00 | 4 | Trailing zeros after decimal count |
+| 0.0100 | 3 | Leading zeros do not count; trailing zero does |
 
 **Rounding example:**
-Round 0.00456 to 2 sig figs:
-First two sig figs are 4 and 5. Next digit is 6 (≥5).
-Round up: 0.0046
+Round 0.004567 to 2 sig figs:
+- First two sig figs are 4 and 5
+- Next digit is 6 (greater than or equal to 5)
+- Round up: 0.0046
 
 **Multiplication example:**
 8.25 cm × 3.4 cm = 28.05 cm²
-8.25 has 3 sig figs; 3.4 has 2 sig figs
-Result must have 2 sig figs: 28 cm²
+- 8.25 has 3 sig figs
+- 3.4 has 2 sig figs
+- Result must have 2 sig figs: 28 cm²
 
 **Addition example:**
 12.52 + 1.3 = 13.82
-12.52 has 2 decimal places; 1.3 has 1 decimal place
-Result must have 1 decimal place: 13.8
+- 12.52 has 2 decimal places
+- 1.3 has 1 decimal place
+- Result must have 1 decimal place: 13.8
 
 ---
 
 ## Real-World Applications
 
-**Laboratory reports.** Properly reported results reflect instrument precision and don't overstate accuracy.
+**Laboratory research.** Properly reported results reflect instrument precision and do not overstate accuracy. A balance reading 12.3456 g cannot be reported from a balance with 0.01 g readability.
 
-**Engineering calculations.** Material specifications and safety factors depend on accurate precision communication.
+**Pharmaceutical manufacturing.** Drug concentrations require appropriate precision for patient safety. Active ingredient content of 99.7% implies different precision than 99.70%.
 
-**Scientific research.** Data integrity requires consistent sig fig handling throughout analysis.
+**Engineering design.** Material specifications and safety factors depend on accurate precision communication. A beam specified as 3.00 m has tighter tolerance than one specified as 3 m.
 
-**Medical dosing.** Drug concentrations and patient measurements require appropriate precision.
+**Financial reporting.** Currency typically uses 2 decimal places; exchange rates may use more. Reporting £1,234,567.89 implies precision to the penny.
 
-**Financial calculations.** Currency typically uses 2 decimal places; exchange rates may use more.
+**Quality control.** Tolerance specifications must match measurement capability. A tolerance of plus or minus 0.05 mm requires instruments with at least 0.01 mm resolution.
 
-**Quality control.** Tolerance specifications must match measurement capability.
-
----
-
-## Scenarios People Actually Run Into
-
-**The ambiguous trailing zeros.** "100" could mean 1, 2, or 3 sig figs. Use scientific notation (1.00 × 10²) for clarity.
-
-**The exact number exception.** Counting numbers (12 eggs) and defined values (exactly 1 inch = 2.54 cm) have infinite sig figs.
-
-**The intermediate rounding trap.** Rounding intermediate steps compounds errors. Keep full precision until the final answer.
-
-**The addition versus multiplication confusion.** Different rules apply. Addition uses decimal places; multiplication uses sig figs.
-
-**The calculator display problem.** Calculators show many digits regardless of significance. You must apply sig fig rules manually.
+**Scientific publication.** Data integrity requires consistent sig fig handling throughout analysis. Reviewers reject papers with improperly reported precision.
 
 ---
 
-## Trade-Offs and Decisions People Underestimate
+## Worked Calculations and Scenarios
 
-**Precision versus accuracy.** Precision is repeatability; accuracy is closeness to truth. Sig figs address precision, not accuracy.
+### Scenario 1: Chemistry Laboratory Calculation
 
-**Over-reporting versus under-reporting.** Too many sig figs implies false precision; too few loses information. Match your measurement capability.
+**Context:** Calculating molarity from mass and volume measurements.
 
-**Scientific notation necessity.** Ambiguous cases require scientific notation for clarity, even when the number could be written otherwise.
+```
+Mass of NaCl: 5.85 g (3 sig figs, analytical balance)
+Volume of solution: 1.00 L (3 sig figs, volumetric flask)
+Molar mass NaCl: 58.44 g/mol (exact, defined value)
 
-**Consistency in reporting.** Within a report, use consistent precision levels for comparable measurements.
+Moles = 5.85 g ÷ 58.44 g/mol = 0.10007 mol
 
-**Instrument limitations.** Your result can't be more precise than your least precise measurement instrument.
+Molarity = 0.10007 mol ÷ 1.00 L = 0.10007 M
+
+Sig fig analysis:
+- Mass: 3 sig figs
+- Volume: 3 sig figs
+- Molar mass: exact (infinite sig figs)
+- Result limited by: 3 sig figs
+
+Final answer: 0.100 M (3 sig figs)
+```
+
+### Scenario 2: Physics Experiment Error Analysis
+
+**Context:** Calculating gravitational acceleration from pendulum measurements.
+
+```
+Pendulum length: 0.998 m (4 sig figs)
+Period (10 oscillations): 20.05 s (4 sig figs)
+Period (single): 2.005 s
+
+g = 4π²L / T²
+g = 4 × (3.14159)² × 0.998 / (2.005)²
+g = 39.478 × 0.998 / 4.020
+g = 9.805 m/s²
+
+Sig fig analysis:
+- Length: 4 sig figs
+- Period: 4 sig figs
+- π: mathematical constant (exact)
+- Result: 4 sig figs
+
+Final answer: 9.805 m/s² (4 sig figs)
+Literature value: 9.81 m/s² (London)
+Percent error: |9.805 - 9.81| / 9.81 × 100 = 0.05%
+```
+
+### Scenario 3: Pharmaceutical Assay Calculation
+
+**Context:** Determining active ingredient content in tablets.
+
+```
+Sample mass: 0.5012 g (4 sig figs)
+Dilution factor: 100.0 (4 sig figs)
+Absorbance reading: 0.4567 (4 sig figs)
+Standard concentration: 0.01000 mg/mL (4 sig figs)
+Standard absorbance: 0.4521 (4 sig figs)
+
+Concentration = (0.4567 / 0.4521) × 0.01000
+             = 1.0102 × 0.01000
+             = 0.01010 mg/mL
+
+Content = 0.01010 × 100.0 × 100 / 0.5012
+        = 201.5 mg
+
+Result: 201.5 mg per tablet (4 sig figs)
+Label claim: 200 mg
+Assay: (201.5 / 200) × 100 = 100.8%
+
+Acceptable range (USP): 95.0% - 105.0% ✓
+```
+
+### Scenario 4: Environmental Monitoring
+
+**Context:** Calculating pollutant concentrations from sampling data.
+
+```
+Air sample volume: 1.500 m³ (4 sig figs)
+Particulate mass collected: 0.0234 mg (3 sig figs)
+Sampling duration: 24.0 hours (3 sig figs)
+
+Concentration = 0.0234 mg / 1.500 m³
+              = 0.0156 mg/m³
+              = 15.6 μg/m³
+
+Sig fig analysis:
+- Mass: 3 sig figs (limiting)
+- Volume: 4 sig figs
+- Result: 3 sig figs
+
+Final answer: 15.6 μg/m³ (3 sig figs)
+
+UK air quality limit (PM2.5): 20 μg/m³ annual mean
+Status: Below limit ✓
+```
+
+### Scenario 5: Machine Learning Model Metrics
+
+**Context:** Reporting AI model performance with appropriate precision.
+
+```
+Test dataset: 10,000 samples (exact count)
+Correct predictions: 8,734 (exact count)
+
+Accuracy = 8,734 / 10,000 = 0.8734 = 87.34%
+
+Precision in reporting:
+- Exact counts: infinite sig figs
+- Calculated accuracy: report to match statistical uncertainty
+
+Standard error ≈ √(p(1-p)/n)
+            = √(0.8734 × 0.1266 / 10,000)
+            = 0.0033 (0.33%)
+
+Appropriate reporting: 87.3 ± 0.3%
+Or: 0.873 ± 0.003
+
+Note: Reporting 87.3423% implies false precision
+```
+
+### Scenario 6: Construction Material Calculation
+
+**Context:** Calculating concrete volume for foundation pour.
+
+```
+Length: 12.5 m (3 sig figs)
+Width: 8.2 m (2 sig figs)
+Depth: 0.30 m (2 sig figs)
+
+Volume = 12.5 × 8.2 × 0.30
+       = 30.75 m³
+
+Sig fig analysis:
+- Length: 3 sig figs
+- Width: 2 sig figs (limiting)
+- Depth: 2 sig figs (limiting)
+- Result: 2 sig figs
+
+Final answer: 31 m³ (2 sig figs)
+
+With 10% waste factor:
+Order quantity = 31 × 1.1 = 34.1 m³
+Practical order: 35 m³ (round up for safety)
+```
 
 ---
 
 ## Common Mistakes and How to Recover
 
-**Counting leading zeros.** 0.0045 has 2 sig figs, not 4. Leading zeros are placeholders, not significant.
+**Counting leading zeros.** 0.0045 has 2 sig figs, not 4. Leading zeros are placeholders and are never significant.
 
-**Forgetting decimal trailing zeros.** 2.50 has 3 sig figs, not 2. The trailing zero after decimal is significant.
+**Forgetting decimal trailing zeros.** 2.50 has 3 sig figs, not 2. The trailing zero after the decimal point is significant and indicates measured precision.
 
-**Wrong rule for operation.** Multiplication uses sig figs; addition uses decimal places. Know which rule applies.
+**Wrong rule for operation type.** Multiplication uses sig figs count; addition uses decimal places. Know which rule applies to each operation.
 
-**Rounding intermediate steps.** Keep full precision during calculation; round only the final answer.
+**Rounding intermediate steps.** Keep full precision during calculations; round only the final answer to prevent cumulative rounding errors.
 
-**Ignoring exact numbers.** Conversion factors and counted quantities have infinite precision and don't limit your result.
+**Ignoring exact numbers.** Conversion factors (2.54 cm/inch exactly) and counted quantities have infinite precision and do not limit the result.
 
----
-
-## Related Topics
-
-**Scientific notation.** Expressing numbers as coefficient × 10^power, making sig figs unambiguous.
-
-**Error propagation.** How uncertainties combine through calculations, beyond simple sig fig rules.
-
-**Measurement uncertainty.** Quantifying the range within which the true value likely lies.
-
-**Rounding rules.** Standard rounding (≥5 rounds up) and banker's rounding (round to even on exactly 5).
-
-**Precision versus accuracy.** Precision measures consistency; accuracy measures correctness.
+**Ambiguous trailing zeros.** 1000 could mean 1, 2, 3 or 4 sig figs. Use scientific notation (1.00 × 10³) or a decimal point (1000.) for clarity.
 
 ---
 
-## How This Calculator Works
+## Sources
 
-**Counting significant figures:**
-```
-Remove leading zeros
-Count all remaining digits until:
-  - End of number (after decimal)
-  - Last non-zero digit (before decimal, unless decimal point present)
-```
-
-**Rounding to n sig figs:**
-```
-Identify the nth significant digit
-Look at (n+1)th digit
-If ≥5: round up nth digit
-If &lt;5: keep nth digit
-Truncate remaining digits
-```
-
-**Multiplication/Division:**
-```
-Count sig figs in each operand
-Result sig figs = minimum of operand sig figs
-Round result accordingly
-```
-
-**Addition/Subtraction:**
-```
-Identify decimal places in each operand
-Result decimal places = minimum of operand decimal places
-Round result accordingly
-```
-
-All calculations happen locally in your browser.
+- [NIST: Guidelines for Evaluating and Expressing Measurement Uncertainty](https://www.nist.gov/pml/nist-technical-note-1297)
+- [ISO 17025: General Requirements for Competence of Testing Laboratories](https://www.iso.org/standard/66912.html)
+- [IUPAC: Guidelines for Publication of Analytical Data](https://iupac.org/publications/pac/)
+- [BIPM: International Vocabulary of Metrology](https://www.bipm.org/en/publications/vim)
 
 ---
 
@@ -194,87 +358,56 @@ All non-zero digits, zeros between non-zero digits, and trailing zeros after a d
 
 **How do I round 0.00456 to 2 sig figs?**
 
-Identify sig figs 4 and 5. Next digit (6) is ≥5, so round up: 0.0046.
+Identify sig figs 4 and 5. The next digit (6) is greater than or equal to 5, so round up: 0.0046.
 
 **Why does 100 have only 1 sig fig?**
 
-Without a decimal point, trailing zeros are ambiguous. To show 3 sig figs, write 100. or 1.00 × 10².
+Without a decimal point, trailing zeros are ambiguous. To show 3 sig figs, write 100. (with decimal) or 1.00 × 10².
 
 **Does the calculator handle scientific notation?**
 
 Yes. Enter 6.02e23 or 6.02 × 10^23. Scientific notation preserves sig figs unambiguously.
 
-**What's the rule for addition versus multiplication?**
+**What is the rule for addition versus multiplication?**
 
-Addition/subtraction: match least decimal places. Multiplication/division: match least sig figs.
+Addition/subtraction: match the least number of decimal places. Multiplication/division: match the least number of sig figs.
 
-**Can I use this for lab reports?**
+**Can I use this for laboratory reports?**
 
-Yes. It's designed for proper sig fig handling in scientific contexts requiring precision awareness.
-
-**Why is my answer rounded to fewer digits than expected?**
-
-Your input with the fewest sig figs (or decimal places) determines result precision. This is correct behavior.
+Yes. It is designed for proper sig fig handling in scientific contexts requiring precision awareness.
 
 **Should I round intermediate steps?**
 
 No. Keep full precision during calculations; round only the final result to prevent cumulative errors.
 
-**Additional Notes**
+**What is the difference between precision and accuracy?**
 
-This calculator provides accurate results for standard scenarios. Understanding the underlying principles helps you apply the concepts correctly in any situation. Practice with various examples to build confidence and skill. The mathematical foundations remain consistent across all applications.
+Precision measures consistency (repeatability); accuracy measures closeness to the true value. Sig figs address precision, not accuracy.
 
-**Practical Tips**
+**How do exact numbers affect calculations?**
 
-Start with simple examples before tackling complex problems. Verify your understanding by working problems manually and checking with the calculator. Pay attention to edge cases and exceptions to the standard rules. Build a systematic approach that works reliably for your specific use cases.
+Exact numbers (counts, definitions) have infinite sig figs and do not limit your result. Only measured values limit precision.
 
-**Further Learning**
+**What if my inputs have different numbers of sig figs?**
 
-Explore related topics to deepen your understanding. Connect concepts across different areas to build comprehensive knowledge. Seek out practice problems and real-world applications to reinforce learning. The fundamentals covered here provide a foundation for more advanced work.
- you apply them appropriately. Significant figures communicate measurement precision, ensuring scientific results don't overclaim accuracy. Every lab report, engineering calculation, and scientific publication depends on proper sig fig handling. The rules exist to maintain data integrity across the scientific community.
+For multiplication/division, the result takes the fewest sig figs of any input. For addition/subtraction, the result takes the fewest decimal places.
 
-**Common Scenarios and Solutions**
+**How do I handle repeating decimals?**
 
-When combining measurements from different instruments, the least precise measurement determines final precision. When exact numbers (counting, definitions) are involved, they don't limit precision. When uncertainty is known, error propagation provides more precise analysis than sig fig rules. For quick estimates, sig fig rules provide adequate precision communication.
+Report to the appropriate number of sig figs. 1/3 = 0.333... becomes 0.333 (3 sig figs) or 0.33 (2 sig figs) as needed.
 
-**Building Mastery**
+**What precision should scientific journals require?**
 
-Practice counting sig figs in various formats until it becomes automatic. Work through calculations applying both addition and multiplication rules. Convert numbers to scientific notation when precision is ambiguous. Develop the habit of assessing measurement precision before calculating.
+Match the precision of measured values. Never report more sig figs than your least precise measurement supports.
 
-**Expert Insights**
+**How do error propagation and sig figs relate?**
 
-Professionals in this field develop deep intuition through extensive practice. The calculator handles the computational work, freeing you to focus on understanding and application. Patterns emerge with experience that make complex problems more tractable. Building systematic approaches to problem-solving improves efficiency and accuracy.
+Sig fig rules provide quick approximations. Formal error propagation using uncertainties provides more precise analysis for critical applications.
 
-**Applications Beyond the Basics**
+**Can I use this for financial calculations?**
 
-The principles covered here extend to more advanced scenarios. Understanding the fundamentals thoroughly prepares you for specialized applications. Connect these concepts to related areas for broader competence. Seek out challenging problems to continue developing your skills.
+Financial calculations typically use fixed decimal places (2 for currency) rather than sig fig rules. Different conventions apply.
 
-**Final Thoughts**
+**What about very large numbers like Avogadro's number?**
 
-Mastery comes through consistent practice and application. Use the calculator as a learning tool, not just an answer generator. Verify your understanding by working problems both manually and with computational assistance. Build confidence through successful application to real-world challenges. The investment in understanding pays dividends across many contexts.
-
-**Technical Considerations**
-
-The mathematical foundations underlying these calculations have been refined over centuries. Modern computational tools implement these algorithms with high precision. Understanding both the theory and practical application enables effective use of these tools. Pay attention to units, precision, and assumptions for accurate results.
-
-**Integration with Other Tools**
-
-This calculator works alongside other tools and resources for comprehensive problem-solving. Combine computational results with domain knowledge for best outcomes. Verify critical results through multiple methods when accuracy is essential. Build workflows that leverage the strengths of different tools appropriately.
-
-**Continuous Improvement**
-
-Skills in this area benefit from ongoing practice and learning. Stay current with developments in the field. Seek feedback on your work to identify areas for improvement. Connect with communities of practice to share knowledge and learn from others. The journey toward mastery is ongoing and rewarding.
-
-**Professional Applications**
-
-These calculations appear throughout professional practice in relevant fields. Competence with the underlying concepts enhances career effectiveness. The ability to verify results and understand methodology distinguishes thorough professionals. Build expertise that combines computational skill with conceptual understanding for maximum impact.
-
-**Summary**
-
-This calculator provides the computational foundation for solving problems in this domain. Understanding the principles enables appropriate application and result interpretation. Practice builds skill and confidence. Apply these tools to real challenges to develop practical competence that serves you well in academic, professional, and personal contexts.
-
-The skills and knowledge developed through working with these calculations serve you well across many contexts. Continue practicing and applying these concepts to build lasting competence.
-Regular practice builds the intuition and confidence needed for reliable results in any situation you encounter.
-Understanding the theory behind the calculations enhances your ability to apply them effectively across diverse situations and challenges.
-Master these fundamentals and build from there to tackle increasingly complex problems with confidence and accuracy.
-The calculator handles the mathematics while you focus on understanding and application.
+Use scientific notation: 6.022 × 10²³ has 4 sig figs. This is clearer than writing 602,200,000,000,000,000,000,000.

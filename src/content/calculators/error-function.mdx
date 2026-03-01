@@ -1,14 +1,104 @@
 ## Error Function Calculator: Compute erf(x) and Related Functions
 
 ## Table of Contents - Error Function
+- [Error Function in Modern Applications 2026](#error-function-modern-applications-2026)
 - [How to Use This Calculator](#how-to-use-this-calculator)
 - [Understanding the Error Function](#understanding-the-error-function)
 - [How to Calculate the Error Function](#how-to-calculate-the-error-function)
 - [Real-World Applications](#real-world-applications)
+- [Worked Calculations and Scenarios](#worked-calculations)
 - [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
-- [Related Topics](#related-topics)
-- [How This Calculator Works](#how-this-calculator-works)
+- [Sources](#sources)
 - [FAQs](#faqs)
+
+---
+
+## Error Function in Modern Applications 2026
+
+The error function connects probability theory, heat transfer, signal processing and machine learning. Its ubiquity in Gaussian-based calculations makes it essential for modern data science and engineering analysis.
+
+### Normal Distribution Probability Tables
+
+**Standard Normal Z-Score Probabilities (using erf):**
+
+| Z-Score | erf(Z/√2) | Φ(Z) = ½[1+erf(Z/√2)] | P(X ≤ Z) | Common Use |
+|---------|-----------|----------------------|----------|------------|
+| -3.0 | -0.9999 | 0.00135 | 0.135% | Six Sigma lower |
+| -2.0 | -0.9545 | 0.0228 | 2.28% | Warning limit |
+| -1.0 | -0.6827 | 0.1587 | 15.87% | Below average |
+| 0.0 | 0.0000 | 0.5000 | 50.00% | Mean |
+| 1.0 | 0.6827 | 0.8413 | 84.13% | Above average |
+| 1.96 | 0.9500 | 0.9750 | 97.50% | 95% CI bound |
+| 2.0 | 0.9545 | 0.9772 | 97.72% | Control limit |
+| 3.0 | 0.9999 | 0.99865 | 99.87% | Six Sigma upper |
+
+**Sigma Levels for Quality Control:**
+
+| Sigma Level | One-Sided P | Two-Sided P | DPMO | erf Value |
+|-------------|-------------|-------------|------|-----------|
+| 1σ | 84.13% | 68.27% | 317,311 | 0.6827 |
+| 2σ | 97.72% | 95.45% | 45,500 | 0.9545 |
+| 3σ | 99.87% | 99.73% | 2,700 | 0.9973 |
+| 4σ | 99.997% | 99.994% | 63 | 0.99994 |
+| 5σ | 99.99997% | 99.9999% | 0.57 | 0.9999994 |
+| 6σ | 99.9999999% | 99.9999998% | 0.002 | 0.999999998 |
+
+### Communication Systems Bit Error Rates
+
+**Digital Modulation Error Probabilities:**
+
+| Modulation | BER Formula | Eb/N0 = 10 dB | Eb/N0 = 15 dB |
+|------------|-------------|---------------|---------------|
+| BPSK | ½erfc(√(Eb/N0)) | 3.9×10⁻⁶ | 1.2×10⁻¹² |
+| QPSK | ½erfc(√(Eb/N0)) | 3.9×10⁻⁶ | 1.2×10⁻¹² |
+| 8-PSK | ~erfc(√(Eb/N0)sin(π/8)) | 1.9×10⁻³ | 5.8×10⁻⁷ |
+| 16-QAM | ~(3/4)erfc(√(0.4Eb/N0)) | 1.8×10⁻³ | 3.7×10⁻⁷ |
+| 64-QAM | ~(7/12)erfc(√(Eb/N0)/7) | 2.6×10⁻² | 9.8×10⁻⁵ |
+
+**Channel Capacity and Error Thresholds:**
+
+| SNR (dB) | erfc Argument | Q-function | Capacity (bits/Hz) |
+|----------|---------------|------------|-------------------|
+| 0 | 0.707 | 0.24 | 1.00 |
+| 5 | 1.26 | 0.10 | 1.87 |
+| 10 | 2.24 | 0.013 | 3.46 |
+| 15 | 3.98 | 3.4×10⁻⁵ | 5.01 |
+| 20 | 7.07 | 7.6×10⁻¹³ | 6.66 |
+
+### Heat Transfer and Diffusion
+
+**Semi-Infinite Solid Temperature Profiles:**
+
+| αt/x² | erf(x/2√(αt)) | θ = (T-Ts)/(Ti-Ts) | Application |
+|-------|---------------|-------------------|-------------|
+| 0.01 | 0.995 | 0.995 | Near surface, early |
+| 0.1 | 0.843 | 0.843 | Moderate depth |
+| 0.25 | 0.683 | 0.683 | Thermal boundary |
+| 1.0 | 0.157 | 0.157 | Deep penetration |
+| 4.0 | 0.005 | 0.005 | Nearly uniform |
+
+**Diffusion Distance Estimates:**
+
+| Time | √(4Dt) for D=10⁻⁵ cm²/s | 50% Concentration (erf=0) | 95% Concentration |
+|------|-------------------------|---------------------------|-------------------|
+| 1 s | 0.0063 cm | at x = 0 | x = 0.013 cm |
+| 1 min | 0.049 cm | at x = 0 | x = 0.10 cm |
+| 1 hour | 0.38 cm | at x = 0 | x = 0.78 cm |
+| 1 day | 1.86 cm | at x = 0 | x = 3.8 cm |
+
+### Machine Learning Activation Functions
+
+**GELU Activation (Gaussian Error Linear Unit):**
+
+| x | erf(x/√2) | GELU(x) = x·Φ(x) | ReLU(x) | Difference |
+|---|-----------|------------------|---------|------------|
+| -2.0 | -0.954 | -0.045 | 0 | -0.045 |
+| -1.0 | -0.683 | -0.159 | 0 | -0.159 |
+| -0.5 | -0.383 | -0.154 | 0 | -0.154 |
+| 0.0 | 0.000 | 0.000 | 0 | 0.000 |
+| 0.5 | 0.383 | 0.346 | 0.5 | -0.154 |
+| 1.0 | 0.683 | 0.841 | 1.0 | -0.159 |
+| 2.0 | 0.954 | 1.955 | 2.0 | -0.045 |
 
 ---
 
@@ -252,6 +342,219 @@ Fresnel integrals and diffraction patterns can be expressed using error function
 
 ---
 
+## Worked Calculations and Scenarios
+
+### Scenario 1: Quality Control Process Capability
+
+**Context:** Analysing manufacturing tolerance compliance.
+
+```
+Given:
+Process mean: μ = 50.0 mm
+Process standard deviation: σ = 0.8 mm
+Upper specification limit (USL): 52.0 mm
+Lower specification limit (LSL): 48.0 mm
+
+Z-scores for limits:
+Z_upper = (USL - μ)/σ = (52 - 50)/0.8 = 2.5
+Z_lower = (μ - LSL)/σ = (50 - 48)/0.8 = 2.5
+
+Probability within specification:
+P(LSL < X < USL) = erf(2.5/√2)
+                 = erf(1.768)
+                 = 0.9876
+
+Percentage within spec: 98.76%
+Defect rate: 1.24% or 12,400 DPMO
+
+Using erfc:
+P(X > USL) = ½erfc(1.768) = ½ × 0.0124 = 0.62%
+P(X < LSL) = ½erfc(1.768) = 0.62%
+
+Process capability:
+Cp = (USL - LSL)/(6σ) = 4/(4.8) = 0.833
+Cpk = min(Z_upper, Z_lower)/3 = 2.5/3 = 0.833
+```
+
+### Scenario 2: Digital Communication Link Budget
+
+**Context:** Calculating bit error rate for satellite communication.
+
+```
+Given:
+Transmitted power: Pt = 10 W = 40 dBm
+Path loss: L = 200 dB
+Antenna gains: Gt + Gr = 80 dBi
+Noise figure: NF = 3 dB
+Bandwidth: B = 1 MHz
+Data rate: R = 256 kbps
+Modulation: QPSK
+
+Received power:
+Pr = Pt + Gt + Gr - L = 40 + 80 - 200 = -80 dBm
+
+Noise power:
+N = kTB + NF = -174 + 60 + 3 = -111 dBm
+
+Carrier-to-noise ratio:
+C/N = Pr - N = -80 - (-111) = 31 dB
+
+Eb/N0 = C/N + 10log(B/R)
+      = 31 + 10log(1,000,000/256,000)
+      = 31 + 5.9 = 36.9 dB
+
+BER for QPSK:
+BER = ½erfc(√(Eb/N0))
+    = ½erfc(√(4898))
+    = ½erfc(70)
+    ≈ 0 (effectively error-free)
+
+At marginal 10 dB Eb/N0:
+BER = ½erfc(√10) = ½erfc(3.16)
+    = ½ × 7.7×10⁻⁶ = 3.9×10⁻⁶
+```
+
+### Scenario 3: Heat Conduction in Semi-Infinite Solid
+
+**Context:** Surface heat treatment temperature profile.
+
+```
+Given:
+Material: Steel
+Thermal diffusivity: α = 1.2 × 10⁻⁵ m²/s
+Initial temperature: Ti = 20°C
+Surface temperature: Ts = 900°C (heat treatment)
+Time: t = 60 seconds
+
+Temperature distribution:
+T(x,t) = Ts + (Ti - Ts) × erf(x / (2√(αt)))
+T(x,t) = 900 + (20 - 900) × erf(x / (2√(7.2×10⁻⁴)))
+T(x,t) = 900 - 880 × erf(x / 0.0537)
+
+At depth x = 2 mm = 0.002 m:
+Argument = 0.002 / 0.0537 = 0.0373
+erf(0.0373) ≈ 0.042
+
+T(2mm) = 900 - 880 × 0.042 = 863°C
+
+At depth x = 10 mm:
+Argument = 0.010 / 0.0537 = 0.186
+erf(0.186) ≈ 0.207
+
+T(10mm) = 900 - 880 × 0.207 = 718°C
+
+At depth x = 30 mm:
+Argument = 0.030 / 0.0537 = 0.559
+erf(0.559) ≈ 0.572
+
+T(30mm) = 900 - 880 × 0.572 = 397°C
+```
+
+### Scenario 4: Option Pricing Normal Distribution
+
+**Context:** Black-Scholes option pricing calculation.
+
+```
+Given:
+Stock price: S = £100
+Strike price: K = £105
+Risk-free rate: r = 5%
+Volatility: σ = 20%
+Time to expiry: T = 0.5 years
+
+d1 and d2 calculations:
+d1 = [ln(S/K) + (r + σ²/2)T] / (σ√T)
+   = [ln(100/105) + (0.05 + 0.02)×0.5] / (0.2×0.707)
+   = [-0.0488 + 0.035] / 0.1414
+   = -0.0976
+
+d2 = d1 - σ√T = -0.0976 - 0.1414 = -0.239
+
+Normal CDF using erf:
+N(d1) = ½[1 + erf(-0.0976/√2)]
+      = ½[1 + erf(-0.069)]
+      = ½[1 - 0.078]
+      = 0.461
+
+N(d2) = ½[1 + erf(-0.239/√2)]
+      = ½[1 + erf(-0.169)]
+      = ½[1 - 0.188]
+      = 0.406
+
+Call option price:
+C = S×N(d1) - K×e^(-rT)×N(d2)
+  = 100×0.461 - 105×e^(-0.025)×0.406
+  = 46.1 - 105×0.975×0.406
+  = 46.1 - 41.6
+  = £4.50
+```
+
+### Scenario 5: Diffusion Semiconductor Doping
+
+**Context:** Dopant concentration profile in silicon.
+
+```
+Given:
+Surface concentration: Cs = 10²⁰ atoms/cm³
+Background concentration: Cb = 10¹⁵ atoms/cm³
+Diffusion coefficient: D = 10⁻¹³ cm²/s
+Diffusion time: t = 3600 s (1 hour)
+
+Concentration profile (constant surface):
+C(x,t) = Cs × erfc(x / (2√(Dt)))
+
+Calculate 2√(Dt):
+2√(Dt) = 2√(10⁻¹³ × 3600)
+       = 2√(3.6×10⁻¹⁰)
+       = 2 × 1.9×10⁻⁵
+       = 3.8×10⁻⁵ cm = 0.38 μm
+
+At depth x = 0.1 μm:
+Argument = 0.1 / 0.38 = 0.263
+erfc(0.263) = 1 - erf(0.263) = 1 - 0.290 = 0.710
+C(0.1μm) = 10²⁰ × 0.710 = 7.1×10¹⁹ atoms/cm³
+
+Junction depth (where C = Cb):
+10¹⁵ = 10²⁰ × erfc(xj / 0.38)
+erfc(xj / 0.38) = 10⁻⁵
+
+Inverse erfc(10⁻⁵) ≈ 3.12
+xj = 3.12 × 0.38 = 1.19 μm
+```
+
+### Scenario 6: Radar Detection Probability
+
+**Context:** Constant false alarm rate (CFAR) detection threshold.
+
+```
+Given:
+Desired false alarm probability: Pfa = 10⁻⁶
+Signal-to-noise ratio: SNR = 15 dB (linear: 31.6)
+Swerling Case 1 target model
+
+False alarm threshold:
+Pfa = ½erfc(Vt / √2)
+10⁻⁶ = ½erfc(Vt / √2)
+erfc(Vt / √2) = 2×10⁻⁶
+
+Inverse erfc(2×10⁻⁶) ≈ 3.36
+Vt = 3.36 × √2 = 4.75 (normalised threshold)
+
+Detection probability:
+For Rayleigh fluctuating target:
+Pd = ½erfc((Vt - √(2×SNR)) / √2)
+   = ½erfc((4.75 - √63.2) / √2)
+   = ½erfc((4.75 - 7.95) / 1.414)
+   = ½erfc(-2.26)
+   = ½[1 + erf(2.26)]
+   = ½[1 + 0.9986]
+   = 0.9993 or 99.93%
+
+Detection probability: 99.93% at Pfa = 10⁻⁶
+```
+
+---
+
 ## Common Mistakes and How to Avoid Them
 
 **Mistake 1: Thinking erf(x) = 1 for large x**
@@ -312,7 +615,12 @@ Why it happens: Not understanding the asymptotic behavior. The bounds are strict
 
 ---
 
-## Related Topics
+## Sources
+
+- [NIST Digital Library of Mathematical Functions: Error Functions](https://dlmf.nist.gov/7)
+- [Abramowitz and Stegun: Handbook of Mathematical Functions](https://www.math.ubc.ca/~cbm/aands/)
+- [IEEE Communications Society: Digital Modulation Standards](https://www.comsoc.org/)
+- [MIT OpenCourseWare: Heat Transfer](https://ocw.mit.edu/)
 
 ---
 
