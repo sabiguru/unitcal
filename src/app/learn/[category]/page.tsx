@@ -6,9 +6,6 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { calculatorCategories } from '@/data/categoryData';
 import { getSlugsForCategory } from '@/utils/learnCategoryMapping';
 import { getAvailableLearnSlugs, getLearnSeo } from '@/data/learnSeoBySlug';
-import EzoicAd from '@/components/ads/EzoicAd';
-import { EZOIC_PLACEMENTS } from '@/config/ezoicPlacements';
-
 interface LearnCategoryPageProps {
   params: Promise<{
     category: string;
@@ -299,8 +296,6 @@ export default async function LearnCategoryPage({ params, searchParams }: LearnC
           {/* Right Sidebar */}
           <aside className="col-span-12 lg:col-span-4">
             <div className="sticky top-6 space-y-6">
-              <EzoicAd placementId={EZOIC_PLACEMENTS.LEARN_SIDEBAR} />
-
               {/* Related Calculator Categories */}
               <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
                 <h3 className="text-lg font-bold text-gray-900 mb-4">
@@ -328,8 +323,6 @@ export default async function LearnCategoryPage({ params, searchParams }: LearnC
                   ))}
                 </div>
               </div>
-
-              <EzoicAd placementId={EZOIC_PLACEMENTS.LEARN_SIDEBAR} />
             </div>
           </aside>
         </div>
