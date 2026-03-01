@@ -104,56 +104,56 @@ export default function Header() {
                 {showCategoriesDropdown && (
                   <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
                     <div className="p-2">
-                      <Link href="/calculators" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors mb-2 border-b border-gray-100">
+                      <Link href="/calculators" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors mb-2 border-b border-gray-100" onClick={() => setShowCategoriesDropdown(false)}>
                         <span className="text-lg">📋</span>
                         <div>
                           <div className="font-medium text-gray-900">All Calculators</div>
                           <div className="text-xs text-gray-500">Browse all calculator types</div>
                         </div>
                       </Link>
-                      <Link href="/calculator/mathematics" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/calculator/mathematics" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowCategoriesDropdown(false)}>
                         <span className="text-lg">🧮</span>
                         <div>
                           <div className="font-medium text-gray-900">Mathematics & Basic Tools</div>
                           <div className="text-xs text-gray-500">12 calculators</div>
                         </div>
                       </Link>
-                      <Link href="/calculator/health" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/calculator/health" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowCategoriesDropdown(false)}>
                         <span className="text-lg">🏃‍♂️</span>
                         <div>
                           <div className="font-medium text-gray-900">Health & Fitness</div>
                           <div className="text-xs text-gray-500">9 calculators</div>
                         </div>
                       </Link>
-                      <Link href="/calculator/financial" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/calculator/financial" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowCategoriesDropdown(false)}>
                         <span className="text-lg">💰</span>
                         <div>
                           <div className="font-medium text-gray-900">Financial & Business</div>
                           <div className="text-xs text-gray-500">14 calculators</div>
                         </div>
                       </Link>
-                      <Link href="/calculator/engineering" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/calculator/engineering" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowCategoriesDropdown(false)}>
                         <span className="text-lg">⚡</span>
                         <div>
                           <div className="font-medium text-gray-900">Engineering & Technology</div>
                           <div className="text-xs text-gray-500">8 calculators</div>
                         </div>
                       </Link>
-                      <Link href="/calculator/agriculture" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/calculator/agriculture" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowCategoriesDropdown(false)}>
                         <span className="text-lg">🌾</span>
                         <div>
                           <div className="font-medium text-gray-900">Agriculture & Gardening</div>
                           <div className="text-xs text-gray-500">1 calculator</div>
                         </div>
                       </Link>
-                      <Link href="/calculator/automotive" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/calculator/automotive" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowCategoriesDropdown(false)}>
                         <span className="text-lg">🚗</span>
                         <div>
                           <div className="font-medium text-gray-900">Automotive</div>
                           <div className="text-xs text-gray-500">7 calculators</div>
                         </div>
                       </Link>
-                      <Link href="/calculator/space" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/calculator/space" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowCategoriesDropdown(false)}>
                         <span className="text-lg">🚀</span>
                         <div>
                           <div className="font-medium text-gray-900">Space & Astronomy</div>
@@ -182,112 +182,112 @@ export default function Header() {
                 {showLearnDropdown && (
                   <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
                     <div className="p-2">
-                      <Link href="/learn" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors mb-2 border-b border-gray-100">
+                      <Link href="/learn" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors mb-2 border-b border-gray-100" onClick={() => setShowLearnDropdown(false)}>
                         <span className="text-lg">📚</span>
                         <div>
                           <div className="font-medium text-gray-900">All Learn Articles</div>
                           <div className="text-xs text-gray-500">Browse all learning content</div>
                         </div>
                       </Link>
-                      <Link href="/learn/mathematics" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/mathematics" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowLearnDropdown(false)}>
                         <span className="text-lg">🧮</span>
                         <div>
                           <div className="font-medium text-gray-900">Mathematics & Basic Tools</div>
                           <div className="text-xs text-gray-500">Learn calculation methods</div>
                         </div>
                       </Link>
-                      <Link href="/learn/health" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/health" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowLearnDropdown(false)}>
                         <span className="text-lg">🏃‍♂️</span>
                         <div>
                           <div className="font-medium text-gray-900">Health & Fitness</div>
                           <div className="text-xs text-gray-500">Learn health calculations</div>
                         </div>
                       </Link>
-                      <Link href="/learn/financial" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/financial" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowLearnDropdown(false)}>
                         <span className="text-lg">💰</span>
                         <div>
                           <div className="font-medium text-gray-900">Financial & Business</div>
                           <div className="text-xs text-gray-500">Learn financial formulas</div>
                         </div>
                       </Link>
-                      <Link href="/learn/engineering" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/engineering" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowLearnDropdown(false)}>
                         <span className="text-lg">⚡</span>
                         <div>
                           <div className="font-medium text-gray-900">Engineering & Technology</div>
                           <div className="text-xs text-gray-500">Learn technical concepts</div>
                         </div>
                       </Link>
-                      <Link href="/learn/agriculture" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/agriculture" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowLearnDropdown(false)}>
                         <span className="text-lg">🌾</span>
                         <div>
                           <div className="font-medium text-gray-900">Agriculture & Gardening</div>
                           <div className="text-xs text-gray-500">Learn planting and spacing</div>
                         </div>
                       </Link>
-                      <Link href="/learn/automotive" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/automotive" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowLearnDropdown(false)}>
                         <span className="text-lg">🚗</span>
                         <div>
                           <div className="font-medium text-gray-900">Automotive</div>
                           <div className="text-xs text-gray-500">Learn car calculations</div>
                         </div>
                       </Link>
-                      <Link href="/learn/space" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/space" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowLearnDropdown(false)}>
                         <span className="text-lg">🚀</span>
                         <div>
                           <div className="font-medium text-gray-900">Space & Astronomy</div>
                           <div className="text-xs text-gray-500">Learn space concepts</div>
                         </div>
                       </Link>
-                      <Link href="/learn/everyday" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/everyday" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowLearnDropdown(false)}>
                         <span className="text-lg">📅</span>
                         <div>
                           <div className="font-medium text-gray-900">Everyday Life</div>
                           <div className="text-xs text-gray-500">Learn everyday calculations</div>
                         </div>
                       </Link>
-                      <Link href="/learn/construction" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/construction" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowLearnDropdown(false)}>
                         <span className="text-lg">🏗️</span>
                         <div>
                           <div className="font-medium text-gray-900">Construction & DIY</div>
                           <div className="text-xs text-gray-500">Learn construction calculations</div>
                         </div>
                       </Link>
-                      <Link href="/learn/cooking" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/cooking" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowLearnDropdown(false)}>
                         <span className="text-lg">👨‍🍳</span>
                         <div>
                           <div className="font-medium text-gray-900">Cooking & Food</div>
                           <div className="text-xs text-gray-500">Learn cooking calculations</div>
                         </div>
                       </Link>
-                      <Link href="/learn/conversions" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/conversions" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowLearnDropdown(false)}>
                         <span className="text-lg">🔄</span>
                         <div>
                           <div className="font-medium text-gray-900">Specialized Conversions</div>
                           <div className="text-xs text-gray-500">Learn conversion tools</div>
                         </div>
                       </Link>
-                      <Link href="/learn/energy" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/energy" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowLearnDropdown(false)}>
                         <span className="text-lg">🌱</span>
                         <div>
                           <div className="font-medium text-gray-900">Energy & Environment</div>
                           <div className="text-xs text-gray-500">Learn energy calculations</div>
                         </div>
                       </Link>
-                      <Link href="/learn/education" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/education" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowLearnDropdown(false)}>
                         <span className="text-lg">🔬</span>
                         <div>
                           <div className="font-medium text-gray-900">Education & Science</div>
                           <div className="text-xs text-gray-500">Learn science calculations</div>
                         </div>
                       </Link>
-                      <Link href="/learn/animal-age" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/animal-age" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowLearnDropdown(false)}>
                         <span className="text-lg">🐾</span>
                         <div>
                           <div className="font-medium text-gray-900">Animal Age</div>
                           <div className="text-xs text-gray-500">Learn pet age calculations</div>
                         </div>
                       </Link>
-                      <Link href="/learn/unique" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                      <Link href="/learn/unique" className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" onClick={() => setShowLearnDropdown(false)}>
                         <span className="text-lg">🎲</span>
                         <div>
                           <div className="font-medium text-gray-900">Unique & Niche</div>
