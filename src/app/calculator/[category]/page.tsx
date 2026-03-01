@@ -111,10 +111,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     notFound();
   }
 
-  const breadcrumbs = generateCategoryBreadcrumbs(category.title);
+  const categoryUrl = `https://calcfort.com/calculator/${categorySlug}`;
+  const breadcrumbs = generateCategoryBreadcrumbs(category.title, categoryUrl);
 
   // Generate schemas for category page
-  const categoryUrl = `https://calcfort.com/calculator/${categorySlug}`;
   const collectionSchemaData = generateCollectionPageSchema(
     `${category.title} Calculators`,
     categoryUrl,
@@ -126,7 +126,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     `${category.title} Calculators`,
     categoryUrl,
     category.description,
-    breadcrumbs.map(b => ({ name: b.label, url: `https://calcfort.com${b.href}` }))
+    breadcrumbs.map(b => ({
+      name: b.label,
+      url: b.canonicalUrl || (b.href ? `https://calcfort.com${b.href}` : categoryUrl)
+    }))
   );
 
   const allSchemas = [

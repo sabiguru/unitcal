@@ -1,14 +1,85 @@
 ## Descartes' Rule of Signs Calculator: Predict Positive and Negative Roots
 
 ## Table of Contents - Descartes' Rule of Signs
+- [Descartes' Rule in Mathematical Analysis 2026](#descartes-rule-mathematical-analysis-2026)
 - [How to Use This Calculator](#how-to-use-this-calculator)
 - [Understanding Descartes' Rule of Signs](#understanding-descartes-rule-of-signs)
 - [How to Apply the Rule Manually](#how-to-apply-the-rule-manually)
 - [Real-World Applications](#real-world-applications)
+- [Worked Calculations and Scenarios](#worked-calculations)
 - [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
-- [Related Topics](#related-topics)
-- [How This Calculator Works](#how-this-calculator-works)
+- [Sources](#sources)
 - [FAQs](#faqs)
+
+---
+
+## Descartes' Rule in Mathematical Analysis 2026
+
+Descartes' Rule of Signs provides rapid insight into polynomial root distributions before solving. This classical technique remains essential for preliminary analysis in engineering, physics and mathematical problem-solving.
+
+### Sign Change Analysis Reference
+
+**Standard Polynomial Patterns:**
+
+| Polynomial | Sign Sequence | Sign Changes | Possible + Roots | Possible − Roots |
+|------------|---------------|--------------|------------------|------------------|
+| x³ + 2x² + x + 1 | + + + + | 0 | 0 | 3 or 1 |
+| x³ - x² + x - 1 | + - + - | 3 | 3 or 1 | 0 |
+| x³ + x² - x - 1 | + + - - | 1 | 1 | 2 or 0 |
+| x⁴ - 5x² + 4 | + - + | 2 | 2 or 0 | 2 or 0 |
+| x⁴ + x³ - x - 1 | + + - - | 1 | 1 | 2 or 0 |
+
+**Root Distribution Summary:**
+
+| Degree | Max + Roots | Max − Roots | Complex Possibilities |
+|--------|-------------|-------------|----------------------|
+| 2 | 2 | 2 | 0 or 2 |
+| 3 | 3 | 3 | 0 or 2 |
+| 4 | 4 | 4 | 0, 2, or 4 |
+| 5 | 5 | 5 | 0, 2, or 4 |
+| 6 | 6 | 6 | 0, 2, 4, or 6 |
+
+### Engineering Applications
+
+**Control System Characteristic Equations:**
+
+| System | Characteristic Equation | Sign Changes | Stability Indication |
+|--------|------------------------|--------------|---------------------|
+| 2nd order stable | s² + 2s + 1 | 0 | All roots negative ✓ |
+| 2nd order unstable | s² - 2s + 1 | 2 | Positive roots exist ✗ |
+| 3rd order stable | s³ + 3s² + 3s + 1 | 0 | All roots negative ✓ |
+| 3rd order marginal | s³ + s | + + | 0 positive, check negative |
+
+**Physical System Constraints:**
+
+| Application | Required Roots | Use of Rule |
+|-------------|----------------|-------------|
+| Population models | Positive only | Confirm + roots exist |
+| Financial growth | Non-negative | Rule on f(x) |
+| Temperature decay | Real, negative | Rule on f(-x) |
+| Oscillation frequency | Imaginary pairs | Complex root count |
+
+### Quick Reference Tables
+
+**f(−x) Transformation Rules:**
+
+| Original Term | After x → −x | Sign Change |
+|---------------|--------------|-------------|
+| ax³ | −ax³ | Changes |
+| bx² | bx² | Same |
+| cx | −cx | Changes |
+| d | d | Same |
+
+**General Pattern: Odd powers change sign, even powers stay same.**
+
+**Common Factored Forms and Sign Changes:**
+
+| Factored Form | Expanded | Sign Sequence | Changes |
+|---------------|----------|---------------|---------|
+| (x-1)(x-2)(x-3) | x³-6x²+11x-6 | + - + - | 3 |
+| (x+1)(x+2)(x+3) | x³+6x²+11x+6 | + + + + | 0 |
+| (x-1)(x+2)² | x³+3x²-4 | + + - | 1 |
+| (x²+1)(x-1) | x³-x²+x-1 | + - + - | 3 |
 
 ---
 
@@ -255,6 +326,213 @@ When optimization problems reduce to polynomial equations, Descartes' Rule indic
 
 ---
 
+## Worked Calculations and Scenarios
+
+### Scenario 1: Control System Stability Check
+
+**Context:** Analysing closed-loop system characteristic equation.
+
+```
+Given characteristic equation:
+s⁴ + 3s³ + 4s² + 2s + 1 = 0
+
+Step 1: Count sign changes for positive roots
+Coefficients: +1, +3, +4, +2, +1
+Signs: + + + + +
+Sign changes: 0
+
+Conclusion: 0 positive real roots
+
+Step 2: Check for negative roots (substitute -x)
+(-s)⁴ + 3(-s)³ + 4(-s)² + 2(-s) + 1
+= s⁴ - 3s³ + 4s² - 2s + 1
+
+Signs: + - + - +
+Sign changes: + to - (1), - to + (2), + to - (3), - to + (4)
+Total: 4 sign changes
+
+Possible negative roots: 4, 2, or 0
+
+Step 3: Determine root distribution
+Degree 4 → 4 roots total
+Positive roots: 0
+Negative roots: 4, 2, or 0
+
+Possibilities:
+- 0 positive, 4 negative, 0 complex → STABLE
+- 0 positive, 2 negative, 2 complex → Depends on complex part
+- 0 positive, 0 negative, 4 complex → Check real parts
+
+For stability, all roots must have negative real parts.
+No positive roots is necessary but not sufficient.
+```
+
+### Scenario 2: Chemical Equilibrium Feasibility
+
+**Context:** Checking if equilibrium equation has physical solutions.
+
+```
+Given equilibrium equation:
+x³ - 2x² + 0.5x - 0.01 = 0
+
+where x = concentration (must be positive)
+
+Step 1: Count sign changes
+Coefficients: +1, -2, +0.5, -0.01
+Signs: + - + -
+Changes: 3 sign changes
+
+Possible positive roots: 3 or 1
+
+Step 2: Verify there are positive solutions
+At least 1 positive root is guaranteed.
+
+Step 3: Physical constraint check
+Need 0 < x < initial concentration (say, 1 M)
+
+Test bounds:
+f(0) = -0.01 (negative)
+f(1) = 1 - 2 + 0.5 - 0.01 = -0.51 (negative)
+f(0.1) = 0.001 - 0.02 + 0.05 - 0.01 = 0.021 (positive)
+
+Sign change between 0 and 0.1 → root in (0, 0.1)
+Sign change between 0.1 and 1 → another root possible
+
+Physical solution exists in valid range.
+```
+
+### Scenario 3: Economics Break-Even Analysis
+
+**Context:** Finding production levels where profit equals zero.
+
+```
+Profit function:
+P(x) = -0.001x³ + 0.1x² + 5x - 500
+
+Set to zero (break-even):
+-0.001x³ + 0.1x² + 5x - 500 = 0
+
+Step 1: Count sign changes
+Signs: - + + -
+Changes: - to + (1), + to - (2)
+Total: 2 sign changes
+
+Possible positive roots: 2 or 0
+
+Step 2: Business interpretation
+If 2 positive roots exist: two break-even points
+- Lower break-even: minimum production needed
+- Upper break-even: maximum before diminishing returns
+
+If 0 positive roots: no viable production level
+(business model may be fundamentally unprofitable)
+
+Step 3: Verify with endpoint analysis
+P(0) = -500 (negative - startup loss)
+P(100) = -100 + 1000 + 500 - 500 = 900 (positive - profit)
+P(200) = -800 + 4000 + 1000 - 500 = 3700 (positive)
+
+Sign change between 0 and 100 → first break-even exists
+Need to check if second break-even exists at higher x.
+```
+
+### Scenario 4: Population Dynamics Model
+
+**Context:** Finding equilibrium populations.
+
+```
+Population equation:
+P³ - 100P² + 2500P - 10000 = 0
+
+Step 1: Sign changes for positive roots
+Signs: + - + -
+Changes: 3
+
+Possible positive populations: 3 or 1
+
+Step 2: Check for negative roots (unphysical)
+f(-P) = -P³ - 100P² - 2500P - 10000
+Signs: - - - -
+Changes: 0
+
+Negative roots: 0
+
+Step 3: Biological interpretation
+Either 3 equilibrium populations or 1 equilibrium
+All equilibria are positive (physically meaningful)
+
+Step 4: Stability analysis
+3 equilibria often means:
+- Low population (unstable extinction threshold)
+- Medium population (unstable)
+- High population (stable carrying capacity)
+
+1 equilibrium would be a single stable point.
+```
+
+### Scenario 5: Lens Design Aberration
+
+**Context:** Finding focal distances in optical system.
+
+```
+Aberration correction equation:
+f⁴ - 10f³ + 35f² - 50f + 24 = 0
+
+Step 1: Sign changes for positive focal lengths
+Signs: + - + - +
+Changes: 4
+
+Possible positive roots: 4, 2, or 0
+
+Step 2: Check negative (physically invalid for focal length)
+f(-f) = f⁴ + 10f³ + 35f² + 50f + 24
+Signs: + + + + +
+Changes: 0
+
+Negative roots: 0
+
+Step 3: Factor if possible
+Testing f = 1: 1 - 10 + 35 - 50 + 24 = 0 ✓
+Testing f = 2: 16 - 80 + 140 - 100 + 24 = 0 ✓
+Testing f = 3: 81 - 270 + 315 - 150 + 24 = 0 ✓
+Testing f = 4: 256 - 640 + 560 - 200 + 24 = 0 ✓
+
+All 4 roots are positive: f = 1, 2, 3, 4 cm
+Descartes' Rule confirmed: maximum 4 positive roots achieved.
+```
+
+### Scenario 6: Structural Engineering Load
+
+**Context:** Finding critical load factors.
+
+```
+Buckling equation:
+λ³ - 6λ² + 11λ - 6 = 0
+
+Step 1: Count sign changes
+Signs: + - + -
+Changes: 3
+
+Possible positive λ: 3 or 1
+
+Step 2: Factor using rational root theorem
+Test λ = 1: 1 - 6 + 11 - 6 = 0 ✓
+Factor: (λ - 1)(λ² - 5λ + 6) = (λ - 1)(λ - 2)(λ - 3)
+
+Roots: λ = 1, 2, 3
+
+Step 3: Engineering interpretation
+Three critical load factors exist
+λ = 1: First buckling mode
+λ = 2: Second buckling mode
+λ = 3: Third buckling mode
+
+Descartes' Rule correctly predicted 3 positive roots.
+Design must ensure load factor < 1 for safety.
+```
+
+---
+
 ## Common Mistakes and How to Avoid Them
 
 **Mistake 1: Forgetting to include zero coefficients**
@@ -315,12 +593,12 @@ Why it happens: Trying to take a shortcut. Descartes' Rule requires standard pol
 
 ---
 
-## Related Topics
+## Sources
 
-- [Rational Zeros Calculator](/calculator/mathematics/rational-zeros) - Find actual rational roots
-- [Cubic Equation Calculator](/calculator/mathematics/cubic-equation) - Solve third-degree equations
-- [Synthetic Division Calculator](/calculator/mathematics/synthetic-division) - Factor out known roots
-- [Complex Root Calculator](/calculator/mathematics/complex-root) - Find complex solutions
+- [Wolfram MathWorld: Descartes' Rule of Signs](https://mathworld.wolfram.com/DescartesSignRule.html)
+- [Mathematical Association of America](https://www.maa.org/)
+- [MIT OpenCourseWare: Linear Algebra](https://ocw.mit.edu/)
+- [American Mathematical Society](https://www.ams.org/)
 
 ---
 

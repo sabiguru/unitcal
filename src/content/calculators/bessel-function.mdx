@@ -1,14 +1,86 @@
 ## Bessel Function Calculator: Evaluate Bessel Functions of the First and Second Kind
 
 ## Table of Contents - Bessel Functions
+- [Bessel Functions in Engineering and Physics 2026](#bessel-functions-engineering-physics-2026)
 - [How to Use This Calculator](#how-to-use-this-calculator)
 - [Understanding Bessel Functions](#understanding-bessel-functions)
 - [How Bessel Functions Work](#how-bessel-functions-work)
 - [Real-World Applications](#real-world-applications)
+- [Worked Calculations and Scenarios](#worked-calculations)
 - [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
-- [Related Topics](#related-topics)
-- [How This Calculator Works](#how-this-calculator-works)
+- [Sources](#sources)
 - [FAQs](#faqs)
+
+---
+
+## Bessel Functions in Engineering and Physics 2026
+
+Bessel functions remain fundamental to engineering design, electromagnetic analysis and acoustic modelling. Modern computational tools enable rapid evaluation across diverse applications from antenna design to medical imaging.
+
+### Electromagnetic and Antenna Applications
+
+**Circular Waveguide Mode Parameters (TE Modes):**
+
+| Mode | Bessel Zero | Cutoff Parameter | Typical Application |
+|------|-------------|------------------|---------------------|
+| TE₁₁ | J'₁(x) = 0, x = 1.841 | Dominant mode | Satellite feeds |
+| TE₂₁ | J'₂(x) = 0, x = 3.054 | Higher order | Radar systems |
+| TE₀₁ | J'₀(x) = 0, x = 3.832 | Low-loss mode | Long-distance links |
+| TE₃₁ | J'₃(x) = 0, x = 4.201 | High frequency | Millimetre wave |
+
+**Antenna Beamwidth Calculations (Circular Aperture):**
+
+| Aperture Diameter (λ) | First Null (degrees) | Half-Power Width | Bessel Zero Used |
+|-----------------------|---------------------|------------------|------------------|
+| 10 | 7.02 | 5.87 | J₁(x) = 0, x = 3.832 |
+| 20 | 3.51 | 2.94 | J₁(x) = 0, x = 3.832 |
+| 50 | 1.40 | 1.17 | J₁(x) = 0, x = 3.832 |
+| 100 | 0.70 | 0.59 | J₁(x) = 0, x = 3.832 |
+
+### Acoustic and Vibration Engineering
+
+**Drum Membrane Vibration Modes (Circular Membrane):**
+
+| Mode (m,n) | Bessel Order | Zero Number | Frequency Ratio to f₁₁ |
+|------------|--------------|-------------|------------------------|
+| (0,1) | J₀ | 1st: 2.405 | 1.000 |
+| (1,1) | J₁ | 1st: 3.832 | 1.593 |
+| (2,1) | J₂ | 1st: 5.136 | 2.136 |
+| (0,2) | J₀ | 2nd: 5.520 | 2.295 |
+| (3,1) | J₃ | 1st: 6.380 | 2.653 |
+| (1,2) | J₁ | 2nd: 7.016 | 2.918 |
+
+**Loudspeaker Cone Response (Piston in Infinite Baffle):**
+
+| Frequency (kHz) | ka Value | Directivity | On-Axis Response |
+|-----------------|----------|-------------|------------------|
+| 1 | 1.84 | 2J₁(ka)/ka | 0.90 |
+| 2 | 3.68 | 2J₁(ka)/ka | 0.51 |
+| 5 | 9.21 | 2J₁(ka)/ka | 0.08 |
+| 10 | 18.4 | 2J₁(ka)/ka | 0.02 |
+
+### Heat Transfer and Thermal Analysis
+
+**Cylindrical Rod Cooling (Transient Conduction):**
+
+| Biot Number | First Eigenvalue λ₁ | J₀(λ₁) | Temperature Factor |
+|-------------|---------------------|--------|-------------------|
+| 0.1 | 0.4417 | 0.9519 | 0.952 |
+| 1.0 | 1.2558 | 0.6425 | 0.643 |
+| 5.0 | 1.9898 | 0.2239 | 0.224 |
+| 10.0 | 2.1795 | 0.0725 | 0.073 |
+| ∞ | 2.4048 | 0.0000 | 0.000 |
+
+### Signal Processing and Imaging
+
+**FM Signal Spectrum (Bessel Coefficients):**
+
+| Modulation Index β | J₀(β) | J₁(β) | J₂(β) | J₃(β) | Bandwidth Factor |
+|-------------------|-------|-------|-------|-------|------------------|
+| 0.5 | 0.938 | 0.242 | 0.031 | 0.003 | 2 |
+| 1.0 | 0.765 | 0.440 | 0.115 | 0.020 | 4 |
+| 2.0 | 0.224 | 0.577 | 0.353 | 0.129 | 6 |
+| 5.0 | -0.178 | -0.328 | 0.047 | 0.365 | 12 |
 
 ---
 
@@ -147,6 +219,197 @@ For problems involving exponential growth/decay instead of oscillation (like hea
 
 ---
 
+## Worked Calculations and Scenarios
+
+### Scenario 1: Circular Waveguide Cutoff Frequency
+
+**Context:** Designing a circular waveguide for X-band radar at 10 GHz.
+
+```
+Given:
+Waveguide radius: a = 1.27 cm
+Target mode: TE₁₁ (dominant mode)
+Required Bessel zero: J'₁(x) = 0, first root x₁₁ = 1.841
+
+Cutoff frequency calculation:
+f_c = (c × x₁₁) / (2π × a)
+f_c = (3 × 10⁸ × 1.841) / (2π × 0.0127)
+f_c = 5.523 × 10⁸ / 0.0798
+f_c = 6.92 GHz
+
+At 10 GHz:
+Operating ratio: f/f_c = 10/6.92 = 1.445
+
+Propagation constant:
+β = (2π/c) × √(f² - f_c²)
+β = (2π/3×10⁸) × √(10² - 6.92²) × 10⁹
+β = 151.3 rad/m
+
+Wavelength in guide:
+λ_g = 2π/β = 41.5 mm
+```
+
+### Scenario 2: Drum Membrane Fundamental Frequency
+
+**Context:** Calculating resonant frequencies of a timpani drum.
+
+```
+Given:
+Membrane radius: a = 0.33 m (26-inch timpani)
+Membrane tension: T = 8,000 N/m
+Surface density: σ = 0.4 kg/m²
+
+Fundamental frequency (mode 0,1):
+Uses first zero of J₀(x): x₀₁ = 2.405
+
+f₀₁ = (x₀₁ / 2πa) × √(T/σ)
+f₀₁ = (2.405 / 2π × 0.33) × √(8000/0.4)
+f₀₁ = 1.160 × 141.4
+f₀₁ = 164 Hz (approximately E₃)
+
+Second harmonic (mode 1,1):
+Uses first zero of J₁(x): x₁₁ = 3.832
+
+f₁₁ = (3.832 / 2π × 0.33) × 141.4
+f₁₁ = 1.848 × 141.4
+f₁₁ = 261 Hz
+
+Frequency ratio: f₁₁/f₀₁ = 261/164 = 1.59
+
+Note: This is NOT a simple harmonic relationship,
+which gives timpani their characteristic tone.
+```
+
+### Scenario 3: Heat Conduction in Cylindrical Rod
+
+**Context:** Cooling analysis of a steel cylinder quenched in oil.
+
+```
+Given:
+Cylinder radius: R = 0.05 m
+Thermal diffusivity: α = 1.2 × 10⁻⁵ m²/s
+Initial temperature: T_i = 800°C
+Oil temperature: T_∞ = 80°C
+Heat transfer coefficient: h = 500 W/(m²·K)
+Thermal conductivity: k = 43 W/(m·K)
+
+Biot number:
+Bi = hR/k = (500 × 0.05)/43 = 0.58
+
+For Bi ≈ 0.6, first eigenvalue λ₁ ≈ 1.0 (from J₀(λ) = λJ₁(λ)/Bi)
+
+Temperature at centre after t = 300 seconds:
+θ = (T - T_∞)/(T_i - T_∞)
+
+Fourier number:
+Fo = αt/R² = (1.2 × 10⁻⁵ × 300)/(0.05)²
+Fo = 1.44
+
+Centre temperature:
+θ_c = A₁ × exp(-λ₁²Fo) × J₀(0)
+θ_c ≈ 1.12 × exp(-1.0² × 1.44) × 1
+θ_c = 1.12 × 0.237 = 0.265
+
+T_centre = T_∞ + θ_c(T_i - T_∞)
+T_centre = 80 + 0.265(720) = 271°C
+```
+
+### Scenario 4: FM Radio Spectrum Analysis
+
+**Context:** Calculating sideband amplitudes for frequency modulation.
+
+```
+Given:
+Carrier frequency: f_c = 100 MHz
+Maximum frequency deviation: Δf = 75 kHz
+Modulating frequency: f_m = 15 kHz
+
+Modulation index:
+β = Δf/f_m = 75/15 = 5.0
+
+Sideband amplitudes (proportional to Jₙ(β)):
+J₀(5) = -0.178 (carrier)
+J₁(5) = -0.328 (first sideband pair)
+J₂(5) = 0.047 (second sideband pair)
+J₃(5) = 0.365 (third sideband pair)
+J₄(5) = 0.391 (fourth sideband pair)
+J₅(5) = 0.261 (fifth sideband pair)
+
+Significant sidebands: n where |Jₙ(β)| > 0.01
+For β = 5, significant up to n ≈ 8
+
+Carson's rule bandwidth:
+BW = 2(β + 1)f_m = 2(5 + 1)(15) = 180 kHz
+
+Power distribution:
+Total power ∝ Σ Jₙ²(β) = 1 (always)
+Carrier power: J₀²(5) = 0.032 (3.2%)
+```
+
+### Scenario 5: Telescope Diffraction Pattern (Airy Disk)
+
+**Context:** Resolving power of an optical telescope.
+
+```
+Given:
+Aperture diameter: D = 0.2 m
+Wavelength: λ = 550 nm (green light)
+
+Airy pattern intensity:
+I(θ)/I₀ = [2J₁(x)/x]² where x = (πD/λ)sin(θ)
+
+First minimum (dark ring):
+J₁(x) = 0 at x = 3.832
+
+Angular radius of first dark ring:
+sin(θ) = 3.832λ/(πD)
+sin(θ) = (3.832 × 550 × 10⁻⁹)/(π × 0.2)
+sin(θ) = 3.35 × 10⁻⁶
+θ = 0.69 arcseconds
+
+Rayleigh criterion resolution:
+θ_R = 1.22λ/D = 1.22 × 550 × 10⁻⁹/0.2
+θ_R = 3.36 × 10⁻⁶ rad = 0.69 arcseconds
+
+At distance of 1 km, minimum resolvable detail:
+d = 1000 × 3.36 × 10⁻⁶ = 3.4 mm
+```
+
+### Scenario 6: Vibration Analysis of Pipe System
+
+**Context:** Natural frequencies of a pressurised pipe.
+
+```
+Given:
+Pipe radius: a = 0.15 m
+Wall thickness: t = 0.01 m
+Material: Steel (E = 200 GPa, ρ = 7800 kg/m³)
+Internal pressure: P = 5 MPa
+Mode: Breathing mode (n = 0)
+
+Ring frequency:
+f_ring = (1/2πa)√(E/ρ)
+f_ring = (1/2π × 0.15)√(200 × 10⁹/7800)
+f_ring = 1.06 × 5064 = 5370 Hz
+
+For axisymmetric modes (n = 0), frequencies involve:
+J₀(λa) = 0 or J₁(λa) = 0
+
+First few axial mode frequencies (relative):
+Mode m | λₘa | f/f_ring
+1 | 2.405 | 0.45
+2 | 5.520 | 1.03
+3 | 8.654 | 1.61
+4 | 11.79 | 2.20
+
+Including pressure stiffening:
+f' = f × √(1 + Pa²/Et²)
+f' = f × √(1 + 5×10⁶ × 0.15²/(200×10⁹ × 0.01²))
+f' = f × √(1 + 0.0056) ≈ f × 1.003
+```
+
+---
+
 ## Common Mistakes and How to Avoid Them
 
 **Mistake 1: Confusing J_n and Y_n**
@@ -203,17 +466,12 @@ When in doubt, check limiting cases. Does your solution make physical sense at r
 
 ---
 
-## Related Topics
+## Sources
 
-**Modified Bessel Functions (I_n, K_n):** Used for problems with exponential behavior instead of oscillations, like heat conduction in steady state.
-
-**Spherical Bessel Functions:** Three-dimensional versions used in quantum mechanics and electromagnetic scattering.
-
-**Hankel Functions:** Complex combinations of J_n and Y_n, useful for representing outgoing or incoming waves.
-
-**Airy Functions:** Related to Bessel functions of order ±1/3, used in optics and quantum mechanics.
-
-**Fourier-Bessel Transforms:** The circular/cylindrical analog of Fourier transforms, essential in image processing.
+- [NIST Digital Library of Mathematical Functions: Bessel Functions](https://dlmf.nist.gov/10)
+- [Wolfram MathWorld: Bessel Function](https://mathworld.wolfram.com/BesselFunction.html)
+- [MIT OpenCourseWare: Mathematical Methods for Engineers](https://ocw.mit.edu/)
+- [IEEE Transactions on Antennas and Propagation](https://ieeexplore.ieee.org/)
 
 ---
 

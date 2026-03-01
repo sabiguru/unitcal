@@ -1,300 +1,375 @@
-## Complex Number Calculator: Add, Subtract, Multiply & Divide Complex Numbers
+## Complex Number Calculator: Add, Subtract, Multiply and Divide Complex Numbers
 
 ## Table of Contents - Complex Numbers
-- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Complex Numbers in Engineering and Physics 2026](#complex-numbers-engineering-physics-2026)
 - [Understanding Complex Numbers](#understanding-complex-numbers)
+- [How to Use This Calculator](#how-to-use-this-calculator)
 - [How to Work with Complex Numbers Manually](#how-to-work-with-complex-numbers-manually)
 - [Real-World Applications](#real-world-applications)
+- [Worked Calculations and Scenarios](#worked-calculations)
 - [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
-- [Related Topics](#related-topics)
-- [How This Calculator Works](#how-this-calculator-works)
+- [Sources](#sources)
 - [FAQs](#faqs)
 
 ---
 
-## How to Use This Calculator - Complex Numbers
+## Complex Numbers in Engineering and Physics 2026
 
-Enter two complex numbers in the form a + bi, where a is the real part and b is the imaginary part. For example, enter 3 + 4i or -2 - 5i.
+Complex numbers are indispensable in electrical engineering, quantum mechanics and signal processing. Far from being merely theoretical constructs, they enable practical calculations that would be extremely difficult using real numbers alone.
 
-Select the operation you want to perform: addition, subtraction, multiplication, or division. The calculator handles all four operations with step-by-step explanations.
+### Electrical Engineering Applications
 
-Click "Calculate" to see the result in standard form (a + bi). The calculator also shows you the work, so you can understand each step of the process.
+**AC Circuit Analysis (UK Standard 230V/50Hz):**
+
+| Component | Impedance Formula | Phase Angle | Power Factor |
+|-----------|-------------------|-------------|--------------|
+| Pure resistor (100Ω) | Z = 100 + 0i | 0° | 1.00 |
+| Inductor (0.5H) | Z = 0 + 157i | +90° | 0.00 |
+| Capacitor (10μF) | Z = 0 - 318i | -90° | 0.00 |
+| RLC series | Z = R + j(XL - XC) | arctan(X/R) | cos(φ) |
+
+**Power Grid Phasor Analysis:**
+
+| Voltage Type | Phasor Representation | Magnitude | Phase |
+|--------------|----------------------|-----------|-------|
+| Phase A | 230∠0° = 230 + 0i | 230V | 0° |
+| Phase B | 230∠-120° = -115 - 199i | 230V | -120° |
+| Phase C | 230∠120° = -115 + 199i | 230V | 120° |
+| Line voltage | 400∠30° | 400V | 30° |
+
+### Quantum Computing
+
+**Qubit State Representation:**
+
+| State | Complex Amplitude | Probability |
+|-------|-------------------|-------------|
+| \|0⟩ | α = 0.6 + 0.8i | \|α\|² = 1.0 |
+| \|1⟩ | β = 0 | \|β\|² = 0 |
+| Superposition | α = (1+i)/2, β = (1-i)/2 | 0.5 each |
+| Entangled | (α₁α₂, α₁β₂, β₁α₂, β₁β₂) | Various |
+
+**Quantum Gate Operations:**
+
+| Gate | Matrix | Effect on \|ψ⟩ |
+|------|--------|----------------|
+| Phase (S) | [[1,0],[0,i]] | Rotates \|1⟩ by 90° |
+| T gate | [[1,0],[0,e^(iπ/4)]] | Rotates \|1⟩ by 45° |
+| Hadamard | (1/√2)[[1,1],[1,-1]] | Creates superposition |
+
+### Signal Processing
+
+**Fourier Transform Components:**
+
+| Frequency | Complex Coefficient | Magnitude | Phase |
+|-----------|---------------------|-----------|-------|
+| DC (0 Hz) | 5 + 0i | 5 | 0° |
+| 50 Hz | 3 - 4i | 5 | -53.1° |
+| 100 Hz | 1 + 2i | 2.24 | 63.4° |
+| 150 Hz | 0.5 - 0.5i | 0.71 | -45° |
 
 ---
 
 ## Understanding Complex Numbers
 
-Complex numbers extend the real number system to include solutions to equations like x² = -1, which have no real solutions. They're written as a + bi, where a and b are real numbers and i is the imaginary unit.
+Complex numbers extend the real number system to include solutions to equations like x² = -1, which have no real solutions. They are written as a + bi, where a and b are real numbers and i is the imaginary unit.
 
 **What is i?**
 
-The imaginary unit i is defined as the square root of -1. So i² = -1. This single definition unlocks a whole new number system that's incredibly useful in mathematics, physics, and engineering.
+The imaginary unit i is defined as the square root of -1. Thus i² = -1. This single definition unlocks a number system that proves incredibly useful in mathematics, physics and engineering.
 
 **The structure: a + bi**
 
-Every complex number has two parts: the real part (a) and the imaginary part (bi). Think of it like coordinates on a plane: a tells you how far along the horizontal axis, and b tells you how far along the vertical axis.
-
-**Why "complex"?**
-
-The term "complex" doesn't mean complicated. It means "composed of parts" - these numbers have two components working together. Once you get comfortable with the rules, they're quite straightforward.
-
-**Are complex numbers "real"?**
-
-In mathematics, complex numbers are just as legitimate as real numbers. In fact, real numbers are a special case of complex numbers where b = 0. And despite the name "imaginary," complex numbers have very real applications in electrical engineering, quantum physics, and signal processing.
+Every complex number has two parts: the real part (a) and the imaginary part (bi). These can be visualised as coordinates on a plane: a indicates position along the horizontal axis, b indicates position along the vertical axis.
 
 **The complex plane:**
 
-Just like real numbers sit on a number line, complex numbers sit on a two-dimensional plane. The horizontal axis represents the real part, the vertical axis represents the imaginary part. This visual representation makes operations easier to understand.
+Just as real numbers occupy a number line, complex numbers occupy a two-dimensional plane. The horizontal axis represents the real part, the vertical axis represents the imaginary part. This visual representation makes operations easier to understand geometrically.
+
+**Polar form:**
+
+Complex numbers can also be expressed in polar form: z = r(cos θ + i sin θ) = re^(iθ), where r is the magnitude (distance from origin) and θ is the argument (angle from positive real axis).
+
+---
+
+## How to Use This Calculator
+
+Enter two complex numbers in the form a + bi, where a is the real part and b is the imaginary part. For example, enter 3 + 4i or -2 - 5i.
+
+Select the operation: addition, subtraction, multiplication or division.
+
+Click "Calculate" to see the result in standard form (a + bi). The calculator displays step-by-step working for each operation.
+
+Additional outputs include:
+- Magnitude (absolute value)
+- Argument (angle)
+- Polar form representation
+- Conjugate
 
 ---
 
 ## How to Work with Complex Numbers Manually
-
-Let's work through each operation with clear examples.
 
 **Addition of Complex Numbers**
 
 Rule: Add the real parts together and add the imaginary parts together separately.
 
 Example: (3 + 4i) + (2 + 5i)
-
 Step 1: Group real and imaginary parts
 (3 + 2) + (4i + 5i)
-
 Step 2: Add each part
 5 + 9i
-
-That's it! Addition is straightforward - keep the parts separate and add like terms.
-
-Another example: (7 - 3i) + (-2 + 6i)
-Real parts: 7 + (-2) = 5
-Imaginary parts: -3i + 6i = 3i
-Result: 5 + 3i
 
 **Subtraction of Complex Numbers**
 
 Rule: Subtract the real parts and subtract the imaginary parts separately.
 
 Example: (5 + 7i) - (2 + 3i)
-
 Step 1: Distribute the negative sign
 5 + 7i - 2 - 3i
-
 Step 2: Group and combine
-(5 - 2) + (7i - 3i)
-3 + 4i
-
-Watch those signs! When subtracting, the negative applies to both the real and imaginary parts of the second number.
-
-Example with negatives: (4 - 2i) - (3 - 5i)
-= 4 - 2i - 3 + 5i
-= (4 - 3) + (-2i + 5i)
-= 1 + 3i
+(5 - 2) + (7i - 3i) = 3 + 4i
 
 **Multiplication of Complex Numbers**
 
 Rule: Use the distributive property (FOIL), remembering that i² = -1.
 
 Example: (3 + 2i)(4 + 5i)
-
-Step 1: Use FOIL
+Step 1: FOIL
 First: 3 × 4 = 12
 Outer: 3 × 5i = 15i
 Inner: 2i × 4 = 8i
 Last: 2i × 5i = 10i²
 
 Step 2: Combine
-12 + 15i + 8i + 10i²
-
-Step 3: Simplify (remember i² = -1)
-12 + 23i + 10(-1)
-12 + 23i - 10
-2 + 23i
-
-The key is remembering that i² = -1, which turns the i² term into a real number.
-
-Example: (1 + i)(1 - i)
-= 1 - i + i - i²
-= 1 - i²
-= 1 - (-1)
-= 2
-
-Notice this gives a real number! When you multiply complex conjugates, the imaginary parts cancel.
+12 + 15i + 8i + 10i² = 12 + 23i + 10(-1) = 2 + 23i
 
 **Division of Complex Numbers**
 
-Rule: Multiply both numerator and denominator by the conjugate of the denominator.
-
-The conjugate of (a + bi) is (a - bi). Multiplying by the conjugate eliminates the imaginary part from the denominator.
+Rule: Multiply numerator and denominator by the conjugate of the denominator.
 
 Example: (3 + 4i) / (1 + 2i)
-
-Step 1: Find the conjugate of the denominator
-Conjugate of (1 + 2i) is (1 - 2i)
-
-Step 2: Multiply numerator and denominator by this conjugate
+Step 1: Multiply by conjugate of denominator
 [(3 + 4i)(1 - 2i)] / [(1 + 2i)(1 - 2i)]
 
-Step 3: Expand the numerator
-(3 + 4i)(1 - 2i) = 3 - 6i + 4i - 8i²
-= 3 - 2i - 8(-1)
-= 3 - 2i + 8
-= 11 - 2i
+Step 2: Expand numerator
+(3 + 4i)(1 - 2i) = 3 - 6i + 4i - 8i² = 3 - 2i + 8 = 11 - 2i
 
-Step 4: Expand the denominator
-(1 + 2i)(1 - 2i) = 1 - 2i + 2i - 4i²
-= 1 - 4(-1)
-= 1 + 4
-= 5
+Step 3: Expand denominator
+(1 + 2i)(1 - 2i) = 1 - 4i² = 1 + 4 = 5
 
-Step 5: Write the result
-(11 - 2i) / 5 = 11/5 - (2/5)i
-
-So the answer in standard form is (11/5) - (2/5)i or 2.2 - 0.4i
+Step 4: Divide
+(11 - 2i) / 5 = 2.2 - 0.4i
 
 **Powers of i**
 
-This pattern repeats every four powers:
+The pattern repeats every four powers:
 - i¹ = i
 - i² = -1
-- i³ = i² × i = -1 × i = -i
-- i⁴ = i² × i² = (-1)(-1) = 1
-- i⁵ = i⁴ × i = 1 × i = i (back to the start!)
-
-To find any power of i, divide the exponent by 4 and use the remainder.
+- i³ = -i
+- i⁴ = 1
+- i⁵ = i (cycle repeats)
 
 ---
 
 ## Real-World Applications
 
-**Electrical engineering:**
+**Electrical engineering.** Complex numbers are essential for analysing AC circuits. Voltage, current and impedance are all represented as complex numbers, making circuit calculations manageable.
 
-Complex numbers are essential for analyzing AC circuits. Voltage, current, and impedance are all represented as complex numbers, making circuit calculations much more manageable.
+**Signal processing.** Audio engineers and telecommunications specialists use complex numbers to analyse frequencies, filter signals and process waveforms. The Fourier transform relies heavily on complex arithmetic.
 
-**Signal processing:**
+**Quantum mechanics.** The wave function in quantum physics is a complex-valued function. Complex numbers are fundamental to describing particle behaviour at the quantum level.
 
-Audio engineers and telecommunications specialists use complex numbers to analyze frequencies, filter signals, and process sound waves. The Fourier transform, which breaks signals into frequencies, relies heavily on complex numbers.
+**Control systems.** Engineers designing autopilots, thermostats and industrial control systems use complex numbers to analyse system stability and response characteristics.
 
-**Quantum mechanics:**
+**Aerodynamics.** Fluid flow around wings and other surfaces is often modelled using complex functions, helping engineers design more efficient aircraft.
 
-The wave function in quantum physics is a complex-valued function. Complex numbers are fundamental to describing the behavior of particles at the quantum level.
+**Computer graphics.** Rotations and transformations in 2D graphics can be elegantly expressed using complex number multiplication. Fractals like the Mandelbrot set are defined using complex number iterations.
 
-**Control systems:**
+---
 
-Engineers designing autopilots, thermostats, and industrial control systems use complex numbers to analyze system stability and response characteristics.
+## Worked Calculations and Scenarios
 
-**Aerodynamics:**
+### Scenario 1: AC Circuit Impedance Calculation
 
-Fluid flow around wings and other surfaces is often modeled using complex functions. This helps engineers design more efficient aircraft.
+**Context:** Calculating total impedance in a series RLC circuit.
 
-**Computer graphics:**
+```
+Components:
+Resistor: R = 100 Ω (purely real)
+Inductor: XL = ωL = 2π(50)(0.3) = 94.2 Ω
+Capacitor: XC = 1/(ωC) = 1/(2π(50)(20×10⁻⁶)) = 159.2 Ω
 
-Rotations and transformations in 2D graphics can be elegantly expressed using complex number multiplication. Some fractals, like the Mandelbrot set, are defined entirely using complex number iterations.
+Impedances as complex numbers:
+ZR = 100 + 0i
+ZL = 0 + 94.2i
+ZC = 0 - 159.2i
 
-**Vibration analysis:**
+Total impedance (series):
+Z = ZR + ZL + ZC
+Z = 100 + 94.2i - 159.2i
+Z = 100 - 65i Ω
 
-Mechanical engineers use complex numbers to model oscillating systems, from car suspensions to building structures responding to earthquakes.
+Magnitude: |Z| = √(100² + 65²) = √(10000 + 4225) = √14225 = 119.3 Ω
+Phase angle: φ = arctan(-65/100) = -33.0°
+
+Current (V = 230V):
+I = V/Z = 230/(100 - 65i)
+Multiply by conjugate:
+I = 230(100 + 65i)/(100² + 65²)
+I = 230(100 + 65i)/14225
+I = 1.62 + 1.05i A
+
+Magnitude: |I| = 1.93 A
+Phase: 33.0° (current leads voltage - capacitive)
+```
+
+### Scenario 2: Quantum State Calculation
+
+**Context:** Calculating measurement probabilities for a qubit.
+
+```
+Qubit state: |ψ⟩ = α|0⟩ + β|1⟩
+where α = (1 + i)/√3 and β = 1/√3
+
+Normalisation check:
+|α|² + |β|² = |(1+i)/√3|² + |1/√3|²
+= (1² + 1²)/3 + 1/3
+= 2/3 + 1/3 = 1 ✓
+
+Probability of measuring |0⟩:
+P(0) = |α|² = |(1+i)/√3|² = 2/3 ≈ 66.7%
+
+Probability of measuring |1⟩:
+P(1) = |β|² = |1/√3|² = 1/3 ≈ 33.3%
+
+After Hadamard gate on |0⟩:
+H|0⟩ = (|0⟩ + |1⟩)/√2
+α' = 1/√2, β' = 1/√2
+P(0) = P(1) = 50%
+```
+
+### Scenario 3: Phasor Addition for Three-Phase Power
+
+**Context:** Calculating neutral current in unbalanced load.
+
+```
+Phase currents (UK 230V system):
+IA = 10∠0° = 10 + 0i A
+IB = 8∠-120° = 8(cos(-120°) + i·sin(-120°))
+   = 8(-0.5 - 0.866i) = -4 - 6.93i A
+IC = 12∠120° = 12(cos(120°) + i·sin(120°))
+   = 12(-0.5 + 0.866i) = -6 + 10.39i A
+
+Neutral current (sum of phase currents):
+IN = IA + IB + IC
+IN = (10 + 0i) + (-4 - 6.93i) + (-6 + 10.39i)
+IN = (10 - 4 - 6) + (0 - 6.93 + 10.39)i
+IN = 0 + 3.46i A
+
+Magnitude: |IN| = 3.46 A
+Phase: 90° (purely inductive imbalance)
+
+In balanced system: IN = 0
+Imbalance indicates unequal loading
+```
+
+### Scenario 4: Signal Processing - Frequency Analysis
+
+**Context:** Analysing a composite signal using complex Fourier coefficients.
+
+```
+Signal: f(t) = A₁cos(ω₁t + φ₁) + A₂cos(ω₂t + φ₂)
+
+Component 1: 50 Hz, amplitude 5V, phase 30°
+Complex coefficient: C₁ = 5∠30° = 5(cos30° + i·sin30°)
+                        = 4.33 + 2.5i
+
+Component 2: 100 Hz, amplitude 3V, phase -45°
+Complex coefficient: C₂ = 3∠-45° = 3(cos(-45°) + i·sin(-45°))
+                        = 2.12 - 2.12i
+
+Total power (sum of |C|²):
+P₁ = |C₁|² = 5² = 25
+P₂ = |C₂|² = 3² = 9
+Total = 34 (relative units)
+
+Ratio: 50 Hz carries 25/34 = 73.5% of signal power
+```
+
+### Scenario 5: Mandelbrot Set Iteration
+
+**Context:** Determining if a point belongs to the Mandelbrot set.
+
+```
+Test point: c = -0.5 + 0.5i
+Iteration formula: z_{n+1} = z_n² + c
+Starting value: z₀ = 0
+
+z₁ = 0² + (-0.5 + 0.5i) = -0.5 + 0.5i
+|z₁| = √(0.25 + 0.25) = 0.71
+
+z₂ = (-0.5 + 0.5i)² + (-0.5 + 0.5i)
+   = (0.25 - 0.5i + 0.25i²) + (-0.5 + 0.5i)
+   = (0.25 - 0.5i - 0.25) + (-0.5 + 0.5i)
+   = -0.5 + 0i = -0.5
+|z₂| = 0.5
+
+z₃ = (-0.5)² + (-0.5 + 0.5i) = 0.25 - 0.5 + 0.5i = -0.25 + 0.5i
+|z₃| = √(0.0625 + 0.25) = 0.56
+
+Sequence appears bounded (|z| does not exceed 2)
+Point is likely in the Mandelbrot set.
+```
+
+### Scenario 6: Control System Pole Analysis
+
+**Context:** Analysing stability of a feedback control system.
+
+```
+Transfer function poles: s = -2 ± 3i
+
+Real part: σ = -2 (negative = stable)
+Imaginary part: ω = ±3 rad/s
+
+System characteristics:
+Natural frequency: ωn = |s| = √(4 + 9) = √13 = 3.61 rad/s
+Damping ratio: ζ = -σ/ωn = 2/3.61 = 0.55 (underdamped)
+
+Time response:
+Decay rate: e^(σt) = e^(-2t)
+Oscillation frequency: ω = 3 rad/s
+Period: T = 2π/3 = 2.09 seconds
+
+Settling time (2% criterion):
+t_s ≈ 4/|σ| = 4/2 = 2 seconds
+
+System is stable with damped oscillations.
+```
 
 ---
 
 ## Common Mistakes and How to Avoid Them
 
-**Mistake 1: Forgetting that i² = -1**
+**Forgetting that i² = -1.** When multiplying 2i × 3i, the result is 6i² = -6, not 6i. The i² term simplifies to a real number.
 
-Wrong: Treating 2i × 3i as 6i
+**Adding real and imaginary parts together.** 3 + 4i cannot be simplified to 7i. Real and imaginary parts are fundamentally different and must remain separate.
 
-Right: 2i × 3i = 6i², and since i² = -1, this equals 6(-1) = -6 (a real number, not imaginary)
+**Incorrect conjugate.** The conjugate of 2 - 3i is 2 + 3i. Only the sign of the imaginary part changes, not the real part.
 
-Why it happens: We're used to variables staying as variables. But i has a special property that i² simplifies to -1.
+**Division without using the conjugate.** To divide (3 + 2i) by (1 + i), multiply top and bottom by the conjugate of the denominator (1 - i) first, then divide.
 
-**Mistake 2: Adding real and imaginary parts together**
+**Sign errors in subtraction.** When subtracting (5 + 3i) - (2 + i), distribute the negative to both parts: 5 + 3i - 2 - i = 3 + 2i.
 
-Wrong: Saying 3 + 4i = 7i
-
-Right: Keep them separate. 3 + 4i cannot be simplified further. Real and imaginary parts don't combine.
-
-Why it happens: Wanting to simplify everything. But real and imaginary parts are fundamentally different, like apples and oranges.
-
-**Mistake 3: Incorrect conjugate**
-
-Wrong: Saying the conjugate of 2 - 3i is -2 + 3i
-
-Right: The conjugate of 2 - 3i is 2 + 3i. Only the sign of the imaginary part changes, not the real part.
-
-Why it happens: Confusion about which sign changes. Remember: conjugate flips only the imaginary part's sign.
-
-**Mistake 4: Division without using the conjugate**
-
-Wrong: Trying to divide (3 + 2i) / (1 + i) directly
-
-Right: Multiply top and bottom by the conjugate of the denominator (1 - i) first, then divide.
-
-Why it happens: Treating complex division like real number division. You must eliminate the imaginary part from the denominator first.
-
-**Mistake 5: Sign errors in subtraction**
-
-Wrong: (5 + 3i) - (2 + i) = 3 + 4i
-
-Right: (5 + 3i) - (2 + i) = 5 + 3i - 2 - i = 3 + 2i. The subtraction applies to both parts of the second number.
-
-Why it happens: Not distributing the negative sign to both terms. Write it out step by step.
-
-**Mistake 6: Multiplying conjugates incorrectly**
-
-Wrong: (a + bi)(a - bi) = a² - b²i²
-
-Right: (a + bi)(a - bi) = a² - (bi)² = a² - b²i² = a² - b²(-1) = a² + b². The result is always a real number.
-
-Why it happens: Forgetting to square the entire imaginary term, including the i.
-
-**Mistake 7: Confusing magnitude with the real part**
-
-Wrong: Thinking |3 + 4i| = 3
-
-Right: |3 + 4i| = √(3² + 4²) = √25 = 5. Magnitude uses the Pythagorean theorem.
-
-Why it happens: Confusing different properties. Magnitude is the distance from the origin, not just the real part.
+**Confusing magnitude with the real part.** The magnitude of 3 + 4i is √(3² + 4²) = 5, not 3. Magnitude uses the Pythagorean theorem.
 
 ---
 
-## Related Topics
+## Sources
 
-- [Complex Conjugate Calculator](/calculator/mathematics/complex-conjugate) - Find conjugates quickly
-- [Complex Root Calculator](/calculator/mathematics/complex-root) - Find complex roots of equations
-- [Quadratic Formula Calculator](/calculator/mathematics/quadratic-formula) - Solve equations with complex solutions
-
----
-
-## How This Calculator Works
-
-**Step 1: Parse input**
-```
-Extract real and imaginary parts from both numbers
-Format: a + bi where a is real, b is coefficient of i
-Handle negative signs correctly
-```
-
-**Step 2: Perform selected operation**
-```
-Addition: (a₁ + b₁i) + (a₂ + b₂i) = (a₁ + a₂) + (b₁ + b₂)i
-Subtraction: (a₁ + b₁i) - (a₂ + b₂i) = (a₁ - a₂) + (b₁ - b₂)i
-Multiplication: Use FOIL and simplify using i² = -1
-Division: Multiply by conjugate of denominator
-```
-
-**Step 3: Simplify**
-```
-Combine like terms
-Apply i² = -1 where needed
-Reduce fractions
-```
-
-**Step 4: Format output**
-```
-Write in standard form a + bi
-Handle special cases (pure real, pure imaginary)
-Display step-by-step work
-```
+- [IET: Electrical Engineering Standards](https://www.theiet.org/standards)
+- [IEEE: Signal Processing Society](https://signalprocessingsociety.org/)
+- [Institute of Physics: Quantum Mechanics Resources](https://www.iop.org/resources)
+- [MIT OpenCourseWare: Complex Analysis](https://ocw.mit.edu/courses/mathematics/)
 
 ---
 
@@ -304,13 +379,13 @@ Display step-by-step work
 
 A number in the form a + bi, where a and b are real numbers and i is the square root of -1. It combines a real part (a) and an imaginary part (bi).
 
-**Why do we need complex numbers?**
+**Why are complex numbers needed?**
 
-They solve equations that have no real solutions, like x² + 1 = 0. They're also incredibly useful in engineering, physics, and advanced mathematics.
+They solve equations that have no real solutions, such as x² + 1 = 0. They are also essential in engineering, physics and advanced mathematics.
 
 **What does i represent?**
 
-The imaginary unit i is defined as the square root of -1. So i² = -1. It's the foundation of the imaginary number system.
+The imaginary unit i is defined as the square root of -1. Thus i² = -1. It is the foundation of the imaginary number system.
 
 **How do I add complex numbers?**
 
@@ -318,64 +393,44 @@ Add the real parts together and add the imaginary parts together separately. (a 
 
 **How do I multiply complex numbers?**
 
-Use FOIL (or the distributive property), then remember that i² = -1. Combine like terms to get the final answer in a + bi form.
+Use FOIL (or the distributive property), then remember that i² = -1. Combine like terms to obtain the final answer in a + bi form.
 
-**What's the conjugate of a complex number?**
+**What is the conjugate of a complex number?**
 
-For a + bi, the conjugate is a - bi. You flip the sign of the imaginary part only. Conjugates are useful for division and finding magnitudes.
+For a + bi, the conjugate is a - bi. The sign of the imaginary part is flipped. Conjugates are useful for division and finding magnitudes.
 
 **How do I divide complex numbers?**
 
-Multiply both the numerator and denominator by the conjugate of the denominator. This eliminates the imaginary part from the bottom, letting you simplify.
+Multiply both the numerator and denominator by the conjugate of the denominator. This eliminates the imaginary part from the bottom.
 
-**What's the absolute value (magnitude) of a complex number?**
+**What is the absolute value (magnitude) of a complex number?**
 
-For a + bi, it's √(a² + b²). Think of it as the distance from the origin on the complex plane, using the Pythagorean theorem.
+For a + bi, it is √(a² + b²). This represents the distance from the origin on the complex plane, using the Pythagorean theorem.
 
 **Can a complex number be a real number?**
 
-Yes! When b = 0, you get a + 0i = a, which is just a real number. Real numbers are a special case of complex numbers.
+Yes. When b = 0, the result is a + 0i = a, which is a real number. Real numbers are a special case of complex numbers.
 
-**Can a complex number be purely imaginary?**
-
-Yes! When a = 0, you get 0 + bi = bi, which is purely imaginary. These sit on the vertical axis of the complex plane.
-
-**What's i³ equal to?**
+**What is i³ equal to?**
 
 i³ = i² × i = (-1) × i = -i. Powers of i cycle: i, -1, -i, 1, then repeat.
 
-**What's i⁴ equal to?**
+**What is i⁴ equal to?**
 
 i⁴ = i² × i² = (-1) × (-1) = 1. Every fourth power of i equals 1, then the cycle repeats.
 
-**How do I find i to any power?**
-
-Divide the exponent by 4 and use the remainder. If remainder is 1: answer is i. If 2: answer is -1. If 3: answer is -i. If 0: answer is 1.
-
 **Are complex numbers used in real life?**
 
-Absolutely! Electrical engineers use them daily for AC circuit analysis. They're essential in quantum physics, signal processing, control systems, and many other fields.
+Yes. Electrical engineers use them for AC circuit analysis. They are essential in quantum physics, signal processing and control systems.
 
-**What's the complex plane?**
+**What is Euler's formula?**
 
-A two-dimensional graph where the horizontal axis represents the real part and the vertical axis represents the imaginary part of complex numbers.
+e^(iθ) = cos(θ) + i·sin(θ). It connects complex numbers, exponentials and trigonometry. When θ = π, the result is e^(iπ) + 1 = 0, linking five fundamental constants.
 
 **How do complex numbers relate to vectors?**
 
-They're similar! A complex number a + bi can be thought of as a vector (a, b) in 2D space. Addition works the same way as vector addition.
+They are similar. A complex number a + bi can be thought of as a vector (a, b) in 2D space. Addition works the same way as vector addition.
 
 **What happens when I multiply by i?**
 
-Multiplying by i rotates the complex number 90 degrees counterclockwise on the complex plane. It's like a geometric rotation.
-
-**Can complex numbers be negative?**
-
-The concept of "negative" is trickier with complex numbers since they're two-dimensional. We talk about magnitude instead. But individual parts can be negative.
-
-**Do complex numbers have an ordering?**
-
-No, unlike real numbers, you can't say one complex number is "greater than" or "less than" another. They don't have a natural ordering.
-
-**What's Euler's formula?**
-
-e^(iθ) = cos(θ) + i×sin(θ). It's a beautiful connection between complex numbers, exponentials, and trigonometry. When θ = π, you get e^(iπ) + 1 = 0, linking five fundamental constants.
+Multiplying by i rotates the complex number 90 degrees counterclockwise on the complex plane.

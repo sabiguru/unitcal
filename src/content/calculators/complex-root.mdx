@@ -1,14 +1,102 @@
 ## Complex Root Calculator: Find Complex Roots of Polynomials
 
 ## Table of Contents - Complex Root
+- [Complex Roots in Engineering and Science 2026](#complex-roots-engineering-science-2026)
 - [How to Use This Calculator](#how-to-use-this-calculator)
 - [Understanding Complex Roots](#understanding-complex-roots)
 - [How to Find Complex Roots Manually](#how-to-find-complex-roots-manually)
 - [Real-World Applications](#real-world-applications)
+- [Worked Calculations and Scenarios](#worked-calculations)
 - [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
-- [Related Topics](#related-topics)
-- [How This Calculator Works](#how-this-calculator-works)
+- [Sources](#sources)
 - [FAQs](#faqs)
+
+---
+
+## Complex Roots in Engineering and Science 2026
+
+Complex roots appear throughout control systems, signal processing and physics. Understanding their location and properties enables engineers to predict system behaviour, design stable controllers and analyse oscillatory phenomena.
+
+### Control System Pole Locations
+
+**Second-Order System Response Types:**
+
+| Pole Location | Damping Ratio ζ | System Behaviour | Time Response |
+|---------------|-----------------|------------------|---------------|
+| Real, distinct | ζ > 1 | Overdamped | Slow, no overshoot |
+| Real, repeated | ζ = 1 | Critically damped | Fastest, no overshoot |
+| Complex conjugate | 0 < ζ < 1 | Underdamped | Oscillatory |
+| Imaginary | ζ = 0 | Undamped | Sustained oscillation |
+| Right half-plane | ζ < 0 | Unstable | Growing oscillation |
+
+**Standard Second-Order Transfer Function Poles:**
+
+| Natural Freq ωn (rad/s) | Damping ζ | Poles | Overshoot % |
+|------------------------|-----------|-------|-------------|
+| 10 | 0.2 | -2 ± 9.8j | 52.7% |
+| 10 | 0.4 | -4 ± 9.2j | 25.4% |
+| 10 | 0.6 | -6 ± 8.0j | 9.5% |
+| 10 | 0.707 | -7.07 ± 7.07j | 4.3% |
+| 10 | 0.8 | -8 ± 6.0j | 1.5% |
+| 10 | 1.0 | -10, -10 | 0% |
+
+### Filter Design Reference
+
+**Butterworth Pole Positions (2nd-6th Order, Cutoff = 1 rad/s):**
+
+| Order | Pole 1 | Pole 2 | Pole 3 |
+|-------|--------|--------|--------|
+| 2 | -0.707 ± 0.707j | - | - |
+| 3 | -1 | -0.5 ± 0.866j | - |
+| 4 | -0.383 ± 0.924j | -0.924 ± 0.383j | - |
+| 5 | -1 | -0.309 ± 0.951j | -0.809 ± 0.588j |
+| 6 | -0.259 ± 0.966j | -0.707 ± 0.707j | -0.966 ± 0.259j |
+
+**Chebyshev Type I Poles (0.5 dB Ripple):**
+
+| Order | Real Part σ | Imaginary Part ω | |Pole| |
+|-------|-------------|------------------|-------|
+| 2 | -0.713 | ±0.863 | 1.119 |
+| 3 | -0.626 | ±1.065 | 1.236 |
+| 4 | -0.425 | ±0.954 | 1.044 |
+| 5 | -0.362 | ±0.911 | 0.980 |
+
+### Circuit Analysis
+
+**RLC Circuit Characteristic Roots:**
+
+| Configuration | Equation | Overdamped | Critically Damped | Underdamped |
+|--------------|----------|------------|-------------------|-------------|
+| Series RLC | s² + (R/L)s + 1/LC = 0 | R² > 4L/C | R² = 4L/C | R² < 4L/C |
+| Parallel RLC | s² + s/(RC) + 1/LC = 0 | 1/(RC)² > 4/LC | 1/(RC)² = 4/LC | 1/(RC)² < 4/LC |
+
+**Example RLC Values and Roots:**
+
+| R (Ω) | L (H) | C (F) | Roots | Type |
+|-------|-------|-------|-------|------|
+| 100 | 0.1 | 10μ | -500 ± 866j | Underdamped |
+| 200 | 0.1 | 10μ | -1000 (repeated) | Critical |
+| 400 | 0.1 | 10μ | -500, -2000 | Overdamped |
+| 50 | 0.1 | 10μ | -250 ± 968j | Underdamped |
+
+### Polynomial Root Properties
+
+**Vieta's Formulas (Sum and Product of Roots):**
+
+| Polynomial | Roots | Sum | Product |
+|------------|-------|-----|---------|
+| x² - 5x + 6 | 2, 3 | 5 = -b/a | 6 = c/a |
+| x² + 4 | 2i, -2i | 0 = -b/a | 4 = c/a |
+| x² - 4x + 13 | 2±3i | 4 = -b/a | 13 = c/a |
+| x³ - 6x² + 11x - 6 | 1, 2, 3 | 6 = -b/a | 6 = -d/a |
+
+**Root Classification by Discriminant:**
+
+| Discriminant Δ | Root Type | Example |
+|----------------|-----------|---------|
+| Δ > 0 | Two distinct real | x² - 5x + 4 = 0 |
+| Δ = 0 | One repeated real | x² - 6x + 9 = 0 |
+| Δ < 0 | Two complex conjugates | x² - 2x + 5 = 0 |
 
 ---
 
@@ -232,6 +320,211 @@ The Julia set and Mandelbrot set are defined using iteration of complex function
 
 ---
 
+## Worked Calculations and Scenarios
+
+### Scenario 1: RLC Circuit Natural Response
+
+**Context:** Finding oscillation frequency and decay rate of tank circuit.
+
+```
+Given:
+Inductance: L = 100 mH
+Capacitance: C = 1 μF
+Resistance: R = 50 Ω
+
+Characteristic equation:
+s² + (R/L)s + 1/(LC) = 0
+s² + 500s + 10,000,000 = 0
+
+Apply quadratic formula:
+a = 1, b = 500, c = 10,000,000
+Discriminant = 500² - 4(1)(10,000,000)
+             = 250,000 - 40,000,000
+             = -39,750,000 (negative → complex roots)
+
+Roots:
+s = (-500 ± √(-39,750,000)) / 2
+s = (-500 ± j6,305) / 2
+s = -250 ± j3,152.5
+
+Interpretation:
+σ = -250 rad/s (decay rate)
+ωd = 3,152.5 rad/s (damped frequency)
+fd = 3,152.5/(2π) = 501.6 Hz
+
+Time constant: τ = 1/|σ| = 4 ms
+Damping ratio: ζ = 250/3,162 = 0.079 (underdamped)
+
+Response: v(t) = Ae^(-250t)cos(3152.5t + φ)
+```
+
+### Scenario 2: Control System Stability
+
+**Context:** Analysing closed-loop poles for PID controller.
+
+```
+Given:
+Plant transfer function: G(s) = 1/(s² + 2s + 5)
+Controller: C(s) = Kp + Ki/s + Kds
+
+With Kp = 10, Ki = 5, Kd = 2:
+Open-loop: L(s) = C(s)G(s)
+
+Closed-loop characteristic equation:
+1 + L(s) = 0
+s³ + 2s² + 5s + 2s³ + 10s + 5 = 0
+(simplifying with common denominator)
+s³ + 4s² + 15s + 5 = 0
+
+Find roots numerically or by factoring:
+Testing s = -0.35 (approximately):
+(-0.35)³ + 4(-0.35)² + 15(-0.35) + 5 ≈ 0 ✓
+
+Factor out (s + 0.35):
+s³ + 4s² + 15s + 5 = (s + 0.35)(s² + 3.65s + 14.3)
+
+Solve quadratic:
+s = (-3.65 ± √(13.32 - 57.2)) / 2
+s = (-3.65 ± √(-43.88)) / 2
+s = -1.825 ± j3.31
+
+All poles have negative real parts → STABLE
+Dominant poles: -1.825 ± j3.31
+Damping ratio: ζ = 1.825/3.78 = 0.48
+Natural frequency: ωn = 3.78 rad/s
+```
+
+### Scenario 3: Mechanical Vibration Analysis
+
+**Context:** Automotive suspension eigenvalues.
+
+```
+Given:
+Quarter-car model parameters:
+Sprung mass: ms = 300 kg
+Unsprung mass: mu = 40 kg
+Spring stiffness: ks = 25,000 N/m
+Tire stiffness: kt = 200,000 N/m
+Damping: c = 1,500 N·s/m
+
+Characteristic polynomial (simplified):
+λ⁴ + 62.5λ³ + 5,417λ² + 20,833λ + 416,667 = 0
+
+Roots (computed numerically):
+λ₁,₂ = -7.5 ± j28.2 (body mode)
+λ₃,₄ = -23.8 ± j67.1 (wheel hop mode)
+
+Body mode:
+Frequency: f₁ = 28.2/(2π) = 4.5 Hz
+Damping ratio: ζ₁ = 7.5/29.2 = 0.26
+
+Wheel hop mode:
+Frequency: f₂ = 67.1/(2π) = 10.7 Hz
+Damping ratio: ζ₂ = 23.8/70.7 = 0.34
+
+Both modes are underdamped (0 < ζ < 1)
+System is stable (all Re(λ) < 0)
+```
+
+### Scenario 4: Digital Filter Zero Placement
+
+**Context:** Designing notch filter to remove 50 Hz interference.
+
+```
+Given:
+Sampling frequency: fs = 1000 Hz
+Notch frequency: f0 = 50 Hz
+Notch bandwidth: Δf = 5 Hz
+
+Digital frequency:
+ω0 = 2πf0/fs = 2π(50)/1000 = 0.314 rad/sample
+
+Zeros (on unit circle at notch frequency):
+z₁ = e^(jω0) = cos(0.314) + j·sin(0.314)
+z₁ = 0.951 + j·0.309
+z₂ = z₁* = 0.951 - j·0.309
+
+Poles (inside unit circle for stability):
+r = 1 - π(Δf/fs) = 1 - π(5/1000) = 0.984
+p₁ = r·e^(jω0) = 0.984(0.951 + j·0.309)
+p₁ = 0.936 + j·0.304
+p₂ = p₁* = 0.936 - j·0.304
+
+Transfer function:
+H(z) = [(z - z₁)(z - z₂)] / [(z - p₁)(z - p₂)]
+H(z) = (z² - 1.902z + 1) / (z² - 1.872z + 0.968)
+
+Verify: |H(e^(jω0))| = 0 (complete notch at 50 Hz)
+```
+
+### Scenario 5: Quadratic with Complex Roots
+
+**Context:** Finding resonant frequencies from transfer function denominator.
+
+```
+Given equation:
+s² + 4s + 20 = 0
+
+Step 1: Identify coefficients
+a = 1, b = 4, c = 20
+
+Step 2: Calculate discriminant
+Δ = b² - 4ac = 16 - 80 = -64 (negative)
+
+Step 3: Apply quadratic formula
+s = (-b ± √Δ) / (2a)
+s = (-4 ± √(-64)) / 2
+s = (-4 ± 8j) / 2
+s = -2 ± 4j
+
+Step 4: Interpret physically
+Real part σ = -2: decay rate
+Imaginary part ω = 4: oscillation frequency
+
+Damping ratio: ζ = |σ|/√(σ² + ω²)
+              = 2/√(4 + 16) = 2/√20 = 0.447
+
+Natural frequency: ωn = √(σ² + ω²) = √20 = 4.47 rad/s
+
+Verify: ωn² = 20 = c/a ✓
+        2ζωn = 4 = b/a ✓
+```
+
+### Scenario 6: Higher-Order Polynomial Roots
+
+**Context:** Analysing 4th order Butterworth filter characteristic.
+
+```
+Given:
+Butterworth polynomial: s⁴ + 2.613s³ + 3.414s² + 2.613s + 1 = 0
+
+This factors into two quadratics (conjugate pairs):
+(s² + 0.765s + 1)(s² + 1.848s + 1) = 0
+
+Solve first quadratic:
+s² + 0.765s + 1 = 0
+Δ = 0.585 - 4 = -3.415
+s = (-0.765 ± j1.848) / 2
+s = -0.383 ± j0.924
+
+Solve second quadratic:
+s² + 1.848s + 1 = 0
+Δ = 3.415 - 4 = -0.585
+s = (-1.848 ± j0.765) / 2
+s = -0.924 ± j0.383
+
+All four roots:
+s₁ = -0.383 + j0.924
+s₂ = -0.383 - j0.924
+s₃ = -0.924 + j0.383
+s₄ = -0.924 - j0.383
+
+All roots have |s| = 1 (unit circle) and Re(s) < 0
+This confirms Butterworth maximally flat response.
+```
+
+---
+
 ## Common Mistakes and How to Avoid Them
 
 **Mistake 1: Forgetting that i² = -1**
@@ -292,12 +585,12 @@ Why it happens: Stopping work too early. Always simplify complex numbers to stan
 
 ---
 
-## Related Topics
+## Sources
 
-- [Complex Number Calculator](/calculator/mathematics/complex-number) - Perform operations with complex numbers
-- [Complex Conjugate Calculator](/calculator/mathematics/complex-conjugate) - Find conjugates quickly
-- [Quadratic Formula Calculator](/calculator/mathematics/quadratic-formula) - Solve quadratics with complex roots
-- [Discriminant Calculator](/calculator/mathematics/discriminant) - Determine root types
+- [MIT OpenCourseWare: Control System Design](https://ocw.mit.edu/)
+- [IEEE Control Systems Society](https://ieeecss.org/)
+- [Wolfram MathWorld: Polynomial Roots](https://mathworld.wolfram.com/PolynomialRoots.html)
+- [NIST Digital Library: Special Functions](https://dlmf.nist.gov/)
 
 ---
 

@@ -1,227 +1,385 @@
 ## Calorie Calculator: Daily Calorie Needs and TDEE Calculator
 
-## Table of Contents - Calorie
+## Table of Contents
+- [The 2025-2030 Dietary Guidelines Revolution](#dietary-guidelines-2025-2030)
+- [Understanding Energy Balance](#understanding-energy-balance)
 - [How to Use This Calculator](#how-to-use-this-calculator)
-- [The Core Principle: Energy Balance](#the-core-principle-energy-balance)
-- [How to Calculate Calories Manually](#how-to-calculate-calories-manually)
-- [Real-World Applications](#real-world-applications)
-- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
-- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
-- [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
-- [Related Topics](#related-topics)
-- [How This Calculator Works](#how-this-calculator-works)
+- [International Calorie Recommendations](#international-recommendations)
+- [The Science Behind TDEE Calculation](#tdee-science)
+- [Worked Calculations for Different Goals](#worked-calculations)
+- [Metabolic Adaptation and Plateaus](#metabolic-adaptation)
+- [Sources](#sources)
 - [FAQs](#faqs)
 
 ---
 
-## How to Use This Calculator - Calorie
-Start by selecting your unit system: Metric (cm, kg) or Imperial (inches, lbs). Then select your gender (Male or Female buttons).
+## The 2025-2030 Dietary Guidelines Revolution
 
-Enter your basic information: Age (years), Weight, and Height. For imperial units, height is entered as a single value in inches.
+The USDA and HHS released the 2025-2030 Dietary Guidelines for Americans on 7 January 2026, introducing significant changes to nutritional recommendations. The new guidance emphasises minimally processed, nutrient-dense foods and introduces stricter messaging around added sugars.
 
-Select your activity level from five options, each showing the multiplier used:
-- Sedentary (little or no exercise): 1.2
-- Light activity (1-3 days/week): 1.375
-- Moderate activity (3-5 days/week): 1.55
-- Active (hard exercise 6-7 days/week): 1.725
-- Very active (physical job + exercise): 1.9
+### Key Changes in the 2025-2030 Guidelines
 
-Choose your goal: Maintain (stay at current weight), Lose (create calorie deficit), or Gain (create calorie surplus).
+**General Calorie Ranges:**
+- Most adults: 1,600 to 3,000 calories per day
+- Females minimum: 1,600 calories
+- Males minimum: 2,000 calories
 
-Click "Calculate Calories" to see results. The output shows three values: BMR (calories burned at complete rest), TDEE (total daily calories including activity), and Goal Calories (adjusted for your weight goal). A "Clear" button resets all fields.
+**Protein Recommendations Increased:**
+The new guidelines suggest 1.2 to 1.6 grams of protein per kilogram of body weight daily—50-100% higher than the previous minimum recommendations of 0.8 g/kg. This represents a significant shift toward higher protein intake for muscle maintenance and satiety.
 
----
+**Added Sugar Position:**
+The guidelines state that "no amount of added sugars or non-nutritive sweeteners is recommended or considered part of a healthy or nutritious diet." In practice, one meal should contain no more than 10 grams of added sugars.
 
-## The Core Principle: Energy Balance
+**Saturated Fat:**
+The 2025-2030 guidelines retain the limit on saturated fat at 10% or less of daily calories.
 
-Weight change follows thermodynamics: calories consumed versus calories burned. Eat more than you burn, and excess energy stores as fat. Eat less than you burn, and your body uses stored energy (fat and/or muscle) to compensate.
+**Full-Fat Dairy Supported:**
+The guidance explicitly supports full-fat dairy with no added sugars, with a goal of 3 servings per day in a 2,000-calorie pattern.
 
-Your Total Daily Energy Expenditure (TDEE) has three components: Basal Metabolic Rate (BMR)—the energy your body burns just existing, which accounts for 60-70% of TDEE; the Thermic Effect of Food (TEF)—energy used digesting food, about 10%; and Activity Energy Expenditure—everything from walking to intense exercise.
+### Expert Analysis
 
-The calculator estimates TDEE by first calculating BMR using validated formulas, then multiplying by an activity factor. Your BMR depends on body size (larger bodies need more energy), age (metabolism slows with age), and sex (males typically have higher BMR due to greater muscle mass).
-
-Understanding your TDEE provides the foundation for intentional weight management. Want to lose weight? Eat below TDEE. Want to gain? Eat above TDEE. Want to maintain? Match TDEE.
-
----
-
-## How to Calculate Calories Manually
-
-**Step 1: Calculate BMR using Mifflin-St Jeor equation**
-
-For men:
-BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age) + 5
-
-For women:
-BMR = (10 × weight in kg) + (6.25 × height in cm) - (5 × age) - 161
-
-**Example: 35-year-old man, 85 kg, 178 cm**
-BMR = (10 × 85) + (6.25 × 178) - (5 × 35) + 5
-BMR = 850 + 1112.5 - 175 + 5 = 1,793 calories
-
-**Step 2: Multiply by activity factor**
-
-Activity multipliers:
-- Sedentary: 1.2
-- Light activity: 1.375
-- Moderate activity: 1.55
-- Very active: 1.725
-- Extremely active: 1.9
-
-For moderate activity:
-TDEE = 1,793 × 1.55 = 2,779 calories
-
-**Step 3: Adjust for goal**
-
-- To lose ~1 lb/week: subtract 500 calories
-- To gain ~1 lb/week: add 500 calories
-- To maintain: eat at TDEE
-
-For weight loss:
-Goal calories = 2,779 - 500 = 2,279 calories/day
+The Harvard School of Public Health notes both progress and contradictions in the new guidelines. The strict position on added sugars represents advancement, whilst the full-fat dairy recommendation creates potential confusion with saturated fat guidance.
 
 ---
 
-## Real-World Applications
+## Understanding Energy Balance
 
-**Weight loss programming.** Knowing TDEE prevents both under-eating (metabolic adaptation, muscle loss) and over-eating (no deficit, no loss). A 500-calorie deficit yields approximately one pound lost per week.
+Weight management follows fundamental thermodynamics: energy consumed versus energy expended. The relationship, whilst conceptually simple, involves complex physiological mechanisms.
 
-**Muscle building phases.** Gaining muscle requires caloric surplus plus resistance training. A 250-500 calorie surplus supports muscle growth while minimizing fat gain.
+### Components of Total Daily Energy Expenditure
 
-**Athletic performance.** Endurance athletes may need 4,000+ calories on training days. Understanding baseline needs helps fuel performance without over- or under-eating.
+**Basal Metabolic Rate (BMR): 60-75%**
+The energy required for basic survival functions—breathing, circulation, cell repair, brain activity and temperature regulation. BMR represents the largest component of daily expenditure and is primarily determined by body size, composition and genetics.
 
-**Metabolic testing validation.** If you eat at calculated TDEE for several weeks and maintain weight, the calculation was accurate for you. Significant discrepancy suggests adjusting your activity factor.
+**Thermic Effect of Food (TEF): ~10%**
+Energy used to digest, absorb and process nutrients:
+- Protein: 20-30% of calories consumed
+- Carbohydrates: 5-10% of calories consumed
+- Fat: 0-3% of calories consumed
 
-**Diet troubleshooting.** Eating 1,400 calories but not losing weight? Either intake tracking is inaccurate, or activity level is overestimated. The math provides a framework for investigation.
+This differential explains part of why higher protein diets support weight management.
 
----
+**Physical Activity: 15-30%**
+Includes both structured exercise and non-exercise activity thermogenesis (NEAT)—fidgeting, walking, standing and daily movement. NEAT varies dramatically between individuals, accounting for 200-900 calories daily.
 
-## Scenarios People Actually Run Into
+### The 2021 Metabolism Study
 
-**The activity level misclassification.** You selected "Active" because you exercise daily, but you work a desk job and drive everywhere. Your actual activity level is probably "Lightly Active"—the gym hour doesn't offset 10+ sedentary hours.
+Research published in Science in August 2021 revealed that metabolism remains remarkably stable from ages 20-60, challenging the common belief that metabolic rate crashes in middle age. The study identified four distinct metabolic phases:
 
-**The weekend amnesia.** Your weekday calories average 1,800 (deficit). But weekend dinners, drinks, and brunch push Saturday and Sunday to 3,000+ each. Your weekly average eliminates the deficit entirely.
+1. **Infancy (0-1 year):** Rapid metabolic increase, peaking at 50% above adult levels
+2. **Childhood (1-20 years):** Gradual 3% annual decline
+3. **Adulthood (20-60 years):** Stable metabolism regardless of sex
+4. **Later life (60+ years):** Approximately 0.7% annual decline
 
-**The fitness tracker discrepancy.** Your watch says you burned 3,200 calories. The calculator says TDEE is 2,400. Fitness trackers often overestimate calories burned, sometimes by 30% or more.
-
-**The metabolic adaptation reality.** After months of dieting at 1,500 calories, weight loss stalled. Your metabolism adapted to the lower intake. TDEE has decreased—you may need a diet break or adjusted expectations.
-
-**The post-workout hunger trap.** After a hard workout, you're ravenous and eat an extra 600 calories "because you earned it." But the workout only burned 300 calories. Net result: surplus, not deficit.
-
----
-
-## Trade-Offs and Decisions People Underestimate
-
-**Deficit size versus sustainability.** Larger deficits produce faster weight loss but increase hunger, muscle loss, and metabolic adaptation. Moderate deficits (500-750 calories) are more sustainable long-term.
-
-**Accuracy of inputs.** Activity level is subjective. Body weight fluctuates daily. Age affects metabolism complexly. The calculator provides estimates—real-world adjustment is always necessary.
-
-**Goal weight versus goal composition.** Losing 20 pounds of muscle looks very different from losing 20 pounds of fat. Calorie targets should be paired with protein intake and resistance training for favorable body composition.
-
-**Short-term versus long-term metabolism.** Aggressive dieting can temporarily reduce metabolic rate. This isn't permanent "damage," but it does mean recalculated TDEE will be lower during and immediately after dieting.
-
-**Individual variance.** Two people with identical stats can have BMRs differing by 200+ calories due to genetics, hormones, and body composition. Formulas predict averages; you may be above or below average.
+This research indicates that middle-age weight gain results primarily from lifestyle factors rather than metabolic decline.
 
 ---
 
-## Common Mistakes and How to Recover
+## How to Use This Calculator
 
-**Eating back all exercise calories.** Your watch says you burned 400 calories running. Eating 400 extra calories assumes the watch is accurate (it probably isn't) and ignores that TDEE already includes typical activity. Eat back half at most.
+**Step 1: Select Unit System**
+Choose Metric (cm, kg) or Imperial (inches, lbs).
 
-**Using sedentary multiplier then adding exercise.** If you calculate as "Sedentary" then add exercise calories separately, you might double-count or create inconsistency. Better to use the appropriate activity multiplier.
+**Step 2: Enter Basic Information**
+- Age in years
+- Gender (Male or Female)
+- Weight in selected units
+- Height in selected units
 
-**Ignoring liquid calories.** Coffee drinks, alcohol, smoothies, and soft drinks add calories that are easy to overlook. A daily latte and evening beer could be 500+ calories.
+**Step 3: Select Activity Level**
+Choose the option that best reflects your typical week:
 
-**Weekend tracking amnesia.** Most people track meticulously Monday-Thursday, then stop. Weekend calories count equally. A weekly average is what matters for weight change.
+| Activity Level | Multiplier | Description |
+|---------------|------------|-------------|
+| Sedentary | 1.2 | Desk job, minimal movement |
+| Light Activity | 1.375 | Light exercise 1-3 days/week |
+| Moderate Activity | 1.55 | Exercise 3-5 days/week |
+| Active | 1.725 | Hard exercise 6-7 days/week |
+| Very Active | 1.9 | Physical job plus daily exercise |
 
-**Setting unsustainable targets.** 1,200 calories daily for an active 180-pound man is dangerously low. Calculators should set minimums (typically 1,200 for women, 1,500 for men) regardless of desired deficit.
+**Step 4: Select Your Goal**
+- **Maintain:** Eat at TDEE to maintain current weight
+- **Lose:** Create caloric deficit for weight loss
+- **Gain:** Create caloric surplus for muscle building
+
+**Step 5: Review Results**
+The calculator displays:
+- BMR (calories at complete rest)
+- TDEE (total daily expenditure including activity)
+- Goal Calories (adjusted for your objective)
 
 ---
 
-## Related Topics
+## International Calorie Recommendations
 
-**Macronutrient distribution.** Total calories matter for weight, but protein/carbs/fat ratios affect satiety, muscle retention, and performance. Typical recommendations: 0.7-1g protein per pound bodyweight, remainder split between carbs and fats.
+### United Kingdom
 
-**Adaptive thermogenesis.** Your body adjusts metabolism in response to calorie intake—burning slightly less during prolonged deficits, slightly more during surpluses. This is why weight loss slows over time.
+The NHS maintains general daily calorie recommendations:
 
-**Diet breaks and refeeds.** Periodic returns to maintenance calories may help mitigate metabolic adaptation and improve diet adherence. One to two weeks at maintenance every 8-12 weeks of dieting is common.
+**Standard Guidelines:**
+- Women: approximately 2,000 kcal per day (8,400 kJ)
+- Men: approximately 2,500 kcal per day (10,500 kJ)
 
-**Reverse dieting.** Gradually increasing calories post-diet to restore metabolism while minimizing fat regain. Typical approach: add 50-100 calories weekly until reaching new maintenance.
+**Weight Loss Guidelines (NHS Weight Loss Plan):**
+- Women: 1,400 kcal per day maximum
+- Men: 1,900 kcal per day maximum
 
-**Body recomposition.** Simultaneously losing fat and gaining muscle—possible for beginners, those returning after breaks, or with precise nutrition. Requires eating near maintenance with high protein and progressive resistance training.
+**Meal Distribution (400-600-600 Rule):**
+Public Health England recommends approximately 400 calories for breakfast, 600 for lunch and 600 for dinner, with healthy snacks bringing totals to recommended levels.
+
+### Australia
+
+The National Health and Medical Research Council recommends:
+- Women (19-50): 1,800-2,100 kcal/day
+- Women (51-70): 1,600-1,900 kcal/day
+- Men (19-50): 2,400-2,800 kcal/day
+- Men (51-70): 2,100-2,500 kcal/day
+
+### European Food Safety Authority
+
+EFSA provides reference values based on physical activity levels:
+- Sedentary women: 1,800-2,000 kcal/day
+- Active women: 2,200-2,400 kcal/day
+- Sedentary men: 2,200-2,400 kcal/day
+- Active men: 2,800-3,200 kcal/day
+
+### Key Observation
+
+All major health authorities acknowledge that individual requirements vary significantly based on age, activity level, body composition and metabolic factors. Published guidelines represent population averages, not individual prescriptions.
 
 ---
 
-## How This Calculator Works
+## The Science Behind TDEE Calculation
 
-The calculator uses the Harris-Benedict equation (revised) for BMR calculation:
+### Equation Options
 
-For men:
-BMR = 88.362 + (13.397 × weight in kg) + (4.799 × height in cm) - (5.677 × age)
+**Harris-Benedict (Revised):**
+The calculator uses this equation:
+```
+Men: BMR = 88.362 + (13.397 × weight kg) + (4.799 × height cm) - (5.677 × age)
+Women: BMR = 447.593 + (9.247 × weight kg) + (3.098 × height cm) - (4.330 × age)
+```
 
-For women:
-BMR = 447.593 + (9.247 × weight in kg) + (3.098 × height in cm) - (4.330 × age)
+**Mifflin-St Jeor (Alternative):**
+```
+Men: BMR = (10 × weight kg) + (6.25 × height cm) - (5 × age) + 5
+Women: BMR = (10 × weight kg) + (6.25 × height cm) - (5 × age) - 161
+```
 
-Imperial inputs are converted to metric before calculation.
+A 2025 study in the Asia Pacific Journal of Clinical Nutrition found Mifflin-St Jeor demonstrated the best performance with bias of only -9.73 kcal/day, making it the most accurate for general populations.
 
-TDEE is calculated by multiplying BMR by the selected activity factor (1.2 to 1.9).
+### Accuracy Expectations
 
-Goal calories are determined by the selected objective:
-- Maintain: TDEE unchanged
-- Lose: TDEE minus 500 calories (approximately 1 lb/week loss)
-- Gain: TDEE plus 500 calories (approximately 1 lb/week gain)
+| Population | Expected Accuracy |
+|------------|-------------------|
+| Non-obese adults | 87% within 10% of measured |
+| Obese adults | 75% within 10% of measured |
+| Underweight | Variable, limited data |
+| Elderly | May underestimate needs |
 
-Results are rounded to the nearest whole calorie.
+Individual variation of 10-15% is common even with accurate inputs. Use calculations as starting points, adjusting based on real-world results over 2-4 weeks.
 
-All calculations happen locally in your browser.
+### Activity Level Selection
+
+The most common source of error is activity level misclassification:
+
+**Sedentary (1.2):** Desk work, driving, minimal walking. Most office workers without dedicated exercise fall here.
+
+**Lightly Active (1.375):** Desk job plus 1-3 exercise sessions weekly, or active job with minimal additional exercise.
+
+**Moderately Active (1.55):** Regular exercise 3-5 days weekly, or moderately active job. This is often overselected.
+
+**Active (1.725):** Hard daily exercise or physically demanding job. True for serious athletes and manual labourers.
+
+**Very Active (1.9):** Physical job plus daily hard exercise. Appropriate for professional athletes and military personnel in training.
+
+---
+
+## Worked Calculations for Different Goals
+
+### Scenario 1: Weight Loss for Sedentary Office Worker
+
+**Profile:** 42-year-old female, 168 cm (5'6"), 78 kg (172 lbs), desk job, no regular exercise
+
+**BMR Calculation (Harris-Benedict):**
+```
+BMR = 447.593 + (9.247 × 78) + (3.098 × 168) - (4.330 × 42)
+BMR = 447.593 + 721.27 + 520.46 - 181.86
+BMR = 1,507 kcal/day
+```
+
+**TDEE Calculation (Sedentary: ×1.2):**
+```
+TDEE = 1,507 × 1.2 = 1,808 kcal/day
+```
+
+**For Weight Loss (500 kcal deficit):**
+```
+Target: 1,808 - 500 = 1,308 kcal/day
+```
+
+**Recommendation:** This target (1,308 kcal) approaches the minimum safe intake for women. A more moderate 300-400 kcal deficit (targeting 1,400-1,500 kcal) combined with increased activity would be more sustainable.
+
+### Scenario 2: Muscle Building for Active Young Male
+
+**Profile:** 26-year-old male, 180 cm (5'11"), 75 kg (165 lbs), strength training 5 days/week
+
+**BMR Calculation:**
+```
+BMR = 88.362 + (13.397 × 75) + (4.799 × 180) - (5.677 × 26)
+BMR = 88.362 + 1,004.78 + 863.82 - 147.60
+BMR = 1,809 kcal/day
+```
+
+**TDEE Calculation (Active: ×1.725):**
+```
+TDEE = 1,809 × 1.725 = 3,121 kcal/day
+```
+
+**For Lean Muscle Gain (+300 kcal surplus):**
+```
+Target: 3,121 + 300 = 3,421 kcal/day
+```
+
+**Protein Target (per 2025-2030 DGA at 1.6 g/kg):**
+```
+Protein: 75 × 1.6 = 120 g/day (480 kcal from protein)
+```
+
+### Scenario 3: Maintenance for Moderately Active Middle-Aged Adult
+
+**Profile:** 55-year-old male, 175 cm (5'9"), 82 kg (181 lbs), exercises 3-4 times weekly
+
+**BMR Calculation:**
+```
+BMR = 88.362 + (13.397 × 82) + (4.799 × 175) - (5.677 × 55)
+BMR = 88.362 + 1,098.55 + 839.83 - 312.24
+BMR = 1,714 kcal/day
+```
+
+**TDEE Calculation (Moderate: ×1.55):**
+```
+TDEE = 1,714 × 1.55 = 2,657 kcal/day
+```
+
+**Maintenance Target:** 2,657 kcal/day
+
+**Validation:** If weight remains stable over 3-4 weeks at this intake, the calculation is accurate. Adjust up or down by 100-200 kcal based on actual results.
+
+### Scenario 4: Post-60 Adult Accounting for Metabolic Decline
+
+**Profile:** 68-year-old female, 162 cm (5'4"), 65 kg (143 lbs), light daily walking
+
+**BMR Calculation:**
+```
+BMR = 447.593 + (9.247 × 65) + (3.098 × 162) - (4.330 × 68)
+BMR = 447.593 + 601.06 + 501.88 - 294.44
+BMR = 1,256 kcal/day
+```
+
+**TDEE Calculation (Light: ×1.375):**
+```
+TDEE = 1,256 × 1.375 = 1,727 kcal/day
+```
+
+**Context:** The 2021 Pontzer research confirms post-60 metabolism declines approximately 0.7% annually. At 68, genuine physiological requirements are lower than at 58. This individual requires 1,727 kcal to maintain weight—eating "the same as before" would result in gradual weight gain.
+
+---
+
+## Metabolic Adaptation and Plateaus
+
+### Understanding Adaptive Thermogenesis
+
+Extended caloric restriction triggers adaptive responses:
+- Reduced non-exercise activity (unconscious movement decreases)
+- Decreased thermic effect of food (smaller meals = less digestion energy)
+- Hormonal changes affecting metabolic rate
+- Improved metabolic efficiency (body learns to function on less)
+
+These adaptations can reduce actual TDEE by 10-15% below calculated values after prolonged dieting.
+
+### Strategies for Overcoming Plateaus
+
+**Diet Breaks:**
+Returning to maintenance calories for 1-2 weeks every 8-12 weeks of dieting can help restore metabolic rate and improve adherence.
+
+**Reverse Dieting:**
+Gradually increasing calories by 50-100 kcal weekly after extended deficit helps restore metabolism whilst minimising fat regain.
+
+**Increased NEAT:**
+Standing desks, walking meetings, parking further away—small activity increases throughout the day can add 200-400 kcal to daily expenditure.
+
+**Resistance Training:**
+Maintaining or building muscle mass preserves metabolic rate. Each kilogram of muscle burns approximately 13 kcal daily at rest.
+
+### When to Recalculate
+
+Recalculate TDEE when:
+- Weight changes by 5 kg (10 lbs) or more
+- Activity level changes significantly
+- Progress stalls for more than 3 weeks despite adherence
+- Major life changes affect routine (new job, injury, illness)
+
+---
+
+## Sources
+
+- [2025-2030 Dietary Guidelines for Americans](https://www.dietaryguidelines.gov/)
+- [Harvard School of Public Health: DGA 2025-2030 Analysis](https://nutritionsource.hsph.harvard.edu/2026/01/09/dietary-guidelines-for-americans-2025-2030/)
+- [NHS Better Health: Calorie Counting](https://www.nhs.uk/better-health/lose-weight/calorie-counting/)
+- [Science: Daily Energy Expenditure Through the Human Life Course](https://www.science.org/doi/10.1126/science.abe5017)
+- [Asia Pacific Journal of Clinical Nutrition: BMR Equation Validation 2025](https://apjcn.qdu.edu.cn/)
+- [Journal of the American Dietetic Association: Comparison of Predictive Equations](https://pubmed.ncbi.nlm.nih.gov/15883556/)
+- [Cleveland Clinic: How Many Calories Should You Eat](https://health.clevelandclinic.org/how-many-calories-a-day-should-i-eat)
 
 ---
 
 ## FAQs
 
-**Which formula is this calculator using?**
+**Which formula does this calculator use?**
 
-The Harris-Benedict equation (revised). Other common formulas include Mifflin-St Jeor and Katch-McArdle. Results are similar for most people; differences of 50-100 calories are typical.
+The Harris-Benedict equation (revised). Other common formulas include Mifflin-St Jeor and Katch-McArdle. Results typically differ by 50-100 calories. Use any consistently and adjust based on real-world results.
 
 **How accurate is this calculation?**
 
-For most people, within 10-15% of actual TDEE. Individual variation, formula limitations, and activity estimation error all contribute. Use the result as a starting point and adjust based on real-world results.
+For most people, within 10-15% of actual TDEE. Individual variation, formula limitations and activity estimation error all contribute. Use results as starting points, adjusting after 2-4 weeks based on weight trends.
 
 **What activity level should I choose?**
 
-Be honest—most people overestimate. If you exercise but have a desk job, you're probably "Lightly Active." "Active" and "Very Active" typically apply to manual laborers or serious athletes training multiple hours daily.
+Most people overestimate. Desk workers who exercise are typically "Lightly Active" not "Active." Hard daily exercise or physical labour qualifies for higher categories. When uncertain, select one level lower than initial instinct.
 
-**Should I eat my exercise calories back?**
+**Should I eat exercise calories back?**
 
-Generally, no—or at most, half. Exercise calorie estimates are unreliable, and your activity factor already accounts for general activity. Eating back all exercise calories often eliminates your deficit.
+Generally no, or at most half. Exercise calorie estimates are unreliable (often overstated by 30%+), and your activity factor already accounts for typical movement. Eating back all exercise calories often eliminates deficit.
 
 **Why am I not losing weight at a calculated deficit?**
 
-Most common reasons: underestimating food intake (portion sizes, cooking oils, condiments), overestimating activity level, not accounting for weekend eating, or metabolic adaptation from extended dieting.
+Common reasons: underestimating food intake (portion sizes, cooking oils, drinks), overestimating activity level, not accounting for weekend eating, or metabolic adaptation from extended dieting.
 
-**What's the minimum safe calorie intake?**
+**What is the minimum safe calorie intake?**
 
-Generally 1,200 for women, 1,500 for men—though this varies by size. Very low calorie diets should only be undertaken under medical supervision due to nutritional adequacy concerns.
+Generally 1,200 for women, 1,500 for men. Very low calorie diets risk nutrient deficiency and should only be undertaken under medical supervision. The NHS recommends 1,400 for women and 1,900 for men as weight loss targets.
+
+**How do the new 2025-2030 guidelines affect calorie planning?**
+
+The increased protein recommendation (1.2-1.6 g/kg) means more calories should come from protein sources. The strict position on added sugars (no more than 10g per meal) affects food choices but not total calorie targets.
 
 **How often should I recalculate?**
 
-Every 10-15 pounds of weight change, or if your activity level changes significantly. As you lose weight, TDEE decreases—the same calories that created a deficit at 200 pounds may be maintenance at 170.
+Every 5-7 kg (10-15 lbs) of weight change, or if activity level changes significantly. As weight decreases, TDEE decreases—the same calories that created deficit at higher weight may become maintenance at lower weight.
 
-**Is a 1,000-calorie deficit okay for faster results?**
+**Is a 1,000-calorie deficit safe for faster results?**
 
-It's aggressive and risks muscle loss, nutrient deficiencies, and metabolic adaptation. Most experts recommend 500-750 calorie deficits for sustainable weight loss. Larger deficits may be appropriate for obese individuals under medical supervision.
+Aggressive deficits risk muscle loss, nutrient deficiencies and metabolic adaptation. Most experts recommend 500-750 calorie deficits. Larger deficits may be appropriate for obese individuals under medical supervision.
+
+**What about different macronutrient ratios?**
+
+Total calories determine weight change; macronutrient ratios affect body composition, satiety and performance. Higher protein (per new guidelines: 1.2-1.6 g/kg) helps preserve muscle and increases satiety during weight loss.
 
 **How do I know if my metabolism has adapted?**
 
-Signs of metabolic adaptation include persistent fatigue, feeling cold, reduced libido, poor workout recovery, and weight loss plateaus despite consistent deficit. If you've been in a deficit for months and progress has stalled, a diet break (eating at maintenance for 1-2 weeks) may help.
-
-**Do different macronutrients affect calorie needs?**
-
-Total calories determine weight change, but macronutrient ratios affect body composition, satiety, and performance. Higher protein intakes (0.7-1g per pound of bodyweight) help preserve muscle during weight loss and increase satiety. Carbohydrates fuel intense exercise; fats support hormone production.
+Signs include persistent fatigue, feeling cold, reduced libido, poor workout recovery and weight loss plateaus despite consistent deficit. If dieting for months with stalled progress, a 1-2 week diet break at maintenance may help.
 
 **Should I eat more on workout days?**
 
-Some people cycle calories—eating more on training days, less on rest days—while maintaining the same weekly average. This can support workout performance while maintaining overall deficit. However, consistent daily intake is simpler and works equally well for most people.
-
-**How do I calculate calories for building muscle?**
-
-Start with TDEE (maintenance), then add 250-500 calories for a moderate surplus. Combined with progressive resistance training and adequate protein, this supports muscle growth while minimizing fat gain. Larger surpluses build muscle faster but add more fat.
+Some people cycle calories—more on training days, less on rest days—whilst maintaining weekly averages. This can support workout performance. However, consistent daily intake works equally well for most people and is simpler to follow.

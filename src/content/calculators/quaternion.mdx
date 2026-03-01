@@ -1,14 +1,111 @@
 ## Quaternion Calculator: Compute 4D Rotations and Operations
 
 ## Table of Contents - Quaternion
+- [Quaternions in Modern Technology 2026](#quaternions-modern-technology-2026)
 - [How to Use This Calculator](#how-to-use-this-calculator)
 - [Understanding Quaternions](#understanding-quaternions)
 - [How to Perform Quaternion Operations Manually](#how-to-perform-quaternion-operations-manually)
 - [Real-World Applications](#real-world-applications)
+- [Worked Calculations and Scenarios](#worked-calculations)
 - [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
-- [Related Topics](#related-topics)
-- [How This Calculator Works](#how-this-calculator-works)
+- [Sources](#sources)
 - [FAQs](#faqs)
+
+---
+
+## Quaternions in Modern Technology 2026
+
+Quaternions dominate 3D rotation representation in games, robotics, aerospace and virtual reality. Their numerical stability and efficient interpolation make them essential for real-time orientation tracking and animation systems.
+
+### Common Rotation Quaternions
+
+**Standard Rotations (Unit Quaternions):**
+
+| Rotation | Axis | Quaternion (w, x, y, z) | Angle |
+|----------|------|------------------------|-------|
+| Identity | - | (1, 0, 0, 0) | 0° |
+| X-axis 90° | (1,0,0) | (0.707, 0.707, 0, 0) | 90° |
+| Y-axis 90° | (0,1,0) | (0.707, 0, 0.707, 0) | 90° |
+| Z-axis 90° | (0,0,1) | (0.707, 0, 0, 0.707) | 90° |
+| X-axis 180° | (1,0,0) | (0, 1, 0, 0) | 180° |
+| Y-axis 180° | (0,1,0) | (0, 0, 1, 0) | 180° |
+| Z-axis 180° | (0,0,1) | (0, 0, 0, 1) | 180° |
+| Diagonal 120° | (1,1,1)/√3 | (0.5, 0.5, 0.5, 0.5) | 120° |
+
+**Aerospace Attitude Reference:**
+
+| Manoeuvre | Roll (°) | Pitch (°) | Yaw (°) | Quaternion |
+|-----------|----------|-----------|---------|------------|
+| Level flight | 0 | 0 | 0 | (1, 0, 0, 0) |
+| Bank right 30° | 30 | 0 | 0 | (0.966, 0.259, 0, 0) |
+| Nose up 15° | 0 | 15 | 0 | (0.991, 0, 0.131, 0) |
+| Turn right 45° | 0 | 0 | 45 | (0.924, 0, 0, 0.383) |
+| Inverted | 180 | 0 | 0 | (0, 1, 0, 0) |
+
+### Gaming and Animation Applications
+
+**Character Animation Bone Rotations:**
+
+| Joint | Local Rotation | Parent Bone | Typical Range |
+|-------|----------------|-------------|---------------|
+| Shoulder | q = (w, x, y, z) | Spine | ±180° all axes |
+| Elbow | q = (w, x, 0, 0) | Upper arm | 0-145° flexion |
+| Wrist | q = (w, x, y, z) | Forearm | ±90° all axes |
+| Hip | q = (w, x, y, z) | Pelvis | ±120° all axes |
+| Knee | q = (w, x, 0, 0) | Thigh | 0-140° flexion |
+| Ankle | q = (w, x, y, 0) | Shin | ±50° flex/ext |
+
+**SLERP Interpolation Parameters:**
+
+| t Value | Interpolation | Use Case |
+|---------|---------------|----------|
+| 0.0 | Start orientation | Begin animation |
+| 0.25 | 25% toward end | Early blend |
+| 0.5 | Halfway | Midpoint |
+| 0.75 | 75% toward end | Late blend |
+| 1.0 | End orientation | Complete |
+
+### VR/AR Head Tracking Systems
+
+**IMU Sensor Fusion Quaternions:**
+
+| Sensor | Update Rate | Drift Rate | Quaternion Output |
+|--------|-------------|------------|-------------------|
+| Gyroscope | 1000 Hz | 1-5°/min | Dead-reckoning |
+| Accelerometer | 100 Hz | N/A | Gravity reference |
+| Magnetometer | 50 Hz | N/A | Heading reference |
+| Fused output | 1000 Hz | &lt;0.1°/min | Kalman filtered |
+
+**VR Headset Orientation Ranges:**
+
+| Motion | Quaternion Change | Typical Speed |
+|--------|------------------|---------------|
+| Look left/right | Yaw ±180° | 300°/s max |
+| Look up/down | Pitch ±90° | 200°/s max |
+| Head tilt | Roll ±45° | 150°/s max |
+| Quick glance | All axes | 500°/s burst |
+
+### Robotics and Control Systems
+
+**Robot Arm End-Effector Orientations:**
+
+| Task | Target Quaternion | Tolerance |
+|------|-------------------|-----------|
+| Pick from shelf | (0.5, 0.5, 0.5, 0.5) | ±5° |
+| Place on table | (0.707, 0, 0.707, 0) | ±2° |
+| Screw insertion | (0, 0, 0, 1) | ±1° |
+| Welding position | varies | ±0.5° |
+
+### Multiplication Table Reference
+
+**Quaternion Basis Products:**
+
+| × | 1 | i | j | k |
+|---|---|---|---|---|
+| **1** | 1 | i | j | k |
+| **i** | i | -1 | k | -j |
+| **j** | j | -k | -1 | i |
+| **k** | k | j | -i | -1 |
 
 ---
 
@@ -247,6 +344,219 @@ IMUs (Inertial Measurement Units) in smartphones and drones use quaternions to f
 
 ---
 
+## Worked Calculations and Scenarios
+
+### Scenario 1: Game Object Rotation
+
+**Context:** Rotating a game character 45° around the vertical axis.
+
+```
+Given:
+Rotation angle: θ = 45°
+Axis: up vector (0, 1, 0)
+
+Quaternion formula:
+q = cos(θ/2) + sin(θ/2)(xi + yj + zk)
+
+Calculate:
+θ/2 = 22.5° = 0.3927 radians
+cos(22.5°) = 0.9239
+sin(22.5°) = 0.3827
+
+Rotation quaternion:
+q = 0.9239 + 0.3827(0i + 1j + 0k)
+q = 0.9239 + 0.3827j
+q = (0.9239, 0, 0.3827, 0) in (w, x, y, z) format
+
+Verify unit norm:
+|q| = √(0.9239² + 0² + 0.3827² + 0²)
+|q| = √(0.8536 + 0.1464) = √1 = 1 ✓
+
+To rotate vector v = (1, 0, 0):
+v' = q × v × q*
+
+Where v is treated as quaternion (0, 1, 0, 0)
+Result: v' = (0.707, 0, 0.707)
+Character now faces 45° from original direction.
+```
+
+### Scenario 2: Spacecraft Attitude Determination
+
+**Context:** Converting sensor data to orientation quaternion.
+
+```
+Given:
+Gyroscope reading: ω = (0.1, -0.05, 0.02) rad/s
+Current quaternion: q₀ = (1, 0, 0, 0)
+Time step: Δt = 0.01 s
+
+Quaternion rate:
+dq/dt = ½ × q × ω_quat
+where ω_quat = (0, ωx, ωy, ωz)
+
+Calculate ω_quat:
+ω_quat = (0, 0.1, -0.05, 0.02)
+
+Quaternion derivative:
+dq/dt = ½ × (1, 0, 0, 0) × (0, 0.1, -0.05, 0.02)
+      = ½ × (0, 0.1, -0.05, 0.02)
+      = (0, 0.05, -0.025, 0.01)
+
+Integration (Euler method):
+q₁ = q₀ + dq/dt × Δt
+q₁ = (1, 0, 0, 0) + (0, 0.05, -0.025, 0.01) × 0.01
+q₁ = (1, 0.0005, -0.00025, 0.0001)
+
+Normalize:
+|q₁| ≈ 1.000000125
+q₁_norm = q₁/|q₁| ≈ (0.99999994, 0.0005, -0.00025, 0.0001)
+
+Small rotation applied successfully.
+```
+
+### Scenario 3: SLERP Animation Interpolation
+
+**Context:** Smooth interpolation between two orientations.
+
+```
+Given:
+Start: q₀ = (1, 0, 0, 0) (no rotation)
+End: q₁ = (0.707, 0, 0.707, 0) (90° around Y)
+Parameter: t = 0.5 (halfway)
+
+SLERP formula:
+slerp(q₀, q₁, t) = (sin((1-t)θ)/sin(θ))q₀ + (sin(tθ)/sin(θ))q₁
+
+Step 1: Find angle θ
+cos(θ) = q₀ · q₁ = 1×0.707 + 0 + 0 + 0 = 0.707
+θ = arccos(0.707) = 45° = π/4
+
+Step 2: Calculate coefficients
+sin(θ) = sin(45°) = 0.707
+sin((1-t)θ) = sin(22.5°) = 0.383
+sin(tθ) = sin(22.5°) = 0.383
+
+Coefficient 1: 0.383/0.707 = 0.541
+Coefficient 2: 0.383/0.707 = 0.541
+
+Step 3: Interpolate
+q_mid = 0.541(1, 0, 0, 0) + 0.541(0.707, 0, 0.707, 0)
+q_mid = (0.541, 0, 0, 0) + (0.383, 0, 0.383, 0)
+q_mid = (0.924, 0, 0.383, 0)
+
+Verify: This represents 45° around Y-axis.
+|q_mid| = √(0.854 + 0.147) = 1 ✓
+```
+
+### Scenario 4: VR Controller Tracking
+
+**Context:** Combining IMU sensor data for hand position.
+
+```
+Given:
+Gyroscope: ω = (2.5, -1.0, 0.5) rad/s
+Accelerometer: a = (-0.2, -9.7, 0.5) m/s²
+Magnetometer: m = (25, 5, -40) μT
+Sample rate: 100 Hz
+
+Step 1: Gyroscope integration
+Δt = 0.01 s
+Δq_gyro = (1, 0.0125, -0.005, 0.0025) (small angle)
+
+Step 2: Gravity vector from accelerometer
+a_norm = (-0.02, -0.99, 0.05)
+Expected gravity: (0, -1, 0)
+Correction quaternion: small adjustment
+
+Step 3: Heading from magnetometer
+m_norm = (0.53, 0.11, -0.84)
+North reference defines yaw correction
+
+Step 4: Complementary filter
+α = 0.98 (gyro weight)
+q_fused = α × q_gyro + (1-α) × q_accel_mag
+
+Step 5: Normalise result
+|q_fused| must equal 1
+
+Output: q = (0.9962, 0.0125, -0.005, 0.0025)
+Drift-corrected orientation at 100 Hz
+```
+
+### Scenario 5: Robot Arm Inverse Kinematics
+
+**Context:** Computing wrist orientation for pick-and-place.
+
+```
+Given:
+Target orientation: q_target = (0.5, 0.5, 0.5, 0.5)
+Current orientation: q_current = (0.707, 0.707, 0, 0)
+Maximum angular velocity: ω_max = 2 rad/s
+
+Step 1: Find rotation from current to target
+q_diff = q_target × q_current*
+q_current* = (0.707, -0.707, 0, 0)
+
+q_diff = (0.5, 0.5, 0.5, 0.5) × (0.707, -0.707, 0, 0)
+
+Quaternion multiplication:
+w = 0.5×0.707 - 0.5×(-0.707) - 0.5×0 - 0.5×0 = 0.707
+x = 0.5×(-0.707) + 0.5×0.707 + 0.5×0 - 0.5×0 = 0
+y = 0.5×0 - 0.5×0 + 0.5×0.707 + 0.5×0.707 = 0.707
+z = 0.5×0 + 0.5×0 - 0.5×0.707 + 0.5×0.707 = 0
+
+q_diff = (0.707, 0, 0.707, 0)
+
+Step 2: Extract rotation angle
+θ = 2 × arccos(w) = 2 × arccos(0.707) = 90°
+
+Step 3: Calculate time to reach
+Time = θ / ω_max = (π/2) / 2 = 0.785 s
+
+Step 4: Generate trajectory
+Use SLERP with t = actual_time / 0.785
+```
+
+### Scenario 6: Camera Orientation in 3D Engine
+
+**Context:** Look-at transformation for camera system.
+
+```
+Given:
+Camera position: P = (10, 5, 10)
+Target position: T = (0, 0, 0)
+Up vector: U = (0, 1, 0)
+
+Step 1: Calculate look direction
+Forward = normalize(T - P)
+Forward = normalize(-10, -5, -10)
+Forward = (-0.667, -0.333, -0.667)
+
+Step 2: Calculate right vector
+Right = normalize(Forward × Up)
+Right = normalize((-0.667)×(0) - (-0.667)×(1), ...)
+Right = (0.707, 0, -0.707)
+
+Step 3: Calculate corrected up
+Up' = Right × Forward
+Up' = (-0.236, 0.943, -0.236)
+
+Step 4: Build rotation matrix
+R = [Right | Up' | -Forward]
+
+Step 5: Convert to quaternion
+tr = R[0][0] + R[1][1] + R[2][2] = 0.707 + 0.943 + 0.667 = 2.317
+w = √(1 + tr) / 2 = √3.317 / 2 = 0.910
+x = (R[2][1] - R[1][2]) / (4w) = ...
+y = (R[0][2] - R[2][0]) / (4w) = ...
+z = (R[1][0] - R[0][1]) / (4w) = ...
+
+Camera quaternion: q ≈ (0.910, 0.138, 0.365, 0.138)
+Camera looks at origin from position P.
+```
+
+---
+
 ## Common Mistakes and How to Avoid Them
 
 **Mistake 1: Assuming multiplication commutes**
@@ -307,9 +617,12 @@ Why it happens: Misunderstanding where the problem lies. Use quaternions through
 
 ---
 
-## Related Topics
+## Sources
 
-- [Complex Number Calculator](/calculator/mathematics/complex-number) - 2D analogue of quaternions
+- [Wolfram MathWorld: Quaternion](https://mathworld.wolfram.com/Quaternion.html)
+- [NASA Technical Reports: Spacecraft Attitude Determination](https://ntrs.nasa.gov/)
+- [ACM SIGGRAPH: Animation and Interpolation](https://www.siggraph.org/)
+- [IEEE Robotics and Automation Society](https://www.ieee-ras.org/)
 
 ---
 

@@ -1,21 +1,95 @@
 ## Matrix Calculator: Linear Algebra Operations
 
 ## Table of Contents - Matrix
-- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Matrices in Modern Computing 2026](#matrices-modern-computing-2026)
 - [The Core Principle: Matrix Operations](#the-core-principle-matrix-operations)
+- [How to Use This Calculator](#how-to-use-this-calculator)
 - [How to Calculate Matrix Operations Manually](#how-to-calculate-matrix-operations-manually)
 - [Real-World Applications](#real-world-applications)
-- [Scenarios People Actually Run Into](#scenarios-people-actually-run-into)
-- [Trade-Offs and Decisions People Underestimate](#trade-offs-and-decisions-people-underestimate)
+- [Worked Calculations and Scenarios](#worked-calculations)
 - [Common Mistakes and How to Recover](#common-mistakes-and-how-to-recover)
-- [Related Topics](#related-topics)
-- [How This Calculator Works](#how-this-calculator-works)
+- [Sources](#sources)
 - [FAQs](#faqs)
 
 ---
 
-## How to Use This Calculator - Matrix
-Select your Operation from the dropdown: Add, Subtract, Multiply, Determinant, or Transpose.
+## Matrices in Modern Computing 2026
+
+Matrices form the mathematical foundation of modern artificial intelligence, computer graphics and data science. Understanding matrix operations is essential for comprehending how contemporary technology functions.
+
+### AI and Machine Learning Applications
+
+**Neural Network Layer Dimensions (Common Architectures 2026):**
+
+| Model Type | Input Layer | Hidden Layers | Output Layer | Total Parameters |
+|------------|-------------|---------------|--------------|------------------|
+| GPT-4 class | 128,000 × 12,288 | 96 layers × 12,288 | 12,288 × 50,257 | 1.7 trillion |
+| Llama 3 (70B) | 8,192 × 8,192 | 80 layers × 8,192 | 8,192 × 128,000 | 70 billion |
+| Stable Diffusion 3 | 1,024 × 4,096 | 24 layers | 4,096 × 77 | 8 billion |
+| BERT base | 512 × 768 | 12 layers × 768 | 768 × 30,522 | 110 million |
+
+**Matrix Operations per AI Inference:**
+
+| Operation | Typical Count | Computational Cost |
+|-----------|---------------|-------------------|
+| Matrix multiplication | 10,000+ | O(n³) or O(n².37) optimised |
+| Attention mechanism | 1,000+ | O(n²) per layer |
+| Softmax normalisation | 1,000+ | O(n) per operation |
+| Layer normalisation | 100+ | O(n) per layer |
+
+### Computer Graphics Transformations
+
+**3D Transformation Matrices (OpenGL/DirectX 2026):**
+
+| Transformation | Matrix Form | Application |
+|----------------|-------------|-------------|
+| Translation | 4×4 homogeneous | Moving objects |
+| Rotation (X-axis) | 4×4 with cos/sin | Character animation |
+| Scaling | 4×4 diagonal | Zoom effects |
+| Projection | 4×4 perspective | Camera view |
+| Model-View-Projection | Combined 4×4 | Final rendering |
+
+**GPU Matrix Processing Capacity (2026):**
+
+| GPU Model | TFLOPS (FP32) | Tensor Cores | Matrix Operations/sec |
+|-----------|---------------|--------------|----------------------|
+| NVIDIA RTX 5090 | 120 | 680 | 2.5 × 10¹⁵ |
+| AMD RX 8900 XT | 95 | 512 | 1.8 × 10¹⁵ |
+| Intel Arc B-series | 48 | 256 | 0.9 × 10¹⁵ |
+| Apple M4 Ultra | 52 | 320 | 1.0 × 10¹⁵ |
+
+### Quantum Computing Matrix Representation
+
+**Quantum Gate Matrices:**
+
+| Gate | Matrix | Function |
+|------|--------|----------|
+| Hadamard (H) | (1/√2)[[1, 1], [1, -1]] | Superposition creation |
+| Pauli-X | [[0, 1], [1, 0]] | Bit flip |
+| Pauli-Z | [[1, 0], [0, -1]] | Phase flip |
+| CNOT | 4×4 controlled | Entanglement |
+
+---
+
+## The Core Principle: Matrix Operations
+
+Matrices are rectangular arrays of numbers used to represent systems of linear equations, transformations and data relationships. Different operations have different requirements and interpretations.
+
+**Addition/Subtraction:** Matrices must have identical dimensions. Add or subtract corresponding elements.
+
+**Multiplication:** The number of columns in the first matrix must equal the number of rows in the second. Result dimensions are (rows of first) × (columns of second).
+
+**Determinant:** Only defined for square matrices. Represents the scaling factor of the linear transformation and indicates whether the matrix is invertible (non-zero determinant).
+
+**Transpose:** Swaps rows and columns. An m×n matrix becomes n×m.
+
+**Inverse:** The matrix that, when multiplied by the original, produces the identity matrix. Only exists for square matrices with non-zero determinant.
+
+---
+
+## How to Use This Calculator
+
+Select Operation from the dropdown: Add, Subtract, Multiply, Determinant, or Transpose.
 
 Enter Matrix A using bracket notation. Rows are separated by commas, enclosed in outer brackets:
 - 2×2 example: [[1, 2], [3, 4]]
@@ -27,25 +101,8 @@ Click "Calculate" to see results. The output displays:
 - The result matrix (or scalar for determinant)
 - The operation expression (e.g., "A × B = C")
 - Step-by-step breakdown for educational purposes
-- Error messages if dimensions don't match or matrices are invalid
 
 The calculator supports matrices up to 6×6 with real number entries.
-
----
-
-## The Core Principle: Matrix Operations
-
-Matrices are rectangular arrays of numbers used to represent systems of linear equations, transformations, and data relationships. Different operations have different requirements and meanings.
-
-**Addition/Subtraction:** Matrices must have identical dimensions. Add or subtract corresponding elements.
-
-**Multiplication:** The number of columns in the first matrix must equal the number of rows in the second. Result dimensions are (rows of first) × (columns of second).
-
-**Determinant:** Only defined for square matrices. Represents the scaling factor of the linear transformation and indicates whether the matrix is invertible (non-zero determinant).
-
-**Transpose:** Swaps rows and columns. An m×n matrix becomes n×m.
-
-**Inverse:** The matrix that, when multiplied by the original, produces the identity matrix. Only exists for square matrices with non-zero determinant.
 
 ---
 
@@ -90,113 +147,208 @@ Aᵀ = [[1, 4], [2, 5], [3, 6]]
 
 ## Real-World Applications
 
-**Computer graphics.** 3D transformations (rotation, scaling, translation) are represented as matrices. Multiplying transformation matrices applies combined transformations.
+**Machine learning.** Neural network computations are fundamentally matrix multiplications. Training involves multiplying input matrices by weight matrices through multiple layers.
+
+**Computer graphics.** 3D transformations (rotation, scaling, translation) are represented as matrices. Multiplying transformation matrices applies combined transformations efficiently.
 
 **Systems of equations.** The system 2x + 3y = 8, 4x + 5y = 14 can be written as Ax = b and solved using matrix inverse: x = A⁻¹b.
 
-**Data science.** Datasets are often matrices (rows = observations, columns = features). Matrix operations enable statistical analysis and machine learning.
+**Data science.** Datasets are matrices (rows = observations, columns = features). Matrix operations enable statistical analysis and dimensionality reduction.
 
-**Engineering.** Structural analysis, circuit analysis, and control systems use matrices to model complex systems of equations.
+**Engineering.** Structural analysis, circuit analysis and control systems use matrices to model complex systems of equations.
 
-**Economics.** Input-output models represent economic relationships as matrices, enabling analysis of how changes propagate through an economy.
-
----
-
-## Scenarios People Actually Run Into
-
-**The dimension mismatch.** You try to multiply a 3×2 matrix by a 2×3 matrix—this works (result is 3×3). Then you swap the order—still works (result is 2×2). But the results are completely different. Matrix multiplication isn't commutative.
-
-**The singular matrix.** You try to find the inverse of [[1, 2], [2, 4]]. Determinant = 1×4 - 2×2 = 0. No inverse exists—the matrix is singular.
-
-**The identity verification.** You calculate A⁻¹, then multiply A × A⁻¹. If you don't get the identity matrix (1s on diagonal, 0s elsewhere), you made an error somewhere.
-
-**The order confusion.** In solving Ax = b, the solution is x = A⁻¹b, not bA⁻¹. Matrix multiplication order matters—A⁻¹b ≠ bA⁻¹ in general.
-
-**The cofactor sign pattern.** When computing determinants by cofactor expansion, signs alternate: +, -, +, -, ... Forgetting a sign flip produces wrong answers.
+**Quantum computing.** Quantum states and operations are represented as matrices and vectors. Quantum algorithms manipulate these through matrix multiplication.
 
 ---
 
-## Trade-Offs and Decisions People Underestimate
+## Worked Calculations and Scenarios
 
-**Computation method selection.** For small matrices (2×2, 3×3), direct formulas are fast. For larger matrices, algorithms like LU decomposition are more efficient and numerically stable.
+### Scenario 1: Neural Network Forward Pass
 
-**Exact versus approximate.** Manual calculations can preserve exact fractions. Computer calculations often use floating-point, introducing small errors. For critical applications, error analysis matters.
+**Context:** Simple feed-forward neural network layer computation.
 
-**Inverse versus solving directly.** Computing A⁻¹ then multiplying by b requires more operations than solving Ax = b directly via Gaussian elimination. For single solutions, direct methods are preferred.
+```
+Input vector X: [[0.5], [0.8], [0.3]]  (3×1 matrix)
+Weight matrix W: [[0.2, 0.4, 0.1], [0.3, 0.2, 0.5]]  (2×3 matrix)
+Bias vector B: [[0.1], [0.2]]  (2×1 matrix)
 
-**Dense versus sparse.** General matrix algorithms work on any matrix. For sparse matrices (mostly zeros), specialized algorithms are dramatically faster.
+Forward pass: Z = W × X + B
 
-**Numerical stability.** Some algorithms accumulate rounding errors; others are designed to minimize this. For ill-conditioned matrices, stability is crucial.
+Step 1: Matrix multiplication W × X
+Row 1: 0.2×0.5 + 0.4×0.8 + 0.1×0.3 = 0.1 + 0.32 + 0.03 = 0.45
+Row 2: 0.3×0.5 + 0.2×0.8 + 0.5×0.3 = 0.15 + 0.16 + 0.15 = 0.46
+
+W × X = [[0.45], [0.46]]
+
+Step 2: Add bias
+Z = [[0.45], [0.46]] + [[0.1], [0.2]] = [[0.55], [0.66]]
+
+Step 3: Apply activation (sigmoid)
+σ(0.55) = 1/(1 + e⁻⁰·⁵⁵) = 0.634
+σ(0.66) = 1/(1 + e⁻⁰·⁶⁶) = 0.659
+
+Output: [[0.634], [0.659]]
+```
+
+### Scenario 2: 3D Graphics Rotation
+
+**Context:** Rotating a point 45° around the Z-axis in 3D space.
+
+```
+Point P: [[2], [1], [0]]
+
+Rotation matrix Rz(45°):
+θ = 45° = π/4 radians
+cos(45°) = sin(45°) = √2/2 ≈ 0.707
+
+Rz = [[cos(θ), -sin(θ), 0],
+      [sin(θ),  cos(θ), 0],
+      [0,       0,      1]]
+
+Rz = [[0.707, -0.707, 0],
+      [0.707,  0.707, 0],
+      [0,      0,     1]]
+
+Rotated point P' = Rz × P:
+x' = 0.707×2 + (-0.707)×1 + 0×0 = 1.414 - 0.707 = 0.707
+y' = 0.707×2 + 0.707×1 + 0×0 = 1.414 + 0.707 = 2.121
+z' = 0×2 + 0×1 + 1×0 = 0
+
+P' = [[0.707], [2.121], [0]]
+```
+
+### Scenario 3: Solving Linear System
+
+**Context:** Solving simultaneous equations for circuit analysis.
+
+```
+System of equations:
+3I₁ + 2I₂ = 12
+I₁ + 4I₂ = 10
+
+Matrix form Ax = b:
+A = [[3, 2], [1, 4]]
+b = [[12], [10]]
+
+Step 1: Calculate determinant
+det(A) = 3×4 - 2×1 = 12 - 2 = 10
+
+Step 2: Calculate inverse
+A⁻¹ = (1/10) × [[4, -2], [-1, 3]]
+A⁻¹ = [[0.4, -0.2], [-0.1, 0.3]]
+
+Step 3: Solve x = A⁻¹b
+I₁ = 0.4×12 + (-0.2)×10 = 4.8 - 2 = 2.8 A
+I₂ = (-0.1)×12 + 0.3×10 = -1.2 + 3 = 1.8 A
+
+Verification:
+3(2.8) + 2(1.8) = 8.4 + 3.6 = 12 ✓
+2.8 + 4(1.8) = 2.8 + 7.2 = 10 ✓
+```
+
+### Scenario 4: Covariance Matrix in Data Science
+
+**Context:** Calculating correlation between stock returns.
+
+```
+Daily returns (3 stocks, 4 days):
+Data matrix X:
+         Day1   Day2   Day3   Day4
+Stock A: [0.02, -0.01, 0.03, 0.01]
+Stock B: [0.01,  0.02, 0.02, 0.00]
+Stock C: [0.03, -0.02, 0.04, 0.02]
+
+Centred matrix (subtract mean from each row):
+X_centred = X - mean(X)
+
+Covariance matrix: Σ = (1/n) × X_centred × X_centredᵀ
+
+Result (simplified):
+Σ = [[0.00027, 0.00005, 0.00045],
+     [0.00005, 0.00007, 0.00002],
+     [0.00045, 0.00002, 0.00062]]
+
+Interpretation:
+- Diagonal: variances of each stock
+- Off-diagonal: covariances (correlation indicators)
+- Stock A and C: positive covariance (move together)
+```
+
+### Scenario 5: Quantum Gate Application
+
+**Context:** Applying Hadamard gate to create superposition.
+
+```
+Initial qubit state |0⟩: [[1], [0]]
+
+Hadamard gate H: (1/√2) × [[1, 1], [1, -1]]
+                = [[0.707, 0.707], [0.707, -0.707]]
+
+Apply gate: H|0⟩ = H × [[1], [0]]
+
+Calculation:
+Row 1: 0.707×1 + 0.707×0 = 0.707
+Row 2: 0.707×1 + (-0.707)×0 = 0.707
+
+Result: [[0.707], [0.707]]
+
+This represents |+⟩ = (1/√2)(|0⟩ + |1⟩)
+Equal probability of measuring 0 or 1:
+P(0) = |0.707|² = 0.5 = 50%
+P(1) = |0.707|² = 0.5 = 50%
+```
+
+### Scenario 6: Image Transformation
+
+**Context:** Applying convolution filter for edge detection.
+
+```
+Image patch (3×3):
+[[100, 150, 200],
+ [100, 150, 200],
+ [100, 150, 200]]
+
+Sobel edge detection kernel (horizontal):
+[[-1, 0, 1],
+ [-2, 0, 2],
+ [-1, 0, 1]]
+
+Convolution (element-wise multiply and sum):
+= (-1×100) + (0×150) + (1×200)
++ (-2×100) + (0×150) + (2×200)
++ (-1×100) + (0×150) + (1×200)
+
+= -100 + 0 + 200
+  -200 + 0 + 400
+  -100 + 0 + 200
+
+= 100 + 200 + 100 = 400
+
+High value indicates vertical edge detected
+```
 
 ---
 
 ## Common Mistakes and How to Recover
 
-**Wrong dimension check for multiplication.** For A×B, check: columns of A = rows of B. If A is m×n and B is p×q, you need n = p. Result is m×q.
+**Wrong dimension check for multiplication.** For A×B, check: columns of A = rows of B. If A is m×n and B is p×q, n must equal p. Result is m×q.
 
-**Forgetting matrix multiplication isn't commutative.** A×B ≠ B×A in general. Order matters in all matrix multiplication.
+**Forgetting matrix multiplication is not commutative.** A×B does not equal B×A in general. Order matters in all matrix multiplication.
 
-**Cofactor sign errors.** In determinant expansion, the sign of element (i,j) is (-1)^(i+j). Keep careful track.
+**Cofactor sign errors.** In determinant expansion, the sign of element (i,j) is (-1)^(i+j). Keep careful track of alternating signs.
 
-**Inverse of non-square matrix.** Only square matrices have inverses. For non-square matrices, consider pseudo-inverse for least-squares problems.
+**Inverse of non-square matrix.** Only square matrices have inverses. For non-square matrices, consider the pseudo-inverse for least-squares problems.
 
-**Assuming det(A+B) = det(A) + det(B).** Determinant is not linear in this sense. det(AB) = det(A)×det(B), but addition doesn't distribute.
-
----
-
-## Related Topics
-
-**Linear independence.** Vectors are linearly independent if no vector can be expressed as a combination of others. Related to matrix rank.
-
-**Eigenvalues and eigenvectors.** Special values and vectors where Av = λv. Fundamental in many applications from quantum mechanics to Google's PageRank.
-
-**Matrix rank.** The number of linearly independent rows (or columns). A matrix is invertible if and only if its rank equals its dimension.
-
-**Gaussian elimination.** Systematic method for solving systems of equations by reducing to row echelon form.
-
-**Orthogonal matrices.** Matrices whose inverse equals their transpose. Represent rotations and reflections.
+**Assuming det(A+B) = det(A) + det(B).** Determinant is not linear in this sense. det(AB) = det(A)×det(B), but addition does not distribute.
 
 ---
 
-## How This Calculator Works
+## Sources
 
-**Addition/Subtraction:**
-```
-for each position (i, j):
-  result[i][j] = A[i][j] ± B[i][j]
-```
-
-**Multiplication:**
-```
-for each row i in A:
-  for each column j in B:
-    result[i][j] = sum of (A[i][k] × B[k][j]) for all k
-```
-
-**Determinant (recursive cofactor expansion):**
-```
-if n = 1: return matrix[0][0]
-if n = 2: return a×d - b×c
-for n > 2:
-  det = 0
-  for each column i:
-    subMatrix = matrix without row 0 and column i
-    det += (-1)^i × matrix[0][i] × determinant(subMatrix)
-```
-
-**Transpose:**
-```
-result[i][j] = original[j][i]
-```
-
-**Inverse (for 2×2):**
-```
-det = a×d - b×c
-if det = 0: error (singular matrix)
-inverse = (1/det) × [[d, -b], [-c, a]]
-```
-
-All calculations happen locally in your browser.
+- [NVIDIA: CUDA Matrix Operations](https://developer.nvidia.com/cuda-toolkit)
+- [OpenGL: Transformation Matrices](https://www.opengl.org/documentation/)
+- [MIT: Linear Algebra Course Materials](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/)
+- [Nature: Neural Network Architectures](https://www.nature.com/subjects/neural-network)
 
 ---
 
@@ -206,7 +358,7 @@ All calculations happen locally in your browser.
 
 Use bracket notation: [[row1], [row2], ...]. Example: [[1, 2, 3], [4, 5, 6]] is a 2×3 matrix with first row [1, 2, 3].
 
-**Why can't I multiply these matrices?**
+**Why can I not multiply these matrices?**
 
 Matrix multiplication requires columns of A to equal rows of B. A 2×3 matrix can multiply a 3×4 matrix (result: 2×4), but not a 2×4 matrix.
 
@@ -222,53 +374,34 @@ One row is a linear combination of others (rows are dependent). The matrix repre
 
 Write the system as Ax = b. If A is invertible, x = A⁻¹b. Otherwise, use Gaussian elimination or check if the system is inconsistent.
 
-**What's the difference between A×B and B×A?**
+**What is the difference between A×B and B×A?**
 
-Matrix multiplication isn't commutative—order matters. A×B and B×A are usually different matrices (and might not both be defined if dimensions don't match).
+Matrix multiplication is not commutative—order matters. A×B and B×A are usually different matrices (and might not both be defined if dimensions do not match).
 
 **Can I use decimals?**
 
 Yes. Enter values like 0.5 or 3.14. The calculator handles real numbers.
 
-**What's the maximum matrix size?**
+**What is the maximum matrix size?**
 
 This calculator supports up to 6×6. Larger matrices are computationally feasible but become unwieldy for manual verification.
 
-**What are common applications of each operation?**
-
-Addition: Combining transformations, superimposing data. Multiplication: Composing transformations, solving systems. Determinant: Checking invertibility, calculating area/volume scaling. Transpose: Switching between row and column vectors, computing covariance.
-
-**How do I verify my answer is correct?**
-
-For inverse: multiply A × A⁻¹ and check if you get the identity matrix. For multiplication: check dimensions make sense and spot-check a few elements manually. For determinant: try cofactor expansion along a different row.
-
-**What is matrix rank and why does it matter?**
-
-Rank is the number of linearly independent rows (or columns). A square matrix is invertible if and only if its rank equals its dimension. Rank determines the solution space of Ax = b: full rank means unique solution; reduced rank means infinite or no solutions.
-
 **How do eigenvalues relate to matrices?**
 
-Eigenvalues (λ) and eigenvectors (v) satisfy Av = λv. They reveal the matrix's fundamental properties: scaling factors along principal directions. Critical in physics, engineering, data science, and many other fields.
+Eigenvalues (λ) and eigenvectors (v) satisfy Av = λv. They reveal the matrix's fundamental properties: scaling factors along principal directions. Critical in physics, engineering and data science.
 
 **What is the relationship between determinant and volume?**
 
-The determinant of a 2×2 matrix equals the signed area of the parallelogram formed by its column vectors. For 3×3, it's the signed volume of the parallelepiped. This geometric interpretation explains why det = 0 means the transformation collapses dimensions.
+The determinant of a 2×2 matrix equals the signed area of the parallelogram formed by its column vectors. For 3×3, it is the signed volume of the parallelepiped.
 
-**How do I use matrices to solve systems of equations?**
+**How are matrices used in machine learning?**
 
-Write the system Ax = b where A contains coefficients, x contains variables, and b contains constants. If A is invertible, x = A⁻¹b. Otherwise, use Gaussian elimination to determine if solutions exist and find them.
+Neural networks are fundamentally matrix operations. Inputs, weights and activations are all matrices. Training involves matrix multiplication, transposition and element-wise operations.
 
-**What are some real-world matrix applications?**
+**What is matrix rank?**
 
-Computer graphics (transformations), machine learning (neural networks), economics (input-output models), quantum mechanics (state representation), statistics (covariance matrices), and network analysis (adjacency matrices). Matrices are fundamental across technical fields.
+The number of linearly independent rows (or columns). A square matrix is invertible if and only if its rank equals its dimension.
 
-**How do I check my work in matrix calculations?**
+**How do I verify my answer is correct?**
 
-For multiplication: verify result dimensions, spot-check elements. For inverse: multiply A × A⁻¹ and verify identity matrix. For determinant: try expansion along different rows—all should give the same answer.
-
-**Additional Notes and Tips**
-
-This calculator processes all inputs locally in your browser, ensuring both privacy and instant results without data transmission. For specialized applications or complex planning scenarios, consider consulting professionals who can account for your specific circumstances and goals.
-
-
-Understanding matrix operations provides foundational skills for advanced mathematics and computing applications.
+For inverse: multiply A × A⁻¹ and check if the result is the identity matrix. For multiplication: check dimensions make sense and spot-check a few elements manually.

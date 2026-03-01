@@ -1,72 +1,97 @@
 ## Binomial Coefficient Calculator: Calculate "N Choose K" Combinations
 
 ## Table of Contents - Binomial Coefficients
-- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Combinatorics in Modern Applications 2026](#combinatorics-modern-applications-2026)
 - [Understanding Binomial Coefficients](#understanding-binomial-coefficients)
+- [How to Use This Calculator](#how-to-use-this-calculator)
 - [How to Calculate Binomial Coefficients Manually](#how-to-calculate-binomial-coefficients-manually)
 - [Real-World Applications](#real-world-applications)
+- [Worked Calculations and Scenarios](#worked-calculations)
 - [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
-- [Related Topics](#related-topics)
-- [How This Calculator Works](#how-this-calculator-works)
+- [Sources](#sources)
 - [FAQs](#faqs)
 
 ---
 
-## How to Use This Calculator - Binomial Coefficients
+## Combinatorics in Modern Applications 2026
 
-Enter two values:
-- n (total number of items) - must be a non-negative integer
-- k (number of items to choose) - must be non-negative and not greater than n
+Binomial coefficients underpin probability calculations, cryptographic systems and statistical analysis across industries. Understanding "n choose k" is essential for quantitative analysis.
 
-Click "Calculate" to see:
-- The binomial coefficient C(n,k) or "n choose k"
-- The calculation using factorials
-- Step-by-step computation
-- Connection to Pascal's triangle
-- Practical interpretation
+### UK National Lottery Odds
 
-The calculator handles large values efficiently, avoiding factorial overflow for practical ranges.
+**Lotto Game Probabilities (2026):**
+
+| Game | Format | Combinations | Odds (1 in) |
+|------|--------|--------------|-------------|
+| Lotto (jackpot) | Choose 6 from 59 | C(59,6) = 45,057,474 | 45.1 million |
+| Lotto (5+bonus) | 5 main + 1 bonus | C(59,5) × 1 | 7.5 million |
+| EuroMillions | 5 from 50 + 2 from 12 | C(50,5) × C(12,2) | 139.8 million |
+| Set For Life | 5 from 47 + 1 from 10 | C(47,5) × C(10,1) | 15.3 million |
+| Thunderball | 5 from 39 + 1 from 14 | C(39,5) × C(14,1) | 8.1 million |
+
+**Premium Bonds Statistics:**
+
+| Aspect | Value | Calculation |
+|--------|-------|-------------|
+| Total bonds | 125 billion | Fixed |
+| Monthly prizes | ~5.5 million | Statistical expectation |
+| Prize rate | 4.4% annually | Government set |
+| £1 million odds | 1 in 46.9 billion | Per bond per draw |
+
+### Cryptographic Key Combinations
+
+**Encryption Key Possibilities:**
+
+| Key Type | Bits | Total Combinations | Security Level |
+|----------|------|-------------------|----------------|
+| AES-128 | 128 | 2^128 ≈ 3.4 × 10³⁸ | Standard |
+| AES-256 | 256 | 2^256 ≈ 1.2 × 10⁷⁷ | Quantum-resistant |
+| RSA-2048 | 2048 | Approx 10^617 | Current standard |
+| RSA-4096 | 4096 | Approx 10^1234 | High security |
+
+**Password Combinations (Character Set Analysis):**
+
+| Characters | Length 8 | Length 12 | Length 16 |
+|------------|----------|-----------|-----------|
+| Lowercase (26) | 2 × 10¹¹ | 9 × 10¹⁶ | 4 × 10²² |
+| Mixed case (52) | 5 × 10¹³ | 4 × 10²⁰ | 3 × 10²⁷ |
+| Alphanumeric (62) | 2 × 10¹⁴ | 3 × 10²¹ | 5 × 10²⁸ |
+| All printable (95) | 7 × 10¹⁵ | 5 × 10²³ | 4 × 10³¹ |
+
+### Statistical Sampling
+
+**Quality Control Sampling Plans (ISO 2859-1):**
+
+| Lot Size | Sample Size | Accept Number | C(N,n) Combinations |
+|----------|-------------|---------------|---------------------|
+| 151-280 | 32 | 1 | C(200,32) ≈ 10⁴⁰ |
+| 281-500 | 50 | 2 | C(400,50) ≈ 10⁷⁰ |
+| 501-1200 | 80 | 3 | C(800,80) ≈ 10¹²⁰ |
+| 1201-3200 | 125 | 5 | C(2000,125) ≈ 10²⁰⁰ |
 
 ---
 
 ## Understanding Binomial Coefficients
 
-Binomial coefficients answer a simple question: "In how many ways can I choose k items from n items when order doesn't matter?"
+Binomial coefficients answer a fundamental question: "In how many ways can k items be chosen from n items when order does not matter?"
 
 **The everyday scenario:**
 
-You have 5 friends and want to invite 3 to dinner. How many different groups of 3 could you invite? That's C(5,3), read as "5 choose 3." The answer is 10—there are 10 different possible groups.
+There are 5 friends and 3 are to be invited to dinner. How many different groups of 3 could be formed? That is C(5,3), read as "5 choose 3." The answer is 10—there are 10 different possible groups.
 
 **Why "binomial"?**
 
-They're called binomial coefficients because they appear as coefficients in the binomial theorem. When you expand (a + b)^n, the coefficients are binomial coefficients. For example:
+They are called binomial coefficients because they appear as coefficients in the binomial theorem. When (a + b)^n is expanded, the coefficients are binomial coefficients:
 
 (a + b)³ = 1a³ + 3a²b + 3ab² + 1b³
 
 The coefficients 1, 3, 3, 1 are C(3,0), C(3,1), C(3,2), C(3,3).
-
-**The notation:**
-
-C(n,k) = "n choose k"
-Also written as ⁿCₖ or (n k) with parentheses arranged vertically
 
 **The formula:**
 
 C(n,k) = n! / (k! × (n-k)!)
 
 Where n! (n factorial) means n × (n-1) × (n-2) × ... × 2 × 1.
-
-**Why this formula works:**
-
-Think about arranging k items from n items:
-- There are n choices for the first item
-- n-1 choices for the second
-- Continue until you've made k choices
-- This gives n!/(n-k)! arrangements
-
-But we overcounted! If order doesn't matter, the k items can be arranged in k! ways, and all those arrangements represent the same combination. So we divide by k! to correct for overcounting.
-
-Result: n! / (k! × (n-k)!)
 
 **Pascal's triangle connection:**
 
@@ -91,27 +116,39 @@ The total number of all possible subsets of n items is 2^n.
 
 ---
 
+## How to Use This Calculator
+
+Enter two values:
+- n (total number of items) - must be a non-negative integer
+- k (number of items to choose) - must be non-negative and not greater than n
+
+Click "Calculate" to see:
+- The binomial coefficient C(n,k) or "n choose k"
+- The calculation using factorials
+- Step-by-step computation
+- Connection to Pascal's triangle
+- Practical interpretation
+
+The calculator handles large values efficiently, avoiding factorial overflow for practical ranges.
+
+---
+
 ## How to Calculate Binomial Coefficients Manually
 
 **Method 1: Direct factorial calculation (small values)**
 
-**Example 1: C(5,2)**
+Example: C(5,2)
 
 Formula: C(5,2) = 5! / (2! × 3!)
 
 Step 1: Calculate 5! = 5 × 4 × 3 × 2 × 1 = 120
-
 Step 2: Calculate 2! = 2 × 1 = 2
-
 Step 3: Calculate 3! = 3 × 2 × 1 = 6
-
 Step 4: C(5,2) = 120 / (2 × 6) = 120 / 12 = 10
 
 **Method 2: Cancellation method (more efficient)**
 
-Instead of computing large factorials, cancel common terms.
-
-**Example 2: C(10,3)**
+Example: C(10,3)
 
 C(10,3) = 10! / (3! × 7!)
 
@@ -121,198 +158,236 @@ Step 1: Write out partially
 Step 2: Cancel 7!
 = (10 × 9 × 8) / (3 × 2 × 1)
 
-Step 3: Calculate numerator
-= 720 / 6
+Step 3: Calculate numerator = 720
 
-Step 4: Divide
-= 120
-
-**Example 3: C(52,5) - Poker hands**
-
-C(52,5) = 52! / (5! × 47!)
-
-Cancel 47!:
-= (52 × 51 × 50 × 49 × 48) / (5 × 4 × 3 × 2 × 1)
-
-Numerator = 311,875,200
-Denominator = 120
-Result = 2,598,960
-
-(This is why there are about 2.6 million possible 5-card poker hands!)
+Step 4: Divide = 720 / 6 = 120
 
 **Method 3: Pascal's triangle (for small values)**
 
 Build Pascal's triangle row by row. Each entry is the sum of the two entries above it.
 
 To find C(4,2):
-```
-Row 0:     1
-Row 1:    1 1
-Row 2:   1 2 1
-Row 3:  1 3 3 1
 Row 4: 1 4 6 4 1
-```
+C(4,2) is the 3rd entry (counting from 0), which is 6.
 
-C(4,2) is the 3rd entry (counting from 1) in row 4, which is 6.
+**Method 4: Using symmetry**
 
-**Method 4: Recursive formula**
-
-C(n,k) = C(n-1,k-1) + C(n-1,k)
-
-This says: to choose k items from n items, either include the first item and choose k-1 from the remaining n-1, or don't include the first item and choose k from the remaining n-1.
-
-Base cases:
-C(n,0) = 1 (one way to choose nothing)
-C(n,n) = 1 (one way to choose everything)
-C(n,k) = 0 if k greater than n
-
-**Example 4: Using symmetry**
-
-C(100,98) looks hard to compute, but use symmetry:
-
+C(100,98) appears difficult, but use symmetry:
 C(100,98) = C(100,2) = (100 × 99) / 2 = 4,950
 
-Much easier than computing 98!
+Much simpler than computing 98!
 
 ---
 
 ## Real-World Applications
 
-**Lottery odds:** A lottery requires choosing 6 numbers from 49. Total possible combinations = C(49,6) = 13,983,816. Your odds of winning are 1 in about 14 million.
+**Lottery odds.** A lottery requires choosing 6 numbers from 59. Total possible combinations = C(59,6) = 45,057,474. The odds of winning are approximately 1 in 45 million.
 
-**Committee selection:** A company has 12 employees and needs to form a 4-person committee. Number of possible committees = C(12,4) = 495.
+**Committee selection.** A company has 12 employees and needs to form a 4-person committee. Number of possible committees = C(12,4) = 495.
 
-**Genetics:** When parents each contribute chromosomes, the number of genetically unique children possible is astronomical. With 23 chromosome pairs, there are C(46,23) ways chromosomes can assort (over 8 billion).
+**Genetics.** When parents each contribute chromosomes, the number of genetically unique children possible is astronomical. With 23 chromosome pairs, there are C(46,23) ways chromosomes can assort.
 
-**Password security:** If a password requires exactly 3 uppercase letters from 26 options in any order, there are C(26,3) = 2,600 ways to choose which letters, then multiply by arrangements.
+**Quality control.** Testing 5 items from a batch of 100. Number of different samples = C(100,5) = 75,287,520.
 
-**Quality control:** Testing 5 items from a batch of 100 for quality control. Number of different samples = C(100,5) = 75,287,520.
+**Card games.** In bridge, each player receives 13 cards from 52. Number of possible hands = C(52,13) ≈ 635 billion.
 
-**Tournament brackets:** In a tournament with n teams where k advance to playoffs, there are C(n,k) possible playoff scenarios (before considering matchups).
+**Network connections.** In a network of n devices where each pair can connect, there are C(n,2) possible connections.
 
-**Card games:** In bridge, each player gets 13 cards from 52. Number of possible hands for one player = C(52,13) ≈ 635 billion.
+**Cryptography.** Combination-based password systems and key generation rely on binomial coefficients.
 
-**Network connections:** In a network of n devices where each device connects to k others, the number of possible connection patterns involves binomial coefficients.
+---
 
-**Combinatorial optimization:** Problems like "select k items to maximize value subject to weight constraint" explore C(n,k) possible selections.
+## Worked Calculations and Scenarios
+
+### Scenario 1: UK Lottery Probability Analysis
+
+**Context:** Calculating odds for different lottery outcomes.
+
+```
+Lotto: Choose 6 numbers from 1-59
+
+Jackpot (all 6 correct):
+C(59,6) = 59!/(6! × 53!)
+= (59 × 58 × 57 × 56 × 55 × 54) / (6 × 5 × 4 × 3 × 2 × 1)
+= 32,441,381,280 / 720
+= 45,057,474 combinations
+
+Odds: 1 in 45,057,474
+
+Match 5 numbers:
+Ways to choose 5 correct: C(6,5) = 6
+Ways to choose 1 wrong: C(53,1) = 53
+Total: 6 × 53 = 318 combinations
+
+Probability: 318 / 45,057,474 = 1 in 141,690
+
+Match 4 numbers:
+Ways to choose 4 correct: C(6,4) = 15
+Ways to choose 2 wrong: C(53,2) = 1,378
+Total: 15 × 1,378 = 20,670 combinations
+
+Probability: 20,670 / 45,057,474 = 1 in 2,180
+```
+
+### Scenario 2: Jury Selection Process
+
+**Context:** Selecting 12 jurors from a pool of 40 candidates.
+
+```
+Total ways to select 12 from 40:
+C(40,12) = 40!/(12! × 28!)
+
+Cancellation:
+= (40 × 39 × 38 × 37 × 36 × 35 × 34 × 33 × 32 × 31 × 30 × 29)
+  / (12 × 11 × 10 × 9 × 8 × 7 × 6 × 5 × 4 × 3 × 2 × 1)
+
+Numerator: 1.66 × 10¹⁸
+Denominator: 479,001,600
+Result: C(40,12) = 5,586,853,480
+
+Additional analysis:
+If 15 candidates are women and 25 are men:
+
+All-female jury: C(15,12) = 455
+All-male jury: C(25,12) = 5,200,300
+Mixed (6 each): C(15,6) × C(25,6) = 5,005 × 177,100 = 886,385,500
+```
+
+### Scenario 3: Investment Portfolio Selection
+
+**Context:** Choosing stocks for a diversified portfolio.
+
+```
+FTSE 100 stock selection:
+Universe: 100 stocks
+Portfolio: 10 stocks
+
+Total possible portfolios:
+C(100,10) = 100!/(10! × 90!)
+= (100 × 99 × 98 × 97 × 96 × 95 × 94 × 93 × 92 × 91) / 10!
+= 17,310,309,456,440
+
+Sector constraints:
+30 financial stocks, select 3: C(30,3) = 4,060
+25 tech stocks, select 2: C(25,2) = 300
+20 healthcare stocks, select 2: C(20,2) = 190
+25 other stocks, select 3: C(25,3) = 2,300
+
+Constrained portfolios:
+4,060 × 300 × 190 × 2,300 = 532,356,600,000
+Still over 500 billion possibilities
+```
+
+### Scenario 4: Clinical Trial Design
+
+**Context:** Selecting participants for a drug trial.
+
+```
+Trial parameters:
+Total volunteers: 200
+Treatment group: 100
+Control group: 100
+
+Ways to divide:
+C(200,100) = 200!/(100! × 100!)
+
+Using Stirling's approximation for large factorials:
+n! ≈ √(2πn) × (n/e)^n
+
+C(200,100) ≈ 9.05 × 10⁵⁸
+
+This is an astronomically large number, ensuring:
+- Random assignment is truly random
+- No bias in group composition
+- Statistical validity of results
+
+Subgroup analysis:
+50 participants over 65:
+Ways to distribute evenly (25 each group):
+C(50,25) × C(150,75) ≈ 10⁵⁵ combinations
+```
+
+### Scenario 5: Password Policy Analysis
+
+**Context:** Evaluating password strength requirements.
+
+```
+Company policy: 12 characters, must include at least:
+- 2 uppercase letters (from 26)
+- 2 lowercase letters (from 26)
+- 2 digits (from 10)
+- 2 special characters (from 10)
+
+Minimum complexity calculation:
+Choose positions for each type:
+Uppercase positions: C(12,2) = 66
+Lowercase positions: C(10,2) = 45 (remaining after uppercase)
+Digit positions: C(8,2) = 28 (remaining)
+Special positions: C(6,2) = 15 (remaining)
+Remaining positions: C(4,4) = 1
+
+Character choices:
+Uppercase: 26² = 676
+Lowercase: 26² = 676
+Digits: 10² = 100
+Special: 10² = 100
+Remaining 4: 72⁴ = 26,873,856 (any allowed)
+
+Total minimum combinations:
+66 × 45 × 28 × 15 × 676 × 676 × 100 × 100 × 26,873,856
+≈ 1.6 × 10²³
+
+Entropy: log₂(1.6 × 10²³) ≈ 77 bits (strong)
+```
+
+### Scenario 6: Football Team Selection
+
+**Context:** Selecting a starting XI from a 25-player squad.
+
+```
+Basic selection:
+C(25,11) = 25!/(11! × 14!)
+= 4,457,400 possible starting lineups
+
+With constraints:
+Must include 1 goalkeeper from 3: C(3,1) = 3
+Select 4 defenders from 8: C(8,4) = 70
+Select 4 midfielders from 9: C(9,4) = 126
+Select 2 forwards from 5: C(5,2) = 10
+
+Constrained combinations:
+3 × 70 × 126 × 10 = 264,600 valid lineups
+
+Formation flexibility:
+4-4-2: as above = 264,600
+4-3-3: C(3,1) × C(8,4) × C(9,3) × C(5,3) = 3 × 70 × 84 × 10 = 176,400
+3-5-2: C(3,1) × C(8,3) × C(9,5) × C(5,2) = 3 × 56 × 126 × 10 = 211,680
+```
 
 ---
 
 ## Common Mistakes and How to Avoid Them
 
-**Mistake 1: Confusing permutations and combinations**
+**Confusing permutations and combinations.** C(5,2) equals 10, not 20. Permutations care about order (AB different from BA). Combinations do not. Divide by k! to correct for overcounting.
 
-Wrong: Thinking C(5,2) = 5 × 4 = 20
+**Computing huge factorials unnecessarily.** C(100,2) equals 4,950, not a giant factorial calculation. Cancel common terms first.
 
-Right: C(5,2) = (5 × 4) / 2 = 10
+**Using the formula when k is greater than n.** C(5,7) equals 0. It is impossible to choose 7 items from only 5.
 
-Why: Permutations care about order (AB different from BA). Combinations don't (AB same as BA). Divide by k! to correct for overcounting.
+**Forgetting k = 0 or k = n cases.** C(n,0) equals 1 (one way to choose nothing). C(n,n) equals 1 (one way to choose everything).
 
-**Mistake 2: Computing huge factorials unnecessarily**
+**Integer division errors in programming.** Multiply first, then divide. Integer division truncates prematurely.
 
-Wrong: Computing C(100,2) = 100! / (2! × 98!)  by calculating 100! = giant number
-
-Right: C(100,2) = (100 × 99) / 2 = 4,950 (cancel common terms first)
-
-Why: Factorial values explode quickly. Always cancel before computing.
-
-**Mistake 3: Using the formula when k greater than n**
-
-Wrong: Trying to compute C(5,7)
-
-Right: C(5,7) = 0 (impossible to choose 7 items from only 5)
-
-Why: You can't choose more items than you have.
-
-**Mistake 4: Forgetting k = 0 or k = n cases**
-
-Wrong: Thinking C(n,0) = 0
-
-Right: C(n,0) = 1 (one way to choose nothing: choose nothing!)
-
-Similarly: C(n,n) = 1 (one way to choose everything)
-
-**Mistake 5: Integer division errors in programming**
-
-Wrong: Computing n/k in integer division before multiplying
-
-Right: Multiply first, then divide, or use floating point carefully
-
-Why: Integer division truncates, losing precision.
-
-**Mistake 6: Not using symmetry**
-
-Wrong: Computing C(1000,997) using the formula as written
-
-Right: C(1000,997) = C(1000,3) = much easier to compute
-
-Why: Symmetry saves massive computation time.
-
-**Recovery strategy:**
-
-For small values, verify using Pascal's triangle. For large values, use cancellation and symmetry. Always check if your answer makes intuitive sense (e.g., C(5,2) should be smallish, not millions).
+**Not using symmetry.** C(1000,997) = C(1000,3) is far simpler to compute.
 
 ---
 
-## Related Topics
+## Sources
 
-**Permutations:** When order matters, use P(n,k) = n!/(n-k)!. Related to combinations by P(n,k) = k! × C(n,k).
-
-**Binomial Theorem:** (a+b)^n = Σ C(n,k) a^(n-k) b^k. Binomial coefficients are the coefficients in the expansion.
-
-**Pascal's Triangle:** A triangular array where each number is the sum of the two above it. Contains all binomial coefficients.
-
-**Multinomial Coefficients:** Generalization for choosing multiple groups instead of just one group.
-
-**Probability:** Combinations are fundamental for calculating probabilities in situations with multiple outcomes.
-
----
-
-## How This Calculator Works
-
-The calculator uses efficient algorithms to avoid overflow:
-
-**For small values:**
-```
-Direct computation with factorial formula
-C(n,k) = n! / (k! × (n-k)!)
-```
-
-**For moderate values:**
-```
-Cancellation method:
-numerator = n × (n-1) × ... × (n-k+1)
-denominator = k × (k-1) × ... × 1
-result = numerator / denominator
-(Compute by alternating multiply and divide to keep values manageable)
-```
-
-**Using symmetry:**
-```
-if k > n/2:
-    C(n,k) = C(n, n-k)
-(Reduces computation for large k)
-```
-
-**For very large values:**
-```
-Use logarithms to avoid overflow:
-log(C(n,k)) = log(n!) - log(k!) - log((n-k)!)
-Then exponentiate result
-```
-
-**Optimization:**
-```
-Base cases:
-if k = 0 or k = n: return 1
-if k > n: return 0
-
-Use recursive formula for moderate values:
-C(n,k) = C(n-1,k-1) + C(n-1,k)
-with memoization to cache results
-```
-
-All calculations done locally in your browser.
+- [UK National Lottery: Prize Breakdown](https://www.national-lottery.co.uk/)
+- [ISO 2859-1: Sampling Procedures for Inspection](https://www.iso.org/standard/1141.html)
+- [NIST: Cryptographic Standards](https://csrc.nist.gov/publications)
+- [Royal Statistical Society: Probability Resources](https://rss.org.uk/training-events/)
 
 ---
 
@@ -320,88 +395,56 @@ All calculations done locally in your browser.
 
 **What does "n choose k" mean?**
 
-It's the number of ways to choose k items from n items when order doesn't matter. Like picking 3 people from 10 to form a team.
+It is the number of ways to choose k items from n items when order does not matter. Like picking 3 people from 10 to form a team.
 
-**What's the difference between combinations and permutations?**
+**What is the difference between combinations and permutations?**
 
-Combinations don't care about order (AB same as BA). Permutations do (AB different from BA). C(n,k) = P(n,k) / k!.
+Combinations do not care about order (AB same as BA). Permutations do (AB different from BA). C(n,k) = P(n,k) / k!.
 
 **Why is C(n,0) equal to 1?**
 
-There's exactly one way to choose nothing: don't choose anything! It's a valid selection of 0 items.
+There is exactly one way to choose nothing: do not choose anything. It is a valid selection of 0 items.
 
 **Can I have C(5,7)?**
 
-No, that equals 0. You can't choose 7 items from only 5. k must be less than or equal to n.
+No, that equals 0. It is impossible to choose 7 items from only 5. k must be less than or equal to n.
 
 **What is C(n,n)?**
 
-It equals 1. There's only one way to choose all n items: take all of them.
+It equals 1. There is only one way to choose all n items: take all of them.
 
 **How do I compute C(100,50) without a calculator?**
 
-You don't—it's enormous (about 10^29). Use software or a calculator with big integer support.
+It cannot be done manually—the result is approximately 10^29. Use software or a calculator with big integer support.
 
-**What's the largest value in row n of Pascal's triangle?**
+**What is the largest value in row n of Pascal's triangle?**
 
 C(n, n/2) if n is even, or C(n, (n±1)/2) if n is odd. The middle value(s) are largest due to symmetry.
 
 **Why do binomial coefficients appear in probability?**
 
-When calculating probabilities of k successes in n independent trials, you need to count the number of ways to achieve k successes, which is C(n,k).
+When calculating probabilities of k successes in n independent trials, the number of ways to achieve k successes must be counted, which is C(n,k).
 
 **How does C(n,k) relate to the binomial theorem?**
 
-In (a+b)^n = Σ C(n,k) a^(n-k) b^k, the C(n,k) are the coefficients. They tell you how many ways each term can occur.
+In (a+b)^n = Σ C(n,k) a^(n-k) b^k, the C(n,k) are the coefficients indicating how many ways each term can occur.
 
-**What's the sum of all binomial coefficients in row n?**
+**What is the sum of all binomial coefficients in row n?**
 
 C(n,0) + C(n,1) + ... + C(n,n) = 2^n. This represents the total number of subsets of an n-element set.
 
 **Can n or k be negative?**
 
-In basic combinatorics, no. But generalized binomial coefficients allow negative or non-integer values using the gamma function.
-
-**What's the alternating sum of binomial coefficients?**
-
-C(n,0) - C(n,1) + C(n,2) - ... = 0 for n greater than 0. This comes from setting a=1, b=-1 in (a+b)^n.
+In basic combinatorics, no. Generalised binomial coefficients allow negative or non-integer values using the gamma function.
 
 **How do I verify my answer?**
 
-Use symmetry: C(n,k) should equal C(n,n-k). Also check with Pascal's triangle for small values, or verify using the recursive formula.
+Use symmetry: C(n,k) should equal C(n,n-k). Check with Pascal's triangle for small values, or verify using the recursive formula.
 
-**What's the connection to subsets?**
+**What is the connection to subsets?**
 
 C(n,k) counts the number of k-element subsets of an n-element set. The power set (all subsets) has size 2^n.
 
-**Why does cancellation work?**
-
-n! / (n-k)! = n × (n-1) × ... × (n-k+1), because (n-k)! cancels the lower portion of n!. Then divide by k! to get C(n,k).
-
-**How are binomial coefficients used in statistics?**
-
-Binomial distribution, hypothesis testing, and experimental design all use C(n,k) to count outcomes.
-
-**What happens if I choose k = 1?**
-
-C(n,1) = n. There are n ways to choose 1 item from n items—just pick which one!
-
 **Can C(n,k) ever be a fraction?**
 
-No, for non-negative integer n and k. It always results in a whole number (a count of combinations).
-
-**What's the fastest way to compute C(n,k)?**
-
-Use symmetry if k greater than n/2, then use the cancellation method. For very large values, use software with optimized algorithms.
-
-**How do binomial coefficients grow?**
-
-They increase as you move toward the middle of a row in Pascal's triangle, then decrease symmetrically. The middle value(s) are largest.
-
-**Additional Notes**
-
-Binomial coefficients are fundamental in combinatorics, probability, and algebra. They bridge counting problems with algebraic expansions, revealing deep connections throughout mathematics.
-
-Understanding when to use them (any "choose k from n" scenario) is more important than memorizing formulas. The key insight is recognizing that order doesn't matter—that's what distinguishes combinations from permutations.
-
-Practice with concrete examples: lottery tickets, committee selections, card hands. These tangible scenarios make the abstract concept click. Once you internalize the "choose k from n" pattern, you'll spot it everywhere in math and real life.
+No, for non-negative integers n and k. It always results in a whole number (a count of combinations).

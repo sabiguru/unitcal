@@ -116,14 +116,7 @@ export function generateCalculatorSchema(
     },
     applicationSubCategory: category,
     browserRequirements: 'Requires JavaScript. Requires HTML5.',
-    softwareVersion: '1.0',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      ratingCount: '1250',
-      bestRating: '5',
-      worstRating: '1'
-    }
+    softwareVersion: '1.0'
   };
 }
 
@@ -161,8 +154,9 @@ export function generateArticleSchema(
     datePublished: datePublished,
     dateModified: dateModified,
     author: {
-      '@type': 'Organization',
-      name: 'CalcFort'
+      '@type': 'Person',
+      name: 'Ben Konna',
+      url: 'https://calcfort.com/about/ben-konna'
     },
     publisher: {
       '@type': 'Organization',

@@ -2,8 +2,8 @@
 ## Project: Improve Indexability and Uniqueness of 144 Calculator Blog Posts
 
 **Created:** 2026-02-16
-**Last Updated:** 2026-02-16 17:00
-**Status:** IN PROGRESS (4/144 completed)
+**Last Updated:** 2026-02-18
+**Status:** IN PROGRESS (27/144 completed)
 
 ---
 
@@ -162,22 +162,22 @@ To avoid templated patterns, each batch will use different section arrangements:
 
 ### BATCH 2: Health & Fitness Calculators (12 files)
 **Template:** C (Scenario-Based) and D (Historical + Current) alternating
-**Status:** [~] IN PROGRESS (3/12)
+**Status:** [x] COMPLETED (12/12)
 
 | # | Slug | Status | Notes |
 |---|------|--------|-------|
 | 1 | bmi | [x] DONE | WHO obesity data, Lancet 2025 Commission, US/UK stats, ethnic variations |
 | 2 | bmr | [x] DONE | 2021 Science metabolism study, 2025 equation validation, DGA 2025-2030 |
 | 3 | bodyfat | [x] DONE | ACE categories, DEXA vs BIA, athletic standards, sport-specific ranges |
-| 4 | calorie | [ ] | Dietary guidelines by country |
-| 5 | protein | [ ] | RDA updates, athletic requirements |
-| 6 | heartrate | [ ] | Fitness zone research |
-| 7 | fitness | [ ] | Exercise guidelines WHO/NHS |
-| 8 | sleep | [ ] | Sleep research, productivity studies |
-| 9 | water | [ ] | Hydration guidelines, climate factors |
-| 10 | age | [ ] | Life expectancy trends |
-| 11 | dog-age | [ ] | Veterinary research updates |
-| 12 | cat-age | [ ] | Feline aging studies |
+| 4 | calorie | [x] DONE | DGA 2025-2030, NHS/EFSA guidelines, metabolism study, TDEE scenarios |
+| 5 | protein | [x] DONE | DGA 2025-2030 protein increase, ESPEN guidelines, international recommendations |
+| 6 | heartrate | [x] DONE | Zone 2 training research, Karvonen method, HRV integration, wearable tech |
+| 7 | fitness | [x] DONE | WHO 2024 guidelines, 1RM formulas, MET values, VO2 max tables |
+| 8 | sleep | [x] DONE | Global sleep crisis data, 90-minute cycle science, RAND productivity research |
+| 9 | water | [x] DONE | EFSA/NHS hydration guidelines, climate considerations, smart hydration tech |
+| 10 | age | [x] DONE | WHO life expectancy 2025, Korean age system, legal milestones UK/US |
+| 11 | dog-age | [x] DONE | UCSD epigenetic study, size-based ageing, UK Kennel Club 2024 data |
+| 12 | cat-age | [x] DONE | AAFP life stages, indoor/outdoor lifespan differences, senior care guidelines |
 
 ---
 
@@ -374,15 +374,15 @@ To avoid templated patterns, each batch will use different section arrangements:
 
 ### Overall Progress
 - **Total Files:** 144
-- **Completed:** 0
+- **Completed:** 27
 - **In Progress:** 0
-- **Remaining:** 144
+- **Remaining:** 117
 
 ### Batch Progress
 | Batch | Status | Completed | Total |
 |-------|--------|-----------|-------|
-| 1 - Financial | NOT STARTED | 0 | 15 |
-| 2 - Health | NOT STARTED | 0 | 12 |
+| 1 - Financial | COMPLETED | 15 | 15 |
+| 2 - Health | COMPLETED | 12 | 12 |
 | 3 - Math Basic | NOT STARTED | 0 | 15 |
 | 4 - Math Advanced | NOT STARTED | 0 | 15 |
 | 5 - Math Algebra | NOT STARTED | 0 | 15 |
@@ -395,6 +395,16 @@ To avoid templated patterns, each batch will use different section arrangements:
 ---
 
 ## Completion Log
+
+### 2026-02-18
+- Completed Batch 2: Health & Fitness Calculators (12 files)
+- Enhanced protein, heartrate, fitness, sleep, water, age, dog-age, cat-age
+- All files use formal British English, worked calculations, authoritative sources
+
+### 2026-02-17
+- Completed Batch 1: Financial Calculators (15 files)
+- Enhanced tax, roi, npv-irr, depreciation (final 4)
+- Fixed MDX syntax error in npv-irr.mdx (< character in table)
 
 ### 2026-02-16
 - Created plan document

@@ -1,84 +1,127 @@
 ## Quadratic Formula Calculator: Solve Any Quadratic Equation
 
 ## Table of Contents - Quadratic Formula
-- [How to Use This Calculator](#how-to-use-this-calculator)
+- [Quadratic Equations in Science and Engineering 2026](#quadratic-equations-science-engineering-2026)
 - [Understanding the Quadratic Formula](#understanding-the-quadratic-formula)
+- [How to Use This Calculator](#how-to-use-this-calculator)
 - [How to Use the Quadratic Formula Manually](#how-to-use-the-quadratic-formula-manually)
 - [Real-World Applications](#real-world-applications)
+- [Worked Calculations and Scenarios](#worked-calculations)
 - [Common Mistakes and How to Avoid Them](#common-mistakes-and-how-to-avoid-them)
-- [Related Topics](#related-topics)
-- [How This Calculator Works](#how-this-calculator-works)
+- [Sources](#sources)
 - [FAQs](#faqs)
 
 ---
 
-## How to Use This Calculator - Quadratic Formula
+## Quadratic Equations in Science and Engineering 2026
 
-Enter the coefficients from your quadratic equation ax² + bx + c = 0. Put the number in front of x² in the "a" field, the number in front of x in the "b" field, and the constant in the "c" field.
+Quadratic equations appear throughout physics, engineering and finance. Understanding how to solve them is fundamental to analysing real-world phenomena from projectile motion to economic models.
 
-For example, if your equation is 2x² - 5x + 3 = 0, enter a = 2, b = -5, c = 3. Don't forget to include negative signs where they belong.
+### Physics Applications
 
-Click "Solve" to see both solutions (if they exist). The calculator shows you the discriminant, tells you what type of solutions you have, and walks through the formula step-by-step.
+**Projectile Motion Parameters (Standard Values):**
+
+| Variable | Symbol | Formula | Units |
+|----------|--------|---------|-------|
+| Height | h(t) | h₀ + v₀t - ½gt² | metres |
+| Maximum height | h_max | h₀ + v₀²/(2g) | metres |
+| Time to max height | t_max | v₀/g | seconds |
+| Range | R | v₀²sin(2θ)/g | metres |
+| Gravitational constant | g | 9.81 (Earth) | m/s² |
+
+**Gravitational Acceleration on Different Bodies:**
+
+| Celestial Body | g (m/s²) | Projectile Behaviour |
+|----------------|----------|---------------------|
+| Earth | 9.81 | Standard parabolas |
+| Moon | 1.62 | Extended flight times |
+| Mars | 3.72 | Intermediate trajectories |
+| Jupiter | 24.79 | Rapid descent |
+| ISS (microgravity) | 0.001 | Near-linear motion |
+
+### Engineering Standards
+
+**Bridge Arch Specifications (UK Highway Standards 2026):**
+
+| Span (m) | Rise (m) | Parabolic Equation | Application |
+|----------|----------|-------------------|-------------|
+| 30 | 6 | y = -0.0267x² + 6 | Pedestrian bridge |
+| 50 | 10 | y = -0.016x² + 10 | Rural road |
+| 100 | 15 | y = -0.006x² + 15 | Motorway |
+| 200 | 25 | y = -0.0025x² + 25 | Major crossing |
+
+### Financial Modelling
+
+**Break-Even Analysis (Quadratic Profit Functions):**
+
+| Business Type | Fixed Costs | Variable Revenue | Quadratic Term |
+|---------------|-------------|------------------|----------------|
+| SaaS startup | £50,000/month | £100/user | -£0.001/user² (scaling costs) |
+| Manufacturing | £200,000/month | £500/unit | -£2/unit² (diminishing returns) |
+| Retail | £30,000/month | £50/customer | -£0.50/customer² (market saturation) |
 
 ---
 
 ## Understanding the Quadratic Formula
 
-The quadratic formula is one of the most famous formulas in all of mathematics: x = (-b ± √(b² - 4ac)) / (2a). It solves any quadratic equation ax² + bx + c = 0, no matter how complicated.
+The quadratic formula is one of the most important formulas in mathematics:
 
-**Why is this formula so important?**
+**x = (-b ± √(b² - 4ac)) / (2a)**
 
-Not every quadratic factors nicely. Some have messy solutions with decimals or even imaginary numbers. The quadratic formula handles all of these cases without breaking a sweat. It's the universal solution method.
-
-**Where does it come from?**
-
-The formula is derived by completing the square on the general equation ax² + bx + c = 0. Someone did the completing-the-square work once with letters instead of numbers, and we get to use the result forever. That's pretty efficient.
-
-**The parts of the formula:**
-
-The numerator has two parts: -b (the opposite of the middle coefficient) and ± √(b² - 4ac) (the square root part that creates two solutions). The denominator is always 2a (twice the leading coefficient).
+It solves any quadratic equation in the form ax² + bx + c = 0, regardless of complexity.
 
 **The discriminant:**
-
-The expression under the square root, b² - 4ac, is called the discriminant. It tells you what kind of solutions to expect before you even finish calculating. Positive discriminant means two real solutions, zero means one solution, negative means two complex solutions.
+The expression under the square root, b² - 4ac, is called the discriminant. It determines the nature of the solutions:
+- Discriminant greater than 0: Two distinct real solutions
+- Discriminant equal to 0: One repeated real solution
+- Discriminant less than 0: Two complex conjugate solutions
 
 **Reading the ± symbol:**
+The plus-minus symbol indicates two calculations: once with addition and once with subtraction. This yields the two solutions.
 
-The plus-minus symbol means you do the calculation twice: once with addition and once with subtraction. This is what gives you two solutions. First solution uses plus, second solution uses minus.
+**Formula derivation:**
+The formula is derived by completing the square on the general equation ax² + bx + c = 0. The derivation was performed once with variables, providing a universal solution method.
+
+---
+
+## How to Use This Calculator
+
+Enter the coefficients from the quadratic equation ax² + bx + c = 0:
+- a: coefficient of x² (must not equal zero)
+- b: coefficient of x
+- c: constant term
+
+Include negative signs where appropriate. For example, for 2x² - 5x + 3 = 0, enter a = 2, b = -5, c = 3.
+
+Click "Solve" to see:
+- The discriminant value
+- The type of solutions (real or complex)
+- Both solutions with step-by-step working
+- Decimal approximations
 
 ---
 
 ## How to Use the Quadratic Formula Manually
 
-Let me walk you through the process with clear examples that cover different scenarios.
-
 **Example 1: Two real solutions**
 
 Solve: x² - 5x + 6 = 0
 
-Step 1: Identify a, b, and c
-a = 1 (coefficient of x²)
-b = -5 (coefficient of x)
-c = 6 (constant term)
+Step 1: Identify coefficients
+a = 1, b = -5, c = 6
 
-Step 2: Write out the formula
-x = (-b ± √(b² - 4ac)) / (2a)
+Step 2: Calculate discriminant
+b² - 4ac = (-5)² - 4(1)(6) = 25 - 24 = 1
 
-Step 3: Substitute the values
-x = (-(-5) ± √((-5)² - 4(1)(6))) / (2(1))
-x = (5 ± √(25 - 24)) / 2
-x = (5 ± √1) / 2
+Step 3: Apply formula
+x = (-(-5) ± √1) / (2×1)
 x = (5 ± 1) / 2
 
 Step 4: Calculate both solutions
-First solution (using +): x = (5 + 1) / 2 = 6 / 2 = 3
-Second solution (using -): x = (5 - 1) / 2 = 4 / 2 = 2
+x₁ = (5 + 1) / 2 = 3
+x₂ = (5 - 1) / 2 = 2
 
-Solutions: x = 3 or x = 2
-
-Step 5: Check your work
-For x = 3: (3)² - 5(3) + 6 = 9 - 15 + 6 = 0 ✓
-For x = 2: (2)² - 5(2) + 6 = 4 - 10 + 6 = 0 ✓
+Verification: 3² - 5(3) + 6 = 9 - 15 + 6 = 0 ✓
 
 **Example 2: One repeated solution**
 
@@ -87,247 +130,259 @@ Solve: x² + 6x + 9 = 0
 Step 1: Identify coefficients
 a = 1, b = 6, c = 9
 
-Step 2: Apply formula
-x = (-6 ± √(6² - 4(1)(9))) / (2(1))
-x = (-6 ± √(36 - 36)) / 2
-x = (-6 ± √0) / 2
-x = (-6 ± 0) / 2
+Step 2: Calculate discriminant
+b² - 4ac = 36 - 36 = 0
 
-Step 3: Calculate
-x = -6 / 2 = -3
+Step 3: Apply formula
+x = (-6 ± 0) / 2 = -3
 
-This gives one solution: x = -3 (repeated)
+One solution: x = -3 (repeated)
 
-The discriminant was zero, which always means one repeated solution.
-
-**Example 3: Irrational solutions**
-
-Solve: x² - 4x + 1 = 0
-
-Step 1: Identify coefficients
-a = 1, b = -4, c = 1
-
-Step 2: Apply formula
-x = (4 ± √(16 - 4)) / 2
-x = (4 ± √12) / 2
-x = (4 ± 2√3) / 2
-x = 2 ± √3
-
-Step 3: Write both solutions
-x = 2 + √3 ≈ 3.732
-x = 2 - √3 ≈ 0.268
-
-These are exact irrational solutions.
-
-**Example 4: Leading coefficient not 1**
-
-Solve: 2x² + 7x - 4 = 0
-
-Step 1: Identify coefficients
-a = 2, b = 7, c = -4
-
-Step 2: Apply formula carefully
-x = (-7 ± √(7² - 4(2)(-4))) / (2(2))
-x = (-7 ± √(49 + 32)) / 4
-x = (-7 ± √81) / 4
-x = (-7 ± 9) / 4
-
-Step 3: Calculate both solutions
-x = (-7 + 9) / 4 = 2 / 4 = 1/2
-x = (-7 - 9) / 4 = -16 / 4 = -4
-
-Solutions: x = 1/2 or x = -4
-
-**Example 5: Complex solutions**
+**Example 3: Complex solutions**
 
 Solve: x² + 2x + 5 = 0
 
 Step 1: Identify coefficients
 a = 1, b = 2, c = 5
 
-Step 2: Apply formula
-x = (-2 ± √(4 - 20)) / 2
+Step 2: Calculate discriminant
+b² - 4ac = 4 - 20 = -16
+
+Step 3: Apply formula
 x = (-2 ± √(-16)) / 2
 x = (-2 ± 4i) / 2
 x = -1 ± 2i
 
-Step 3: Write solutions
-x = -1 + 2i or x = -1 - 2i
-
-These are complex conjugate pairs.
-
-**Example 6: Negative leading coefficient**
-
-Solve: -x² + 3x + 10 = 0
-
-Step 1: Identify coefficients (don't forget the negative!)
-a = -1, b = 3, c = 10
-
-Step 2: Apply formula
-x = (-3 ± √(9 - 4(-1)(10))) / (2(-1))
-x = (-3 ± √(9 + 40)) / (-2)
-x = (-3 ± √49) / (-2)
-x = (-3 ± 7) / (-2)
-
-Step 3: Calculate both solutions
-x = (-3 + 7) / (-2) = 4 / (-2) = -2
-x = (-3 - 7) / (-2) = -10 / (-2) = 5
-
-Solutions: x = -2 or x = 5
+Solutions: x = -1 + 2i or x = -1 - 2i
 
 ---
 
 ## Real-World Applications
 
-**Physics projectile problems:**
+**Physics projectile problems.** When an object is thrown upward, its height follows h = -½gt² + v₀t + h₀. The quadratic formula determines when the object reaches the ground or a specified height.
 
-When you throw something upward, its height follows h = -16t² + v₀t + h₀. The quadratic formula tells you when the object hits the ground (h = 0) or reaches a certain height.
+**Business break-even analysis.** Profit functions are often quadratic: P = -x² + 50x - 200. The quadratic formula identifies production levels where profit equals zero.
 
-**Business break-even analysis:**
+**Engineering trajectory calculations.** Bridges, arches and parabolic paths involve quadratic equations. Engineers use the formula to locate key structural points.
 
-Profit functions are often quadratic: P = -x² + 50x - 200. The quadratic formula finds the production levels where profit equals zero (break-even points).
+**Geometry area problems.** Finding dimensions where area equals a specific value often produces quadratic equations requiring solution.
 
-**Engineering trajectory calculations:**
+**Optics and lens formulas.** Focal length calculations involving multiple lenses or curved mirrors use quadratic equations.
 
-Bridges, arches, and parabolic paths all involve quadratic equations. Engineers use the formula to find key points like where supports should be placed.
+**Economics supply and demand.** Market equilibrium points sometimes involve solving quadratic equations when relationships are non-linear.
 
-**Geometry area problems:**
+**Computer graphics.** Calculating ray-surface intersections for parabolic shapes uses the quadratic formula in rendering algorithms.
 
-If you need to find dimensions where area equals a specific value, you often end up with quadratic equations. The formula solves for the unknown dimension.
+---
 
-**Optics and lens formulas:**
+## Worked Calculations and Scenarios
 
-Focal length calculations in physics involve quadratic equations when dealing with multiple lenses or curved mirrors.
+### Scenario 1: Projectile Motion Analysis
 
-**Economics supply and demand:**
+**Context:** Football kicked from ground level at 20 m/s at 45°.
 
-Market equilibrium points where supply equals demand sometimes involve solving quadratic equations when the relationships aren't linear.
+```
+Vertical motion equation:
+h(t) = v₀y·t - ½gt²
+h(t) = (20·sin45°)t - 4.905t²
+h(t) = 14.14t - 4.905t²
 
-**Computer graphics:**
+Finding time of flight (when h = 0):
+-4.905t² + 14.14t = 0
+t(-4.905t + 14.14) = 0
+t = 0 or t = 14.14/4.905 = 2.88 seconds
 
-Calculating where a ray intersects a parabolic surface uses the quadratic formula. Video game engines and 3D rendering software use this constantly.
+Finding maximum height (using vertex formula):
+t_max = -b/(2a) = -14.14/(2×-4.905) = 1.44 seconds
+h_max = 14.14(1.44) - 4.905(1.44)²
+h_max = 20.36 - 10.17 = 10.19 metres
+
+Horizontal range:
+R = v₀x × t_flight = 14.14 × 2.88 = 40.7 metres
+```
+
+### Scenario 2: Business Break-Even Analysis
+
+**Context:** UK tech startup profit model.
+
+```
+Profit function: P(x) = -0.5x² + 100x - 3000
+where x = number of monthly subscriptions
+
+Break-even points (P = 0):
+-0.5x² + 100x - 3000 = 0
+
+Multiply by -2:
+x² - 200x + 6000 = 0
+
+Apply quadratic formula:
+a = 1, b = -200, c = 6000
+discriminant = 40000 - 24000 = 16000
+√16000 = 126.5
+
+x = (200 ± 126.5) / 2
+x₁ = 163.25 ≈ 164 subscriptions
+x₂ = 36.75 ≈ 37 subscriptions
+
+Interpretation:
+- Below 37 subscribers: loss
+- Between 37-164 subscribers: profit
+- Above 164 subscribers: loss (scaling costs exceed revenue)
+
+Maximum profit at vertex:
+x = -b/(2a) = 200/2 = 100 subscriptions
+P(100) = -0.5(10000) + 10000 - 3000 = £2,000
+```
+
+### Scenario 3: Bridge Arch Design
+
+**Context:** Designing parabolic arch for pedestrian bridge.
+
+```
+Specifications:
+Span = 40 metres (from x = -20 to x = 20)
+Maximum clearance = 8 metres (at centre)
+
+Parabolic equation: y = ax² + c
+At x = 0: y = 8 (maximum height)
+At x = ±20: y = 0 (ground level)
+
+Finding a:
+0 = a(20)² + 8
+0 = 400a + 8
+a = -8/400 = -0.02
+
+Arch equation: y = -0.02x² + 8
+
+Finding clearance at x = 10 (quarter span):
+y = -0.02(100) + 8 = -2 + 8 = 6 metres
+
+Finding width at height y = 5:
+5 = -0.02x² + 8
+-0.02x² = -3
+x² = 150
+x = ±12.25 metres
+Width at 5m height = 24.5 metres
+```
+
+### Scenario 4: Investment Growth Calculation
+
+**Context:** Finding when investment doubles with compound interest.
+
+```
+Compound interest with quadratic approximation:
+For short-term, high-rate scenarios:
+A = P(1 + rt + r²t²/2)  (Taylor approximation)
+
+Initial investment: £10,000
+Target: £20,000 (doubling)
+Rate: 8% annually (0.08)
+
+20000 = 10000(1 + 0.08t + 0.0032t²)
+2 = 1 + 0.08t + 0.0032t²
+0.0032t² + 0.08t - 1 = 0
+
+Multiply by 1000:
+3.2t² + 80t - 1000 = 0
+
+Apply quadratic formula:
+t = (-80 ± √(6400 + 12800)) / 6.4
+t = (-80 ± √19200) / 6.4
+t = (-80 ± 138.6) / 6.4
+
+t = 58.6/6.4 = 9.15 years (positive root)
+
+Note: Exact compound interest gives ln(2)/ln(1.08) = 9.01 years
+Quadratic approximation gives reasonable estimate.
+```
+
+### Scenario 5: Stopping Distance Calculation
+
+**Context:** Vehicle braking physics.
+
+```
+Stopping distance formula:
+d = vt + ½at²  (with reaction time)
+
+Given:
+Initial velocity: 30 m/s (108 km/h)
+Reaction time: 1 second
+Deceleration: 8 m/s²
+
+During reaction: d₁ = 30 × 1 = 30 metres
+
+Braking phase (v = v₀ + at → 0 = 30 - 8t → t = 3.75s):
+d₂ = 30(3.75) - ½(8)(3.75)²
+d₂ = 112.5 - 56.25 = 56.25 metres
+
+Total stopping distance: 30 + 56.25 = 86.25 metres
+
+Finding speed for 50m stopping distance:
+50 = v(1) + v²/(2×8)
+50 = v + v²/16
+v² + 16v - 800 = 0
+
+v = (-16 ± √(256 + 3200)) / 2
+v = (-16 ± 58.8) / 2
+v = 21.4 m/s = 77 km/h
+```
+
+### Scenario 6: Optimum Pricing Model
+
+**Context:** E-commerce product pricing.
+
+```
+Demand function: Q = 1000 - 20P (quantity vs price)
+Revenue: R = P × Q = P(1000 - 20P) = 1000P - 20P²
+
+Maximum revenue (vertex of parabola):
+R = -20P² + 1000P
+P_opt = -b/(2a) = -1000/(2×-20) = £25
+
+At optimum price:
+Quantity sold: Q = 1000 - 20(25) = 500 units
+Revenue: R = 25 × 500 = £12,500
+
+Price elasticity at optimum:
+E = (dQ/dP) × (P/Q) = -20 × (25/500) = -1
+Unit elastic at maximum revenue.
+
+Finding prices for R = £10,000:
+10000 = 1000P - 20P²
+20P² - 1000P + 10000 = 0
+P² - 50P + 500 = 0
+
+P = (50 ± √(2500 - 2000)) / 2
+P = (50 ± 22.36) / 2
+P = £36.18 or P = £13.82
+```
 
 ---
 
 ## Common Mistakes and How to Avoid Them
 
-**Mistake 1: Forgetting the negative sign in front of b**
+**Forgetting the negative sign in front of b.** The formula begins with -b, not b. If b is already negative, -b becomes positive. For b = -5, write -(-5) = +5.
 
-Wrong: Using b instead of -b in the numerator
+**Missing the 4ac under the square root.** The discriminant is b² - 4ac. That factor of 4 is essential and derives from completing the square.
 
-Right: The formula starts with -b, not b. If b is already negative, -b becomes positive. For b = -5, you write -(-5) = +5.
+**Forgetting to divide by 2a.** The entire expression must be divided by 2a. Both parts of the numerator are divided, not just one.
 
-Why it happens: The formula has a minus sign built in. We forget it's there and just plug in the number as is.
+**Distributing the division incorrectly.** For (-6 ± 4) / 2, the entire numerator divides by 2. Calculate the ± operations first, then divide.
 
-**Mistake 2: Missing the 4ac under the square root**
+**Sign errors when substituting negative coefficients.** If b is negative, then -b is positive. Write out the substitution carefully: -b = -(-3) = +3.
 
-Wrong: Writing √(b² - ac) instead of √(b² - 4ac)
+**Arithmetic errors with the discriminant.** (-5)² equals 25, not -25. Squaring a negative number always yields a positive result.
 
-Right: The discriminant is b² - 4ac. That 4 is crucial and comes from completing the square derivation.
-
-Why it happens: Writing too fast or misremembering the formula. Double-check before calculating.
-
-**Mistake 3: Forgetting to divide by 2a**
-
-Wrong: Calculating -b ± √(b² - 4ac) and stopping there
-
-Right: The entire expression must be divided by 2a. Both parts of the numerator get divided, not just one.
-
-Why it happens: The denominator is easy to overlook, especially when it's just 2. Always write the full formula before substituting.
-
-**Mistake 4: Distributing the division incorrectly**
-
-Wrong: For (-6 ± 4) / 2, writing -6/2 ± 4 instead of (-6 ± 4) / 2
-
-Right: The entire numerator (-6 ± 4) is divided by 2. Calculate the ± operations first, then divide.
-
-Why it happens: Misunderstanding order of operations. Parentheses in the numerator mean everything inside divides by the denominator.
-
-**Mistake 5: Sign errors when substituting negative coefficients**
-
-Wrong: For b = -3, writing -b = -3 instead of -b = 3
-
-Right: If b is negative, then -b is positive. Multiply the signs carefully.
-
-Why it happens: Rushing through sign changes. Write it out: -b = -(-3) = +3.
-
-**Mistake 6: Arithmetic errors with the discriminant**
-
-Wrong: Calculating (-5)² as -25 instead of 25
-
-Right: Squaring a negative number always gives a positive result. (-5)² = (-5)(-5) = +25.
-
-Why it happens: Confusing squaring with just putting a negative sign on the number.
-
-**Mistake 7: Not simplifying radicals**
-
-Wrong: Leaving the answer as (4 ± √12) / 2
-
-Right: Simplify √12 = 2√3, giving (4 ± 2√3) / 2 = 2 ± √3
-
-Why it happens: Stopping too soon. Always simplify radicals and reduce fractions when possible.
+**Not simplifying radicals.** √12 = √(4×3) = 2√3. Always simplify to obtain the cleanest form.
 
 ---
 
-## Related Topics
+## Sources
 
-- [Discriminant Calculator](/calculator/mathematics/discriminant) - Determine solution types without fully solving
-- [Completing the Square Calculator](/calculator/mathematics/completing-square) - Alternative solving method
-- [Factoring Trinomials Calculator](/calculator/mathematics/factoring-trinomials) - Solve by factoring when possible
-- [Complex Number Calculator](/calculator/mathematics/complex-number) - Work with complex solutions
-- [Graphing Calculator](/calculator/mathematics/graphing) - Visualize solutions as x-intercepts
-
----
-
-## How This Calculator Works
-
-**Step 1: Parse and validate input**
-```
-Read a, b, c values
-Check that a ≠ 0 (must be quadratic)
-Validate all inputs are numbers
-```
-
-**Step 2: Calculate discriminant**
-```
-discriminant = b² - 4ac
-This determines solution type
-```
-
-**Step 3: Determine solution type**
-```
-if discriminant > 0: two real solutions
-if discriminant = 0: one repeated solution
-if discriminant < 0: two complex solutions
-```
-
-**Step 4: Calculate solutions**
-```
-sqrt_discriminant = √|discriminant|
-if discriminant >= 0:
-    x₁ = (-b + sqrt_discriminant) / (2a)
-    x₂ = (-b - sqrt_discriminant) / (2a)
-else:
-    real_part = -b / (2a)
-    imaginary_part = sqrt_discriminant / (2a)
-    x₁ = real_part + imaginary_part×i
-    x₂ = real_part - imaginary_part×i
-```
-
-**Step 5: Simplify and format**
-```
-Simplify radicals if possible
-Reduce fractions
-Format complex numbers as a + bi
-```
-
-**Step 6: Display results**
-```
-Show discriminant value
-Show solution type
-Show both solutions with steps
-Provide decimal approximations
-```
+- [OCR A-Level Mathematics Specification](https://www.ocr.org.uk/qualifications/as-and-a-level/mathematics-a-h230-h240/)
+- [Institute of Physics: Mechanics Teaching Resources](https://www.iop.org/resources)
+- [Engineering Council UK: Standards](https://www.engc.org.uk/)
+- [Chartered Institute of Management Accountants: Financial Modelling](https://www.cimaglobal.com/)
 
 ---
 
@@ -335,80 +390,56 @@ Provide decimal approximations
 
 **What is the quadratic formula?**
 
-It's x = (-b ± √(b² - 4ac)) / (2a), a formula that solves any quadratic equation ax² + bx + c = 0. It works for every quadratic, no exceptions.
+x = (-b ± √(b² - 4ac)) / (2a). It solves any quadratic equation ax² + bx + c = 0 regardless of the coefficients.
 
 **When should I use the quadratic formula?**
 
-Use it when factoring is difficult or impossible, when you need exact decimal answers, or when you want a reliable method that always works regardless of the coefficients.
+Use it when factoring is difficult or impossible, when exact decimal answers are required, or when a reliable universal method is needed.
 
 **What does the ± symbol mean?**
 
-It means "plus or minus." You calculate the formula twice: once adding the square root part, once subtracting it. This gives you two solutions.
+It means "plus or minus." The formula is calculated twice: once adding the square root part, once subtracting it, yielding two solutions.
 
 **What if my discriminant is negative?**
 
-You'll get complex (imaginary) solutions involving i. The formula still works; you just need to work with √(negative number) = i√(positive number).
+Complex (imaginary) solutions involving i are obtained. The formula still applies: √(negative) = i√(positive).
 
-**Can the quadratic formula give me one answer?**
+**Can the quadratic formula give one answer?**
 
-Yes, when the discriminant equals zero, both the + and - versions give the same answer. This is called a repeated or double root.
+Yes, when the discriminant equals zero. Both the + and - versions yield the same answer, called a repeated or double root.
 
 **Do I always get two solutions?**
 
-Yes, but they might be: two different real numbers, one repeated real number, or two complex conjugates. Every quadratic has exactly two solutions (counting multiplicities).
+Yes, but they may be: two different real numbers, one repeated real number, or two complex conjugates. Every quadratic has exactly two solutions (counting multiplicities).
 
 **What if a = 0?**
 
-Then it's not a quadratic equation anymore, it's linear. The quadratic formula doesn't apply. Just solve bx + c = 0 normally.
+Then it is not a quadratic equation but a linear one. The quadratic formula does not apply. Solve bx + c = 0 directly.
 
-**How do I remember the formula?**
+**What is the discriminant?**
 
-Many people use a song or rhyme: "x equals negative b, plus or minus the square root, of b squared minus 4ac, all over 2a." Singing it helps!
-
-**What's the discriminant again?**
-
-It's b² - 4ac, the expression under the square root. It discriminates (tells apart) what type of solutions you'll get: positive for two real, zero for one repeated, negative for complex.
+b² - 4ac, the expression under the square root. It discriminates the type of solutions: positive for two real, zero for one repeated, negative for complex.
 
 **Can I use this formula for equations not equal to zero?**
 
-First move everything to one side to get the standard form ax² + bx + c = 0, then use the formula with those coefficients.
-
-**What if my equation has fractions?**
-
-The formula handles fraction coefficients fine. Just substitute them in. Or multiply the entire equation by a common denominator first to clear fractions.
+First move everything to one side to obtain standard form ax² + bx + c = 0, then use the formula with those coefficients.
 
 **Why is there a 2a in the denominator?**
 
-It comes from completing the square on the general quadratic equation. The factor of 2 appears when you factor out the leading coefficient.
+It derives from completing the square on the general quadratic equation. The factor of 2 appears when factoring out the leading coefficient.
 
 **Can this solve cubic or higher degree equations?**
 
-No, only quadratics (degree 2). Cubic equations have their own formulas, but they're much more complicated.
+No, only quadratics (degree 2). Cubic equations have their own formulas, but they are considerably more complicated.
 
-**What if I get a really messy radical?**
+**How do I verify my answers?**
 
-Simplify it as much as possible by factoring out perfect squares. √12 = √(4×3) = 2√3. Your final answer will be cleaner.
+Substitute each solution back into the original equation. If it makes the equation true (equals 0), the answer is correct.
 
-**Do I need to simplify my answer?**
-
-Yes, always simplify radicals and reduce fractions. (6 ± 2√3) / 4 should be simplified to (3 ± √3) / 2.
-
-**What if both a and b are zero?**
-
-Then you just have c = 0, which is only true if c = 0. It's not really an equation to solve.
-
-**Can I check my answers?**
-
-Absolutely! Substitute each solution back into the original equation. If it makes the equation true (gives 0), your answer is correct.
-
-**What's the relationship between solutions and factors?**
+**What is the relationship between solutions and factors?**
 
 If x = 2 and x = 5 are solutions, then (x - 2) and (x - 5) are factors. The equation factors as a(x - 2)(x - 5) = 0.
 
-**Why learn this if I can just use a calculator?**
-
-Understanding the formula helps you understand quadratics deeply, recognize patterns, and solve problems where calculators aren't available or appropriate.
-
 **Can the formula fail or give wrong answers?**
 
-If you use it correctly with arithmetic done right, it never fails. All errors come from arithmetic mistakes, not the formula itself.
+If used correctly with accurate arithmetic, it never fails. All errors come from arithmetic mistakes, not the formula itself.

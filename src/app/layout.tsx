@@ -60,19 +60,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Performance optimization - DNS prefetch and preconnect FIRST for maximum benefit */}
+        {/* Performance optimization - DNS prefetch */}
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://www.ezojs.com" />
-        <link rel="dns-prefetch" href="https://cmp.gatekeeperconsent.com" />
-        <link rel="dns-prefetch" href="https://the.gatekeeperconsent.com" />
-        <link rel="dns-prefetch" href="https://privacy.gatekeeperconsent.com" />
-        <link rel="dns-prefetch" href="https://g.ezoic.net" />
-
-        <link rel="preconnect" href="https://www.ezojs.com" />
-        <link rel="preconnect" href="https://privacy.gatekeeperconsent.com" />
-        <link rel="preconnect" href="https://g.ezoic.net" />
-        <link rel="preconnect" href="https://cmp.gatekeeperconsent.com" />
-        <link rel="preconnect" href="https://the.gatekeeperconsent.com" />
 
         {/* Google tag (gtag.js) - lazy load after page settles */}
         <script
@@ -108,11 +97,9 @@ export default function RootLayout({
         {/* Seobility Verification */}
         <meta name="seobility" content="eeb290f1902ff1f4679f69365f3ac07c" />
 
-        {/* Ezoic Privacy Scripts - defer for better performance */}
+        {/* Ezoic disabled for SEO improvement - re-enable after indexing is resolved
         <script defer src="https://cmp.gatekeeperconsent.com/min.js" data-cfasync="false"></script>
         <script defer src="https://the.gatekeeperconsent.com/cmp.min.js" data-cfasync="false"></script>
-
-        {/* Ezoic Header Script - async loading */}
         <script async src="https://www.ezojs.com/ezoic/sa.min.js"></script>
         <script dangerouslySetInnerHTML={{
           __html: `
@@ -120,6 +107,7 @@ export default function RootLayout({
             ezstandalone.cmd = ezstandalone.cmd || [];
           `
         }}></script>
+        */}
       </head>
       <body
         className="antialiased"
