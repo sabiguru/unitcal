@@ -2,6 +2,8 @@
 
 A free, open-source online calculator platform providing 200+ specialized calculators across multiple categories. Built with modern web technologies for optimal performance and user experience.
 
+> **Note:** This project was previously developed under the internal codename "unitcal" but is publicly known as **CalcFort**. You may see references to both names in the codebase.
+
 ## Features
 
 - **200+ Calculators** organized across 12+ categories:
@@ -64,8 +66,8 @@ A free, open-source online calculator platform providing 200+ specialized calcul
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/calcfort.git
-cd calcfort
+git clone https://github.com/sabiguru/unitcal.git
+cd unitcal
 ```
 
 2. Install dependencies:
@@ -79,23 +81,13 @@ pnpm install
 
 3. Set up environment variables:
 
-Create a `.env` file in the root directory with the following variables:
+Copy the example environment file and configure it:
 
-```env
-# Database
-DATABASE_URL="postgresql://user:password@localhost:5432/calcfort"
-
-# NextAuth
-NEXTAUTH_URL="http://localhost:3000"
-NEXTAUTH_SECRET="your-secret-key-here"
-
-# Email (for verification)
-EMAIL_SERVER_HOST="smtp.example.com"
-EMAIL_SERVER_PORT=587
-EMAIL_SERVER_USER="your-email@example.com"
-EMAIL_SERVER_PASSWORD="your-password"
-EMAIL_FROM="noreply@example.com"
+```bash
+cp .env.example .env
 ```
+
+Then edit `.env` with your actual values. See `.env.example` for all required variables.
 
 4. Set up the database:
 ```bash
@@ -157,6 +149,14 @@ The application uses Prisma with PostgreSQL and includes the following main mode
 - **Calculation** - User calculation history
 - **FavoriteCalculators** - User's saved calculators
 - **VerificationCode/Token** - Email verification
+
+### Data Privacy Note
+
+**This repository contains NO real user data.** The database schema supports user accounts, calculation history, and email verification, but:
+- No production database is included in this repository
+- The `dev.db` file has been removed from git history
+- All user-facing features use fictional test data only for development
+- Production deployments use separate, secure databases not included in this codebase
 
 ## Contributing
 
