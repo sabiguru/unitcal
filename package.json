@@ -2,6 +2,8 @@
   "name": "calcfort",
   "version": "0.1.0",
   "private": true,
+  "author": "Sabiguru",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "prisma generate && next build",
