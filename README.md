@@ -1,36 +1,237 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CalcFort
+
+A free, open-source online calculator platform providing 200+ specialized calculators across multiple categories. Built with modern web technologies for optimal performance and user experience.
+
+## Features
+
+- **200+ Calculators** organized across 12+ categories:
+  - Mathematics & Basic Tools (scientific, graphing, equations)
+  - Finance & Investment (mortgage, loans, retirement planning)
+  - Health & Fitness (BMI, calories, workout tracking)
+  - Engineering & Technology (electrical, subnet, password generator)
+  - Construction & DIY (area, volume, material calculators)
+  - Cooking & Food (baking conversions, recipe scaling)
+  - And many more specialized calculators
+
+- **User Authentication System**
+  - Email/password registration with verification
+  - Personalized calculator history
+  - Favorite calculators management
+  - Privacy-focused design with local calculations
+
+- **Educational Content**
+  - 145+ MDX-based blog posts
+  - Step-by-step explanations for each calculator
+  - Related calculator suggestions
+  - Expert reviews and trust signals
+
+- **SEO Optimized**
+  - Structured data with Schema.org markup
+  - Dynamic meta tags per calculator
+  - Comprehensive breadcrumb navigation
+  - Automated sitemap generation
+
+## Technology Stack
+
+### Frontend
+- **Next.js 15.3.8** - React framework with App Router
+- **React 18.3.1** - UI library
+- **Tailwind CSS 4** - Utility-first styling
+- **Next MDX Remote** - Dynamic MDX content rendering
+- **Decimal.js** - Precise mathematical calculations
+
+### Backend
+- **Prisma 6.11.1** - Type-safe ORM
+- **PostgreSQL** - Primary database
+- **NextAuth v4** - Authentication solution
+- **Nodemailer** - Email delivery
+- **Express** - Custom production server
+
+### Performance
+- **Vercel Speed Insights** - Real-time analytics
+- **Express Static Gzip** - Compression middleware
+- **Custom precompression** - Build-time optimization
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ (recommended: 20+)
+- PostgreSQL database
+- npm, yarn, pnpm, or bun package manager
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/calcfort.git
+cd calcfort
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env` file in the root directory with the following variables:
 
-## Learn More
+```env
+# Database
+DATABASE_URL="postgresql://user:password@localhost:5432/calcfort"
 
-To learn more about Next.js, take a look at the following resources:
+# NextAuth
+NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_SECRET="your-secret-key-here"
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Email (for verification)
+EMAIL_SERVER_HOST="smtp.example.com"
+EMAIL_SERVER_PORT=587
+EMAIL_SERVER_USER="your-email@example.com"
+EMAIL_SERVER_PASSWORD="your-password"
+EMAIL_FROM="noreply@example.com"
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Set up the database:
+```bash
+npx prisma generate
+npx prisma db push
+```
 
-## Deploy on Vercel
+5. Run the development server:
+```bash
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open [http://localhost:3000](http://localhost:3000) to see the application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server (custom Express server)
+- `npm run start:next` - Start production server (Next.js built-in)
+- `npm run lint` - Run ESLint
+
+## Project Structure
+
+```
+/src
+├── /app                    # Next.js pages and routes
+│   ├── /calculator        # Dynamic calculator pages
+│   ├── /learn             # Educational content
+│   ├── /auth              # Authentication pages
+│   ├── /account           # User dashboard
+│   └── /api               # API routes
+├── /components
+│   ├── /calc              # Calculator components (200+)
+│   ├── /blog              # Blog/content components
+│   └── /ads               # Advertising components
+├── /data
+│   ├── calculators.ts     # Calculator registry
+│   ├── categoryData.ts    # Category definitions
+│   └── seoBySlug.ts       # SEO metadata
+├── /content/calculators   # MDX blog content (145+ files)
+├── /lib                   # Utility functions
+├── /config                # Configuration files
+└── /types                 # TypeScript definitions
+
+/prisma
+└── schema.prisma          # Database schema
+
+/public                    # Static assets
+```
+
+## Database Schema
+
+The application uses Prisma with PostgreSQL and includes the following main models:
+
+- **User** - User accounts with preferences
+- **Account** - OAuth provider accounts
+- **Session** - User sessions
+- **Calculation** - User calculation history
+- **FavoriteCalculators** - User's saved calculators
+- **VerificationCode/Token** - Email verification
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+### Development Guidelines
+
+- Follow the existing code style and conventions
+- Write clear commit messages
+- Add tests for new features when applicable
+- Update documentation as needed
+- Ensure all calculators are thoroughly tested for accuracy
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Author
+
+**Sabiguru**
+
+## Acknowledgments
+
+- Built with [Next.js](https://nextjs.org)
+- Styled with [Tailwind CSS](https://tailwindcss.com)
+- Database powered by [Prisma](https://prisma.io)
+- Authentication by [NextAuth.js](https://next-auth.js.org)
+
+## Support
+
+If you encounter any issues or have questions, please file an issue on the GitHub repository.
+
+## Deployment
+
+### Vercel (Recommended)
+
+The easiest way to deploy CalcFort is using [Vercel](https://vercel.com):
+
+1. Push your code to GitHub
+2. Import the project in Vercel
+3. Configure environment variables
+4. Deploy
+
+The `vercel-build` script handles database migrations automatically.
+
+### Self-Hosting
+
+1. Build the application:
+```bash
+npm run build
+```
+
+2. Start the production server:
+```bash
+npm run start
+```
+
+The custom Express server includes gzip compression and optimized static file serving.
+
+## Performance
+
+- Precompressed static assets (gzip/brotli)
+- Image optimization with Next.js Image component
+- Code splitting and lazy loading
+- Database connection pooling
+- Edge-ready with Vercel deployment
+
+## Privacy & Security
+
+- All calculations are performed locally in the browser when possible
+- User passwords are hashed with bcryptjs
+- Email verification for new accounts
+- Secure session management with NextAuth
+- HTTPS enforced in production
+
+---
+
+Made with ❤️ by Sabiguru
