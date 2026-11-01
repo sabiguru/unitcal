@@ -124,7 +124,7 @@ const handler = NextAuth({
     signIn: '/auth/login',
     signUp: '/auth/signup',
   },
-  secret: process.env.NEXTAUTH_SECRET || 'fallback-secret-for-build',
+  secret: process.env.NEXTAUTH_SECRET,
 });
 
 export { handler as GET, handler as POST };
