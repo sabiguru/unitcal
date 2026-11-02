@@ -154,7 +154,7 @@ The application uses Prisma with PostgreSQL and includes the following main mode
 
 **This repository contains NO real user data.** The database schema supports user accounts, calculation history, and email verification, but:
 - No production database is included in this repository
-- The `dev.db` file has been removed from git history
+- The `dev.db` file has been removed from the main branch history
 - All user-facing features use fictional test data only for development
 - Production deployments use separate, secure databases not included in this codebase
 
